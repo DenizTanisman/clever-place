@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "duy-001",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Kerem üç aydır hazırlandığı burs mülakatına, bindiği otobüs yolda arızalandığı için yirmi dakika geç kaldı ve görüşmeye alınmadı. Arıza kimsenin ihmali değildi. Kerem'in en olası duygusu hangisi?",
+    "options": [
+      "Derin bir hayal kırıklığı",
+      "Yoğun bir suçluluk duygusu",
+      "Görüşmecilere karşı minnet",
+      "Geleceğe dair heyecan"
+    ],
+    "answer": 0,
+    "why": "Önemli bir hedef, kimsenin suçu olmayan bir aksilik yüzünden engellendi: suçlanacak bir fail olmayınca ağır basan duygu hayal kırıklığı ve üzüntüdür. Suçluluk için Kerem'in kendi kontrolündeki bir hatayı yanlış bulması gerekirdi; geç kalmasının nedeni elinde değildi."
+  },
+  {
+    "id": "duy-002",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Selin'in iki hafta uğraşıp hazırladığı analizi, ekip arkadaşı Tolga müdüre kendi çalışması gibi sundu ve bütün övgüyü topladı. Selin bunu toplantı çıkışında öğrendi. Selin büyük olasılıkla en çok ne hisseder?",
+    "options": [
+      "Öfke",
+      "Hüzün",
+      "Utanç",
+      "Kaygı"
+    ],
+    "answer": 0,
+    "why": "Zarar bilerek davranan birinden geliyor ve açık bir haksızlık var: başkasına yüklenen sorumluluk ve norm ihlali öfkenin tipik değerlendirmesidir. Hüzün daha çok kimsenin suçlanamadığı kayıplarda ağır basar."
+  },
+  {
+    "id": "duy-003",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Stajını bitiren Defne'ye İK, “Kadro kararını iki hafta içinde bildireceğiz” dedi. Defne bu işi çok istiyor ama sonucun ne olacağını hiç kestiremiyor. Bu iki haftada en çok hangi duyguyu yaşaması beklenir?",
+    "options": [
+      "Kaygı",
+      "Hayal kırıklığı",
+      "Öfke",
+      "Gurur"
+    ],
+    "answer": 0,
+    "why": "Kişisel önemi yüksek ama sonucu belirsiz bir gelecek olayı, kaygının tipik değerlendirmesidir. Hayal kırıklığı ancak olumsuz sonuç kesinleşince ortaya çıkar; şu an henüz bir kayıp yok."
+  },
+  {
+    "id": "duy-004",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Nazlı staj sunumunda bir rakamı yanlış aktardığını toplantıdan sonra fark etti. O akşam kendine “Ben zaten bu işe uygun biri değilim” diyor; ertesi gün ofise gitmek, kimsenin yüzüne bakmak istemiyor. Nazlı'nın duygusunu en iyi hangisi adlandırır?",
+    "options": [
+      "Utanç duygusu",
+      "Suçluluk duygusu",
+      "Pişmanlık duygusu",
+      "Hayal kırıklığı"
+    ],
+    "answer": 0,
+    "why": "Odak tek bir hatadan çıkıp bütün benliğe kaymış (“ben uygun değilim”) ve saklanma isteği doğmuş: bu, utancın ayırt edici değerlendirmesidir. Suçlulukta odak yapılan eylemdedir ve kişi saklanmak yerine düzeltmek ister; Nazlı ise hatayı düzeltmeyi hiç düşünmüyor."
+  },
+  {
+    "id": "duy-005",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Onur, ev arkadaşı Emre'nin dolaptaki yemeğini kendi yemeği sanıp yedi. Durumu fark edince aklı hep buna gidiyor; Emre eve gelmeden aynı yemekten alıp dolaba koymayı ve özür dilemeyi planlıyor. Onur en çok ne hissediyor?",
+    "options": [
+      "Suçluluk",
+      "Utanç",
+      "Kaygı",
+      "Burukluk"
+    ],
+    "answer": 0,
+    "why": "Odak belirli bir davranışta (yanlışlıkla yemeği yemek) ve kişi zararı onarmak istiyor: bu, suçluluğun tipik örüntüsüdür. Utanç olsaydı Onur kendini bütünüyle kötü biri olarak görüp Emre'den kaçmak isterdi."
+  },
+  {
+    "id": "duy-006",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Ozan iki iş teklifinden maaşı yüksek ama şehrin öbür ucundaki şirketi seçti. Üç aydır her sabah iki saati trafikte geçiyor ve sık sık “Keşke evime yakın olanı kabul etseydim” diye düşünüyor. Ozan'ın duygusu en iyi hangisiyle adlandırılır?",
+    "options": [
+      "Pişmanlık",
+      "Suçluluk",
+      "Utanç",
+      "Kıskançlık"
+    ],
+    "answer": 0,
+    "why": "Kişinin kendi yaptığı bir seçimi, seçmediği seçenekle kıyaslayıp “keşke” demesi pişmanlığın özüdür. Suçluluk ise genellikle başkasına verilen bir zararla ilgilidir; Ozan'ın kararı kimseye zarar vermedi."
+  },
+  {
+    "id": "duy-007",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Online ekip toplantısında kamerasının açık olduğunu unutan Arda kocaman esneyip gerindi. Birkaç kişi gülümseyince durumu fark etti, yüzü kızardı; ardından kendisi de gülüp “Pardon, uzun bir geceydi” dedi. Arda'nın yaşadığı duygu en iyi hangisidir?",
+    "options": [
+      "Kısa süren bir mahcubiyet",
+      "Derin ve kalıcı bir utanç",
+      "Ekibe karşı suçluluk",
+      "Esnediği için pişmanlık"
+    ],
+    "answer": 0,
+    "why": "Ahlaki ağırlığı olmayan, başkalarının önünde yaşanan küçük bir aksaklık mahcubiyetin tipik tetikleyicisidir; kızarma ve ardından gülme de bu duyguya özgüdür. Derin utanç kişinin kendini bütünüyle kusurlu görmesini gerektirir; Arda'nın hemen şakaya geçmesi bunun olmadığını gösteriyor."
+  },
+  {
+    "id": "duy-008",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Gizem, taşınmadan önce çocukluğunun geçtiği evi boşaltırken ilkokul defterini buldu. Sayfalardaki çocuk yazısına bakarken gülümsüyor ama gözleri de doluyor. Gizem büyük olasılıkla ne yaşıyor?",
+    "options": [
+      "Hüzünle karışık bir sevinç",
+      "Geçmişe yönelik bir pişmanlık",
+      "Taşınmaya dair bir kaygı",
+      "Yalnızca derin bir keder"
+    ],
+    "answer": 0,
+    "why": "Değerli bir geçmişi hatırlamak (sevinç) ile onun geri gelmeyeceğini bilmek (hüzün) bir aradadır: nostalji bu karışımdır, gülümseme ve dolan gözler de bunu gösterir. “Derin keder” gülümsemeyi açıklamaz; pişmanlık için de değiştirmek istediği bir seçim yok."
+  },
+  {
+    "id": "duy-009",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Batuhan'ın şirketinde yeniden yapılanma yüzünden işten çıkarmalar oldu. Batuhan yerinde kaldı; aynı ekipteki en yakın arkadaşı Cihan ise çıkarıldı. O akşam eve dönerken Batuhan'ın büyük olasılıkla yaşadığı duygu hangisidir?",
+    "options": [
+      "Rahatlamayla karışık bir suçluluk",
+      "Saf bir sevinç ve kendine güven",
+      "Cihan'a karşı gizli bir küçümseme",
+      "Şirkete karşı derin bir minnet"
+    ],
+    "answer": 0,
+    "why": "İşini korumak rahatlama getirirken, yakın birinin aynı durumda zarar görmesi, kendi hatası olmasa da suçluluk uyandırır; buna “hayatta kalan suçluluğu” denir. Saf sevinç arkadaşının kaybını yok sayar; araştırmalar işten çıkarmalarda geride kalanlarda bu karışık duygunun yaygın olduğunu gösterir."
+  },
+  {
+    "id": "duy-010",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Ece'nin üst kat komşusu her gece yarısı mobilya sürüklüyor. İlk gece Ece biraz rahatsız oldu. Ertesi gün kibarca rica etti; komşu “Tabii, dikkat ederim” dedi ama gürültü bir hafta boyunca aynı saatte sürdü. Ece'nin duygusu büyük olasılıkla nasıl değişmiştir?",
+    "options": [
+      "Rahatsızlıktan kızgınlığa dönüşmüştür",
+      "Alışkanlıkla birlikte geçip gitmiştir",
+      "Rahatsızlıktan suçluluğa dönüşmüştür",
+      "Rahatsızlıktan hüzne dönüşmüştür"
+    ],
+    "answer": 0,
+    "why": "Rica edildiği hâlde sürmesi, olayı artık umursamazlık ve çiğnenmiş bir söz olarak değerlendirtir; bu da hafif rahatsızlığı kızgınlığa, hatta öfkeye taşır. Gürültüye alışmak mümkündür ama her gece uykuyu bölen ve görmezden gelinen bir ricada beklenen bu değildir."
+  },
+  {
+    "id": "duy-011",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Annesinin biyopsi sonucunu beklerken Merve günlerce huzursuzdu. Sonuç iyi huylu çıktı; doktor yine de “Altı ay sonra bir kontrol yapalım” dedi. Merve'nin o andaki duygusu büyük olasılıkla hangisidir?",
+    "options": [
+      "Büyük bir rahatlama, biraz da tedirginlik",
+      "Tam ve kesin bir rahatlama, hiç endişe yok",
+      "Doktora karşı kızgınlık ve hayal kırıklığı",
+      "Yoğunlaşan bir korku ve panik hâli"
+    ],
+    "answer": 0,
+    "why": "Korkulan sonucun gerçekleşmemesi güçlü bir rahatlama getirir; ama kontrol önerisi küçük bir belirsizlik bıraktığı için hafif bir tedirginlik de sürer. Belirsizlik kaygının temel değerlendirmesidir; tamamen ortadan kalkmadığı için “hiç endişe yok” seçeneği durumu fazla basitleştirir."
+  },
+  {
+    "id": "duy-012",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Barış'ın sevgilisi İlayda, yıllardır hayalini kurduğu yüksek lisans programına kabul aldı; program iki yıl boyunca yurt dışında. İlayda haberi verdiğinde Barış'ın en olası duygusu hangisidir?",
+    "options": [
+      "Onun adına sevinç, ayrılık için hüzün",
+      "Onun başarısına karşı gizli bir haset",
+      "İlişkiyi ihmal ettiği için suçluluk",
+      "Haberin sürprizinden doğan öfke"
+    ],
+    "answer": 0,
+    "why": "Aynı olay, sevilen kişinin hedefi açısından olumlu (sevinç), birliktelik hedefi açısından olumsuz (yakın bir ayrılık, hüzün) değerlendirilir; iki duygu bir arada yaşanır. Haset, başarının Barış'ın kendi alanında bir kıyas yaratmasını gerektirirdi; burada kayıp, onun yanında olamamaktır."
+  },
+  {
+    "id": "duy-013",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Melis zor bir sertifika sınavını geçti. Notunu görünce hissettiği şey gururdan çok derin bir rahatlamaydı. Bunun en olası nedeni hangisidir?",
+    "options": [
+      "Sınavdan kalacağından korkmuş olması",
+      "Sınavı kendi emeğiyle geçmiş olması",
+      "Sonucu arkadaşlarının da görmüş olması",
+      "Sınavın kolay geçeceğini bilmesi"
+    ],
+    "answer": 0,
+    "why": "Rahatlama, beklenen olumsuz bir sonucun gerçekleşmemesinden doğar; Melis kalmaktan korktuysa geçmek her şeyden önce bu tehdidin kalkması demektir. Kendi emeğiyle başarmak ise gururun değerlendirmesidir; rahatlamayı değil gururu artırırdı."
+  },
+  {
+    "id": "duy-014",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Hakan bankacılık uygulamasının şifresini acele edip üç kez yanlış girdi ve hesabı kilitlendi. Şimdi açtırmak için şubeye gitmesi gerekiyor. Hakan büyük olasılıkla en çok ne hisseder?",
+    "options": [
+      "Kendine kızgınlık",
+      "Bankaya derin öfke",
+      "Kalıcı bir utanç",
+      "Yoğun bir hüzün"
+    ],
+    "answer": 0,
+    "why": "Olumsuz sonuca kendi aceleciliği yol açtı ve küçük, düzeltilebilir bir aksilik söz konusu: kendine yönelen kızgınlık bu değerlendirmeye uyar. Bankaya öfke, kuralın haksız olduğunu düşünmeyi gerektirirdi; oysa bu güvenlik kuralı beklenen ve makul bir uygulama."
+  },
+  {
+    "id": "duy-015",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Metroda inerken cüzdanını düşüren Aylin, peronda arkasından seslenen bir yabancıyı duydu. Adam cüzdanı uzatıp gülümsedi ve kapanmak üzere olan trene geri bindi. Aylin'in o anki duygusu en iyi hangisidir?",
+    "options": [
+      "Rahatlamayla birlikte minnet",
+      "Rahatlamayla birlikte utanç",
+      "Şaşkınlıkla birlikte kaygı",
+      "Rahatlamayla birlikte gurur"
+    ],
+    "answer": 0,
+    "why": "Kaybın önlenmesi rahatlama getirir; bunu bir başkasının kendi isteğiyle, karşılık beklemeden yapması ise minnetin tipik değerlendirmesidir. Utanç için Aylin'in kendini kusurlu görmesi gerekir; cüzdan düşürmek böyle bir yargı doğurmayacak kadar sıradandır."
+  },
+  {
+    "id": "duy-016",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Selim aylardır beklediği konsere gitti. Sanatçı ateşli hasta olduğu hâlde sahneye çıktı, içtenlikle özür diledi ve yarım saat sonra konseri bitirmek zorunda kaldı. Selim'in en olası duygusu hangisidir?",
+    "options": [
+      "Hayal kırıklığı",
+      "Sanatçıya kızgınlık",
+      "Gittiğine pişmanlık",
+      "Kendine kızgınlık"
+    ],
+    "answer": 0,
+    "why": "Güçlü bir beklenti karşılanmadı ama suçlanacak kasıtlı bir fail yok: sanatçı hasta, elinden geleni yapmış ve özür dilemiş. Öfke, sorumlu birinin haksızlık yaptığı değerlendirmesini gerektirir; bu koşul olmadığı için geriye hayal kırıklığı kalır."
+  },
+  {
+    "id": "duy-017",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Burcu, üniversiteden beri en yakın arkadaşı olan Sinem'in düğününe davet edilmediğini ortak arkadaşlarının paylaştığı fotoğraflardan öğrendi. Kavga etmek istemiyor; sessizleşti ve kendini değersiz hissediyor. Burcu'nun duygusu en iyi hangisidir?",
+    "options": [
+      "Kırgınlık",
+      "Suçluluk",
+      "Kıskançlık",
+      "Mahcubiyet"
+    ],
+    "answer": 0,
+    "why": "Değer verdiği birinin davranışı, ilişkide önemsenmediği mesajını taşıyor: araştırmalarda kırgınlığın temel değerlendirmesi bu “değersizleştirilme” hissidir. Kıskançlık için Burcu'nun başkasındaki bir şeyi istemesi ya da bir ilişkiyi üçüncü birine kaptırmaktan korkması gerekirdi."
+  },
+  {
+    "id": "duy-018",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki durumların hangisinde korkudan çok kaygı ağır basar?",
+    "options": [
+      "Gelecek ay açıklanacak bir sonucu düşünmek",
+      "Asansörün aniden sarsılıp durması",
+      "Karşı şeritten bir aracın üstüne gelmesi",
+      "Gece sokakta arkadan koşan birini duymak"
+    ],
+    "answer": 0,
+    "why": "Kaygı belirsiz ve henüz gerçekleşmemiş bir tehdide yöneliktir; korku ise o anda var olan, belirli bir tehlikeye verilen hızlı tepkidir. Diğer üç durumda tehlike o an ve somut olarak karşıdadır."
+  },
+  {
+    "id": "duy-019",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Final sınavında Murat'ın yanında oturan iki kişi açıkça kopya çekti; gözetmen görmedi. Sonuçlar açıklandığında ikisi de Murat'tan yüksek not aldı ve bu notlar burs sıralamasını belirliyor. Murat büyük olasılıkla en çok ne hisseder?",
+    "options": [
+      "Haksızlığa karşı öfke",
+      "Onlara karşı gıpta",
+      "Kendine karşı utanç",
+      "Sonuca dair kaygı"
+    ],
+    "answer": 0,
+    "why": "Başkalarının bir kuralı kasten çiğneyerek Murat'ın hedefine zarar vermesi öfkenin temel değerlendirmesidir: suçlanabilir bir fail ve açık bir norm ihlali. Gıpta, hak edilmiş bir başarıya imrenmektir; hileyle alınan not gıpta değil öfke uyandırır."
+  },
+  {
+    "id": "duy-020",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki durumların hangisi Ayşe'de en yoğun suçluluğu uyandırır?",
+    "options": [
+      "Telefonuna bakarken arabayla bir kediye çarpması",
+      "Önüne aniden fırlayan bir kediye çarpması",
+      "Yolcu olduğu arabanın bir kediye çarpması",
+      "Haberlerde ezilen bir kedinin görüntüsünü izlemesi"
+    ],
+    "answer": 0,
+    "why": "Suçluluk, kişinin kendi kontrolündeki bir davranışla zarar verdiğini düşünmesinden doğar; dikkatini telefona vermek bu kontrolü kendi eliyle bırakmaktır. Kedi aniden fırladığında da üzüntü ve hafif suçluluk olabilir, ama kaçınılmaz bir kaza olduğu için çok daha zayıftır."
+  },
+  {
+    "id": "duy-021",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Furkan, buluşmaya bir saat geciken ve telefonu açmayan arkadaşı Kaan'a çok kızmıştı. Sonra Kaan'ın annesini acile götürdüğünü ve telefonunu evde unuttuğunu öğrendi. Furkan'ın duygusu büyük olasılıkla nasıl değişir?",
+    "options": [
+      "Kızgınlık yerini endişeye bırakır",
+      "Kızgınlık aynı şiddetle sürer",
+      "Kızgınlık yerini kıskançlığa bırakır",
+      "Kızgınlık yerini gurura bırakır"
+    ],
+    "answer": 0,
+    "why": "Öfke, karşıdakinin önlenebilir bir şeyi umursamazlıkla yaptığı yargısına dayanır; gecikmenin haklı ve kontrol dışı bir nedeni çıkınca bu yargı çöker. Yerine arkadaşının annesi için endişe, belki kızdığı için hafif bir mahcubiyet gelir."
+  },
+  {
+    "id": "duy-022",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Elif iş için İzmir'den Ankara'ya taşındı. İş arkadaşları kibar, hafta içi yoğun geçiyor; ama hafta sonları arayacak kimsesi yok ve kendi kendine “Burada beni gerçekten tanıyan kimse yok” diyor. Elif'in duygusu en iyi hangisidir?",
+    "options": [
+      "Yalnızlık",
+      "Bıkkınlık",
+      "Kıskançlık",
+      "Suçluluk"
+    ],
+    "answer": 0,
+    "why": "Kişinin istediği yakınlık ile sahip olduğu ilişkiler arasındaki fark yalnızlığı doğurur; “beni gerçekten tanıyan kimse yok” cümlesi tam bu açığı anlatır. Bıkkınlık aynı şeyin tekrarlanmasından doğan bir usançtır; Elif'in sorunu tekrar değil, yakın bağ eksikliğidir."
+  },
+  {
+    "id": "duy-023",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Serkan'ın geliştirdiği uygulama şirket içi yarışmada birinci oldu. Ödül konuşmasında ekip arkadaşı Duygu'nun hazırladığı kritik modülü anmayı unuttu; sahneden inerken bunu fark etti. Serkan'ın o anki duygusu büyük olasılıkla hangisidir?",
+    "options": [
+      "Gururla karışık bir suçluluk",
+      "Saf ve kesintisiz bir gurur",
+      "Duygu'ya karşı bir kıskançlık",
+      "Jüriye karşı derin bir minnet"
+    ],
+    "answer": 0,
+    "why": "Kendi emeğinin sonucu olan başarı gurur uyandırır; ama haksızlığa uğrattığı birinin katkısını atlaması, belirli bir eyleme yönelen ve telafi isteği doğuran suçluluğu tetikler. “Saf gurur”, Serkan'ın hatayı fark ettiği anı yok sayar."
+  },
+  {
+    "id": "duy-024",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Doğan, Berlin'de bir yazılım şirketinde işe başladı. İlk haftalar her şey yeni ve heyecan vericiydi. Üçüncü ayda ise annesinin yemeklerini, mahalledeki çay ocağını, Türkçe esprileri sık sık düşünmeye başladı. Doğan'ın artık en belirgin duygusu hangisidir?",
+    "options": [
+      "Evine ve tanıdıklarına özlem",
+      "Yeni şehre karşı derin bir öfke",
+      "Ailesini bıraktığı için suçluluk",
+      "Kariyerine dair bir kaygı"
+    ],
+    "answer": 0,
+    "why": "Yeniliğin heyecanı söndükten sonra, geride kalan ve şu an ulaşılamayan değerli şeylerin sık sık düşünülmesi özlemin tipik görünümüdür; yurt dışına taşınanlarda ilk coşkunun ardından gelmesi çok yaygındır. Suçluluk için Doğan'ın birine zarar verdiğini düşünmesi gerekirdi; burada öne çıkan yakınlık eksikliğidir."
+  },
+  {
+    "id": "duy-025",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Pazar sabahı; ne yetiştirilecek bir iş var ne de bekleyen bir sorun. Irmak balkonda çayını yudumlarken sokağın sesini dinliyor, aklında belirli bir düşünce yok. Irmak'ın duygusunu en iyi hangisi anlatır?",
+    "options": [
+      "Huzur",
+      "Rahatlama",
+      "Coşku",
+      "Gurur"
+    ],
+    "answer": 0,
+    "why": "Düşük yoğunluklu, tehdit ya da acil hedef içermeyen hoşnutluk hâli huzurdur. Rahatlama ise bir tehdidin ya da beklenen bir kötülüğün ortadan kalkmasının ardından gelir; burada öncesinde atlatılmış bir sıkıntı yok."
+  },
+  {
+    "id": "duy-026",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Can ilk kısa öyküsünü birkaç kişiye okuttu. Aldığı yorumlardan biri şuydu: “Bence pek olmamış.” Aynı cümlenin Can'da en çok kırgınlık uyandırması hangi durumda beklenir?",
+    "options": [
+      "Cümleyi en yakın arkadaşı kurduysa",
+      "Cümleyi kursta tanıştığı biri kurduysa",
+      "Cümle mesajla değil yüz yüze geldiyse",
+      "Cümle uzun bir yorumun içinde geçtiyse"
+    ],
+    "answer": 0,
+    "why": "Kırgınlık, değer verilen bir ilişkide önemsenmediği hissinden beslenir; aynı söz, yakınlık arttıkça daha çok incitir. Sözün yüz yüze ya da mesajla gelmesi tonu etkileyebilir ama belirleyici olan sözü kimin söylediği, yani ilişkinin değeridir."
+  },
+  {
+    "id": "duy-027",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Hoca, Damla'nın projesini bütün sınıfın önünde “dönemin en iyi işi” diye övdü ve herkes ona döndü. Damla'nın yüzü kızardı, gözlerini masaya indirip gülümsedi. Damla büyük olasılıkla ne hissediyor?",
+    "options": [
+      "Gururla karışık bir mahcubiyet",
+      "Suçlulukla karışık bir korku",
+      "Öfkeyle karışık bir hayal kırıklığı",
+      "Kıskançlıkla karışık bir sevinç"
+    ],
+    "answer": 0,
+    "why": "Kendi emeğiyle elde ettiği başarının takdir edilmesi gurur uyandırır; birden herkesin bakışlarının üzerinde toplanması ise mahcubiyete yol açar. Kızarma, bakışları indirme ve gülümseme bu karışımın bilinen işaretleridir; diğer seçeneklerdeki olumsuz duygular için bir neden yok."
+  },
+  {
+    "id": "duy-028",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "orta",
+    "prompt": "Kuzeninin düğününde Taner'in kardeşi mikrofonu alıp kimsenin gülmediği uzun ve uygunsuz bir şaka yaptı. Kardeşi hiç rahatsız görünmüyor; ama izleyen Taner'in yüzü kızarıyor, gözlerini kaçırıyor. Taner'in duygusu en iyi hangisidir?",
+    "options": [
+      "Kardeşi adına mahcubiyet",
+      "Kardeşine karşı kıskançlık",
+      "Kendi adına suçluluk",
+      "Kardeşine karşı hayranlık"
+    ],
+    "answer": 0,
+    "why": "Yakın görülen birinin toplum önünde uygunsuz davranması, davranışın sahibi rahatsız olmasa bile izleyende “başkası adına utanma” denen mahcubiyeti doğurur. Suçluluk için Taner'in kendisinin bir zarara yol açması gerekirdi; şakayı yapan o değil."
+  },
+  {
+    "id": "duy-029",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Yusuf sınav sonucunu ilk açtığında yanlış satıra bakıp geçtiğini sandı, ailesini arayıp müjdeledi. Yarım saat sonra aslında kaldığını fark etti. En baştan doğru okusaydı yaşayacağına kıyasla Yusuf'un hayal kırıklığı büyük olasılıkla nasıldır?",
+    "options": [
+      "Daha yoğundur, çünkü umudu yükselmişti",
+      "Daha hafiftir, çünkü bir süre sevinmişti",
+      "Aynıdır, çünkü sonucun kendisi değişmedi",
+      "Daha hafiftir, çünkü şok onu uyuşturur"
+    ],
+    "answer": 0,
+    "why": "Duygunun yoğunluğu yalnızca sonuca değil, sonucun beklentiyle karşılaştırılmasına bağlıdır: geçtiğine inanmak beklentiyi yükselttiği için düşüş daha sert yaşanır. “Sonuç değişmedi, duygu da aynıdır” görüşü bu karşıtlık etkisini atlar."
+  },
+  {
+    "id": "duy-030",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Zeynep ile Berk aynı şirketin son mülakatına girdi; iş ikisi için de eşit derecede önemli ve sonuç ikisine aynı gün bildirilecek. Zeynep çoğunlukla işe alınma olasılığını düşünüp umutlanıyor, Berk ise reddedilme olasılığını düşünüp kaygılanıyor. Farkı en iyi ne açıklar?",
+    "options": [
+      "Sonucun hangi olasılığına odaklanmaları",
+      "Sonucun ne kadar belirsiz olduğu",
+      "İşin her biri için ne kadar önemli olduğu",
+      "Sonucun ne kadar sonra açıklanacağı"
+    ],
+    "answer": 0,
+    "why": "Umut ve kaygı aynı değerlendirmeyi paylaşır: önemli ve belirsiz bir sonuç. Aralarındaki fark, kişinin olumlu olasılığa mı olumsuz olasılığa mı odaklandığıdır. Belirsizlik ikisinde de aynıdır; umut, sonucun kesin olmasını gerektirmez."
+  },
+  {
+    "id": "duy-031",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Derya ile Sinan'ın aynı uçuşu iptal edildi. Derya iptali havayolunun bakım ihmaline bağlıyor ve öfkeleniyor. Sinan ise iptalin bölgedeki fırtınadan kaynaklandığını düşünüyor ve daha çok hayal kırıklığı yaşıyor. Farklı duyguları en iyi ne açıklar?",
+    "options": [
+      "İptalin nedenine dair yorumları",
+      "Uçuşun onlar için ne kadar önemli olduğu",
+      "İptalin ne kadar beklenmedik olduğu",
+      "Yeni bir uçuş bulma olasılıkları"
+    ],
+    "answer": 0,
+    "why": "Aynı olumsuz olay, bir failin (havayolunun ihmali) sorumlu tutulduğunda öfke, kimsenin suçlanamayacağı bir koşula (fırtına) bağlandığında üzüntü ve hayal kırıklığı doğurur. Uçuşun önemi duygunun yoğunluğunu etkiler ama türünü, yani öfke mi üzüntü mü olacağını belirlemez."
+  },
+  {
+    "id": "duy-032",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Kaan ve Gülşen yarın yöneticilere aynı konuda sunum yapacak. Kaan iki kez prova etti ve sunumu kendini gösterme fırsatı olarak görüyor; Gülşen hazırlığını bitiremedi ve sorulara yanıt veremeyeceğini düşünüyor. Kaan heyecanlı, Gülşen kaygılı. Bu farkı en iyi ne açıklar?",
+    "options": [
+      "Başa çıkabileceklerine dair inançları",
+      "Sunumun ikisi için ne kadar önemli olduğu",
+      "Dinleyicilerin kimlerden oluştuğu",
+      "Sunumun günün hangi saatinde olduğu"
+    ],
+    "answer": 0,
+    "why": "Önemli bir sınav durumunda kişi kaynaklarının yeterli olduğunu düşünürse durumu bir meydan okuma olarak görür ve heyecan duyar; yetersiz olduğunu düşünürse tehdit olarak görür ve kaygılanır. Önem ve dinleyiciler ikisi için aynıdır; farkı yaratan başa çıkma gücü değerlendirmesidir."
+  },
+  {
+    "id": "duy-033",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Deniz'in dizüstü bilgisayarının üzerine çay döküldü ve cihaz bozuldu. Aşağıdaki durumların hangisinde Deniz'in öfkesi en yoğun olur?",
+    "options": [
+      "Ev arkadaşı uyarılmasına rağmen bardağı bıraktıysa",
+      "Kedisi masaya atlayıp kuyruğuyla bardağı devirdiyse",
+      "Kendisi dalgınlıkla bardağa koluyla çarptıysa",
+      "Küçük bir deprem sarsıntısı bardağı devirdiyse"
+    ],
+    "answer": 0,
+    "why": "Öfke, zararın başka birinden geldiği ve o kişinin bunu önleyebilecekken önlemediği değerlendirmesiyle en yoğun hâline ulaşır; uyarıya rağmen sürdürülen dikkatsizlik bunu açıkça karşılar. Kendi dalgınlığında ağır basan duygu öfkeden çok kendine kızgınlık ve pişmanlıktır; kedide ve depremde ise bilinçli bir fail yoktur."
+  },
+  {
+    "id": "duy-034",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Aynı hatayı yapan stajyerlere yöneticileri farklı geri bildirimler verdi. Hangisinin stajyerde suçluluktan çok utanç uyandırması beklenir?",
+    "options": [
+      "“Sen ne kadar dağınık birisin.”",
+      "“Bu raporda iki önemli hata var.”",
+      "“Bu hata müşteriyi zor durumda bıraktı.”",
+      "“Bu adımı atlamışsın, birlikte bakalım.”"
+    ],
+    "answer": 0,
+    "why": "Eleştiri kişinin bütün benliğini hedef aldığında (“dağınık birisin”) utanç, belirli bir davranışı hedef aldığında suçluluk ve düzeltme isteği uyanır. Müşteriye verilen zararı söylemek de güçlü bir duygu yaratır ama odak yine eylemde olduğu için suçluluğu besler."
+  },
+  {
+    "id": "duy-035",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Hande'nin gittiği tiyatro oyunu çok sıkıcı geçti. Aşağıdakilerin hangisinde Hande'nin hayal kırıklığından çok pişmanlık duyması beklenir?",
+    "options": [
+      "Başka bir planı reddedip bu oyunu kendisi seçtiyse",
+      "Bileti ona doğum gününde annesi hediye ettiyse",
+      "Oyunu şirketin toplu etkinliği olarak izlediyse",
+      "Oyunu okulu adına ödev olarak izlemek zorundaysa"
+    ],
+    "answer": 0,
+    "why": "Pişmanlık, kişinin kendi seçimini seçmediği seçenekle kıyaslamasından doğar; başka bir planı reddedip bu oyunu kendisinin seçmesi “keşke öbürüne gitseydim” karşılaştırmasını hazırlar. Diğer durumlarda seçim Hande'nin değil, bu yüzden ağır basan duygu hayal kırıklığıdır."
+  },
+  {
+    "id": "duy-036",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Gece yarısı kapısı sertçe yumruklanan Nihan çok korktu. Kapı deliğinden bakınca bunun, kirayı konuşmak için habersizce gelen ev sahibi olduğunu gördü. Nihan'ın duyguları büyük olasılıkla nasıl ilerler?",
+    "options": [
+      "Korku önce rahatlamaya, sonra öfkeye döner",
+      "Korku önce rahatlamaya, sonra sevince döner",
+      "Korku önce öfkeye, sonra suçluluğa döner",
+      "Korku önce utanca, sonra rahatlamaya döner"
+    ],
+    "answer": 0,
+    "why": "Tehdit belirsizken korku baskındır; tehlike olmadığı anlaşılınca rahatlama gelir. Ardından gece yarısı habersizce kapı yumruklamak açık bir norm ihlali olarak değerlendirilir ve kızgınlık doğar. Sevince geçmek için olayın olumlu bir yanı olması gerekirdi."
+  },
+  {
+    "id": "duy-037",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Aşağıdaki durumların hangisi utançtan çok mahcubiyet uyandırır?",
+    "options": [
+      "Yanlış masaya oturduğunu fark etmek",
+      "Arkadaşına söylediği yalanın ortaya çıkması",
+      "Sınavda kopya çekerken yakalanmak",
+      "Bir yakınını küçük düşürdüğünü fark etmek"
+    ],
+    "answer": 0,
+    "why": "Mahcubiyet, ahlaki ağırlığı olmayan, başkalarının önünde yaşanan küçük bir sosyal aksaklıktan doğar ve çabuk geçer. Yalan ya da kopya gibi ahlaki bir kusurun ortaya çıkması ise kişinin kendini bütünüyle kötü görmesine, yani utanca yol açar."
+  },
+  {
+    "id": "duy-038",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Oğuz uzun süre düşündükten sonra, mutsuz olduğu ama düzenli maaş aldığı işinden ayrıldı; henüz yeni bir işi yok. İşten çıktığı ilk sabah Oğuz'un büyük olasılıkla hissettiği hangisidir?",
+    "options": [
+      "Rahatlamayla karışık bir kaygı",
+      "Yalnızca derin bir pişmanlık",
+      "Hiç bulutsuz, coşkulu bir mutluluk",
+      "Eski ekibine karşı bir öfke"
+    ],
+    "answer": 0,
+    "why": "Mutsuz olduğu bir durumun sona ermesi rahatlama getirir; ama önemli ve belirsiz bir gelecek (gelir, yeni iş) kaygının değerlendirmesini karşılar. Pişmanlık, karar kötü sonuçlanırsa ortaya çıkabilir; ilk sabah henüz böyle bir sonuç yok."
+  },
+  {
+    "id": "duy-039",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Herkesi sürekli küçümseyen sınıf arkadaşı Tarık bitirme jürisinden kaldı. Haberi alan Pınar'ın içinden bir an sevinç geçti; hemen ardından bunu hissettiği için kendinden rahatsız oldu. Pınar'ın yaşadığı en iyi nasıl tanımlanır?",
+    "options": [
+      "Gizli bir sevinç, ardından suçluluk",
+      "Tarık'a yönelik içten ve saf bir acıma",
+      "Kendi başarısı için yoğun bir gurur",
+      "Tarık'a karşı haset ve kıskançlık"
+    ],
+    "answer": 0,
+    "why": "Kibirli bulunan birinin başına gelen kötülük, “hak etti” değerlendirmesiyle gizli bir sevinç uyandırabilir; bunun kendi değerleriyle çeliştiğini fark etmek ise hafif bir suçluluk doğurur. Haset için Tarık'ın Pınar'ın istediği bir şeye sahip olması gerekirdi."
+  },
+  {
+    "id": "duy-040",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Yazılım mühendisi Ali, kardeşinin piyano yarışmasında ödül almasına içtenlikle seviniyor. Ama yakın çalıştığı ekip arkadaşının yazılım ödülü almasına sevinirken içinde bir kıskançlık da hissediyor. Bu farkı en iyi ne açıklar?",
+    "options": [
+      "Başarının kendi önem verdiği alanda olması",
+      "Ekip arkadaşının ödülünün daha büyük olması",
+      "Kardeşiyle daha az görüşüyor olması",
+      "Kardeşinin ödülünü daha önce duymuş olması"
+    ],
+    "answer": 0,
+    "why": "Yakın birinin başarısı, kişinin kimliği için önemli bir alandaysa kıyas devreye girer ve kıskançlık uyandırır; önem vermediği bir alandaysa o başarıyla gurur duyabilir (Tesser'in benlik değerlendirmesi modeli). Ödülün büyüklüğü etkileyebilir ama farkın asıl kaynağı kıyasın Ali'nin kendi alanında yapılmasıdır."
+  },
+  {
+    "id": "duy-041",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Sibel bir hafta sonra büyük bir konferansta konuşma yapacak. Araştırmalara göre bu tür durumlarda kaygı çoğu kişide en çok ne zaman doruğa çıkar?",
+    "options": [
+      "Konuşmaya başlamadan hemen önce",
+      "Konuşmanın son dakikalarında",
+      "Konuşma bittikten sonraki gün",
+      "Davet haberini ilk aldığı gün"
+    ],
+    "answer": 0,
+    "why": "Kaygı, belirsiz bir tehdide yaklaştıkça artar ve genellikle olayın hemen öncesinde, beklentinin en yoğun olduğu anda doruğa çıkar; konuşma başlayınca dikkat göreve yöneldiği için çoğunlukla düşer. Son dakikalarda ise belirsizlik büyük ölçüde kalkmıştır; kaygı yerini çoğu zaman rahatlamaya bırakır."
+  },
+  {
+    "id": "duy-042",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Kafede bir müşteri, siparişi geciken genç garsonu herkesin önünde aşağılayıcı sözlerle azarlıyor. Garsonu tanımayan Volkan olanları masasından izliyor. Volkan'ın en olası duygusu hangisidir?",
+    "options": [
+      "Müşteriye karşı öfke",
+      "Garsona karşı küçümseme",
+      "Müşteriye karşı korku",
+      "Kendi adına suçluluk"
+    ],
+    "answer": 0,
+    "why": "Başkasına yönelik haksız ve aşağılayıcı bir davranış, olay doğrudan bizi hedef almasa da norm ihlali değerlendirmesiyle haksızlığı yapana karşı öfke uyandırır (ahlaki öfke). Garsonu küçümsemek için bir neden yok: gecikme küçük bir aksaklık, asıl ihlal müşterinin tavrı."
+  },
+  {
+    "id": "duy-043",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Cem'in bisikleti apartmanın önünden çalındı; önce çok öfkelendi, polise ve site yönetimine başvurdu. Üç hafta sonra kamera kaydı olmadığı ve bisikletin bulunamayacağı kesinleşti. Cem'in duygusunda büyük olasılıkla nasıl bir değişim olur?",
+    "options": [
+      "Öfke azalır, yerini hüzne ve kabule bırakır",
+      "Öfke giderek artıp kontrolsüz bir hiddete dönüşür",
+      "Öfke yerini kendine yönelik utanca bırakır",
+      "Öfke yerini site yönetimine minnete bırakır"
+    ],
+    "answer": 0,
+    "why": "Öfke, suçlanacak bir fail ve hâlâ değiştirilebilecek bir durum algısıyla beslenir; fail bulunamadığı ve kayıp geri dönmez hâle geldiği için öfke söner, yerini kaybın üzüntüsü ve kabullenme alır. Öfkenin hiddete dönüşmesi için ihlalin sürmesi ya da tırmanması gerekirdi."
+  },
+  {
+    "id": "duy-044",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Mert'in sevgilisi Ebru, son haftalarda yeni iş arkadaşı Sarp'tan sık sık övgüyle söz ediyor ve onunla mesajlaşıyor. Mert'in içinde giderek büyüyen huzursuzluğu en çok ne besler?",
+    "options": [
+      "İlişkisini üçüncü birine kaptırma korkusu",
+      "Sarp'ın sahip olduğu niteliklere imrenmesi",
+      "Ebru'nun Sarp'a haksızlık ettiğini düşünmesi",
+      "Kendi işini kaybedeceğinden korkması"
+    ],
+    "answer": 0,
+    "why": "Kıskançlık, değer verilen bir ilişkinin bir rakip yüzünden kaybedilebileceği değerlendirmesinden doğar. Birinin niteliklerine imrenmek ise haset ya da gıptanın değerlendirmesidir; Mert'in sorunu Sarp'ın sahip oldukları değil, ilişkisinin tehdit altında olması."
+  },
+  {
+    "id": "duy-045",
+    "section": "duygusal",
+    "subtype": "duygu_anlama",
+    "difficulty": "zor",
+    "prompt": "Erasmus dönemi bitmek üzere olan İrem, son haftasında arkadaşlarıyla oturduğu meydanda “Bunu şimdiden özleyeceğim” diye düşünüyor; hâlâ oradayken içi buruluyor. İrem'in duygusunu en iyi ne anlatır?",
+    "options": [
+      "Henüz bitmemiş bir şeye önceden özlem",
+      "Dönemi iyi değerlendirmediği için pişmanlık",
+      "Döneme karşı biriken bir bıkkınlık",
+      "Arkadaşlarına karşı sessiz bir kırgınlık"
+    ],
+    "answer": 0,
+    "why": "Değerli bir deneyimin yakında sona ereceğini bilmek, o deneyim sürerken bile özlem ve burukluk uyandırır; buna “önceden yaşanan nostalji” denir. Pişmanlık için İrem'in kaçırdığı bir fırsatı ya da yanlış bulduğu bir seçimi düşünmesi gerekirdi; o ise yaşadığının değerini düşünüyor."
+  },
+  {
+    "id": "duy-046",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Gamze'nin bir saat sonra müşteri sunumu var; iyi hazırlandı ama kalbi hızlı çarpıyor, elleri terliyor. Kendi kendine “Ya her şeyi unutursam?” diyor. Gamze için en etkili yol hangisi?",
+    "options": [
+      "Gerginliği enerji diye yorumlayıp açılışı bir kez prova etmek",
+      "Gerginliği belli etmemek için duygusunu zorla bastırmaya çalışmak",
+      "Sunumu son dakikada baştan yazıp eksik aramaya başlamak",
+      "Arkadaşlarına mesaj atıp ne kadar gergin olduğunu anlatmak"
+    ],
+    "answer": 0,
+    "why": "Uyarılmayı “vücudum hazırlanıyor” diye yeniden yorumlamak, araştırmalarda hem kaygıyı hem sunum performansını iyileştiren bir yöntem; kısa bir prova da kontrol duygusunu artırır. Bastırmak bedensel gerginliği azaltmaz, üstüne zihinsel kaynak tüketir; son dakikada sunumu yeniden yazmak da kaygıyı büyütür."
+  },
+  {
+    "id": "duy-047",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Burak akşam dokuzda müdüründen, eksik bir rapor için sert bir e-posta aldı. Çok öfkeli ve hemen uzun bir cevap yazmak istiyor. En etkili davranış hangisi?",
+    "options": [
+      "Cevabı taslak olarak yazıp sabah sakin kafayla gözden geçirmek",
+      "Hemen aynı sertlikte cevap verip sınırlarını açıkça çizmek",
+      "Hiç cevap vermeyip konunun kendiliğinden kapanmasını beklemek",
+      "E-postayı ekip arkadaşlarına iletip ne düşündüklerini sormak"
+    ],
+    "answer": 0,
+    "why": "Yoğun öfke anında verilen tepkiler sonradan pişmanlık doğurur; yazıp göndermeyi ertelemek hem duyguyu boşaltır hem de sabah sakin, sorun odaklı bir cevap verme fırsatı tanır. Hemen sert cevap vermek kısa vadede rahatlatsa da çatışmayı tırmandırır; hiç cevap vermemek ise çözülmesi gereken bir iş sorununu ortada bırakır."
+  },
+  {
+    "id": "duy-048",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Büşra'nın bu hafta üç sınavı var ve hiçbirine tam hazır hissetmiyor. Masasına oturduğunda nereden başlayacağını bilemiyor, kafası dağılıyor. En etkili davranış hangisi?",
+    "options": [
+      "İşleri önceliğe göre sıralayıp küçük bir adımla başlamak",
+      "Gece boyu uyumadan üç derse birden aynı anda çalışmak",
+      "Önce bir dizi izleyip kafası tamamen boşalınca başlamak",
+      "Ne kadar geride kaldığını hesaplayıp kendini sıkıştırmak"
+    ],
+    "answer": 0,
+    "why": "Kontrol edilebilir bir sorunda bunalmışlığı en iyi azaltan şey sorun odaklı başa çıkmadır: işi parçalara ayırmak ve ilk adımı atmak kontrol duygusunu geri getirir. Diziyle “kafa boşaltmak” kısa bir mola olarak işe yarayabilir ama ucu açık bir ertelemeye dönüşünce kaygıyı büyütür; uykusuz çalışmak da öğrenmeyi bozar."
+  },
+  {
+    "id": "duy-049",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Eren üç hafta önce ayrıldı. Her gece eski sevgilisinin paylaşımlarına bakıyor ve her seferinde daha kötü hissediyor. En etkili davranış hangisi?",
+    "options": [
+      "Onu bir süre sessize alıp akşamları arkadaşlarıyla plan yapmak",
+      "Paylaşımlarını izleyip ne yaptığından haberdar olmayı sürdürmek",
+      "Hiçbir şey olmamış gibi davranıp duygularını içine atmak",
+      "Ona uzun bir mesaj yazıp her şeyi yeniden konuşmayı önermek"
+    ],
+    "answer": 0,
+    "why": "Duyguyu her gece yeniden tetikleyen durumu sınırlamak (durum seçimi) ve sosyal destekle günü doldurmak, ayrılık sonrası toparlanmayı hızlandırır. Paylaşımları izlemek ruminasyonu besler; duyguları içine atmak ise acıyı azaltmaz, yalnızca görünmez kılar."
+  },
+  {
+    "id": "duy-050",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Koray işe giderken bir araç hızla önüne kırdı; az kalsın çarpışıyorlardı. Koray'ın kalbi küt küt atıyor ve çok öfkeli. En etkili davranış hangisi?",
+    "options": [
+      "Derin nefes alıp “belki acelesi vardır” diye düşünmek",
+      "Peşinden gidip selektör ve kornayla ona ders vermeye çalışmak",
+      "Öfkesini yutup hiçbir şey olmamış gibi davranmaya çalışmak",
+      "Yol boyunca olayı kafasında tekrar tekrar yaşamak"
+    ],
+    "answer": 0,
+    "why": "Bedensel uyarılmayı nefesle yatıştırıp olayı daha az kişisel yorumlamak (yeniden değerlendirme), öfkeyi hızla azaltır ve güvenli sürüşü korur. Peşine düşmek öfkeyi tırmandırır ve tehlikelidir; öfkeyi yutmak ise uyarılmayı azaltmaz, çoğu zaman olayın kafada dönmesiyle sonuçlanır."
+  },
+  {
+    "id": "duy-051",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Esra üçüncü tur mülakattan sonra reddedildi. Kendini “Zaten yeterince iyi değilim” diye suçluyor. Bir sonraki adım olarak en etkili davranış hangisi?",
+    "options": [
+      "Geri bildirim isteyip geliştirebileceği noktaları belirlemek",
+      "Şirketin zaten kötü bir yer olduğuna kendini inandırmaya çalışmak",
+      "Bir süre iş başvurusu yapmayı tamamen bırakıp dinlenmek",
+      "Hedefini düşürüp yalnızca daha az iddialı ilanlara yönelmek"
+    ],
+    "answer": 0,
+    "why": "Ret, öğrenilebilecek bilgiler içeren ve kısmen kontrol edilebilir bir durumdur; geri bildirim istemek öz suçlamayı somut, düzeltilebilir noktalara çevirir ve sonraki görüşmeleri iyileştirir. “Şirket zaten kötüydü” demek kısa vadede teselli eder ama gerçeği çarpıttığı için öğrenmeyi engeller."
+  },
+  {
+    "id": "duy-052",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Arkadaş grubunun WhatsApp grubunda herkes cumartesi buluşmasından söz ediyor; Alper'e ise kimse bir şey sormamış. Davet edilmediğini mi, gözden mi kaçtığını bilmiyor ve kırılmış hissediyor. En etkili davranış hangisi?",
+    "options": [
+      "Gruptan birine özelden sakince sorup durumu netleştirmek",
+      "Gruptan sessizce çıkarak kırgınlığını bu yolla göstermek",
+      "Gruba “Beni de unutmayın tabii” diye iğneleyici yazmak",
+      "Hiç sormadan kafasında olası nedenleri tek tek tartmak"
+    ],
+    "answer": 0,
+    "why": "Belirsizlik varken en etkili yol, bilgiyi doğrudan ve sakin biçimde almaktır; belki yalnızca gözden kaçmıştır. Gruptan çıkmak ya da iğneli yazmak edilgen saldırganlıktır ve ilişkiyi zedeler; kafada senaryo kurmak ise kırgınlığı büyüten ruminasyondur."
+  },
+  {
+    "id": "duy-053",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Ceren'in ev arkadaşı haftalardır bulaşıklarını lavaboda bırakıyor. Ceren her seferinde susup yıkadı; şimdi içinde ciddi bir kızgınlık birikti. En etkili davranış hangisi?",
+    "options": [
+      "Sakin bir anda rahatsızlığını söyleyip bir düzen önermek",
+      "Bir sonraki seferde öfkesini o an olduğu gibi dışa vurmak",
+      "Bir şey demeyip bulaşıkları sessizce yıkamaya devam etmek",
+      "Diğer ev arkadaşlarıyla onun hakkında konuşup dert yanmak"
+    ],
+    "answer": 0,
+    "why": "Biriken kızgınlığı en iyi çözen yol, sakin bir anda “ben” diliyle duyguyu ifade edip somut bir çözüm önermektir. Susmaya devam etmek kızgınlığı büyütür; öfkeyi o an dökmek ise karşı tarafı savunmaya iter ve asıl isteğin, yani düzenin, konuşulmasını zorlaştırır."
+  },
+  {
+    "id": "duy-054",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Rabia'nın babası ameliyatta; doktorlar işlemin dört saat süreceğini söyledi. Rabia bekleme salonunda saatlerdir yerinde duramıyor. Bu bekleyiş sırasında Rabia için en etkili yol hangisi?",
+    "options": [
+      "Bir yakınını arayıp konuşmak ya da kısa bir yürüyüşe çıkmak",
+      "Her yarım saatte bir hemşireye gidip son durumu sormak",
+      "Olabilecek en kötü senaryolara kendini önceden hazırlamak",
+      "Güçlü görünmek için hiçbir şey hissetmiyormuş gibi davranmak"
+    ],
+    "answer": 0,
+    "why": "Kişinin sonucu etkileyemediği bir beklemede problem çözmeye çalışmak işe yaramaz; sosyal destek almak ve dikkati kısa süre başka yöne çevirmek kaygıyı en etkili biçimde azaltır. Hemşireye sık sık sormak kontrol hissi verse de yeni bilgi getirmez ve kaygıyı canlı tutar; en kötü senaryoları düşünmek ise hazırlık değil ruminasyondur."
+  },
+  {
+    "id": "duy-055",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Yeni işinde ikinci ayında olan Batu, müşteriye giden bir raporda yanlış bir rakam olduğunu fark etti. Henüz kimse fark etmedi; Batu iki gecedir uyuyamıyor. En etkili davranış hangisi?",
+    "options": [
+      "Yöneticisine hatayı söyleyip düzeltme önerisi sunmak",
+      "Kimse fark etmediği için konuyu hiç açmayıp beklemek",
+      "Hatayı telafi etmek için haftalarca fazla mesai yapmak",
+      "Herkesin hata yaptığını düşünüp olayı aklından atmak"
+    ],
+    "answer": 0,
+    "why": "Sorun hâlâ düzeltilebilir ve kaygının kaynağı somut: hatayı bildirip çözüm önermek hem asıl sorunu giderir hem de kaygıyı bitirir. “Herkes hata yapar” diye düşünmek iyi bir yeniden değerlendirme gibi görünür ama müşteriye giden yanlış bilgi ortada kaldıkça kaygı da sürer."
+  },
+  {
+    "id": "duy-056",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Özge'nin yakın arkadaşı Nil, ikisinin de istediği pozisyona terfi etti. Özge ona sevinmek istiyor ama içinde kıskançlık da var ve bu yüzden kendine kızıyor. En etkili davranış hangisi?",
+    "options": [
+      "Kıskançlığı kabul edip Nil'in yolundan ders çıkarmak",
+      "Kıskançlığı yok sayıp abartılı bir kutlama düzenlemek",
+      "Bir süre Nil'le görüşmeyi azaltıp kendini korumak",
+      "Terfinin şansla geldiğini düşünüp kendini rahatlatmak"
+    ],
+    "answer": 0,
+    "why": "Kıskançlık doğal bir duygudur; onu kabul edip bilgi olarak kullanmak (“ben de bunu istiyorum, ne yapmalıyım?”) hem suçluluğu hem kıyas acısını azaltır. Yok sayıp abartılı kutlama yapmak bastırmadır ve duyguyu azaltmaz; terfiyi şansa bağlamak ise kısa vadede teselli eder ama gerçeği çarpıtır."
+  },
+  {
+    "id": "duy-057",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Nazan toplantıda bir müşterinin adını yanlış söyledi; birkaç kişi gülümsedi. Aradan iki gün geçti ama o anı hâlâ tekrar tekrar düşünüyor. En etkili davranış hangisi?",
+    "options": [
+      "Bunu küçük bir sürç sayıp sonraki toplantıya odaklanmak",
+      "Toplantıdakilere tek tek mesaj atıp durumu uzun uzun açıklamak",
+      "Bir süre toplantılarda söz almaktan kaçınmak",
+      "O anı zihninde canlandırıp neyi yanlış yaptığını aramak"
+    ],
+    "answer": 0,
+    "why": "Olayı gerçek boyutuyla, herkesin başına gelebilecek küçük bir sürç olarak yeniden değerlendirmek ve dikkati geleceğe çevirmek, tekrarlayan düşünceleri en etkili biçimde keser. O anı tekrar tekrar canlandırmak ruminasyondur ve mahcubiyeti uzatır; herkese açıklama yazmak ise küçük bir olayı büyütür."
+  },
+  {
+    "id": "duy-058",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Ilgın yaz okulundaki son sınavını verdi; sonuç on gün sonra açıklanacak. Sınav bitti ama aklı hâlâ verdiği cevaplarda. Bekleme süresi için en etkili yol hangisi?",
+    "options": [
+      "Günlerini planlayıp dikkatini başka işlere ve hobilerine vermek",
+      "Sistemi saatte bir açıp sonucun gelip gelmediğine bakmak",
+      "Arkadaşlarıyla bütün soruların cevaplarını yeniden karşılaştırmak",
+      "Kötü sonuç gelirse ne yapacağını sürekli kafasında kurmak"
+    ],
+    "answer": 0,
+    "why": "Sonucu artık değiştiremediği bir beklemede en etkili yol, dikkati anlamlı etkinliklere yöneltmektir; bu kaygıyı azaltır. Cevapları arkadaşlarla tek tek karşılaştırmak sosyal destek gibi görünür ama çoğu zaman birlikte ruminasyona dönüşür ve kaygıyı artırır."
+  },
+  {
+    "id": "duy-059",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Tuncay ile sevgilisi tatil planı yüzünden tartışıyor. Konuşma giderek sertleşti; Tuncay sesinin yükseldiğini ve aklına kırıcı sözler geldiğini fark ediyor. En etkili davranış hangisi?",
+    "options": [
+      "Ara vermek istediğini söyleyip biraz sonra konuya dönmek",
+      "Konuşmayı yarıda kesip günlerce bu konuyu hiç açmamak",
+      "O an aklından ne geçiyorsa hiç süzmeden açıkça söylemek",
+      "Haklı olduğunu göstermek için geçmişten örnekler sıralamak"
+    ],
+    "answer": 0,
+    "why": "Uyarılma çok yükseldiğinde kısa ve haber verilen bir mola kırıcı sözleri önler; konuya geri dönmek de sorunun çözülmesini sağlar. Günlerce açmamak önemli bir konudan kaçınmadır; “ne hissediyorsam söylerim” ise yoğun öfkede çoğu zaman pişman olunacak sözlere yol açar."
+  },
+  {
+    "id": "duy-060",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Ekip toplantısında lider, Dilek'in önerisi için herkesin önünde “Yine hayal dünyasından bir fikir” dedi; birkaç kişi güldü. Dilek hem kırgın hem öfkeli. Toplantıdan sonra en etkili davranış hangisi?",
+    "options": [
+      "Lideriyle baş başa konuşup yorumun etkisini sakince anlatmak",
+      "Bir sonraki toplantıda herkesin önünde aynı tonla karşılık vermek",
+      "Hiçbir şey demeyip bunu ekipte olmanın bedeli olarak görmek",
+      "Tek bir yorum üzerine hemen İK'ya yazılı bir şikâyette bulunmak"
+    ],
+    "answer": 0,
+    "why": "Kırıcı bir yorumu özelde, sakin ve somut biçimde konuşmak hem ilişkiyi korur hem de tekrarlanmasını önleme şansı verir. Doğrudan konuşma denenmeden İK'ya gitmek ilişkiyi gereksiz yere sertleştirir; susmak ise kırgınlığın birikmesine yol açar."
+  },
+  {
+    "id": "duy-061",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Levent tez taslağı için danışmanından sayfalarca kırmızı not aldı; bazı yorumlar oldukça sert. İlk okumada hem öfkelendi hem morali bozuldu. En etkili davranış hangisi?",
+    "options": [
+      "Bir gün bekleyip notları haklı ve tartışılabilir diye ayırmak",
+      "Aynı gece danışmanına notlara itiraz eden bir e-posta yazmak",
+      "O gece tezi baştan yazmaya oturup sabaha kadar çalışmak",
+      "Notları okumadan bir süre tezi tamamen kenara koymak"
+    ],
+    "answer": 0,
+    "why": "Yoğun duygu yatıştıktan sonra eleştiriyi sistemli biçimde ele almak hem öfkeyi hem bunalmışlığı azaltır ve hangi yorumların gerçekten değişiklik gerektirdiğini gösterir. O gece tezi baştan yazmak verimli görünür ama duygunun sürüklediği aceleci bir tepkidir; aynı gece itiraz etmek de öfkeyle yazılmış bir mesaj riski taşır."
+  },
+  {
+    "id": "duy-062",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Gece yarısı Tuğba yatakta, ertesi gün yetiştirmesi gereken işleri düşünmekten uyuyamıyor. Zihni bir işten ötekine atlıyor. En etkili davranış hangisi?",
+    "options": [
+      "Aklındaki işleri kâğıda yazıp sabaha bırakmak",
+      "Kalkıp işlerden birine hemen o saatte başlamak",
+      "Düşünceleri zorla zihninden atmaya çalışmak",
+      "Yatakta kalıp yarının planını baştan kurmak"
+    ],
+    "answer": 0,
+    "why": "Yapılacakları yazmak, zihnin bunları unutmamak için sürekli döndürme ihtiyacını azaltır; araştırmalar yatmadan önce liste yazmanın uykuya dalmayı kolaylaştırdığını gösteriyor. Düşünceleri zorla bastırmaya çalışmak ise çoğu zaman tersine teper ve onları daha sık akla getirir."
+  },
+  {
+    "id": "duy-063",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Beril'in ekibinin aylardır üzerinde çalıştığı proje, yönetimin bütçe kararıyla kesin olarak iptal edildi. Beril derin bir hayal kırıklığı içinde. En etkili davranış hangisi?",
+    "options": [
+      "Üzüntüsünü kabul edip projeden kazandıklarını gözden geçirmek",
+      "Kararı değiştirmek için yönetime ısrarla e-posta göndermek",
+      "Hiçbir şey olmamış gibi davranıp hemen yeni projeye gömülmek",
+      "Mesai sonrası arkadaşlarıyla kararı saatlerce didik didik eleştirmek"
+    ],
+    "answer": 0,
+    "why": "Karar kesin ve Beril'in kontrolü dışında olduğu için sorunu çözmeye çalışmak işe yaramaz; duyguyu kabul edip deneyimin kazandırdıklarını görmek (yeniden değerlendirme) en sağlıklı yoldur. Kararı saatlerce eleştirmek birlikte ruminasyondur; hemen yeni işe gömülmek ise duyguyu işlemeden bastırmaktır."
+  },
+  {
+    "id": "duy-064",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Okan, yakın arkadaşı Taylan'ın bir akşam yemeğinde onun hakkında küçümseyici şeyler söylediğini ortak bir tanıdıklarından duydu. Okan hem kırgın hem öfkeli. En etkili davranış hangisi?",
+    "options": [
+      "Taylan'la yüz yüze konuşup duyduğunu sakince sormak",
+      "Taylan'a hemen sert bir mesaj atıp hesap sormak",
+      "Duyduklarını ortak arkadaşlarına anlatıp destek toplamak",
+      "Hiçbir şey söylemeden ondan yavaş yavaş uzaklaşmak"
+    ],
+    "answer": 0,
+    "why": "Bilgi ikinci elden geldiği için önce doğrudan ve sakince sormak hem yanlış anlamayı düzeltme şansı verir hem de doğruysa sorunu konuşmayı sağlar. Sert bir mesaj karşı tarafı savunmaya iter; sessizce uzaklaşmak ise kaçınmadır ve değerli bir ilişkiyi konuşmadan bitirebilir."
+  },
+  {
+    "id": "duy-065",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Aslı fizik ara sınavından beklediğinin çok altında not aldı ve kendine “Ben aptalın tekiyim” diyor. Final dört hafta sonra. En etkili yol hangisi?",
+    "options": [
+      "Notu tek bir sınavın sonucu sayıp hazırlığındaki eksikleri bulmak",
+      "Kendini daha sert eleştirerek finale kadar hırslandırmak",
+      "Hocanın soruları haksızca zor sorduğuna kendini ikna etmek",
+      "Bu sınavı hiç düşünmeyip aklını tamamen başka şeylere vermek"
+    ],
+    "answer": 0,
+    "why": "Sonucu genel bir yetersizlik yerine değiştirilebilir bir hazırlık sorunu olarak yeniden yorumlamak hem moral bozukluğunu azaltır hem de final için yapılacak işi gösterir. Hocayı suçlamak kısa vadede rahatlatır ama kontrolü dışarı verdiği için çalışmayı geliştirmez; sert öz eleştiri de motivasyondan çok utanç doğurur."
+  },
+  {
+    "id": "duy-066",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Umut yeni işinde üç projeye birden atandı; her akşam geç saate kalıyor ve sürekli gergin. Yöneticisi iş dağılımından haberdar görünmüyor. En etkili davranış hangisi?",
+    "options": [
+      "Yöneticisiyle görüşüp öncelikleri birlikte netleştirmek",
+      "Hiç şikâyet etmeden fazla mesaiye kalmayı sürdürmek",
+      "İşi bırakmayı düşünüp gizlice yeni ilanlara bakmaya başlamak",
+      "Ekipteki herkese ne kadar yorulduğunu anlatmak"
+    ],
+    "answer": 0,
+    "why": "Gerginliğin kaynağı somut ve konuşularak değiştirilebilir bir iş yükü; yöneticiyle öncelikleri netleştirmek sorunun kendisini çözer. Ekibe dert yanmak geçici bir rahatlama sağlar ama yükü azaltmaz; şikâyet etmeden devam etmek ise tükenmişliği büyütür."
+  },
+  {
+    "id": "duy-067",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Berna'nın en yakın arkadaşı Ezgi, doğum gününü unuttu; ne aradı ne yazdı. Ertesi gün Ezgi her zamanki gibi neşeyle mesaj attı. Berna kırgın. En etkili davranış hangisi?",
+    "options": [
+      "Ezgi'ye kırıldığını sakin ve açık bir dille söylemek",
+      "Kırgınlığını belli etmeden her zamanki gibi cevap vermek",
+      "Ezgi'ye soğuk davranıp onun kendisinin fark etmesini beklemek",
+      "Ezgi'nin doğum gününde aynısını yaparak ödeşmek"
+    ],
+    "answer": 0,
+    "why": "Yakın bir ilişkide kırgınlığı sakin ve doğrudan söylemek, karşı tarafa özür dileme ve onarma fırsatı verir; ilişkiyi en iyi koruyan yol budur. Belli etmeden devam etmek kırgınlığı içte biriktirir; soğuk davranıp fark etmesini beklemek ise edilgen saldırganlıktır ve çoğu zaman yanlış anlaşılır."
+  },
+  {
+    "id": "duy-068",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Gökhan eve döndüğünde ev arkadaşı Sena'nın odasından ağlama sesi geliyor; sabah, çok çalıştığı bir sınavdan kaldığını öğrenmişti. Gökhan için en etkili davranış hangisi?",
+    "options": [
+      "Kapıyı çalıp yanında olduğunu söylemek, konuşmak ister mi diye sormak",
+      "İçeri girip bütünlemede kesin geçeceğini, hiç abartmamasını söylemek",
+      "Kapıyı çalıp bir dahaki sınava nasıl çalışması gerektiğini anlatmak",
+      "Rahatsız etmemek için hiçbir şey demeden kendi odasına geçmek"
+    ],
+    "answer": 0,
+    "why": "Yanında olduğunu gösterip konuşmak isteyip istemediğini sormak, Sena'ya hem destek hem seçim hakkı verir; duygusu ciddiye alınmış olur. Hemen güvence vermek iyi niyetlidir ama yaşadığını küçümser; çalışma tavsiyesi de duygu yatışmadan gelince eleştiri gibi duyulur."
+  },
+  {
+    "id": "duy-069",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Çağrı merkezinde çalışan Cansu, kaba bir müşteriyle konuşmasını bitirip kulaklığını masaya bıraktı: “Bu işi neden yapıyorum ki?” Yan masadaki Mehmet için en etkili davranış hangisi?",
+    "options": [
+      "“Çok yıpratıcı bir konuşmaydı galiba” deyip anlatmasını dinlemek",
+      "“Her gün böyleleri çıkıyor, takma kafana” deyip işine dönmek",
+      "Müşteriyle nasıl konuşması gerektiğini ona madde madde anlatmak",
+      "Kayda bakıp müşteriyi şikâyet etmek için hemen yöneticiye gitmek"
+    ],
+    "answer": 0,
+    "why": "Duyguyu adlandırıp dinlemek, Cansu'nun yatışmasına en hızlı yardım eden destektir; bir çözüm gerekiyorsa sonra birlikte bakılabilir. “Takma kafana” demek iyi niyetlidir ama duyguyu geçiştirir; istenmemiş teknik öneriler de o anda eleştiri gibi duyulur."
+  },
+  {
+    "id": "duy-070",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Ayşegül, ailesinin istediği hukuk yerine kendi istediği tasarım bölümünü yazmak istiyor; babası buna çok kızmış. Ayşegül ağabeyi Cenk'i arayıp gergin bir sesle durumu anlatıyor. Cenk için en etkili yol hangisi?",
+    "options": [
+      "Önce dinleyip babasıyla nasıl konuşacağını onunla birlikte planlamak",
+      "Hemen babasını arayıp Ayşegül'ün tarafını tutarak onu ikna etmeye çalışmak",
+      "Babasının onun iyiliğini istediğini söyleyip ona hak vermesini önermek",
+      "Tartışma uzamasın diye tercihi babasına söylemeden yapmasını önermek"
+    ],
+    "answer": 0,
+    "why": "Kararı Ayşegül'ün vereceği bir konuda en etkili destek, onu dinleyip kendi sesini bulmasına yardım etmektir. Babayı hemen aramak koruyucu görünür ama konuyu onun elinden alır ve tartışmayı büyütebilir; tercihi gizlemek ise sorunu yalnızca erteler."
+  },
+  {
+    "id": "duy-071",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Nehir'in on iki yıllık köpeği bu sabah öldü. Gece arkadaşı Sinan'a “Saçma biliyorum ama çok kötüyüm” diye yazdı. Sinan için en etkili cevap hangisi?",
+    "options": [
+      "Hiç saçma olmadığını yazıp yarın ona uğramayı teklif etmek",
+      "Köpeğin uzun ve güzel bir hayat yaşadığını hatırlatıp üzülmemesini istemek",
+      "Hazır olduğunda yeni bir köpek sahiplenebileceği barınakları önermek",
+      "Kendi kedisini kaybettiğinde neler yaşadığını uzun uzun anlatmak"
+    ],
+    "answer": 0,
+    "why": "Nehir duygusunun “saçma” bulunmasından çekiniyor; bunu açıkça geçersiz kılıp yanında olmayı önermek en güçlü destektir. Uzun bir hayatı hatırlatmak teselli edicidir ama “üzülme” eki yasını küçümser; yeni köpek önerisi de kaybı yerine konabilir bir şey gibi gösterir."
+  },
+  {
+    "id": "duy-072",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Ekip lideri Seda, Halil'in altı aydır üzerinde çalıştığı projenin bütçe kararıyla kesin olarak iptal edildiğini ona bildirmek zorunda. Halil'in çok bozulacağını biliyor. Seda için en etkili yol hangisi?",
+    "options": [
+      "Kararı ve nedenini açıkça söyleyip Halil'in tepkisine zaman tanımak",
+      "Morali bozulmasın diye projenin belki ileride yeniden açılacağını söylemek",
+      "Yüz yüze gerginlik yaşamamak için kararı kısa bir e-postayla iletmek",
+      "Haberi verir vermez yeni projeyi anlatıp konuyu hemen kapatmak"
+    ],
+    "answer": 0,
+    "why": "Kötü haberi dürüst ve açık vermek, ardından duyguya alan tanımak güveni korur ve kabulü kolaylaştırır. “Belki yeniden açılır” demek o anı yumuşatır ama gerçekleşmeyecek bir umut, sonradan daha büyük bir hayal kırıklığı ve güvensizlik doğurur."
+  },
+  {
+    "id": "duy-073",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Final haftası. Aynı dersi alan Tuna gece yarısı Deniz'in yurt odasına geldi: “Hiçbir şey bilmiyorum, kesin kalacağım.” Sınav iki gün sonra. Deniz için en etkili yol hangisi?",
+    "options": [
+      "Gerginliğini anladığını söyleyip kalan konuları onunla birlikte sıraya koymak",
+      "Her dönem böyle deyip sonunda geçtiğini hatırlatarak kesin geçeceğini söylemek",
+      "Kendisinin de hiç hazır olmadığını söyleyip onunla birlikte dert yanmak",
+      "Onu daha fazla germemek için sınavdan hiç söz etmeden konuyu değiştirmek"
+    ],
+    "answer": 0,
+    "why": "Önce duyguyu kabul etmek, sonra iki günü yönetilebilir parçalara bölmek, kontrol edilebilir bir sorunda kaygıyı en çok azaltan yoldur. “Kesin geçersin” demek çekicidir ama garanti edilemeyen bir güvencedir ve hazırlığa yön vermez; birlikte dert yanmak ise kaygıyı karşılıklı büyütür."
+  },
+  {
+    "id": "duy-074",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Komşusu Nermin Hanım eşini üç ay önce kaybetti. Merdivende karşılaştıklarında Volkan hâlini soruyor; Nermin Hanım'ın gözleri doluyor ve eşinden söz etmeye başlıyor. Volkan için en etkili davranış hangisi?",
+    "options": [
+      "Durup dinlemek, eşini sorarak anlatmasına alan açmak",
+      "Onu üzmemek için hemen havadan sudan bir konuya geçmek",
+      "“Zamanla geçer, güçlü olmalısınız” deyip yoluna devam etmek",
+      "Bir uzmana gitmesini önerip tanıdığı birinin numarasını vermek"
+    ],
+    "answer": 0,
+    "why": "Yas tutan biri için anısını anlatabilmek ve dinlendiğini hissetmek en değerli destektir. Konuyu değiştirmek onu korumak gibi görünür ama yasın konuşulamayacak bir şey olduğu mesajını verir; istenmeden uzman önermek de kısa bir sohbette onu çözülecek bir sorun gibi ele alır."
+  },
+  {
+    "id": "duy-075",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Yiğit'in yaptığı bir hata yüzünden sürüm bir gün gecikti ve bu, toplantıda konuşuldu. Sonra mutfakta Ebru'ya “Herkes beni beceriksiz sanıyor artık” dedi. Hata gerçekten Yiğit'indi. Ebru için en etkili yol hangisi?",
+    "options": [
+      "Canının sıkılmasını anladığını söyleyip telafi için ne yapabileceğini sormak",
+      "Hatanın aslında onun değil, kötü kurulmuş sürecin suçu olduğunu söylemek",
+      "“Kimse öyle düşünmüyor, kafana takma” deyip konuyu hemen kapatmak",
+      "Toplantıyı yöneten müdürün herkese böyle davrandığını söyleyip onu çekiştirmek"
+    ],
+    "answer": 0,
+    "why": "Duygusunu kabul edip dikkati düzeltilebilecek adımlara çevirmek hem utancı azaltır hem de Yiğit'in güveni geri kazanmasına yardım eder. Suçu sürece atmak rahatlatır ama gerçeği çarpıttığı için ders çıkarmayı engeller; “kimse öyle düşünmüyor” demek de bilinmeyen bir şeyi güvence diye sunar."
+  },
+  {
+    "id": "duy-076",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Deniz kafede, ev sahibinin habersiz yaptığı kira artışını anlatırken giderek sinirleniyor; sesi yükseliyor. Karşısındaki arkadaşı Emir için en etkili davranış hangisi?",
+    "options": [
+      "Öfkesini anladığını söyleyip yatışınca sözleşmesine birlikte bakmak",
+      "Onu daha da gaza getirip ev sahibini hemen şimdi aramasını söylemek",
+      "Sesini alçaltmasını, herkesin onlara baktığını hatırlatmak",
+      "Ev sahiplerinin hep böyle olduğunu söyleyip birlikte söylenmek"
+    ],
+    "answer": 0,
+    "why": "Öfkeyi geçerli saymak Deniz'in yatışmasını kolaylaştırır; sorun kontrol edilebilir olduğu için ardından haklarına bakmak en işe yarar adımdır. Sesini alçaltmasını istemek o anki rahatsızlığı çözer ama onu azarlanmış hissettirir; birlikte söylenmek de öfkeyi büyütür."
+  },
+  {
+    "id": "duy-077",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Stajyer Irmak yarın ilk kez müşteriye sunum yapacak. Ekip lideri Can'a ellerinin titrediğini ve gece uyuyamayacağını söylüyor. Can için en etkili yol hangisi?",
+    "options": [
+      "Gerginliğin normal olduğunu söyleyip açılışı onunla bir kez prova etmek",
+      "“Gerilecek bir şey yok, çok basit bir sunum” diyerek onu rahatlatmak",
+      "Gerginliği geçsin diye yarınki sunumu onun yerine kendisi yapmak",
+      "Müşterinin geçen sefer sunumlarda ne kadar sert sorular sorduğunu anlatmak"
+    ],
+    "answer": 0,
+    "why": "Duyguyu olağan saymak ve kısa bir provayla hazırlık hissini artırmak, kaygıyı azaltır ve Irmak'ın sunumu yapabileceğine olan inancını güçlendirir. “Basit bir sunum” demek iyi niyetlidir ama gerginliğini anlamsız gösterir; sunumu devralmak da gelişme fırsatını elinden alır."
+  },
+  {
+    "id": "duy-078",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Gülten Hanım birkaç ay önce emekli oldu. Oğlu Serdar'la telefonda konuşurken “Artık hiçbir işe yaramıyorum” diyor. Serdar için en etkili yol hangisi?",
+    "options": [
+      "Bu hissi ciddiye alıp günlerine neyin anlam katabileceğini onunla konuşmak",
+      "“Ne demek işe yaramamak, sen bizim her şeyimizsin” diyerek konuyu kapatmak",
+      "Ona sormadan bir el sanatları kursuna kaydını yaptırıp haber vermek",
+      "Emekliliğin ilk aylarının herkes için böyle geçtiğini söyleyip geçiştirmek"
+    ],
+    "answer": 0,
+    "why": "Annesinin duygusunu ciddiye alıp anlam ve uğraş kaynaklarını onunla birlikte aramak hem dinlendiğini hissettirir hem de kontrolü ona bırakır. “Sen bizim her şeyimizsin” demek sevgi doludur ama asıl dertten, günlerinin boş kalmasından, uzaklaştırır; sormadan kurs ayarlamak da kararı elinden alır."
+  },
+  {
+    "id": "duy-079",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Ayrılığın üzerinden bir hafta geçti. Ev arkadaşı Oya her gece eski sevgilisinin mesajlarını açıp Esra'ya gösteriyor ve her cümlenin ne anlama geldiğini saatlerce konuşmak istiyor. Esra için en etkili yol hangisi?",
+    "options": [
+      "Onu dinlemeyi sürdürüp akşamları birlikte başka bir şey yapmayı önermek",
+      "Her mesajı onunla satır satır inceleyip gerçek anlamını çözmeye çalışmak",
+      "Artık bu konuyu açmamasını, kendisinin de çok yorulduğunu söylemek",
+      "Eski sevgiliye yazıp Oya'yı rahat bırakmasını açıkça istemek"
+    ],
+    "answer": 0,
+    "why": "Destek vermeyi sürdürürken dikkati başka etkinliklere de açmak, Oya'nın acısını bastırmadan döngüyü kırar. Mesajları birlikte satır satır incelemek destek gibi görünür ama birlikte ruminasyondur ve acıyı uzatır; konuyu yasaklamak ise en çok ihtiyaç duyduğu anda onu yalnız bırakır."
+  },
+  {
+    "id": "duy-080",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Halı saha maçında kaleci Ozan iki basit gol yedi ve takım kaybetti. Soyunma odasında başını eğmiş, kimseyle konuşmuyor. Kaptan Emre için en etkili davranış hangisi?",
+    "options": [
+      "Yanına oturup zor bir maç olduğunu söylemek, ek antrenman önermek",
+      "Takımın önünde hangi hareketlerinin yanlış olduğunu tek tek anlatmak",
+      "Hiçbir şey olmamış gibi davranıp maçtan hiç söz etmemek",
+      "Gollerde savunmanın da hatası olduğunu söyleyip onları suçlamak"
+    ],
+    "answer": 0,
+    "why": "Özelde destek vermek ve ileriye dönük somut bir adım önermek, utancı azaltıp motivasyonu korur. Herkesin önünde hata saymak utancı büyütür; suçu savunmaya kaydırmak ise Ozan'ı rahatlatırken takımda yeni bir kırgınlık yaratır."
+  },
+  {
+    "id": "duy-081",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Yurtta kalan Elçin, ailesinin işlerinin bozulduğunu ve harçlığının kesilebileceğini öğrendi; okulu bırakmaktan korkuyor. Oda arkadaşı Burcu için en etkili yol hangisi?",
+    "options": [
+      "Kaygısını dinleyip burs ve yarı zamanlı iş seçeneklerine birlikte bakmak",
+      "“Merak etme, her şey mutlaka yoluna girer” diyerek ona moral vermeye çalışmak",
+      "Kendi bütçesinden her ay ona düzenli para vereceğine söz vermek",
+      "Okulu bırakmasının büyük bir hata olacağını ona uzun uzun anlatmak"
+    ],
+    "answer": 0,
+    "why": "Önce dinlemek, sonra somut seçenekleri birlikte araştırmak hem duyguyu karşılar hem de kontrol edilebilir sorunu ele alır. Düzenli para sözü cömerttir ama Burcu'nun sürdüremeyebileceği bir yük ve ilişkide dengesizlik yaratır; “her şey yoluna girer” ise dayanaksız bir güvencedir."
+  },
+  {
+    "id": "duy-082",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Aile WhatsApp grubunda teyzesi, Merve'nin hâlâ kalıcı bir işe girmediğine dair iğneleyici bir yorum yaptı. Merve kuzeni Okan'a özelden “Çok sinirlendim” yazdı. Okan için en etkili cevap hangisi?",
+    "options": [
+      "Sinirlenmesine hak verip ne yapmak istediğini sormak",
+      "Gruba teyzeye karşılık veren sert bir mesaj yazmak",
+      "“Teyzem böyledir, takma” yazıp konuyu geçmek",
+      "Teyzeyi arayıp Merve'nin bu söze çok kırıldığını söylemek"
+    ],
+    "answer": 0,
+    "why": "Duyguyu doğrulayıp ne istediğini sormak Merve'ye destek olur ve kararı ona bırakır; belki yalnızca dertleşmek istiyordur. Teyzeyi kendi başına aramak koruyucu görünür ama Merve'nin istemediği bir yüzleşme başlatabilir; gruba sert yazmak da tartışmayı herkesin önüne taşır."
+  },
+  {
+    "id": "duy-083",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Ahmet Bey ilk kez telefondan fatura ödemeye çalışırken iki kez hata aldı; sinirlenip “Ben bu işleri beceremem” diyerek telefonu masaya bıraktı. Kızı Zehra için en etkili yol hangisi?",
+    "options": [
+      "Sinirini anladığını söyleyip işlemi onun elinde, adım adım birlikte yapmak",
+      "Telefonu alıp ödemeyi birkaç saniyede kendisi bitirivermek",
+      "Bunun aslında çok kolay olduğunu, herkesin yapabildiğini söylemek",
+      "Bundan sonra bütün ödemeleri kendisinin yapacağını söyleyip onu rahatlatmak"
+    ],
+    "answer": 0,
+    "why": "Hayal kırıklığını kabul edip işlemi babasının yapmasına eşlik etmek hem öfkeyi yatıştırır hem de “beceremem” inancını deneyimle çürütür. Ödemeyi kendisinin bitirmesi o anki sorunu çözer ama bu inancı pekiştirir; “çok kolay” demek de zorlanan birini daha çok utandırır."
+  },
+  {
+    "id": "duy-084",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Proje toplantısında Aras ile Bora iş bölümü yüzünden birbirine sesini yükseltti; diğerleri susup ekranlarına bakıyor. Ekip lideri Nesrin için en etkili yol hangisi?",
+    "options": [
+      "Kısa bir ara verip ikisiyle konuyu sakin bir ortamda ele almak",
+      "Gerginliği görmezden gelip hemen gündemin sonraki maddesine geçmek",
+      "Herkesin önünde ikisini de profesyonel davranmamakla uyarmak",
+      "Kimin haklı olduğuna o an karar verip işi ona vermek"
+    ],
+    "answer": 0,
+    "why": "Uyarılma yüksekken kısa bir mola tırmanmayı durdurur; konuyu sonra sakin bir ortamda ele almak da asıl anlaşmazlığı çözer. Görmezden gelmek toplantıyı kurtarır gibi görünür ama sorunu ve gerginliği olduğu gibi bırakır; herkesin önünde uyarmak ise ikisini de utandırıp savunmaya iter."
+  },
+  {
+    "id": "duy-085",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Kuzeni Mert ehliyet sınavının direksiyon aşamasından ikinci kez kaldı ve Batu'ya “Ben hiçbir zaman araba kullanamayacağım” dedi. Batu için en etkili cevap hangisi?",
+    "options": [
+      "Moralinin bozulmasını anladığını söyleyip bu kez nerede zorlandığını sormak",
+      "Kendisinin ilk denemede nasıl kolayca geçtiğini anlatıp örnek olmak",
+      "Görevlilerin bilerek çok kişiyi bıraktığını söyleyip onu avutmak",
+      "Şehirde araba kullanmanın zaten gereksiz olduğunu söyleyip vazgeçmesini önermek"
+    ],
+    "answer": 0,
+    "why": "Duyguyu kabul edip somut zorlanma noktasını sormak, “hiçbir zaman” genellemesini çözülebilir bir soruna indirger. Görevlileri suçlamak avutur ama kontrolü dışarı verir; kendi kolay başarısını anlatmak da istemeden kıyas yaratıp Mert'i daha kötü hissettirir."
+  },
+  {
+    "id": "duy-086",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Selin, yeni işindeki yöneticisinin ona sürekli bağırdığını anlatırken ağlıyor ve “Belki de ben hak ediyorum” diyor. Arkadaşı Gizem için en etkili yol hangisi?",
+    "options": [
+      "Bağırılmayı hak etmediğini söyleyip ne yapmak istediğini birlikte düşünmek",
+      "Böyle bir yerde durmaması gerektiğini söyleyip hemen istifa etmesini istemek",
+      "Belki gerçekten eksikleri olduğunu, kendini geliştirmesi gerektiğini söylemek",
+      "Yöneticinin adını sosyal medyada paylaşıp onu teşhir etmesini önermek"
+    ],
+    "answer": 0,
+    "why": "Selin kendini suçluyor; bağırmanın kabul edilemez olduğunu söylemek bu öz suçlamayı kırar, seçenekleri birlikte düşünmek de kararı onda bırakır. Hemen istifa etmesini istemek koruyucu görünür ama duygusu dinlenmeden hayatını etkileyecek bir kararı onun yerine verir."
+  },
+  {
+    "id": "duy-087",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "İş için Eskişehir'e taşınan Arda, ilk ayında hafta sonlarını evde tek başına geçirdiğini ve çok yalnız hissettiğini ev arkadaşı Kaan'a söyledi. Kaan için en etkili yol hangisi?",
+    "options": [
+      "Onu bu hafta sonu arkadaşlarıyla yapacağı kahvaltıya davet etmek",
+      "Herkesin ilk aylarda böyle hissettiğini söyleyip konuyu kapatmak",
+      "Bu kadar zorlanıyorsa eski şehrine dönmeyi düşünmesini önermek",
+      "Daha çok dışarı çıkması gerektiğini her gün ona hatırlatmak"
+    ],
+    "answer": 0,
+    "why": "Yalnızlığın en doğrudan çaresi yeni bağlar kurmaktır; somut bir davet hem duygusunun duyulduğunu gösterir hem de bu bağlara kapı açar. “Herkes böyle hisseder” doğru olsa da tek başına geçiştirmedir; her gün dışarı çıkmasını hatırlatmak da yardım yerine baskı gibi algılanır."
+  },
+  {
+    "id": "duy-088",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "orta",
+    "prompt": "Zafer bir hafta sonra taşınıyor; kutular, nakliyeci ve iş yetiştirmek arasında bunalmış durumda. Son günlerde annesine ve kardeşine sık sık terslendiğini fark ediyor. Zafer için en etkili davranış hangisi?",
+    "options": [
+      "Bunaldığını onlara söyleyip işlerin bir kısmını onlarla paylaşmak",
+      "Kimseyi yormamak için her şeyi yine tek başına halletmeye çalışmak",
+      "Terslenmemek için bu hafta ailesiyle hiç konuşmamaya karar vermek",
+      "Gerginliğini içine atıp ailesine karşı hep güler yüzlü görünmek"
+    ],
+    "answer": 0,
+    "why": "Bunalmışlığın kaynağı aşırı iş yükü; durumu açıkça söyleyip yardım istemek hem yükü azaltır hem de terslenmelerin nedenini aileye anlatmış olur. Tek başına halletmek özverili görünür ama yükü ve gerginliği büyütür; gerginliği içine atmak da genellikle başka bir anda patlar."
+  },
+  {
+    "id": "duy-089",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Tuba en yakın arkadaşının düğününde konuşma yapacak. Salona vardığında metninin ikinci sayfasını evde unuttuğunu fark etti; ev iki saat uzakta, konuşmaya kırk dakika var. Tuba için en etkili davranış hangisi?",
+    "options": [
+      "Hatırladığı ana fikirleri kısa notlara döküp onlarla konuşmak",
+      "Konuşmadan vazgeçip geline durumu anlatarak özür dilemek",
+      "Konuşmaya, metni unuttuğunu ve çok heyecanlı olduğunu söyleyerek başlamak",
+      "Kalan sürede eksik sayfayı kelimesi kelimesine hatırlamaya çalışmak"
+    ],
+    "answer": 0,
+    "why": "Sorun kontrol edilebilir ve süre kısıtlı; elindeki malzemeyi kısa notlara dönüştürmek hem kaygıyı azaltır hem de konuşmayı kurtarır. Sayfayı kelimesi kelimesine hatırlamaya çalışmak çözüm gibi görünür ama baskı altında tutturulması zor bir hedeftir ve kaygıyı artırır."
+  },
+  {
+    "id": "duy-090",
+    "section": "duygusal",
+    "subtype": "duygu_yonetimi",
+    "difficulty": "zor",
+    "prompt": "Pelin beklediği terfiyi alamadı. Akşam bunu anlatırken sevgilisi Kaan hemen “Özgeçmişini güncelle, başka ilanlara bakalım” dedi; Pelin daha da gerildi. Kaan'ın en etkili tepkisi ne olurdu?",
+    "options": [
+      "Önce hayal kırıklığını dinleyip sonra ne yapmak istediğini sormak",
+      "Terfiyi alan kişinin torpille geldiğini söyleyip onu rahatlatmak",
+      "Gerildiğini görünce hiçbir şey demeyip konuyu tamamen kapatmak",
+      "Kararın nedenini hemen yöneticisinden öğrenmesi için ısrar etmek"
+    ],
+    "answer": 0,
+    "why": "Üzgün biri çözümden önce anlaşıldığını hissetmeye ihtiyaç duyar; dinlemek ve ardından ne istediğini sormak, sonraki önerileri de işe yarar kılar. Kararın nedenini öğrenmek mantıklı bir sonraki adımdır ama ısrarla dayatılınca aynı hatayı, dinlemeden çözüm sunmayı, tekrarlar."
+  },
+  {
+    "id": "duy-091",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki sözlerden hangisi bir sitemdir?",
+    "options": [
+      "“Eskiden her hafta arardın, şimdi bayramdan bayrama…”",
+      "“Bu raporu yarına bitirmezsen ciddi bir sorun çıkar.”",
+      "“Çorbam soğuk geldi, rica etsem değiştirir misiniz?”",
+      "“Keşke o gün o otobüse hiç binmeseydim.”"
+    ],
+    "answer": 0,
+    "why": "Sitem, yakın birine kırgınlığı yumuşak, çoğu zaman sevecen bir dille doğrudan söylemektir; ilk söz tam olarak bunu yapıyor. Rapor sözü bir uyarı, çorba sözü bir şikâyet ya da rica, otobüs sözü ise pişmanlıktır."
+  },
+  {
+    "id": "duy-092",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Kırgınım ama küs değilim” diyen biri iki durum arasında nasıl bir ayrım yapıyor?",
+    "options": [
+      "İncindiğini ama konuşmayı ve ilişkiyi kesmediğini anlatıyor",
+      "Öfkeli olduğunu ama bunu hiç belli etmediğini anlatıyor",
+      "Kendini suçladığını ama karşıdakini suçlamadığını anlatıyor",
+      "Kırgınlığı geçtiği hâlde artık uzak durduğunu anlatıyor"
+    ],
+    "answer": 0,
+    "why": "Küsmek, kırıldığı kişiyle konuşmayı ya da ilişkiyi kesmektir; kırgınlık ise incinme duygusunun kendisidir. Bu yüzden kişi kırgın olup konuşmayı sürdürebilir. “Öfkesini belli etmemek” çekicidir ama ayrım öfkede değil, ilişkiyi kesip kesmemektedir."
+  },
+  {
+    "id": "duy-093",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Yağmur yüzünden piknik iptal olunca Elif … yaşadı; en yakın arkadaşı söz verdiği hâlde haber vermeden gelmeyince ise ona karşı … duydu.\nBoşluklara sırasıyla hangisi gelmeli?",
+    "options": [
+      "hayal kırıklığı / kırgınlık",
+      "kırgınlık / hayal kırıklığı",
+      "pişmanlık / mahcubiyet",
+      "kırgınlık / pişmanlık"
+    ],
+    "answer": 0,
+    "why": "Hayal kırıklığı, beklentinin boşa çıkmasıdır ve bir kişiye yönelmesi gerekmez; yağmura kırgın olunmaz. Kırgınlık ise değer verilen birinin davranışından incinmektir; bu yüzden ikinci boşluğa en iyi o oturur."
+  },
+  {
+    "id": "duy-094",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Bayram ziyaretinde ev sahibi Can'a en sevdiği yemekleri hazırlamış, dönüşte de eline bir kutu tatlı vermiş. Can kapıda “Beni çok mahcup ettiniz” diyor. Can'ın anlatmak istediği nedir?",
+    "options": [
+      "Karşılık veremeyeceği bir incelikten ötürü borçlu hissettiğini",
+      "Bu kadar ikramdan rahatsız olup bir daha gelmek istemediğini",
+      "Daha önce yaptığı bir kabalık yüzünden suçluluk duyduğunu",
+      "Ev sahibinin onu herkesin önünde küçük düşürdüğünü düşündüğünü"
+    ],
+    "answer": 0,
+    "why": "“Beni mahcup ettiniz” kalıbı, karşılığını veremeyecek kadar büyük bir incelik karşısında duyulan sevecen bir borçluluk ve utangaçlığı anlatır; aslında teşekkürün bir biçimidir. Suçluluk okuması çekicidir ama ortada Can'ın yaptığı bir yanlış yoktur."
+  },
+  {
+    "id": "duy-095",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "“Yas” sözcüğünü “hüzün”den ayıran en belirgin özellik hangisi?",
+    "options": [
+      "Yas, önemli bir kaybın ardından zamana yayılan bir süreçtir",
+      "Yas, nedeni belli olmayan, hafif ve geçici bir üzüntüdür",
+      "Yas, geleceğe dönük bir tehlikeyi beklerken duyulan korkudur",
+      "Yas, başkasının başarısı karşısında duyulan bir acıdır"
+    ],
+    "answer": 0,
+    "why": "Yas, bir yakının ölümü gibi önemli bir kaybın ardından yaşanan ve haftalara, aylara yayılan bir süreçtir. Hüzün ise daha geniş ve çoğu zaman daha hafif bir duygudur; bir şarkı ya da bir sonbahar akşamı bile hüzün uyandırabilir."
+  },
+  {
+    "id": "duy-096",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Ekim sonu; Nur, yaz kalabalığı çekilmiş sahil kasabasında kepenkleri inmiş dükkânların önünden yürüyor. İçinde tatlı bir ağırlık var; ne bir kaybı var ne de belirli bir derdi. Nur'un duygusunu en iyi hangi sözcük anlatır?",
+    "options": [
+      "Hüzün",
+      "Keder",
+      "Yas",
+      "Pişmanlık"
+    ],
+    "answer": 0,
+    "why": "Hüzün, belirli bir kayıp ya da dert olmadan da yaşanabilen, çoğu zaman tatlı bir yanı olan hafif bir üzüntüdür. Keder daha ağır ve acı veren bir üzüntüdür, genellikle somut bir felakete bağlanır; yas ise bir kaybın ardından gelir."
+  },
+  {
+    "id": "duy-097",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Özlemi yalnızlıktan ayıran en belirgin özellik hangisi?",
+    "options": [
+      "Özlem, belirli bir kişiye, yere ya da zamana yönelir",
+      "Özlem, ancak kalabalık bir ortamda hissedilebilir",
+      "Özlem, hiçbir zaman hüzün ya da acı içermeyen bir histir",
+      "Özlem, yalnızca geleceğe dönük bir istektir"
+    ],
+    "answer": 0,
+    "why": "Özlem, uzakta ya da geçmişte kalmış belirli bir kişiyi, yeri veya zamanı yeniden görme isteğidir. Yalnızlık ise belirli bir hedefi olmayan, bağ ve yakınlık eksikliğinin genel duygusudur; kalabalıkta bile hissedilebilir."
+  },
+  {
+    "id": "duy-098",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Akşam eve dönen Ceyda kapının kilitli olmadığını fark etti. Belki sabah kilitlemeyi unutmuştu; ortada kesin bir tehlike işareti yok. Yine de içeri girerken huzursuz, odalara tek tek bakıyor. Ceyda'nın duygusunu en iyi hangisi anlatır?",
+    "options": [
+      "Tedirginlik",
+      "Paniğe kapılma",
+      "Dehşet",
+      "Çaresizlik"
+    ],
+    "answer": 0,
+    "why": "Tedirginlik, açık bir tehlike olmadan duyulan hafif ve belirsiz bir huzursuzluktur; Ceyda'nın sakin ama dikkatli davranışı buna uyar. Dehşet ve panik çok daha yoğun, kontrolü zorlayan tepkilerdir; çaresizlik ise elinden bir şey gelmeme duygusudur."
+  },
+  {
+    "id": "duy-099",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Toplantıda Hakan'ın önerisi hiç tartışılmadan geçildi. Hakan ses çıkarmadı, kimseye bir şey söylemedi; ama akşama kadar içten içe bu duruma bozuldu. Hakan'ın yaşadığını en iyi hangi sözcük anlatır?",
+    "options": [
+      "İçerlemek",
+      "Hiddetlenmek",
+      "Telaşlanmak",
+      "Usanmak"
+    ],
+    "answer": 0,
+    "why": "İçerlemek, bir söz ya da davranıştan dolayı dışa vurmadan, içten içe gücenip bozulmaktır. Hiddetlenmek ise öfkenin şiddetli ve çoğu zaman dışa taşan hâlidir; Hakan'ın sessizliğiyle uyuşmaz."
+  },
+  {
+    "id": "duy-100",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Hiddet” sözcüğünü “öfke”den ayıran nedir?",
+    "options": [
+      "Hiddet, öfkenin şiddetli ve dışa taşan hâlini anlatır",
+      "Hiddet, için için yaşanan, dışa vurulmayan sessiz bir kırgınlıktır",
+      "Hiddet, kişinin yalnızca kendine yönelttiği öfkedir",
+      "Hiddet, öfkenin yatışmış ve geçmişte kalmış hâlidir"
+    ],
+    "answer": 0,
+    "why": "Hiddet, öfkenin yoğun, coşkun ve çoğu zaman sesle, hareketle dışa yansıyan biçimidir; “hiddetle masaya vurdu” deriz. İçten içe yaşanan sessiz bozulma ise hiddete değil, “içerleme”ye yakındır."
+  },
+  {
+    "id": "duy-101",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Gece ancak iki saat uyuyabilen Gökçe'yi bugün her şey rahatsız ediyor. Belirli bir kişiye kızgın değil ama en küçük sese, en basit soruya bile sinirleniyor. Gökçe'nin hâlini en iyi hangisi anlatır?",
+    "options": [
+      "Sinirlilik",
+      "Kin tutma",
+      "Kırgınlık",
+      "Kıskançlık"
+    ],
+    "answer": 0,
+    "why": "Sinirlilik, belirli bir hedefi olmayan, eşiği düşmüş genel bir huzursuzluk ve çabuk kızma hâlidir; uykusuzluk sık nedenlerinden biridir. Kin ve kırgınlık ise belirli bir kişiye ve bir olaya yönelir."
+  },
+  {
+    "id": "duy-102",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Sevgi'nin mezuniyette ailesiyle paylaştığı … herkesi mutlu etti; Serhat'ın başarısını her fırsatta öne sürüp arkadaşlarını küçümseyen … ise onları uzaklaştırdı.\nBoşluklara sırasıyla hangisi gelmeli?",
+    "options": [
+      "gurur / kibri",
+      "kibir / gururu",
+      "minnet / hevesi",
+      "mahcubiyet / öfkesi"
+    ],
+    "answer": 0,
+    "why": "Gurur, emeğin ve başarının karşılığında duyulan yerinde bir sevinçtir; kibir ise kendini üstün görüp başkalarını küçümsemektir. “Gurur” bazen kibir anlamında da kullanılır, ama herkesi mutlu eden bir duygu kibir olamaz."
+  },
+  {
+    "id": "duy-103",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Herkesin önünde azarlanınca gururu kırıldı.” Bu cümlede “gurur” hangi anlamda kullanılmıştır?",
+    "options": [
+      "Kişinin öz saygısı, onuru",
+      "Başarıdan duyulan sevinç ve övünç",
+      "Başkalarını küçük görme",
+      "Bir işe duyulan istek"
+    ],
+    "answer": 0,
+    "why": "Gururun üç anlamı vardır: kendini beğenme, onur ve övünç. “Gururu kırılmak” kalıbında sözcük onur, öz saygı anlamındadır. “Başkalarını küçük görme” öteki anlamıdır ama azarlanınca kırılan şey kibir değil, kişinin onurudur."
+  },
+  {
+    "id": "duy-104",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Takım finali kazandı ama kaptanları son dakikada sakatlanıp hastaneye kaldırıldı. Ertesi gün bir gazete “Buruk bir şampiyonluk” diye yazdı. “Buruk” burada neyi anlatıyor?",
+    "options": [
+      "Sevincin bir üzüntüyle gölgelenmesini",
+      "Sevincin yerini tamamen kedere bırakmasını",
+      "Sevincin abartılı ve yapmacık olmasını",
+      "Sevincin rakibe duyulan öfkeyle karışmasını"
+    ],
+    "answer": 0,
+    "why": "Burukluk, bir sevincin ya da başarının içine karışan hafif bir hüzün ve eksiklik duygusudur; şampiyonluk yine sevindiricidir ama kaptanın sakatlığı onu gölgeler. Sevincin tamamen kedere dönüşmesi daha ağır bir durumdur ve “buruk” sözcüğünün karşıladığı şey değildir."
+  },
+  {
+    "id": "duy-105",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Haftalık toplantıda müdür kimseye bakmadan “Bazı arkadaşlar raporlarını hep son gün teslim ediyor” dedi. İsim vermedi ama Nihat bunun kendisi için söylendiğini düşündü. Nihat'ın yaptığını en iyi anlatan ifade hangisi?",
+    "options": [
+      "Üstüne alınmak",
+      "Gücenip kırılmak",
+      "Sitemde bulunmak",
+      "Küsüp susmak"
+    ],
+    "answer": 0,
+    "why": "Üstüne alınmak, genel olarak söylenmiş bir sözü kendisi için söylenmiş sanmaktır; Nihat'ın yaptığı tam olarak budur. Gücenmek bunun bir sonucu olabilir ama metin yalnızca onun sözü kendine yorduğunu söylüyor; sitem ve küsme ise karşı tarafa yönelik davranışlardır."
+  },
+  {
+    "id": "duy-106",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Heves” sözcüğünü “heyecan”dan ayıran nedir?",
+    "options": [
+      "Heves, bir şeyi yapma ya da edinme isteğidir",
+      "Heves, bedenin uyarılıp kalbin hızla çarpmasıdır",
+      "Heves, yalnızca kötü bir haber karşısında duyulur",
+      "Heves, geçmişte kalan bir şeye duyulan özlemdir"
+    ],
+    "answer": 0,
+    "why": "Heves, bir şeyi yapmaya ya da edinmeye yönelik istek ve gönüldür; çabuk sönebildiği için “hevesi kaçmak” denir. Heyecan ise bir olay karşısında bedenin ve zihnin uyarılmasıdır; kalp çarpıntısı heyecanın belirtisidir."
+  },
+  {
+    "id": "duy-107",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Türkçede “heyecan” sözcüğü için aşağıdakilerden hangisi doğrudur?",
+    "options": [
+      "Sevinçli beklentiyi de gerginliği de anlatabilir",
+      "Yalnızca sevinçli ve olumlu bir coşkuyu anlatır",
+      "Yalnızca bir tehlike karşısındaki korkuyu anlatır",
+      "Yalnızca uzun süren duygular için kullanılabilir"
+    ],
+    "answer": 0,
+    "why": "“Bayram heyecanı” sevinçli bir beklentiyi, “sınav heyecanı” ise gerginliği anlatır; sözcük olumlu ya da olumsuz olabilen bir uyarılmayı karşılar. Bu yüzden “Çok heyecanlıyım” diyenin sevinçli mi gergin mi olduğu çoğu zaman bağlamdan anlaşılır."
+  },
+  {
+    "id": "duy-108",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Ferhat üç aydır her pazartesi toplantısında aynı slaytları, aynı cümlelerle dinliyor. Bu sabah sunum açılınca içinden “Yine mi?” dedi ve dikkatini hiç veremedi. Ferhat'ın duygusunu en iyi hangisi anlatır?",
+    "options": [
+      "Bıkkınlık",
+      "Hayal kırıklığı",
+      "Tedirginlik",
+      "Mahcubiyet"
+    ],
+    "answer": 0,
+    "why": "Bıkkınlık, aynı şeyin uzun süre tekrarlanmasından doğan usanç ve isteksizliktir; “Yine mi?” tepkisi bunun tipik dilidir. Hayal kırıklığı için Ferhat'ın bu sabah yeni bir şey beklemiş olması gerekirdi; metinde beklenti değil, tekrar vurgulanıyor."
+  },
+  {
+    "id": "duy-109",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Dedem kitaplarını kimseye vermez, çok kıskanır.” Bu cümlede “kıskanmak” hangi anlamda kullanılmıştır?",
+    "options": [
+      "Sahip olduğu şeyi başkasından esirgemek",
+      "Başkasının kitaplarına sahip olmak istemek",
+      "Kitap okuyanlara imrenip özenmek",
+      "Kitaplarını sevenlere karşı öfke duymak"
+    ],
+    "answer": 0,
+    "why": "“Kıskanmak” yalnızca başkasındakini çekememek değil, kendi sahip olduğu şeyi başkasından esirgemek, sakınmak anlamına da gelir. Cümledeki “kimseye vermez” bu ikinci anlamı açıkça gösteriyor; başkasının kitaplarını istemek ise sözcüğün öteki anlamıdır."
+  },
+  {
+    "id": "duy-110",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Aşağıdaki durumların hangisinde suçluluktan çok pişmanlık duyulması beklenir?",
+    "options": [
+      "Ucuzken almadığı uçak biletinin ertesi gün iki katına çıkması",
+      "Kendisine güvenilerek anlatılan bir sırrı başka birine anlatmak",
+      "Ödünç aldığı kitabı yırtıp sahibine söylemeden geri koymak",
+      "Kardeşine haksız yere bağırıp onu herkesin önünde ağlatmak"
+    ],
+    "answer": 0,
+    "why": "Suçluluk, başkasına zarar verdiğini ya da bir ilkeyi çiğnediğini düşünmekten doğar; öteki üç durumda biri incinmiştir. Bilet örneğinde kimseye zarar yoktur; kişi yalnızca kendi kararına “keşke” der, bu da pişmanlıktır."
+  },
+  {
+    "id": "duy-111",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Yıllar önce Leyla'nın arabası gece ıssız bir yolda bozuldu; hiç tanımadığı bir çiftçi onu traktörüyle kasabaya kadar çekti. Leyla bu olayı her anlattığında o adama çok şey borçlu olduğunu söylüyor. Leyla'nın duygusunu en iyi hangisi anlatır?",
+    "options": [
+      "Minnet",
+      "Hayranlık",
+      "Gurur",
+      "Özlem"
+    ],
+    "answer": 0,
+    "why": "Minnet, görülen bir iyilik karşısında duyulan derin teşekkür ve borçluluk duygusudur; “çok şey borçluyum” sözü de bunu anlatır. Hayranlık birinin niteliklerine yöneliktir; Leyla'nın duygusu ise adamın yaptığı iyiliğe bağlı."
+  },
+  {
+    "id": "duy-112",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Taşınırken yardım teklif eden arkadaşlarına Ercan “Sağ olun ama kimsenin minneti altında kalmak istemem” dedi. Ercan neyi kastediyor?",
+    "options": [
+      "İyilik borcu altında kalıp bunu ödeyememekten çekindiğini",
+      "Kimseye teşekkür etmeyi sevmeyen biri olduğunu",
+      "Başkalarına yardım etmekten hiç hoşlanmadığını",
+      "Arkadaşlarının ona yardım etmekten kaçacağını düşündüğünü"
+    ],
+    "answer": 0,
+    "why": "“Minnet altında kalmak”, görülen bir iyiliğin karşılığını verememenin yarattığı borçluluk duygusudur; Ercan bu yükü taşımaktan çekindiği için yardımı geri çeviriyor. Bu, teşekkür etmemek değil, borçlanmamak isteğidir."
+  },
+  {
+    "id": "duy-113",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Raporu müdürden onay alınca Ahmet hafif bir … duydu; tuttuğu takım son saniyede şampiyon olunca ise … içinde bağırarak yerinden fırladı.\nBoşluklara sırasıyla hangisi gelmeli?",
+    "options": [
+      "memnuniyet / coşku",
+      "coşku / memnuniyet",
+      "mahcubiyet / huzur",
+      "kaygı / coşku"
+    ],
+    "answer": 0,
+    "why": "Memnuniyet, bir işin iyi gitmesinden duyulan sakin, ölçülü bir hoşnutluktur; “hafif” sözcüğüyle uyumludur. Coşku ise taşkın, sese ve bedene yansıyan yoğun bir sevinçtir; bağırarak yerinden fırlamak bunun tipik belirtisidir."
+  },
+  {
+    "id": "duy-114",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Çaresizlik” sözcüğünü “umutsuzluk”tan ayıran nedir?",
+    "options": [
+      "Çaresizlikte kişi durumu değiştirecek bir yol bulamaz",
+      "Çaresizlik yalnızca geçmişte olmuş bir olay için duyulur",
+      "Çaresizlik, umutsuzluğun tersine hep kısa sürer",
+      "Çaresizlik, başkalarına yöneltilmiş bir öfkedir"
+    ],
+    "answer": 0,
+    "why": "Çaresizlik, bir sorun karşısında elinden bir şey gelmemesi, yapacak bir yol bulamamaktır. Umutsuzluk ise geleceğe dair beklentinin kalmamasıdır; insan çaresiz kaldığı bir anda bile bir şeylerin düzeleceğini umabilir."
+  },
+  {
+    "id": "duy-115",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "“Kin” sözcüğünü “öfke”den ayıran nedir?",
+    "options": [
+      "Kin, uzun süre içte beslenen bir düşmanlıktır",
+      "Kin, anlık ve çabucak sönen bir kızgınlıktır",
+      "Kin, kişinin kendine yönelttiği bir kızgınlıktır",
+      "Kin, sevilen birine duyulan yumuşak bir sitemdir"
+    ],
+    "answer": 0,
+    "why": "Kin, bir kötülüğün ardından uzun süre içte tutulan ve çoğu zaman öç alma isteği taşıyan düşmanlıktır; “kin beslemek, kin tutmak” bu yüzden söylenir. Öfke ise o an yaşanan ve zamanla sönebilen bir tepkidir."
+  },
+  {
+    "id": "duy-116",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Gece karanlık bahçede yürürken Seda'nın ayağına yumuşak bir şey değdi; olduğu yerde sıçradı. Sonra bunun komşunun kedisi olduğunu gördü.\nSeda'nın ilk tepkisini en iyi hangi sözcük anlatır?",
+    "options": [
+      "Ürkmek",
+      "Gücenmek",
+      "Usanmak",
+      "İmrenmek"
+    ],
+    "answer": 0,
+    "why": "Ürkmek, beklenmedik bir şey karşısında birden korkup irkilmektir; ani ve kısa süren bir korku tepkisidir. Gücenmek bir kişinin davranışına, usanmak tekrara, imrenmek ise başkasının sahip olduğu bir şeye yöneliktir."
+  },
+  {
+    "id": "duy-117",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Ela kalabalık içinde söz almaktan sıkılıyor, sorusu olsa bile sormuyor.” Bu cümlede “sıkılmak” hangi anlamda kullanılmıştır?",
+    "options": [
+      "Çekinmek, utanmak",
+      "Canı sıkılıp bıkmak",
+      "Öfkelenip kızmak",
+      "Yorulup bitkinleşmek"
+    ],
+    "answer": 0,
+    "why": "“Sıkılmak” can sıkıntısı ve bıkkınlık dışında “utanmak, çekinmek” anlamına da gelir; “sıkılgan” sözcüğü buradan gelir. Sorusu olduğu hâlde sormaması, bıkkınlığı değil çekingenliği gösterir."
+  },
+  {
+    "id": "duy-118",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki deyimlerden hangisi özlem anlatır?",
+    "options": [
+      "Köyü burnunda tütmek",
+      "Burnundan solumak",
+      "Burnu havada olmak",
+      "Burnunun dikine gitmek"
+    ],
+    "answer": 0,
+    "why": "“Burnunda tütmek”, bir yeri ya da kişiyi çok özlemek demektir; kokusunu duyar gibi olmayı anlatır. “Burnundan solumak” öfkeyi, “burnu havada olmak” kibri, “burnunun dikine gitmek” ise inadı anlatır."
+  },
+  {
+    "id": "duy-119",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "“Telaş” sözcüğünü “kaygı”dan ayıran en belirgin özellik hangisi?",
+    "options": [
+      "Telaşta kaygıya acele ve koşuşturma eşlik eder",
+      "Telaş, geçmişte olmuş bir şey için duyulur",
+      "Telaş, kaygıdan farklı olarak huzursuzluk içermez",
+      "Telaş, yalnızca başkasına yönelik bir öfkedir"
+    ],
+    "answer": 0,
+    "why": "Telaş, kaygı ya da heyecana aceleyle bir şeyler yapma, koşuşturma hâlinin eşlik etmesidir; “telaşla çantasını topladı” deriz. Kaygı ise hareketsiz bir bekleyişte de yaşanabilir; bir hafta sonraki sonucu düşünen kişi kaygılıdır ama telaşlı olmayabilir."
+  },
+  {
+    "id": "duy-120",
+    "section": "duygusal",
+    "subtype": "duygu_sozcukleri",
+    "difficulty": "zor",
+    "prompt": "Boşanma sürecindeki Melih, kendisini sürekli “Vah vah, yazık sana” diye teselli eden arkadaşına “Bana acımanı istemiyorum, beni anlamanı istiyorum” dedi. Melih “acıma”dan neden rahatsız oluyor olabilir?",
+    "options": [
+      "Acımanın, karşısındakini aşağıdan görme tınısı taşıyabilmesi",
+      "Acımanın her zaman gizli bir öfke ve kızgınlık içermesi",
+      "Acımanın yalnızca yabancılara karşı duyulan bir his olması",
+      "Acımanın başkasının durumuna duyulan gizli bir kıskançlık olması"
+    ],
+    "answer": 0,
+    "why": "Acımak, birinin acısına üzülmektir ama çoğu zaman acıyanla acınan arasında bir üstünlük farkı da sezdirir; “acınacak hâle düşmek” bu yüzden incitir. Melih'in istediği, onu eşit gören bir anlayıştır."
+  },
+  {
+    "id": "duy-121",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Kalabalık ve gürültülü yerlerde çabuk gerildiğini bilen Ece, arkadaşlarının davet ettiği konser yerine onlarla ertesi gün sakin bir kafede buluşmayı seçti. Ece hangi stratejiyi kullanıyor?",
+    "options": [
+      "Duyguyu doğuracak durumu baştan seçmek",
+      "Duyguyu hissedip dışa yansıtmamak",
+      "Durumun anlamını yeniden yorumlamak",
+      "Dikkatini durumun başka yönüne çevirmek"
+    ],
+    "answer": 0,
+    "why": "Ece, gerileceğini bildiği bir ortama hiç girmeyerek duyguyu daha başlamadan yönetiyor; buna durum seçimi denir. Yeniden yorumlama ve dikkat yönlendirme kişi zaten durumun içindeyken kullanılır; bastırma ise duygu oluştuktan sonra yalnızca dışa vurumu değiştirir."
+  },
+  {
+    "id": "duy-122",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Açık ofiste sürekli bölündüğü için gerilen Kaan, kulaklık takmaya başladı ve masasını koridordan uzak bir köşeye taşıdı. Kaan hangi stratejiyi kullanıyor?",
+    "options": [
+      "İçinde bulunduğu durumu değiştirmek",
+      "Gerilten durumdan tümüyle uzak durmak",
+      "Gerginliğini yüzüne yansıtmamaya çalışmak",
+      "Bölünmeleri olumlu bir şey gibi yorumlamak"
+    ],
+    "answer": 0,
+    "why": "Kaan ofisten vazgeçmiyor, yani durumdan kaçınmıyor; içinde kaldığı ortamı duyguyu daha az tetikleyecek biçimde düzenliyor. Bu, durum değiştirme stratejisidir. “Uzak durmak” çekicidir ama Kaan hâlâ aynı ofiste, aynı ekiple çalışıyor."
+  },
+  {
+    "id": "duy-123",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Dolgu yapılırken diş hekimi koltuğunda gerilen Tuba, tavandaki manzara posterinde ağaçları tek tek saymaya başladı. Tuba hangi stratejiyi kullanıyor?",
+    "options": [
+      "Dikkatini başka bir şeye yöneltmek",
+      "Durumun anlamını yeniden yorumlamak",
+      "Gerildiğini hekimden saklamaya çalışmak",
+      "Sorunu çözmek için harekete geçmek"
+    ],
+    "answer": 0,
+    "why": "Tuba durumu değiştiremiyor, anlamını da yeniden yorumlamıyor; yalnızca dikkatini acıdan ve sesten başka bir şeye çeviriyor. Kısa süren ve kontrol edilemeyen bir rahatsızlıkta dikkat yönlendirme oldukça işe yarar."
+  },
+  {
+    "id": "duy-124",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Bankada uzun bir kuyrukta bekleyen dört kişiden hangisi yeniden değerlendirme kullanıyor?",
+    "options": [
+      "Selim: “Okumak istediğim makaleye nihayet vakit buldum” diye düşünüyor",
+      "Aylin: Sinirlendiğini belli etmemek için yüzüne bir gülümseme yerleştiriyor",
+      "Burak: Sıra uzun diye çıkıp ertesi gün başka bir şubeye gitmeye karar veriyor",
+      "Derya: Telefonunda oyun oynayıp beklediğini unutmaya çalışıyor"
+    ],
+    "answer": 0,
+    "why": "Yeniden değerlendirme, durumun ne anlama geldiğini değiştirmektir; Selim beklemeyi “kayıp zaman” yerine “okuma fırsatı” diye yorumluyor. Aylin dışa vurumu bastırıyor, Burak durumu değiştiriyor, Derya ise dikkatini başka yere yöneltiyor."
+  },
+  {
+    "id": "duy-125",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Melis, toplantıda müşterinin kaba sözlerine çok kızdı ama yüzünü ifadesiz, sesini düz tutmaya çalıştı. Bunu her zor anda yapıyor. Araştırmalar bu alışkanlık hakkında genel olarak ne söyler?",
+    "options": [
+      "Dışa vurumu azaltır ama yaşanan öfkeyi pek azaltmaz",
+      "Öfkeyi hem içte hem dışta en hızlı söndüren yoldur",
+      "Uzun vadede yeniden değerlendirmeden daha sağlıklıdır",
+      "Bedensel gerginliği de duyguyla birlikte ortadan kaldırır"
+    ],
+    "answer": 0,
+    "why": "Bastırma yüz ifadesini ve sesi kontrol eder ama yaşanan öfkeyi pek azaltmaz; bedensel uyarılmayı artırabilir ve zihinsel kaynak tüketir. Tek bir toplantıda işe yarayabilir, ama alışkanlık olunca yeniden değerlendirmeye göre daha olumsuz sonuçlarla ilişkilidir."
+  },
+  {
+    "id": "duy-126",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Sevgilisiyle sert bir tartışma yaşayan Tarık için uzun vadede hangisi daha sağlıklıdır?",
+    "options": [
+      "Olanı bir kez sakince düşünüp ertesi gün konuşmak",
+      "Tartışmayı gece boyu kafasında defalarca canlandırmak",
+      "Bir daha tartışmamak için konuyu hiç açmamaya karar vermek",
+      "Arkadaşlarıyla saatlerce sevgilisini çekiştirip içini dökmek"
+    ],
+    "answer": 0,
+    "why": "Olayı bir kez düşünüp sakin bir anda konuşmak hem duyguyu yatıştırır hem de sorunu çözme şansı verir. Gece boyu canlandırmak ruminasyondur ve öfkeyi uzatır; saatlerce çekiştirmek birlikte ruminasyona dönüşür, konuyu hiç açmamak ise sorunu çözmeden bırakır."
+  },
+  {
+    "id": "duy-127",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Ayşe ile Zehra her akşam telefonda saatlerce iş yerindeki sorunları didik didik ediyor; aynı olayları tekrar tekrar anlatıyor, konuştukça daha kötü hissediyorlar. Bu örüntüye en uygun ad hangisi?",
+    "options": [
+      "Birlikte ruminasyon",
+      "Sosyal destek arama",
+      "Ortak problem çözme",
+      "Duyguyu adlandırma"
+    ],
+    "answer": 0,
+    "why": "Sorunları birlikte, tekrar tekrar ve çözüm üretmeden döndürmek birlikte ruminasyondur; yakınlığı artırsa da kaygıyı ve mutsuzluğu büyütür. Sosyal destek arama çekici bir cevaptır ama sağlıklı destek rahatlatır; burada konuştukça daha kötü hissetmeleri ayırt edici ipucudur."
+  },
+  {
+    "id": "duy-128",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Sinan gerildiğinde durup içinden duygusuna bir ad koyuyor: “Şu an hayal kırıklığı ve biraz da öfke hissediyorum.” Araştırmalar bunun etkisi hakkında genel olarak ne söyler?",
+    "options": [
+      "Duyguyu adlandırmak yoğunluğunu bir miktar azaltır",
+      "Duyguya ad koymak üzerinde durup onu daha da büyütmektir",
+      "Adlandırma yalnızca olumlu duygularda işe yarar",
+      "Adlandırmak duyguyu bastırmanın bir biçimidir"
+    ],
+    "answer": 0,
+    "why": "Duyguya sözle ad koymak duygusal tepkiyi yatıştırır ve yaşanan yoğunluğu bir miktar azaltır; buna duygu etiketleme denir. “Üzerinde durmak duyguyu büyütür” sezgisi yaygındır ama kısa ve isabetli bir adlandırma ruminasyon değildir."
+  },
+  {
+    "id": "duy-129",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Begüm bir saat önce, beş yıllık sevgilisinin ayrılmak istediğini öğrendi; acısı çok yoğun. İlk saatlerde aşağıdakilerden hangisi büyük olasılıkla daha yararlıdır?",
+    "options": [
+      "Bir arkadaşıyla yürüyüşe çıkıp dikkatini kısa süre başka yöne vermek",
+      "Hemen oturup ilişkinin neden bittiğini derinlemesine çözümlemek",
+      "Kimseye belli etmeden, hiçbir şey olmamış gibi işine devam etmek",
+      "Eski mesajları baştan okuyup nerede hata yaptığını aramak"
+    ],
+    "answer": 0,
+    "why": "Duygu çok yoğunken anlam üzerine düşünmek zordur; kısa süreli dikkat yönlendirme ve sosyal destek ilk saatlerde yoğunluğu en iyi düşürür. İlişkiyi çözümlemek ileride değerli olabilir ama acının doruğunda çoğu zaman ruminasyona dönüşür; duyguyu kimseye belli etmeden işe gömülmek ise bastırmadır."
+  },
+  {
+    "id": "duy-130",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Çok sinirlenen Erkan, öfkesini “boşaltmak” için yastığı yumrukluyor ve o kişiye bağırdığını hayal ediyor. Araştırmalar bu yöntem hakkında genel olarak ne söylüyor?",
+    "options": [
+      "Öfkeyi azaltmaktan çok canlı tutup artırma eğilimindedir",
+      "Öfkeyi kalıcı olarak boşaltan en etkili yöntemdir",
+      "Kısa sürdüğü sürece öfkeyi tamamen ve kalıcı olarak bitirir",
+      "Öfkeyi yeniden değerlendirmeden daha hızlı azaltır"
+    ],
+    "answer": 0,
+    "why": "Öfkeyi saldırgan biçimde “boşaltmak” yaygın bir inanıştır, ama deneyler bunun öfkeyi azaltmaktan çok canlı tuttuğunu ve sonraki saldırganlığı artırabildiğini gösteriyor. Sakinleştirici etkinlikler ya da olayı yeniden yorumlamak öfkeyi daha iyi azaltır."
+  },
+  {
+    "id": "duy-131",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Gökhan, kız kardeşi “Yine mi geç kaldın?” deyince çok öfkeleniyor; iş arkadaşı aynı şeyi söylediğinde gülüp geçiyor. Kız kardeşi çocukluklarından beri ailede onu “dağınık olan” diye anar. Asıl tetikleyici büyük olasılıkla ne?",
+    "options": [
+      "Sözün eski “dağınık” etiketini hatırlatması",
+      "Geç kalmanın kendisinin onu çok utandırması",
+      "Kız kardeşinin konuşurken sesini yükseltmesi",
+      "O gün işte yorucu bir gün geçirmiş olması"
+    ],
+    "answer": 0,
+    "why": "Aynı söz iş arkadaşından gelince etkisiz kalıyor; demek ki öfkeyi geç kalmak değil, sözün kimden geldiği ve neyi çağrıştırdığı tetikliyor. Yıllardır süren “dağınık olan” etiketi, sıradan bir cümleyi eski bir yaraya dokunan bir eleştiriye dönüştürüyor."
+  },
+  {
+    "id": "duy-132",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Nesrin her pazar akşamı huzursuzlanıp ailesine terslenmeye başlıyor; cumartesileri ise keyfi yerinde. Pazartesi sabahları haftalık toplantıda yöneticisi önceki haftanın eksiklerini herkesin önünde tek tek sayıyor. Asıl tetikleyici büyük olasılıkla ne?",
+    "options": [
+      "Ertesi sabah herkesin önünde eleştirilme beklentisi",
+      "Hafta sonunun bitmesine duyduğu genel ve belirsiz bir üzüntü",
+      "Ailesinin pazar akşamları onu rahatsız etmesi",
+      "Pazar günleri geç kalkıp kendini yorgun hissetmesi"
+    ],
+    "answer": 0,
+    "why": "Huzursuzluk, eleştirilerin yapıldığı toplantıdan hemen önceki akşam başlıyor; en olası tetikleyici bu toplantıya dair kaygıdır. Hafta sonunun bitmesine üzülmek de yaygındır ama metin özellikle herkesin önünde eleştirilmeyi öne çıkarıyor; terslenme gibi gerginlik belirtileri de kaygıya daha iyi uyuyor."
+  },
+  {
+    "id": "duy-133",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Tasarımları sık sık eleştirilen bir ajansta çalışan Burcu için uzun vadede hangisi daha sağlıklıdır?",
+    "options": [
+      "Eleştiriyi kişisel saldırı değil, işe dair bilgi diye yorumlamak",
+      "Her eleştiride hiçbir şey hissetmiyormuş gibi davranmayı sürdürmek",
+      "Eleştiri gelince konuyu değiştirip hemen geçiştirmek",
+      "Eleştirileri akşamları tek tek hatırlayıp düşünmek"
+    ],
+    "answer": 0,
+    "why": "Eleştiriyi kimliğine değil işine yönelik bir bilgi olarak yorumlamak (yeniden değerlendirme) hem duygusal yükü azaltır hem de gelişmeyi sağlar. Hiçbir şey hissetmiyormuş gibi davranmak bastırmadır ve uzun vadede yorar; eleştirileri akşamları tek tek hatırlamak ise ruminasyondur."
+  },
+  {
+    "id": "duy-134",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Uçmaktan çekinen Hakan, kalkışta kaygının geleceğini biliyor. Kaygı gelince onu kovmaya uğraşmıyor; “Evet, gerginim, birazdan geçecek” deyip nefesini izliyor. Hakan'ın yaklaşımı hangisine en yakındır?",
+    "options": [
+      "Kaygıyla savaşmadan onu kabul etmek",
+      "Kaygıyı zorla bastırmaya çalışmak",
+      "Kaygı veren durumdan kaçınmak",
+      "Kaygıyı başkalarına anlatıp boşaltmak"
+    ],
+    "answer": 0,
+    "why": "Hakan duyguyu yok saymıyor ya da itmeye çalışmıyor; varlığını kabul edip geçmesine izin veriyor. Kabul, duyguyla boğuşmanın yarattığı ek gerginliği önler; bastırma ise bunun tersidir ve duyguyu dışarıda tutma çabası çoğu zaman onu daha belirgin kılar."
+  },
+  {
+    "id": "duy-135",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Aşağıdaki durumların hangisinde duyguyu yeniden yorumlamaya çalışmaktan çok doğrudan sorunu çözmeye yönelmek daha uygundur?",
+    "options": [
+      "Ev sahibinin depozitoyu sözleşmeye aykırı biçimde geri vermemesi",
+      "Sevilen bir hocanın emekli olup üniversiteden ayrılmak zorunda kalması",
+      "Açık hava konserinin fırtına yüzünden iptal edilmesi",
+      "Geçen yıl girilen bir sınavdan düşük not alınmış olması"
+    ],
+    "answer": 0,
+    "why": "Kişinin değiştirebileceği durumlarda sorun odaklı başa çıkma daha etkilidir; depozito sözleşmeye dayanarak geri istenebilir. Öteki üç durum kişinin kontrolü dışında ya da geçmişte kaldığı için orada yeniden değerlendirme daha işe yarar."
+  },
+  {
+    "id": "duy-136",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Mülakat odasına girmeden önce Duru birkaç kez yavaşça nefes alıp verdi ve omuzlarını gevşetti. Duru hangi stratejiyi kullanıyor?",
+    "options": [
+      "Duyguya eşlik eden bedensel tepkiyi düzenlemek",
+      "Mülakatın ne anlama geldiğini yeniden yorumlamak",
+      "Gerildiği mülakattan son anda vazgeçmek",
+      "Gerginliğini birine anlatarak paylaşmak"
+    ],
+    "answer": 0,
+    "why": "Yavaş nefes ve kas gevşetme, duygunun bedendeki karşılığını, yani hızlanan kalbi ve gerilen kasları doğrudan yatıştırır; bu, tepkiyi düzenleme stratejisidir. Duru mülakatın anlamını değiştirmiyor, ondan kaçmıyor ya da kimseyle konuşmuyor."
+  },
+  {
+    "id": "duy-137",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Zor bir maaş görüşmesinden önce Elif kendine adıyla sesleniyor: “Elif, sen bunu daha önce de yaptın; neyi isteyeceğini biliyorsun.” Bu yöntem hangisine en yakındır?",
+    "options": [
+      "Kendine dışarıdan bakarak duygudan mesafe almak",
+      "Gerginliği hiç yokmuş gibi bastırmaya çalışmak",
+      "Görüşmeden kaçınmak için bir bahane aramak",
+      "Olası kötü sonuçları kafasında tekrar tekrar kurmak"
+    ],
+    "answer": 0,
+    "why": "Kendine adıyla seslenmek, duruma bir dostun gözüyle dışarıdan bakmayı sağlar; araştırmalar bu mesafenin kaygıyı azalttığını ve performansı desteklediğini gösteriyor. Elif gerginliği yok saymıyor, ona daha sakin bir bakış açısından yaklaşıyor."
+  },
+  {
+    "id": "duy-138",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Sınav sonucunu açmadan önce Ece kendine şunu hatırlatıyor: “Bu tek bir sınav; kötü gelse bile final var, bütün dönem buna bağlı değil.” Ece hangi stratejiyi kullanıyor?",
+    "options": [
+      "Durumun önemini yeniden değerlendirmek",
+      "Kaygıyı olduğu gibi kabul edip yaşamak",
+      "Dikkatini sonuçtan başka yöne çevirmek",
+      "Sonucu görmemek için durumdan kaçınmak"
+    ],
+    "answer": 0,
+    "why": "Ece sınavın ne kadar belirleyici olduğuna dair yorumunu değiştiriyor; bu, yeniden değerlendirmedir. Kabul çekici bir seçenektir ama kabulde yorum değişmez, duygu olduğu gibi karşılanır; Ece ise “her şey buna bağlı” düşüncesini düzeltiyor."
+  },
+  {
+    "id": "duy-139",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Kötü geçen bir iş görüşmesinden sonra dört kişinin düşünme biçimi aşağıda. Hangisi ruminasyondan çok yapıcı bir düşünmedir?",
+    "options": [
+      "Gizem: Görüşmeden iki somut ders çıkarıp not alıyor ve konuyu kapatıyor",
+      "Kemal: Her gece görüşmeyi baştan sona zihninde yeniden yaşıyor",
+      "Serap: “Neden hep ben böyle oluyorum?” sorusunu düşünüp duruyor",
+      "Barış: Görüşmecinin her cümlesini günlerce kelime kelime çözümlüyor"
+    ],
+    "answer": 0,
+    "why": "Yapıcı düşünme somut ve uygulanabilir sonuçlara varıp biter; Gizem bunu yapıyor. Barış'ın çözümlemesi titiz görünür ama günlerce süren, sonuca varmayan bir tekrar olduğu için ruminasyondur; “Neden hep ben?” sorusu ise ruminasyonun tipik biçimidir."
+  },
+  {
+    "id": "duy-140",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Topluluk önünde konuşmaktan kaygılanan Ufuk, kulüpteki bütün sunumları başkalarına bırakıyor. Bu yolun uzun vadedeki olası etkisi nedir?",
+    "options": [
+      "Kısa vadede rahatlatır ama zamanla kaygıyı pekiştirir",
+      "Kaygıyı kalıcı olarak ortadan kaldırmanın en iyi yoludur",
+      "Konuşma becerisini dolaylı yoldan geliştirir",
+      "Kaygı üzerinde hiçbir olumlu ya da olumsuz etkisi yoktur"
+    ],
+    "answer": 0,
+    "why": "Kaçınma her seferinde anlık bir rahatlama sağlar; bu rahatlama kaçınmayı ödüllendirir ve “konuşursam kötü olur” inancı hiç sınanmadan güçlenir. Küçük ve kademeli adımlarla sunum yapmak ise kaygıyı zamanla azaltır."
+  },
+  {
+    "id": "duy-141",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Aşağıdakilerden hangisi zararlı bir kaçınmadan çok sağlıklı bir durum seçimidir?",
+    "options": [
+      "Sınav haftasında not kıyaslanan grup çalışmaları yerine kütüphanede çalışmak",
+      "Kaygı verdiği için gerekli doktor randevusunu aylarca ertelemeyi sürdürmek",
+      "Eleştirilmekten çekindiği için yöneticisine işini hiç göstermemek",
+      "Reddedilme korkusuyla istediği hiçbir ilana başvurmamak"
+    ],
+    "answer": 0,
+    "why": "Kütüphane seçimi gereksiz bir tetikleyiciyi önlerken asıl hedefe, yani sınava çalışmaya hizmet ediyor. Öteki üç örnekte kişi kaygıdan kurtulmak için önemli bir ihtiyaçtan ya da hedeften vazgeçiyor; bu, kısa vadede rahatlatan ama sorunu büyüten kaçınmadır."
+  },
+  {
+    "id": "duy-142",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Selin son haftalarda saat beşe doğru ekip arkadaşlarına sinirleniyor; sabahları aynı kişilerle sorunsuz çalışıyor. Toplantılar yüzünden öğle yemeğini çoğu gün atlıyor. Asıl tetikleyici büyük olasılıkla ne?",
+    "options": [
+      "Uzun süre aç kalmanın yarattığı gerginlik",
+      "Ekip arkadaşlarının öğleden sonra kabalaşması",
+      "İşinden genel olarak hoşnut olmaması",
+      "Akşam trafiğini önceden düşünüp sıkılması"
+    ],
+    "answer": 0,
+    "why": "Sinirlilik günün belli bir saatinde ve aynı kişilere karşı ortaya çıkıyor; değişen şey kişiler değil, Selin'in bedensel durumu. Yemeği atlayıp saatlerce aç kalmak eşiği düşürür ve küçük şeylere sinirlenmeyi kolaylaştırır."
+  },
+  {
+    "id": "duy-143",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Şirketi küçülürken işten çıkarılan Barış için uzun vadede hangisi daha sağlıklıdır?",
+    "options": [
+      "Bunu ekonomik bir karar olarak görüp becerilerini gözden geçirmek",
+      "“Zaten o iş bana göre değildi” deyip iş aramayı bir süre ertelemek",
+      "Çıkarılmasını tamamen kendi yetersizliğine bağlamak",
+      "Hiçbir şey olmamış gibi davranıp ailesine bundan söz etmemek"
+    ],
+    "answer": 0,
+    "why": "Çıkarılmayı kişisel bir başarısızlık yerine şirketin koşullarına bağlı bir olay olarak yorumlamak ve ardından harekete geçmek hem öz saygıyı korur hem de yeni işe giden yolu açar. “Zaten bana göre değildi” demek de bir yeniden yorumdur ama gerçeği çarpıtıp harekete geçmeyi ertelediği için daha az sağlıklıdır."
+  },
+  {
+    "id": "duy-144",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Aşağıdakilerden hangisi duygu ortaya çıktıktan sonra yalnızca onun dışa vurumunu değiştirmeye yönelik bir stratejidir?",
+    "options": [
+      "Öfkelendiği hâlde sesini sakin ve alçak tutmak",
+      "Geren bir toplantıya hiç katılmamaya karar vermek",
+      "Toplantıdan önce gündemin kısaltılmasını istemek",
+      "Eleştiriyi yararlı bir bilgi olarak görmeye karar vermek"
+    ],
+    "answer": 0,
+    "why": "Sesini sakin tutmak duygunun kendisini değil, dışarıdan görünen yüzünü değiştirir; bu, tepkiyi düzenleme ya da bastırmadır. Öteki seçenekler duygu ortaya çıkmadan ya da oluşurken devreye girer: durum seçimi, durum değiştirme ve yeniden değerlendirme."
+  },
+  {
+    "id": "duy-145",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Arda, sevgilisinin mesajlara geç dönmesine genellikle aldırmaz. Bu hafta sevgilisi bir arkadaşının partisindeyken iki saat cevap gelmeyince çok öfkelendi. Önceki ilişkisi, partneri onu aldattığı için bitmişti. Asıl tetikleyici büyük olasılıkla ne?",
+    "options": [
+      "Eski ilişkisinden kalan güvensizliğin yeniden canlanması",
+      "Mesajlara geç dönülmesinden genel olarak hoşlanmaması",
+      "Partiye kendisinin davet edilmemiş olmasına çok kırılması",
+      "Sevgilisinin ona sık sık yalan söylemiş olması"
+    ],
+    "answer": 0,
+    "why": "Geç cevap normalde Arda'yı rahatsız etmiyor; fark yaratan, sevgilisinin onun olmadığı bir partide olması. Bu durum, aldatılarak biten önceki ilişkinin bıraktığı güvensizliği çağırıyor. Partiye davet edilmemek ya da sevgilisinin yalanları metinde yer almıyor."
+  },
+  {
+    "id": "duy-146",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Seda, eşinin sık sık geç kalmasına çok bozuluyor ama ilişkiye zarar vermemek için her seferinde duygusunu belli etmeden gülümsüyor. Araştırmalara göre bu alışkanlığın olası sonucu hangisidir?",
+    "options": [
+      "Eşinin onu daha mesafeli ve daha az içten algılaması",
+      "İlişkideki çatışmaların zamanla tamamen ortadan kalkması",
+      "Seda'nın rahatsızlığının kendiliğinden sönmesi",
+      "Eşinin onu daha anlayışlı bulup ona yakınlaşması"
+    ],
+    "answer": 0,
+    "why": "Sürekli bastırma, karşı tarafın duygusal ipuçlarını okumasını zorlaştırır; araştırmalarda bastıran kişiyle konuşanlar onu daha mesafeli bulur ve bağ zayıflar. Rahatsızlık da kendiliğinden sönmez; söylenmediği için sorun da sürer."
+  },
+  {
+    "id": "duy-147",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Murat, iş yerinde kendisine yapılan kaba bir yorumu üç gündür “Neden öyle dedi, ne demek istedi?” diye düşünüp duruyor. Bu düşünme biçiminin olası etkisi nedir?",
+    "options": [
+      "Kırgınlığının ve öfkesinin daha uzun sürmesi",
+      "Olayı çözüp öfkesini hızla bitirmesi",
+      "Benzer yorumlara karşı duyarlılığının azalması",
+      "Bir sonraki karşılaşmada daha sakin olması"
+    ],
+    "answer": 0,
+    "why": "Aynı olayı çözüme varmadan döndürüp durmak ruminasyondur; araştırmalar bunun olumsuz duyguyu canlı tuttuğunu ve uzattığını gösteriyor. Düşünmek çözüm üretiyormuş gibi hissettirir ama sorular cevapsız kaldıkça kırgınlık da sürer."
+  },
+  {
+    "id": "duy-148",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "zor",
+    "prompt": "Çok istediği bölümün yetenek sınavından kalan Defne için aşağıdaki düşüncelerden hangisi sağlıklı bir yeniden değerlendirmeden çok gerçeği çarpıtmaktır?",
+    "options": [
+      "“Zaten bu bölümü hiçbir zaman gerçekten istememiştim.”",
+      "“Bu yıl hazırlığım eksikti; seneye daha iyi plan yaparım.”",
+      "“Bu sınav benim değerimi tek başına belirlemiyor.”",
+      "“Üzgünüm ama hâlâ önümde başka seçenekler var.”"
+    ],
+    "answer": 0,
+    "why": "Defne bölümü çok istediğini biliyor; “hiç istememiştim” demek acıyı azaltmak için gerçeği değiştirmektir ve kısa vadede rahatlatsa da ders çıkarmayı engeller. Öteki üç düşünce gerçeği kabul edip ona yeni bir bakış katıyor; sağlıklı yeniden değerlendirme budur."
+  },
+  {
+    "id": "duy-149",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Emre, ev arkadaşının akşamları yüksek sesle müzik dinlemesine çoğu zaman ses etmiyor. Ama sabah sınavı olan gecelerde aynı müziğe çok öfkeleniyor. Asıl tetikleyici büyük olasılıkla ne?",
+    "options": [
+      "Sınav öncesi dinlenme ihtiyacının engellenmesi",
+      "Ev arkadaşının dinlediği müzik türünü sevmemesi",
+      "Ev arkadaşıyla genel olarak anlaşamaması",
+      "Müziğin o gecelerde daha yüksek açılması"
+    ],
+    "answer": 0,
+    "why": "Müzik aynı; değişen şey Emre'nin o geceki ihtiyacı, yani dinlenmek ve hazırlanmak. Öfke çoğu zaman önemli bir hedefin engellendiği anlarda yükselir. Müzik türü ya da genel bir anlaşmazlık, öteki akşamlardaki sessizliğini açıklamaz."
+  },
+  {
+    "id": "duy-150",
+    "section": "duygusal",
+    "subtype": "duzenleme",
+    "difficulty": "orta",
+    "prompt": "Cansu, arkadaşlarının tatil paylaşımlarına baktıkça kendi hayatını yetersiz buluyor ve morali bozuluyor. Uzun vadede hangisi daha sağlıklıdır?",
+    "options": [
+      "Bu etkiyi fark edip uygulamada geçirdiği süreyi sınırlamak",
+      "Kendini iyi göstermek için daha sık ve daha gösterişli paylaşmak",
+      "Paylaşımlara bakıp kendi hayatının nerede eksik kaldığını düşünmek",
+      "Morali bozulduğunda uygulamayı açıp daha uzun süre gezinmek"
+    ],
+    "answer": 0,
+    "why": "Tekrar tekrar kötü hissettiren bir tetikleyiciyi fark edip ona maruz kalmayı azaltmak, duyguyu kaynağında yönetmektir. Daha gösterişli paylaşmak kıyası bitirmez, tersine onu besler; eksiklerini düşünmek de ruminasyona dönüşür."
+  }
+]

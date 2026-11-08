@@ -1,0 +1,23 @@
+[package]
+name = "cp_core"
+version = "0.1.0"
+edition = "2021"
+description = "Clever Place game core: rules, level generators and solvers for every game."
+
+[lib]
+name = "cp_core"
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+panic = "unwind"
+strip = true
+
+[profile.test]
+opt-level = 1

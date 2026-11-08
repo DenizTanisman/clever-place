@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "soz-001",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nKRONOMETRE : SÜRE  ::  ALTİMETRE : ?",
+    "options": [
+      "yükseklik",
+      "hava basıncı",
+      "hız",
+      "mesafe"
+    ],
+    "answer": 0,
+    "why": "Kronometre süreyi, altimetre yüksekliği ölçer. “Hava basıncı” çeldiricidir: bazı altimetreler basınçtan yararlanır ama gösterdiği büyüklük yüksekliktir."
+  },
+  {
+    "id": "soz-002",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nESİNTİ : FIRTINA  ::  KIVILCIM : ?",
+    "options": [
+      "yangın",
+      "duman",
+      "kül",
+      "çakmaktaşı"
+    ],
+    "answer": 0,
+    "why": "Esinti rüzgârın, kıvılcım ateşin en hafif hâlidir; fırtına ve yangın aynı olayın en şiddetli biçimidir. “Duman” ve “kül” ateşin sonuçlarıdır, şiddetli hâli değil."
+  },
+  {
+    "id": "soz-003",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nÇÖMLEKÇİ : TESTİ  ::  KUYUMCU : ?",
+    "options": [
+      "yüzük",
+      "altın",
+      "terazi",
+      "vitrin"
+    ],
+    "answer": 0,
+    "why": "Çömlekçi testiyi, kuyumcu yüzüğü üretir: zanaatkâr ile ürünü. “Altın” kuyumcunun işlediği malzemedir; ilişki zanaatkâr ile malzemesi olsaydı doğru olurdu."
+  },
+  {
+    "id": "soz-004",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nPAMUK : İPLİK  ::  KİL : ?",
+    "options": [
+      "tuğla",
+      "toprak",
+      "fırın",
+      "kum"
+    ],
+    "answer": 0,
+    "why": "Pamuktan iplik, kilden tuğla yapılır: hammadde ile ondan işlenen ürün. “Toprak” kilin ait olduğu genel türdür, ürünü değil."
+  },
+  {
+    "id": "soz-005",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nHAPŞIRIK : NEZLE  ::  KAŞINTI : ?",
+    "options": [
+      "alerji",
+      "öksürük",
+      "merhem",
+      "ateş"
+    ],
+    "answer": 0,
+    "why": "Hapşırık nezlenin, kaşıntı alerjinin belirtisidir. “Merhem” tedavidir; “öksürük” ise başka bir belirtidir, hastalığın kendisi değil."
+  },
+  {
+    "id": "soz-006",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nİRİBAŞ : KURBAĞA  ::  TIRTIL : ?",
+    "options": [
+      "kelebek",
+      "koza",
+      "metamorfoz",
+      "ipek"
+    ],
+    "answer": 0,
+    "why": "İribaş kurbağanın, tırtıl kelebeğin gelişmemiş evresidir. “Koza” da bir ara evredir ama tırtılın vardığı erişkin hâl değildir."
+  },
+  {
+    "id": "soz-007",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nOYUNCU : TAKIM  ::  MÜZİSYEN : ?",
+    "options": [
+      "orkestra",
+      "sahne",
+      "şef",
+      "enstrüman"
+    ],
+    "answer": 0,
+    "why": "Oyuncu takımın, müzisyen orkestranın bir üyesidir. “Şef” orkestrayı yöneten kişidir; bütünün kendisi değildir."
+  },
+  {
+    "id": "soz-008",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nKÜTÜPHANE : OKUMA  ::  LABORATUVAR : ?",
+    "options": [
+      "deney",
+      "kimya",
+      "mikroskop",
+      "önlük"
+    ],
+    "answer": 0,
+    "why": "Kütüphane okuma, laboratuvar deney yapılan yerdir. “Mikroskop” orada kullanılan araç, “kimya” ise bir bilim dalıdır; ikisi de yapılan etkinlik değildir."
+  },
+  {
+    "id": "soz-009",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nCÖMERT : CİMRİ  ::  ALÇAKGÖNÜLLÜ : ?",
+    "options": [
+      "kibirli",
+      "utangaç",
+      "gösterişsiz",
+      "çekingen"
+    ],
+    "answer": 0,
+    "why": "Cömert ile cimri, alçakgönüllü ile kibirli karşıt anlamlıdır. “Utangaç” ve “çekingen” alçakgönüllülüğe yakın gibi duran ama karşıtı olmayan özelliklerdir."
+  },
+  {
+    "id": "soz-010",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nKONUŞMAK : FISILDAMAK  ::  BAKMAK : ?",
+    "options": [
+      "gözetlemek",
+      "görmek",
+      "işitmek",
+      "farkına varmak"
+    ],
+    "answer": 0,
+    "why": "Fısıldamak, konuşmanın belli bir biçimidir (alçak sesle); gözetlemek de bakmanın belli bir biçimidir (gizlice). “Görmek” bakmanın türü değil, ayrı bir algı fiilidir."
+  },
+  {
+    "id": "soz-011",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nBASAMAK : MERDİVEN  ::  HALKA : ?",
+    "options": [
+      "zincir",
+      "demir",
+      "yuvarlak",
+      "kilit"
+    ],
+    "answer": 0,
+    "why": "Basamaklar art arda gelerek merdiveni, halkalar art arda eklenerek zinciri oluşturur. “Demir” zincirin malzemesidir, parçalarının oluşturduğu bütün değildir."
+  },
+  {
+    "id": "soz-012",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "orta",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nCERRAH : NEŞTER  ::  TERZİ : ?",
+    "options": [
+      "makas",
+      "kumaş",
+      "elbise",
+      "atölye"
+    ],
+    "answer": 0,
+    "why": "Cerrahın aleti neşter, terzininki makastır. “Kumaş” terzinin hammaddesi, “elbise” ürünü, “atölye” çalıştığı yerdir."
+  },
+  {
+    "id": "soz-013",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“TASLAK : METİN” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Eskiz : tablo",
+      "Kopya : orijinal",
+      "Kâğıt : defter",
+      "Yazar : roman"
+    ],
+    "answer": 0,
+    "why": "Taslak, metnin bitmemiş ilk hâlidir; eskiz de tablonun. “Kopya : orijinal” da bir sürüm ilişkisidir ama kopya sonradan ve tamamlanmış eserden üretilir, yön ters."
+  },
+  {
+    "id": "soz-014",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“CANLI : ÖLÜ” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Var : yok",
+      "Uzun : kısa",
+      "İyi : kötü",
+      "Genç : yaşlı"
+    ],
+    "answer": 0,
+    "why": "Canlı ile ölü arasında ara derece yoktur; biri değilse öteki olur. Var ile yok da böyledir. Ötekiler derecelenir: “biraz uzun”, “fena değil”, “orta yaşlı” denebilir."
+  },
+  {
+    "id": "soz-015",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“İSKELE : BİNA” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Alçı : kırık kemik",
+      "Temel : çok katlı bina",
+      "Çatı : ev",
+      "Vinç : yük"
+    ],
+    "answer": 0,
+    "why": "İskele, bina tamamlanana dek onu destekler ve sonra sökülür; alçı da kemik iyileşene dek destekler ve çıkarılır. “Temel : çok katlı bina” da destektir ama kalıcıdır."
+  },
+  {
+    "id": "soz-016",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“GÜLÜMSEMEK : KAHKAHA ATMAK” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Mırıldanmak : bağırmak",
+      "Sevinmek : gülümsemek",
+      "Gülmek : ağlamak",
+      "Esnemek : uyumak"
+    ],
+    "answer": 0,
+    "why": "İkili, aynı eylemin hafif ve şiddetli ucudur; mırıldanmak ile bağırmak da sesin alçak ve yüksek ucudur. “Sevinmek : gülümsemek” bir duygu ile onun dışa vurumudur, derece farkı değil; “esnemek : uyumak” ise iki ayrı eylemdir."
+  },
+  {
+    "id": "soz-017",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“ELEŞTİRMEN : ROMAN” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Jüri : film",
+      "Yönetmen : film",
+      "Seyirci : film",
+      "Sinema : film"
+    ],
+    "answer": 0,
+    "why": "Eleştirmen, başkasının eserini uzman gözüyle değerlendirir; jüri de filmi. “Seyirci : film” çekicidir ama seyirci izler, değerlendirme yapmakla görevli değildir."
+  },
+  {
+    "id": "soz-018",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“DUMAN : ATEŞ” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Ayak izi : hayvan",
+      "Bulut : sağanak yağmur",
+      "Kibrit : alev",
+      "Su : yangın"
+    ],
+    "answer": 0,
+    "why": "Duman, ateşin bıraktığı ve onu ele veren izdir; ayak izi de hayvanın. “Bulut : sağanak yağmur” ters yöndedir: bulut yağmurun sonucu değil, kaynağıdır."
+  },
+  {
+    "id": "soz-019",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“ALACAKARANLIK : GECE” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Şafak : gündüz",
+      "Öğle : gece yarısı",
+      "Mevsim : yıl",
+      "Gece : gündüz"
+    ],
+    "answer": 0,
+    "why": "Alacakaranlık geceye geçişin, şafak gündüze geçişin eşiğidir. “Öğle : gece yarısı” da bir sıralamadır ama öğle geceye geçiş anı değildir."
+  },
+  {
+    "id": "soz-020",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“ÖLMEK : VEFAT ETMEK” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Hasta : rahatsız",
+      "Yemek : tıkınmak",
+      "Söylemek : bağırmak",
+      "Ev : apartman"
+    ],
+    "answer": 0,
+    "why": "İkincisi, aynı şeyi daha kibar ve yumuşak söyler; “rahatsız” da “hasta”nın nazik karşılığıdır. “Yemek : tıkınmak”ta da anlam yakındır ama ikincisi kabalaştırır."
+  },
+  {
+    "id": "soz-021",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nYORGUN : BİTKİN  ::  ÜZGÜN : ?",
+    "options": [
+      "perişan",
+      "kırgın",
+      "keyifsiz",
+      "küskün"
+    ],
+    "answer": 0,
+    "why": "Bitkin, yorgunluğun en uç derecesidir; perişan da üzüntünün. “Keyifsiz” üzgünden bile hafiftir, yani yön terstir; “kırgın” ve “küskün” ise başka duygulardır."
+  },
+  {
+    "id": "soz-022",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“PİLOT : KOKPİT” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Kaptan : köprüüstü",
+      "Yolcu : kamara",
+      "Aşçı : kepçe",
+      "Makinist : istasyon"
+    ],
+    "answer": 0,
+    "why": "Kokpit, pilotun aracı yönettiği bölümdür; köprüüstü de kaptanın gemiyi yönettiği yer. “Makinist : istasyon”da çalışan ile bir yer vardır ama treni oradan yönetmez."
+  },
+  {
+    "id": "soz-023",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“E-POSTA : MEKTUP” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Hesap makinesi : abaküs",
+      "Daktilo : dizüstü bilgisayar",
+      "Mektup : zarf",
+      "Gazete : haber"
+    ],
+    "answer": 0,
+    "why": "E-posta, mektubun işini gören yeni araçtır; hesap makinesi de abaküsün. “Daktilo : dizüstü bilgisayar” aynı işlev ilişkisidir ama sıra terstir: önce eski olan gelir."
+  },
+  {
+    "id": "soz-024",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "Aşağıdaki ilişkiye en uygun seçenek hangisi?\nHEKİM : HASTA  ::  AVUKAT : ?",
+    "options": [
+      "müvekkil",
+      "sanık",
+      "hâkim",
+      "karşı taraf"
+    ],
+    "answer": 0,
+    "why": "Hekimin hizmet verdiği kişi hasta, avukatınki müvekkildir. “Sanık” çekicidir ama avukat davacıyı da temsil edebilir; sanık bir müvekkil türüdür, karşılığı değil."
+  },
+  {
+    "id": "soz-025",
+    "section": "sozel",
+    "subtype": "analoji",
+    "difficulty": "zor",
+    "prompt": "“ALKIŞ : BEĞENİ” ikilisindeki ilişkiye en çok benzeyen ikili hangisi?",
+    "options": [
+      "Yuhalama : hoşnutsuzluk",
+      "Ödül : başarı",
+      "Seyirci : tiyatro sahnesi",
+      "Övgü : eleştiri"
+    ],
+    "answer": 0,
+    "why": "Alkış, izleyicinin beğenisini dışa vuran davranıştır; yuhalama da hoşnutsuzluğunu. “Ödül : başarı”da ödül, verenin duygusunu değil, alanın başarısını karşılar."
+  },
+  {
+    "id": "soz-026",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Su ile ilgili bu sözcüklerden hangisi anlamca ötekilerden ayrılır?",
+    "options": [
+      "gölet",
+      "akarsu",
+      "dere",
+      "ırmak"
+    ],
+    "answer": 0,
+    "why": "Akarsu, dere ve ırmak akan sulardır; gölet ise durgun sudur. “Dere” daha küçük olduğu için ayrı görünebilir ama o da akar."
+  },
+  {
+    "id": "soz-027",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Ücretle ilgili bu sözcüklerden hangisi anlamca diğerlerinden farklıdır?",
+    "options": [
+      "kesinti",
+      "ikramiye",
+      "prim",
+      "bonus"
+    ],
+    "answer": 0,
+    "why": "İkramiye, prim ve bonus ücrete eklenen ödemelerdir; kesinti ise ücretten düşülür. “Bonus” yabancı kökenli olduğu için seçilebilir ama anlamca ötekilerle aynı gruptadır."
+  },
+  {
+    "id": "soz-028",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Kişilik bildiren bu sözcüklerden hangisi anlamca ötekilerle aynı grupta değildir?",
+    "options": [
+      "temkinli",
+      "cesur",
+      "yürekli",
+      "gözüpek"
+    ],
+    "answer": 0,
+    "why": "Cesur, yürekli ve gözüpek korkusuzca davranmayı anlatır; temkinli ise riskten kaçınıp dikkatli davranmayı. “Gözüpek” daha güçlü bir sözcüktür ama aynı anlam alanındadır."
+  },
+  {
+    "id": "soz-029",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Bir insanın tavrını anlatan bu sözcüklerden hangisi anlamca diğerlerinden ayrılır?",
+    "options": [
+      "uysal",
+      "ısrarcı",
+      "dik başlı",
+      "inatçı"
+    ],
+    "answer": 0,
+    "why": "Israrcı, dik başlı ve inatçı kolay geri adım atmayan kişiyi anlatır; uysal ise kolay uyan, söz dinleyen kişiyi. “Israrcı” biraz daha olumludur ama yine geri adım atmamayı anlatır."
+  },
+  {
+    "id": "soz-030",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Bir yargılama ya da yarışma ortamını düşündüğünde hangisi anlamca ötekilerden farklıdır?",
+    "options": [
+      "sanık",
+      "bilirkişi",
+      "hakem",
+      "jüri"
+    ],
+    "answer": 0,
+    "why": "Bilirkişi, hakem ve jüri bir durumu ya da kişiyi değerlendiren taraftır; sanık ise değerlendirilen kişidir. “Bilirkişi” hüküm kurmadığı için ayrı görünebilir ama o da uzman olarak değerlendirme yapar."
+  },
+  {
+    "id": "soz-031",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Eşyaların konduğu yerleri anlatan bu sözcüklerden hangisi işlevi bakımından diğerlerinden ayrılır?",
+    "options": [
+      "vitrin",
+      "kiler",
+      "ambar",
+      "depo"
+    ],
+    "answer": 0,
+    "why": "Kiler, ambar ve depo bir şeyi saklamak içindir; vitrin ise sergilemek için. “Kiler” evde bulunduğu için ayrı görünebilir ama işlevi yine saklamaktır."
+  },
+  {
+    "id": "soz-032",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Ölçmeyle ilgili bu sözcüklerden hangisi anlamca ötekilerle aynı türden değildir?",
+    "options": [
+      "terazi",
+      "metre",
+      "gram",
+      "litre"
+    ],
+    "answer": 0,
+    "why": "Metre, gram ve litre ölçü birimidir; terazi ise ölçme aracıdır. “Metre” şerit metreyi akla getirebilir ama burada uzunluk birimi olarak ötekilerle aynı gruptadır."
+  },
+  {
+    "id": "soz-033",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Bir davranışa verilen tepkiyi anlatan bu sözcüklerden hangisi anlamca diğerlerinden farklıdır?",
+    "options": [
+      "kınamak",
+      "övmek",
+      "takdir etmek",
+      "alkışlamak"
+    ],
+    "answer": 0,
+    "why": "Övmek, takdir etmek ve alkışlamak beğeni bildirir; kınamak ise onaylamamayı. “Alkışlamak” fiziksel bir hareket olduğu için seçilebilir ama o da beğeni ifadesidir."
+  },
+  {
+    "id": "soz-034",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Çalgı adlarından hangisi diğer üçüyle aynı grupta yer almaz?",
+    "options": [
+      "flüt",
+      "keman",
+      "viyolonsel",
+      "gitar"
+    ],
+    "answer": 0,
+    "why": "Keman, viyolonsel ve gitar telli çalgılardır; flüt üflemeli bir çalgıdır. “Gitar” yayla çalınmadığı için ayrı görünebilir ama o da tellidir."
+  },
+  {
+    "id": "soz-035",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "orta",
+    "prompt": "Yiyeceklerin durumunu anlatan bu sözcüklerden hangisi anlamca ötekilerden ayrılır?",
+    "options": [
+      "taze",
+      "bayat",
+      "küflü",
+      "ekşimiş"
+    ],
+    "answer": 0,
+    "why": "Bayat, küflü ve ekşimiş bozulmuş yiyeceği anlatır; taze ise yeni ve bozulmamış olanı. “Küflü” en ileri bozulmayı gösterse de ötekilerle aynı yöndedir."
+  },
+  {
+    "id": "soz-036",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Fark etme ve algılamayla ilgili bu fiillerden hangisi anlamca diğerlerinden farklıdır?",
+    "options": [
+      "sezmek",
+      "görmek",
+      "işitmek",
+      "koklamak"
+    ],
+    "answer": 0,
+    "why": "Görmek, işitmek ve koklamak bir duyu organıyla algılamaktır; sezmek ise belirgin bir duyu olmadan, içgüdüyle fark etmektir. “Koklamak” isteyerek yapılabildiği için ayrı görünebilir ama o da duyu algısıdır."
+  },
+  {
+    "id": "soz-037",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Değişim bildiren bu fiillerden hangisi, değişimin gerçekleşme biçimi bakımından ötekilerden ayrılır?",
+    "options": [
+      "kırılmak",
+      "aşınmak",
+      "solmak",
+      "çürümek"
+    ],
+    "answer": 0,
+    "why": "Aşınmak, solmak ve çürümek zamanla, yavaş yavaş gerçekleşen değişimlerdir; kırılmak bir anda olur. “Solmak” renk için kullanıldığından ayrı görünebilir ama o da yavaş bir süreçtir."
+  },
+  {
+    "id": "soz-038",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Başkasının sahip olduğu bir şey karşısındaki tutumları anlatan bu sözcüklerden hangisi anlamca diğerlerinden farklıdır?",
+    "options": [
+      "gıpta etme",
+      "haset etme",
+      "kıskanma",
+      "çekememe"
+    ],
+    "answer": 0,
+    "why": "Gıpta etmek, başkasındakine sahip olmayı onun kaybını istemeden dilemektir; haset etme, kıskanma ve çekememede karşıdakine yönelik olumsuz bir duygu vardır. “Kıskanma” daha geniştir ama yine olumsuzdur."
+  },
+  {
+    "id": "soz-039",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Bir kusurun nasıl ortaya çıktığını anlatan bu sözcüklerden hangisi ötekilerden ayrılır?",
+    "options": [
+      "kasıt",
+      "ihmal",
+      "gaflet",
+      "dalgınlık"
+    ],
+    "answer": 0,
+    "why": "İhmal, gaflet ve dalgınlık dikkatsizlikten doğan, istenmeden yapılan kusurlardır; kasıt ise bilerek ve isteyerek yapmayı anlatır. “İhmal” bazen bilinçli görünse de amaç zarar vermek değildir."
+  },
+  {
+    "id": "soz-040",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Bir konu hakkındaki bilgiyle ilgili bu sözcüklerden hangisi anlamca diğerlerinden farklıdır?",
+    "options": [
+      "olgu",
+      "yorum",
+      "kanaat",
+      "görüş"
+    ],
+    "answer": 0,
+    "why": "Yorum, kanaat ve görüş kişiden kişiye değişen değerlendirmelerdir; olgu ise kişiden bağımsız, doğrulanabilir durumdur. “Yorum” bir olguyu açıklamaya dayandığı için çekicidir ama yine öznel kalır."
+  },
+  {
+    "id": "soz-041",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Zamanla ilişkili bu sözcüklerden hangisi anlamca ötekilerle aynı grupta değildir?",
+    "options": [
+      "hatıra",
+      "tahmin",
+      "öngörü",
+      "beklenti"
+    ],
+    "answer": 0,
+    "why": "Tahmin, öngörü ve beklenti geleceğe yöneliktir; hatıra geçmişe. “Beklenti” akıl yürütmeden çok bir duyguya dayandığı için ayrı görünebilir ama o da gelecekle ilgilidir."
+  },
+  {
+    "id": "soz-042",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Gözle ilgili bu fiillerden hangisi anlamca diğerlerinden ayrılır?",
+    "options": [
+      "görmek",
+      "bakmak",
+      "seyretmek",
+      "izlemek"
+    ],
+    "answer": 0,
+    "why": "Bakmak, seyretmek ve izlemek gözü isteyerek bir şeye yöneltmektir; görmek ise istemesen de gerçekleşen algıdır. “Bakmak” daha kısa süreli olduğu için ayrı görünebilir ama o da isteğe bağlıdır."
+  },
+  {
+    "id": "soz-043",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Geçmişe dönük duyguları anlatan bu sözcüklerden hangisi anlamca ötekilerden farklıdır?",
+    "options": [
+      "hasret",
+      "pişmanlık",
+      "nedamet",
+      "hayıflanma"
+    ],
+    "answer": 0,
+    "why": "Pişmanlık, nedamet ve hayıflanma yapılan ya da kaçırılan bir şey için duyulan üzüntüdür; hasret ise uzaktaki birine ya da bir şeye duyulan özlemdir. “Hayıflanma” kaçırılan fırsatla ilgili olduğu için ayrı görünebilir ama yine bir keşkedir."
+  },
+  {
+    "id": "soz-044",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Bir olayın önemini anlatma biçimiyle ilgili bu sözcüklerden hangisi diğerlerinden ayrılır?",
+    "options": [
+      "hafife almak",
+      "abartmak",
+      "mübalağa etmek",
+      "şişirmek"
+    ],
+    "answer": 0,
+    "why": "Abartmak, mübalağa etmek ve şişirmek bir şeyi olduğundan büyük göstermektir; hafife almak ise önemsizmiş gibi görmektir. “Şişirmek”in somut bir anlamı da vardır ama burada mecazen abartmak demektir."
+  },
+  {
+    "id": "soz-045",
+    "section": "sozel",
+    "subtype": "farkli_olan",
+    "difficulty": "zor",
+    "prompt": "Anlaşmazlık çözme yollarını anlatan bu sözcüklerden hangisi anlamca ötekilerden farklıdır?",
+    "options": [
+      "dayatma",
+      "müzakere",
+      "pazarlık",
+      "diyalog"
+    ],
+    "answer": 0,
+    "why": "Müzakere, pazarlık ve diyalog iki tarafın karşılıklı konuşmasını gerektirir; dayatma ise tek tarafın iradesini kabul ettirmesidir. “Pazarlık” çıkara dayandığı için ayrı görünebilir ama yine karşılıklıdır."
+  },
+  {
+    "id": "soz-046",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Ece sunuma iki hafta önceden hazırlanmaya başlamıştı; … son gece yine sabaha kadar slaytlarla uğraştı.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "buna rağmen",
+      "bundan dolayı",
+      "çünkü",
+      "yeter ki"
+    ],
+    "answer": 0,
+    "why": "Erken başlayan birinin son geceyi rahat geçirmesi beklenir; olan bunun tersi olduğu için karşıtlık bildiren “buna rağmen” gelir. “Bundan dolayı” erken hazırlığı sabahlamanın nedeni yapar, mantığa aykırıdır."
+  },
+  {
+    "id": "soz-047",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Kemal bütün sabah telefonunu bulamadığı için evi altüst etti; … telefon ceketinin iç cebindeymiş.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "meğer",
+      "çünkü",
+      "üstelik",
+      "yoksa"
+    ],
+    "answer": 0,
+    "why": "Sonradan anlaşılan şaşırtıcı bir gerçeği “meğer” bildirir; fiildeki “-mış” da bunu destekler. “Çünkü” cebinde olmayı evi aramanın nedeni yapar ki anlamsızdır."
+  },
+  {
+    "id": "soz-048",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Elif toplantı odasının kapısını açıp içeri …, herkesin bir anda sustuğunu fark etti.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "girince",
+      "girse de",
+      "girerse",
+      "girmek için"
+    ],
+    "answer": 0,
+    "why": "Fark etme anı, içeri girdiği anla aynıdır; zaman bildiren “girince” uyar. “Girse de” bir beklentiye karşıtlık kurar ama girmek ile susulduğunu fark etmek arasında böyle bir çelişki yoktur."
+  },
+  {
+    "id": "soz-049",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Burak toplantıda bir saat boyunca tek kelime etmedi; … masadaki en somut önerilerin çoğu onun hazırladığı nottan çıkmıştı.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "oysa",
+      "bu yüzden",
+      "üstelik",
+      "madem"
+    ],
+    "answer": 0,
+    "why": "Sessiz kalan birinin katkısının az olması beklenir; gerçek bunun tersi olduğu için karşıtlık bildiren “oysa” gelir. “Üstelik” aynı yönde bir bilgi eklerdi ama iki cümle zıt yöndedir."
+  },
+  {
+    "id": "soz-050",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "… bu kadar yorgunsun, akşamki buluşmayı haftaya erteleyelim.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "Madem",
+      "Oysa",
+      "Meğer",
+      "Üstelik"
+    ],
+    "answer": 0,
+    "why": "“Madem”, bilinen bir durumu gerekçe yapıp sonuç çıkarır: yorgunsun, öyleyse erteleyelim. “Oysa” bir karşıtlık kurar ama yorgunluk ile ertelemek çelişmez, birbirini gerektirir."
+  },
+  {
+    "id": "soz-051",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Şehir …, trafik de neredeyse her saat içinden çıkılmaz hâle geliyor.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "büyüdükçe",
+      "büyüse de",
+      "büyümeden önce",
+      "büyümek için"
+    ],
+    "answer": 0,
+    "why": "Cümle, iki şeyin birlikte arttığını anlatır; orantı bildiren “-dikçe” uyar. “Büyüse de” büyümenin trafiği azaltmasının beklendiğini varsayar ki bu olağan bir beklenti değildir."
+  },
+  {
+    "id": "soz-052",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Sinan bu dönem istatistik dersinden kaldı; … dönem boyunca derslerin yarısına girmemişti.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "çünkü",
+      "oysa",
+      "yeter ki",
+      "bu sayede"
+    ],
+    "answer": 0,
+    "why": "İkinci cümle dersten kalmanın nedenini verir; “çünkü” gerekir. “Oysa” bir karşıtlık kurardı ama derse girmemek kalmayla çelişmez, onu açıklar."
+  },
+  {
+    "id": "soz-053",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Yeni işinde maaşı öncekinden biraz düşük; … ofis evine yürüme mesafesinde ve haftada iki gün evden çalışabiliyor.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "ama",
+      "madem",
+      "çünkü",
+      "yoksa"
+    ],
+    "answer": 0,
+    "why": "Önce olumsuz, sonra olumlu bir yan söyleniyor; karşıtlık bildiren “ama” uyar. “Çünkü” yakın ofisi düşük maaşın nedeni yapar, “madem” ise ondan bir sonuç çıkarmaya çalışır; ikisi de bağ kuramaz."
+  },
+  {
+    "id": "soz-054",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Yarın sabah en geç yedide yola çıkmamız lazım, … köprü trafiğine yakalanıp uçağı kaçırırız.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "yoksa",
+      "üstelik",
+      "oysa",
+      "bu sayede"
+    ],
+    "answer": 0,
+    "why": "“Yoksa”, söylenen yapılmazsa ne olacağını bildirir. “Bu sayede” erken çıkmayı uçağı kaçırmanın nedeni yapar; anlamı tersine çevirir."
+  },
+  {
+    "id": "soz-055",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "orta",
+    "prompt": "Uygulama tamamen ücretsiz …, her iki dakikada bir çıkan reklamlar yüzünden kullanması yorucu.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "olsa da",
+      "olursa",
+      "olmadan önce",
+      "olmak için"
+    ],
+    "answer": 0,
+    "why": "Ücretsiz olmak bir artıdır, ardından gelen yorucu olması bir eksidir; bu karşıtlığı “olsa da” kurar. “Olursa” ücretsizliği bir koşul gibi sunar ama cümle bunun zaten gerçek olduğunu anlatıyor."
+  },
+  {
+    "id": "soz-056",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Selin partiye gelmedi diye alınma; hiç tanımadığı bir kalabalık, … o gün sabahtan akşama kadar nöbette.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "kaldı ki",
+      "oysa",
+      "dolayısıyla",
+      "meğer"
+    ],
+    "answer": 0,
+    "why": "“Kaldı ki”, ilk gerekçeyi gereksiz kılacak kadar güçlü bir ikinci gerekçe ekler: zaten nöbette. “Dolayısıyla” nöbeti kalabalığın sonucu yapar ki ikisi arasında böyle bir bağ yoktur."
+  },
+  {
+    "id": "soz-057",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Defne teklif edilen terfiyi kabul etmedi. … şirketten ayrılmayı düşünmüyor; yalnızca şu an daha fazla sorumluluk istemiyor.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "Yine de",
+      "Bu yüzden",
+      "Meğer",
+      "Çünkü"
+    ],
+    "answer": 0,
+    "why": "Terfiyi reddetmek ayrılık sinyali gibi okunabilir; ikinci cümle bu beklentiyi kırdığı için “Yine de” gelir. “Bu yüzden” ayrılmamayı reddin sonucu yapar; oysa ret, tersine ayrılığı çağrıştırır."
+  },
+  {
+    "id": "soz-058",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Bu raporu bu akşam …, müdür onu okumaya ancak pazartesi fırsat bulacak; acele etmene gerek yok.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "bitirsen bile",
+      "bitirirsen",
+      "bitirdiğin için",
+      "bitirmeden"
+    ],
+    "answer": 0,
+    "why": "Asıl sonuç bitirip bitirmemene bağlı değil; bunu “-sa bile” anlatır ve “acele etmene gerek yok” da bunu doğrular. “Bitirirsen” okunmayı bitirmeye bağlar, oysa okuma her durumda pazartesi olacak."
+  },
+  {
+    "id": "soz-059",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Sert eleştiriler Nazlı'yı yıldırmadı; … ikinci kitabına ilkinden çok daha büyük bir hevesle başladı.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "aksine",
+      "oysa",
+      "madem",
+      "yoksa"
+    ],
+    "answer": 0,
+    "why": "“Aksine”, olumsuzlanan beklentinin (yılmak) tam tersinin gerçekleştiğini söyler. “Oysa” ilk cümleyle çelişen bir bilgi getirmeli ama ikinci cümle ilkini çürütmüyor, aynı yönde ileri götürüyor."
+  },
+  {
+    "id": "soz-060",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Herkesin önünde açıkça özür …, Ozan'ın kırgınlığı hâlâ geçmiş değil.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "dilediğim hâlde",
+      "dilediğim için",
+      "dilediğim takdirde",
+      "dilemeden önce"
+    ],
+    "answer": 0,
+    "why": "Özür, kırgınlığı geçirmesi beklenen bir şeydir; “hâlâ” da beklentinin boşa çıktığını gösterir, bu yüzden “-dığı hâlde” gelir. “Dilediğim için” özrü kırgınlığın nedeni yapar, “hâlâ” ile bağdaşmaz."
+  },
+  {
+    "id": "soz-061",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Ilgaz projeye haftalarca emek verdi, (I) sunumda beklediği ilgiyi görmedi. (II) vazgeçmedi; geri bildirimleri toplayıp projeyi baştan düzenledi.\nI ve II yerine sırasıyla hangileri gelmelidir?",
+    "options": [
+      "ama – Yine de",
+      "bu yüzden – Yine de",
+      "ama – Bu yüzden",
+      "çünkü – Üstelik"
+    ],
+    "answer": 0,
+    "why": "Emek ile ilgisizlik arasında karşıtlık var (ama); ilgisizlik vazgeçirmesi beklenen bir şeyken vazgeçmemesi de karşıtlıktır (Yine de). “Ama – Bu yüzden” ilgisizliği vazgeçmemenin nedeni yapar, mantık zinciri kopar."
+  },
+  {
+    "id": "soz-062",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Uzmanlar bu yıl kışın erken bastıracağını söylüyordu; … daha ekim ortasında ilk kar düştü.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "nitekim",
+      "oysa",
+      "yoksa",
+      "madem"
+    ],
+    "answer": 0,
+    "why": "“Nitekim”, öncesinde söyleneni doğrulayan bir olguyu getirir: erken kış beklentisi gerçekleşti. “Oysa” beklentiyle çelişen bir sonuç bildirirdi, ama ekimde kar beklentiyi doğruluyor."
+  },
+  {
+    "id": "soz-063",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Bu saatte köprü trafiğinde yarım saat taksi …, metroya kadar yürüyüp oradan gitmek çok daha mantıklı.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "beklemektense",
+      "beklediği için",
+      "beklerken",
+      "beklemesine rağmen"
+    ],
+    "answer": 0,
+    "why": "İki seçenek karşılaştırılıyor ve biri ötekine tercih ediliyor; bunu “-mektense” kurar. “Beklerken” iki eylemi aynı anda yapılıyormuş gibi gösterir, ki bekleyen biri aynı anda yürüyemez."
+  },
+  {
+    "id": "soz-064",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Kira sözleşmesini bir yıllık süre dolmadan …, depozitonun yarısı size iade edilmeyecektir.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "feshettiğiniz takdirde",
+      "feshetseniz bile",
+      "feshettiğiniz hâlde",
+      "feshetmeden önce"
+    ],
+    "answer": 0,
+    "why": "Kesinti, erken fesih koşuluna bağlanıyor; koşul bildiren “-dığı takdirde” gerekir. “Feshetseniz bile” kesintinin her durumda yapılacağını ima eder, oysa koşul olmadan kesinti için bir neden yok."
+  },
+  {
+    "id": "soz-065",
+    "section": "sozel",
+    "subtype": "baglac",
+    "difficulty": "zor",
+    "prompt": "Yeni kafe iddialı dekorasyonuyla ilk haftalarda büyük ilgi gördü; … kahvelerinin vasat olduğu anlaşılınca müşteriler birer birer çekildi.\nBoşluğa anlamca hangisi gelmelidir?",
+    "options": [
+      "ne var ki",
+      "bunun yanı sıra",
+      "nitekim",
+      "madem"
+    ],
+    "answer": 0,
+    "why": "Olumlu bir başlangıcın ardından onu sınırlayan olumsuz bir gelişme geliyor; “ne var ki” bunu bağlar. “Nitekim” ilk cümleyi doğrulayan bir bilgi getirirdi, oysa müşterilerin çekilmesi ilgiyle çelişiyor."
+  },
+  {
+    "id": "soz-066",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Raporda tek bir yazım hatası bulan Murat pireyi deve yaptı; toplantıda konu yarım saat konuşuldu.\nBu cümlede “pireyi deve yapmak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Küçük bir sorunu gereğinden çok büyüttü",
+      "Hatayı ustaca başkasının üzerine attı",
+      "Hatayı görmezden gelip konuyu geçiştirdi",
+      "Hatayı kimseye sezdirmeden düzeltti"
+    ],
+    "answer": 0,
+    "why": "“Pireyi deve yapmak”, önemsiz bir şeyi abartıp büyütmektir; yarım saatlik tartışma da bunu gösterir. “Görmezden gelip geçiştirdi” bunun tam tersidir."
+  },
+  {
+    "id": "soz-067",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Yeni müdür herkesin nabzına göre şerbet vererek kısa sürede ofisin en sevilen kişisi oldu.\nBu cümlede “nabzına göre şerbet vermek” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Herkese hoşuna gidecek biçimde davrandı",
+      "Herkesin sağlık durumuyla yakından ilgilendi",
+      "Çalışanlara başarılarına göre ödül dağıttı",
+      "Herkese ayrım yapmadan, eşit davrandı"
+    ],
+    "answer": 0,
+    "why": "Deyim, karşındakinin hoşlanacağı şekilde konuşup davranmaktır. “Eşit davrandı” çekicidir ama deyim tam tersine kişiye göre davranış değiştirmeyi anlatır."
+  },
+  {
+    "id": "soz-068",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "İş görüşmesinin sonucu daha belli olmadan yeni şehirde ev ilanlarına bakan Ayşe için annesi “Dereyi görmeden paçaları sıvıyor.” dedi.\nBu cümlede “dereyi görmeden paçaları sıvamak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Kesinleşmemiş bir şey için erkenden hazırlanıyor",
+      "Yeni bir şehre taşınmaktan çekiniyor",
+      "İşi kapmak için gereğinden çok çabalıyor",
+      "Karar vermeden önce her ihtimali tartıyor"
+    ],
+    "answer": 0,
+    "why": "Deyim, gerçekleşip gerçekleşmeyeceği belli olmayan bir iş için vakitsiz hazırlığa girişmektir. “Her ihtimali tartıyor” temkini anlatır; deyimdeki acelecilikle zıttır."
+  },
+  {
+    "id": "soz-069",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Ev arkadaşından ne zaman küçük bir iyilik istese Deniz, ipe un seren cevaplarla karşılaşıyordu.\nBu cümlede “ipe un sermek” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Yapmamak için türlü bahaneler uyduran",
+      "Hemen ve gönülden yardıma koşan",
+      "İsteği yarım yamalak yapıp bırakan",
+      "İsteği açık açık ve sertçe reddeden"
+    ],
+    "answer": 0,
+    "why": "“İpe un sermek”, bir işi yapmamak için bahaneler ileri sürmektir. “Açık açık reddeden” yanlıştır: deyimde ret dolaylıdır, bahanelerle örtülür."
+  },
+  {
+    "id": "soz-070",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Asansörde iki yöneticinin konuşmasına kulak misafiri olan Zeynep, birimin taşınacağını böyle öğrendi.\nBu cümlede “kulak misafiri olmak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Konuşmayı istemeden duydu",
+      "Konuşmayı gizlice dinledi",
+      "Konuşmaya sonradan katıldı",
+      "Konuşmayı başkasına aktardı"
+    ],
+    "answer": 0,
+    "why": "Kulak misafiri olmak, başkalarının konuşmasını istemeden, rastlantıyla duymaktır. “Gizlice dinledi” bilinçli bir eylemdir; deyimdeki rastlantı anlamını kaybeder."
+  },
+  {
+    "id": "soz-071",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Can, ağzıyla kuş tutsa yine de babasına yaranamıyor.\nBu cümlede “ağzıyla kuş tutmak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Ne yaparsa yapsın babasını memnun edemiyor",
+      "Çok konuştuğu için babasını bıktırıyor",
+      "Babasını memnun etmek için hiç uğraşmıyor",
+      "Babasından istediğini almak için yalvarıyor"
+    ],
+    "answer": 0,
+    "why": "“Ağzıyla kuş tutsa”, olağanüstü bir şey bile başarsa anlamına gelir; yani hiçbir çabası yetmiyor. “Hiç uğraşmıyor” bunun tersidir: cümle çabanın boşa gittiğini söylüyor."
+  },
+  {
+    "id": "soz-072",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Burs sonucunu öğrenince Selin'in etekleri zil çaldı.\nBu cümlede “etekleri zil çalmak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Çok sevindi",
+      "Çok telaşlandı",
+      "Çok utandı",
+      "Çok şaşırdı"
+    ],
+    "answer": 0,
+    "why": "“Etekleri zil çalmak” büyük bir sevinci anlatır. “Telaşlandı” çekicidir çünkü zil ve hareket çağrıştırır, ama deyimde telaş değil coşku vardır."
+  },
+  {
+    "id": "soz-073",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Ahmet Bey çok bilgili ama burnundan kıl aldırmayan biri; ona bir öneri götürmek kolay değil.\nBu cümlede “burnundan kıl aldırmamak” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Kibirli ve kimseye eğilmeyen",
+      "En ufak ayrıntıya takılan",
+      "Çabucak öfkelenip bağıran",
+      "Kolay kolay kandırılamayan"
+    ],
+    "answer": 0,
+    "why": "Deyim, aşırı gururlu olup kimseye boyun eğmemeyi anlatır. “Ayrıntıya takılan” ise “kılı kırk yarmak”ın anlamıdır; sözcükteki “kıl” benzerliği yanıltıcıdır."
+  },
+  {
+    "id": "soz-074",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Projeyi iki kez son ana bırakınca Barış, müdürün gözünden düştü.\nBu cümlede “gözden düşmek” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "Müdürün ona verdiği değer azaldı",
+      "Müdür onu görmezden gelmeye başladı",
+      "Müdürün denetiminden kurtuldu",
+      "Müdür onu başka ekibe gönderdi"
+    ],
+    "answer": 0,
+    "why": "Gözden düşmek, birinin gözündeki değerini ve itibarını yitirmektir. “Görmezden gelmeye başladı” bunun olası bir sonucu olabilir ama deyimin anlamı değildir."
+  },
+  {
+    "id": "soz-075",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "“Ayağını yorganına göre uzat.” sözü en çok hangi durumdaki birine söylenir?",
+    "options": [
+      "Gelirinden fazlasını harcayıp sürekli borçlanan",
+      "Her işi son ana bırakıp telaşa kapılan",
+      "Yeni bir işe başlamaktan sürekli çekinen",
+      "Verdiği sözleri tutmayıp herkesi bekleten"
+    ],
+    "answer": 0,
+    "why": "Atasözü, harcamaları gelire göre ayarlamayı öğütler. “Yeni bir işe başlamaktan çekinen” birine ise tersine cesaret verilir; atasözü bir sınırlama öğüdüdür."
+  },
+  {
+    "id": "soz-076",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Daha önce internetten aldığı telefon sahte çıkan Oğuz, şimdi küçük bir kulaklık alırken bile satıcıdan faturayı, garantiyi, seri numarasını istiyor.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Sütten ağzı yanan yoğurdu üfleyerek yer.",
+      "Üzüm üzüme baka baka kararır.",
+      "Komşu komşunun külüne muhtaçtır.",
+      "Bin bilsen de bir bilene danış."
+    ],
+    "answer": 0,
+    "why": "Kötü bir deneyim yaşayan, benzer durumlarda aşırı temkinli olur. “Bin bilsen de bir bilene danış.” bir uzmana sormayı öğütler; Oğuz ise danışmıyor, geçmiş zararı yüzünden her şeyi belgeye bağlıyor."
+  },
+  {
+    "id": "soz-077",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Kendini ekibin en iyi yazılımcısı sanan Emre, yeni gelen stajyerin hatayı on dakikada çözdüğünü görünce afalladı.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "El elden üstündür.",
+      "Ağaç yaşken eğilir.",
+      "Acele işe şeytan karışır.",
+      "Son gülen iyi güler."
+    ],
+    "answer": 0,
+    "why": "Her ustanın üstünde bir usta bulunabileceğini “El elden üstündür.” anlatır. “Ağaç yaşken eğilir.” stajyerin gençliği yüzünden çekicidir ama eğitimin erken yaşta verilmesiyle ilgilidir."
+  },
+  {
+    "id": "soz-078",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "orta",
+    "prompt": "Sabahları erkenden koşmaya çıkan oda arkadaşını haftalarca izleyen Kaan, bir gün o da spor ayakkabılarını giyip ona katıldı.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Üzüm üzüme baka baka kararır.",
+      "Komşu komşunun külüne muhtaçtır.",
+      "Bir elin nesi var, iki elin sesi var.",
+      "Sakla samanı, gelir zamanı."
+    ],
+    "answer": 0,
+    "why": "Birlikte olan insanların zamanla birbirinden etkilenmesini “Üzüm üzüme baka baka kararır.” anlatır. “Bir elin nesi var…” iş birliğini anlatır; burada ortak bir iş değil, örnek alma var."
+  },
+  {
+    "id": "soz-079",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Editörümüz bir metni yayımlamadan önce her virgülü tek tek tartar; tam anlamıyla … biridir.\nBoşluğa hangi deyim gelmelidir?",
+    "options": [
+      "kılı kırk yaran",
+      "burnundan kıl aldırmayan",
+      "pireyi deve yapan",
+      "işi ağırdan alan"
+    ],
+    "answer": 0,
+    "why": "Kılı kırk yarmak, bir işi en ince ayrıntısına kadar titizlikle incelemektir. “Pireyi deve yapan” da küçük şeylere odaklanır ama onları abartmayı anlatır; editör ise yalnızca titizdir."
+  },
+  {
+    "id": "soz-080",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Müdür, Berk'in birkaç kez geç gelmesine … ; sonunda Berk bunu alışkanlık hâline getirdi.\nBoşluğa hangi deyim gelmelidir?",
+    "options": [
+      "göz yumdu",
+      "göz attı",
+      "göz koydu",
+      "gözünü dikti"
+    ],
+    "answer": 0,
+    "why": "Göz yummak, bir kusuru görüp bilerek ses çıkarmamaktır; bu hoşgörü alışkanlığa yol açmıştır. “Göz attı” bakıp geçmektir, ama hoşgörü ve onun sonucu olan alışkanlıkla bağ kurmaz."
+  },
+  {
+    "id": "soz-081",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Sahnedeki illüzyonist, kapalı kutudaki asistanını bir anda salonun en arka sırasında belirtince hepimizin …\nBoşluğa hangi deyim gelmelidir?",
+    "options": [
+      "ağzı açık kaldı",
+      "ağzı kulaklarına vardı",
+      "ağzı sulandı",
+      "ağzının tadı kaçtı"
+    ],
+    "answer": 0,
+    "why": "Ağzı açık kalmak, gördüğü şey karşısında hayretler içinde kalmaktır. “Ağzı kulaklarına vardı” da olumlu bir tepkidir ama şaşkınlığı değil, büyük sevinci anlatır."
+  },
+  {
+    "id": "soz-082",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Ev arkadaşının eski bilgisayarını hızlandırmak için ayarlarla oynayan Mert, sonunda bilgisayarı hiç açılmaz hâle getirdi.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Kaş yapayım derken göz çıkardı.",
+      "Pireye kızıp yorgan yaktı.",
+      "Dereyi görmeden paçaları sıvadı.",
+      "Atı alan Üsküdar'ı geçti."
+    ],
+    "answer": 0,
+    "why": "İyileştirmeye çalışırken daha büyük zarar vermek “kaş yapayım derken göz çıkarmak”tır. “Pireye kızıp yorgan yakmak” da büyük zarar anlatır ama bir öfkeyle verilir; Mert'in niyeti yardımdı."
+  },
+  {
+    "id": "soz-083",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Bir müşterinin kaba e-postasına sinirlenen Sevgi, öfkeyle bütün sözleşmeyi feshetti ve şirketin en büyük işini kaybetti.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Pireye kızıp yorgan yaktı.",
+      "Kaş yapayım derken göz çıkardı.",
+      "Bardağı taşıran son damla oldu.",
+      "Tükürdüğünü yaladı."
+    ],
+    "answer": 0,
+    "why": "Küçük bir şeye öfkelenip çok daha büyük bir zararı göze almak “pireye kızıp yorgan yakmak”tır. “Kaş yapayım derken göz çıkardı” iyi niyetle yapılan bir düzeltmeyi gerektirir; Sevgi öfkeyle davrandı."
+  },
+  {
+    "id": "soz-084",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Konser biletleri satışa çıkınca Umut “Akşam alırım.” dedi; akşam siteye girdiğinde biletlerin hepsi tükenmişti.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Atı alan Üsküdar'ı geçmişti.",
+      "Geç olsun da güç olmasın.",
+      "Acele işe şeytan karışır.",
+      "Sabreden derviş muradına ermiş."
+    ],
+    "answer": 0,
+    "why": "İş işten geçtiğinde “Atı alan Üsküdar'ı geçti.” denir. “Geç olsun da güç olmasın.” gecikmeyi anlatır ama işin sonunda olduğunu söyler; burada ise fırsat tamamen kaçtı."
+  },
+  {
+    "id": "soz-085",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Aylardır içinde tuttuğu istifa kararını Gökhan sonunda toplantıda, herkesin önünde açıkça söyleyerek …\nBoşluğa hangi deyim gelmelidir?",
+    "options": [
+      "baklayı ağzından çıkardı",
+      "ağzından kaçırdı",
+      "ağzını bıçak açmadı",
+      "ağzına geleni söyledi"
+    ],
+    "answer": 0,
+    "why": "Baklayı ağzından çıkarmak, uzun süre sakladığı şeyi sonunda bilerek söylemektir. “Ağzından kaçırdı” da bir sırrı söylemektir ama istemeden olur; Gökhan ise açıkça ve isteyerek söyledi."
+  },
+  {
+    "id": "soz-086",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Yıllardır her taşınmada atmaya kıyamadığı eski kablolarla dolu kutudan Gizem, bugün tam aradığı adaptörü çıkardı.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Sakla samanı, gelir zamanı.",
+      "Ak akçe kara gün içindir.",
+      "Damlaya damlaya göl olur.",
+      "Eski dost düşman olmaz."
+    ],
+    "answer": 0,
+    "why": "Değersiz görünen bir şeyin günü gelince işe yarayacağını “Sakla samanı, gelir zamanı.” anlatır. “Ak akçe kara gün içindir.” de saklamayı öğütler ama kötü günler için para biriktirmekle ilgilidir."
+  },
+  {
+    "id": "soz-087",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Yıllardır kask takmadan bisiklete binen ve “Bana bir şey olmaz.” diyen Ufuk, sonunda basit bir düşüşte başını yaraladı.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Su testisi su yolunda kırılır.",
+      "Sütten ağzı yanan yoğurdu üfleyerek yer.",
+      "Ateş düştüğü yeri yakar.",
+      "Her işte bir hayır vardır."
+    ],
+    "answer": 0,
+    "why": "Sürekli göze alınan bir tehlikenin eninde sonunda zarar vereceğini “Su testisi su yolunda kırılır.” anlatır. “Sütten ağzı yanan…” kazadan sonraki temkinle ilgilidir; parça kazanın kendisini anlatıyor."
+  },
+  {
+    "id": "soz-088",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "İşten çıkarılan Nehir'e ekipteki herkes elinden geldiğince destek oldu; yine de kira ve fatura derdiyle geceleri uyuyamayan yalnızca Nehir'di.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Ateş düştüğü yeri yakar.",
+      "Dost kara günde belli olur.",
+      "Her kuşun eti yenmez.",
+      "Bir musibet bin nasihatten iyidir."
+    ],
+    "answer": 0,
+    "why": "Bir felaketin acısını en çok onu yaşayanın çektiğini “Ateş düştüğü yeri yakar.” anlatır. “Dost kara günde belli olur.” çekicidir ama parça dostların sınandığını değil, yükün kimde kaldığını vurguluyor."
+  },
+  {
+    "id": "soz-089",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Yıllardır sustuğu konuları ilk kez o akşam annesine anlatan Melis, eteğindeki taşları döktü.\nBu cümlede “eteğindeki taşları dökmek” sözüyle anlatılmak istenen nedir?",
+    "options": [
+      "İçinde biriktirdiği dertleri ve kırgınlıkları söyledi",
+      "Yaptığı bütün hataları tek tek itiraf etti",
+      "Annesine söylediği sert sözleri geri aldı",
+      "Annesiyle bütün bağlarını kesip uzaklaştı"
+    ],
+    "answer": 0,
+    "why": "Eteğindeki taşları dökmek, içinde biriktirdiği sitem ve dertleri açıkça söylemektir. “Hataları itiraf etti” de bir açılmadır ama deyim kendi suçlarını değil, birikmiş kırgınlıkları anlatır."
+  },
+  {
+    "id": "soz-090",
+    "section": "sozel",
+    "subtype": "deyim_atasozu",
+    "difficulty": "zor",
+    "prompt": "Spor salonuna yazılan Hakan, haftada bir uğrayıp aynanın önünde fotoğraf çekiliyor ama hiç ciddi antrenman yapmıyor.\nBu durumu en iyi anlatan atasözü hangisidir?",
+    "options": [
+      "Dostlar alışverişte görsün.",
+      "Görünen köy kılavuz istemez.",
+      "Az olsun, öz olsun.",
+      "Damlaya damlaya göl olur."
+    ],
+    "answer": 0,
+    "why": "Bir işi gerçekten değil, başkaları görsün diye yapmak “Dostlar alışverişte görsün.” sözüyle anlatılır. “Damlaya damlaya göl olur.” küçük adımlarla birikimi anlatır; oysa Hakan'ın amacı ilerlemek değil, görünmek."
+  },
+  {
+    "id": "soz-091",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Yönetmeliğin muğlak maddeleri, her şubede kuralın farklı uygulanmasına yol açtı.\nBu cümlede “muğlak” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "belirsiz",
+      "karmaşık",
+      "eksik",
+      "katı"
+    ],
+    "answer": 0,
+    "why": "Muğlak, birden çok biçimde anlaşılabilen, belirsiz demektir; farklı uygulamalar da bundan doğar. “Karmaşık” çekicidir ama karmaşık bir madde tek anlamlı da olabilir."
+  },
+  {
+    "id": "soz-092",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Belediye, kararın gerekçesini halka açık, aleni bir oturumda açıkladı.\nBu cümlede “aleni” sözcüğünün karşıt anlamlısı hangisidir?",
+    "options": [
+      "gizli",
+      "resmî",
+      "olağan",
+      "tarafsız"
+    ],
+    "answer": 0,
+    "why": "Aleni, herkesin önünde, açıkça yapılan demektir; karşıtı gizlidir. “Resmî” bir oturumun niteliği olabilir ama açıklık ya da gizlilikle ilgili değildir."
+  },
+  {
+    "id": "soz-093",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "İş teklifini kabul edip etmeme konusunda iki haftadır mütereddit.\nBu cümlede “mütereddit” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "kararsız",
+      "çekingen",
+      "isteksiz",
+      "endişeli"
+    ],
+    "answer": 0,
+    "why": "Mütereddit, tereddüt içinde olan, kararsız demektir. “Çekingen” bir kişilik özelliğidir; teklif karşısındaki geçici kararsızlığı anlatmaz."
+  },
+  {
+    "id": "soz-094",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "İhtiyatlı bir yatırımcı, bütün birikimini tek bir şirketin hissesine yatırmaz.\nBu cümlede “ihtiyatlı” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "temkinli",
+      "tutumlu",
+      "deneyimli",
+      "kuşkucu"
+    ],
+    "answer": 0,
+    "why": "İhtiyatlı, riske karşı önlem alan, temkinli demektir. “Tutumlu” para harcamakla ilgilidir; birikimi dağıtmak ise tutumluluk değil, risk yönetimidir."
+  },
+  {
+    "id": "soz-095",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Kardeşiyle aynı binada ama müstakil bir dairede oturuyor.\nBu cümlede “müstakil” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "ayrı",
+      "geniş",
+      "yeni",
+      "müstakbel"
+    ],
+    "answer": 0,
+    "why": "Müstakil, başka bir şeye bağlı olmayan, ayrı demektir. “Müstakbel” ses olarak benzer ama “gelecekteki” anlamına gelir."
+  },
+  {
+    "id": "soz-096",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Ekip, son sürümdeki hatanın telafisi için hafta sonu da çalıştı.\nBu cümlede “telafi” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "açığı kapatma",
+      "nedenini bulma",
+      "üstünü örtme",
+      "sorumluyu bulma"
+    ],
+    "answer": 0,
+    "why": "Telafi, bir kaybı ya da eksikliği giderip yerine koymaktır. “Nedenini bulma” hatayla ilgili bir adımdır ama zararı gidermek anlamına gelmez."
+  },
+  {
+    "id": "soz-097",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Müdür, ivedi olarak yanıtlanması gereken e-postaları ayrı bir klasörde topluyor.\nBu cümlede “ivedi” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "acil",
+      "önemli",
+      "resmî",
+      "gizli"
+    ],
+    "answer": 0,
+    "why": "İvedi, beklemeden, hemen yapılması gereken demektir. “Önemli” çekicidir ama önemli bir iş acil olmayabilir; ivedilik zamanla ilgilidir."
+  },
+  {
+    "id": "soz-098",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Bu arıza münferit bir olay değil; aynı sorun geçen ay üç şubede daha görüldü.\nBu cümlede “münferit” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "tek başına",
+      "beklenmedik",
+      "kalıcı",
+      "kasıtlı"
+    ],
+    "answer": 0,
+    "why": "Münferit, tek başına kalmış, başkalarıyla bağlantısız demektir; cümle de olayın tekrarlandığını söyleyerek bunu çürütüyor. “Beklenmedik” arızanın şaşırtıcılığıyla ilgilidir, tekrarlanıp tekrarlanmadığıyla değil."
+  },
+  {
+    "id": "soz-099",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Ünlü yazar, kazandığı bütün paraya rağmen son derece mütevazı bir hayat sürüyor.\nBu cümlede “mütevazı” sözcüğünün karşıt anlamlısı hangisidir?",
+    "options": [
+      "lüks",
+      "sade",
+      "sakin",
+      "düzenli"
+    ],
+    "answer": 0,
+    "why": "Mütevazı bir hayat, gösterişten uzak, sade bir yaşamdır; karşıtı lüks, gösterişli bir yaşamdır. “Sade” eş anlamlıdır, karşıt değil."
+  },
+  {
+    "id": "soz-100",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Tatil boyunca egzersizi ihmal edince eski kondisyonunu kısa sürede kaybetti.\nBu cümlede “ihmal” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "savsaklama",
+      "abartma",
+      "yenileme",
+      "planlama"
+    ],
+    "answer": 0,
+    "why": "İhmal, yapılması gerekeni gereken özeni göstermeden boşlamaktır; savsaklama da budur. Ötekiler egzersizle ilgili olabilir ama boşlama anlamı taşımaz."
+  },
+  {
+    "id": "soz-101",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "İki teklifi madde madde mukayese edince ikincisinin daha avantajlı olduğu anlaşıldı.\nBu cümlede “mukayese” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "karşılaştırma",
+      "değerlendirme",
+      "birleştirme",
+      "onaylama"
+    ],
+    "answer": 0,
+    "why": "Mukayese, iki ya da daha çok şeyi yan yana koyup karşılaştırmaktır. “Değerlendirme” tek bir şey için de yapılabilir; karşılaştırma anlamını tam vermez."
+  },
+  {
+    "id": "soz-102",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "orta",
+    "prompt": "Öğretmen, ilk haftalardaki gecikmelere müsamaha gösterdi ama sonra kuralları sıkılaştırdı.\nBu cümlede “müsamaha” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "hoşgörü",
+      "merak",
+      "tepki",
+      "ilgi"
+    ],
+    "answer": 0,
+    "why": "Müsamaha, kusuru hoş görüp ses çıkarmamaktır; “sonra kuralları sıkılaştırdı” da bunu doğrular. “Tepki” bunun tersidir: müsamaha tepki göstermemektir."
+  },
+  {
+    "id": "soz-103",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Rakibinin iddialarını çürütmek yerine kişiliğine saldırması, tipik bir safsata örneğiydi.\nBu cümlede “safsata” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "yanıltıcı akıl yürütme",
+      "açıkça söylenmiş yalan",
+      "kaba ve kişisel hakaret",
+      "sert ama haklı eleştiri"
+    ],
+    "answer": 0,
+    "why": "Safsata, doğru gibi görünen ama mantıkça geçersiz akıl yürütmedir; konuyu kişiye kaydırmak bunun bir örneğidir. “Kişisel hakaret” davranışı tarif eder ama safsata sözcüğünün anlamı değildir."
+  },
+  {
+    "id": "soz-104",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Toplantıyı bir saat ertelemekte benim açımdan bir mahzur yok.\nBu cümlede “mahzur” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "sakınca",
+      "gerekçe",
+      "yarar",
+      "zorunluluk"
+    ],
+    "answer": 0,
+    "why": "Mahzur, bir işin doğurabileceği engel ya da sakıncadır. “Gerekçe” de bir işe dair bir nedeni anlatır ama erteleme için bir neden aranmıyor, engel olup olmadığı soruluyor."
+  },
+  {
+    "id": "soz-105",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Genel kurulu müteakip basın toplantısı düzenlenecek.\nBu cümlede “müteakip” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "ardından",
+      "öncesinde",
+      "sırasında",
+      "yerine"
+    ],
+    "answer": 0,
+    "why": "Müteakip, bir şeyin arkasından gelen, ardından demektir. Sözcük yabancı geldiğinde akla gelen “öncesinde” tam tersidir."
+  },
+  {
+    "id": "soz-106",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Arkadaşının yaşadığı sıkıntılara karşı bu kadar kayıtsız kalmasını kimse anlayamadı.\nBu cümlede “kayıtsız” sözcüğünün karşıt anlamlısı hangisidir?",
+    "options": [
+      "ilgili",
+      "kayıtlı",
+      "sabırlı",
+      "suskun"
+    ],
+    "answer": 0,
+    "why": "Bu cümlede kayıtsız, ilgisiz demektir; karşıtı ilgilidir. “Kayıtlı” yalnızca sözcüğün “bir listeye yazılmamış” anlamına karşıttır ve bu bağlamda geçerli değildir."
+  },
+  {
+    "id": "soz-107",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "İki yılda üç kez terfi almak bu şirkette istisnai bir durum.\nBu cümlede “istisnai” sözcüğünün karşıt anlamlısı hangisidir?",
+    "options": [
+      "olağan",
+      "özel",
+      "beklenmedik",
+      "geçici"
+    ],
+    "answer": 0,
+    "why": "İstisnai, kuralın dışında kalan, nadir demektir; karşıtı olağandır. “Beklenmedik” istisnai ile aynı yöndedir; karşıt değil, yakın anlamlıdır."
+  },
+  {
+    "id": "soz-108",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Yazarın sakin üslubu ile anlattığı olayların sertliği arasında çarpıcı bir tezat var.\nBu cümlede “tezat” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "karşıtlık",
+      "benzerlik",
+      "bağlantı",
+      "denge"
+    ],
+    "answer": 0,
+    "why": "Tezat, iki şey arasındaki zıtlık ve karşıtlıktır; sakinlik ile sertlik de zıttır. “Denge” iki karşıt öğenin bir arada olmasını çağrıştırır ama zıtlığı değil, uyumu anlatır."
+  },
+  {
+    "id": "soz-109",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Toplantı gerilse de öfkesine hâkim oldu ve itidalini sonuna kadar korudu.\nBu cümlede “itidal” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "ölçülülük",
+      "sabır",
+      "nezaket",
+      "kararlılık"
+    ],
+    "answer": 0,
+    "why": "İtidal, aşırılığa kaçmadan ölçülü davranmaktır; öfkeye hâkim olmak da budur. “Sabır” beklemeye ve katlanmaya dayanır, itidaldeki aşırılıktan kaçınma anlamını vermez."
+  },
+  {
+    "id": "soz-110",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Kapanmış bir sitenin üyelik formunu doldurmaya çalışmak beyhude bir çaba.\nBu cümlede “beyhude” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "boşuna",
+      "yorucu",
+      "cesur",
+      "riskli"
+    ],
+    "answer": 0,
+    "why": "Beyhude, hiçbir sonuç vermeyecek, boşuna demektir. “Yorucu” bir çabanın niteliği olabilir ama sonucun olmayacağını anlatmaz; kısa bir form da beyhude olabilir."
+  },
+  {
+    "id": "soz-111",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Dedesinden kalan eski kitapları büyük bir itinayla tek tek temizledi.\nBu cümlede “itina” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "özen",
+      "sabır",
+      "sevgi",
+      "hız"
+    ],
+    "answer": 0,
+    "why": "İtina, bir işi titizlikle, özenle yapmaktır. “Sabır” işin uzun sürmesine katlanmayı anlatır; dikkat ve titizlik anlamını taşımaz."
+  },
+  {
+    "id": "soz-112",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Teklifin şirket için ne kadar riskli olduğu en başından aşikârdı.\nBu cümlede “aşikâr” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "apaçık",
+      "şüpheli",
+      "abartılı",
+      "önemsiz"
+    ],
+    "answer": 0,
+    "why": "Aşikâr, herkesin açıkça görebildiği, apaçık demektir. “Şüpheli” ise tersine, kesin olarak bilinmeyen, kuşku uyandıran bir durumu anlatır."
+  },
+  {
+    "id": "soz-113",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Doktor durumun sanıldığı kadar vahim olmadığını söyleyince aile rahatladı.\nBu cümlede “vahim” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "ağır",
+      "acil",
+      "karışık",
+      "uzun"
+    ],
+    "answer": 0,
+    "why": "Vahim, sonucu kötü olabilecek kadar ciddi, ağır demektir. “Acil” zamanla ilgilidir; ağır olmayan bir durum da acil olabilir."
+  },
+  {
+    "id": "soz-114",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Sürücülerin hız sınırlarına riayet etmesi, kazaları belirgin biçimde azalttı.\nBu cümlede “riayet” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "uyma",
+      "itiraz",
+      "alışma",
+      "aşma"
+    ],
+    "answer": 0,
+    "why": "Riayet, bir kurala uymak, onu çiğnememektir. “Alışma” kurala zamanla uyum sağlamayı çağrıştırır ama uymayı değil, bir şeye yatkınlaşmayı anlatır."
+  },
+  {
+    "id": "soz-115",
+    "section": "sozel",
+    "subtype": "es_zit_anlam",
+    "difficulty": "zor",
+    "prompt": "Ekip, toplantıda kendileri hakkında alınan karardan tamamen bihaberdi.\nBu cümlede “bihaber” sözcüğüne anlamca en yakın olan hangisidir?",
+    "options": [
+      "habersiz",
+      "kayıtsız",
+      "muhalif",
+      "memnun"
+    ],
+    "answer": 0,
+    "why": "Bihaber, bir şeyden haberi olmayan demektir. “Kayıtsız” çekicidir ama haberi olup umursamamayı anlatır; bihaber olan ise durumu hiç bilmez."
+  },
+  {
+    "id": "soz-116",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Bir kafe zinciri, şubelerinde müziğin sesini kıstığında müşterilerin ortalama oturma süresinin uzadığını gördü. Aynı dönemde kasa başına ortalama harcama ise değişmedi.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Uzayan oturma süresi, kasa başına harcamayı artırmadı.",
+      "Müşterilerin çoğu yüksek sesli müzikten hiç hoşlanmıyor.",
+      "Uzun oturan müşteriler kafeye zarar ettiriyor.",
+      "Zincir, müziği tamamen kapatmaya karar verdi."
+    ],
+    "answer": 0,
+    "why": "Oturma süresi uzadığı hâlde harcama değişmediğine göre, daha uzun oturmak daha çok harcamaya dönüşmemiştir. “Yüksek sesli müzikten hoşlanmıyor” bir genellemedir; parça müşterilerin beğenisi hakkında bilgi vermez."
+  },
+  {
+    "id": "soz-117",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Bu yıl şirkette fazla mesai yapan çalışanların sayısı iki katına çıktı. Demek ki çalışanlar işlerini eskisinden daha çok seviyor.\nBu akıl yürütme hangi varsayıma dayanmaktadır?",
+    "options": [
+      "Fazla mesai yapmak işi sevmenin göstergesidir.",
+      "Fazla mesai yapmayanlar işinden memnun değildir.",
+      "Bu yıl şirketin iş yükü belirgin biçimde azaldı.",
+      "Fazla mesaiye bu yıl ek ücret ödenmeye başlandı."
+    ],
+    "answer": 0,
+    "why": "Sonuç, mesaideki artışı sevgiye bağladığı için mesaiyi sevginin işareti saymaktadır. “Ek ücret ödenmeye başlandı” varsayım değil, tersine sonucu zayıflatan başka bir açıklamadır."
+  },
+  {
+    "id": "soz-118",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Belediye, bisiklet yolu açılan caddelerde trafik kazalarının azaldığını belirterek bisiklet yollarının kazaları azalttığını açıkladı.\nHangisi doğru olsaydı bu sonucu en çok zayıflatırdı?",
+    "options": [
+      "Bu caddelerde aynı dönemde hız sınırı da düşürülmüştü.",
+      "Bisiklet yolları sürücüler arasında uzun bir tartışma yarattı.",
+      "Bu caddelerde bisiklet kullananların sayısı arttı.",
+      "Belediye yeni bisiklet yolları açmayı planlıyor."
+    ],
+    "answer": 0,
+    "why": "Aynı dönemde hız sınırı da düştüyse kazalardaki azalma ona bağlı olabilir; bisiklet yolunun etkisi belirsizleşir. “Bisikletli sayısı arttı” ise sonucu zayıflatmaz, daha çok bisikletliye rağmen kaza azaldığını gösterir."
+  },
+  {
+    "id": "soz-119",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Kütüphanedeki sessiz çalışma salonu sabah dokuzda açılıyor ve genellikle ilk bir saat içinde doluyor. Öğle arasında ise yer bulmak kolay, çünkü öğrencilerin birçoğu yemeğe çıkıyor.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Salonun doluluğu gün içinde değişiyor.",
+      "Öğrenciler en verimli sabahları çalışıyor.",
+      "Salonun kapasitesi ihtiyaca yetmiyor.",
+      "Öğle arasında salonda kimse kalmıyor."
+    ],
+    "answer": 0,
+    "why": "Sabah dolan salonda öğlen yer bulunabiliyorsa doluluk gün içinde değişiyor demektir. “Kimse kalmıyor” fazla genellemedir: parça yalnızca birçok öğrencinin çıktığını söylüyor."
+  },
+  {
+    "id": "soz-120",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Ekip, yeni proje yönetim aracına geçince haftalık toplantılarını beşten ikiye indirdi. Herkes işlerin durumunu araçtan görebildiği için “Nerede kaldık?” toplantılarına gerek kalmadı.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Kalkan toplantıların bir kısmı durum paylaşmak içindi.",
+      "Yeni araç, ekibin genel verimliliğini iki katına çıkardı.",
+      "Ekip üyeleri toplantılardan hiç hoşlanmıyordu.",
+      "Kalan iki toplantı da yakında kaldırılacak."
+    ],
+    "answer": 0,
+    "why": "Toplantıların durumu araçtan görülebildiği için kalktığı söylendiğine göre, en azından bir kısmı durum bilgisi içindi. “Verimlilik iki katına çıktı” toplantı sayısındaki düşüşü verimlilikle karıştırır."
+  },
+  {
+    "id": "soz-121",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Bir araştırmada, akşamları ekran başında daha uzun süre geçiren gençlerin ortalama olarak daha geç uyuduğu görüldü.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Ekran süresi ile uyuma saati arasında bir ilişki gözlendi.",
+      "Ekranın mavi ışığı gençlerin uykuya dalmasını geciktiriyor.",
+      "Geç uyuyan gençlerin okul başarısı daha düşük.",
+      "Ekranı erken bırakan her genç erkenden uyuyor."
+    ],
+    "answer": 0,
+    "why": "Araştırma yalnızca iki şeyin birlikte görüldüğünü saptıyor. “Ekran ışığı uykuyu geciktiriyor” bir neden-sonuç iddiasıdır; geç uyumak isteyenlerin ekrana daha çok bakması da aynı tabloyu verir."
+  },
+  {
+    "id": "soz-122",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Kitap kulübümüze katılanların çoğu ilk ay içinde ayrılıyor. Bu yüzden yeni üyelerin katıldığı ilk toplantılarda daha kısa kitaplar seçmeliyiz.\nBu akıl yürütme hangi varsayıma dayanmaktadır?",
+    "options": [
+      "Yeni üyelerin ayrılmasında kitapların uzunluğu etkili.",
+      "Kısa kitaplar daha nitelikli tartışmalar doğurur.",
+      "Kulübün eski üyeleri uzun kitapları kısalara tercih ediyor.",
+      "Kulübe her ay çok sayıda yeni üye katılıyor."
+    ],
+    "answer": 0,
+    "why": "Öneri ancak kitap uzunluğu ayrılmalarda rol oynuyorsa anlam taşır. “Daha nitelikli tartışmalar” öneriyi süsleyebilir ama ayrılma sorununa bağlanmadığı için gerekli bir varsayım değildir."
+  },
+  {
+    "id": "soz-123",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Bir dil uygulaması, her gün beş dakika çalışmanın haftada bir kez uzun bir oturum yapmaktan daha etkili olduğunu öne sürüyor.\nHangisi bu iddiayı en çok destekler?",
+    "options": [
+      "Aynı toplam süreyi güne yayanlar daha çok sözcük hatırladı.",
+      "Kullanıcıların çoğu günlük bildirimleri açık tutuyor.",
+      "Uzun oturumlarda kullanıcılar daha çok sözcük görüyor.",
+      "Uygulama son bir yılda kullanıcı sayısını iki katına çıkardı."
+    ],
+    "answer": 0,
+    "why": "İddia, aynı emeğin dağıtılmasının daha etkili olduğudur; eşit toplam sürede daha iyi hatırlama bunu doğrudan destekler. “Bildirimleri açık tutuyor” kullanım alışkanlığıdır, etkililik hakkında bir şey söylemez."
+  },
+  {
+    "id": "soz-124",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Dört katlı apartmanımızın asansörü yalnızca zemin ve çift numaralı katlarda duruyor. Üçüncü katta oturan Selin her gün asansörü kullanıyor.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Selin asansörü kullandığında merdiveni de kullanıyor.",
+      "Selin her gün ikinci kattan yukarı yürüyor.",
+      "Selin dördüncü katta inip aşağı yürüyor.",
+      "Selin asansörü yalnızca sabah evden çıkarken kullanıyor."
+    ],
+    "answer": 0,
+    "why": "Asansör üçüncü katta durmadığına göre Selin, ikinci ya da dördüncü katta inip en az bir kat merdivenle gidiyor. Hangi katta indiği belli olmadığı için “ikinci kattan yukarı yürüyor” kesin değildir."
+  },
+  {
+    "id": "soz-125",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "orta",
+    "prompt": "Ofiste klimanın 22 dereceye ayarlandığı haftalarda gelen şikâyet e-postaları, 19 dereceye ayarlandığı haftalardakinin yarısı kadardı.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Şikâyet sayısı, klimanın ayarına göre farklılık gösterdi.",
+      "Ofisteki çalışanların hepsi daha sıcak bir ortamı tercih ediyor.",
+      "22 derece, en verimli çalışma sıcaklığıdır.",
+      "Gelen şikâyetlerin tamamı ısıyla ilgiliydi."
+    ],
+    "answer": 0,
+    "why": "Parçadan çıkan tek kesin bilgi, iki ayarda şikâyet sayısının farklı olduğudur. “Hepsi daha sıcağı tercih ediyor” aşırı genellemedir; 22 derecede de şikâyet gelmeye devam etti."
+  },
+  {
+    "id": "soz-126",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Yeni açılan metro hattı sayesinde Ayşe işe artık kırk dakika erken varıyor. Demek ki şehirde metroyla yolculuk eden herkes zamandan kazanıyor.\nBu akıl yürütmenin temel kusuru hangisidir?",
+    "options": [
+      "Tek kişinin deneyimini herkese genellemesi",
+      "Ayşe'nin önceki ulaşım aracını söylememesi",
+      "Kırk dakikalık kazancı olduğundan abartılı göstermesi",
+      "Metronun açılış tarihinden söz etmemesi"
+    ],
+    "answer": 0,
+    "why": "Ayşe'nin kazancından herkesin kazandığı sonucuna atlanıyor; bu bir genelleme hatasıdır. “Önceki aracı söylememesi” bir eksiklik gibi görünür ama Ayşe'nin kazancı zaten veridir; sorun sonucun ondan herkese taşınmasıdır."
+  },
+  {
+    "id": "soz-127",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Yüksek lisans yapan çalışanlar, yapmayanlardan ortalama yüzde otuz fazla kazanıyor. Bu da yüksek lisansın maaşı artırdığını gösteriyor.\nHangisi doğru olsaydı bu sonucu en çok zayıflatırdı?",
+    "options": [
+      "Yüksek lisans yapanlar, öncesinde de daha çok kazanıyordu.",
+      "Yüksek lisans ücretleri son yıllarda belirgin biçimde arttı.",
+      "Bazı şirketler yüksek lisans yapan çalışanlarına izin veriyor.",
+      "Yüksek lisans yapanların bir kısmı kamu sektöründe çalışıyor."
+    ],
+    "answer": 0,
+    "why": "Bu kişiler zaten daha çok kazanıyorduysa farkın nedeni yüksek lisans değil, başka bir özellik olabilir. “Ücretler arttı” yüksek lisansın maliyetiyle ilgilidir; maaşa etkisi hakkındaki sonucu sarsmaz."
+  },
+  {
+    "id": "soz-128",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Ekipteki herkes ya Python ya Go biliyor; ikisini birden bilen yok. Go bilenlerin hepsi gece vardiyasında çalışıyor. Deniz gündüz vardiyasında.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Deniz Go bilmiyor, Python biliyor.",
+      "Gece vardiyasında Python bilen yok.",
+      "Ekipte Python bilen tek kişi Deniz.",
+      "Ekipte Go bilenler daha az."
+    ],
+    "answer": 0,
+    "why": "Go bilenlerin hepsi gece çalıştığına göre gündüz çalışan Deniz Go bilemez; herkes iki dilden birini bildiği için Python biliyordur. “Gecede Python bilen yok” kesin değildir: kural Go bilenlerin yerini söyler, Python bilenlerinkini değil."
+  },
+  {
+    "id": "soz-129",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Bir sorunu çözmek için toplantıya on kişi çağırmak, çözümü on kat hızlandırmaz. Her yeni katılımcı fikir getirdiği kadar tartışma da getirir; belli bir sayıdan sonra toplantı, karar almaktan çok görüş dinleme seansına döner.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Katılımcı arttıkça karar almak zorlaşabilir.",
+      "Toplantılar en fazla üç kişiyle yapılmalıdır.",
+      "Kalabalık toplantılarda hiç fikir üretilmez.",
+      "Toplantı, sorun çözmenin en kötü yoludur."
+    ],
+    "answer": 0,
+    "why": "Yazar, belli bir sayıdan sonra kararın görüş dinlemeye dönüştüğünü söylüyor; yani katılımcı arttıkça karar zorlaşabilir. “En fazla üç kişi” parçada olmayan bir sınır koyar; yazar sayı vermiyor."
+  },
+  {
+    "id": "soz-130",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Kafemizin sitesine yorum yazan müşterilerin yüzde doksanı hizmetimizden memnun. Demek ki müşterilerimizin neredeyse tamamı memnun.\nBu akıl yürütme hangi varsayıma dayanmaktadır?",
+    "options": [
+      "Yorum yazanlar, bütün müşterileri iyi temsil ediyor.",
+      "Memnun müşteriler, memnun olmayanlardan daha sık yorum yazar.",
+      "Kafenin fiyatları rakiplerinden daha uygun.",
+      "Memnuniyet oranı geçen yıla göre yükseldi."
+    ],
+    "answer": 0,
+    "why": "Yorum yazanlardaki oranın tüm müşterilere taşınabilmesi için bu grubun temsil edici olması gerekir. “Memnunlar daha sık yorum yazar” çekicidir ama doğruysa sonucu zayıflatır; varsayım değil, itirazdır."
+  },
+  {
+    "id": "soz-131",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Bir yazılım ekibinde on iki kişi çalışıyor. Bunların yedisi uzaktan, sekizi yarı zamanlı çalışıyor.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "En az üç kişi hem uzaktan hem yarı zamanlı çalışıyor.",
+      "Tam olarak üç kişi hem uzaktan hem yarı zamanlı çalışıyor.",
+      "Ofisten çalışanların hepsi yarı zamanlı çalışıyor.",
+      "Yarı zamanlıların çoğu aynı zamanda uzaktan çalışıyor."
+    ],
+    "answer": 0,
+    "why": "Yedi ile sekizin toplamı on beştir; on iki kişide bu ancak en az üç kişinin iki gruba birden girmesiyle mümkündür. “Tam olarak üç” kesin değildir; örtüşme yediye kadar çıkabilir."
+  },
+  {
+    "id": "soz-132",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Okul kantininde şekerli içecek satışı yasaklandı; sonraki dönemde öğrencilerin şekerli içecek tüketimi azalmadı. Müdür, yasağın hiçbir işe yaramadığı sonucuna vardı.\nHangisi doğru olsaydı bu sonucu en çok zayıflatırdı?",
+    "options": [
+      "Çevre okullarda aynı dönemde tüketim belirgin biçimde arttı.",
+      "Öğrencilerin çoğu içeceklerini okula dışarıdan getiriyor.",
+      "Kantinin cirosu yasaktan sonra belirgin biçimde düştü.",
+      "Velilerin büyük kısmı yasağı başından beri açıkça destekledi."
+    ],
+    "answer": 0,
+    "why": "Çevrede tüketim artarken bu okulda sabit kaldıysa yasak artışı önlemiş olabilir; “işe yaramadı” sonucu sarsılır. “Dışarıdan getiriyor” ise yasağın neden etkisiz kaldığını açıklar, sonucu destekler."
+  },
+  {
+    "id": "soz-133",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Bu yılki hackathona katılan takımların hepsinde en az bir tasarımcı vardı. Ödül alan takımların hiçbiri dört kişiden kalabalık değildi.\nBu parçadan kesin olarak hangisi çıkarılabilir?",
+    "options": [
+      "Ödül alan her takımda en az bir tasarımcı vardı.",
+      "Dört kişiden kalabalık takımlarda tasarımcı yoktu.",
+      "Tasarımcısı olan takımların hepsi ödül aldı.",
+      "Küçük takımlar büyüklerden daha başarılıydı."
+    ],
+    "answer": 0,
+    "why": "Ödül alanlar da katılımcı olduğuna göre her birinde en az bir tasarımcı vardır. “Küçük takımlar daha başarılı” çekicidir ama kalabalık takımların kaç tane olduğunu bilmediğimiz için bu karşılaştırma yapılamaz."
+  },
+  {
+    "id": "soz-134",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Çalışanlar öğleden sonraları daha az verimli. Bu yüzden önemli toplantıları sabah saatlerine almalıyız.\nBu akıl yürütme hangi varsayıma dayanmaktadır?",
+    "options": [
+      "Toplantının sonucu, katılanların verimliliğine bağlıdır.",
+      "Sabah yapılan toplantılar öğleden sonrakilerden kısa sürer.",
+      "Öğleden sonra hiçbir toplantı yapılmaması gerekir.",
+      "Çalışanların çoğu sabahları işe geç gelme eğilimindedir."
+    ],
+    "answer": 0,
+    "why": "Öneri, verimliliğin toplantıların iyi geçmesi için önemli olduğunu kabul etmeden kurulamaz. “Hiçbir toplantı yapılmaması” varsayım değil, önerinin aşırı bir genişletilmesidir; konu yalnızca önemli toplantılar."
+  },
+  {
+    "id": "soz-135",
+    "section": "sozel",
+    "subtype": "paragraf_cikarim",
+    "difficulty": "zor",
+    "prompt": "Ayşe'nin el yapımı sabunları internetten satılmaya başlayınca pazardaki tezgâhında eskisi kadar satılmaz oldu. Ayşe yine de tezgâhı kapatmayı düşünmüyor; müşterilerinin çoğu sabunu ilk kez orada koklayıp sonra internetten sipariş veriyor.\nBu parçadan hangisi çıkarılabilir?",
+    "options": [
+      "Tezgâh, internet satışlarını besleyen bir işlev görüyor.",
+      "İnternet satışları tezgâh satışlarını tümüyle bitirdi.",
+      "Ayşe'nin toplam geliri internetten sonra azaldı.",
+      "Müşterilerin çoğu internetten aldıkları sabundan memnun değil."
+    ],
+    "answer": 0,
+    "why": "Müşterilerin çoğu sabunu tezgâhta tanıyıp internetten aldığına göre tezgâh, internet satışlarını besliyor. “Tümüyle bitirdi” parçayla çelişir: satışlar yalnızca eskisi kadar değil."
+  },
+  {
+    "id": "soz-136",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. Arkadaşının bu uyarısı üzerine sulamayı sabahın erken saatlerine aldı.\nII. Ece, öğle saatlerinde suladığı fesleğenlerin yapraklarının sararmaya başladığını fark etti.\nIII. İki hafta sonra yapraklar yeniden canlı bir yeşile döndü.\nIV. Bir arkadaşı, güneş tepedeyken verilen suyun bitkiyi yorduğunu söyledi.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "II – IV – I – III",
+      "II – I – IV – III",
+      "IV – II – I – III",
+      "II – IV – III – I"
+    ],
+    "answer": 0,
+    "why": "Sorunu tanıtan II açılıştır; I'deki “bu uyarı” IV'ü gerektirir, III de sonucu verir. II – I – IV – III sıralamasında “bu uyarı” henüz söylenmemiş bir şeye gönderme yapar."
+  },
+  {
+    "id": "soz-137",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. İlk aylarda yöneticiler, bu düzenin ekip içi iletişimi zayıflatacağından endişeliydi.\nII. Bu sonuçlar üzerine şirket, evden çalışmayı haftada iki güne çıkardı.\nIII. Şirket geçen yıl çalışanlarına haftada bir gün evden çalışma hakkı tanıdı.\nIV. Ancak yıl sonu anketleri, çalışanların hem daha memnun hem daha verimli olduğunu gösterdi.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "III – I – IV – II",
+      "III – IV – I – II",
+      "I – III – IV – II",
+      "III – I – II – IV"
+    ],
+    "answer": 0,
+    "why": "III düzeni tanıtır, I endişeyi, “Ancak” ile başlayan IV bu endişeyi boşa çıkaran sonucu verir; II'deki “Bu sonuçlar” anketlere bağlanır. III – IV – I – II sıralamasında “Ancak” karşı çıkacağı endişeden önce gelir."
+  },
+  {
+    "id": "soz-138",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. Örneğin her gün beş dakika kendi gününü o dilde anlatmak bile fark yaratır.\nII. Oysa kurallar, kullanılmadıkça kısa sürede unutulur.\nIII. Bu yüzden ilk haftalardan itibaren basit cümlelerle konuşmaya başlamak daha kalıcı bir öğrenme sağlar.\nIV. Birçok kişi yeni bir dile önce dilbilgisi kurallarını ezberleyerek başlar.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "IV – II – III – I",
+      "IV – III – II – I",
+      "IV – II – I – III",
+      "II – IV – III – I"
+    ],
+    "answer": 0,
+    "why": "Yaygın alışkanlığı anlatan IV açılıştır; “Oysa” ile II buna itiraz eder, “Bu yüzden” ile III sonuç çıkarır, “Örneğin” ile I bu öneriyi somutlaştırır. IV – III – II – I sıralamasında “Bu yüzden” henüz ortaya konmamış bir gerekçeye dayanır."
+  },
+  {
+    "id": "soz-139",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. Mahallemizdeki eski sinema, uzun yıllar boş kaldıktan sonra geçen ay yeniden açıldı.\nII. Şimdi her cumartesi akşamı burada eski filmler gösteriliyor ve salon çoğu zaman doluyor.\nIII. Binayı, sinemanın eski müdavimlerinin kurduğu bir dernek kiraladı.\nIV. Dernek üyeleri, salondaki koltukları gönüllü olarak tek tek onardı.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "I – III – IV – II",
+      "I – IV – III – II",
+      "I – III – II – IV",
+      "III – I – IV – II"
+    ],
+    "answer": 0,
+    "why": "Sinemayı tanıtan I açılıştır; derneği III tanıtır, IV'teki “Dernek üyeleri” ona bağlanır, “Şimdi” ile başlayan II de bugünü anlatır. I – IV – III – II sıralamasında dernek, tanıtılmadan önce anılmış olur."
+  },
+  {
+    "id": "soz-140",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. Bu nedenle hafif kavrulmuş kahveler genellikle daha ekşimsi bir tat bırakır.\nII. Kahve çekirdekleri, kavrulmadan önce yeşil renkte ve neredeyse kokusuzdur.\nIII. Kavurma süresi uzadıkça çekirdeğin rengi koyulaşır, asitliği ise azalır.\nIV. Bildiğimiz koyu renk ve yoğun aroma ise ancak kavurma sırasında oluşur.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "II – IV – III – I",
+      "IV – II – III – I",
+      "II – III – IV – I",
+      "II – IV – I – III"
+    ],
+    "answer": 0,
+    "why": "II çekirdeğin ilk hâlini anlatır; IV'teki “ise” bu hâlle karşıtlık kurduğu için ondan sonra gelir. I'deki “Bu nedenle” III'te söylenen asitlik azalmasına dayanır. IV – II – III – I sıralaması “ise”yi karşılaştıracağı cümleden önce kullanır."
+  },
+  {
+    "id": "soz-141",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. Bu anlaşmazlığı çözmek için Kerem, herkesin uygun günleri işaretleyeceği bir anket paylaştı.\nII. Arkadaşlarının çoğu fikre sıcak baktı ama tarih konusunda anlaşamadılar.\nIII. Grup sohbetinde Kerem, hafta sonu için bir kamp planı önerdi.\nIV. Anket sonucunda en çok oyu ayın son hafta sonu aldı ve plan kesinleşti.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "III – II – I – IV",
+      "III – I – II – IV",
+      "II – III – I – IV",
+      "III – II – IV – I"
+    ],
+    "answer": 0,
+    "why": "Öneri III'te yapılır, II tarih anlaşmazlığını getirir, I'deki “Bu anlaşmazlık” ona bağlanır, IV de anketin sonucunu verir. III – I – II – IV sıralamasında anket, çözeceği anlaşmazlıktan önce gelir."
+  },
+  {
+    "id": "soz-142",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "orta",
+    "prompt": "I. İlk günlerde yatmadan önce elim sürekli komodinin üstüne gidiyordu.\nII. Şimdi eskisinden yarım saat erken uyuyorum.\nIII. Zamanla bu alışkanlık kayboldu ve yatağa girince kitap okumaya başladım.\nIV. Telefonumu yatak odasının dışında şarj etmeye başlayalı bir ay oldu.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "IV – I – III – II",
+      "IV – III – I – II",
+      "I – IV – III – II",
+      "IV – I – II – III"
+    ],
+    "answer": 0,
+    "why": "Değişikliği tanıtan IV açılıştır; “İlk günlerde” ile I, “Zamanla” ile III, “Şimdi” ile II zaman sırasını kurar. IV – III – I – II sıralamasında III'teki “bu alışkanlık” henüz anlatılmamış olur."
+  },
+  {
+    "id": "soz-143",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Bu yüzden araştırmacılar, eğitimde hiç kullanılmamış bir test kümesi ayırır.\nII. Bir model, eğitim verisinde sık görülen örüntüleri ezberleyerek yüksek başarı gösterebilir.\nIII. Ne var ki bu başarı, model daha önce görmediği türden verilerle karşılaşınca hızla düşer.\nIV. Böylece ölçülen başarının ezberden mi genellemeden mi geldiği anlaşılabilir.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "II – III – I – IV",
+      "II – I – III – IV",
+      "II – III – IV – I",
+      "III – II – I – IV"
+    ],
+    "answer": 0,
+    "why": "III'teki “bu başarı” II'ye, I'deki “Bu yüzden” III'teki düşüşe, IV'teki “Böylece” de test kümesine bağlanır. II – I – III – IV çekicidir çünkü test kümesi ezberle de ilişkilidir, ama III'teki “bu başarı” bu kez test kümesine gönderme yapar ve “Böylece” kopar."
+  },
+  {
+    "id": "soz-144",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Bu etkiler yıllar içinde birikerek kalp-damar hastalıkları riskini yükseltebilir.\nII. Oysa uzun süre yüksek gürültüye maruz kalmak, uykuyu bozar ve stres hormonlarını artırır.\nIII. Dolayısıyla gürültüyü azaltan önlemler aslında birer halk sağlığı yatırımıdır.\nIV. Şehirlerde gürültü genellikle yalnızca bir konfor sorunu olarak görülür.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "IV – II – I – III",
+      "IV – II – III – I",
+      "IV – I – II – III",
+      "II – IV – I – III"
+    ],
+    "answer": 0,
+    "why": "Yaygın görüşü veren IV açılıştır, II “Oysa” ile ona karşı çıkar, I'deki “Bu etkiler” II'ye bağlanır, “Dolayısıyla” ile III sonucu çıkarır. IV – II – III – I çekicidir ama sonuca hastalık riski gelmeden varılır ve “Bu etkiler” sonuçtan sonra boşta kalır."
+  },
+  {
+    "id": "soz-145",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Defne, yıllardır görüşmediği lise arkadaşından beklenmedik bir mesaj aldı.\nII. Defne bu habere ne cevap vereceğini bilemedi; son konuşmaları bir kırgınlıkla bitmişti.\nIII. Yine de birkaç gün düşündükten sonra onu bir kahveye davet etti.\nIV. Arkadaşı mesajda, yakında Defne'nin yaşadığı şehre taşınacağını yazıyordu.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "I – IV – II – III",
+      "I – II – IV – III",
+      "I – IV – III – II",
+      "IV – I – II – III"
+    ],
+    "answer": 0,
+    "why": "I mesajı tanıtır, IV içeriğini verir; II'deki “bu haber” taşınma haberine, III'teki “Yine de” II'deki tereddüde bağlanır. I – II – IV – III çekicidir çünkü mesajı alınca tereddüt etmek doğal görünür, ama “bu haber” içerik söylenmeden kullanılmış olur."
+  },
+  {
+    "id": "soz-146",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Oysa iyi bir metin istemek bile neyin iyi yazıldığını ayırt edebilmeyi gerektirir.\nII. Yani yazma becerisi ortadan kalkmıyor, yazmaktan çok değerlendirmeye kayıyor.\nIII. Kimileri, yapay zekâ araçları yaygınlaştıkça yazma becerisinin önemini yitireceğini düşünüyor.\nIV. Bu görüşe göre metni zaten makine yazacağından insanın yazmayı öğrenmesine gerek kalmayacak.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "III – IV – I – II",
+      "III – I – IV – II",
+      "III – IV – II – I",
+      "I – III – IV – II"
+    ],
+    "answer": 0,
+    "why": "III görüşü tanıtır, IV “Bu görüşe göre” ile onu açar, I “Oysa” ile itiraz eder, II “Yani” ile sonucu bağlar. III – I – IV – II çekicidir çünkü itiraz hemen gelebilir gibi görünür; ama “Bu görüşe göre” itirazdan sonra yanlış görüşe bağlanır."
+  },
+  {
+    "id": "soz-147",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Ancak bu geçici çözüm, sorunun asıl kaynağını ortadan kaldırmaz.\nII. Asıl neden ise ancak sistem sakinleşince yapılan ayrıntılı incelemeyle bulunur.\nIII. Etkinin boyutu netleşince sorunu geçici olarak durduracak hızlı bir çözüm uygulanır.\nIV. Bir arıza anında ekiplerin ilk işi, sorunun kaç kullanıcıyı etkilediğini belirlemektir.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "IV – III – I – II",
+      "IV – III – II – I",
+      "IV – I – III – II",
+      "III – IV – I – II"
+    ],
+    "answer": 0,
+    "why": "“İlk işi” diyen IV açılıştır; III hızlı çözümü getirir, I'deki “bu geçici çözüm” ona, II'deki “Asıl neden ise” de I'deki “asıl kaynak”a bağlanır. IV – III – II – I çekicidir ama “asıl neden”den, asıl kaynak sorunu açılmadan söz edilir."
+  },
+  {
+    "id": "soz-148",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Kafenin sahibi, müşterilerin seçenek azalınca şikâyet edeceğinden korkuyordu.\nII. Beklediğinin aksine tatlı satışları ilk ay belirgin biçimde arttı.\nIII. Bir kafe, menüsündeki tatlı çeşidini on beşten beşe indirdi.\nIV. Bu artışın nedenini sorunca, uzun menüde müşterilerin çoğunun karar veremeyip tatlıdan vazgeçtiğini öğrendi.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "III – I – II – IV",
+      "III – I – IV – II",
+      "III – II – I – IV",
+      "I – III – II – IV"
+    ],
+    "answer": 0,
+    "why": "III değişikliği, I beklentiyi verir; II'deki “Beklediğinin aksine” I'e, IV'teki “Bu artış” da II'ye bağlanır. III – I – IV – II çekicidir çünkü neden sonuçtan önce de anlatılabilir gibi durur; ama “Bu artış” henüz söz edilmemiş bir artışa gönderme yapar."
+  },
+  {
+    "id": "soz-149",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Bir şeyi kaybetmenin acısı, aynısını kazanmanın sevincinden genellikle daha güçlü hissedilir.\nII. Örneğin çoğu kişi, yazı gelirse yüz lira kazanıp tura gelirse yüz lira kaybedeceği bir oyunu reddeder.\nIII. Bu yüzden insanlar, kazanma ihtimali olsa bile ellerindekini riske atmaktan çekinir.\nIV. Bu oyunu kabul ettirmek için olası kazancı genellikle iki katına çıkarmak gerekir.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "I – III – II – IV",
+      "I – II – III – IV",
+      "I – III – IV – II",
+      "III – I – II – IV"
+    ],
+    "answer": 0,
+    "why": "I genel ilkeyi, III “Bu yüzden” ile davranışsal sonucunu verir; II bunu örnekler, IV'teki “Bu oyun” II'ye bağlanır. I – II – III – IV çekicidir çünkü örnek ilkeden hemen sonra da gelebilir; ama o zaman “Bu oyun” iki cümle uzaktaki örneğe bağlanır."
+  },
+  {
+    "id": "soz-150",
+    "section": "sozel",
+    "subtype": "cumle_siralama",
+    "difficulty": "zor",
+    "prompt": "I. Yapılan görüşmeler, kullanıcıların asıl sorununun raporlama ekranı olduğunu ortaya koydu.\nII. Selin de onun haklı olabileceğini kabul edip önce kullanıcılarla görüşmeyi teklif etti.\nIII. Ozan bu fikre, mevcut panelin bile tam kullanılmadığını söyleyerek itiraz etti.\nIV. Akşam toplantısında Selin, ekibin yeni bir müşteri paneli geliştirmesini önerdi.\nBu cümlelerle anlamlı bir paragraf oluşturulursa sıralama nasıl olur?",
+    "options": [
+      "IV – III – II – I",
+      "IV – II – III – I",
+      "IV – III – I – II",
+      "III – IV – II – I"
+    ],
+    "answer": 0,
+    "why": "III'teki “bu fikir” IV'teki öneriye, II'deki “onun haklı olabileceği” III'teki itiraza, I'deki “Yapılan görüşmeler” de II'deki teklife bağlanır. IV – II – III – I sıralamasında Selin, henüz yapılmamış bir itirazı kabul etmiş olur."
+  }
+]

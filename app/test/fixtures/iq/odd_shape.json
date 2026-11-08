@@ -1,0 +1,686 @@
+{
+  "cat": "odd_shape",
+  "items": [
+    {
+      "answer": 4,
+      "cat": "odd_shape",
+      "figure": null,
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.14,
+                "rot": 0,
+                "s": "cross",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "solid",
+                "r": 0.14,
+                "rot": 0,
+                "s": "cross",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.14,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "dots",
+                "r": 0.14,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Hangisi diğerlerinden farklı?",
+      "why": "Dördünün dolgusu dolu, yalnızca bunun dolgusu noktalı. Şekil ve sayı farkları belirleyici değil."
+    },
+    {
+      "answer": 0,
+      "cat": "odd_shape",
+      "figure": null,
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.125,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "dots",
+                "r": 0.125,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "dots",
+                "r": 0.125,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "dots",
+                "r": 0.125,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "dots",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "dots",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "star",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "star",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "star",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "cross",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "cross",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 0,
+                "s": "cross",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Hangisi diğerlerinden farklı?",
+      "why": "Dördünde 3 şekil var, yalnızca bunda 4."
+    },
+    {
+      "answer": 3,
+      "cat": "odd_shape",
+      "figure": null,
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                4,
+                1
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                0
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                3,
+                1
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                3,
+                2
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                0,
+                0
+              ],
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Hangisi diğerlerinden farklı?",
+      "why": "Dördü aynı şeklin döndürülmüş hâli; bu ise ayna görüntüsü, döndürerek diğerlerinin üstüne getirilemez."
+    },
+    {
+      "answer": 0,
+      "cat": "odd_shape",
+      "figure": null,
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                2,
+                4
+              ],
+              [
+                3,
+                3
+              ],
+              [
+                3,
+                4
+              ],
+              [
+                4,
+                3
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                1,
+                2
+              ],
+              [
+                1,
+                3
+              ],
+              [
+                1,
+                4
+              ],
+              [
+                2,
+                2
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                2,
+                0
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                2
+              ],
+              [
+                1,
+                0
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "abs": true,
+            "cells": [
+              [
+                0,
+                1
+              ],
+              [
+                1,
+                1
+              ],
+              [
+                1,
+                2
+              ],
+              [
+                2,
+                1
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            "h": 1,
+            "k": "poly",
+            "n": 5,
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Hangisi diğerlerinden farklı?",
+      "why": "Dördü aynı şeklin döndürülmüş hâli; bu ise ayna görüntüsü, döndürerek diğerlerinin üstüne getirilemez."
+    }
+  ],
+  "name": "Farklı şekli bul"
+}

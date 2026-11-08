@@ -1,0 +1,12 @@
+app/build/
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/android/.gradle/
+app/android/local.properties
+app/android/key.properties
+core/target/
+.DS_Store
+
+# Built by core/build_android.sh; the APK carries a fresh copy.
+app/android/app/src/main/jniLibs/**/*.so

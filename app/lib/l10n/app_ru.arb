@@ -1,0 +1,8 @@
+{
+  "@@locale": "ru",
+  "settingsTitle": "Настройки",
+  "settingsLanguage": "Язык",
+  "settingsTheme": "Тема",
+  "themeDark": "Тёмная",
+  "themeLight": "Светлая"
+}

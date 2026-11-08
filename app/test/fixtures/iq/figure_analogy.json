@@ -1,0 +1,1182 @@
+{
+  "cat": "figure_analogy",
+  "items": [
+    {
+      "answer": 2,
+      "cat": "figure_analogy",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "pentagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "pentagon",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 3,
+        "colw": [
+          1.0,
+          0.5,
+          1.0
+        ],
+        "h": 2,
+        "k": "grid",
+        "rows": 2,
+        "w": 2.5
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "stripes",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "stripes",
+                "r": 0.4,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "diamond",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "İlk şekil ikinciye nasıl dönüşüyorsa, üçüncü şekil de öyle dönüşür. Soru işaretinin yerine hangisi gelmeli?",
+      "why": "Dış şeklin dolgusu tersine dönüyor (dolu olan boş, boş olan dolu olur). Dıştaki ve içteki şekil yer değiştiriyor. Aynı değişiklik üçüncü şekle uygulanır."
+    },
+    {
+      "answer": 0,
+      "cat": "figure_analogy",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.22,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.78,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.22,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.094,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.78,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.265,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 3,
+        "colw": [
+          1.0,
+          0.5,
+          1.0
+        ],
+        "h": 2,
+        "k": "grid",
+        "rows": 2,
+        "w": 2.5
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.265,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.265,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.125,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "İlk şekil ikinciye nasıl dönüşüyorsa, üçüncü şekil de öyle dönüşür. Soru işaretinin yerine hangisi gelmeli?",
+      "why": "Şekil sayısı 2 artıyor. Şekiller 45° saatin tersi yönünde dönüyor. Aynı değişiklik üçüncü şekle uygulanır."
+    },
+    {
+      "answer": 4,
+      "cat": "figure_analogy",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 3,
+        "colw": [
+          1.0,
+          0.5,
+          1.0
+        ],
+        "h": 2,
+        "k": "grid",
+        "rows": 2,
+        "w": 2.5
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.4,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.4,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "none",
+                "ko": true,
+                "r": 0.15,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "İlk şekil ikinciye nasıl dönüşüyorsa, üçüncü şekil de öyle dönüşür. Soru işaretinin yerine hangisi gelmeli?",
+      "why": "İç şeklin dolgusu tersine dönüyor (dolu olan boş, boş olan dolu olur). Dış şeklin dolgusu tersine dönüyor (dolu olan boş, boş olan dolu olur). Dıştaki ve içteki şekil yer değiştiriyor. Aynı değişiklik üçüncü şekle uygulanır."
+    },
+    {
+      "answer": 2,
+      "cat": "figure_analogy",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.3
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.3
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.125,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "k": "sep",
+            "t": "→"
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 3,
+        "colw": [
+          1.0,
+          0.5,
+          1.0
+        ],
+        "h": 2,
+        "k": "grid",
+        "rows": 2,
+        "w": 2.5
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "none",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.14,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "solid",
+                "r": 0.14,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.28
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.27,
+                "y": 0.7
+              },
+              {
+                "f": "solid",
+                "r": 0.133,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.73,
+                "y": 0.7
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.3,
+                "y": 0.5
+              },
+              {
+                "f": "none",
+                "r": 0.14,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.7,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "İlk şekil ikinciye nasıl dönüşüyorsa, üçüncü şekil de öyle dönüşür. Soru işaretinin yerine hangisi gelmeli?",
+      "why": "Şekil sayısı 1 artıyor. Dolgu tersine dönüyor (dolu olan boş, boş olan dolu olur). Şekiller 90° saat yönünde dönüyor. Aynı değişiklik üçüncü şekle uygulanır."
+    }
+  ],
+  "name": "Şekil analojisi"
+}

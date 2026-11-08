@@ -1,0 +1,2252 @@
+[
+  {
+    "id": "sos-001",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Onur, ekibe ilk demosunu sunarken uygulama iki kez hata verdi. Deniz de toplantıdaydı ve hataları gördü. Çıkışta Onur “Rezil oldum, değil mi?” diye sorunca Deniz “Yok canım, kimse fark etmedi bile” dedi.\nDeniz bunu neden söyledi?",
+    "options": [
+      "Onur'un moralini düzeltmek için; hataların görüldüğünü biliyor",
+      "Hataları gerçekten kimsenin fark etmediğine inandığı için",
+      "Onur'un hatalarını önemsemediğini üstü kapalı eleştirmek için",
+      "Onur'un bir sonraki demoya daha iyi hazırlanmasını istediği için"
+    ],
+    "answer": 0,
+    "why": "Deniz hataları kendi gözüyle gördüğü için “kimse fark etmedi” sözü bir beyaz yalandır; amacı Onur'u rahatlatmaktır. Sözü olduğu gibi alıp Deniz'in buna inandığını düşünmek, onun da hataları gördüğü bilgisini atlar."
+  },
+  {
+    "id": "sos-002",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Mağazada çalışan Gizem, bir montu deneyip kararsız kalan müşteriye “Bu bedenden son bir tane kaldı” dedi. Oysa depoda aynı bedenden altı tane olduğunu biliyordu.\nGizem bunu neden söyledi?",
+    "options": [
+      "Müşteriyi acele ettirip montu hemen almaya ikna etmek için",
+      "Depodaki stok sayısını o an yanlış hatırladığı için",
+      "Depodaki montların kusurlu olduğunu ima etmek için",
+      "Müşteriyi mağazadaki daha pahalı bir modele yönlendirmek için"
+    ],
+    "answer": 0,
+    "why": "Gizem stoku bildiği hâlde “son bir tane” diyor; kıtlık hissi yaratmak, kararsız müşteriye yönelik bilinen bir satış taktiğidir. “Yanlış hatırladı” seçeneği çekicidir ama hikâye Gizem'in gerçeği bildiğini açıkça söylüyor."
+  },
+  {
+    "id": "sos-003",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Toplantıda müdür yeni satış planını anlatırken Melis sürekli başını sallıyor, not alıyor, hiç soru sormuyor. Toplantıdan çıkınca Can'a “Bu planın tutacağını hiç sanmıyorum” diyor.\nMelis'in toplantıdaki davranışı için en olası açıklama hangisi?",
+    "options": [
+      "Dinlediğini gösteriyordu; itirazını orada söylemeyi uygun bulmadı",
+      "Toplantıda plana gerçekten ikna olmuştu, çıkınca fikrini değiştirdi",
+      "Müdürün planını aslında beğeniyor, Can'ın fikrini yokluyor",
+      "Not aldığı her ayrıntıyı müdüre sonradan onaylatmak istiyor"
+    ],
+    "answer": 0,
+    "why": "Baş sallamak ve not almak çoğu zaman onay değil, dinleme işaretidir; Melis'in çıkar çıkmaz plana inanmadığını söylemesi, itirazını toplantıda dile getirmemeyi seçtiğini gösterir. “İkna olup fikrini değiştirdi” çekicidir ama arada fikrini değiştirecek hiçbir şey olmadı."
+  },
+  {
+    "id": "sos-004",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "İstanbul'daki Oya, Berlin'deki müşteriye “Toplantımız yarın saat 10.00'da” diye yazdı; İstanbul saatini kastediyordu. Ertesi gün müşteri, Oya görüşmeyi kapattıktan çok sonra bağlandı ve kimseyi bulamayınca şaşırdı.\nMüşteri hangi yanlış inançla hareket etti?",
+    "options": [
+      "Saatin kendi yerel saatine göre verildiğini düşündü",
+      "Oya'nın toplantıyı son anda iptal ettiğini düşündü",
+      "Toplantının ertesi haftaya ertelendiğini düşündü",
+      "Oya'nın ona yeni bir bağlantı göndereceğini düşündü"
+    ],
+    "answer": 0,
+    "why": "Oya saat dilimini belirtmedi; müşteri “10.00”ı doğal olarak Berlin saatiyle okudu ve tam vaktinde bağlandığını sanıyordu. “İptal edildi” düşüncesi ancak boş görüşmeyi görünce akla gelebilir; geç bağlanmasının nedeni değildir."
+  },
+  {
+    "id": "sos-005",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Ekip cuma akşamı ofiste Nehir'e sürpriz doğum günü yapacak; Nehir'i ofise getirmek Hakan'ın görevi. Perşembe günü Nehir, Hakan'a “Yarın akşam sinemaya gidelim mi?” diye soruyor. Hakan “Olur, ama önce ofise uğramam lazım, benimle gelir misin?” diyor.\nHakan neden ofisten söz etti?",
+    "options": [
+      "Nehir'i partiden şüphelendirmeden ofise götürmek için",
+      "Cuma akşamı ofiste gerçekten bitmemiş bir işi olduğu için",
+      "Nehir'in sinema teklifini kibarca geri çevirmek için",
+      "Nehir'in partiyi bilip bilmediğini yoklamak için"
+    ],
+    "answer": 0,
+    "why": "Hakan'ın görevi Nehir'i ofise getirmek; “ofise uğramam lazım” bahanesi bunu sürprizi bozmadan yapmanın yolu. “Bitmemiş bir işi var” demek sözü olduğu gibi almaktır; hikâyedeki plan sözün asıl amacını gösteriyor."
+  },
+  {
+    "id": "sos-006",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Ekip Burcu'ya sürpriz parti hazırlıyor. Pastayı ayarlayan Taylan, “Pasta saat 7'de geliyor” mesajını yanlışlıkla Burcu'ya gönderip hemen sildi; kimsenin görmediğini sanıyor. Oysa Burcu mesajı silinmeden okumuş ve partiyi anlamıştı. Akşam ofise girince Burcu çok şaşırmış gibi yapıyor.\nBurcu neden şaşırmış gibi yapıyor?",
+    "options": [
+      "Ekip onun bildiğinden habersiz sanıyor; sürprizi bozmak istemiyor",
+      "Mesajın kendisine bilerek gönderildiğini düşünüp oyuna katılıyor",
+      "Mesajı ciddiye almamıştı; partiyi gerçekten beklemiyordu",
+      "Taylan'ın mesajı silmesine kırıldığını belli etmek istemiyor"
+    ],
+    "answer": 0,
+    "why": "Mesaj hemen silindiği için Burcu, ekibin onun gördüğünü bilmediği sonucuna varıyor; şaşırmış gibi yapmak ekibin emeğini ve sürprizi korur. “Ciddiye almamıştı” çekicidir ama hikâye Burcu'nun partiyi anladığını açıkça söylüyor."
+  },
+  {
+    "id": "sos-007",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Yarınki toplantının iptal edildiğini bildiren e-posta, Mert'in artık kullanmadığı eski adresine gitti. Ayşe bunu fark etti ama Mert'e ulaşamadı. Ayşe'nin bilmediği şey şu: Mert akşam koridorda müdürün “Yarın toplantı yok” dediğini duydu.\nAyşe, Mert'in yarın sabah ne yapacağını düşünüyor?",
+    "options": [
+      "Toplantı için odaya gelip boşuna bekleyeceğini",
+      "İptali bildiği için toplantı odasına uğramayacağını",
+      "E-postayı eski adresinden okuyup iptali öğreneceğini",
+      "Toplantının yerini sormak için müdürü arayacağını"
+    ],
+    "answer": 0,
+    "why": "Ayşe yalnızca e-postanın yanlış adrese gittiğini biliyor; Mert'in iptali koridorda duyduğundan habersiz olduğu için onun toplantıya geleceğini sanıyor. “Odaya uğramayacağını” seçeneği Mert'in gerçekte yapacağı şeydir, Ayşe'nin bildikleriyle varacağı tahmin değil."
+  },
+  {
+    "id": "sos-008",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Nazlı annesine doğum günü için mavi bir şal aldı. Kız kardeşi Ece, mavinin annelerine yakışmayacağını düşünüp kimseye söylemeden şalı aynı modelin bordosuyla değiştirdi. Akşam annesi paketi açınca Nazlı “Mavi sana çok yakışır demiştim, gördün mü!” diyor.\nEce bu sözü duyunca ne anlar?",
+    "options": [
+      "Nazlı'nın şalın değiştirildiğinden habersiz olduğunu",
+      "Nazlı'nın değişikliği fark edip annesine takıldığını",
+      "Annesinin aslında mavi rengi daha çok sevdiğini",
+      "Nazlı'nın bordo rengi mavi sandığını, renkleri karıştırdığını"
+    ],
+    "answer": 0,
+    "why": "Değişikliği Ece gizlice yaptı; Nazlı hâlâ paketin içinde mavi şal olduğunu sanıyor ve sözü bu yanlış inançtan geliyor. “Renkleri karıştırdı” açıklaması mümkün görünse de çok daha basit açıklama, Nazlı'nın değişiklikten haberi olmamasıdır."
+  },
+  {
+    "id": "sos-009",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Ev arkadaşı Barış, Yiğit'in söylediklerine hiç inanmaz, hep tersini düşünür. Yiğit son dilim pizzayı kendine saklamak istiyor. Barış “Pizza nerede?” diye sorunca Yiğit “Mikrodalgada” diyor; pizza gerçekten mikrodalgada.\nYiğit neden doğruyu söyledi?",
+    "options": [
+      "Barış'ın inanmayıp mikrodalgaya bakmayacağını hesapladığı için",
+      "Saklamaktan vazgeçip pizzayı Barış'la paylaşmaya karar verdiği için",
+      "Yalan söylerse Barış'ın bunu hemen anlayacağından korktuğu için",
+      "Barış'ın her zaman önce mikrodalgaya baktığını bildiği için"
+    ],
+    "answer": 0,
+    "why": "Yiğit, Barış'ın sözlerinin hep tersini düşündüğünü biliyor; doğruyu söylerse Barış pizzayı başka yerde arar. Bu bir çift blöftür. “Paylaşmaya karar verdi” seçeneği çekicidir ama hikâye Yiğit'in pizzayı hâlâ saklamak istediğini söylüyor."
+  },
+  {
+    "id": "sos-010",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Gökhan istifa edeceğini şimdilik yalnızca İK'dan Derya'ya söyledi. Ekip lideri Sevda, Derya'nın masasında Gökhan'ın dilekçesini görüyor; Derya bunu fark etmiyor. Ertesi gün Sevda, Derya'ya “Gökhan'ı yeni projeye koymayı düşünüyorum” diyor.\nDerya bu söz üzerine büyük ihtimalle ne düşünür?",
+    "options": [
+      "Sevda'nın istifadan habersiz olduğu için böyle konuştuğunu",
+      "Sevda'nın dilekçeyi gördüğünü ve onu bilerek sınadığını",
+      "Gökhan'ın istifadan vazgeçip Sevda'yla anlaştığını",
+      "Sevda'nın istifayı bildiğini ama önemsemediğini"
+    ],
+    "answer": 0,
+    "why": "Derya, Sevda'nın dilekçeyi gördüğünü fark etmedi ve Gökhan başka kimseye söylemedi; Derya'nın bildiği kadarıyla Sevda habersizdir. Sevda'nın gerçekten onu sınıyor olması mümkün, ama bunu düşünmek için Derya'nın sahip olmadığı bir bilgi gerekir."
+  },
+  {
+    "id": "sos-011",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Dilek, iki yıl önce şirketten ayrılan Volkan'la bir etkinlikte karşılaşıyor. Sohbet arasında Volkan “Kızın okula başladı mı?” diye soruyor. Dilek'in bir oğlu var, kızı yok; Volkan'la çocukları hakkında da pek konuşmamışlardı.\nVolkan'ın sorusu en olası neyi gösterir?",
+    "options": [
+      "Çocuğu olduğunu hatırlıyor ama ayrıntıyı karıştırıyor",
+      "Dilek'le alay etmek için bilerek yanlış söylüyor",
+      "Sohbeti bir an önce kapatmak için rastgele bir soru soruyor",
+      "Dilek'in özel hayatını başkalarından araştırmış"
+    ],
+    "answer": 0,
+    "why": "Aradan geçen iki yıl ve az sohbet, ayrıntının karışması için yeterli; Volkan çocuğu hatırlıyor ve ilgi göstermeye çalışıyor. “Sohbeti kapatmak için” yorumu tutmaz, çünkü böyle bir soru tam tersine sohbeti sürdürmeye yöneliktir."
+  },
+  {
+    "id": "sos-012",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "İş görüşmesinde Kaan'a ne kadar sürede işe başlayabileceği soruluyor. Kaan'ın elinde başka bir şirketten iyi bir teklif var ama bunu açıkça söylemiyor; “Şu an birkaç süreç yürütüyorum, acelem yok” diyor.\nKaan neden böyle bir cevap verdi?",
+    "options": [
+      "Başka seçenekleri olduğunu ima edip elini güçlendirmek için",
+      "Bu işle aslında pek ilgilenmediğini kibarca anlatmak için",
+      "Hiç teklif almadığını saklamak için konuyu geçiştirmek için",
+      "İşe başlama tarihini henüz hiç düşünmediği için"
+    ],
+    "answer": 0,
+    "why": "“Birkaç süreç” ve “acelem yok” sözleri, teklifi açık etmeden aranan biri olduğunu hissettirir; bu, pazarlıkta elini güçlendirir. “İlgilenmiyor” yorumu çekicidir ama Kaan görüşmeyi sürdürüyor ve kapıyı kapatacak hiçbir şey söylemiyor."
+  },
+  {
+    "id": "sos-013",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Hülya, kayınvalidesinin ördüğü turuncu kazağı hiç sevmedi ama hediyeyi alırken “Bayıldım, elinize sağlık” dedi. Aylar geçti, kazağı bir kez bile giymedi. Kayınvalidesi bir gün oğluna “Beğenmediyse söyleseydi, başka renk örerdim” dedi.\nKayınvalidesi neyi düşünüyor?",
+    "options": [
+      "Hülya'nın kendisini kırmamak için beğenmiş gibi yaptığını",
+      "Hülya'nın kazağı çok sevdiğini ama bir türlü giymeye kıyamadığını",
+      "Oğlunun kazağı Hülya'ya hiç götürmediğini ve sakladığını",
+      "Hülya'nın kazağı kaybettiğini ondan sakladığını"
+    ],
+    "answer": 0,
+    "why": "“Beğenmediyse söyleseydi” sözü, kayınvalidenin o “Bayıldım”ın nezaketen söylendiğini anladığını gösterir; ipucu kazağın hiç giyilmemesi. “Giymeye kıyamadı” seçeneği Hülya'nın sözünü olduğu gibi almaktır ve kayınvalidenin cümlesiyle uyuşmaz."
+  },
+  {
+    "id": "sos-014",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Emir, yıldönümleri için Lara'ya konser bileti aldı ve çekmeceye sakladı. Lara bileti tesadüfen buldu ama belli etmedi. Emir de ev arkadaşından Lara'nın bileti bulduğunu öğrendi; Lara bundan habersiz. Yıldönümünde Lara bileti görünce çok şaşırmış gibi yapıyor.\nLara, Emir'in ne düşündüğünü sanıyor?",
+    "options": [
+      "Sürprizin işe yaradığını, gerçekten şaşırdığını",
+      "Bileti önceden bulduğunu ve şimdi rol yaptığını",
+      "Bileti ev arkadaşının seçip çekmeceye koyduğunu",
+      "Şaşkınlık gösterisinin biraz abartılı kaçtığını"
+    ],
+    "answer": 0,
+    "why": "Lara, Emir'in ev arkadaşından bir şey öğrendiğini bilmiyor; ona göre Emir sürprizin başarılı olduğunu düşünüyor. “Rol yaptığını biliyor” seçeneği Emir'in gerçekte bildiği şeydir; soru ise Lara'nın, Emir'in aklından geçenlere dair inancını soruyor."
+  },
+  {
+    "id": "sos-015",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Ofisteki projeksiyon kumandası hep Gül'ün çekmecesinde durur. Gül izindeyken Halil kumandayı kullanıp toplantı odasındaki dolaba koydu ve bunu ekip grubuna yazdı. Gül izinde grubu hiç okumadı; Halil bunu bilmiyor. Ertesi gün stajyer Emine kumandayı Gül'e soracak.\nHalil, Gül'ün Emine'ye ne söyleyeceğini tahmin eder?",
+    "options": [
+      "Toplantı odasındaki dolaba bakmasını",
+      "Kendi çekmecesine bakmasını",
+      "Kumandanın nerede olduğunu bilmediğini",
+      "Kumandayı doğrudan Halil'e sormasını"
+    ],
+    "answer": 0,
+    "why": "Halil, Gül'ün gruptaki mesajı okuduğunu varsayıyor; bu yüzden onun kumandanın yeni yerini, yani dolabı söyleyeceğini bekler. “Kendi çekmecesi” Gül'ün gerçekte söyleyeceği şeydir, ama Halil, Gül'ün mesajı okumadığından habersiz."
+  },
+  {
+    "id": "sos-016",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Seçil toplantıya geç kalınca yöneticisi Murat Bey'e “Metroda arıza vardı” dedi; aslında uyuya kalmıştı. Murat Bey o sabah aynı hatla gelmişti ve arıza olmadığını biliyordu ama hiçbir şey demedi, sadece “Tamam, otur” dedi.\nSeçil, Murat Bey'in ne düşündüğünü sanıyor?",
+    "options": [
+      "Arıza mazeretine inandığını ve konuyu kapattığını",
+      "Yalan söylediğini anladığını ama üstelemediğini",
+      "Metro arızasını sonradan araştıracağını",
+      "Geç kaldığı için kendisine çok kızdığını"
+    ],
+    "answer": 0,
+    "why": "Seçil, Murat Bey'in aynı hatla geldiğini bilmiyor ve “Tamam, otur” cevabından mazeretinin kabul edildiğini çıkarıyor. “Yalanı anladı” seçeneği Murat Bey'in gerçekte bildiği şeydir; Seçil'in bunu düşünmesini gerektiren bir ipucu yok."
+  },
+  {
+    "id": "sos-017",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Ev arkadaşları Ufuk ile Taner ev işleri yüzünden tartışıyor. Ufuk, Taner'e “Senin yemeklerin o kadar güzel ki, bence mutfak tamamen senin olsun; ben de bulaşığı haftada bir yaparım” diyor.\nUfuk'un asıl amacı en çok hangisine benziyor?",
+    "options": [
+      "Övgünün arkasına saklanıp iş yükünü Taner'e kaydırmak",
+      "Taner'in yemeklerini içtenlikle övüp teşekkür etmek",
+      "Taner'e yemek yapmayı bırakmasını ima etmek",
+      "Ev işlerini ikisi arasında gerçekten adil biçimde bölüşmek"
+    ],
+    "answer": 0,
+    "why": "Teklifte Taner'e bütün yemekler, Ufuk'a haftada bir bulaşık düşüyor; övgü bu dengesiz bölüşümü tatlandırıyor. “İçtenlikle övüyor” çekicidir, ama övgünün bir tartışmanın ortasında ve iş paylaşımıyla birlikte gelmesi asıl amacı ele veriyor."
+  },
+  {
+    "id": "sos-018",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Nuri amca her bayram yeğeni Ece'ye işini sorar. Bu yıl Ece'nin işten çıkarıldığını biliyor; Ece'nin bunu annesine henüz söylemediğini de biliyor. Bayram masasında, annesinin yanında Ece'ye dönüp “İş güç nasıl, yine yoğun musun?” diyor ve hafifçe göz kırpıyor.\nNuri amca neden bu soruyu sordu?",
+    "options": [
+      "Her yılki soruyu sorarak annenin şüphelenmesini önlemek için",
+      "Ece'yi annesinin önünde köşeye sıkıştırıp söylemeye zorlamak için",
+      "Ece'nin işten çıkarıldığını o an tamamen unuttuğu için",
+      "Ece'nin bu arada yeni bir iş bulduğunu sandığı için"
+    ],
+    "answer": 0,
+    "why": "Nuri amca her bayram aynı soruyu sorduğundan, sormaması dikkat çekerdi; göz kırpması da Ece'nin sırrına ortak olduğunu gösteriyor. “Köşeye sıkıştırmak” yorumu, suç ortaklığı anlamına gelen göz kırpmayla çelişir."
+  },
+  {
+    "id": "sos-019",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Okan'ın yarın önemli bir mülakatı var. Arkadaşı Bengü prova için “Seni biraz zorlayacağım, alınma” diyor; sonra sert sorular soruyor, Okan'ın sözünü kesiyor, cevaplarını küçümsüyor. Prova bitince Okan “Bana amma yüklendin” diyor.\nBengü neden böyle davrandı?",
+    "options": [
+      "Zorlu bir mülakatçıyı canlandırıp Okan'ı baskıya hazırlamak için",
+      "Okan'ın hazırlıksız gelmesine gerçekten sinirlendiği için",
+      "Okan'ın yarınki mülakatta başarısız olmasını içten içe istediği için",
+      "Bütün mülakatçıların böyle sert olduğuna inandığı için"
+    ],
+    "answer": 0,
+    "why": "Bengü baştan “Seni zorlayacağım, alınma” diyerek bir rol oynayacağını belirtti; sertlik provanın parçası. “Gerçekten sinirlendi” yorumu bu ön uyarıyı görmezden gelir."
+  },
+  {
+    "id": "sos-020",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Spor salonuna yeni yazılan Erdem, ilk haftasında her sabah herkesten önce geliyor. Antrenör Cansu gülerek “Böyle giderse salonu sabah beşte sen açarsın artık” diyor. Ertesi sabah Erdem beşte salonun kapısında bekliyor.\nCansu ne demek istemişti?",
+    "options": [
+      "Erdem'in hevesine takılıp onu övüyordu, görev vermiyordu",
+      "Erdem'den salonu sabah açmasını gerçekten istiyordu",
+      "Erdem'in fazla erken gelmesinden rahatsız olup uyarıyordu",
+      "Erdem'e salonda yarı zamanlı bir iş teklif ediyordu"
+    ],
+    "answer": 0,
+    "why": "Cansu gülerek ve abartılı bir saat vererek konuşuyor; bu, Erdem'in hevesine yapılmış sevecen bir şaka. Erdem sözü gerçek bir görev sandı; “uyarıyordu” yorumu ise Cansu'nun gülerek konuşmasıyla uyuşmuyor."
+  },
+  {
+    "id": "sos-021",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Kuzeni Rıza, aile WhatsApp grubuna düğün davetiyesini attı. Gamze mesajı okudu ama cevap yazmadı. Okundu bilgisini kapattığı için Rıza'nın göremeyeceğini sanıyor; oysa bu ayar grup mesajlarında işlemiyor ve Rıza okunduğunu gördü. Ertesi gün karşılaşıyorlar.\nGamze, Rıza'nın ne düşündüğünü sanıyor?",
+    "options": [
+      "Davetiyeyi henüz görmediğini",
+      "Davetiyeyi görüp bilerek cevapsız bıraktığını",
+      "Aile grubundan çıktığını",
+      "Düğüne kesinlikle geleceğini"
+    ],
+    "answer": 0,
+    "why": "Gamze ayarı kapattığı için okunduğunun görünmediğine inanıyor; bu yüzden Rıza'nın, mesajın henüz görülmediğini düşündüğünü sanıyor. “Bilerek cevapsız bıraktı” Rıza'nın gerçekte düşündüğü şey olabilir, ama Gamze ayarın işlemediğini bilmiyor."
+  },
+  {
+    "id": "sos-022",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Doktor, tahlil sonuçlarının iyi olmadığını Fikret Bey'in kızına anlattı. Kızı babasını üzmemek için ona “Doktor her şey yolunda dedi” dedi. Ertesi gün Fikret Bey doktora “Kızım iyi haber verdi, ama siz bana yine de açık konuşun” diyor.\nFikret Bey büyük ihtimalle ne düşünüyor?",
+    "options": [
+      "Kızının onu üzmemek için durumu hafifletmiş olabileceğini",
+      "Doktorun kızına yanlış ya da eksik bilgi verdiğini",
+      "Sonuçların iyi olduğundan emin, yalnızca ayrıntıyı merak ettiğini",
+      "Kızının doktorla hiç görüşmeyip haberi uydurduğunu"
+    ],
+    "answer": 0,
+    "why": "“Yine de açık konuşun” sözü, Fikret Bey'in kızının haberine tam güvenmediğini ve onun kendisini korumak isteyebileceğini sezdiğini gösterir. “Yalnızca ayrıntı merak ediyor” seçeneği çekicidir, ama öyle olsaydı “yine de” demesine gerek kalmazdı."
+  },
+  {
+    "id": "sos-023",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Ekip lideri Ferhat, Nil'in hazırladığı raporu kendi adıyla genel müdüre gönderdi. Genel müdür e-postayı yanıtlarken yanlışlıkla Nil'i de bilgiye ekledi; Ferhat bunu fark etmedi. Ertesi gün Ferhat, Nil'e “Raporu ilettim, emeğini de özellikle belirttim” diyor.\nFerhat bunu söylerken neyi varsayıyor?",
+    "options": [
+      "Nil'in raporun kimin adıyla gittiğini görmediğini",
+      "Nil'in yazışmayı görüp durumu sessizce kabullendiğini",
+      "Genel müdürün raporu Nil'e de gönderdiğini",
+      "Nil'in emeğinin anılmasını hiç önemsemediğini"
+    ],
+    "answer": 0,
+    "why": "Ferhat, genel müdürün Nil'i bilgiye eklediğini fark etmediği için Nil'in hiçbir şey görmediğini sanıyor; söylediği yalan ancak bu varsayımla işe yarar. Nil'in yazışmayı gördüğünü düşünseydi bu kadar kolay yalanlanacak bir cümle kurmazdı."
+  },
+  {
+    "id": "sos-024",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "Yeni işe başlayan Zehra'ya yöneticisi Aynur Hanım “Raporu hafta sonuna kadar gönder” dedi. Cuma akşamı Aynur Hanım raporu bekledi, gelmeyince şaşırdı. Zehra raporu pazar akşamı gönderdi ve e-postasına “Söz verdiğim gibi” diye yazdı.\nBu durumu en iyi hangisi açıklar?",
+    "options": [
+      "Zehra “hafta sonuna kadar”ı pazar akşamına kadar diye anladı",
+      "Zehra ek süre kazanmak için raporu bilerek geciktirdi",
+      "Aynur Hanım teslim tarihini sonradan kendi kafasında öne çekti",
+      "Zehra cuma göndermeyi unuttu, sonra durumu kurtarmaya çalıştı"
+    ],
+    "answer": 0,
+    "why": "Zehra'nın “Söz verdiğim gibi” yazması, kendini zamanında sandığını gösteriyor; “hafta sonuna kadar” hem cuma mesai bitimi hem pazar olarak anlaşılabilir. “Göndermeyi unuttu” seçeneği bu rahat ve savunmasız cümleyle uyuşmaz."
+  },
+  {
+    "id": "sos-025",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "orta",
+    "prompt": "İpek, tren garında karşı perondaki eski arkadaşı Serdar'a el salladı; Serdar karşılık vermeden yürüyüp gitti. İpek buna çok bozuldu. Ertesi gün ortak bir arkadaştan, Serdar'ın o hafta gözlüğünü kırdığını ve uzağı neredeyse hiç göremediğini öğrendi.\nBu bilgiye göre en olası açıklama hangisi?",
+    "options": [
+      "Serdar uzağı seçemediği için İpek'i ve el sallamasını görmedi",
+      "Serdar İpek'e kırgın olduğu için onu görmezden geldi",
+      "Serdar'ın acelesi vardı, selam vermeye vakit bulamadı",
+      "Serdar İpek'i tanıdı ama kalabalığın içinde el sallamaya utandı"
+    ],
+    "answer": 0,
+    "why": "Gözlüğü kırık ve uzağı göremeyen biri karşı perondaki el sallamayı fark edemez; yeni bilgi davranışı tek başına açıklıyor. “Kırgındı” yorumu İpek'in ilk tepkisidir, ama yeni bilgiye rağmen bunu sürdürmeyi destekleyen bir ipucu yok."
+  },
+  {
+    "id": "sos-026",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Nevin ile Zerrin her buluşmada hesabı kimin ödeyeceği için tatlı tatlı didişir. Bu akşam Nevin, “Lavaboya gidiyorum” deyip gizlice kasaya yöneliyor. Bilmediği şey şu: Zerrin onun bu numarasını tahmin edip yemeğin başında kartını garsona vermişti.\nKasaya yürürken Nevin, Zerrin hakkında ne düşünüyor?",
+    "options": [
+      "Zerrin'in planından habersiz olduğunu",
+      "Zerrin'in hesabı çoktan ödediğini",
+      "Zerrin'in kendisini kasada yakalayacağını",
+      "Zerrin'in onu lavaboya kadar izleyeceğini"
+    ],
+    "answer": 0,
+    "why": "Nevin “Lavaboya gidiyorum” bahanesiyle gizlice kalkıyor; bu, Zerrin'in niyetini fark etmediğine inandığını gösterir. “Hesabı çoktan ödedi” gerçekte olan şeydir, ama Nevin bundan habersiz; bilseydi kasaya yönelmezdi."
+  },
+  {
+    "id": "sos-027",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Proje toplantısında herkes yeni teslim planını onaylıyor. Çıkışta Pelin ile Koray kahve makinesinin başında itiraf ediyor: ikisi de planı baştan beri gerçekçi bulmuyormuş, ama her biri diğerinin plana inandığını sanıp sesini çıkarmamış.\nBu durumdan çıkarılacak en isabetli sonuç hangisi?",
+    "options": [
+      "Sessizlik onay sanılmış; herkes ötekinin fikrini yanlış okumuş",
+      "Plan aslında iyiydi; ikisi de sonradan gereksiz yere kuşkulandı",
+      "Toplantıyı yöneten kişi ekibe hiç söz hakkı tanımamış",
+      "Pelin ile Koray birbirine güvenmedikleri için açık konuşmamış"
+    ],
+    "answer": 0,
+    "why": "Her biri yalnız olduğunu sandığı için sustu; herkesin susması da planın desteklendiği izlenimini güçlendirdi. Söz hakkının engellendiğine dair hiçbir ipucu olmadığı için suçu toplantıyı yönetene yüklemek hikâyeyle desteklenmez."
+  },
+  {
+    "id": "sos-028",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Takım lideri Sinan, Slack'te genel kanala yanlışlıkla “Cuma Barış'la performans görüşmesi, durum iyi değil” yazıp birkaç saniye içinde sildi. Barış o sırada başka bir toplantıdaydı; Ilgın ise mesajı gördü. Öğleden sonra Barış, Ilgın'a “Sinan cuma benimle görüşmek istiyor, terfi falan mı acaba?” diyor.\nBarış'ın sorusu Ilgın'a neyi gösterir?",
+    "options": [
+      "Barış'ın silinen mesajı görmediğini, konudan habersiz olduğunu",
+      "Barış'ın mesajı görüp Ilgın'ın da görüp görmediğini yokladığını",
+      "Sinan'ın Barış'a görüşmede terfi müjdesi vereceğini",
+      "Barış'ın kötü haberi bildiğini ve kendini avuttuğunu"
+    ],
+    "answer": 0,
+    "why": "Barış mesaj yazıldığında toplantıdaydı ve mesaj hemen silindi; terfi ihtimalini sorması da habersiz olduğunu gösteriyor. “Ilgın'ı yokluyor” yorumu bir aşırı yorumdur: Barış'ın mesajı gördüğüne dair hiçbir ipucu yok."
+  },
+  {
+    "id": "sos-029",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Arkadaş grubunda “Vampir Köylü” oynanıyor. Herkes Ozan'ın yalan söylerken çok konuştuğunu bilir; Ozan da herkesin bunu bildiğini bilir. Bu turda vampir olan Ozan bilerek uzun uzun konuşuyor ve sonunda “Tamam, çok konuştum, hadi benden şüphelenin” diyor.\nOzan'ın amacı ne?",
+    "options": [
+      "Vampir olsa bu kadar belli etmeyeceğini düşündürmek",
+      "Saklayacak hiçbir şeyi olmadığını dürüstçe göstermek",
+      "Grubun onu oylayıp oyundan çıkarmasını sağlamak",
+      "Kendi alışkanlığından habersiz yine fazla konuşmak"
+    ],
+    "answer": 0,
+    "why": "Ozan, grubun bu alışkanlığı bildiğini bildiği için onu bilerek abartıyor; amaç “Bu kadar bariz olamaz” dedirtmek, yani bir çift blöf. “Dürüstçe göstermek” seçeneği çekicidir ama Ozan bu turda vampir, yani saklayacak bir şeyi var."
+  },
+  {
+    "id": "sos-030",
+    "section": "sosyal",
+    "subtype": "zihin_kurami",
+    "difficulty": "zor",
+    "prompt": "Geliştirici Efe, proje yöneticisi Aslı'ya özelden “Teslim bence iki hafta kayar” diye yazdı ve Aslı'nın çevrim içi olduğunu gördü. Aslı ise mesajı açmadan müşteri görüşmesine girdi ve müşteriye “Tarih kesin, kaymaz” dedi. Görüşmede bunu duyan Efe'nin yüzü asılıyor.\nEfe büyük ihtimalle ne düşünüyor?",
+    "options": [
+      "Aslı'nın uyarıyı okuyup yine de söz verdiğini",
+      "Aslı'nın mesajını hiç açmadığını",
+      "Teslimin aslında kaymayacağının sonradan anlaşıldığını",
+      "Müşterinin gecikmeyi zaten kabul ettiğini"
+    ],
+    "answer": 0,
+    "why": "Efe, Aslı'yı çevrim içi gördüğü için mesajı okuduğunu varsayıyor; bu yüzden uyarısının bilerek geçiştirildiğini düşünüp bozuluyor. “Mesajı açmadı” gerçekte olandır, ama Efe bunu bilmiyor; yüzünün asılması da yok sayıldığını düşündüğünü gösterir."
+  },
+  {
+    "id": "sos-031",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Düğünde Serkan, masada yanına oturan kadına “Gelinlik biraz eski moda olmuş, değil mi?” diyor. Kadın gülümseyip “Benim gelinliğimdi; kızım giymek istedi, biraz da kendine göre uyarladı” diyor.\nSerkan neyi bilmiyordu?",
+    "options": [
+      "Yanındaki kadının gelinin annesi olduğunu",
+      "Eski moda gelinliklerin yeniden moda olduğunu",
+      "Kadının da gelinliği beğenmediğini",
+      "Gelinliğin çok pahalı bir modaevinden alındığını"
+    ],
+    "answer": 0,
+    "why": "Serkan, eleştirdiği gelinliğin karşısındaki kadına ait olduğunu, yani onun gelinin annesi olduğunu bilmeden konuştu; pot buradan doğuyor. “Eski modanın yeniden moda olması” sözü haklı çıkaracak bir bilgi değil; sorun zevk değil, sözün kime söylendiği."
+  },
+  {
+    "id": "sos-032",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Ofise yeni başlayan Tuna, mutfakta Esin'e “Koridordaki şu büyük tablo kimin fikri, çok iç karartıcı” diyor. Esin bir an duraksayıp “Ben seçmiştim, ofisi ilk kurduğumuzda” diyor.\nTuna'nın sözü neden pot oldu?",
+    "options": [
+      "Tabloyu seçen kişiye, bunu bilmeden onu eleştirdi",
+      "İş yerinde sanat zevkinden söz etmek uygunsuzdur",
+      "Tablonun ne kadar pahalı olduğunu bilmiyordu",
+      "Yeni biri olarak ilk hafta fikir belirtmemeliydi"
+    ],
+    "answer": 0,
+    "why": "Tuna, tabloyu seçen kişinin karşısındaki Esin olduğunu bilmeden onun seçimini kötüledi. Yeni biri olarak fikir belirtmek kendi başına sorun değil; sorun, eleştirinin farkında olmadan seçimi yapanın yüzüne söylenmesi."
+  },
+  {
+    "id": "sos-033",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Toplantıda Bartu, “Şu eski slayt şablonundan artık kurtulalım, çok amatör duruyor” dedi. Toplantıdan sonra şablonu üç yıl önce Fadime'nin hazırladığını öğrendi; Fadime de toplantıdaydı ve hiçbir şey söylememişti.\nBartu için en iyi hamle hangisi?",
+    "options": [
+      "Fadime'ye özelden, onun yaptığını bilmediğini söyleyip üslubu için özür dilemek",
+      "Hiçbir şey dememek; konu kendiliğinden unutulur, açmak işi büyütür",
+      "Bir sonraki toplantıda herkesin önünde şablonu övüp sözünü tamamen geri almak",
+      "Fadime'ye özelden, şablonun neden değişmesi gerektiğini ayrıntılarıyla anlatmak"
+    ],
+    "answer": 0,
+    "why": "Sorun fikrin kendisi değil, “amatör” sözünün emeği küçümsemesi; özelden kısa bir özür hem Fadime'yi rahatlatır hem de şablonu yenileme fikrini korur. Herkesin önünde övüp sözünü geri almak kibar görünür ama samimiyetsiz durur ve konuyu yeniden herkesin gözü önüne getirir."
+  },
+  {
+    "id": "sos-034",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Spor salonunda antrenör olarak çalışan Aysun, yeni üye Gonca'ya “Bu makinede sırtını düz tut, yoksa belin ağrır” diyor. Gonca “Haklısın, teşekkürler” deyip duruşunu düzeltiyor ve antrenmanına devam ediyor.\nBu konuşmada kimse pot kırdı mı?",
+    "options": [
+      "Hayır; Aysun işinin gereği olan bir uyarıyı kibarca yaptı",
+      "Evet; Aysun istenmemiş bir öğütle Gonca'yı küçük düşürdü",
+      "Evet; Gonca uyarıya karşılık vermeyip Aysun'u geçiştirdi",
+      "Evet; Aysun, Gonca'nın acemi olduğunu herkese duyurdu"
+    ],
+    "answer": 0,
+    "why": "Aysun salonun antrenörü; duruş uyarısı onun işi, üslubu da yalın ve kibar. Gonca da teşekkür edip uyguluyor. “İstenmemiş öğüt” itirazı, uyarıyı yapanın antrenör olduğunu ve Gonca'nın memnun tepkisini görmezden gelir."
+  },
+  {
+    "id": "sos-035",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Haluk Bey, kızı Ceyda'nın evine yemeğe gelirken kendi yaptığı pilavı getirip mutfağa bıraktı. Ceyda'nın eşi Serhat bunu görmedi. Sofrada Serhat gülerek “Ceyda, bu pilav biraz lapa olmuş, annem tane tane yapar” diyor.\nHaluk Bey büyük ihtimalle ne hissetti?",
+    "options": [
+      "Emeği küçümsendiği için kırıldı ama belli etmedi",
+      "Etkilenmedi; çünkü Serhat'ın eleştirisi Ceyda'ya yönelikti",
+      "Pilavının sofrada konuşulmasından için için gurur duydu",
+      "Serhat'ın annesinin pilav tarifini öğrenmeyi merak etti"
+    ],
+    "answer": 0,
+    "why": "Pilavı yapan Haluk Bey olduğu için eleştiri, Serhat'ın niyeti ne olursa olsun onun emeğine dokunuyor; üstelik pilavı başka birininkiyle de kıyaslanıyor. “Eleştiri Ceyda'ya yönelikti” diye düşünmek sözü kime söylendiğine göre değerlendirir; incinen, pilavı yapan kişidir."
+  },
+  {
+    "id": "sos-036",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Bir networking etkinliğinde Melike, yeni tanıştığı Caner'in hangi şirkette çalıştığını öğrenince “Ah, onların uygulaması berbat, sürekli çöküyor” diyor. Caner “Mobil ekibin başındayım aslında” diye cevap veriyor.\nCaner mobil ekipte olmasaydı Melike'nin sözü yine de sorunlu olur muydu?",
+    "options": [
+      "Evet; yeni tanıştığı birinin şirketini yüzüne karşı kötülemiş olurdu",
+      "Hayır; ürün eleştirisi kişisel değildir, sorun yalnızca Caner'in rolüydü",
+      "Hayır; Caner uygulamayı yapmadıysa eleştiriden alınmazdı",
+      "Evet; çünkü networking etkinliklerinde ürünler konuşulmaz"
+    ],
+    "answer": 0,
+    "why": "İnsanlar çalıştıkları şirketle kendilerini bir ölçüde özdeşleştirir; yeni tanışılan birine şirketinin ürününü “berbat” diye anlatmak, rolü ne olursa olsun mahcup edicidir. “Sorun yalnızca roldü” seçeneği çekicidir ama pot, Caner şirketinin adını söylediği anda başlamıştı."
+  },
+  {
+    "id": "sos-037",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Bayram ziyaretinde Saadet teyze, yeğeni Elif'e herkesin yanında “Nişanlın nasıl, düğün tarihi belli oldu mu?” diye soruyor. Elif'in yüzü düşüyor; annesi hemen lafı başka yere çeviriyor. Elif'in nişanı bir ay önce bozulmuştu.\nSaadet teyze neyi bilmiyordu?",
+    "options": [
+      "Elif'in nişanının yakın zamanda bozulduğunu",
+      "Elif'in düğün tarihini kendisi duyurmak istediğini",
+      "Ailede evlilik sorularının artık sorulmadığını",
+      "Elif'in nişanlısıyla birlikte geleceğini"
+    ],
+    "answer": 0,
+    "why": "Elif'in yüzünün düşmesi ve annesinin hemen lafı çevirmesi, sorunun taze bir yaraya dokunduğunu gösterir; Saadet teyze nişanın bozulduğundan habersizdi. “Tarihi kendisi duyurmak istiyordu” seçeneği Elif'in yüzündeki üzüntüyü açıklamaz."
+  },
+  {
+    "id": "sos-038",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Hazal, yurt odasında telefonda annesine “Bu dönem burs çıkmasaydı okulu bırakırdım, düşünemiyorum bile” diyor. Oda arkadaşı Pınar'ın bursu geçen hafta kesilmişti; Hazal bunu ancak ertesi gün öğreniyor.\nHazal'ın bu noktada yapabileceği en iyi şey hangisi?",
+    "options": [
+      "Pınar'a bilmediğini söyleyip sözünün denk gelişine üzüldüğünü belirtmek",
+      "Hiçbir şey dememek; bilmeden söylendiği için ortada bir kusur yok zaten",
+      "Pınar'a hemen başvurabileceği burs ilanlarından bir liste göndermek",
+      "Pınar'ın yanında kendi bursundan da hiç memnun olmadığını söylemek"
+    ],
+    "answer": 0,
+    "why": "Kısa ve içten bir “bilmiyordum, denk geldiği için üzgünüm” hem Pınar'ın duyduğu sözü açıklığa kavuşturur hem de ilgi gösterir. “Kusur yok, susmak” çekicidir; niyet masum olsa da Pınar sözü duydu ve sessizlik umursamazlık gibi algılanabilir."
+  },
+  {
+    "id": "sos-039",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Yusuf, ekip arkadaşı Nesrin'e özelden yazıyor: “Dünkü raporda Tablo 3'teki toplam yanlış görünüyor, bir bakabilir misin?” Nesrin bakıyor, hatayı görüp düzeltiyor ve “İyi ki fark ettin” diye yanıt veriyor.\nBu konuşmada kimse pot kırdı mı?",
+    "options": [
+      "Hayır; Yusuf hatayı özelden ve nazikçe bildirdi",
+      "Evet; Yusuf hatayı kendisi sessizce düzeltmeliydi",
+      "Evet; Nesrin teşekkür ederken Yusuf'u küçümsedi",
+      "Evet; Yusuf, Nesrin'in işini denetleyerek haddini aştı"
+    ],
+    "answer": 0,
+    "why": "Yusuf somut bir hatayı özelden, suçlamadan ve soru biçiminde gösterdi; Nesrin'in “İyi ki fark ettin” cevabı da kırılmadığını gösteriyor. “Kendisi düzeltmeliydi” fikri kibar görünür ama Nesrin'in kendi raporundaki hatadan haberdar olmasını engellerdi."
+  },
+  {
+    "id": "sos-040",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Doğan, kafede uzun zamandır görmediği Ayla'yla karşılaşıyor ve “Vay, epey kilo vermişsin, çok iyi görünüyorsun!” diyor. Ayla kısaca “Hastaydım” deyip konuyu değiştiriyor.\nDoğan'ın sözündeki asıl sorun hangisi?",
+    "options": [
+      "Nedenini bilmediği bir kilo kaybını iltifat konusu yapması",
+      "Ayla'yı uzun süre aramadığını ona hissettirmesi",
+      "İltifatı kalabalık bir kafede, herkesin duyacağı biçimde yapması",
+      "Ayla'nın iyi görünmek için uğraştığını ima etmesi"
+    ],
+    "answer": 0,
+    "why": "Kilo değişiminin nedeni hastalık, stres ya da yas olabilir; Doğan bunu bilmeden kilo kaybını övdü ve Ayla'yı açıklama yapmak zorunda bıraktı. Kafede söylenmesi ikincil bir ayrıntı; sözü kırıcı yapan, nedeni bilinmeyen bir beden değişikliğini yorumlamak."
+  },
+  {
+    "id": "sos-041",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Ajansta çalışan Ezgi, müşteri toplantısından çıkınca asansörde iş arkadaşı Sarp'a “Bu firmanın logosu da bir felaket, kim yaptıysa” diyor. Asansördeki diğer kişi, toplantıya geç kalan firmanın pazarlama müdürüydü.\nEzgi'nin pot kırmasına yol açan şey hangisi?",
+    "options": [
+      "Kimin duyduğunu bilmeden ortak alanda müşteriyi kötülemesi",
+      "Logo hakkında açık sözlü, profesyonel bir görüş bildirmesi",
+      "Sarp'ın logoyu çok beğendiğini bilmeden konuşması",
+      "Toplantıda söyleyemediğini sonradan asansörde söylemesi"
+    ],
+    "answer": 0,
+    "why": "Asansör ortak bir alan ve Ezgi yanındakinin müşteri firmadan olduğunu bilmiyordu; eleştiri en kötü kişinin kulağına gitti. Profesyonel görüş bildirmek tek başına sorun değil; sorun, bunu kimin duyduğunu bilmeden ortak bir alanda yapmak."
+  },
+  {
+    "id": "sos-042",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Ekibe yeni katılan Simge'ye, ilk gününde Ferit samimi bir tavırla “Senden önceki arkadaş çok iyiydi, o gidince hepimiz yıkıldık” diyor. Sonra kahvesini alıp masasına dönüyor.\nSimge büyük ihtimalle ne hissetti?",
+    "options": [
+      "Öncekiyle kıyaslanacağını düşünüp biraz tedirgin oldu",
+      "Ferit'in ona hemen güvendiğini düşünüp çok sevindi",
+      "Hiçbir şey; söz onunla değil, önceki kişiyle ilgiliydi",
+      "Ekibin ona büyük umut bağladığını düşünüp gururlandı"
+    ],
+    "answer": 0,
+    "why": "Ferit iyi niyetli ama ilk gününde birine selefinin ne kadar iyi olduğunu anlatmak, örtük bir kıyas ve yüksek bir çıta yaratır. “Söz önceki kişiyle ilgiliydi” seçeneği cümleyi kelimesi kelimesine okur; Simge'nin sözü kendi üzerine alması çok doğaldır."
+  },
+  {
+    "id": "sos-043",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Nişanı geçen ay bozulan Yeşim'e yakın arkadaşı Elçin “Cumartesi kız kıza bir kahvaltıya gidelim mi, biraz kafa dağıtırız” diye yazıyor. Yeşim “Çok iyi gelir, sağ ol” diye cevap veriyor.\nBu konuşmada kimse pot kırdı mı?",
+    "options": [
+      "Hayır; Elçin durumu biliyor, destek olmak için teklif ediyor",
+      "Evet; Elçin “kafa dağıtırız” diyerek ayrılığı hatırlattı",
+      "Evet; Yeşim teklifi kabul ederek Elçin'i zor durumda bıraktı",
+      "Evet; Elçin, Yeşim'in ayrılığın acısını yaşamasına izin vermedi"
+    ],
+    "answer": 0,
+    "why": "Elçin yakın arkadaş olarak durumu biliyor ve bunu dile getirmeden, nazik bir teklifle destek oluyor; Yeşim'in sıcak cevabı da teklifin iyi geldiğini gösteriyor. Ayrılığı “hatırlatmak” kaygısı yersiz; Yeşim zaten bunu yaşıyor ve teklif onu yalnız bırakmamak için."
+  },
+  {
+    "id": "sos-044",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Cihan, şirketin genel Slack kanalına “Yeni izin sistemi resmen işkence, kim seçtiyse eline sağlık” yazıyor. Birkaç dakika sonra, sistemi seçen İK müdürü Gülşen Hanım'ın da kanalda olduğunu ve mesajı okuduğunu fark ediyor.\nCihan için en iyi hamle hangisi?",
+    "options": [
+      "Gülşen Hanım'a özelden üslubu için özür dileyip somut sorunları iletmek",
+      "Mesajı hemen silip sanki hiçbir şey olmamış gibi davranmaya çalışmak",
+      "Kanala “Şaka yapıyorum, sistem harika” diye yeni bir mesaj yazmak",
+      "Gülşen Hanım'a özelden, sistemi neden beğenmediğini uzun uzun anlatıp savunmak"
+    ],
+    "answer": 0,
+    "why": "Sorun eleştirinin kendisi değil, “işkence” ve iğneli “eline sağlık” üslubu; özelden kısa bir özür ve somut geri bildirim hem ilişkiyi onarır hem sorunu çözüme taşır. Mesajı silmek bir işe yaramaz, çünkü Gülşen Hanım onu zaten okudu."
+  },
+  {
+    "id": "sos-045",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Hilal'in babası seksen yedi yaşında vefat etti. Bir hafta sonra Hilal işe döndüğünde iş arkadaşı Necla ona sarılıp “En azından uzun bir ömür sürmüş, seksen yedi az değil” diyor. Hilal sessizce başını sallıyor.\nNecla'nın sözünün sorunu hangisi?",
+    "options": [
+      "İyi niyetli olsa da Hilal'in acısını küçültür gibi duyulması",
+      "Bir sorunu yok; Hilal'in bu gerçekle teselli bulması gerekir",
+      "İş yerinde, mesai arasında ölüm gibi çok özel bir konuyu açması",
+      "Babasının yaşını bildiğini belli ederek dedikoduyu ele vermesi"
+    ],
+    "answer": 0,
+    "why": "“En azından” ile başlayan teselliler kaybı hafifletmeye çalışırken yası küçümser gibi duyulur; Hilal'in sessizce baş sallaması da sözün ona iyi gelmediğini gösterir. “Sorun yok, gerçek bu” seçeneği çekicidir ama yaşı ne olursa olsun Hilal babasını kaybetti."
+  },
+  {
+    "id": "sos-046",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Stajyer Alp öğle yemeğinde coşkuyla “Bir şirkette yıllarca aynı pozisyonda kalmak bence boşa geçmiş hayat, ben iki yılda yükselmezsem giderim” diyor. Masadaki Serpil Hanım şirkette on iki yıldır aynı pozisyonda çalışıyor; Alp bunu bilmiyor.\nAlp'in sözü neden pot sayılır?",
+    "options": [
+      "Bilmeden, masadaki birinin hayatını “boşa geçmiş” saymış oldu",
+      "Stajyerin hırsını herkesin önünde açıkça söylemesi ekipte hoş karşılanmaz",
+      "Terfi gibi konuları öğle yemeğinde konuşmak uygunsuzdur",
+      "Serpil Hanım'ın yıllardır terfi beklediğini ima etmiş oldu"
+    ],
+    "answer": 0,
+    "why": "Kendi hedefini anlatmak sorun değil; ama “boşa geçmiş hayat” genellemesi, farkında olmadan Serpil Hanım'ın on iki yılını yargılıyor. “Hırsını söylemesi” çekici bir çeldirici, çünkü kırıcı olan hırs değil, başkalarının seçimini küçümseyen genelleme."
+  },
+  {
+    "id": "sos-047",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Doğum günü partisinde Bahar hediyelerini açıyor. Bir kitabı görünce, hediyenin kimden geldiğini görmeyen Onat “Aa, onu ben de okudum, tam bir hayal kırıklığı” diyor. Kitabı Zuhal getirmişti; o da hemen yanlarında oturuyordu.\nOnat'ın sözü en çok kimi etkiledi?",
+    "options": [
+      "Kitabı düşünüp seçen ve getiren Zuhal'i",
+      "Hediyeyi açan doğum günü sahibi Bahar'ı",
+      "Kitabı henüz okumamış diğer misafirleri",
+      "Sözü söyledikten sonra utanan Onat'ı"
+    ],
+    "answer": 0,
+    "why": "Onat'ın eleştirisi doğrudan hediyeyi seçen kişinin zevkine dokunuyor; Zuhal yanlarında oturduğu için sözü duydu. Bahar da biraz mahcup olabilir ama eleştirilen onun seçimi değil; en çok etkilenen, kitabı seçen kişidir."
+  },
+  {
+    "id": "sos-048",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "İlk buluşmalarında Ceren bir espriye kahkahayla gülünce Arda “Eski sevgilim de tam böyle gülerdi” diyor. Ceren'in gülümsemesi soluyor ve bir süre telefonuyla ilgileniyor. Arda havanın değiştiğini fark ediyor.\nArda'nın şimdi söylemesi en iyi olan hangisi?",
+    "options": [
+      "“Pardon, saçma bir kıyas oldu; gülüşün çok içten, onu diyecektim.”",
+      "“Merak etme, onunla aramızda hiçbir şey kalmadı, tamamen bitti.”",
+      "“Neden alındın ki şimdi, sadece küçük bir benzerlik söyledim.”",
+      "“İstersen sen de eski sevgililerinden bahsedebilirsin, sorun değil.”"
+    ],
+    "answer": 0,
+    "why": "Kısa bir özür ve sözü Ceren'in kendisine yönelik bir iltifata çevirmek, kıyası kapatır. “Onunla bitti” güvence vermeye çalışır ama konuyu eski sevgiliye daha da çok çeker; asıl sorun ilk buluşmada kıyas yapılmasıdır."
+  },
+  {
+    "id": "sos-049",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Oğuz'un doğum günü yemeğinde Kerim, herkesin önünde “Bunu ilk tanıdığımda saçları beline kadardı, rock grubu dönemi” diyor. Oğuz gülerek telefonundan o döneme ait fotoğrafları gösteriyor. Oğuz o yılları her fırsatta kendisi anlatır.\nBu konuşmada kimse pot kırdı mı?",
+    "options": [
+      "Hayır; Kerim, Oğuz'un severek anlattığı bir anıyı andı",
+      "Evet; Kerim, Oğuz'un eski görünüşünü herkesin önünde ifşa etti",
+      "Evet; Oğuz fotoğrafları göstererek Kerim'in sözünü küçümsedi",
+      "Evet; doğum gününde geçmişten söz etmek yaşı hatırlatır"
+    ],
+    "answer": 0,
+    "why": "Bir anının herkesin önünde anılması, ancak kişi bundan utanıyorsa pot olur; Oğuz o yılları her fırsatta kendisi anlatıyor ve fotoğraf göstererek katılıyor. “İfşa etti” seçeneği sözün içeriğine bakıp Oğuz'un açık memnuniyetini gözden kaçırır."
+  },
+  {
+    "id": "sos-050",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Bir arkadaş yemeğinde Barlas, “Asıl hayatı çocuk olunca anlıyorsun, öncesi biraz boş geçiyor” diyor. Masadaki Duygu ile Erkan'ın yıllardır çocuk sahibi olmaya çalıştığını bilmiyor. Duygu masadan kalkıp bir süre balkona çıkıyor.\nBarlas'ın sözü için en doğru değerlendirme hangisi?",
+    "options": [
+      "Kişisel deneyimini herkese genelleyip, bilmediği bir yaraya dokundu",
+      "Genel bir söz olduğu için kimseyi doğrudan hedef almadı, sorun yok",
+      "Duygu'nun tepkisi abartılı; Barlas yalnızca mutluluğunu paylaştı",
+      "Barlas, çiftin durumunu bildiği hâlde bunu bilerek ve kasıtlı söyledi"
+    ],
+    "answer": 0,
+    "why": "Barlas kötü niyetli değil, ama kendi deneyimini herkes için kural gibi sunarak bilmediği bir acıya dokundu; Duygu'nun masadan kalkması da bunu gösteriyor. “Genel söz, kimseyi hedef almadı” çekicidir ama pot zaten kasıtsız söylenen ve birini inciten sözdür."
+  },
+  {
+    "id": "sos-051",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Bir arkadaş toplantısında Tolga, yeni tanıştığı Rana'ya bölümünü soruyor. Rana “Felsefe” deyince Tolga gülerek “Oo, felsefeyle iş bulmak zor ama” diyor. Rana kısa bir “Hı hı” deyip başka biriyle konuşmaya başlıyor.\nRana büyük ihtimalle ne hissetti?",
+    "options": [
+      "Seçimi daha ilk dakikada küçümsendiği için içerledi",
+      "Tolga'nın gerçekçi uyarısı için ona minnettar oldu",
+      "Tolga'nın esprisini sevdi ama söyleyecek söz bulamadı",
+      "Kendi bölümünden utandığı için konuyu kapatmak istedi"
+    ],
+    "answer": 0,
+    "why": "Tolga, Rana'nın seçimini yargılayan ve çok sık duyulan bir kalıp söz söyledi; Rana'nın kısa cevabı ve başka birine dönmesi içerlediğini gösteriyor. “Bölümünden utandı” yorumu tepkinin kaynağını Rana'ya yükler, oysa tepkiyi tetikleyen Tolga'nın sözüdür."
+  },
+  {
+    "id": "sos-052",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Selim, bir kod incelemesinde değişikliğe “Bunu yazan kişi temel kavramları bilmiyor galiba” yorumunu bıraktı. Sonra kodu ekip lideri Levent'in yazdığını gördü ve yorumu silmeyi düşündü.\nSelim'in yorumundaki asıl sorun hangisi?",
+    "options": [
+      "Kodu değil kişiyi hedef alması; yazan kim olsa kırıcıydı",
+      "Yorumu ekip liderinin koduna, yani yanlış kişiye yazması",
+      "Kod incelemesinde hiç eleştiri yapılmaması gerekirdi",
+      "Yorumu herkesin görebileceği bir yere yazmış olması"
+    ],
+    "answer": 0,
+    "why": "“Yazan kişi bilmiyor” cümlesi kodu değil kişiyi yargılıyor; aynı yorum bir stajyere de kırıcı olurdu. Yorumun liderin koduna denk gelmesi durumu daha mahcup edici yapıyor ama asıl sorun bu değil; çözüm de silmek değil, yorumu koda yönelik ve somut biçimde yeniden yazmaktır."
+  },
+  {
+    "id": "sos-053",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "zor",
+    "prompt": "Apartmana yeni taşınan Fatih, merdivende karşılaştığı Hatice Hanım'a “Bu binanın yöneticisi kim? Aidatlar çok yüksek, hesap soran yok galiba” diyor. Hatice Hanım “Beş yıldır yönetici benim” diyor.\nFatih için en iyi devam hangisi?",
+    "options": [
+      "“Kusura bakmayın, bilmiyordum. Dökümü bir ara görebilir miyim?”",
+      "“Neyse, önemli değil, ben öylesine bir laf ettim, unutun gitsin.”",
+      "“O zaman doğrudan size soruyorum: bu paralar nereye harcanıyor?”",
+      "“Şaka yapıyordum, aidatlar aslında gayet normal, hiç sorun yok.”"
+    ],
+    "answer": 0,
+    "why": "Kısa bir özür üslubu onarır, dökümü kibarca istemek de Fatih'in meşru sorusunu korur. “Şaka yapıyordum” ya da “unutun” demek inandırıcı değil ve soruyu tamamen gömer; “nereye harcanıyor” diye üstüne gitmek ise suçlamayı sürdürür."
+  },
+  {
+    "id": "sos-054",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "Ofisteki doğum günü kutlamasında Selin, “Bu pastayı kim aldıysa çok iyi seçmiş” diyor. Mustafa “Pastaneyi ben buldum” diyor. Ardından Gökay “Geçen ayki pasta berbattı ama, onu da kim aldıysa” deyince Mustafa'nın yüzü düşüyor; geçen ayki pastayı da o almıştı.\nBu konuşmada pot kıran kim?",
+    "options": [
+      "Gökay; pastayı kimin aldığını bilmeden kötüledi",
+      "Selin; pastayı kimin aldığını bilmeden yorum yaptı",
+      "Mustafa; övgüyü üstlenerek ortamı gerdi",
+      "Kimse; pasta hakkındaki yorumlar zararsızdır"
+    ],
+    "answer": 0,
+    "why": "Gökay, geçen ayki pastayı Mustafa'nın aldığını bilmeden onun seçimini kötüledi; Mustafa'nın yüzünün düşmesi de bunu gösteriyor. Selin de kimin aldığını bilmeden konuştu ama sözü bir övgüydü; bilgisizlik ancak söz kırıcıysa pota dönüşür."
+  },
+  {
+    "id": "sos-055",
+    "section": "sosyal",
+    "subtype": "pot",
+    "difficulty": "orta",
+    "prompt": "İlker, hastanede yatan arkadaşı Kemal'i ziyarete gidiyor ve sohbet arasında “Bu hastanenin cerrahları pek iyi değilmiş, kuzenim burada kötü bir ameliyat geçirdi” diyor. Kemal'in ertesi sabah ameliyata gireceğini bilmiyor.\nKemal büyük ihtimalle ne hissetti?",
+    "options": [
+      "Ertesi sabahki ameliyatı için kaygısı iyice arttı",
+      "İlker'in uyarısı için ona minnettar kaldı",
+      "Kuzenin başına gelene üzülüp kendi derdini unuttu",
+      "Hiçbir şey; doktoruna zaten tamamen güveniyor"
+    ],
+    "answer": 0,
+    "why": "Ameliyata girecek birine aynı hastanenin cerrahlarının kötü olduğunu söylemek kaygıyı doğrudan büyütür; İlker'in bilmemesi sözün etkisini değiştirmez. “Uyarı için minnettar” seçeneği çekicidir ama ameliyattan bir gece önce bu bilgi işe yarar bir uyarı değil, yalnızca korkudur."
+  },
+  {
+    "id": "sos-056",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Apartmana yeni taşınan Ogün, cumartesi gecesi arkadaşlarıyla evde geç saate kadar yüksek sesle müzik dinledi. Pazar sabahı alt kattaki Sevgi Hanım merdivende ona gülümseyerek “Sizin evde neşe hiç eksik olmuyor, gece ikide bile” diyor.\nSevgi Hanım ne demek istiyor?",
+    "options": [
+      "Gece sesten rahatsız olduğunu, bir dahakine kısılmasını istediğini",
+      "Evdeki neşeli ortamı gerçekten sevdiğini, iltifat ettiğini",
+      "Bir sonraki eğlenceye kendisinin de çağrılmak istediğini",
+      "Gece ikide kendisinin de uyanık olduğunu söyleyip sohbet açmak istediğini"
+    ],
+    "answer": 0,
+    "why": "“Gece ikide bile” vurgusu iltifatın değil şikâyetin ipucudur; Sevgi Hanım rahatsızlığını gülümseyerek, dolaylı yoldan dile getiriyor. Sözü iltifat olarak almak, saati özellikle anmasının nedenini açıklamaz."
+  },
+  {
+    "id": "sos-057",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Batuhan, arkadaşı Sena'ya “Hafta sonu Kaz Dağları'nda kamp yapalım mı?” diye soruyor. Sena telefonundan başını kaldırmadan “Bakarız ya” diyor. Geçen ay bisiklet turu için de aynı cevabı vermiş, sonra konu bir daha hiç açılmamıştı.\nSena'nın cevabı en olası neyi gösterir?",
+    "options": [
+      "Pek hevesli olmadığını, açıkça hayır demeden geçiştirdiğini",
+      "Programını kontrol edip akşama kesin cevap vereceğini",
+      "Kampa gelmek istediğini ama çadırı olmadığını düşündüğünü",
+      "Teklifi tam duymadığını, sonra tekrar sorulmasını istediğini"
+    ],
+    "answer": 0,
+    "why": "Başını kaldırmadan verilen kısa “Bakarız” ve geçen ayki aynı cevabın sonuçsuz kalması, bunun nazik bir geçiştirme olduğunu gösterir. “Programına bakacak” okuması kelimeye sadık kalır ama ilgisiz tavrı ve önceki örüntüyü atlar."
+  },
+  {
+    "id": "sos-058",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Irmak, annesine yazın staj yapmak yerine arkadaşlarıyla üç ay Avrupa'yı gezeceğini anlatıyor. Annesi bir süre susuyor, sonra bakışlarını kaçırarak “Sen bilirsin kızım, büyüdün artık” diyor ve kalkıp mutfağa geçiyor.\nAnnesi büyük ihtimalle ne düşünüyor?",
+    "options": [
+      "Plandan hoşlanmadığını ama tartışmaya girmek istemediğini",
+      "Kararı tamamen ona bırakıp planı gönülden desteklediğini",
+      "Gezi için para yardımı yapamayacağını üstü kapalı söylediğini",
+      "Irmak'ın artık evden ayrılma vaktinin geldiğini düşündüğünü"
+    ],
+    "answer": 0,
+    "why": "Uzun suskunluk, bakışları kaçırma ve konuşmayı bitirip mutfağa geçme, “Sen bilirsin”in burada onay değil, söze dökülmeyen bir itiraz olduğunu gösterir. Sözü “gönülden destek” diye okumak bu beden dili ipuçlarını görmezden gelir."
+  },
+  {
+    "id": "sos-059",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Ozan aylık değerlendirmede 58 slaytlık bir sunum yaptı; toplantı yarım saat uzadı. Müdürü Şule Hanım çıkışta “Çok emek vermişsin, her şeyi koymuşsun. Gelecek ay en önemli üç noktayla başlayalım, gerisini sorarlarsa açarsın” diyor.\nŞule Hanım'ın asıl mesajı hangisi?",
+    "options": [
+      "Sunumun fazla kalabalık olduğunu, öze inmesi gerektiğini",
+      "Ayrıntılı sunumu çok beğendiğini, aynı düzeyi beklediğini",
+      "Gelecek ay soru-cevap kısmına daha çok yer ayrılmasını",
+      "Ozan'ın fazla çalışıp kendini yorduğunu, dinlenmesini"
+    ],
+    "answer": 0,
+    "why": "“Her şeyi koymuşsun” emeği takdir ediyor gibi görünse de ardından gelen “en önemli üç nokta” önerisi ve uzayan toplantı, sunumun fazla yüklü bulunduğunu gösterir. Övgü kısmını tek başına almak çekicidir ama asıl talep ikinci cümlededir."
+  },
+  {
+    "id": "sos-060",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Saat 17.50. Banka şubesinde Ekin çantasını toplarken müdürü Tamer Bey elindeki dosyayı masasına bırakıyor: “Müşteri sabah dokuzda arayacak. Sence bu dosya yarına kalır mı?”\nTamer Bey büyük ihtimalle ne istiyor?",
+    "options": [
+      "Dosyanın bu akşam bitmesini; bunu soru biçiminde rica ediyor",
+      "Dosyanın aciliyeti konusunda Ekin'in görüşünü merak ediyor",
+      "Dosyayı yarın sabah kendisinin halledeceğini haber veriyor",
+      "Ekin'in yükünü azaltmak için dosyayı başkasına vermek istiyor"
+    ],
+    "answer": 0,
+    "why": "Dosyayı masaya bırakması ve müşterinin sabah dokuzda arayacağını hatırlatması, sorunun gerçek bir fikir sorusu değil kibar bir rica olduğunu gösterir. “Görüşünü merak ediyor” okuması sorunun kelimelerine takılır, bağlamı kaçırır."
+  },
+  {
+    "id": "sos-061",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Genel cerrahide asistan olan Defne, ilk kez tek başına dikiş attı. Kliniğin en kıdemli hocası Nihat Bey bakıp “Fena değil” deyip geçti. Asistanlar, Nihat Bey'in en kusursuz dikişlere bile “İdare eder” dediğini bilir.\nDefne bu sözü nasıl yorumlamalı?",
+    "options": [
+      "Hocası için bu, oldukça olumlu bir değerlendirmedir",
+      "Dikişin vasat bulunduğunu, çok çalışması gerektiğini",
+      "Hocanın ilgisiz olduğunu, dikişe dikkatle bakmadığını",
+      "Hocanın onu kırmamak için eleştiriyi yumuşattığını"
+    ],
+    "answer": 0,
+    "why": "Bir söz, söyleyenin alışkanlığına göre okunur: kusursuz dikişe “idare eder” diyen biri için “fena değil”, ortalamanın üstünde bir övgüdür. “Vasat bulundu” okuması sözü herhangi birinin ağzından çıkmış gibi değerlendirir."
+  },
+  {
+    "id": "sos-062",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Görkem ile eşi Damla, Nalan Teyze'ye akşam oturmasına gitti. Saat on bire yaklaşırken Nalan Teyze esneyip “Ben yarın sabah erkenden pazara çıkacağım, eskisi gibi gece kuşu değilim artık” diyor ve boş çay bardaklarını toplamaya başlıyor.\nNalan Teyze ne ima ediyor?",
+    "options": [
+      "Artık dinlenmek istediğini, misafirlerin kalkabileceğini",
+      "Yarın sabah pazara birlikte gitmeyi teklif etmek istediğini",
+      "Yaşı ilerlediği için sağlığından endişe ettiğini",
+      "Yeni bir çay demleyip sohbeti sürdürmek istediğini"
+    ],
+    "answer": 0,
+    "why": "Esnemesi, sabah erken kalkacağını söylemesi ve bardakları toplamaya başlaması, misafirlere kibarca “vakit geç oldu” demenin yollarıdır. Bardak toplamayı yeni çay hazırlığı sanmak, esneme ve erken kalkma vurgusuyla uyuşmaz."
+  },
+  {
+    "id": "sos-063",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Cuma saat beşte yapılan güncellemeden sonra sistem çöktü ve ekip gece yarısına kadar ofiste kaldı. Ertesi gün kıdemli geliştirici Bora Slack'e yazıyor: “Cuma akşamı beşte canlıya çıkmak ne kadar da parlak bir fikirmiş, herkese tebrikler.”\nBora ne demek istiyor?",
+    "options": [
+      "Cuma akşamı canlıya çıkma kararını iğneleyerek eleştiriyor",
+      "Sorunu birlikte çözdükleri için ekibi içtenlikle kutluyor",
+      "Hafta sonuna kadar çalışmaktan memnun olduğunu söylüyor",
+      "Canlıya çıkma fikrinin kendisine ait olduğunu hatırlatıyor"
+    ],
+    "answer": 0,
+    "why": "Gece yarısına uzayan bir çöküşün ardından “parlak fikir” ve “tebrikler” demek, sözün tersini kastetmektir; bu bir iğnelemedir. “İçtenlikle kutluyor” okuması, övülen şeyin ekibin çabası değil, sorunu doğuran karar olduğunu gözden kaçırır."
+  },
+  {
+    "id": "sos-064",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Leyla yemekten sonra misafiri Orhan Bey'e “Bir dilim daha baklava koyayım mı?” diyor. Orhan Bey “Yok kızım, zahmet etme, çok yedim zaten” diyor ama tabağını kenara çekmiyor, gözü masadaki tepsiye kayıyor.\nOrhan Bey'in cevabı için en isabetli okuma hangisi?",
+    "options": [
+      "Nezaketen reddediyor; biraz ısrar edilirse memnuniyetle alır",
+      "Gerçekten doymuş; ısrar edilirse bundan rahatsız olur",
+      "Baklavayı pek beğenmediğini kibarca belli etmeye çalışıyor",
+      "Leyla'yı yormamak için istemiyor; ısrar edilse de kesinlikle almaz"
+    ],
+    "answer": 0,
+    "why": "Türk misafirliğinde ilk ikram çoğu zaman nezaketen geri çevrilir; tabağını çekmemesi ve gözünün tepsiye kayması asıl isteğini ele veriyor. “Gerçekten doymuş” okuması sözlere uyar ama beden dilindeki iki ipucunu birden atlar."
+  },
+  {
+    "id": "sos-065",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Ev arkadaşları faturaları sırayla ödüyor; bu ay sıra Furkan'da ve son ödeme günü dündü. Faturanın fotoğrafını geçen hafta gruba Merve atmıştı. Bugün Merve gruba “Bu ayki elektrik faturası kaç gelmişti, bilen var mı?” yazıyor.\nMerve büyük ihtimalle ne yapıyor?",
+    "options": [
+      "Furkan'a ödemenin geciktiğini suçlamadan hatırlatıyor",
+      "Fatura tutarını unutmuş, gerçekten bilgi almak istiyor",
+      "Faturanın bu ay neden yüksek geldiğini tartışmaya açıyor",
+      "Ödeme sırasının kimde olduğunu grupta yeniden soruyor"
+    ],
+    "answer": 0,
+    "why": "Fotoğrafı kendisi attığı için Merve tutarı kolayca bulabilir; soruyu son ödeme gününün ertesinde sorması, Furkan'a yönelik nazik bir hatırlatma olduğunu gösterir. “Gerçekten unuttu” mümkün görünse de fotoğrafın ondan geldiği bilgisini açıklamaz."
+  },
+  {
+    "id": "sos-066",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Görüşmenin sonunda mülakatçı Işıl Hanım, Berkay'a “Sizinle tanışmak çok keyifliydi. Süreçle ilgili İK ekibimiz önümüzdeki hafta size dönüş yapacak” diyor. Berkay çıkışta bu cümleyi kafasında tekrar tekrar evirip çeviriyor.\nBu cümleden en makul çıkarım hangisi?",
+    "options": [
+      "Standart bir kapanış; tek başına bir işaret sayılmaz",
+      "Kibar bir dille reddedileceğini önceden sezdiren bir cümle",
+      "Berkay'ın işe alındığını dolaylı yoldan müjdeleyen bir cümle",
+      "Bir sonraki aşamaya geçtiğini üstü kapalı bildiren bir cümle"
+    ],
+    "answer": 0,
+    "why": "Bu cümle hemen her adaya söylenen kalıp bir kapanıştır; içinde ona özel bir övgü ya da çekince yok. Her sözde gizli mesaj aramak yaygın bir aşırı yorum hatasıdır; ret ya da kabul çıkarmak için ek bir ipucu gerekir."
+  },
+  {
+    "id": "sos-067",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Ekip lideri Engin, Feyza'ya bir analiz verirken “Acelesi yok, cumaya kadar yetişse yeter” diyor. Kapıdan çıkarken ekliyor: “Bu arada genel müdür perşembe sabahki toplantıda bu rakamları sorabilir, haberin olsun.”\nEngin büyük ihtimalle ne bekliyor?",
+    "options": [
+      "Analizin perşembe sabahından önce hazır olmasını",
+      "Analizin rahat rahat, cuma akşamına kadar bitmesini",
+      "Feyza'nın perşembeki toplantıya bizzat katılmasını",
+      "Rakamları genel müdüre Feyza'nın doğrudan sunmasını"
+    ],
+    "answer": 0,
+    "why": "“Acelesi yok” baskı yapmamak için söylenmiş bir yumuşatmadır; asıl bilgi, genel müdürün rakamları perşembe sabahı sorabileceğidir. Cuma tarihini esas almak, Engin'in sonradan “haberin olsun” diye eklediği asıl kaygıyı kaçırır."
+  },
+  {
+    "id": "sos-068",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Taşınma günü yaklaşan Nesli, arkadaşı Cem'e uzun uzun anlatıyor: kamyonet sabah yedide gelecekmiş, yeni bina asansörsüzmüş, kardeşi de şehir dışındaymış. Cem “İstersen gelirim” deyince Nesli “Yok yok, sen de yorgunsun, ben bir şekilde hallederim” diyor.\nNesli büyük ihtimalle ne istiyor?",
+    "options": [
+      "Yardım istiyor ama yük olmaktan çekiniyor; ısrar bekliyor",
+      "Yardıma ihtiyacı yok; işi tek başına halletmeyi planlıyor",
+      "Cem'den yardım yerine bir nakliye firması önerisi bekliyor",
+      "Cem'in yorgun olduğunu düşünüp ondan uzak durmak istiyor"
+    ],
+    "answer": 0,
+    "why": "Nesli zorlukları tek tek sıralayarak ihtiyacını gösterdi; “ben hallederim” ise yük olmamak için yapılan bir nezaket reddi. Sözü olduğu gibi alıp geri çekilmek, bütün o ayrıntıları neden anlattığını açıklamaz."
+  },
+  {
+    "id": "sos-069",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Uğur, yeni tanıştığı Hande'ye cumartesi akşamı bir konsere gitmeyi öneriyor. Hande “Kusura bakma, bu cumartesi olmaz, annemlerin evlilik yıldönümü var. Haftaya cuma olur mu?” diye cevap veriyor.\nHande'nin cevabı ne gösteriyor?",
+    "options": [
+      "Gerçekten müsait değil; buluşmayı başka güne almak istiyor",
+      "Uğur'la görüşmek istemiyor, kibarca bir bahane uyduruyor",
+      "Konserleri sevmediği için daha sakin bir plan istiyor",
+      "Ailesinin izni olmadan dışarı çıkamadığını ima ediyor"
+    ],
+    "answer": 0,
+    "why": "Somut bir neden vermesi ve hemen yeni bir gün önermesi, reddin bahane değil gerçek olduğunu gösterir. Her “olmaz”ı geçiştirme saymak aşırı yorumdur; geçiştirmek isteyen biri genellikle kendisi alternatif önermez."
+  },
+  {
+    "id": "sos-070",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Normalde çok sakin olan sistem yöneticisi Hasan, yüzü bembeyaz hâlde Kübra'nın masasına geliyor: “Kübra, ufak bir sorun var. Bir dakikan varsa veritabanı yedeklerine hemen birlikte bakabilir miyiz?”\nHasan'ın sözü için en doğru yorum hangisi?",
+    "options": [
+      "Durum ciddi; “ufak” sözü paniği bastırmak için seçilmiş",
+      "Gerçekten küçük bir sorun; Hasan'ın acele etmesine gerek yok",
+      "Hasan yedekleri nasıl kontrol edeceğini bilmiyor",
+      "Hasan, Kübra'nın işini denetlemek için bahane arıyor"
+    ],
+    "answer": 0,
+    "why": "Sakin birinin bembeyaz bir yüzle gelip “hemen” demesi, “ufak” sözünün durumu hafife alan bir ifade olduğunu gösterir. Sözü kelimesi kelimesine almak, yüz ifadesi ve aciliyet vurgusu gibi güçlü ipuçlarını görmezden gelir."
+  },
+  {
+    "id": "sos-071",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Arkadaş grubunda Tarık her şeyi beşer dakikalık sesli mesajlarla anlatıyor. Bugün yine üç uzun ses kaydı atınca Beril gruba “Tarık'ın podcast'inin yeni bölümleri yayında, kaçırmayın” yazıyor; Tarık dahil herkes gülerek cevap veriyor.\nBeril ne yapıyor?",
+    "options": [
+      "Tarık'ın uzun sesli mesajlarına dostça takılıyor",
+      "Tarık'ın gerçekten podcast başlattığını duyuruyor",
+      "Tarık'ı gruba ciddi biçimde şikâyet ediyor",
+      "Herkesin sesli mesajları dinlemesini rica ediyor"
+    ],
+    "answer": 0,
+    "why": "Uzun sesli mesajlara “podcast bölümü” demek abartıya dayalı bir şakadır; Tarık dahil herkesin gülerek karşılık vermesi tonun dostça olduğunu gösterir. “Ciddi şikâyet” okuması grubun sıcak tepkisiyle uyuşmaz."
+  },
+  {
+    "id": "sos-072",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Hastanede hemşire Gülay, meslektaşı Seda'dan pazar nöbetini kendisiyle değiştirmesini istiyor. Seda bir an duraksıyor: “Olur tabii… gerçi o gün babamı kontrole götürecektim ama bir şekilde ayarlarım.”\nSeda'nın cevabı için en isabetli okuma hangisi?",
+    "options": [
+      "Aslında uygun değil; hayır diyemediği için zorla kabul ediyor",
+      "Gönülden kabul ediyor; babasının kontrolünü ayarlamak kolay",
+      "Karşılığında Gülay'dan başka bir iyilik beklediğini ima ediyor",
+      "Gülay'ın isteğini yersiz bulup onu suçlu hissettirmek istiyor"
+    ],
+    "answer": 0,
+    "why": "Duraksama, “gerçi” ile gelen engel ve “bir şekilde” ifadesi, Seda'nın isteksizce evet dediğini gösterir. “Gönülden kabul” okuması yalnızca “Olur tabii”ye bakar; “suçlu hissettirmek” ise ortada olmayan bir kötü niyet yükler."
+  },
+  {
+    "id": "sos-073",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Aile WhatsApp grubuna anneleri yazıyor: “Pazar babanızın altmışıncı yaş günü. Ben yine sabahtan akşama kadar mutfakta tek başıma hazırlarım herhalde.” Mesajı birlikte okuyan Zafer ile kız kardeşi Asya birbirlerine bakıyor.\nAnneleri büyük ihtimalle ne istiyor?",
+    "options": [
+      "Hazırlıkta yardım edilmesini, bunu açıkça istemeden",
+      "Hazırlığı yalnız yapmayı tercih ettiğini duyurmayı",
+      "Yaş gününün bu yıl evde değil dışarıda kutlanmasını önermeyi",
+      "Babalarına hediye alınmasını hatırlatmayı"
+    ],
+    "answer": 0,
+    "why": "“Yine” ve “tek başıma… herhalde” ifadeleri, geçmişte yalnız bırakıldığı duygusunu ve bu kez yardım beklediğini dolaylı yoldan anlatıyor. Mesajı “yalnız yapmayı tercih ediyor” diye okumak, sitemli tonu tamamen kaçırır."
+  },
+  {
+    "id": "sos-074",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Aylin, direktörü Korhan Bey'e yeni bir iç araç önerisi sunuyor. Korhan Bey “Çok güzel fikir, bunu bir sonraki çeyrekte mutlaka masaya yatıralım” diyor. Aylin, geçen yıl üç meslektaşının önerisinin de aynı cümleyle karşılandığını ve hiçbirinin bir daha konuşulmadığını biliyor.\nAylin bu cevabı nasıl okumalı?",
+    "options": [
+      "Kibar bir erteleme olduğunu; takip etmezse unutulacağını",
+      "Önerinin onaylandığını ve gelecek çeyrekte uygulanacağını",
+      "Direktörün öneriyi yetersiz bulup kesin olarak reddettiğini",
+      "Önerinin önce başka bir ekibin onayına sunulacağını"
+    ],
+    "answer": 0,
+    "why": "Aynı cümlenin üç öneride de sonuçsuz kalması, bunun onay değil kibar bir erteleme kalıbı olduğunu gösterir. “Onaylandı” okuması sözü kelimesi kelimesine alır; “kesin olarak reddetti” ise fazla ileri gider, çünkü direktör kapıyı kapatmıyor."
+  },
+  {
+    "id": "sos-075",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "İlknur ikinci kez terfi aldığını söyleyince, kuru şakalarıyla bilinen yakın arkadaşı Kadir “Yine mi? Ayıp oluyor ama, bize de biraz bırak” diyor; sonra kalkıp ona sarılıyor ve masadaki herkese tatlı ısmarlıyor.\nKadir'in sözü için en isabetli okuma hangisi?",
+    "options": [
+      "Sevincini kendine özgü şakacı üslubuyla gösteriyor",
+      "Kıskançlığını şakanın arkasına saklamaya çalışıyor",
+      "İlknur'un terfiyi hak etmediğini üstü kapalı söylüyor",
+      "Kendisinin terfi alamamasından dolaylı yoldan yakınıyor"
+    ],
+    "answer": 0,
+    "why": "Kadir'in kuru şakalarıyla bilinmesi, ardından sarılıp tatlı ısmarlaması, sözün içten bir tebrik olduğunu gösterir. “Kıskançlık” okuması çekicidir ama hiçbir ipucuyla desteklenmez; her takılmada gizli bir iğne aramak yaygın bir aşırı yorumdur."
+  },
+  {
+    "id": "sos-076",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Tülin, arkadaşı Remzi'nin arabasında ön koltukta gidiyor. Klima sonuna kadar açık. Tülin kollarını ovuşturarak “Senin arabanın kliması bayağı güçlüymüş” diyor.\nTülin büyük ihtimalle ne istiyor?",
+    "options": [
+      "Klimanın kısılmasını, bunu doğrudan söylemeden",
+      "Arabanın klimasını içtenlikle övmeyi",
+      "Camların açılıp arabaya temiz hava girmesini",
+      "Kendi arabasının kliması için tavsiye almayı"
+    ],
+    "answer": 0,
+    "why": "Kollarını ovuşturması üşüdüğünü gösteriyor; “bayağı güçlüymüş” bir övgü değil, klimanın kısılması için yapılmış kibar bir imadır. Sözü övgü olarak almak, beden dilindeki bu açık ipucunu görmezden gelir."
+  },
+  {
+    "id": "sos-077",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "orta",
+    "prompt": "Ajansta çalışan Sinem, yeni logo önerilerini müşteriye sunuyor. Müşteri Mahmut Bey uzun uzun bakıp “Çok yaratıcı, gerçekten. Ama bizim müşterimiz biraz daha klasik, biliyorsunuz” diyor.\nMahmut Bey'in asıl mesajı hangisi?",
+    "options": [
+      "Bu önerileri kullanmayacağını, daha klasik bir şey istediğini",
+      "Önerileri çok beğendiğini, olduğu gibi kullanmak istediğini",
+      "Kendi müşterilerinin zevkine pek güvenmediğini söylediğini",
+      "Fiyat teklifini biraz yüksek bulduğunu kibarca ima etmek istediğini"
+    ],
+    "answer": 0,
+    "why": "Övgünün hemen ardından gelen “ama” asıl mesajı taşır: tasarımlar hedef kitleye uymuyor ve değişmesi gerekiyor. “Çok beğendi” okuması yalnızca “çok yaratıcı” kısmına bakar; fiyat ise konuşmada hiç geçmiyor."
+  },
+  {
+    "id": "sos-078",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Altı aydır üzerinde çalıştığı proje iptal edilen Mine, toplantıdan çıkınca gülerek “Neyse, en azından artık hafta sonlarım boş” diyor; sesi bir an titriyor ve hemen başka bir konuya geçiyor.\nMine'nin sözü için en isabetli okuma hangisi?",
+    "options": [
+      "Hayal kırıklığını espriyle hafifletmeye çalışıyor",
+      "Projenin iptal edilmesinden açıkça memnun kalmış",
+      "İptal kararına içerlediğini herkese duyurmak istiyor",
+      "Boşalan hafta sonları için yeni planlarından söz ediyor"
+    ],
+    "answer": 0,
+    "why": "Altı aylık emek, titreyen ses ve konuyu hemen değiştirmesi, esprinin bir hafifletme çabası olduğunu gösterir. “Memnun kaldı” okuması gülüşe ve sözlere bakar; “herkese duyurmak” ise konuyu hemen kapatmasıyla çelişir."
+  },
+  {
+    "id": "sos-079",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Doruk, sevgilisi Yonca'yla akşam planını bu ay üçüncü kez son anda iptal ediyor. Yonca normalde uzun, neşeli mesajlar yazar; bu kez yalnızca “Peki.” diye cevap veriyor.\nYonca'nın mesajı için en isabetli okuma hangisi?",
+    "options": [
+      "Kırılmış; tepkisini uzun uzun yazmak yerine tek kelimeyle gösteriyor",
+      "Sorun etmiyor; kısa yazması yalnızca o an meşgul olduğunu gösteriyor",
+      "İlişkiyi bitirmeye karar verdiğini dolaylı yoldan haber veriyor",
+      "İptale sevinmiş; o akşam zaten başka bir planı olduğunu ima ediyor"
+    ],
+    "answer": 0,
+    "why": "Alışılmış uzun ve neşeli üsluptan noktalı tek kelimeye geçmek, üçüncü iptalin ardından kırgınlığın açık bir işaretidir. “Meşgul” açıklaması tek başına mümkün ama bu örüntüyle zayıf kalır; “ilişkiyi bitiriyor” ise tek kelimeden çok fazla anlam çıkarır."
+  },
+  {
+    "id": "sos-080",
+    "section": "sosyal",
+    "subtype": "dolayli_anlatim",
+    "difficulty": "zor",
+    "prompt": "Kod incelemesinde kıdemli geliştirici Şahin, Eda'nın ödeme modülündeki değişikliğine şu yorumu bırakıyor: “Cesur bir yaklaşım. Bunun testleri de var mı, canlıda nasıl davranır merak ediyorum.”\nŞahin büyük ihtimalle ne düşünüyor?",
+    "options": [
+      "Yaklaşımı riskli buluyor, daha fazla güvence görmek istiyor",
+      "Eda'nın yenilikçi tarzını takdir edip onu cesaretlendiriyor",
+      "Değişikliği hemen birleştirip canlıda denemek istiyor",
+      "Eda'nın test yazmayı bilmediğini ima edip onu açıkça küçümsüyor"
+    ],
+    "answer": 0,
+    "why": "Ödeme gibi hassas bir modülde “cesur” sözü çoğu zaman “riskli” anlamına gelen kibar bir ifadedir; hemen ardından testleri ve canlı davranışı sorması kaygısını gösterir. “Takdir ediyor” okuması ilk kelimeye takılır; “küçümsüyor” ise sorulara kötü niyet yükler."
+  },
+  {
+    "id": "sos-081",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Üniversiteden arkadaş grubu yaz tatilini planlıyor. Kimse fiyat sormadan gecelik 4.000 liralık bir otelde karar kılınıyor. Her tatile gelen ve ilk işine yeni başlayan Sibel uzun süre yazmıyor, sonra “Ben belki sadece cumartesi gelirim” diyor.\nSibel'in çekingenliğinin en olası nedeni hangisi?",
+    "options": [
+      "Otel bütçesini zorluyor, bunu söylemekten çekiniyor",
+      "Bu yıl gruptakilerle tatile çıkmaya pek istekli değil",
+      "Otelin konumunu beğenmediği için kısa kalmayı tercih ediyor",
+      "Otel seçimine katılmadığı için gruba küsmüş durumda"
+    ],
+    "answer": 0,
+    "why": "Her yıl gelen birinin, pahalı otel kesinleşince sessizleşip kısa bir katılım önermesi ve işe yeni başlamış olması, sorunun bütçe olduğunu düşündürür. “Konumu beğenmedi” okuması zamanlamaya uyar ama Sibel otel hakkında hiçbir yorum yapmadı; kısa kalmak ise en çok maliyeti düşürür."
+  },
+  {
+    "id": "sos-082",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Haftalık toplantıda yeni gelen Emre bir öneri sunuyor; kimse tepki vermiyor. On dakika sonra kıdemli Oktay aynı öneriyi kendi cümleleriyle söylüyor ve herkes “Çok iyi fikir” diyor. Toplantının geri kalanında Emre hiç konuşmuyor.\nEmre'nin susmasının en olası nedeni hangisi?",
+    "options": [
+      "Fikri başkasının ağzından kabul görünce kendini görünmez hissetmesi",
+      "Öneriyi Oktay daha iyi anlattığı için kendi fikrinden vazgeçmiş olması",
+      "Toplantının konusunu yeterince bilmediğini sonradan fark etmesi",
+      "Oktay'la aralarında toplantı öncesinden kalan bir gerginlik olması"
+    ],
+    "answer": 0,
+    "why": "Aynı öneri, kendisi söylediğinde görmezden gelinip Oktay söyleyince alkışlanıyor; Emre'nin hemen ardından susması bu adaletsizliğe verilen tepkiyle en iyi açıklanır. “Kendi fikrinden vazgeçti” okuması tuhaftır, çünkü kabul gören fikir zaten onun fikriydi."
+  },
+  {
+    "id": "sos-083",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Bir müşteri şirketinden üç kişi toplantıya geliyor. Kendini “proje müdürü” diye tanıtan Kerem bütün soruları yanıtlıyor. Yalnızca adıyla tanıtılan Nurhan Hanım hiç konuşmuyor; ama fiyat ve süre sorulduğunda diğer ikisi cevap vermeden önce ona bakıyor.\nSon kararı büyük ihtimalle kim verecek?",
+    "options": [
+      "Nurhan Hanım; kritik konularda diğerlerinin onayını bekledikleri kişi",
+      "Kerem; unvanı proje müdürü olduğu ve bütün soruları o yanıtladığı için",
+      "Üçü birlikte; hiçbiri diğerinden belirgin biçimde daha etkili görünmüyor",
+      "Toplantıda olmayan bir yönetici; bu yalnızca bilgi toplama görüşmesi"
+    ],
+    "answer": 0,
+    "why": "Fiyat ve süre gibi kritik sorularda konuşmadan önce birine bakmak, kararın o kişide olduğunun güçlü bir işaretidir. Kerem çok konuşuyor ve unvanı var, ama en çok konuşan kişi her zaman karar veren kişi değildir."
+  },
+  {
+    "id": "sos-084",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Yurtta dört arkadaş, geçen yazki Kaş tatilinden kalma bir şakayı anlatıp kahkahalarla gülüyor. Odaya bu dönem taşınan Şeyma da aralarında; ara sıra gülümsüyor, sonra telefonuna bakıyor. Konu yirmi dakikadır o tatil.\nBu sahnedeki asıl sorun hangisi?",
+    "options": [
+      "Şeyma'nın katılamadığı bir konunun uzun süredir sürmesi",
+      "Şeyma'nın arkadaşlarıyla ilgilenmeyip sürekli telefona dalması",
+      "Dört arkadaşın Şeyma'yı bilerek dışlamaya çalışması",
+      "Kaş tatilindeki şakanın aslında pek komik olmaması"
+    ],
+    "answer": 0,
+    "why": "Ortak anıya dayalı uzun bir sohbet, orada olmayan kişiyi doğal olarak dışarıda bırakır; Şeyma'nın telefona bakması bunun sonucu, sebebi değil. “Bilerek dışlıyorlar” ise aşırı bir yorumdur, çünkü kasıt gösteren hiçbir ipucu yok."
+  },
+  {
+    "id": "sos-085",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Takım kanalında proje yöneticisi “Müşterinin raporladığı giriş hatasına bu hafta kim bakabilir?” diye yazıyor. Mesaja dört kişi göz emojisiyle tepki veriyor, ama kimse cevap yazmıyor. İki gün sonra hata hâlâ açık.\nBu yazışmadaki asıl sorun hangisi?",
+    "options": [
+      "Herkes başkasının üstleneceğini sanmış; iş sahipsiz kalmış",
+      "Ekip, müşterinin bildirdiği hatayı önemsiz bulup geçiştirmiş",
+      "Proje yöneticisi soruyu yanlış kanala yazdığı için görülmemiş",
+      "Dört kişi hatayı çözmüş ama sonucu gruba bildirmeyi unutmuş"
+    ],
+    "answer": 0,
+    "why": "Tepki vermek mesajın görüldüğünü gösteriyor ama kimse işi üstlenmiyor; herkese sorulan soru, kimsenin sorumluluğunda değilmiş gibi kalır. “Önemsiz buldular” yorumunu destekleyen bir ipucu yok, “çözdüler ama söylemediler” de hatanın hâlâ açık olmasıyla çelişir."
+  },
+  {
+    "id": "sos-086",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Ekip liderliği ilanının duyurulduğu gün, seninle o güne dek pek konuşmamış Bülent kahveni ısmarlıyor, hafta sonunu soruyor, sonra laf arasında “Sen başvurmayı düşünüyor musun bu arada?” diyor.\nBülent'in asıl amacı büyük ihtimalle ne?",
+    "options": [
+      "Başvurup başvurmayacağını, yani rakip olup olmayacağını yoklamak",
+      "Seninle uzun zamandır kurmak istediği bir arkadaşlığı başlatmak",
+      "Başvurman için seni cesaretlendirip sana desteğini sunmak",
+      "Ekip liderliğinin zorlukları hakkında senden akıl almak"
+    ],
+    "answer": 0,
+    "why": "Ani yakınlığın ilanla aynı gün başlaması ve sohbetin başvuru sorusuna bağlanması, ilginin pozisyonla ilgili olduğunu gösteriyor. “Cesaretlendirmek” iyi niyetli ve çekici bir okuma, ama Bülent hiçbir destek cümlesi kurmadan yalnızca niyetini soruyor."
+  },
+  {
+    "id": "sos-087",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Bayram yemeğinde Recep amca, yeğeni Selin'e üst üste maaşını, ne zaman evleneceğini ve neden hâlâ kirada oturduğunu soruyor. Selin her soruya tek kelimeyle cevap veriyor ve üçüncü kez kalkıp boş tabakları mutfağa taşıyor.\nSelin büyük ihtimalle ne istiyor?",
+    "options": [
+      "Konunun kapanmasını; sorulardan kibarca uzaklaşmayı",
+      "Mutfakta annesine yardım etmeyi; sofrada işi bitti",
+      "Amcasının sorularını daha ayrıntılı yanıtlamayı",
+      "Amcasının kendisine akıl vermesini, yol göstermesini"
+    ],
+    "answer": 0,
+    "why": "Tek kelimelik cevaplar ve sofradan tekrar tekrar kalkmak, kişisel sorulardan uzaklaşma isteğinin açık işaretleridir. “Annesine yardım ediyor” mümkün görünür ama üçüncü kez ve tam da sorular gelirken kalkması bunun bahane olduğunu gösteriyor."
+  },
+  {
+    "id": "sos-088",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Ekip yazışması:\nAyça: Yarınki müşteri sunumunu kim hazırlıyor?\nOnur: Ben dün slaytları paylaşmıştım.\nŞebnem: Paylaştığın slaytlar eski şablonda ama.\nOnur: Yeni şablonu bana kimse göndermedi ki.\nŞebnem: Ben de içeriği senden bekliyordum.\nBu yazışmadaki asıl sorun hangisi?",
+    "options": [
+      "Kimin neyi yapacağı netleşmemiş; herkes eksiği ötekinde görüyor",
+      "Şebnem'in Onur'a kişisel bir kırgınlığı var ve bunu işe yansıtıyor",
+      "Eski şablonla sunum yapılabilir; tartışma gereksiz bir ayrıntı üzerine",
+      "Ayça soruyu sunumla hiç ilgisi olmayan kişilere yöneltmiş"
+    ],
+    "answer": 0,
+    "why": "Onur slaytları, Şebnem içeriği, ikisi de şablonu ötekinden bekliyor; bu, işlerin kime ait olduğunun hiç konuşulmadığını gösterir. “Kişisel kırgınlık” yorumu çekicidir ama mesajlarda kişisel bir ima yok, yalnızca birbirine uymayan beklentiler var."
+  },
+  {
+    "id": "sos-089",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "İlk buluşmasındaki Tuğba, Alper'in sorularına uzun ve keyifli cevaplar veriyor, ona da sorular soruyor. Telefonu baştan beri ters dönük duruyor. Hesap gelmeden “Burada tatlı da çok güzelmiş, bir şey söyleyelim mi?” diyor.\nTuğba büyük ihtimalle ne düşünüyor?",
+    "options": [
+      "Buluşmadan keyif alıyor ve biraz daha kalmak istiyor",
+      "Nezaketen oturuyor; bir an önce kalkmak için fırsat kolluyor",
+      "Alper'e acıdığı için buluşmayı uzatmaya çalışıyor",
+      "Asıl ilgisi tatlıda; sohbet onun için ikinci planda"
+    ],
+    "answer": 0,
+    "why": "Karşılıklı soru sorması, telefonu ters çevirip dikkatini sohbete vermesi ve buluşmayı uzatacak bir teklif yapması, ilginin açık işaretleri. “Nezaketen oturuyor” okuması hiçbir ipucuyla desteklenmez; kalkmak isteyen biri tatlı önermez."
+  },
+  {
+    "id": "sos-090",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Arkadaş grubundan dört kişi cumartesi Nur'u çağırmadan yemeğe çıktı. Pazar günü içlerinden biri yemeğin fotoğraflarını herkesin bulunduğu ana gruba atıyor. Nur “Ne güzel olmuş, afiyet olsun” yazıyor ve o gün grupta başka hiçbir şey yazmıyor.\nGrubun gözden kaçırdığı şey büyük ihtimalle ne?",
+    "options": [
+      "Davet edilmediği buluşmanın fotoğraflarının Nur'u kırmış olabileceği",
+      "Nur'un fotoğraflardaki o restoranı zaten hiçbir zaman sevmediği",
+      "Nur'un o gün başka bir sebepten dolayı çok yoğun olduğu",
+      "Nur'un bu yüzden gruptan tamamen ayrılmaya karar verdiği"
+    ],
+    "answer": 0,
+    "why": "Davet edilmediği bir buluşmanın fotoğraflarını ortak grupta görmek dışlanmışlık hissi yaratır; kısa ve kalıp bir cevaptan sonra susması da bunu düşündürür. “Yoğundu” açıklaması mümkün ama sessizliğin tam da fotoğraflardan sonra başladığını açıklamaz."
+  },
+  {
+    "id": "sos-091",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Müdür Pelin Hanım toplantıda yeni tasarımı gösterip “Genel müdürümüz de çok beğendi bu arada” diyor, ardından soruyor: “Peki, bu tasarıma itirazı olan var mı?” Kimse konuşmuyor. Toplantı sonrası iki kişi koridorda tasarımın kullanışsız olduğunu konuşuyor.\nBu toplantıdaki asıl sorun hangisi?",
+    "options": [
+      "Sorunun soruluş biçimi itirazı caydırıyor; sessizlik onay değil",
+      "Ekip tasarımı gerçekten beğendi; koridordakiler azınlıkta kaldı",
+      "Koridordaki iki kişi toplantıda söz hakkı istemeyi unuttu",
+      "Pelin Hanım tasarımı ekibe yeterince ayrıntılı göstermedi"
+    ],
+    "answer": 0,
+    "why": "İtiraz istemeden hemen önce genel müdürün beğenisini duyurmak, karşı çıkmayı üst yönetime karşı çıkmak gibi gösterir; bu yüzden sessizlik onay sayılamaz. “Ekip gerçekten beğendi” okuması sessizliği olduğu gibi kabul eder ve koridordaki konuşmayı açıklayamaz."
+  },
+  {
+    "id": "sos-092",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Toplantı masasında yan yana oturan Volkan ile Sezgin, üç gündür birbirlerine doğrudan hitap etmiyor. Volkan, yöneticiye dönüp “Sezgin Bey'e iletirseniz test ortamı hazır” diyor; Sezgin de yine yöneticiye “Volkan Bey'e söyleyin, verileri yükledim” diye cevap veriyor.\nBu durum en çok neyi gösterir?",
+    "options": [
+      "Aralarında konuşulmamış bir gerginlik olduğunu",
+      "Şirkette resmî iletişim kurallarına uyduklarını",
+      "Yöneticinin her bilgiyi duymak istediğini",
+      "Birbirlerini henüz yeterince tanımadıklarını"
+    ],
+    "answer": 0,
+    "why": "Yan yana oturan iki kişinin bilgiyi birbirine değil yönetici üzerinden iletmesi ve bunun üç gündür sürmesi, aralarındaki bir gerginliğin işaretidir. “Resmî kurallar” okuması, birbirlerine doğrudan hitap etmekten bu kadar özenle kaçınmalarını açıklamaz."
+  },
+  {
+    "id": "sos-093",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Mağazada bir müşteri satış danışmanı Kübra'ya “Sadece bakıyorum” diyor. Yarım saat içinde aynı montun başına üç kez dönüyor, etiketindeki fiyata bakıyor ve kasadaki görevliye iade süresini soruyor.\nMüşterinin durumu için en isabetli okuma hangisi?",
+    "options": [
+      "İlgileniyor ama kararsız; baskı görmeden düşünmek istiyor",
+      "Monta hiç ilgisi yok; mağazadan çıkmak için fırsat kolluyor",
+      "Montu başka bir mağazadan daha ucuza almayı çoktan kafasına koymuş",
+      "Satış danışmanının ona kendiliğinden indirim önermesini bekliyor"
+    ],
+    "answer": 0,
+    "why": "Aynı ürüne tekrar tekrar dönmek, fiyata bakmak ve iade süresini sormak ciddi bir ilginin işaretleri; “Sadece bakıyorum” ise baskı görmeden karar vermek isteyen birinin kalkanıdır. “Hiç ilgisi yok” okuması sözü olduğu gibi alır, davranışları atlar."
+  },
+  {
+    "id": "sos-094",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Sabah toplantılarında ekip lideri Zafer “Engeli olan var mı?” diye soruyor; herkes “Yok” diyor. Toplantıdan sonra mutfakta aynı kişiler test ortamının günlerdir çalışmadığından ve bu yüzden işlerin yığıldığından yakınıyor.\nBu ekipteki asıl sorun büyük ihtimalle ne?",
+    "options": [
+      "Ekip, sorunları liderin önünde dile getirmeyi güvenli bulmuyor",
+      "Gerçekte ciddi bir engel yok; mutfaktaki şikâyetler abartılı",
+      "Sabah toplantıları sorunları konuşmak için fazla kısa tutuluyor",
+      "Ekip üyeleri test ortamının bozuk olduğunu henüz fark etmedi"
+    ],
+    "answer": 0,
+    "why": "Aynı kişilerin toplantıda “Yok” deyip birkaç dakika sonra aynı engelden yakınması, sorunun bilgi eksikliği değil, liderin önünde konuşmaktan çekinmek olduğunu gösterir. “Toplantılar kısa” açıklaması çekicidir ama kısa bir toplantıda da “Test ortamı çalışmıyor” demek birkaç saniye sürer."
+  },
+  {
+    "id": "sos-095",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Arkadaş grubundaki yemeklerde hesap hep Serdar'a kalıyor; diğerleri “Sen bu ay ödersin, bir dahakine biz” deyip geçiyor. Son iki ayda Serdar üç buluşmaya “İşim çıktı” diyerek katılmadı.\nSerdar'ın son davranışının en olası nedeni hangisi?",
+    "options": [
+      "Sürekli ödemekten yorulmuş ama bunu söylemekten çekiniyor",
+      "İşi gerçekten yoğunlaştığı için buluşmalara zaman bulamıyor",
+      "Gruptakilerden biriyle kişisel bir sorun yaşadığı için uzak duruyor",
+      "Daha pahalı restoranlara gitmek istediği için itiraz ediyor"
+    ],
+    "answer": 0,
+    "why": "Hesabın hep ona kalması ve “bir dahakine”nin hiç gelmemesi, Serdar'ın geri çekilmesini açıklayan en güçlü bağlam. “İşi yoğun” bahanesi tek başına mümkün, ama bu örüntüyle birlikte en olası açıklama değil; kişisel bir sorun ise hikâyede hiç geçmiyor."
+  },
+  {
+    "id": "sos-096",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Terfi beklentisini sorduğu birebir görüşmede yöneticisi Nevra Hanım, Burak'a “Sen ekibin en güvenilir insanısın, hiçbir işi aksatmıyorsun, sensiz ne yapardık” diyor ve hemen ardından gelecek sprintin işlerine geçiyor.\nBu cevap için en isabetli okuma hangisi?",
+    "options": [
+      "Terfi sorusundan kaçınıyor; övgüyle konuyu geçiştiriyor",
+      "Terfinin yakında geleceğini dolaylı yoldan müjdeliyor",
+      "Burak'ın terfiyi hak etmediğini kibarca anlatmaya çalışıyor",
+      "Burak'ın şu anki rolünde kalmak istediğini varsayıyor"
+    ],
+    "answer": 0,
+    "why": "Nevra Hanım övgü veriyor ama ne bir tarih ne bir koşul söylüyor ve hemen konuyu değiştiriyor; soru cevapsız kalıyor. Övgüyü “müjde” saymak çekicidir, ama terfiden hiç söz edilmemesi bunun bir taahhüt olmadığını gösterir."
+  },
+  {
+    "id": "sos-097",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Ekip her gün öğle yemeğine birlikte çıkıyor. Yeni stajyer Berk ise masasında tek başına yiyor. Ekipten biri “O istemez herhalde, hep kulaklığı takılı” diyor. Ama ekip kapıdan çıkarken Berk'in başını kaldırıp onlara baktığı görülüyor.\nEn olası durum hangisi?",
+    "options": [
+      "Berk davet edilmeyi bekliyor; ilk adımı atmaya çekiniyor",
+      "Berk yalnız yemeyi tercih ediyor; ekiple pek ilgilenmiyor",
+      "Berk kendini ekipten üstün gördüğü için ayrı duruyor",
+      "Berk öğle arasında stajının ödevlerini yetiştiriyor"
+    ],
+    "answer": 0,
+    "why": "Ekip çıkarken başını kaldırıp bakması, katılmak istediğini ama yeni ve stajyer olarak kendini davet etmeye çekindiğini gösterir. “O istemez herhalde” bir varsayım; kulaklık takmak, yalnız kalmayı tercih ettiğinin kanıtı değildir."
+  },
+  {
+    "id": "sos-098",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Kiracı Damla, ev sahibi Faruk Bey'le kira artışını konuşuyor. Faruk Bey “Artış yasal sınırda” dedikten sonra iki kez “Sizin gibi düzenli ödeyen kiracı bulmak zor, biliyorsunuz” diyor, sonra da “Siz ne kadar düşünüyordunuz?” diye soruyor.\nBu sözler en çok neyi gösterir?",
+    "options": [
+      "Damla'yı kaybetmek istemediğini; pazarlığa açık olabileceğini",
+      "Artışı kesinleştirdiğini; kiracıyı yalnızca nezaketen övdüğünü",
+      "Evi satmayı düşündüğünü, kiracıyı buna hazırladığını",
+      "Damla'nın evden çıkmasını kibar bir dille istediğini"
+    ],
+    "answer": 0,
+    "why": "Övgüyü tekrarlayıp Damla'nın rakamını sorması, onu kaybetmek istemediğini ve artışın konuşulabileceğini gösterir. “Artışı kesinleştirdi” okuması, karşı tarafın teklifini sormasıyla bağdaşmaz; “çıkmasını istiyor” ise övgüyle doğrudan çelişir."
+  },
+  {
+    "id": "sos-099",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Yurt odasına giren İrem kısık bir sesle “Selam” deyip çantasını bırakıyor, kulaklığını takıyor ve yüzünü duvara dönerek yatağına uzanıyor. Normalde odaya girer girmez gününü anlatırdı.\nİrem büyük ihtimalle şu an ne istiyor?",
+    "options": [
+      "Bir süre kendi başına kalmak, hemen konuşmamak",
+      "Oda arkadaşının ona günün nasıl geçtiğini sormasını",
+      "Odada sessizce ders çalışılmasını ve ışığın kapanmasını",
+      "Oda arkadaşına kırgın olduğunu açıkça göstermek"
+    ],
+    "answer": 0,
+    "why": "Kısa selam, kulaklık ve duvara dönmek, şu an sohbet istemediğinin işaretleri; alışkanlığının dışına çıkması da bir şeylerin yolunda gitmediğini düşündürür. “Kırgınlığını gösteriyor” okuması fazla ileri gider, çünkü davranış oda arkadaşına yönelik bir şey içermiyor."
+  },
+  {
+    "id": "sos-100",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Hastanede yeni başlayan asistan doktor Alp bir hastaya ilaç yazıyor. Yirmi yıllık sorumlu hemşire Nermin Hanım dosyaya bakıp “Hocam, bu hastada genelde önce böbrek değerlerine bakıyoruz, ama siz bilirsiniz tabii” diyor.\nNermin Hanım ne yapıyor?",
+    "options": [
+      "Olası bir hatayı, hiyerarşiye saygıyla dolaylı yoldan düzeltiyor",
+      "Kararı tamamen doktora bırakıyor; bu konuda bir fikri yok",
+      "Doktorun deneyimsizliğiyle herkesin önünde alay ediyor",
+      "Kendi çalışma alışkanlığını yalnızca bilgi olarak paylaşıyor"
+    ],
+    "answer": 0,
+    "why": "Deneyimli bir hemşirenin “genelde önce şuna bakıyoruz” demesi, yanlış bir adımı açıkça söylemeden göstermenin kibar yoludur; “siz bilirsiniz” hiyerarşiye saygıyı korur. “Yalnızca bilgi paylaşıyor” okuması, uyarının tam ilaç yazılırken yapılmasının anlamını kaçırır."
+  },
+  {
+    "id": "sos-101",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Arkadaş grubunda Oktay hafta sonu için bir plan önerdiğinde mesajı genelde cevapsız kalıyor. İki gün sonra Kerem neredeyse aynı planı önerince herkes “Varım!” yazıyor. Oktay bunu üçüncü kez yaşıyor.\nBu durum için en isabetli açıklama hangisi?",
+    "options": [
+      "Grupta fikrin kimden geldiği, fikrin kendisinden daha belirleyici",
+      "Kerem'in planları her seferinde Oktay'ınkilerden daha iyi oluyor",
+      "Grup, Oktay'ın mesajlarını hep kötü bir zamanlamayla görüyor",
+      "Oktay planlarını önerirken gruba yeterince ayrıntı vermiyor"
+    ],
+    "answer": 0,
+    "why": "Neredeyse aynı plan iki kişiden farklı karşılık görüyorsa fark plandan değil, öneren kişiden kaynaklanır; Kerem grubun gayriresmî lideri gibi davranıyor. “Kerem'in planları daha iyi” açıklaması tutmaz, çünkü planlar neredeyse aynı."
+  },
+  {
+    "id": "sos-102",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Müşteri toplantısında ajans yeni kampanya takvimini anlatırken müşteri Gönül Hanım derin bir nefes alıyor: “Biz aslında geçen sene de tam böyle başlamıştık.” Sonra her aşama için “Bu kesin mi?” diye soruyor.\nGönül Hanım'ın asıl kaygısı büyük ihtimalle ne?",
+    "options": [
+      "Geçen seneki gibi bir hayal kırıklığından korkuyor, güvence arıyor",
+      "Kampanyayı geçen seneki gibi, hiçbir şeyi değiştirmeden yürütmek istiyor",
+      "Ajansın sunduğu takvimi gereksiz yere uzun buluyor",
+      "Toplantıyı kısa kesip kararı başka güne bırakmak istiyor"
+    ],
+    "answer": 0,
+    "why": "Derin nefes, “geçen sene de böyle başlamıştık” sözü ve her aşamada kesinlik sorması, kötü bir deneyimin tekrarlanmasından korktuğunu gösteriyor. “Aynen yürütmek istiyor” okuması cümleyi kelimesi kelimesine alır, iç çekişi ve güvence sorularını atlar."
+  },
+  {
+    "id": "sos-103",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Can ile Tarkan dün kaçırılan bir teslim tarihi yüzünden tartıştı. Bugün Can'ın sorusuna yanıt veren Tarkan, ilk kez e-postaya ikisinin yöneticisini de bilgi olarak ekliyor ve “Daha önce de belirttiğim gibi” diye başlıyor.\nTarkan büyük ihtimalle ne yapıyor?",
+    "options": [
+      "Konunun kayda geçmesini ve kendi payının görünmesini sağlıyor",
+      "Yöneticiyi yalnızca nezaketen bilgilendirmek istiyor",
+      "Can'la barışmak için yöneticiden arabuluculuk yapmasını istiyor",
+      "Yöneticinin Can'a teşekkür etmesini sağlamaya çalışıyor"
+    ],
+    "answer": 0,
+    "why": "Tartışmanın ertesi günü yöneticiyi ilk kez bilgiye eklemek ve “daha önce de belirttiğim gibi” demek, Tarkan'ın kendini korumak için yazışmayı belgelediğini gösterir. “Nezaketen bilgilendirme” okuması zamanlamayı ve bu kalıp cümleyi açıklamaz."
+  },
+  {
+    "id": "sos-104",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "orta",
+    "prompt": "Yazılım firmasıyla görüşen müşteri İbrahim Bey, ekranda gösterilen yeni özelliklere hiç soru sormuyor. Toplantı boyunca dört kez “Peki bu ne zaman canlıda olur?” ve “Mart'ta yetişir mi?” diye soruyor.\nİbrahim Bey'in asıl önceliği büyük ihtimalle ne?",
+    "options": [
+      "Ürünün belirli bir tarihe kadar hazır olması",
+      "Özelliklerin olabildiğince çok ve gelişmiş olması",
+      "Projenin toplam maliyetinin düşük tutulması",
+      "Ekranların tasarımının daha sade hâle gelmesi"
+    ],
+    "answer": 0,
+    "why": "Özelliklere hiç soru sormayıp dört kez tarih sorması, onun için asıl önemli olanın teslim zamanı olduğunu gösterir. Toplantının özellik sunumu olması ilk bakışta önceliğin özellikler olduğunu düşündürse de müşterinin sorduğu sorular başka bir şey söylüyor."
+  },
+  {
+    "id": "sos-105",
+    "section": "sosyal",
+    "subtype": "durum_okuma",
+    "difficulty": "zor",
+    "prompt": "Girişim kurucusu Tolga, iş teklifi yaptığı Gizem'e yemekte anlatıyor: “Burada herkes aile gibi, mesai kavramımız yok. Geçen pazar gece ikide hep beraber canlıya çıktık, inanılmaz bir enerjiydi!”\nTolga'nın sözleri Gizem'e en çok ne anlatıyor?",
+    "options": [
+      "Uzun ve sınırsız mesainin orada olağan sayıldığını",
+      "Çalışanların saatlerini tamamen kendilerinin belirleyebildiğini",
+      "Şirkette iş dışında da sık sık birlikte vakit geçirildiğini",
+      "Ekibin canlıya çıkışları yalnızca hafta sonu yaptığını"
+    ],
+    "answer": 0,
+    "why": "“Mesai kavramımız yok” tek başına esneklik de anlatabilir, ama pazar gecesi ikide çalışmanın övgüyle anılması bunun uzun ve sınırsız mesai anlamına geldiğini gösterir. “Esnek saatler” okuması kulağa hoş gelir ama verilen örnekle uyuşmaz."
+  },
+  {
+    "id": "sos-106",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Pazartesi sabahı yeni iş arkadaşın Betül anlatıyor: “Hafta sonu ilk kez yamaç paraşütü yaptım, Ölüdeniz'de.”\nHangisi sohbeti en iyi sürdürür?",
+    "options": [
+      "“Vay! Atlamadan hemen önceki an nasıldı, korktun mu?”",
+      "“Ben de geçen yıl Kapadokya'da balona binmiştim, anlatayım.”",
+      "“Ne kadar ödedin? Pahalı değil mi öyle işler?”",
+      "“Kaç gün kaldın, nerede kaldın, kiminle gittin, ne yedin?”"
+    ],
+    "answer": 0,
+    "why": "Deneyimin en heyecanlı anına dair açık uçlu bir soru, Betül'ün anlatmak istediği şeye alan açar. Balon hikâyesi sohbeti kendine çevirir; art arda dizilen sorular ise ilgiden çok sorguya benzer."
+  },
+  {
+    "id": "sos-107",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Bir networking etkinliğinde Cansel'le konuşuyorsun. Her soruna gülümseyerek ama kısa cevap veriyor; iki kez salonun öbür ucunda ona el sallayan bir arkadaşına baktı. Elindeki kahve bardağı çoktan boşaldı.\nEn uygun hamle hangisi?",
+    "options": [
+      "“Seni tutmayayım; tanıştığımıza sevindim, LinkedIn'den eklerim” demek",
+      "Sohbeti canlandırmak için hemen daha ilginç bir konu açmak",
+      "Kartını isteyip hemen ertesi gün için ondan bir kahve randevusu koparmak",
+      "Arkadaşının yanına onunla birlikte gidip sohbeti orada sürdürmek"
+    ],
+    "answer": 0,
+    "why": "Gülümsese de kısa cevaplar, arkadaşına kayan bakışlar ve boş bardak, ayrılmak istediğinin işaretleri; zarif bir kapanış iyi bir izlenim bırakır. “Daha ilginç bir konu açmak” çekicidir ama sorun konunun değil, Cansel'in o an başka yere gitmek istemesidir."
+  },
+  {
+    "id": "sos-108",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Bir networking etkinliğinde iki grup görüyorsun. Birincide üç kişi omuz omuza, yüzleri birbirine dönük, eski bir anıya gülüyor. İkincide üç kişi aralarında bir boşluk bırakarak duruyor; içlerinden biri arada salona göz gezdiriyor.\nEn uygun hamle hangisi?",
+    "options": [
+      "İkinci gruba yaklaşıp boşlukta durmak, biraz dinleyip katılmak",
+      "Birinci gruba gidip kendini tanıtarak sohbete hemen dahil olmak",
+      "İki grubun da dağılmasını bekleyip tek tek kişilerle konuşmak",
+      "İkinci gruba gidip kendi konunu açarak sohbeti yönlendirmek"
+    ],
+    "answer": 0,
+    "why": "Aralarında boşluk bırakan ve salona göz gezdiren bir grup yeni birine açıktır; omuz omuza, ortak bir anıya gülen grup ise kapalıdır. İkinci gruba katılmak doğru, ama hemen kendi konusunu açmak yerine önce dinleyip mevcut sohbete eklemlenmek gerekir."
+  },
+  {
+    "id": "sos-109",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "İlk buluşmanda Duru'yla iş konusu bitince kısa bir sessizlik oluyor. Konuşmanın başında Duru, ayda bir kitap kulübüne gittiğinden söz etmişti.\nSessizliği gidermenin en iyi yolu hangisi?",
+    "options": [
+      "“Kitap kulübünden bahsetmiştin; şu an ne okuyorsunuz?”",
+      "“Eee, başka ne anlatırsın bakalım, hadi bir şeyler söyle?”",
+      "“Sessizlik biraz garip oldu, değil mi? Neyse, geçelim.”",
+      "“Bugün hava amma soğuktu, değil mi? Buraya üşüyerek geldim.”"
+    ],
+    "answer": 0,
+    "why": "Onun daha önce açtığı bir konuya dönmek hem dinlediğini gösterir hem de anlatmayı seveceği bir alana kapı açar. “Başka ne anlatırsın” sohbeti sürdürme yükünü tamamen karşı tarafa atar; hava ise sohbeti uzatmayan bir dolgu konusudur."
+  },
+  {
+    "id": "sos-110",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Ekibe yeni katılan Melda çok sessiz. Masasında çerçeveli bir maraton bitiş fotoğrafı ve ekranın kenarında “Annemi ara, hastane sonucu” yazan bir not var. Onunla ilk kez sohbet açmak istiyorsun.\nHangisi en iyi açılış?",
+    "options": [
+      "“Bu fotoğraf maraton bitişi mi? Koşmaya nasıl başladın?”",
+      "“Notunu gördüm; annen iyi mi, hastanede bir sorun mu var?”",
+      "“Neden bu kadar sessizsin, ekibe alışamadın mı?”",
+      "“Ben de koşmayı denedim ama dizlerim el vermedi.”"
+    ],
+    "answer": 0,
+    "why": "Maraton fotoğrafı, Melda'nın gururla sergilediği ve konuşmaya açık olduğu bir konu. Not ise kişisel ve hassas; ilgili görünse de ilk sohbette onu açmak mahremiyete girer. Dizlerinden söz etmek sohbeti kendine çevirir, sessizliğini sorgulamak ise onu köşeye sıkıştırır."
+  },
+  {
+    "id": "sos-111",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "İş arkadaşın Cengiz kahve makinesinin başında: “Bu hafta biraz zor geçti, babam hastanedeydi ama şimdi iyi.”\nHangisi en iyi cevap?",
+    "options": [
+      "“Geçmiş olsun, iyi olmasına sevindim. Sen nasılsın, yoruldun mu?”",
+      "“Hangi hastanedeydi? Bizimkiler de geçen ay tam orada yatmıştı.”",
+      "“Teşhis neydi tam olarak, hangi doktora gittiniz, ne dediler?”",
+      "“Neyse ki iyi. Bu arada sprint toplantısı saat kaçtaydı?”"
+    ],
+    "answer": 0,
+    "why": "Cengiz zor bir hafta geçirdiğini paylaşıyor; geçmiş olsun deyip onun nasıl olduğunu sormak, ayrıntıya zorlamadan ilgi gösterir. “Hangi hastane” ilgili görünse de konuyu kendi ailene çevirir; teşhis soruları ise paylaşmak istemeyebileceği tıbbi ayrıntılara girer."
+  },
+  {
+    "id": "sos-112",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Gülten Teyzen telefonda kırk dakikadır komşularını anlatıyor; senin on dakika sonra bir toplantın var.\nKonuşmayı bitirmenin en iyi yolu hangisi?",
+    "options": [
+      "“Teyzeciğim, toplantım başlıyor; pazar yine arayayım mı?”",
+      "“Teyze, bu kadar komşu dedikodusu yeter, ben kapatıyorum artık.”",
+      "Telefonu sessize alıp işine dönmek, arada “hı hı” demek",
+      "“Şebeke çok kötü, sesin gidiyor” deyip telefonu kapatmak"
+    ],
+    "answer": 0,
+    "why": "Somut ve dürüst bir gerekçe ile yeni bir arama sözü, teyzeni kırmadan konuşmayı kapatır. “Dedikodu yeter” demek dürüst görünse de anlattıklarını yargılar ve kırar; şebeke bahanesi ise yalandır ve fark edilirse daha çok kırar."
+  },
+  {
+    "id": "sos-113",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Stajyer Rüya, Ali'nin sorularına kısa cevaplar veriyor; ama her seferinde kızararak gülümsüyor ve ona soru soruyor: “Siz kaç yıldır buradasınız?”, “En sevdiğiniz proje hangisiydi?”\nRüya hakkında en isabetli okuma ve hamle hangisi?",
+    "options": [
+      "Utangaç ama ilgili; açtığı konularda açık uçlu sorular sormak",
+      "İlgisiz; onu daha fazla rahatsız etmeden sohbeti hemen bitirmek",
+      "Sıkılmış; havayı değiştirmek için arka arkaya espriler yapmak",
+      "Gergin; onu rahatlatmak için stajın zorluklarını uzun uzun anlatmak"
+    ],
+    "answer": 0,
+    "why": "Kısa cevaplar tek başına ilgisizlik işareti sanılabilir, ama gülümsemesi ve kendisinin soru sorması ilgili ve utangaç olduğunu gösterir. “İlgisiz” okuması yalnızca cevapların uzunluğuna bakıp karşılıklı soru sormasını görmezden gelir."
+  },
+  {
+    "id": "sos-114",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Yemekte altı dakikadır Japonya gezini anlatıyorsun. İki arkadaşın telefonlarına göz attı. Gökçe ise akşamın başında Mardin'den yeni döndüğünü söylemişti.\nEn iyi hamle hangisi?",
+    "options": [
+      "“Neyse, ben çok anlattım. Gökçe, sen de Mardin'den döndün, nasıldı?”",
+      "“Bitirmeden bir hikâye daha anlatayım, aslında en komiği de bu, dinleyin.”",
+      "“Sıkıldınız mı yoksa? Bakıyorum da herkes telefonunda.”",
+      "Birden susup konuyu başka birinin açmasını beklemek"
+    ],
+    "answer": 0,
+    "why": "Telefonlara kayan gözler sözün uzadığını gösteriyor; konuyu kapatıp sözü Gökçe'nin daha önce açtığı konuya vermek hem dengeyi düzeltir hem de onu dinlediğini gösterir. Birden susmak kibar görünür ama yarattığı sessizliği başkalarına doldurtur."
+  },
+  {
+    "id": "sos-115",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Seksenlik komşun Muzaffer Bey, balkonundaki domatesleri gösteriyor: “Bunları rahmetli eşim çok severdi, her yaz birlikte ekerdik.”\nHangisi sohbeti en iyi sürdürür?",
+    "options": [
+      "“Ne güzel bir alışkanlık. Birlikte en çok neyi ekerdiniz?”",
+      "“Bu yaşta balkonda bahçe işleri size biraz yorucu gelmiyor mu?”",
+      "“Bizim annem de domates eker, onunkiler çok iri olur.”",
+      "“Artık her yerde domates var, marketten almak kolay.”"
+    ],
+    "answer": 0,
+    "why": "Muzaffer Bey eşiyle paylaştığı bir anıya kapı aralıyor; o anıyla ilgili açık bir soru, anlatmak istediği şeye alan açar. Yaş ve yorgunluk sorusu konuyu yaşlılığına çeker; annenin domatesleri sohbeti sana çevirir."
+  },
+  {
+    "id": "sos-116",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Müşteri firmanın genel müdürü Ayhan Bey'le asansörde yalnızsın; ikiniz de az önce aynı paneli dinlediniz. Önünüzde on beş kat var.\nHangisi en uygun açılış?",
+    "options": [
+      "“Paneldeki yapay zekâ tartışmasını nasıl buldunuz?”",
+      "“Sizin şirkette maaşlar nasıl, memnun musunuz?”",
+      "“Bugün çok yorgun görünüyorsunuz, iyi misiniz?”",
+      "“Bizim teklifi hâlâ onaylamadınız, neden acaba?”"
+    ],
+    "answer": 0,
+    "why": "Az önce birlikte dinlediğiniz panel ortak ve güvenli bir zemin; fikrini sormak da karşı tarafa söz verir. Maaş sorusu fazla kişisel, yorgunluk yorumu kırıcı olabilir; teklifi asansörde sormak ise sohbeti sıkıştırıcı bir pazarlığa çevirir."
+  },
+  {
+    "id": "sos-117",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "İlk buluşmanda Selçuk anlatıyor: “Mimarım ama aslında hep müzisyen olmak isterdim.”\nHangisi sohbeti en iyi derinleştirir?",
+    "options": [
+      "“Ne çalıyorsun? Müzik hâlâ hayatında mı?”",
+      "“Neden olmadın? Ailen mi izin vermedi?”",
+      "“Mimarlık daha mantıklı, müzikten para çıkmaz.”",
+      "“Ben de gitar çalarım, üç yıl ders almıştım.”"
+    ],
+    "answer": 0,
+    "why": "Müziğin bugün hayatındaki yerini sormak, onun açtığı kapıdan yargısız biçimde girer. “Ailen mi izin vermedi?” derin görünür ama ilk buluşmada hassas bir varsayımda bulunur; gitar dersi sohbeti sana çevirir, “para çıkmaz” ise hayalini küçümser."
+  },
+  {
+    "id": "sos-118",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Bir etkinlikte bir saat önce tanıştığın biri gülümseyerek yanına geliyor. Konuşmuştunuz ama adı aklından tamamen çıkmış.\nEn iyi hamle hangisi?",
+    "options": [
+      "“Tekrar merhaba! Kusura bakma, adın aklımdan çıktı, söyler misin?”",
+      "Adını hatırlıyormuş gibi yapıp konuşma boyunca ona hiç hitap etmemek",
+      "“Biz tanışmış mıydık?” deyip onu hiç hatırlamıyormuş gibi davranmak",
+      "“Az önce konuşmuştuk, değil mi, hani şu… neydi adın?” diye kekelemek"
+    ],
+    "answer": 0,
+    "why": "Kısa ve gülümseyen bir özürle adı yeniden sormak çok yaygın ve kolayca hoş görülen bir durumdur. Hiç hitap etmeden idare etmek kurtarıcı görünür ama sohbet boyunca tedirginlik yaratır; “tanışmış mıydık?” ise onu hiç hatırlamadığın izlenimini verip daha çok kırar."
+  },
+  {
+    "id": "sos-119",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Toplantın iki dakika sonra başlıyor. Mutfakta iş arkadaşın Nazan heyecanla “Sana anlatmam lazım, hafta sonu inanılmaz bir şey oldu!” diye söze başlıyor.\nEn iyi hamle hangisi?",
+    "options": [
+      "“Çok merak ettim ama toplantım var; öğlen anlatır mısın?”",
+      "Dinliyormuş gibi yapıp arada belli etmeden telefondan saate bakmak",
+      "Toplantıya geç kalmayı göze alıp onu sonuna kadar dinlemek",
+      "“Acelem var, kısaca özetler misin?” deyip hızlandırmasını istemek"
+    ],
+    "answer": 0,
+    "why": "Merakını gösterip dürüst bir gerekçeyle hikâyeyi belli bir zamana ertelemek, hem Nazan'ın heyecanına saygı duyar hem de işini aksatmaz. Geç kalmayı göze almak kibar görünür ama gereksiz bir bedel öder; “kısaca özetle” ise heyecanlı bir hikâyeyi değersizleştirir."
+  },
+  {
+    "id": "sos-120",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Yeni ekip arkadaşın Çağrı'ya nereli olduğunu soruyorsun. “İzmir'den geldim, iki haftadır buradayım” diyor.\nHangisi sohbeti en iyi sürdürür?",
+    "options": [
+      "“İki hafta mı? Yeni şehre alışmak nasıl gidiyor?”",
+      "“Hıı, İzmir. Güzel. Neyse, ben masama döneyim.”",
+      "“İzmir'den buraya mı? Ben olsam asla gelmezdim.”",
+      "“Ben de İzmir'e gitmiştim, Alaçatı çok kalabalıktı.”"
+    ],
+    "answer": 0,
+    "why": "Çağrı'nın verdiği en taze bilgiye, yani yeni taşındığına dayanan açık bir soru, onun yaşadığı şeye ilgi gösterir. Alaçatı anısı sohbeti sana çevirir; “asla gelmezdim” ise onun kararını küçümser."
+  },
+  {
+    "id": "sos-121",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Altı kişilik bir sohbette Ebru üç kez söze girmeye çalıştı ama her seferinde başkası araya girdi. Şimdi konuşma kısa bir an duraksadı.\nEn iyi hamle hangisi?",
+    "options": [
+      "“Ebru, az önce bir şey diyecektin galiba?”",
+      "Duraksamayı fırsat bilip kendi fikrini anlatmak",
+      "“Ebru, sen hiç konuşmuyorsun, sıkıldın mı?”",
+      "Ebru'ya bakıp gülümsemekle yetinip hiçbir şey dememek"
+    ],
+    "answer": 0,
+    "why": "Ebru'nun yarım kalan sözüne doğrudan alan açmak, onu öne çıkarmadan sohbete geri getirir. “Hiç konuşmuyorsun” demek ise yanlıştır, çünkü konuşmaya çalıştı; bu cümle onu herkesin önünde mahcup eder."
+  },
+  {
+    "id": "sos-122",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Bir düğünde masada yanına, ilk kez gördüğün biri oturuyor. Ortam sakin, yemekler yeni gelmiş.\nHangisi en uygun açılış?",
+    "options": [
+      "“Damat tarafından mısınız, gelin tarafından mı?”",
+      "“Evli misiniz, çocuğunuz var mı bu arada?”",
+      "“Ne iş yapıyorsunuz, iyi kazanıyor musunuz?”",
+      "“Bu düğün size de biraz abartılı gelmedi mi?”"
+    ],
+    "answer": 0,
+    "why": "Düğün, iki yabancının ortak noktasıdır; kimin tarafından geldiğini sormak doğal bir başlangıçtır ve sohbeti çiftle ilgili anılara açar. Medeni durum ve kazanç soruları ilk cümle için fazla kişisel; düğünü eleştirmek ise yanındakinin çok yakını olabilecek kişileri kırabilir."
+  },
+  {
+    "id": "sos-123",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Yeni ekip arkadaşlarınla öğle yemeğindesin. Yaptığın espriye kimse gülmüyor; kısa, tuhaf bir sessizlik oluyor. Az önce Serhan bir şey anlatıyordu.\nEn iyi hamle hangisi?",
+    "options": [
+      "“O espri tutmadı galiba” deyip gülerek sözü Serhan'a geri vermek",
+      "Esprinin aslında neden komik olduğunu herkese ayrıntısıyla açıklamak",
+      "“Hiç espri anlamıyorsunuz” deyip ekibe gülerek takılmak",
+      "Bozulup yemeğin geri kalanında hiç konuşmadan oturmak"
+    ],
+    "answer": 0,
+    "why": "Tutmayan bir espriyi hafifçe kabul edip sözü yarım kalan konuşmaya geri vermek, gerginliği en hızlı dağıtan yoldur. Açıklamaya girişmek anı uzatır; “espri anlamıyorsunuz” ise şaka gibi görünse de suçu yeni tanıştığın insanlara atar."
+  },
+  {
+    "id": "sos-124",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Bir doğum günü partisinde yeni tanıştığın biri soruyor: “Sen ne iş yapıyorsun?”\nHangisi sohbeti sürdürmeye en elverişli cevap?",
+    "options": [
+      "“Yazılımcıyım; hastane randevu sistemi yapıyoruz, ilginç dertleri var.”",
+      "“Yazılımcıyım ama boş ver, çok sıkıcı bir iş, anlatmaya hiç değmez.”",
+      "“Kubernetes üzerinde gRPC tabanlı mikroservis mimarileri geliştiriyorum.”",
+      "“Yazılımcıyım. Peki sen ne iş yapıyorsun, maaşlar sizin orada nasıl?”"
+    ],
+    "answer": 0,
+    "why": "Herkesin anlayabileceği somut bir örnek ve “ilginç dertleri var” gibi bir merak kancası, karşı tarafa soru sormak için kolay bir yol bırakır. Teknik jargon sohbeti tıkar; “boş ver” cevabı kapıyı kapatır, maaş sorusu ise fazla kişisel bir yöne sapar."
+  },
+  {
+    "id": "sos-125",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Yakın arkadaşın Özlem müjdeyi veriyor: “Hollanda'daki yüksek lisansa kabul aldım!” Seneye gidecek.\nHangisi en iyi cevap?",
+    "options": [
+      "“Tebrikler! Hangi program, en çok neyi bekliyorsun?”",
+      "“Gidince bizi unutursun sen, şimdiden söyleyeyim.”",
+      "“Hollanda'da yaşam çok pahalıymış ama, düşündün mü?”",
+      "“Ben de yurt dışına başvurmayı düşünüyordum aslında.”"
+    ],
+    "answer": 0,
+    "why": "Önce sevincini paylaşıp sonra onun heyecanını anlatmasına alan açmak, iyi habere verilebilecek en güçlü karşılıktır. Pahalılık uyarısı mantıklı görünse de sevinç anında kaygı aşılar; “bizi unutursun” sohbeti kendi kaybına çevirir."
+  },
+  {
+    "id": "sos-126",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Bir arkadaş yemeğinde yeni tanıştığın Pervin'e “Kardeşin var mı?” diye soruyorsun. Bir an duraksıyor ve kısaca “Vardı” diyor.\nEn iyi hamle hangisi?",
+    "options": [
+      "Kısa bir “Çok üzüldüm” deyip konuyu açıp açmamayı ona bırakmak",
+      "“Ne oldu, nasıl kaybettin?” diye nazikçe ayrıntısını sormak",
+      "Hiçbir şey duymamış gibi hemen hava durumundan söz etmek",
+      "Kendi yaşadığın kayıpları uzun uzun anlatarak ona destek olmaya çalışmak"
+    ],
+    "answer": 0,
+    "why": "Kısa bir taziye kaybı görmezden gelmez, kontrolü de Pervin'e bırakır; anlatmak isterse anlatır. Ayrıntı sormak nazik bir tonla bile yeni tanışılan birini zorlar; konuyu hemen değiştirmek ise kaybı duymamış gibi davranmaktır."
+  },
+  {
+    "id": "sos-127",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Bir konferansta, tanınmış CTO Selda Hanım konuşmasını bitirip sahneden iniyor. Yanına gidiyorsun; onun bir dakikası var.\nHangisi en iyi açılış?",
+    "options": [
+      "“Küçük ekiplerle ölçeklemeden söz ettiniz; ilk zorlandığınız nokta neydi?”",
+      "“Merhaba, şirketinizde açık pozisyon var mı? CV'mi göndersem olur mu?”",
+      "“Muhteşem bir konuşmaydı, sizi çok takdir ediyorum, harikasınız gerçekten.”",
+      "“Girişimimi anlatayım, beş dakikanızı alır; şu an yatırımcı arıyoruz.”"
+    ],
+    "answer": 0,
+    "why": "Konuşmanın somut bir noktasına dayanan bir soru, dinlediğini gösterir ve bir dakikada bile gerçek bir sohbet başlatır. Genel övgü kibar ama unutulur; iş ya da yatırım istemek ise ilk cümlede ilişkiyi bir talebe indirger."
+  },
+  {
+    "id": "sos-128",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Yeni arkadaşın Nisan anlatıyor: “Üniversitede bir yıl uzattım, matematikten iki kez kaldım. O dönem çok kötüydü.”\nHangisi en iyi cevap?",
+    "options": [
+      "“Ben de istatistikten kalmıştım, çok moral bozar. Sen nasıl toparladın?”",
+      "“Neden kaldın peki, derslere mi girmiyordun, yoksa hoca mı çok zordu?”",
+      "“Ben hiç ders bırakmadım ama çok çalışırdım tabii, ondan herhalde.”",
+      "“Ben de kalmıştım! Anlatayım, benimki çok daha uzun bir hikâye aslında.”"
+    ],
+    "answer": 0,
+    "why": "Kısa ve benzer bir paylaşım Nisan'ı yalnız hissettirmez; hemen ardından sözü ona geri vermek sohbeti onun üzerinde tutar. “Neden kaldın” sorusu yargılar gibi duyulur; “benimki daha uzun” ise ortak deneyimi fırsat bilip sohbeti kendine çeker."
+  },
+  {
+    "id": "sos-129",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "orta",
+    "prompt": "Bir partide Erhan yarım saattir sana kripto yatırımlarını anlatıyor. Sen ise içeride oturan eski arkadaşın Sevim'e de merhaba demek istiyorsun.\nEn uygun hamle hangisi?",
+    "options": [
+      "“Sohbet keyifliydi; Sevim'e bir merhaba diyeyim, sonra yakalarım.”",
+      "Hiçbir şey demeden telefonuna bakıp yavaş yavaş ondan uzaklaşmak",
+      "“Lavaboya gidiyorum” deyip bir daha hiç onun yanına dönmemek",
+      "Sıkıldığını belli etmek için cevaplarını iyice kısaltıp susmak"
+    ],
+    "answer": 0,
+    "why": "Kısa bir teşekkür, açık bir gerekçe ve “sonra yakalarım” sözü, sohbeti kimseyi kırmadan kapatır. Lavabo bahanesi işe yarar gibi görünür ama dönmeyince fark edilir; cevapları kısaltmak ise mesajı kabaca ve uzun yoldan verir."
+  },
+  {
+    "id": "sos-130",
+    "section": "sosyal",
+    "subtype": "sohbet",
+    "difficulty": "zor",
+    "prompt": "Yeni iş arkadaşın Gamze'ye kahve molasında “Önceki şirketinden neden ayrıldın?” diye soruyorsun. Gülümseyip “Uzun hikâye. Sen kaç yıldır buradasın?” diyor.\nEn iyi hamle hangisi?",
+    "options": [
+      "Sorusunu içtenlikle yanıtlayıp eski şirket konusunu tamamen bırakmak",
+      "“Kısaltarak anlat, çok merak ettim” deyip hemen konuya geri dönmek",
+      "Kısa bir cevap verip birkaç dakika sonra aynı soruyu yeniden sormak",
+      "“Orada bir sorun mu yaşadın?” diye tahmin yürüterek üstelemek"
+    ],
+    "answer": 0,
+    "why": "“Uzun hikâye” deyip soruyu sana çevirmek, konuyu şimdilik açmak istemediğinin nazik bir işaretidir; onun sorusuna içtenlikle cevap vermek bu sınıra saygı gösterir. “Merak ettim” diye üstelemek ilgi gibi görünse de açıkça çizilen sınırı zorlar."
+  },
+  {
+    "id": "sos-131",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Öğrenci Elif, dersin hocası Prof. Dr. Kenan Aydın'a ödevin teslim süresi için e-posta yazacak.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Selam hocam, ödevi biraz geç atsam olur mu ya? Sağ olun şimdiden.”",
+      "“Sayın Hocam, ödev teslimi için kısa bir ek süre rica edebilir miyim?”",
+      "“Hocam merhaba, ödevi iki gün geç teslim edebilir miyim acaba?”",
+      "“İyi günler hocam, rahatsız ediyorum; teslim süresiyle ilgili bir sorum var.”"
+    ],
+    "answer": 0,
+    "why": "“Selam” ve cümle sonundaki “ya”, arkadaşa yazılan bir mesajın dilidir; hocaya giden bir e-postada laubali durur. “Hocam merhaba” daha az resmî görünse de üniversitelerde yerleşik ve saygılı bir hitaptır."
+  },
+  {
+    "id": "sos-132",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Kemal yarın sabah doktor randevusu yüzünden işe geç gelecek ve bunu yöneticisi Sibel Hanım'a Slack'ten bildirecek.\nHangisi en uygun?",
+    "options": [
+      "“Sibel Hanım günaydın, yarın doktor randevum var; 10.30 gibi ofiste olurum.”",
+      "“Yarın geç gelirim, doktordayım. Haberin olsun.”",
+      "“Saygıdeğer Sibel Hanım, yarınki mesai başlangıcıma ilişkin durumu bilgilerinize arz ederim.”",
+      "“Yarın geç kalabilirim, umarım bu sefer de sorun yapılmaz.”"
+    ],
+    "answer": 0,
+    "why": "Kısa bir selam, gerekçe ve somut saat, yöneticiye yazılan bir iş mesajı için yeterince saygılı ve net. “Arz ederim” dilekçe dili gibi fazla resmî; “haberin olsun” ise yöneticiye sen diye hitap edip laubali kaçar."
+  },
+  {
+    "id": "sos-133",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Kargon yanlışlıkla alt kattaki seksen yaşındaki Saniye Hanım'a teslim edilmiş. Almak için kapısını çalıyorsun.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Naber teyzoş, benim kargo sende kalmış galiba, versene.”",
+      "“Merhaba Saniye Hanım, kargomu almışsınız galiba.”",
+      "“Kusura bakmayın rahatsız ettim teyzeciğim, kargom sizde mi acaba?”",
+      "“İyi akşamlar, kargomu almışsınız; çok teşekkür ederim zahmetiniz için.”"
+    ],
+    "answer": 0,
+    "why": "“Naber teyzoş” ve “versene”, yaşlı bir komşuya değil yaşıt bir arkadaşa söylenecek sözler. “Teyzeciğim” de samimidir ama “kusura bakmayın” ve “acaba” ile birlikte sıcak ve saygılı bir hitaptır."
+  },
+  {
+    "id": "sos-134",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Ajansta çalışan Deniz, birkaç yıldır birlikte çalıştığı ve arası çok iyi olan müşterisi Hakan Bey'e teslimin gecikeceğini yazıyor.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Hakan abi naber, teslim biraz kayacak, bilirsin işte, idare ediver artık.”",
+      "“Hakan Bey merhaba, teslimde iki günlük bir kayma olacak; nedenini kısaca anlatayım.”",
+      "“Hakan Bey günaydın, maalesef teslim iki gün gecikecek; yeni tarih perşembe.”",
+      "“Merhaba Hakan Bey, pek sevindirici değil ama teslimi perşembeye almamız gerekiyor.”"
+    ],
+    "answer": 0,
+    "why": "Sıcak bir ilişkide hitabın biraz gevşemesi sorun değil; ama müşteriye “abi, naber, bilirsin işte” diye sen diliyle yazıp gecikmeyi tarih vermeden “idare ediver” diye geçiştirmek sınırı aşar. Öbür seçenekler samimi kalıp süreyi ve nedeni açıkça veriyor."
+  },
+  {
+    "id": "sos-135",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Ayten, hastanenin randevu hattını arayıp babasının yarınki tahlil randevusunun saatini değiştirmek istiyor; telefonu bir görevli açıyor.\nHangisi en uygun?",
+    "options": [
+      "“Merhaba, babam Rıfat Kaya'nın yarınki tahlil saatini değiştirmek istiyorum, mümkün mü?”",
+      "“Merhaba canım, babamın yarınki tahlil saatini bir değiştirebilir misin acaba?”",
+      "“Babam Rıfat Kaya'nın yarınki tahlil saatini değiştireceksiniz; hangi saat boş?”",
+      "“Sonunda açtınız! Babamın yarınki tahlil saatini değiştirmek istiyorum, mümkün mü?”"
+    ],
+    "answer": 0,
+    "why": "Selam, hastanın adı ve kibar bir soru, görevlinin işini kolaylaştıran yalın bir ton. “Canım” ve “sen” hitabı tanımadığı bir görevliye laubali kaçar; “değiştireceksiniz” buyurgan, “Sonunda açtınız!” ise iğnelidir."
+  },
+  {
+    "id": "sos-136",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Yakın arkadaşın Burcu, doğum gününü kutlamak için gece yarısı sana uzun ve sevgi dolu bir sesli mesaj attı.\nHangisi bu bağlamda fazla soğuk ve resmî kaçar?",
+    "options": [
+      "“Tebrikleriniz için teşekkür ederim, iyi geceler dilerim.”",
+      "“Canımsın ya, gece gece ağlattın beni! Çok teşekkür ederim.”",
+      "“Ayy Burcu, sesini duyunca çok sevindim, iyi ki varsın!”",
+      "“Uyuyordum ama mesajını dinleyince uykum kaçtı, seni seviyorum.”"
+    ],
+    "answer": 0,
+    "why": "“Tebrikleriniz” ve “dilerim”, yakın bir arkadaşın sevgi dolu mesajına iş yazışması gibi karşılık verir; Burcu bunu mesafe koymak diye okuyabilir. “Uykum kaçtı” bir an sitem gibi görünse de “seni seviyorum” ile sevecen bir takılmaya dönüşüyor."
+  },
+  {
+    "id": "sos-137",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Yüksek lisans öğrencisi Mert, iki yıldır çalıştığı danışmanı Doç. Dr. Leyla Şen'le bugünkü görüşmesini unuttu. Hocası yazışmalarında ona hep “Mertçiğim” diye hitap ediyor.\nHangisi en uygun?",
+    "options": [
+      "“Hocam, bugünkü görüşmeyi kaçırdım, çok özür dilerim. Size uygun başka bir saat var mı?”",
+      "“Leyla'cım, bugün tamamen unuttum ya, kusura bakma, yarın uğrarım.”",
+      "“Sayın Doç. Dr. Leyla Şen, bugünkü görüşmeye katılamadığım için tarafınıza özürlerimi sunarım.”",
+      "“Hocam, görüşmeyi takvime siz eklemediğiniz için karıştırdım galiba, yarın gelsem?”"
+    ],
+    "answer": 0,
+    "why": "Hocanın samimi hitabı öğrenciye aynı samimiyeti tanımaz; “Hocam” deyip açıkça özür dilemek ve uygun saati ona sormak doğru dengedir. Unvanlı tam ad iki yıllık ilişkiye fazla soğuk kalır; “Leyla'cım” ise hitaptaki bu asimetriyi görmezden gelir."
+  },
+  {
+    "id": "sos-138",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Ercan, bankanın mobil uygulamasındaki canlı destek hattından müşteri temsilcisine kredi kartı limitini artırmak istediğini yazıyor.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Kanka şu kart limitimi bir artırıversene ya, ay sonu biraz sıkıştım da.”",
+      "“Merhaba, kredi kartı limitimin artırılmasını talep ediyorum.”",
+      "“İyi günler, kart limitimi artırmak istiyorum; nasıl ilerleyebiliriz?”",
+      "“Merhaba, limit artışı için başvuru yapmak istiyorum, yardımcı olur musunuz?”"
+    ],
+    "answer": 0,
+    "why": "“Kanka” ve “artırıversene ya”, tanımadığı bir banka temsilcisine arkadaş gibi seslenmektir. “Talep ediyorum” kuru görünse de kurumsal bir başvuruda gayet olağan ve saygılı bir ifadedir."
+  },
+  {
+    "id": "sos-139",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Yeni başladığın girişimde herkes birbirine adıyla hitap ediyor; yöneticin Cem de mesajlarına bol emoji koyuyor. Cem dünkü toplantının notlarını istedi.\nHangisi bu bağlamda bile fazla laubali kaçar?",
+    "options": [
+      "“Cemo, notlar bende ama şu an üşendim, akşam atarım belki.”",
+      "“Cem selam, notları bir saat içinde paylaşırım.”",
+      "“Tamamdır Cem, notları toparlayıp birazdan atıyorum.”",
+      "“Selam! Notlar hazır sayılır, öğleden önce sende olur.”"
+    ],
+    "answer": 0,
+    "why": "Bu ekipte ad ile hitap ve rahat bir dil olağan; ama yöneticiye takma adla seslenip “üşendim” ve “belki” demek, isteği ciddiye almamak demektir. Öbür seçenekler de gündelik bir dil kullanıyor ama işi net bir zamana bağlıyor."
+  },
+  {
+    "id": "sos-140",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Gülşen, kızı Ada'nın sınıf öğretmeni Murat Bey'e WhatsApp'tan Ada'nın yarın okula gelemeyeceğini yazacak.\nHangisi en uygun?",
+    "options": [
+      "“İyi akşamlar Murat Bey, Ada ateşlendiği için yarın okula gelemeyecek, bilginiz olsun.”",
+      "“Hocam selam, Ada yarın yok, haberin olsun.”",
+      "“Murat Bey, Ada yarın gelmeyecek; ödevleri de lütfen bu sefer zamanında gönderin.”",
+      "“Sayın Murat Bey, kızım Ada'nın sağlık durumu sebebiyle yarınki derslere iştirak edemeyeceğini arz ederim.”"
+    ],
+    "answer": 0,
+    "why": "Selam, kısa bir gerekçe ve “bilginiz olsun”, öğretmene yazılan bir mesaj için hem saygılı hem doğal. “Haberin olsun” laubali, “iştirak edemeyeceğini arz ederim” dilekçe gibi katı; ödev cümlesi ise konuyla ilgisiz bir iğne taşıyor."
+  },
+  {
+    "id": "sos-141",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "İş görüşmen çok samimi geçti; İK uzmanı Seda Hanım bol bol güldü ve “Bizden biri gibisin” dedi. Ertesi gün ona teşekkür e-postası yazıyorsun.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Seda'cım, dün çok eğlendik ya! Ne zaman başlıyorum, haber ver.”",
+      "“Seda Hanım merhaba, dünkü sıcak görüşme için çok teşekkür ederim.”",
+      "“Merhaba Seda Hanım, görüşmemiz çok keyifliydi; sürecin devamını merakla bekliyorum.”",
+      "“Seda Hanım iyi günler, zaman ayırdığınız için teşekkürler; sorunuz olursa buradayım.”"
+    ],
+    "answer": 0,
+    "why": "Görüşmenin sıcak geçmesi, adayla görüşmeci arasındaki mesafeyi kaldırmaz; “Seda'cım” ve “Ne zaman başlıyorum” henüz verilmemiş bir kararı ve samimiyeti varsayar. “Dünkü sıcak görüşme” ifadesi samimi ama hitap ve talep hâlâ ölçülü."
+  },
+  {
+    "id": "sos-142",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Kiracı Barış, kendisinden otuz yaş büyük ev sahibi Nevzat Bey'e kombinin arızalandığını mesajla bildirecek.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Selam Nevzat, kombi yine bozuldu; bir usta yollasana, donuyoruz.”",
+      "“Nevzat Bey merhaba, kombi arızalandı; uygun olduğunuzda usta gönderebilir misiniz?”",
+      "“İyi akşamlar Nevzat Bey, kombi maalesef çalışmıyor.”",
+      "“Nevzat Bey kusura bakmayın, kombi yine arıza verdi; ustaya haber verebilir miyiz?”"
+    ],
+    "answer": 0,
+    "why": "Otuz yaş büyük bir ev sahibine “Bey” demeden adıyla seslenip “yollasana” demek, yaşıt bir arkadaşa konuşur gibi laubali durur. “Nasıl yapalım?” kısa görünse de saygılı hitapla birlikte olağan bir sorudur."
+  },
+  {
+    "id": "sos-143",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Kargo şirketinde çalışan Tuba, paketi üç gün geciken ve öfkeli bir e-posta yazan müşteriye cevap verecek.\nHangisi en uygun?",
+    "options": [
+      "“Haklısınız, gecikme için özür dileriz; paketiniz yarın öğlene kadar elinizde olacak.”",
+      "“Hocam kusura bakma ya, yoğunluk var, yarın gelir herhalde.”",
+      "“Gecikmeler sözleşmemizin 4. maddesi kapsamındadır; tazminat hakkınız bulunmamaktadır.”",
+      "“Anlıyoruz, ama yoğun dönemlerde üç gün aslında oldukça normal bir süredir.”"
+    ],
+    "answer": 0,
+    "why": "Öfkeli müşteriye önce haklılığını kabul eden bir özür, ardından somut bir teslim zamanı en iyi tondur. “Normal bir süre” anlayışlı başlar ama müşterinin şikâyetini küçümser; madde numarası soğuk, “herhalde” ise laubali ve belirsizdir."
+  },
+  {
+    "id": "sos-144",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Annen WhatsApp'ta sesli mesaj göndermeyi yeni öğrendi ve sana ilk sesli mesajını attı: “Oğlum, duyuyor musun, oldu mu bu?”\nHangisi en uygun cevap?",
+    "options": [
+      "“Duydum anneciğim, çok güzel olmuş! Sesini duymak ne iyi geldi.”",
+      "“Evet, mesajınız başarıyla iletilmiştir. Başka bir sorunuz var mı?”",
+      "“Oldu da, bu kadar basit bir şeyi öğrenmen niye bu kadar sürdü?”",
+      "“Oldu. Ama her şeyi sesli atma bundan sonra, yazmak daha pratik.”"
+    ],
+    "answer": 0,
+    "why": "Annenin heyecanına aynı sıcaklıkla karşılık vermek, bu küçük başarıyı paylaşmanın doğru yolu. “Mesajınız iletilmiştir” bir müşteri hizmetleri robotu gibi soğuk; “yazmak daha pratik” ise doğru bir öneri gibi görünse de ilk denemesinde hevesini kırar."
+  },
+  {
+    "id": "sos-145",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Başka bir departmanın kıdemli müdürü Halil Bey, ilk tanıştığınız toplantıdan sonra sana “Bana Halil de, resmiyete gerek yok” dedi. Ertesi gün ondan bir rapor isteyeceksin.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Halilciğim naber, şu raporu atıver de kafamız rahat etsin.”",
+      "“Merhaba Halil, dünkü raporu paylaşabilir misin?”",
+      "“Halil günaydın, raporu rica etsem bugün gönderebilir misin?”",
+      "“Merhaba Halil Bey, raporu paylaşırsanız çok sevinirim.”"
+    ],
+    "answer": 0,
+    "why": "Halil Bey adıyla hitaba izin verdi; “Halil” demek bu yüzden sorun değil, “Halil Bey” demek de hâlâ kibar. Ama yeni tanışılan kıdemli birine “Halilciğim” ve “atıver de” demek, verilen izni yakın arkadaşlık düzeyine taşır."
+  },
+  {
+    "id": "sos-146",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Karşı dairedeki seksen yaşındaki Hayriye Hanım'ın kızı şehir dışında. Dışarıda kar var; sen de markete inmek üzeresin ve kapısını çalıyorsun.\nHangisi en uygun?",
+    "options": [
+      "“Hayriye Hanım, markete iniyorum; size de bir şey almamı ister misiniz?”",
+      "“Bu yaşta karda dışarı çıkmanız tehlikeli, ne lazımsa yazın getireyim.”",
+      "“Markete gidiyorum, bir şey lazımsa kızınıza söyleyin, o bana yazsın.”",
+      "“Ben markete gidiyorum da... Neyse, siz zaten bir şey istemezsiniz herhalde.”"
+    ],
+    "answer": 0,
+    "why": "Yardımı bir soru olarak sunmak, Hayriye Hanım'a karar hakkını bırakır ve onu mahcup etmez. “Bu yaşta tehlikeli” iyi niyetli ve korumacı görünür ama yaşını öne çıkarıp onu aciz gösterir; kızı üzerinden konuşmak dolambaçlı ve soğuk kalır."
+  },
+  {
+    "id": "sos-147",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Tanımadığın bir işe alım uzmanı, Ece Arslan, LinkedIn'den sana bir iş fırsatıyla ilgili mesaj attı.\nHangisi bu bağlamda fazla laubali kaçar?",
+    "options": [
+      "“Eyvallah Ece, bakarız ya; önce maaş ne kadar onu bir söyle, sonra konuşuruz.”",
+      "“Merhaba Ece Hanım, teşekkürler; pozisyonun ayrıntılarını konuşabiliriz.”",
+      "“Merhaba, ilginiz için teşekkür ederim; şu an değerlendirmeye açığım.”",
+      "“İyi günler Ece Hanım, teşekkürler; ücret aralığını paylaşabilir misiniz?”"
+    ],
+    "answer": 0,
+    "why": "Ücreti sormak sorun değil; öbür seçeneklerden biri de bunu soruyor. Sorun, tanımadığı birine “Eyvallah”, “bakarız ya” ve emir kipiyle arkadaş gibi seslenmek."
+  },
+  {
+    "id": "sos-148",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Yakın arkadaşın Kaan, arkadaş grubuna “Bugün işten çıkarıldım, neyse” yazdı.\nHangisi en uygun cevap?",
+    "options": [
+      "“Kanka çok üzüldüm. Akşam müsaitsen bir çay içelim mi, anlatırsın.”",
+      "“Bu durumu üzülerek öğrendim; yeni kariyer yolculuğunda başarılar dilerim.”",
+      "“Neyse dediğine göre çok takmamışsın, iyi o zaman, geçer.”",
+      "“Ben sana o şirketin batacağını söylemiştim zaten, dinlemedin.”"
+    ],
+    "answer": 0,
+    "why": "Yakın bir arkadaşa samimi bir üzüntü ve somut bir buluşma teklifi en iyi gelen karşılıktır. “Kariyer yolculuğunda başarılar” kibar ve iyi niyetli görünür ama bir iş ağı paylaşımına yazılmış gibi soğuk kalır; “neyse” sözünü olduğu gibi almak ise acısını küçümser."
+  },
+  {
+    "id": "sos-149",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "zor",
+    "prompt": "Genç öğretim üyesi Dr. Onur Kılıç ilk derste “Bana Onur Hoca diyebilirsiniz, e-postada resmiyet şart değil” dedi. Öğrencisi Melis, proje konusunu sormak için ona yazıyor.\nHangisi bu bağlamda bile fazla laubali kaçar?",
+    "options": [
+      "“Onur selam! Proje konusu neydi ya? Ben derste biraz dalmışım galiba.”",
+      "“Onur Hocam merhaba, proje konusunu bir kez daha paylaşabilir misiniz?”",
+      "“Merhaba hocam, proje konusunu kaçırdım; kısaca hatırlatır mısınız?”",
+      "“Selam hocam, proje konusuyla ilgili küçük bir sorum olacaktı.”"
+    ],
+    "answer": 0,
+    "why": "Hoca resmiyeti gevşetti ama “Onur Hoca” demeyi önerdi; “hoca” sözünü atıp “Onur selam” ve “ya” demek bu izni aşar. “Selam hocam” gündelik görünse de hocanın tanıdığı rahatlığın sınırları içinde kalır."
+  },
+  {
+    "id": "sos-150",
+    "section": "sosyal",
+    "subtype": "ton",
+    "difficulty": "orta",
+    "prompt": "Tarık yeni işinin ilk haftasında genel müdür Feride Hanım'la asansörde karşılaşıyor. Feride Hanım “Nasıl gidiyor, alışabildin mi?” diye soruyor.\nHangisi en uygun?",
+    "options": [
+      "“Çok iyi gidiyor, teşekkür ederim; ekip çok yardımcı oluyor.”",
+      "“Valla abla, idare ediyoruz işte, maaşlar bir artsa daha iyi olur.”",
+      "“Sorunuz için teşekkür ederim efendim, uyum sürecim planlandığı şekilde ilerlemektedir.”",
+      "“Fena değil ama kimse doğru dürüst bir şey anlatmıyor açıkçası.”"
+    ],
+    "answer": 0,
+    "why": "Kısa, sıcak ve olumlu bir cevap, asansördeki nazik bir soruya en uygun karşılıktır. “Abla” ve maaş sözü laubali, “uyum sürecim ilerlemektedir” rapor gibi katı; ilk haftada genel müdüre ekipten yakınmak ise yersiz bir şikâyettir."
+  }
+]

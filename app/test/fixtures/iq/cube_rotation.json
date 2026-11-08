@@ -1,0 +1,594 @@
+{
+  "cat": "cube_rotation",
+  "items": [
+    {
+      "answer": 4,
+      "cat": "cube_rotation",
+      "figure": {
+        "cells": [
+          {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          },
+          {
+            "front": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "w": 1
+          }
+        ],
+        "cols": 2,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 2.0
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Üstteki iki görünüm aynı küpe ait; her yüzde farklı bir sembol var. Seçeneklerden hangisi de bu küpün bir görünümüdür?",
+      "why": "İki görünümden beş yüz ve yerleri belli olur; karşılıklı yüzler: hedef–dolu daire, halka–karo. Doğru seçenek küpün başka bir yönden görünüşü. Yanlış seçeneklerde karşılıklı iki yüz yan yana gösterilmiş (aynı anda görünemezler) ve yüzlerin dönüş sırası ayna görüntüsü gibi ters."
+    },
+    {
+      "answer": 1,
+      "cat": "cube_rotation",
+      "figure": {
+        "cells": [
+          {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          },
+          {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "w": 1
+          }
+        ],
+        "cols": 2,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 2.0
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Üstteki iki görünüm aynı küpe ait; her yüzde farklı bir sembol var. Seçeneklerden hangisi de bu küpün bir görünümüdür?",
+      "why": "İki görünümden beş yüz ve yerleri belli olur; karşılıklı yüzler: artı–dolu daire, kare–karo. Doğru seçenek küpün başka bir yönden görünüşü. Yanlış seçeneklerde karşılıklı iki yüz yan yana gösterilmiş (aynı anda görünemezler) ve yüzlerin dönüş sırası ayna görüntüsü gibi ters."
+    },
+    {
+      "answer": 1,
+      "cat": "cube_rotation",
+      "figure": {
+        "cells": [
+          {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          },
+          {
+            "front": {
+              "rot": 1,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "w": 1
+          }
+        ],
+        "cols": 2,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 2.0
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 3,
+              "sym": "triangle"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "half"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 3,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Üstteki iki görünüm aynı küpe ait; her yüzde farklı bir sembol var. Seçeneklerden hangisi de bu küpün bir görünümüdür?",
+      "why": "İki görünümden beş yüz ve yerleri belli olur; karşılıklı yüzler: hedef–üçgen, yarım dolu kare–dolu daire. Doğru seçenek küpün başka bir yönden görünüşü. Yanlış seçeneklerde yüzlerin dönüş sırası ayna görüntüsü gibi ters, bir sembolün yönü yanlış ve iki yüzün yeri değişmiş."
+    },
+    {
+      "answer": 1,
+      "cat": "cube_rotation",
+      "figure": {
+        "cells": [
+          {
+            "front": {
+              "rot": 0,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "w": 1
+          },
+          {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        ],
+        "cols": 2,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 2.0
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "half"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "corner"
+            },
+            "top": {
+              "rot": 2,
+              "sym": "half"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 1,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 2,
+              "sym": "corner"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "half"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 1,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Üstteki iki görünüm aynı küpe ait; her yüzde farklı bir sembol var. Seçeneklerden hangisi de bu küpün bir görünümüdür?",
+      "why": "İki görünümden beş yüz ve yerleri belli olur; karşılıklı yüzler: dolu daire–köşebent, üçgen–yarım dolu kare. Doğru seçenek küpün başka bir yönden görünüşü. Yanlış seçeneklerde yüzlerin dönüş sırası ayna görüntüsü gibi ters, bir sembolün yönü yanlış ve iki yüzün yeri değişmiş."
+    }
+  ],
+  "name": "Küp döndürme"
+}

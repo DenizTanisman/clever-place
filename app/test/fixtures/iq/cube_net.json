@@ -1,0 +1,602 @@
+{
+  "cat": "cube_net",
+  "items": [
+    {
+      "answer": 3,
+      "cat": "cube_net",
+      "figure": {
+        "cells": [
+          {
+            "rot": 0,
+            "sym": "dot",
+            "x": 0,
+            "y": 3
+          },
+          {
+            "rot": 0,
+            "sym": "square",
+            "x": 1,
+            "y": 3
+          },
+          {
+            "rot": 0,
+            "sym": "ring",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "rot": 0,
+            "sym": "target",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "dots4",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "rot": 0,
+            "sym": "plus",
+            "x": 2,
+            "y": 3
+          }
+        ],
+        "cols": 3,
+        "h": 2.0,
+        "k": "net",
+        "rows": 4,
+        "w": 1.5
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "square"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Bu açınım katlanınca hangi küp elde edilir?",
+      "why": "Katlayınca karşılıklı gelen yüzler: dolu daire–artı, dört nokta–halka, kare–hedef. Karşılıklı yüzler aynı anda görünemez. Yanlış seçeneklerde karşılıklı iki yüz yan yana gösterilmiş (aynı anda görünemezler) ve yüzlerin dönüş sırası ayna görüntüsü gibi ters."
+    },
+    {
+      "answer": 4,
+      "cat": "cube_net",
+      "figure": {
+        "cells": [
+          {
+            "rot": 0,
+            "sym": "dots4",
+            "x": 2,
+            "y": 0
+          },
+          {
+            "rot": 0,
+            "sym": "ring",
+            "x": 1,
+            "y": 0
+          },
+          {
+            "rot": 0,
+            "sym": "dot",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "target",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "rot": 0,
+            "sym": "diamond",
+            "x": 1,
+            "y": 3
+          },
+          {
+            "rot": 0,
+            "sym": "square",
+            "x": 0,
+            "y": 1
+          }
+        ],
+        "cols": 3,
+        "h": 2.0,
+        "k": "net",
+        "rows": 4,
+        "w": 1.5
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "target"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Bu açınım katlanınca hangi küp elde edilir?",
+      "why": "Katlayınca karşılıklı gelen yüzler: dört nokta–kare, dolu daire–karo, hedef–halka. Karşılıklı yüzler aynı anda görünemez. Yanlış seçeneklerde karşılıklı iki yüz yan yana gösterilmiş (aynı anda görünemezler) ve yüzlerin dönüş sırası ayna görüntüsü gibi ters."
+    },
+    {
+      "answer": 2,
+      "cat": "cube_net",
+      "figure": {
+        "cells": [
+          {
+            "rot": 0,
+            "sym": "triangle",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "rot": 0,
+            "sym": "dots4",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "plus",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "ring",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "rot": 0,
+            "sym": "corner",
+            "x": 1,
+            "y": 3
+          },
+          {
+            "rot": 0,
+            "sym": "arrow",
+            "x": 2,
+            "y": 1
+          }
+        ],
+        "cols": 3,
+        "h": 2.0,
+        "k": "net",
+        "rows": 4,
+        "w": 1.5
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 2,
+              "sym": "arrow"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "arrow"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dots4"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "plus"
+            },
+            "top": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Bu açınım katlanınca hangi küp elde edilir?",
+      "why": "Katlayınca karşılıklı gelen yüzler: üçgen–halka, dört nokta–ok, artı–köşebent. Karşılıklı yüzler aynı anda görünemez. Yönü olan sembollerde, katlanınca okun ya da üçgenin hangi kenara baktığına da dikkat et. Yanlış seçeneklerde yüzlerin dönüş sırası ayna görüntüsü gibi ters, bir sembolün yönü yanlış ve iki yüzün yeri değişmiş."
+    },
+    {
+      "answer": 1,
+      "cat": "cube_net",
+      "figure": {
+        "cells": [
+          {
+            "rot": 1,
+            "sym": "corner",
+            "x": 0,
+            "y": 0
+          },
+          {
+            "rot": 0,
+            "sym": "ring",
+            "x": 0,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "diamond",
+            "x": 1,
+            "y": 1
+          },
+          {
+            "rot": 0,
+            "sym": "half",
+            "x": 1,
+            "y": 2
+          },
+          {
+            "rot": 0,
+            "sym": "dot",
+            "x": 1,
+            "y": 3
+          },
+          {
+            "rot": 2,
+            "sym": "triangle",
+            "x": 2,
+            "y": 1
+          }
+        ],
+        "cols": 3,
+        "h": 2.0,
+        "k": "net",
+        "rows": 4,
+        "w": 1.5
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 1,
+              "sym": "half"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 2,
+              "sym": "triangle"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "top": {
+              "rot": 3,
+              "sym": "corner"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 0,
+              "sym": "dot"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 1,
+              "sym": "triangle"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "half"
+            },
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "front": {
+              "rot": 2,
+              "sym": "half"
+            },
+            "h": 1,
+            "k": "cube",
+            "right": {
+              "rot": 0,
+              "sym": "ring"
+            },
+            "top": {
+              "rot": 0,
+              "sym": "diamond"
+            },
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Bu açınım katlanınca hangi küp elde edilir?",
+      "why": "Katlayınca karşılıklı gelen yüzler: köşebent–yarım dolu kare, halka–üçgen, karo–dolu daire. Karşılıklı yüzler aynı anda görünemez. Yönü olan sembollerde, katlanınca okun ya da üçgenin hangi kenara baktığına da dikkat et. Yanlış seçeneklerde yüzlerin dönüş sırası ayna görüntüsü gibi ters, bir sembolün yönü yanlış ve iki yüzün yeri değişmiş."
+    }
+  ],
+  "name": "Küp açınımı"
+}

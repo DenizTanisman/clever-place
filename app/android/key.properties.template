@@ -1,0 +1,17 @@
+# Android upload-signing template — copy to `key.properties` (same folder) and fill in.
+#
+# `key.properties` is gitignored and must NEVER be committed. The keystore file it points to must
+# also stay out of the repo (keep it somewhere safe and backed up; if you lose it you cannot update
+# the app on Google Play).
+#
+# Create the upload keystore once:
+#   keytool -genkey -v -keystore ~/clever-place-upload.jks \
+#       -keyalg RSA -keysize 2048 -validity 10000 -alias upload
+#
+# Then copy this file to key.properties and set:
+
+storePassword=CHANGE_ME
+keyPassword=CHANGE_ME
+keyAlias=upload
+# Absolute path to the .jks file (outside the repo), e.g. /home/you/clever-place-upload.jks
+storeFile=CHANGE_ME

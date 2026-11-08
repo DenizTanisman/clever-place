@@ -1,0 +1,986 @@
+{
+  "cat": "shape_series",
+  "items": [
+    {
+      "answer": 1,
+      "cat": "shape_series",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "triangle",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "square",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "pentagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 5,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 5.0
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "octagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "heptagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "heptagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "hexagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "octagon",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Dizide sıradaki şekil hangisi?",
+      "why": "Kenar sayısı her adımda 1 artıyor. Altın nokta her adımda bir köşe saat yönünde ilerliyor."
+    },
+    {
+      "answer": 4,
+      "cat": "shape_series",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 45,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.3,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 135,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.3,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 5,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 5.0
+      },
+      "hard": false,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.3,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "none",
+                "r": 0.3,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Dizide sıradaki şekil hangisi?",
+      "why": "Ok her adımda 45° saat yönünde dönüyor. Dolgu dolu, boş sırasıyla tekrarlanıyor."
+    },
+    {
+      "answer": 0,
+      "cat": "shape_series",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 6,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 6.0
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 90,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "solid",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Dizide sıradaki şekil hangisi?",
+      "why": "Ok her adımda 90° saat yönünde dönüyor. Dolgu dolu, noktalı sırasıyla tekrarlanıyor."
+    },
+    {
+      "answer": 3,
+      "cat": "shape_series",
+      "figure": {
+        "cells": [
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 315,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 180,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 45,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 270,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 135,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          },
+          {
+            "h": 1,
+            "k": "q",
+            "w": 1
+          }
+        ],
+        "cols": 6,
+        "h": 1,
+        "k": "grid",
+        "rows": 1,
+        "w": 6.0
+      },
+      "hard": true,
+      "options": [
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 135,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 135,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.85,
+                "y": 0.15
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 225,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        },
+        {
+          "figure": {
+            "h": 1,
+            "items": [
+              {
+                "f": "dots",
+                "r": 0.3,
+                "rot": 0,
+                "s": "arrow",
+                "x": 0.5,
+                "y": 0.5
+              },
+              {
+                "c": "gold",
+                "f": "solid",
+                "m": true,
+                "r": 0.07,
+                "rot": 0,
+                "s": "circle",
+                "x": 0.15,
+                "y": 0.85
+              }
+            ],
+            "k": "cell",
+            "w": 1
+          }
+        }
+      ],
+      "prompt": "Dizide sıradaki şekil hangisi?",
+      "why": "Ok her adımda 135° saatin tersi yönünde dönüyor. Altın nokta her adımda iki köşe saat yönünde ilerliyor."
+    }
+  ],
+  "name": "Şekil dizisi"
+}

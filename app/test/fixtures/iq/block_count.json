@@ -1,0 +1,424 @@
+{
+  "cat": "block_count",
+  "items": [
+    {
+      "answer": 1,
+      "cat": "block_count",
+      "figure": {
+        "ask": "count",
+        "cubes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            1,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "dims": [
+          3,
+          3,
+          3
+        ],
+        "h": 2,
+        "k": "stack",
+        "w": 2
+      },
+      "hard": false,
+      "options": [
+        {
+          "text": "14"
+        },
+        {
+          "text": "10"
+        },
+        {
+          "text": "13"
+        },
+        {
+          "text": "12"
+        },
+        {
+          "text": "11"
+        }
+      ],
+      "prompt": "Bu yapıda kaç küp var? (Her küp yere ya da başka bir küpün üstüne oturuyor; görünmeyen boşluk yok.)",
+      "why": "Sütun sütun say: her sütundaki küp sayısı en üstteki küpün yüksekliğine eşit. Toplam 10 küp; bunların 2 tanesi görünmüyor, sadece görünenleri saymak 8 verir."
+    },
+    {
+      "answer": 3,
+      "cat": "block_count",
+      "figure": {
+        "ask": "count",
+        "cubes": [
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            2,
+            2,
+            0
+          ]
+        ],
+        "dims": [
+          3,
+          3,
+          3
+        ],
+        "h": 2,
+        "k": "stack",
+        "w": 2
+      },
+      "hard": false,
+      "options": [
+        {
+          "text": "9"
+        },
+        {
+          "text": "6"
+        },
+        {
+          "text": "5"
+        },
+        {
+          "text": "8"
+        },
+        {
+          "text": "7"
+        }
+      ],
+      "prompt": "Bu yapıda kaç küp var? (Her küp yere ya da başka bir küpün üstüne oturuyor; görünmeyen boşluk yok.)",
+      "why": "Sütun sütun say: her sütundaki küp sayısı en üstteki küpün yüksekliğine eşit. Toplam 8 küp; bunların 1 tanesi görünmüyor, sadece görünenleri saymak 7 verir."
+    },
+    {
+      "answer": 0,
+      "cat": "block_count",
+      "figure": {
+        "ask": "fill",
+        "cubes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            2
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            1,
+            2
+          ],
+          [
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            0,
+            2,
+            2
+          ],
+          [
+            0,
+            3,
+            0
+          ],
+          [
+            0,
+            3,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            0,
+            1
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            1,
+            3,
+            0
+          ],
+          [
+            2,
+            3,
+            0
+          ]
+        ],
+        "dims": [
+          3,
+          4,
+          4
+        ],
+        "h": 2,
+        "k": "stack",
+        "w": 2
+      },
+      "hard": true,
+      "options": [
+        {
+          "text": "28"
+        },
+        {
+          "text": "32"
+        },
+        {
+          "text": "33"
+        },
+        {
+          "text": "29"
+        },
+        {
+          "text": "48"
+        }
+      ],
+      "prompt": "Bu yapıyı 3×4×4 boyutunda dolu bir kutuya tamamlamak için kaç küp daha gerekir? (Her küp yere ya da başka bir küpün üstüne oturuyor; görünmeyen boşluk yok.)",
+      "why": "Kutu 3×4×4 = 48 küp alır. Yapıda 20 küp var (15 tanesi görünüyor, 5 tanesi öndekilerin arkasında ya da altında). 48 − 20 = 28."
+    },
+    {
+      "answer": 2,
+      "cat": "block_count",
+      "figure": {
+        "ask": "count",
+        "cubes": [
+          [
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            1,
+            1
+          ],
+          [
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            2,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            1,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1
+          ],
+          [
+            1,
+            2,
+            0
+          ],
+          [
+            1,
+            2,
+            1
+          ],
+          [
+            2,
+            0,
+            0
+          ],
+          [
+            2,
+            0,
+            1
+          ],
+          [
+            2,
+            2,
+            0
+          ],
+          [
+            3,
+            0,
+            0
+          ],
+          [
+            3,
+            1,
+            0
+          ],
+          [
+            3,
+            2,
+            0
+          ]
+        ],
+        "dims": [
+          4,
+          3,
+          4
+        ],
+        "h": 2,
+        "k": "stack",
+        "w": 2
+      },
+      "hard": true,
+      "options": [
+        {
+          "text": "11"
+        },
+        {
+          "text": "15"
+        },
+        {
+          "text": "16"
+        },
+        {
+          "text": "12"
+        },
+        {
+          "text": "14"
+        }
+      ],
+      "prompt": "Bu yapıda kaç küp var? (Her küp yere ya da başka bir küpün üstüne oturuyor; görünmeyen boşluk yok.)",
+      "why": "Sütun sütun say: her sütundaki küp sayısı en üstteki küpün yüksekliğine eşit. Toplam 16 küp; bunların 4 tanesi görünmüyor, sadece görünenleri saymak 12 verir."
+    }
+  ],
+  "name": "Blok sayma"
+}
