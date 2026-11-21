@@ -4,21 +4,21 @@ Clever Place, Android için hazırlanmış bir zekâ ve zihin oyunları koleksiy
 
 Uygulama tamamen çevrimdışı çalışır. Hesap, reklam ya da internet izni yoktur; ilerlemen yalnızca telefonunda saklanır. Arayüz ve oyun içerikleri Türkçedir.
 
-<p>
-  <img src="screenshots/01_hub.png" width="240" alt="Ana ekran: günün hedefi ve oyun kartları">
-  <img src="screenshots/02_sudoku.png" width="240" alt="Sudoku tahtası">
-  <img src="screenshots/03_memory.png" width="240" alt="N-Back oyunu">
-</p>
-<p>
-  <img src="screenshots/05_rules.png" width="240" alt="Duvar Yarışı oyun sayfası">
-  <img src="screenshots/06_levels.png" width="240" alt="Eğitimler, zorluk seviyeleri ve bölüm listesi">
+<p align="center">
+  <a href="media/clever_place_tanitim.mp4"><img src="media/clever_place_tanitim.webp" width="320" alt="Tanıtım videosu: ana ekran, ardından 33 oyun zor bölümlerinde oynanıyor"></a>
 </p>
 
-## Tanıtım videosu
+Tanıtım videosu yukarıda kendiliğinden oynar (3 dakika 15 saniye, sessiz). Durdurup ileri geri sarmak için [videoyu oynatıcıda aç](media/clever_place_tanitim.mp4). Video 33 oyunu zor bölümlerinde ve küp sayfalarını gösterir; kıraathane oyunları videoda yoktur.
 
-[![Tanıtım videosundan dört kare: ana ekran, Sudoku, İtiş ve Soroban](media/tanitim_kapak.jpg)](media/clever_place_tanitim.mp4)
+<p align="center">
+  <img src="media/01_ana_ekran.jpg" width="19%" alt="Ana ekran: günün hedefi ve oyun kartları">
+  <img src="media/02_sudoku.jpg" width="19%" alt="Sudoku, 300. bölüm">
+  <img src="media/03_taclar.jpg" width="19%" alt="Taçlar, 300. bölüm">
+  <img src="media/04_itis.jpg" width="19%" alt="İtiş, 301. bölüm">
+  <img src="media/05_mucevher.jpg" width="19%" alt="Mücevher Birleştir, 300. bölüm">
+</p>
 
-[Videoyu izle](media/clever_place_tanitim.mp4) (3 dakika 15 saniye, sessiz). Video 33 oyunu zor bölümlerinde ve küp sayfalarını gösterir; kıraathane oyunları videoda yoktur. Görüntüler ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS ve ffmpeg gerekir).
+Video ve görseller ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS ve ffmpeg gerekir).
 
 ## Neler var
 
@@ -112,7 +112,7 @@ Testler:
 | `app/lib/clever/` | Flutter arayüzü: ana ekran, oyun görünümleri, dersler |
 | `app/assets/` | Yazı tipleri, küp verileri, soru bankası, uygulama simgesi |
 | `app/tool/` | Küp karıştırma üreteci, soru bankası denetim araçları ve tanıtım videosu üreteci |
-| `media/` | Tanıtım videosu ve kapağı |
+| `media/` | Tanıtım videosu ve ekran görselleri |
 
 Uygulama çekirdekle tek bir C işlevi (`cp_call`) üzerinden JSON mesajlarıyla konuşur.
 
