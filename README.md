@@ -14,6 +14,12 @@ Uygulama tamamen çevrimdışı çalışır. Hesap, reklam ya da internet izni y
   <img src="screenshots/06_levels.png" width="240" alt="Eğitimler, zorluk seviyeleri ve bölüm listesi">
 </p>
 
+## Tanıtım videosu
+
+[![Tanıtım videosundan dört kare: ana ekran, Sudoku, İtiş ve Soroban](media/tanitim_kapak.jpg)](media/clever_place_tanitim.mp4)
+
+[Videoyu izle](media/clever_place_tanitim.mp4) (3 dakika 15 saniye, sessiz). Video 33 oyunu zor bölümlerinde ve küp sayfalarını gösterir; kıraathane oyunları videoda yoktur. Görüntüler ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS ve ffmpeg gerekir).
+
 ## Neler var
 
 - Her gün seçtiğin kategorilerden birer oyun öneren **Günün hedefi**
@@ -105,7 +111,8 @@ Testler:
 | `core/` | Rust çekirdeği: oyun kuralları, bölüm üreticileri, çözücüler |
 | `app/lib/clever/` | Flutter arayüzü: ana ekran, oyun görünümleri, dersler |
 | `app/assets/` | Yazı tipleri, küp verileri, soru bankası, uygulama simgesi |
-| `app/tool/` | Küp karıştırma üreteci ve soru bankası denetim araçları |
+| `app/tool/` | Küp karıştırma üreteci, soru bankası denetim araçları ve tanıtım videosu üreteci |
+| `media/` | Tanıtım videosu ve kapağı |
 
 Uygulama çekirdekle tek bir C işlevi (`cp_call`) üzerinden JSON mesajlarıyla konuşur.
 
