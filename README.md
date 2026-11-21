@@ -120,3 +120,7 @@ Uygulama çekirdekle tek bir C işlevi (`cp_call`) üzerinden JSON mesajlarıyla
 
 - [Cormorant](https://github.com/CatharsisFonts/Cormorant) ve [Jost](https://github.com/indestructible-type/Jost) yazı tipleri, SIL Open Font License 1.1 (`app/assets/fonts/OFL-*.txt`)
 - [three.js](https://github.com/mrdoob/three.js) r128, MIT lisansı (`app/assets/cube/player/three.js.LICENSE.txt`)
+
+## Lisans
+
+MIT; ayrıntı için [`LICENSE`](LICENSE). Yukarıdaki üçüncü taraf bileşenler kendi lisanslarıyla gelir.
