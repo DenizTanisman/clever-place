@@ -1,14 +1,14 @@
 # Clever Place
 
-Clever Place, Android için hazırlanmış bir zekâ ve zihin oyunları koleksiyonu. Mantık bulmacaları, hafıza ve dikkat çalışmaları, tahta oyunları, kıraathane masaları ve zekâ küpü aynı uygulamada toplanıyor. Oyunların kuralları, bölüm üreticileri ve çözücüleri Rust ile yazıldı; arayüz Flutter ile çiziliyor.
+Clever Place is a collection of brain and mind games for Android. Logic puzzles, memory and attention training, board games, coffeehouse tables and a puzzle cube all live in one app. The game rules, level generators and solvers are written in Rust; the interface is drawn with Flutter.
 
-Uygulama tamamen çevrimdışı çalışır. Hesap, reklam ya da internet izni yoktur; ilerlemen yalnızca telefonunda saklanır. Arayüz Türkçe ya da İngilizce olabilir (Ayarlar › Dil); dile bağlı içerikler (dersler, kelime listeleri, sözel sorular, Zihin Aşısı mesajları) her iki dilde de Türkçedir.
+The app works fully offline. There is no account, no ads and no internet permission; your progress is stored only on your phone. The interface can be Turkish or English (Settings › Language); language-bound content (lessons, word lists, verbal questions, Mind Vaccine messages) stays Turkish in both.
 
 <p align="center">
   <a href="media/clever_place_tanitim.mp4"><img src="media/clever_place_tanitim.webp" width="320" alt="Promo video: the home screen, a game page, a level played to its end screen, then 35 games on hard levels and the cube's 3D player"></a>
 </p>
 
-Tanıtım videosu yukarıda kendiliğinden oynar (3 dakika 57 saniye, sessiz, İngilizce arayüzle). Durdurup ileri geri sarmak için [videoyu oynatıcıda aç](media/clever_place_tanitim.mp4). Video önce bir oyunun sayfasını, ardından o oyunun bir bölümünü sonuna kadar ve bölüm sonu ekranını gösterir; sonra 35 oyunu zor bölümlerinde, en sonda küp sayfalarını ve 3B oynatıcıda bir çözümü gösterir. Kıraathane oyunları videoda yoktur.
+The promo video above plays by itself (3 minutes 57 seconds, silent, English interface). To pause and scrub, [open the video in a player](media/clever_place_tanitim.mp4). It first shows a game's page, then one of that game's levels played to the end along with the level end screen; then 35 games on hard levels, and finally the cube pages and a solution in the 3D player. The coffeehouse games are not in the video.
 
 <p align="center">
   <img src="media/01_home.jpg" width="19%" alt="Home screen: today's goal and game cards">
@@ -18,111 +18,111 @@ Tanıtım videosu yukarıda kendiliğinden oynar (3 dakika 57 saniye, sessiz, İ
   <img src="media/05_cube_3d.jpg" width="19%" alt="The 3D cube player solving a Y-perm">
 </p>
 
-Video ve görseller ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar; küpün 3B oynatıcısı (bir web sayfası) tarayıcıda kare kare kaydedilip aynı çerçeveye yerleştirilir. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS, ffmpeg ve Playwright gerekir; Türkçe çekim için `PROMO_LANG=tr`).
+The video and images are not screen recordings: the app's screens are rendered frame by frame in a test environment and the games are played by the core's hints; the cube's 3D player (a web page) is recorded frame by frame in a browser and placed in the same frame. The star and progress numbers on the home screen are sample values. To regenerate: `app/tool/promo/make.sh` (macOS; needs ffmpeg and Playwright; `PROMO_LANG=tr` for a Turkish take).
 
-## Neler var
+## What's inside
 
-- Her gün seçtiğin kategorilerden birer oyun öneren **Günün hedefi**
-- Her oyunun kendi sayfası: bölüm, yıldız ve kademe rekoru; Kolay, Orta, Zor ve Uzman kademeleri; sıradaki bölümü açan düğme. Kurallar ve dersler **Nasıl oynanır** düğmesinin arkasında
-- Bölüm sonu ekranı: yıldızlar, süre, hata ve ipucu; aynı kademedeki son on sürenin grafiği ve yeni rekor
-- Her oyunda kurallar; çoğunda orta ve ileri seviye dersler
-- Birçok oyunda sonsuz, sprint ya da uyarlanır mod
-- Türkçe ya da İngilizce arayüz
+- **Today's goal**, which suggests one game a day from each category you choose
+- A page for every game: level, stars and tier record; Easy, Medium, Hard and Expert tiers; a button that opens the next level. Rules and lessons sit behind the **How to play** button
+- Level end screen: stars, time, mistakes and hints; a chart of the last ten times in the same tier, and new records
+- Rules for every game; intermediate and advanced lessons for most
+- Endless, sprint or adaptive modes in many games
+- Turkish or English interface
 
-## Oyunlar
+## Games
 
-Bu sürümde 7 kategoride **40 oyun** var.
+This release has **40 games** in 7 categories.
 
-### Strateji (7)
+### Strategy (7)
 
-Duvar Yarışı, İtiş, Cırtcak, Surakarta, Düşen Bloklar, Blok Merkezi, Mücevher Birleştir
+Wall Race, Push, Nine Men's Morris, Surakarta, Falling Blocks, Block Grid, Gem Merge
 
-### Hafıza (7)
+### Memory (7)
 
-N-Back, Hafıza Sarayı, Sayı Dizisi, Corsi Blokları, Eşleştirme, Sahne Hafızası, Kelime Listesi
+N-Back, Memory Palace, Digit Span, Corsi Blocks, Pairs, Scene Memory, Word List
 
-### Dikkat (10)
+### Attention (10)
 
-Schulte Tablosu, Renk–Kelime, Çoklu Takip, Dur ya da Geç, Renk Kapıları, Görev Değiştirme, İz Sürme, Hızlı Akış, Değişimi Yakala, Dönen Sayılar
+Schulte Table, Color–Word, Multiple Object Tracking, Go / No-Go, Color Gates, Task Switching, Trail Making, Rapid Stream, Spot the Change, Spinning Numbers
 
-### Mantık bulmacaları (8)
+### Logic puzzles (8)
 
-Sudoku, Taçlar, Güneş & Ay, Shikaku, Renk Tüpleri, Hanoi Kuleleri, IQ Soruları, Sözel ve Sosyal Zeka
+Sudoku, Crowns, Sun & Moon, Shikaku, Color Tubes, Tower of Hanoi, IQ Puzzles, Verbal & Social Intelligence
 
-### Zihin antrenmanı (3)
+### Mind training (3)
 
-Mental Aritmetik, Soroban (Mental Aritmetik sayfasının içinde), Zihin Aşısı (manipülasyon tekniklerini tanıma)
+Mental Arithmetic, Soroban (inside the Mental Arithmetic page), Mind Vaccine (recognizing manipulation techniques)
 
-### Kıraathane oyunları (4)
+### Coffeehouse games (4)
 
-Batak, Okey (101 ve klasik), Blöf, 21
+Batak, Okey (101 and classic), Bluff, Blackjack
 
-### Zeka küpü (1)
+### Puzzle cube (1)
 
-Küp: zamanlayıcı, algoritma defteri, 3B oynatıcı ve kendini sınama
+Cube: timer, algorithm notebook, 3D player and self-testing
 
-## İndir
+## Download
 
-En güncel APK dosyasını [Releases sayfasından](https://github.com/DenizTanisman/clever-place/releases/latest) indirebilirsin. Uygulama 64 bit ARM işlemcili (arm64-v8a) ve Android 7.0 ya da üstü telefonlarda çalışır.
+Get the latest APK from the [Releases page](https://github.com/DenizTanisman/clever-place/releases/latest). The app runs on phones with a 64-bit ARM processor (arm64-v8a) and Android 7.0 or later.
 
-APK nasıl kurulur:
+How to install the APK:
 
-1. Telefonunda Releases sayfasını aç ve `CleverPlace-<sürüm>.apk` dosyasını indir.
-2. İndirilen dosyaya dokun.
-3. Android "bilinmeyen uygulamalar" uyarısı gösterirse **Ayarlar**'a geç ve dosyayı açtığın uygulama (tarayıcı ya da Dosyalar) için **Bu kaynaktan izin ver** seçeneğini aç.
-4. Geri dön ve **Yükle**'ye dokun.
-5. Kurulum bitince bu izni istersen yeniden kapatabilirsin.
+1. Open the Releases page on your phone and download `CleverPlace-<version>.apk`.
+2. Tap the downloaded file.
+3. If Android shows an "unknown apps" warning, go to **Settings** and turn on **Allow from this source** for the app you opened the file with (your browser or Files).
+4. Go back and tap **Install**.
+5. Once it is installed, you can turn that permission off again if you like.
 
-Play Protect uyarı verirse "Yine de yükle" seçeneğiyle devam edebilirsin. APK, Google Play dışından dağıtıldığı için bu uyarı normaldir.
+If Play Protect warns you, continue with "Install anyway". This warning is normal because the APK is distributed outside Google Play.
 
-## Kaynaktan derleme
+## Building from source
 
-Gerekenler:
+Requirements:
 
-- [Flutter](https://docs.flutter.dev/get-started/install) 3.27 ya da üstü
-- [Rust](https://rustup.rs) ve Android hedefi: `rustup target add aarch64-linux-android`
-- Android SDK ve NDK 28.2.13676358
-- JDK 17 ya da üstü
+- [Flutter](https://docs.flutter.dev/get-started/install) 3.27 or later
+- [Rust](https://rustup.rs) and the Android target: `rustup target add aarch64-linux-android`
+- Android SDK and NDK 28.2.13676358
+- JDK 17 or later
 
-Adımlar:
+Steps:
 
 ```sh
-# 1. Rust çekirdeğini derle. Sonuç app/android/app/src/main/jniLibs/ altına kopyalanır.
-#    NDK varsayılan yerde değilse önce ANDROID_NDK_HOME değişkenini ayarla.
+# 1. Build the Rust core. The output is copied to app/android/app/src/main/jniLibs/.
+#    If the NDK is not in its default location, set ANDROID_NDK_HOME first.
 ./core/build_android.sh
 
-# 2. Uygulamayı derle.
+# 2. Build the app.
 cd app
 flutter pub get
 flutter build apk --release --target-platform android-arm64
 ```
 
-APK, `app/build/app/outputs/flutter-apk/app-release.apk` yolunda oluşur. `android/key.properties` dosyası yoksa derleme hata ayıklama anahtarıyla imzalanır. Kendi anahtarınla imzalamak için `app/android/key.properties.template` dosyasındaki adımları izle.
+The APK is written to `app/build/app/outputs/flutter-apk/app-release.apk`. If there is no `android/key.properties` file, the build is signed with the debug key. To sign with your own key, follow the steps in `app/android/key.properties.template`.
 
-Testler:
+Tests:
 
 ```sh
 (cd app && flutter test)
 (cd core && cargo test)
 ```
 
-## Proje yapısı
+## Project structure
 
-| Klasör | İçerik |
+| Folder | Contents |
 | --- | --- |
-| `core/` | Rust çekirdeği: oyun kuralları, bölüm üreticileri, çözücüler |
-| `app/lib/clever/` | Flutter arayüzü: ana ekran, oyun görünümleri, dersler |
-| `app/assets/` | Yazı tipleri, küp verileri, soru bankası, uygulama simgesi |
-| `app/tool/` | Küp karıştırma üreteci, soru bankası denetim araçları ve tanıtım videosu üreteci |
-| `media/` | Tanıtım videosu ve ekran görselleri |
+| `core/` | Rust core: game rules, level generators, solvers |
+| `app/lib/clever/` | Flutter interface: home screen, game views, lessons |
+| `app/assets/` | Fonts, cube data, question bank, app icon |
+| `app/tool/` | Cube scramble generator, question bank checking tools and promo video generator |
+| `media/` | Promo video and screenshots |
 
-Uygulama çekirdekle tek bir C işlevi (`cp_call`) üzerinden JSON mesajlarıyla konuşur.
+The app talks to the core through a single C function (`cp_call`) using JSON messages.
 
-## Üçüncü taraf bileşenler
+## Third-party components
 
-- [Cormorant](https://github.com/CatharsisFonts/Cormorant) ve [Jost](https://github.com/indestructible-type/Jost) yazı tipleri, SIL Open Font License 1.1 (`app/assets/fonts/OFL-*.txt`)
-- [three.js](https://github.com/mrdoob/three.js) r128, MIT lisansı (`app/assets/cube/player/three.js.LICENSE.txt`)
+- [Cormorant](https://github.com/CatharsisFonts/Cormorant) and [Jost](https://github.com/indestructible-type/Jost) fonts, SIL Open Font License 1.1 (`app/assets/fonts/OFL-*.txt`)
+- [three.js](https://github.com/mrdoob/three.js) r128, MIT license (`app/assets/cube/player/three.js.LICENSE.txt`)
 
-## Lisans
+## License
 
-MIT; ayrıntı için [`LICENSE`](LICENSE). Yukarıdaki üçüncü taraf bileşenler kendi lisanslarıyla gelir.
+MIT; see [`LICENSE`](LICENSE) for details. The third-party components above come with their own licenses.
