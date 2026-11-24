@@ -28,7 +28,7 @@ void main() {
   tearDown(() => Progress.clock = DateTime.now);
 
   group('daily picks', () {
-    test('default: one game each from Hafıza, Dikkat, Mantık, and Zihin (Mental Aritmetik)', () {
+    test('default: one game each from Hafıza, Dikkat, Mantık, Zihin (Mental Aritmetik)', () {
       final picks = dailyPicks(_day, DailySettings.defaults);
       expect([for (final k in picks) k.category], [
         GameCategory.memory,
@@ -63,7 +63,7 @@ void main() {
           expect(_ids(dailyPicks(DateTime(2026, 1, 1).add(Duration(days: d)), s)), isNot(contains('soroban')));
         }
       }
-      expect(dailyCandidates(GameCategory.mind).map((g) => g.id), ['math']);
+      expect(dailyCandidates(GameCategory.mind).map((g) => g.id), ['math', 'zihin_asisi']);
     });
 
     test('a limit keeps the draw inside the chosen games', () {
@@ -155,7 +155,7 @@ void main() {
     });
 
     test('Soroban is a section of Mental Aritmetik, not a hub card; its ids are unchanged', () {
-      expect(hubGames(GameCategory.mind).map((g) => g.id), ['math']);
+      expect(hubGames(GameCategory.mind).map((g) => g.id), ['math', 'zihin_asisi']);
       final math = coreGame('math')!;
       expect([for (final s in math.sections) (s.label, s.gameId)], [('Sprint', 'math'), ('Soroban', 'soroban')]);
       final soroban = coreGame('soroban')!;
@@ -209,7 +209,8 @@ void main() {
       // A tall view: the whole page down to the level grid is built without scrolling.
       tester.view.physicalSize = const Size(1290, 9000);
       await tester.pump();
-      Finder levels(int n) => find.textContaining('· 0/$n  ✦');
+      // The page's level count ("0/500" in the numbers row under the title).
+      Finder levels(int n) => find.text('0/$n');
       expect(find.text('Sprint'), findsOneWidget);
       expect(find.text('Soroban'), findsOneWidget);
       // Sprint = the mental arithmetic game itself: its endless sprint and 500 levels.
@@ -264,6 +265,104 @@ void main() {
       expect(p.dailyCategoryNames, isNull);
       expect(DailyMix.today(p).length, 4);
       restore();
+    });
+  });
+
+  group('rotation (no repeat within 3 days, every game within n + 3)', () {
+    // Checks a run of picks of one category: gaps between picks of a game, and that every game
+    // appears in every window of n + 3 consecutive days (counting from the first day).
+    void checkRun(List<String> run, List<String> pool, {String? reason}) {
+      final n = pool.length;
+      final seen = <String, int>{};
+      for (var d = 0; d < run.length; d++) {
+        final id = run[d];
+        expect(pool, contains(id), reason: reason);
+        if (seen[id] case final prev?) {
+          expect(d - prev, greaterThanOrEqualTo(mixMinGap(n)), reason: '$reason: $id on days $prev and $d');
+          expect(d - prev, lessThanOrEqualTo(mixMaxGap(n)), reason: '$reason: $id on days $prev and $d');
+        } else {
+          expect(d, lessThan(mixMaxGap(n)), reason: '$reason: $id first came on day $d');
+        }
+        seen[id] = d;
+      }
+      for (final id in pool) {
+        expect(run.length - 1 - seen[id]!, lessThan(mixMaxGap(n)), reason: '$reason: $id missing at the end');
+      }
+    }
+
+    List<String> simulate(List<String> pool, int days, int salt) {
+      final last = <String, int>{};
+      final run = <String>[];
+      for (var t = 0; t < days; t++) {
+        final id = mixPick(pool: pool, last: last, today: t, start: 0, seed: (t * 2654435761 + salt) & 0x7fffffff);
+        last[id] = t;
+        run.add(id);
+      }
+      return run;
+    }
+
+    test('holds for every category size from 1 to 16 over 400 days', () {
+      for (var n = 1; n <= 16; n++) {
+        final pool = [for (var i = 0; i < n; i++) 'g$i'];
+        for (var salt = 0; salt < 8; salt++) {
+          checkRun(simulate(pool, 400, salt), pool, reason: 'n=$n salt=$salt');
+        }
+      }
+    });
+
+    test('random, not a fixed rotation', () {
+      final pool = [for (var i = 0; i < 8; i++) 'g$i'];
+      final run = simulate(pool, 400, 1);
+      final orders = {for (var c = 0; c + 8 <= run.length; c += 8) run.sublist(c, c + 8).join(',')};
+      expect(orders.length, greaterThan(10), reason: 'the order of the games should keep changing');
+    });
+
+    test('the real hub: all categories on, 500 days through dailyPicks', () {
+      final s = DailySettings(categories: GameCategory.values.toSet());
+      final h = MemoryMixHistory();
+      final runs = <GameCategory, List<String>>{};
+      for (var d = 0; d < 500; d++) {
+        final day = DateTime(2026, 11, 14, 9).add(Duration(days: d));
+        final picks = dailyPicks(day, s, history: h);
+        expect(_ids(dailyPicks(day, s, history: h)), _ids(picks), reason: 'kept for the whole day');
+        for (final k in picks) {
+          (runs[k.category] ??= []).add(k.game.id);
+        }
+      }
+      for (final e in runs.entries) {
+        checkRun(e.value, [for (final g in dailyPool(e.key, s)) g.id], reason: e.key.name);
+      }
+    });
+
+    test('defaults: Zihin is always Mental Aritmetik, never Soroban or Zihin Aşısı', () {
+      final h = MemoryMixHistory();
+      for (var d = 0; d < 60; d++) {
+        final picks = dailyPicks(DateTime(2026, 11, 14).add(Duration(days: d)), DailySettings.defaults, history: h);
+        expect(picks.firstWhere((k) => k.category == GameCategory.mind).game.id, 'math');
+      }
+    });
+
+    test('days the app is not opened do not count', () {
+      const s = DailySettings(categories: {GameCategory.memory});
+      final pool = [for (final g in dailyPool(GameCategory.memory, s)) g.id];
+      final h = MemoryMixHistory();
+      final run = <String>[];
+      var day = DateTime(2026, 11, 14, 9);
+      for (var i = 0; i < 300; i++) {
+        run.add(dailyPicks(day, s, history: h).single.game.id);
+        day = day.add(Duration(days: i % 7 == 3 ? 5 : 1)); // a 4-day break every week
+      }
+      checkRun(run, pool, reason: 'counted over opened days');
+    });
+
+    test('kept on the device: same pick after a reload, history survives a settings reset', () async {
+      final p = await _fresh();
+      final first = _ids(DailyMix.today(p));
+      final again = await Progress.loadFresh();
+      expect(_ids(DailyMix.today(again)), first);
+      await again.resetDaily();
+      expect(_ids(DailyMix.today(again)), first);
+      expect(again.mixLast(GameCategory.memory.name)[first[0]], dayNumber(_day));
     });
   });
 }

@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Renk–Kelime (Stroop) board: a dark ink stage in the middle (fixation cross, then the coloured
@@ -167,13 +168,13 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
     final effect = (st['interference_ms'] as num?)?.toInt();
     final remaining = (st['remaining_ms'] as num?)?.toDouble() ?? 0;
     final limit = (st['limit_ms'] as num?)?.toDouble() ?? 60000;
-    final tf = now - _fbAt;
-    final kick = tf >= 0 && tf < 0.4 ? math.exp(-tf * 8) : 0.0;
+    final since = now - _fbAt;
+    final kick = since >= 0 && since < 0.4 ? math.exp(-since * 8) : 0.0;
 
     final stats = <String>[
-      'Doğru $correct',
-      if (wrong > 0) 'Hata $wrong',
-      if (meanRt != null) 'Ort. $meanRt ms',
+      tf('Doğru {0}', [correct]),
+      if (wrong > 0) tf('Hata {0}', [wrong]),
+      if (meanRt != null) tf('Ort. {0} ms', [meanRt]),
       if (effect != null) 'Stroop ${effect >= 0 ? '+' : '−'}${effect.abs()} ms',
     ];
 
@@ -201,9 +202,9 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
               Transform.scale(
                 scale: 1 + (_fbOk ? 0.12 : 0) * kick,
                 alignment: Alignment.centerLeft,
-                child: Text('${st['score'] ?? 0} puan', style: Lux.ui(19, weight: FontWeight.w700)),
+                child: Text(tf('{0} puan', [st['score'] ?? 0]), style: Lux.ui(19, weight: FontWeight.w700)),
               ),
-              Text('Zorluk ${st['stage'] ?? 1}', style: Lux.ui(12.5, color: Lux.muted)),
+              Text(tf('Zorluk {0}', [st['stage'] ?? 1]), style: Lux.ui(12.5, color: Lux.muted)),
             ],
           ),
         ],
@@ -212,9 +213,9 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
       left = Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Text('Kelime ${math.min(trial + 1, trials ?? 1)} / ${trials ?? '–'}',
+          Text(tf('Kelime {0} / {1}', [math.min(trial + 1, trials ?? 1), trials ?? '–']),
               style: Lux.ui(18, weight: FontWeight.w700)),
-          if (par != null) Text('Hedef ort. $par ms', style: Lux.ui(12.5, color: Lux.muted)),
+          if (par != null) Text(tf('Hedef ort. {0} ms', [par]), style: Lux.ui(12.5, color: Lux.muted)),
         ],
       );
     }
@@ -251,7 +252,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
     final inT = Curves.easeOutBack.transform((tf / 0.18).clamp(0.0, 1.0));
     final out = tf > 1.2 ? (tf - 1.2) / 0.4 : 0.0;
     final color = _fbOk ? Lux.gold : Lux.bordeauxLight;
-    final text = _fbTimeout ? 'Süre!' : (_fbOk ? '$_fbRt ms' : 'Yanlış');
+    final text = _fbTimeout ? t('Süre!') : (_fbOk ? '$_fbRt ms' : t('Yanlış'));
     return SizedBox(
       width: 92,
       height: 34,
@@ -298,7 +299,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
   Widget _stage(Map<String, dynamic> st, double now) {
     final sub = st['sub'] as String?;
     final cue = st['cue'] as String?;
-    final t = (st['t_ms'] as num?)?.toDouble() ?? 0;
+    final tMs = (st['t_ms'] as num?)?.toDouble() ?? 0;
     final deadline = (st['deadline_ms'] as num?)?.toDouble() ?? 1;
     final running = st['phase'] == 'run' && !s.finished;
     final showing = sub == 'stim';
@@ -319,7 +320,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
         final tf = now - _fbAt;
         double opacity = 0, dy = 0, dx = 0, scale = 1;
         if (current) {
-          final inT = Curves.easeOut.transform((t / 70).clamp(0.0, 1.0));
+          final inT = Curves.easeOut.transform((tMs / 70).clamp(0.0, 1.0));
           opacity = inT;
           scale = 0.96 + 0.04 * inT;
         } else if (tf >= 0 && tf < 0.28 && _wordTrial == trial - 1) {
@@ -348,7 +349,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
                   child: Opacity(
                     opacity: opacity.clamp(0.0, 1.0),
                     child: Text(
-                      wm['word'] as String? ?? '',
+                      ct(wm['word'] as String? ?? ''),
                       maxLines: 1,
                       softWrap: false,
                       style: TextStyle(
@@ -406,7 +407,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
                     if (fixing)
                       Center(
                         child: Opacity(
-                          opacity: ((t - 120) / 100).clamp(0.0, 1.0),
+                          opacity: ((tMs - 120) / 100).clamp(0.0, 1.0),
                           child: Text('+',
                               style: Lux.ui(math.min(h, w) * 0.12, color: Lux.muted, weight: FontWeight.w300)),
                         ),
@@ -422,7 +423,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
                       Center(
                         child: Opacity(
                           opacity: (1 - (now - _fbAt) / 0.6).clamp(0.0, 1.0),
-                          child: Text('Süre!', style: Lux.display(34, color: Lux.bordeauxLight)),
+                          child: Text(t('Süre!'), style: Lux.display(34, color: Lux.bordeauxLight)),
                         ),
                       ),
                   ],
@@ -434,7 +435,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
             SizedBox(
               height: 3,
               child: LayoutBuilder(builder: (context, b) {
-                final f = showing ? (1 - t / deadline).clamp(0.0, 1.0) : (running ? 1.0 : 0.0);
+                final f = showing ? (1 - tMs / deadline).clamp(0.0, 1.0) : (running ? 1.0 : 0.0);
                 return Align(
                   alignment: Alignment.center,
                   child: Container(
@@ -468,7 +469,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
         children: [
           Icon(word ? Icons.text_fields_rounded : Icons.water_drop_rounded, size: 17, color: color),
           const SizedBox(width: 6),
-          Text(word ? 'KELİME' : 'RENK', style: Lux.ui(15, color: color, weight: FontWeight.w700, spacing: 2)),
+          Text(word ? t('KELİME') : t('RENK'), style: Lux.ui(15, color: color, weight: FontWeight.w700, spacing: 2)),
         ],
       ),
     );
@@ -638,7 +639,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper(endless ? 'Sprint · 60 sn' : (st['title'] as String? ?? 'Renk–Kelime')),
+                Text(Lux.upper(endless ? t('Sprint · 60 sn') : ct(st['title'] as String? ?? t('Renk–Kelime'))),
                     textAlign: TextAlign.center, style: Lux.display(21, spacing: 1.2)),
                 const SizedBox(height: 14),
                 // The colours in play, each word written in its own ink: a calm preview.
@@ -648,7 +649,7 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
                   runSpacing: 6,
                   children: [
                     for (var i = 0; i < palette.length; i++)
-                      Text(palette[i]['name'] as String,
+                      Text(ct(palette[i]['name'] as String),
                           style: TextStyle(
                               fontFamily: 'Jost', fontSize: 15, fontWeight: FontWeight.w700, color: _inks[i])),
                   ],
@@ -667,12 +668,12 @@ class _StroopBoardState extends State<_StroopBoard> with SingleTickerProviderSta
                               height: 5,
                               decoration: const BoxDecoration(color: Lux.gold, shape: BoxShape.circle)),
                         ),
-                        Expanded(child: Text(l, style: Lux.ui(15.5, weight: FontWeight.w500))),
+                        Expanded(child: Text(ct(l), style: Lux.ui(15.5, weight: FontWeight.w500))),
                       ],
                     ),
                   ),
                 const SizedBox(height: 12),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

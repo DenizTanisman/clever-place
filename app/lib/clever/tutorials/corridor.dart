@@ -12,6 +12,14 @@ const corridorTutorials = GameTutorials(
 - Yüz yüze gelince rakibin üstünden **atlarsın**; arkasında duvar ya da tahta kenarı varsa onun sağ ya da sol çaprazına geçersin.
 - Toplam 200 hamlede kimse varamazsa oyun berabere biter.
 - Yıldızlar: geri alma ve ipucu kullanmadan, sen vardığında rakibin hedefe en az **3 adım** uzaktaysa 3; yardımsız ama daha yakın bir yarışta 2; geri alma ya da ipucu kullandıysan 1 yıldız.''',
+  rulesEn: '''
+- A 9×9 board. You play the **pearl** pawn at the bottom; your goal is to reach the top row (the gold line) **before** your opponent. The opponent's **ruby** pawn starts at the top and races to the bottom row. You move first in odd levels, the opponent in even levels.
+- On each turn, **either** move your pawn one square (forward, back, left or right; it can't go through a wall) **or** place a wall. Drag the pawn or tap a glowing square.
+- You have 10 walls; each is two squares long and sits in the groove between squares. Drag one from the tray and drop it: a green-gold shadow is valid, burgundy is not. Turn it with the round button, by tapping the tray, or by tapping with a **second finger** while dragging.
+- Walls can't overlap or cross each other, and they can't cut off **either pawn's** last path to its goal.
+- When the pawns meet face to face, you **jump** over your opponent; if there is a wall or the board edge behind it, you step to its left or right diagonal instead.
+- If no one gets there within 200 moves in total, the game is a draw.
+- Stars: without undo or hints, and with your opponent at least **3 steps** from its goal when you arrive, 3; without help but in a closer race, 2; if you used undo or a hint, 1 star.''',
   mid: [
     TutorialSection(
       'Yol sayımı',

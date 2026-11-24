@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Shikaku board. Drag from one corner to the opposite corner to draw a rectangle (live preview
@@ -343,11 +344,11 @@ class _ShikakuBoardState extends State<_ShikakuBoard> with SingleTickerProviderS
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Kaplanan', '${st['covered']}/${st['total']}'),
+            _stat(t('Kaplanan'), '${st['covered']}/${st['total']}'),
             const SizedBox(width: 28),
-            _stat('İpucu', '${st['hints']}'),
+            _stat(t('İpucu'), '${st['hints']}'),
             const SizedBox(width: 28),
-            _stat('Hatalı', '${st['mistakes']}'),
+            _stat(t('Hatalı'), '${st['mistakes']}'),
           ],
         ),
         AnimatedSize(
@@ -357,7 +358,7 @@ class _ShikakuBoardState extends State<_ShikakuBoard> with SingleTickerProviderS
               ? const SizedBox(width: double.infinity, height: 8)
               : Padding(
                   padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-                  child: _banner(hint['text'] as String),
+                  child: _banner(ct(hint['text'] as String)),
                 ),
         ),
         Expanded(
@@ -458,10 +459,10 @@ class _ShikakuBoardState extends State<_ShikakuBoard> with SingleTickerProviderS
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al', onPressed: st['can_undo'] == true && !s.finished ? () => s.act({'undo': true}) : null),
+                  tooltip: t('Geri al'), onPressed: st['can_undo'] == true && !s.finished ? () => s.act({'undo': true}) : null),
               const SizedBox(width: 24),
               RimIconButton(Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: doğru bir dikdörtgen', onPressed: s.finished ? null : () => s.act({'hint': true})),
+                  tooltip: t('İpucu: doğru bir dikdörtgen'), onPressed: s.finished ? null : () => s.act({'hint': true})),
             ],
           ),
         ),

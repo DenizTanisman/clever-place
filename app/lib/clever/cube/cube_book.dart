@@ -3,7 +3,7 @@ import 'dart:convert';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/services.dart';
 
-/// Küp Defteri and Tek El Planı, sections of
+/// Küp Defteri and Tek El Planı, made from the HTML lessons by `tool/cube/lessons.py`: sections of
 /// blocks (headings, text, case cards with their diagrams and algorithms …) and the questions.
 class CubeBook {
   static const defter = 'assets/cube/defter.json';

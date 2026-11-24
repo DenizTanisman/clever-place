@@ -8,6 +8,13 @@ const trailTutorials = GameTutorials(
 - Türler: **A** (1, 2, 3… diye), **B** (1-A-2-B-3-C…, Türk alfabesiyle), **ters** (sondan başa), **renkli** (her sayı iki renkte; renk değiştirerek ilerle), **tuzaklı** (dizide olmayan daireler).
 - Saat, geri sayım biter bitmez başlar. Hedef sürenin 3 katında süre dolar ve bölüm kaybedilir.
 - Yıldızlar: hedef sürede ve hatasız 3; hedefin 1,5 katında ve en çok 2 hatayla 2; bitirirsen 1.''',
+  rulesEn: '''
+- Tap the circles in the right order, **one at a time**.
+- When you tap the next circle, the line extends to it from the previous one. Tapping any other circle is a **mistake** and that circle flashes burgundy; **every wrong tap is a separate mistake**.
+- Tapping a circle that is already connected does nothing.
+- Types: **A** (1, 2, 3…), **B** (1-A-2-B-3-C…, in the Turkish alphabet), **reverse** (from last to first), **colored** (each number comes in two colors; alternate colors as you go), **with decoys** (circles that aren't in the sequence).
+- The clock starts as soon as the countdown ends. At 3 times the target time you run out of time and lose the level.
+- Stars: within the target time and without mistakes 3; within 1.5 times the target and at most 2 mistakes 2; finish for 1.''',
   mid: [
     TutorialSection(
       'A ile B: hız ve esneklik',

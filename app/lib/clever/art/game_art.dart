@@ -3,10 +3,12 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'art_attention.dart';
+import 'art_donen_sayilar.dart';
 import 'art_iq.dart';
 import 'art_logic.dart';
 import 'art_memory_cards.dart';
 import 'art_verbal_social.dart';
+import 'art_zihin_asisi.dart';
 
 /// Paints one game's illustration inside the medallion's enamel disc.
 ///
@@ -22,6 +24,8 @@ final Map<String, GameArtPainter> kGameArt = {
   ...memoryCardsArt,
   ...iqArt,
   ...verbalSocialArt,
+  ...zihinAsisiArt,
+  ...donenSayilarArt,
 };
 
 /// The enamel disc of a medallion with the game's illustration on it.

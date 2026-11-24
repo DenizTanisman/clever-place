@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Çoklu Takip: a velvet arena of identical moonstone orbs. The core owns physics and timing; the
@@ -328,15 +329,15 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
                   ),
                 ),
               const SizedBox(width: 6),
-              Text('Tur ${math.min(round, rounds)} / $rounds', style: Lux.ui(15, weight: FontWeight.w600)),
+              Text(tf('Tur {0} / {1}', [math.min(round, rounds), rounds]), style: Lux.ui(15, weight: FontWeight.w600)),
               const Spacer(),
               Text(
                 switch (phase) {
-                  'show' => 'Altınları aklında tut',
-                  'run' => 'İzle',
-                  'recall' => 'Hedefleri seç',
-                  'probe' => 'Rakam',
-                  'feedback' => 'Sonuç',
+                  'show' => t('Altınları aklında tut'),
+                  'run' => t('İzle'),
+                  'recall' => t('Hedefleri seç'),
+                  'probe' => t('Rakam'),
+                  'feedback' => t('Sonuç'),
                   _ => '',
                 },
                 style: Lux.ui(14, color: phase == 'show' ? Lux.goldLight : Lux.muted),
@@ -379,16 +380,16 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
     Color color = Lux.muted;
     switch (phase) {
       case 'show':
-        text = '$k altın küre: hedeflerin bunlar';
+        text = tf('{0} altın küre: hedeflerin bunlar', [k]);
         color = Lux.goldLight;
       case 'run':
         text =
-            st['has_probe'] == true ? 'Hedefleri izle · bir kürede rakam belirecek' : 'Hedefleri izle, gözünü ayırma';
+            st['has_probe'] == true ? t('Hedefleri izle · bir kürede rakam belirecek') : t('Hedefleri izle, gözünü ayırma');
       case 'recall':
-        text = 'Hedefleri seç · $picked / $k';
+        text = tf('Hedefleri seç · {0} / {1}', [picked, k]);
         color = Lux.ink;
       case 'probe':
-        text = 'Hareket sırasında hangi rakam belirdi?';
+        text = t('Hareket sırasında hangi rakam belirdi?');
         color = Lux.ink;
       default:
         text = '';
@@ -412,9 +413,11 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
     final k = (last['k'] as num?)?.toInt() ?? 0;
     final probeOk = last['probe_ok'];
     final perfect = hits == k && probeOk != false;
-    final parts = <String>[perfect ? 'Kusursuz' : '$hits / $k doğru'];
+    final parts = <String>[perfect ? t('Kusursuz') : tf('{0} / {1} doğru', [hits, k])];
     if (probeOk is bool) {
-      parts.add(probeOk ? 'Rakam ${last['digit']} ✓' : 'Rakam ${last['digit']} · sen ${last['answer']}');
+      parts.add(probeOk
+          ? tf('Rakam {0} ✓', [last['digit']])
+          : tf('Rakam {0} · sen {1}', [last['digit'], last['answer']]));
     }
     return Center(
       child: TweenAnimationBuilder<double>(
@@ -460,7 +463,7 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text(Lux.upper('Hangi rakam?'), style: Lux.display(20, spacing: 1.4)),
+              Text(Lux.upper(t('Hangi rakam?')), style: Lux.display(20, spacing: 1.4)),
               const SizedBox(height: 14),
               for (var row = 0; row < 3; row++)
                 Row(
@@ -516,12 +519,17 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
     final n = (st['n'] as num?)?.toInt() ?? 8;
     final secsRaw = _num(st['track_ms'], 5000) / 1000;
     final secs =
-        secsRaw == secsRaw.roundToDouble() ? '${secsRaw.round()}' : secsRaw.toStringAsFixed(1).replaceAll('.', ',');
+        secsRaw == secsRaw.roundToDouble()
+            ? '${secsRaw.round()}'
+            : Lang.en
+                ? secsRaw.toStringAsFixed(1)
+                : secsRaw.toStringAsFixed(1).replaceAll('.', ',');
     final extras = <String>[
       if ((st['occluders'] as List?)?.isNotEmpty == true)
-        'Perde: küreler altın kenarlı bantların arkasından geçer; çıkışı tahmin et.',
-      if (st['lures'] == true) 'Renk tuzağı: bazı küreler bir an renk değiştirir. Aldanma, hedefin değişmez.',
-      if (st['has_probe'] == true) 'Rakam: hareket sırasında bir kürede bir rakam belirir. Seçimden sonra sorulur.',
+        t('Perde: küreler altın kenarlı bantların arkasından geçer; çıkışı tahmin et.'),
+      if (st['lures'] == true) t('Renk tuzağı: bazı küreler bir an renk değiştirir. Aldanma, hedefin değişmez.'),
+      if (st['has_probe'] == true)
+        t('Rakam: hareket sırasında bir kürede bir rakam belirir. Seçimden sonra sorulur.'),
     ];
     final body = Lux.ui(16, weight: FontWeight.w500);
     return TweenAnimationBuilder<double>(
@@ -541,12 +549,12 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper('$k hedef · $n küre'),
+                Text(Lux.upper(tf('{0} hedef · {1} küre', [k, n])),
                     textAlign: TextAlign.center, style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
                 Text(
-                  '$k küre altın parlayacak: onlar hedeflerin. Sonra hepsi aynı görünür ve $secs saniye hareket eder. '
-                  'Durunca $k hedefe dokun.\n4 tur · 4 kusursuz tur 3 yıldız, 3 → 2, 2 → 1.',
+                  tf('{0} küre altın parlayacak: onlar hedeflerin. Sonra hepsi aynı görünür ve {1} saniye hareket eder. Durunca {0} hedefe dokun.\n4 tur · 4 kusursuz tur 3 yıldız, 3 → 2, 2 → 1.',
+                      [k, secs]),
                   textAlign: TextAlign.center,
                   style: body,
                 ),
@@ -555,7 +563,7 @@ class _TrackingBoardState extends State<_TrackingBoard> with SingleTickerProvide
                   Text(e, textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.goldLight)),
                 ],
                 const SizedBox(height: 18),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

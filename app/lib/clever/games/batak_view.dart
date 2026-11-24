@@ -5,6 +5,7 @@ import 'package:flutter/services.dart';
 
 import '../card_kit.dart';
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// İhaleli Batak table: you (South) against three AI opponents.
@@ -27,6 +28,9 @@ import '../lux.dart';
 Widget batakView(BuildContext context, GameSession s) => _BatakTable(key: ObjectKey(s), session: s);
 
 const _names = ['Sen', 'Kerem', 'Selin', 'Murat'];
+
+/// Seat [i]'s name as shown: 'Sen' is translated, the bots keep their names.
+String _name(int i) => t(_names[i]);
 const _suitOrder = [0, 1, 3, 2]; // maça, kupa, sinek, karo: alternating colours in the hand
 const _feltA = Color(0xFF1D6B4C);
 const _feltB = Color(0xFF0B3B29);
@@ -230,8 +234,8 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
         if (seat != 0) HapticFeedback.selectionClick();
         _at(now + 1.55, () {});
       case 'trump':
-        final t = _int(ev['trump']);
-        _bubbles[seat] = ('Koz ${CardKit.suitNames[t]}', now + 1.8);
+        final tr = _int(ev['trump']);
+        _bubbles[seat] = (tf('Koz {0}', [CardKit.suitNames[tr]]), now + 1.8);
         _busyUntil = math.max(_busyUntil, now + 0.6);
         HapticFeedback.lightImpact();
         _at(now + 1.85, () {});
@@ -441,7 +445,7 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
         const SizedBox(width: 6),
         _Pill(
           child: Row(mainAxisSize: MainAxisSize.min, children: [
-            Text('Koz', style: Lux.ui(12, color: Lux.muted)),
+            Text(t('Koz'), style: Lux.ui(12, color: Lux.muted)),
             const SizedBox(width: 6),
             if (trump == null)
               Text('—', style: Lux.ui(14, color: Lux.muted))
@@ -453,7 +457,7 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
         if (decl != null)
           Flexible(
             child: _Pill(
-              child: Text('${_names[_int(decl)]} · ${_int(st['contract'])}',
+              child: Text('${_name(_int(decl))} · ${_int(st['contract'])}',
                   overflow: TextOverflow.ellipsis, style: Lux.ui(13, color: Lux.goldLight)),
             ),
           )
@@ -462,14 +466,14 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
         if (decl != null) const Spacer(),
         _ToolButton(
           icon: _open ? Icons.visibility_rounded : Icons.visibility_off_rounded,
-          tooltip: 'Açık oyna',
+          tooltip: t('Açık oyna'),
           active: _open,
           onTap: () => setState(() => _open = !_open),
         ),
         const SizedBox(width: 6),
         _ToolButton(
           icon: Icons.lightbulb_outline_rounded,
-          tooltip: 'İpucu',
+          tooltip: t('İpucu'),
           busy: _hintBusy,
           onTap: _yourTurn ? _hint : null,
         ),
@@ -522,8 +526,8 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
         child: AnimatedBuilder(
           animation: _pulse,
           builder: (context, _) => _SeatMedal(
-            name: _names[seat],
-            glyph: _names[seat][0],
+            name: _name(seat),
+            glyph: _name(seat)[0],
             breath: thinking ? _pulse.value : 0,
             thinking: thinking,
             badges: _badges(seat),
@@ -542,10 +546,10 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
     final tricks = _int((st['tricks'] as List?)?[seat]);
     final out = <String>[];
     if (phase == 'bid') {
-      if (b != null) out.add(_int(b) == 0 ? 'Pas' : '${_int(b)}');
+      if (b != null) out.add(_int(b) == 0 ? t('Pas') : '${_int(b)}');
     } else {
       final decl = st['declarer'] != null && _int(st['declarer']) == seat;
-      out.add(decl ? '$tricks/${_int(st['contract'])}' : '$tricks el');
+      out.add(decl ? '$tricks/${_int(st['contract'])}' : (Lang.en ? (tricks == 1 ? '1 trick' : '$tricks tricks') : '$tricks el'));
     }
     return out;
   }
@@ -635,10 +639,10 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
       final high = _int(st['high_bid']);
       final hs = st['high_seat'];
       final line = phase == 'trump'
-          ? '${_names[seat]} kozu seçiyor…'
+          ? tf('{0} kozu seçiyor…', [_name(seat)])
           : hs == null
-              ? 'İhale: ${_names[seat]} düşünüyor…'
-              : 'En yüksek: ${_names[_int(hs)]} $high';
+              ? tf('İhale: {0} düşünüyor…', [_name(seat)])
+              : tf('En yüksek: {0} {1}', [_name(_int(hs)), high]);
       return Positioned(
         left: g.center.dx - w / 2,
         top: g.center.dy - 22,
@@ -687,7 +691,7 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
     if (hint is Map && _yourTurn) {
       lines.add(_InfoBox(
         icon: Icons.lightbulb_rounded,
-        text: hint['text'] as String? ?? '',
+        text: ct(hint['text'] as String?),
         gold: true,
       ));
     }
@@ -705,7 +709,7 @@ class _BatakTableState extends State<_BatakTable> with TickerProviderStateMixin 
     }
     if (lines.isEmpty && phase == 'play' && _yourPlay && _table.length < 4) {
       lines.add(Center(
-        child: Text('Sıra sende: kartı masaya sürükle ya da iki kez dokun',
+        child: Text(t('Sıra sende: kartı masaya sürükle ya da iki kez dokun'),
             textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.goldLight.withValues(alpha: 0.85))),
       ));
     }
@@ -1142,7 +1146,7 @@ class _Bubble extends StatelessWidget {
           border: Border.all(color: Lux.gold),
           boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 10, offset: const Offset(0, 4))],
         ),
-        child: Text(text, style: Lux.ui(15, color: text == 'Pas' ? Lux.goldLight : const Color(0xFF2A1D05), weight: FontWeight.w700)),
+        child: Text(t(text), style: Lux.ui(15, color: text == 'Pas' ? Lux.goldLight : const Color(0xFF2A1D05), weight: FontWeight.w700)),
       ),
     );
   }
@@ -1250,10 +1254,10 @@ class _BidPanel extends StatelessWidget {
   Widget build(BuildContext context) {
     final min = options.isEmpty ? 14 : options.first;
     final sub = highSeat == null
-        ? (canPass ? 'Henüz ihale yok · en az 4' : 'Herkes pas dedi: dağıtan olarak en az 4 almalısın')
-        : 'En yüksek: ${_names[highSeat!]} $high · sen en az $min';
+        ? (canPass ? t('Henüz ihale yok · en az 4') : t('Herkes pas dedi: dağıtan olarak en az 4 almalısın'))
+        : tf('En yüksek: {0} {1} · sen en az {2}', [_name(highSeat!), high, min]);
     return _Panel(
-      title: 'İhale',
+      title: t('İhale'),
       subtitle: sub,
       child: Column(
         children: [
@@ -1274,7 +1278,7 @@ class _BidPanel extends StatelessWidget {
           const SizedBox(height: 12),
           SizedBox(
             width: double.infinity,
-            child: _NumButton(label: 'Pas', wide: true, enabled: canPass, hinted: hint == 0, onTap: () => onBid(0)),
+            child: _NumButton(label: t('Pas'), wide: true, enabled: canPass, hinted: hint == 0, onTap: () => onBid(0)),
           ),
         ],
       ),
@@ -1327,8 +1331,8 @@ class _TrumpPanel extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return _Panel(
-      title: 'Kozu seç',
-      subtitle: 'İhale senin. Koz olacak rengi seç — ilk eli sen açarsın.',
+      title: t('Kozu seç'),
+      subtitle: t('İhale senin. Koz olacak rengi seç — ilk eli sen açarsın.'),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
@@ -1354,7 +1358,7 @@ class _TrumpPanel extends StatelessWidget {
                     _SuitIcon(s, size: 34),
                     const SizedBox(height: 4),
                     Text(CardKit.suitNames[s], style: Lux.ui(12.5, color: const Color(0xFF2A1D05), weight: FontWeight.w600)),
-                    Text('${counts[s]} kart', style: Lux.ui(11.5, color: const Color(0xFF6B5A3A))),
+                    Text(Lang.en && counts[s] == 1 ? t('1 kart') : tf('{0} kart', [counts[s]]), style: Lux.ui(11.5, color: const Color(0xFF6B5A3A))),
                   ]),
                 ),
               ),
@@ -1414,18 +1418,18 @@ class _SummaryPanel extends StatelessWidget {
     final batan = {for (final b in (r['batanlar'] as List? ?? const [])) _int(b)};
     final head = Lux.ui(11.5, color: Lux.muted, weight: FontWeight.w600);
     return _Panel(
-      title: '${_int(st['hand_no'])}. el bitti',
-      subtitle: '${_names[d]} · ihale ${_int(r['contract'])} · koz ${CardKit.suitNames[_int(r['trump'])]} · ${made ? 'tuttu' : 'battı'}',
+      title: tf('{0}. el bitti', [_int(st['hand_no'])]),
+      subtitle: tf('{0} · ihale {1} · koz {2} · {3}', [_name(d), _int(r['contract']), CardKit.suitNames[_int(r['trump'])], made ? t('tuttu') : t('battı')]),
       child: Column(children: [
         Table(
           columnWidths: const {0: FlexColumnWidth(1.6), 1: FlexColumnWidth(1), 2: FlexColumnWidth(1), 3: FlexColumnWidth(1.1), 4: FlexColumnWidth(1.1)},
           children: [
             TableRow(children: [
-              Text('Oyuncu', style: head),
-              Text('İhale', style: head, textAlign: TextAlign.center),
-              Text('Aldı', style: head, textAlign: TextAlign.center),
-              Text('Puan', style: head, textAlign: TextAlign.center),
-              Text('Toplam', style: head, textAlign: TextAlign.right),
+              Text(t('Oyuncu'), style: head),
+              Text(t('İhale'), style: head, textAlign: TextAlign.center),
+              Text(t('Aldı'), style: head, textAlign: TextAlign.center),
+              Text(t('Puan'), style: head, textAlign: TextAlign.center),
+              Text(t('Toplam'), style: head, textAlign: TextAlign.right),
             ]),
             for (var i = 0; i < 4; i++)
               TableRow(
@@ -1436,7 +1440,7 @@ class _SummaryPanel extends StatelessWidget {
                 children: [
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: Text(_names[i], style: Lux.ui(14, color: batan.contains(i) ? Lux.bordeauxLight : (i == 0 ? Lux.goldLight : Lux.ink), weight: FontWeight.w600)),
+                    child: Text(_name(i), style: Lux.ui(14, color: batan.contains(i) ? Lux.bordeauxLight : (i == 0 ? Lux.goldLight : Lux.ink), weight: FontWeight.w600)),
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5),
@@ -1462,13 +1466,13 @@ class _SummaryPanel extends StatelessWidget {
         ),
         if (batan.isNotEmpty) ...[
           const SizedBox(height: 8),
-          Text('Batan: ${batan.map((b) => _names[b]).join(', ')}', style: Lux.ui(13, color: Lux.bordeauxLight, weight: FontWeight.w600)),
+          Text(tf('Batan: {0}', [batan.map(_name).join(', ')]), style: Lux.ui(13, color: Lux.bordeauxLight, weight: FontWeight.w600)),
         ],
         const SizedBox(height: 12),
         if (onNext != null)
-          GoldButton('Sonraki el', icon: Icons.arrow_forward_rounded, onPressed: onNext)
+          GoldButton(t('Sonraki el'), icon: Icons.arrow_forward_rounded, onPressed: onNext)
         else
-          Text('Maç bitti', style: Lux.ui(14, color: Lux.goldLight)),
+          Text(t('Maç bitti'), style: Lux.ui(14, color: Lux.goldLight)),
       ]),
     );
   }
@@ -1513,14 +1517,14 @@ class _WhyBox extends StatelessWidget {
         border: Border.all(color: Lux.line),
       ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, mainAxisSize: MainAxisSize.min, children: [
-        Text('NEDEN?', style: Lux.ui(10.5, color: Lux.gold, weight: FontWeight.w700, spacing: 1.6)),
+        Text(t('NEDEN?'), style: Lux.ui(10.5, color: Lux.gold, weight: FontWeight.w700, spacing: 1.6)),
         for (final (seat, text) in entries)
           Padding(
             padding: const EdgeInsets.only(top: 3),
             child: RichText(
               text: TextSpan(children: [
-                TextSpan(text: '${_names[seat]}: ', style: Lux.ui(12, color: seat == latest ? Lux.goldLight : Lux.muted, weight: FontWeight.w700)),
-                TextSpan(text: text, style: Lux.ui(12, color: seat == latest ? Lux.ink : Lux.muted)),
+                TextSpan(text: '${_name(seat)}: ', style: Lux.ui(12, color: seat == latest ? Lux.goldLight : Lux.muted, weight: FontWeight.w700)),
+                TextSpan(text: ct(text), style: Lux.ui(12, color: seat == latest ? Lux.ink : Lux.muted)),
               ]),
             ),
           ),
@@ -1538,9 +1542,9 @@ class _ScoreSheet extends StatelessWidget {
     final rows = st['sheet'] as List? ?? const [];
     final scores = [for (var i = 0; i < 4; i++) _int((st['scores'] as List?)?[i])];
     final head = Lux.ui(12, color: Lux.muted, weight: FontWeight.w600);
-    Widget cell(String t, {Color? color, TextAlign align = TextAlign.center, bool bold = false}) => Padding(
+    Widget cell(String text, {Color? color, TextAlign align = TextAlign.center, bool bold = false}) => Padding(
           padding: const EdgeInsets.symmetric(vertical: 6),
-          child: Text(t, textAlign: align, style: Lux.ui(14, color: color ?? Lux.ink, weight: bold ? FontWeight.w700 : FontWeight.w500)),
+          child: Text(text, textAlign: align, style: Lux.ui(14, color: color ?? Lux.ink, weight: bold ? FontWeight.w700 : FontWeight.w500)),
         );
     return SafeArea(
       top: false,
@@ -1551,9 +1555,9 @@ class _ScoreSheet extends StatelessWidget {
           highlight: true,
           padding: const EdgeInsets.fromLTRB(16, 14, 16, 16),
           child: Column(mainAxisSize: MainAxisSize.min, children: [
-            Text(Lux.upper('Puan cetveli'), style: Lux.display(20)),
+            Text(Lux.upper(t('Puan cetveli')), style: Lux.display(20)),
             const SizedBox(height: 2),
-            Text('${_int(st['target'], 51)} puana ilk ulaşan ya da ${_int(st['max_hands'], 10)} el sonunda en yüksek puan kazanır',
+            Text(tf('{0} puana ilk ulaşan ya da {1} el sonunda en yüksek puan kazanır', [_int(st['target'], 51), _int(st['max_hands'], 10)]),
                 textAlign: TextAlign.center, style: Lux.ui(12.5, color: Lux.muted)),
             const SizedBox(height: 10),
             Flexible(
@@ -1562,8 +1566,8 @@ class _ScoreSheet extends StatelessWidget {
                   columnWidths: const {0: FlexColumnWidth(0.8)},
                   children: [
                     TableRow(children: [
-                      Text('El', style: head),
-                      for (final n in _names) Text(n, style: head, textAlign: TextAlign.center),
+                      Text(t('El'), style: head),
+                      for (var i = 0; i < _names.length; i++) Text(_name(i), style: head, textAlign: TextAlign.center),
                     ]),
                     for (final r in rows.cast<Map>())
                       TableRow(children: [
@@ -1588,9 +1592,9 @@ class _ScoreSheet extends StatelessWidget {
                 ),
               ),
             ),
-            if (rows.isEmpty) Padding(padding: const EdgeInsets.only(top: 8), child: Text('Henüz biten el yok', style: Lux.ui(13, color: Lux.muted))),
+            if (rows.isEmpty) Padding(padding: const EdgeInsets.only(top: 8), child: Text(t('Henüz biten el yok'), style: Lux.ui(13, color: Lux.muted))),
             const SizedBox(height: 6),
-            Text('Parantez: ihale · bordo: batan ihale', style: Lux.ui(11.5, color: Lux.muted)),
+            Text(t('Parantez: ihale · bordo: batan ihale'), style: Lux.ui(11.5, color: Lux.muted)),
           ]),
         ),
       ),

@@ -7,6 +7,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Güneş & Ay board. Tap a cell to cycle empty → sun → moon → empty; long-press clears it.
@@ -356,11 +357,11 @@ class _SunMoonBoardState extends State<_SunMoonBoard> with SingleTickerProviderS
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Dolu', '${st['filled']}/${st['total']}'),
+            _stat(t('Dolu'), '${st['filled']}/${st['total']}'),
             const SizedBox(width: 28),
-            _stat('İpucu', '${st['hints']}'),
+            _stat(t('İpucu'), '${st['hints']}'),
             const SizedBox(width: 28),
-            _stat('Hata', '${st['mistakes']}'),
+            _stat(t('Hata'), '${st['mistakes']}'),
           ],
         ),
         AnimatedSize(
@@ -370,7 +371,7 @@ class _SunMoonBoardState extends State<_SunMoonBoard> with SingleTickerProviderS
               ? const SizedBox(width: double.infinity, height: 8)
               : Padding(
                   padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-                  child: _HintBanner(text: hint['text'] as String),
+                  child: _HintBanner(text: ct(hint['text'] as String)),
                 ),
         ),
         Expanded(
@@ -426,7 +427,7 @@ class _SunMoonBoardState extends State<_SunMoonBoard> with SingleTickerProviderS
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al', onPressed: st['can_undo'] == true && !s.finished
+                  tooltip: t('Geri al'), onPressed: st['can_undo'] == true && !s.finished
                       ? () {
                           _endEdit();
                           s.act({'undo': true});
@@ -434,7 +435,7 @@ class _SunMoonBoardState extends State<_SunMoonBoard> with SingleTickerProviderS
                       : null),
               const SizedBox(width: 24),
               RimIconButton(Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: sıradaki çıkarım', onPressed: s.finished
+                  tooltip: t('İpucu: sıradaki çıkarım'), onPressed: s.finished
                       ? null
                       : () {
                           _endEdit();

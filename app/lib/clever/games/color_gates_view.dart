@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Renk Kapıları: jewel discs slide down gold-inlaid glass rods into jewelled gate rings. The whole
@@ -664,7 +665,7 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
               children: [
                 Text(endless ? '$passed' : '$resolved / $total',
                     style: Lux.numeral(24).copyWith(fontFeatures: const [FontFeature.tabularFigures()])),
-                Text(endless ? 'GEÇEN DİSK' : 'DİSK', style: Lux.ui(10.5, color: Lux.muted, spacing: 1.4)),
+                Text(endless ? t('GEÇEN DİSK') : t('DİSK'), style: Lux.ui(10.5, color: Lux.muted, spacing: 1.4)),
               ],
             ),
           ),
@@ -676,13 +677,13 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
               child: Column(
                 children: [
                   Text('$streak', style: Lux.numeral(20, color: Lux.gold)),
-                  Text('SERİ', style: Lux.ui(10.5, color: Lux.muted, spacing: 1.4)),
+                  Text(t('SERİ'), style: Lux.ui(10.5, color: Lux.muted, spacing: 1.4)),
                 ],
               ),
             ),
           ),
           RimIconButton(_paused ? Icons.play_arrow_rounded : Icons.pause_rounded,
-              tooltip: _paused ? 'Devam' : 'Duraklat',
+              tooltip: _paused ? t('Devam') : t('Duraklat'),
               onPressed: s.finished || _phase != 'run' ? null : () => _setPaused(!_paused)),
         ],
       ),
@@ -719,7 +720,7 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
   }
 
   Widget _introCard(Map<String, dynamic> st) {
-    final notes = [for (final n in st['notes'] as List? ?? const []) n as String];
+    final notes = [for (final n in st['notes'] as List? ?? const []) ct(n as String)];
     final k = (st['k'] as num?)?.toInt() ?? 3;
     final dpr = MediaQuery.devicePixelRatioOf(context);
     final endless = st['mode'] == 'endless';
@@ -740,7 +741,7 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper(endless ? 'Sonsuz yağmur' : (st['title'] as String? ?? 'Renk Kapıları')),
+                Text(Lux.upper(endless ? t('Sonsuz yağmur') : (st['title'] is String ? ct(st['title'] as String) : t('Renk Kapıları'))),
                     textAlign: TextAlign.center, style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
                 for (final n in notes)
@@ -759,7 +760,7 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
                     ),
                   ),
                 const SizedBox(height: 8),
-                Text('KAPI SIRASI', style: Lux.ui(11, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
+                Text(t('KAPI SIRASI'), style: Lux.ui(11, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
                 const SizedBox(height: 8),
                 Row(
                   mainAxisSize: MainAxisSize.min,
@@ -779,7 +780,7 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
                   ],
                 ),
                 const SizedBox(height: 20),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),
@@ -798,9 +799,9 @@ class _ColorGatesState extends State<_ColorGates> with SingleTickerProviderState
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text(Lux.upper('Duraklatıldı'), style: Lux.display(20)),
+            Text(Lux.upper(t('Duraklatıldı')), style: Lux.display(20)),
             const SizedBox(height: 16),
-            GoldButton('Devam', icon: Icons.play_arrow_rounded, onPressed: () => _setPaused(false)),
+            GoldButton(t('Devam'), icon: Icons.play_arrow_rounded, onPressed: () => _setPaused(false)),
           ],
         ),
       ),

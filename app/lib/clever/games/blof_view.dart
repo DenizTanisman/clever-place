@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 
 import '../card_kit.dart';
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Blöf table: you (bottom) against Selin (left), Kerem (top) and Defne (right).
@@ -31,9 +32,12 @@ Widget blofView(BuildContext context, GameSession s) => _BlofTable(key: ObjectKe
 
 const _seatTint = [Color(0xFFC9A24A), Color(0xFF2E8C7A), Color(0xFF9C2B4A), Color(0xFF6A4E9E)];
 
-String _rankName(int r) => switch (r) { 11 => 'Vale', 12 => 'Kız', 13 => 'Papaz', 14 => 'As', _ => '$r' };
+String _rankName(int r) => switch (r) { 11 => t('Vale'), 12 => t('Kız'), 13 => t('Papaz'), 14 => t('As'), _ => '$r' };
 
 int _int(Object? v, [int d = 0]) => (v as num?)?.toInt() ?? d;
+
+/// "3 kart" / "3 cards".
+String _nCards(int n) => Lang.en ? (n == 1 ? '1 card' : '$n cards') : '$n kart';
 
 class _Card {
   final int s, r;
@@ -238,7 +242,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
           });
         }
       case 'challenge':
-        _bubbles[seat] = _Bubble('Blöf!', kind, serial);
+        _bubbles[seat] = _Bubble(t('Blöf!'), kind, serial);
         final rv = ev['reveal'];
         if (rv is Map) {
           _reveal = Map<String, dynamic>.from(rv);
@@ -610,7 +614,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
     final dead = _deadRanks.toList()..sort();
     final burned = _int(st['burned']);
     final last = st['last_play'] as Map?;
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     return [
       // Claim plate.
       Positioned(
@@ -619,14 +623,14 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
         top: g.pile.dy - g.ph * 0.5 - 98,
         child: Column(
           children: [
-            Text(Lux.upper(rank == null ? 'Yeni tur' : 'Söylenen'), style: Lux.ui(11, color: Lux.muted, spacing: 2)),
+            Text(Lux.upper(rank == null ? t('Yeni tur') : t('Söylenen')), style: Lux.ui(11, color: Lux.muted, spacing: 2)),
             const SizedBox(height: 2),
             if (rank != null)
               FoilText(_rankName(rank), style: Lux.display(rank > 10 ? 30 : 36))
             else
-              Text(_canLead ? 'Turu sen açıyorsun' : '—', style: Lux.ui(15, color: Lux.goldLight)),
+              Text(_canLead ? t('Turu sen açıyorsun') : '—', style: Lux.ui(15, color: Lux.goldLight)),
             if (last != null)
-              Text('Son: ${names[_int(last['seat'])]} · ${_int(last['count'])} kart',
+              Text(tf('Son: {0} · {1}', [names[_int(last['seat'])], _nCards(_int(last['count']))]),
                   style: Lux.ui(12, color: Lux.muted)),
           ],
         ),
@@ -653,14 +657,14 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
         top: g.pile.dy + g.ph * 0.62,
         child: Column(
           children: [
-            Text(pileN == 0 ? 'Yığın boş' : 'Yığın: $pileN kart', style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w600)),
+            Text(pileN == 0 ? t('Yığın boş') : tf('Yığın: {0}', [_nCards(pileN)]), style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w600)),
             if (dead.isNotEmpty || burned > 0)
               Padding(
                 padding: const EdgeInsets.only(top: 2),
                 child: Text(
                   [
-                    if (dead.isNotEmpty) 'Ölü: ${dead.map(_rankName).join(', ')}',
-                    if (burned > 0) 'Yanan: $burned',
+                    if (dead.isNotEmpty) tf('Ölü: {0}', [dead.map(_rankName).join(', ')]),
+                    if (burned > 0) tf('Yanan: {0}', [burned]),
                   ].join('  ·  '),
                   style: Lux.ui(11, color: Lux.muted),
                 ),
@@ -691,7 +695,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
   Widget _pileTruth(_Geo g) {
     final pile = (st['pile'] as List?) ?? const [];
     if (pile.isEmpty) return const SizedBox();
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     final rows = pile.length > 2 ? pile.sublist(pile.length - 2) : pile;
     return Padding(
       padding: const EdgeInsets.only(top: 6),
@@ -721,7 +725,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
   // --- Opponent seats.
 
   Widget _seat(_Geo g, int i) {
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     final counts = (st['counts'] as List?) ?? const [0, 0, 0, 0];
     var count = _int(counts[i]);
     final rv = _reveal;
@@ -763,7 +767,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
             ],
           ),
           if (thinking)
-            Text('düşünüyor${'.' * (1 + (_now * 2.5).floor() % 3)}', style: Lux.ui(11, color: Lux.muted)),
+            Text('${t('düşünüyor')}${'.' * (1 + (_now * 2.5).floor() % 3)}', style: Lux.ui(11, color: Lux.muted)),
           if (_showAll && side) Padding(padding: const EdgeInsets.only(top: 4), child: _openHand(i, 5)),
         ],
       ),
@@ -838,7 +842,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
             boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.45), blurRadius: 10, offset: const Offset(0, 4))],
           ),
           child: Text(
-            b.text,
+            ct(b.text),
             style: challenge
                 ? Lux.display(22, color: Colors.white)
                 : Lux.ui(15, color: pass ? Lux.muted : const Color(0xFF2A1D05), weight: FontWeight.w700),
@@ -865,7 +869,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
   // --- Reason ("Neden?") and hint / odds panels at the bottom of the felt.
 
   Widget _bottomPanels(_Geo g) {
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     final ai = _lastAiEvent;
     final reason = ai?['reason'] as String? ?? '';
     final hint = st['hint'] as Map?;
@@ -874,9 +878,9 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
     if (_open && reason.isNotEmpty) {
       panels.add(_panel(
         Text.rich(TextSpan(children: [
-          TextSpan(text: 'Neden? ', style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w700)),
+          TextSpan(text: t('Neden? '), style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w700)),
           TextSpan(text: '${names[_int(ai!['seat'])]}: ', style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w600)),
-          TextSpan(text: reason, style: Lux.ui(13, color: Lux.ink)),
+          TextSpan(text: ct(reason), style: Lux.ui(13, color: Lux.ink)),
         ])),
       ));
     }
@@ -893,13 +897,13 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
                 children: [
                   const Icon(Icons.lightbulb_rounded, size: 15, color: Lux.gold),
                   const SizedBox(width: 6),
-                  Text(Lux.upper(ht != null ? 'Öneri' : 'Olasılık'), style: Lux.ui(11, color: Lux.gold, weight: FontWeight.w700, spacing: 1.6)),
+                  Text(Lux.upper(ht != null ? t('Öneri') : t('Olasılık')), style: Lux.ui(11, color: Lux.gold, weight: FontWeight.w700, spacing: 1.6)),
                   const Spacer(),
                   if (odds != null) _oddsMeter((odds['p_lie'] as num?)?.toDouble() ?? 0, odds['certain'] == true),
                 ],
               ),
               const SizedBox(height: 4),
-              Text(ht ?? ot!, style: Lux.ui(13, color: Lux.ink)),
+              Text(ct(ht ?? ot!), style: Lux.ui(13, color: Lux.ink)),
             ],
           ),
           highlight: true,
@@ -919,7 +923,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
     return Row(
       mainAxisSize: MainAxisSize.min,
       children: [
-        Text('yalan', style: Lux.ui(11, color: Lux.muted)),
+        Text(t('yalan'), style: Lux.ui(11, color: Lux.muted)),
         const SizedBox(width: 5),
         Container(
           width: 64,
@@ -932,7 +936,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
           ),
         ),
         const SizedBox(width: 5),
-        Text(certain ? 'kesin' : '%${(p * 100).round()}', style: Lux.ui(11, color: Lux.goldLight, weight: FontWeight.w700)),
+        Text(certain ? t('kesin') : (Lang.en ? '${(p * 100).round()}%' : '%${(p * 100).round()}'), style: Lux.ui(11, color: Lux.goldLight, weight: FontWeight.w700)),
       ],
     );
   }
@@ -1018,29 +1022,31 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
   }
 
   String _status() {
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     if (s.finished) {
       final w = _int(st['winner'], -1);
-      if (w == 0) return 'Elini bitirdin!';
-      if (w > 0) return '${names[w]} elini bitirdi';
-      return 'Berabere';
+      if (w == 0) return t('Elini bitirdin!');
+      if (w > 0) return tf('{0} elini bitirdi', [names[w]]);
+      return t('Berabere');
     }
     final seat = _int(st['seat']);
     final rank = st['rank'] == null ? null : _rankName(_int(st['rank']));
     final fin = st['final'] == true;
     if (seat != 0 || _aiBusy) {
-      return _thinking ? '${names[seat]} düşünüyor…' : 'Sıra: ${names[seat]}';
+      return _thinking ? tf('{0} düşünüyor…', [names[seat]]) : (Lang.en ? "${names[seat]}'s turn" : 'Sıra: ${names[seat]}');
     }
     if (fin) {
       final last = st['last_play'] as Map?;
-      return '${names[_int(last?['seat'])]} son kartlarını koydu: Blöf! de ya da geç';
+      return tf('{0} son kartlarını koydu: Blöf! de ya da geç', [names[_int(last?['seat'])]]);
     }
     final n = _sel.length;
-    if (n == 0) return 'Sıra sende · $rank: kart seç, Blöf! de ya da pas geç';
-    return '$n kart seçili · "${_claimText(n, _int(st['rank']))}" diye koy';
+    if (n == 0) return tf('Sıra sende · {0}: kart seç, Blöf! de ya da pas geç', [rank]);
+    return tf('{0} kart seçili · "{1}" diye koy', [n, _claimText(n, _int(st['rank']))]);
   }
 
-  String _claimText(int k, int r) => '${const ['Hiç', 'Bir', 'İki', 'Üç', 'Dört'][k.clamp(0, 4)]} tane ${_rankName(r)}';
+  String _claimText(int k, int r) => Lang.en
+      ? '${const ['No', 'One', 'Two', 'Three', 'Four'][k.clamp(0, 4)]} ${_rankName(r)}${k == 1 ? '' : 's'}'
+      : '${const ['Hiç', 'Bir', 'İki', 'Üç', 'Dört'][k.clamp(0, 4)]} tane ${_rankName(r)}';
 
   // --- Your hand.
 
@@ -1120,7 +1126,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
           top: 4,
           child: _CornerButton(
             icon: _open ? Icons.visibility_rounded : Icons.visibility_off_outlined,
-            label: 'Açık oyna',
+            label: t('Açık oyna'),
             on: _open,
             onTap: () {
               HapticFeedback.selectionClick();
@@ -1131,7 +1137,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
         Positioned(
           right: 6,
           top: 4,
-          child: _CornerButton(icon: Icons.history_rounded, label: 'Geçmiş', on: false, onTap: () => _showLog(context)),
+          child: _CornerButton(icon: Icons.history_rounded, label: t('Geçmiş'), on: false, onTap: () => _showLog(context)),
         ),
       ];
 
@@ -1148,10 +1154,10 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
       child: Row(
         children: [
           RimIconButton(_hintMode ? Icons.lightbulb_rounded : Icons.lightbulb_outline_rounded,
-              tooltip: 'İpucu · olasılık', onPressed: s.finished ? null : _hint),
+              tooltip: t('İpucu · olasılık'), onPressed: s.finished ? null : _hint),
           const Spacer(),
           if (_canPass) ...[
-            _PillButton(fin ? 'Geç' : 'Pas', onTap: _pass),
+            _PillButton(fin ? t('Geç') : t('Pas'), onTap: _pass),
             const SizedBox(width: 6),
           ],
           if (_canChallenge) ...[
@@ -1159,14 +1165,14 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
             const SizedBox(width: 6),
           ],
           if ((_canPlay || _canLead) && n > 0)
-            GoldButton(n > 4 ? 'En çok 4' : 'Koy ($n)', onPressed: _playLegal ? () => _play() : null),
+            GoldButton(n > 4 ? t('En çok 4') : tf('Koy ({0})', [n]), onPressed: _playLegal ? () => _play() : null),
         ],
       ),
     );
   }
 
   void _showLog(BuildContext context) {
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     final log = ((st['log'] as List?) ?? const []).reversed.toList();
     final open = _open;
     showModalBottomSheet<void>(
@@ -1178,7 +1184,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
           height: MediaQuery.of(context).size.height * 0.6,
           child: Column(
             children: [
-              const LuxHeading('Geçmiş'),
+              LuxHeading(t('Geçmiş')),
               Expanded(
                 child: ListView.builder(
                   padding: const EdgeInsets.fromLTRB(16, 0, 16, 16),
@@ -1200,10 +1206,10 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(system ? '${l['text']}' : '${names[seat]}: ${l['text']}',
+                          Text(system ? ct('${l['text']}') : '${names[seat]}: ${ct('${l['text']}')}',
                               style: Lux.ui(14, color: color, weight: system ? FontWeight.w500 : FontWeight.w600)),
                           if (open && reason.isNotEmpty && seat != 0)
-                            Text('Neden? $reason', style: Lux.ui(12, color: Lux.muted)),
+                            Text(tf('Neden? {0}', [ct(reason)]), style: Lux.ui(12, color: Lux.muted)),
                         ],
                       ),
                     );
@@ -1245,7 +1251,7 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
 
   List<Widget> _revealWidgets(_Geo g) {
     final rv = _reveal!;
-    final names = (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne'];
+    final names = [for (final nm in (st['names'] as List?)?.cast<String>() ?? const ['Sen', 'Selin', 'Kerem', 'Defne']) ct(nm)];
     final cards = _cards(rv['cards']);
     final rank = _int(rv['rank']);
     final lie = rv['lie'] == true;
@@ -1331,24 +1337,24 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
       ));
     }
     if (ms >= verdictAt) {
-      final t = math.min(1.0, (ms - verdictAt) / 380);
-      final e = Curves.elasticOut.transform(t);
-      final who = taker == 0 ? 'Yığını sen aldın' : 'Yığını ${names[taker]} aldı';
+      final vt = math.min(1.0, (ms - verdictAt) / 380);
+      final e = Curves.elasticOut.transform(vt);
+      final who = taker == 0 ? t('Yığını sen aldın') : tf('Yığını {0} aldı', [names[taker]]);
       out.add(Positioned(
         left: 0,
         right: 0,
         top: rowTop + rh + 10,
         child: IgnorePointer(
           child: Opacity(
-            opacity: t.clamp(0, 1) * (1 - se),
+            opacity: vt.clamp(0, 1) * (1 - se),
             child: Transform.scale(
               scale: 0.6 + 0.4 * e,
               child: Column(
                 children: [
-                  Text(lie ? 'YALAN!' : 'DOĞRU!',
+                  Text(lie ? t('YALAN!') : t('DOĞRU!'),
                       style: Lux.display(34, color: lie ? Lux.bordeauxLight : Lux.goldLight, spacing: 3)
                           .copyWith(shadows: [Shadow(color: (lie ? Lux.bordeaux : Lux.gold).withValues(alpha: 0.9), blurRadius: 18)])),
-                  Text('$who · $count kart', style: Lux.ui(13, color: Lux.ink, weight: FontWeight.w600)),
+                  Text('$who · ${_nCards(count)}', style: Lux.ui(13, color: Lux.ink, weight: FontWeight.w600)),
                 ],
               ),
             ),
@@ -1360,23 +1366,23 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
   }
 
   List<Widget> _burnWidgets(_Geo g) {
-    final t = _burn.value;
+    final bt = _burn.value;
     final n = math.min(_burnN, 6);
     return [
       for (var k = 0; k < n; k++)
         Positioned(
-          left: g.pile.dx - g.pw / 2 + (k - n / 2) * 6 * (1 + t * 3),
-          top: g.pile.dy - g.ph / 2 - t * 50 - k * 3,
-          width: g.pw * (1 - 0.4 * t),
-          height: g.ph * (1 - 0.4 * t),
+          left: g.pile.dx - g.pw / 2 + (k - n / 2) * 6 * (1 + bt * 3),
+          top: g.pile.dy - g.ph / 2 - bt * 50 - k * 3,
+          width: g.pw * (1 - 0.4 * bt),
+          height: g.ph * (1 - 0.4 * bt),
           child: IgnorePointer(
             child: Opacity(
-              opacity: (1 - t).clamp(0, 1),
+              opacity: (1 - bt).clamp(0, 1),
               child: Container(
                 decoration: BoxDecoration(boxShadow: [
-                  BoxShadow(color: const Color(0xFFE08A3C).withValues(alpha: 0.6 * math.sin(math.pi * t)), blurRadius: 18, spreadRadius: 2),
+                  BoxShadow(color: const Color(0xFFE08A3C).withValues(alpha: 0.6 * math.sin(math.pi * bt)), blurRadius: 18, spreadRadius: 2),
                 ]),
-                child: Transform.rotate(angle: (k - n / 2) * 0.2 * t, child: const PlayingCard.back()),
+                child: Transform.rotate(angle: (k - n / 2) * 0.2 * bt, child: const PlayingCard.back()),
               ),
             ),
           ),
@@ -1387,8 +1393,8 @@ class _BlofTableState extends State<_BlofTable> with TickerProviderStateMixin {
         top: g.pile.dy - 12,
         child: IgnorePointer(
           child: Opacity(
-            opacity: math.sin(math.pi * t).clamp(0, 1),
-            child: Text('Yandı', textAlign: TextAlign.center, style: Lux.display(24, color: const Color(0xFFF3B36A))),
+            opacity: math.sin(math.pi * bt).clamp(0, 1),
+            child: Text(t('Yandı'), textAlign: TextAlign.center, style: Lux.display(24, color: const Color(0xFFF3B36A))),
           ),
         ),
       ),
@@ -1456,7 +1462,7 @@ class _BlofButtonState extends State<_BlofButton> with SingleTickerProviderState
                   BoxShadow(color: Lux.bordeaux.withValues(alpha: 0.45 + 0.35 * p), blurRadius: 12 + 10 * p, offset: const Offset(0, 4)),
                 ],
               ),
-              child: Text('Blöf!', style: Lux.display(20, color: Colors.white, spacing: 1)),
+              child: Text(t('Blöf!'), style: Lux.display(20, color: Colors.white, spacing: 1)),
             ),
           ),
         );

@@ -10,6 +10,15 @@ const crownsTutorials = GameTutorials(
 - Yıldızlar: ipucusuz ve en fazla 2 düzeltme 3 · en fazla 1 ipucu ve 6 düzeltme 2 · diğer durumlarda 1. **Düzeltme**, koyduğun bir tacı kaldırmaktır (X'ler serbest).
 
 Her bölümün tek çözümü var ve tahmin gerekmeden çözülür.''',
+  rulesEn: '''
+- The N×N board is divided into N colored **regions**. Place exactly **one crown** in every **row**, every **column** and every **region**. In **double crown** levels that number is **two**.
+- Two crowns can't **touch** — not even diagonally.
+- Tap: empty → X → crown. Drag your finger to put an X on many cells; a drag that starts on an X cell removes Xs.
+- Rule breaks glow burgundy: clashing crowns, and rows, columns and regions with too many crowns or no room left for one.
+- **Hint** explains the next logical step by name and marks it on the board; if there is a wrong crown or X, it fixes that first.
+- Stars: no hints and at most 2 corrections 3 · at most 1 hint and 6 corrections 2 · otherwise 1. A **correction** is removing a crown you placed (Xs are free).
+
+Every level has a single solution and can be solved without guessing.''',
   mid: [
     TutorialSection(
       'Temel eleme ve son yer',

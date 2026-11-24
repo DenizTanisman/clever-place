@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 import 'game_art.dart';
 
-/// Medallion illustrations for: sudoku crowns sun_moon shikaku water_sort hanoi falling_blocks block_grid gem_merge math soroban corridor push morris surakarta cube.
+/// Medallion illustrations for: sudoku crowns sun_moon shikaku water_sort hanoi falling_blocks block_grid gem_merge math soroban corridor push morris surakarta xox cube.
 ///
 /// Every painter draws in a 100 × 100 unit box (centre 50, 50); [_scaled] maps it onto the disc.
 /// Important content stays within ~38 units of the centre, clear of the darkened rim.
@@ -24,6 +24,7 @@ final Map<String, GameArtPainter> logicArt = {
   'push': _scaled(_push),
   'morris': _scaled(_morris),
   'surakarta': _scaled(_surakarta),
+  'xox': _scaled(_xox),
   'cube': _scaled(_cube),
 };
 
@@ -799,6 +800,66 @@ void _surakarta(Canvas c, Color tint) {
   );
   ArtKit.ball(c, o + const Offset(-g, -s / 2), 6, _garnet);
   ArtKit.ball(c, o + const Offset(s / 2, g), 6, ArtKit.ivory);
+}
+
+void _xox(Canvas c, Color tint) {
+  const board = Rect.fromLTWH(21, 21, 58, 58);
+  _plate(c, board, color: const Color(0xFF1A0610), radius: 10);
+  const third = 58 / 3;
+  final grid = Path();
+  for (var i = 1; i < 3; i++) {
+    final v = board.left + i * third;
+    grid
+      ..moveTo(v, board.top + 6)
+      ..lineTo(v, board.bottom - 6)
+      ..moveTo(board.left + 6, v)
+      ..lineTo(board.right - 6, v);
+  }
+  void neon(Path p, Color color, double width) {
+    c.drawPath(
+      p,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = width * 2.2
+        ..strokeCap = StrokeCap.round
+        ..color = color.withValues(alpha: 0.4)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 2.2),
+    );
+    c.drawPath(
+      p,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = width
+        ..strokeCap = StrokeCap.round
+        ..color = color,
+    );
+    c.drawPath(
+      p,
+      Paint()
+        ..style = PaintingStyle.stroke
+        ..strokeWidth = width * 0.35
+        ..strokeCap = StrokeCap.round
+        ..color = Colors.white.withValues(alpha: 0.8),
+    );
+  }
+
+  neon(grid, const Color(0xFFC9A24A), 1.6);
+  Offset cellC(int col, int row) => Offset(board.left + (col + 0.5) * third, board.top + (row + 0.5) * third);
+  Path x(Offset p) {
+    const k = 5.6;
+    return Path()
+      ..moveTo(p.dx - k, p.dy - k)
+      ..lineTo(p.dx + k, p.dy + k)
+      ..moveTo(p.dx + k, p.dy - k)
+      ..lineTo(p.dx - k, p.dy + k);
+  }
+
+  Path ring(Offset p) => Path()..addOval(Rect.fromCircle(center: p, radius: 6.2));
+  const cyan = Color(0xFF4FE3F0);
+  neon(ring(cellC(0, 0)), cyan, 3.0);
+  neon(x(cellC(1, 1)), ArtKit.gold, 3.4);
+  neon(ring(cellC(2, 1)), cyan, 3.0);
+  neon(x(cellC(2, 2)), ArtKit.gold, 3.4);
 }
 
 void _cube(Canvas c, Color tint) {

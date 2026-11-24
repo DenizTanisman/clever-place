@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Draws the text-category layouts of the IQ game: figures whose JSON has a `"layout"` key
@@ -280,7 +281,7 @@ class IqLayout extends StatelessWidget {
         if (json['note'] is String)
           Padding(
             padding: const EdgeInsets.only(top: 2),
-            child: Text(json['note'] as String, style: Lux.ui(12.5, color: Lux.muted)),
+            child: Text(ct(json['note'] as String), style: Lux.ui(12.5, color: Lux.muted)),
           ),
       ],
     );

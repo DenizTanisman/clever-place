@@ -5,12 +5,20 @@ const _band = ['AAABBBCCC', 'AAABBBCCC', 'AAABBBCCC'];
 const sudokuTutorials = GameTutorials(
   rules: '''
 - 1–9 rakamlarını her **satıra**, her **sütuna** ve kalın altın çizgili her **3×3 kutuya** birer kez yerleştir.
-- Bir hücreye dokun, sonra alttan rakamı seç. **Not** açıkken rakamlar küçük kalem notu olur; bir rakam koyduğunda aynı satır, sütun ve kutudaki o rakamın notları kendiliğinden silinir. **Tüm notlar** bütün adayları bir kerede yazar.
+- Bir rakama (alttan ya da tahtadan) dokun, sonra hücrelere: rakam konur, **Not** açıkken not eklenir ya da silinir. Hücre seçimi **uzun basma**yla. Dokuzu yerleşen rakam pasifleşir. **Hızlı doldur** tüm adayları yazar.
 - Yanlış rakam kabul edilir ama bordo görünür ve **hata** sayılır. Kaybetmek yok.
 - **İpucu** bir hücreyi açar ve onu bulduran tekniği adıyla söyler.
 - Yıldızlar: hatasız ve ipuçsuz 3 · en fazla 2 hata ve 1 ipucu 2 · diğer durumlarda 1.
 
 Her bölümün tek çözümü var ve tahmin gerekmeden çözülür. Sağ üstteki etiket (Kolay, Orta, Zor, Uzman, Usta) o bulmacada gereken en zor tekniği gösterir.''',
+  rulesEn: '''
+- Place the digits 1–9 once in every **row**, every **column** and every **3×3 box** with a thick gold border.
+- Tap a digit (below or on the board), then cells: the digit goes in, or with **Notes** on, a note is added or removed. Select a cell with a **long press**. A digit is greyed out once all nine are placed. **Quick fill** writes in every candidate.
+- A wrong digit is accepted but shows in burgundy and counts as a **mistake**. You can't lose.
+- **Hint** reveals a cell and names the technique that finds it.
+- Stars: no mistakes and no hints 3 · at most 2 mistakes and 1 hint 2 · otherwise 1.
+
+Every level has a single solution and can be solved without guessing. The tag at the top right (Easy, Medium, Hard, Expert, Master) shows the hardest technique the puzzle needs.''',
   mid: [
     TutorialSection(
       'Gizli tekli',

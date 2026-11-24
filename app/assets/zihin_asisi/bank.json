@@ -1,0 +1,2423 @@
+{
+ "techniques": [
+  {
+   "id": "duygu",
+   "name": "Duygu Sömürüsü",
+   "what": "Mesaj, bilgi vermek yerine korku veya öfke uyandırmak için yazılır: büyük harfler, ünlemler, “hemen, yoksa çok geç” baskısı.",
+   "why": "Güçlü duygu, durup soru sorma isteğini bastırır. Öfkeli ya da korkmuş insan önce paylaşır, sonra düşünür.",
+   "defense": "Duyguyu fark et, bir nefes al ve sor: Ne olmuş, kim görmüş, nereden biliniyor?"
+  },
+  {
+   "id": "ikilem",
+   "name": "Yanlış İkilem",
+   "what": "Aslında birçok seçenek varken yalnızca iki seçenek varmış gibi gösterilir: “Ya bizdensin ya onlardan.”",
+   "why": "Ara yollar görünmez olunca, kötü seçenekten kaçmak için istenen seçeneğe itilirsin.",
+   "defense": "“Başka hangi seçenekler var?” diye sor. Üçüncü bir yol bulabiliyorsan ikilem yanlıştır."
+  },
+  {
+   "id": "gunah",
+   "name": "Günah Keçisi",
+   "what": "Birçok nedeni olan bir sorunun bütün suçu tek kişiye ya da gruba yıkılır.",
+   "why": "Karmaşık sorunlar yorucudur. Tek bir suçlu, hem kolay bir açıklama hem de öfkeye bir hedef verir.",
+   "defense": "“Bu sorunun başka hangi nedenleri olabilir, bu kişinin payı gerçekten ne kadar?” diye sor."
+  },
+  {
+   "id": "kisisel",
+   "name": "Kişiye Saldırı",
+   "what": "Söylenen şeye cevap vermek yerine söyleyen kişi hedef alınır: geçmişi, görünüşü, kim olduğu.",
+   "why": "Dikkat fikirden kişiye kayar. Kişiyi küçültmek, fikri çürütmüş gibi hissettirir.",
+   "defense": "Kişiyi bir kenara koy: “Söylediği doğru mu?” Ama kişinin çıkarı konuyla ilgiliyse bu meşru bir sorudur."
+  },
+  {
+   "id": "tutarsiz",
+   "name": "Tutarsızlık",
+   "what": "Birbiriyle aynı anda doğru olamayacak iddialar yan yana kullanılır.",
+   "why": "Her iddia ayrı ayrı kulağa inandırıcı gelir. Çok argüman, güçlü bir dava gibi görünür.",
+   "defense": "İddiaları yan yana koy: “İkisi aynı anda doğru olabilir mi?”"
+  },
+  {
+   "id": "kutup",
+   "name": "Kutuplaştırma",
+   "what": "Bir konu iki düşman grubun savaşı gibi anlatılır; farklar büyütülür, ortak noktalar yok sayılır.",
+   "why": "Grup kimliği devreye girince doğruyu aramak yerine kendi tarafını savunmaya başlarsın.",
+   "defense": "“Karşı taraf denen grup gerçekten tek tip mi, neye birlikte razı olabiliriz?” diye sor."
+  },
+  {
+   "id": "komplo",
+   "name": "Komplo Kurgusu",
+   "what": "Olaylar, güçlü bir grubun gizli planı olarak açıklanır. Kanıt yokluğu bile planın kanıtı sayılır.",
+   "why": "Rastlantı ve belirsizlik rahatsız eder. Gizli plan, her şeye anlam veren bir hikâye sunar.",
+   "defense": "“Bunu yanlışlayacak bir kanıt ne olurdu?” diye sor. Cevap “hiçbir şey” ise iddia test edilemiyordur."
+  },
+  {
+   "id": "sahte_uzman",
+   "name": "Sahte Uzman",
+   "what": "Konuyla ilgisi olmayan biri uzman gibi sunulur ya da konunun gerçek uzmanlarının ortak görüşü yok sayılır.",
+   "why": "Unvan ve özgüven, kanıtın yerini tutar gibi gelir. Bir “uzman” bulmak her zaman mümkündür.",
+   "defense": "“Bu kişi tam olarak bu konunun uzmanı mı, alandaki çoğunluk ne diyor?” diye sor."
+  },
+  {
+   "id": "ya_sen",
+   "name": "Ya Sen? Kaçışı",
+   "what": "Bir eleştiriye cevap vermek yerine başka birinin başka bir hatası gösterilir: “Ya onlar ne yaptı?”",
+   "why": "Konu değişir ve eleştiren kişi savunmaya geçer. Asıl soru cevapsız kalır.",
+   "defense": "Diğer konuyu sonraya bırak: “O da konuşulur, ama bu soru hâlâ cevapsız.”"
+  },
+  {
+   "id": "kale",
+   "name": "Kaleyi Kaydırmak",
+   "what": "İstenen kanıt verildikçe ölçüt değiştirilir, kanıt asla yeterli olmaz.",
+   "why": "Her yeni şart makul görünür. Oysa hiçbir kanıtın ikna etmeyeceği bir tartışmaya sürüklenirsin.",
+   "defense": "Baştan sor: “Seni ne ikna ederdi?” Sonra şartın değişip değişmediğine bak."
+  },
+  {
+   "id": "korkuluk",
+   "name": "Korkuluk Dövüşü",
+   "what": "Karşıdakinin söylediği çarpıtılıp daha aptalca bir hâle getirilir ve o hâline saldırılır.",
+   "why": "Çarpıtılmış fikri çürütmek kolaydır, izleyen de asıl fikrin çürütüldüğünü sanır.",
+   "defense": "“Tam olarak bunu mu söyledi?” diye sor. Söyleneni önce aslına uygun şekilde tekrar et."
+  }
+ ],
+ "items": [
+  {
+   "id": "duy-01",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Nihal",
+   "message": "ACİL!!! Çocuklarımız tehlikede! Su deposundaki o korkunç şeyi görseniz uykunuz kaçar. Hemen herkese iletin, sonra çok geç olacak!!!",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Su deposunun ölçüm sonucunu aktarıyor",
+    "Sorunu tek bir komşunun üstüne yıkıyor",
+    "Korkuyu büyütüp düşünmeden yaymanı istiyor",
+    "Sağlam: çocukları düşündüğü için yazmış"
+   ],
+   "answer": 2,
+   "why": "Ne bulunduğu, kimin gördüğü yok; yalnızca korku ve acele var. Güçlü duygu soru sormayı erteletir."
+  },
+  {
+   "id": "duy-02",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "İnanılır gibi değil, kanım dondu! Bu fırının yaptığını duyunca midenizden o ekmek geçmeyecek. Utanç verici, rezalet, iğrenç!",
+   "ask": "Bu mesajda asıl eksik olan ne?",
+   "options": [
+    "Daha sert ve daha güçlü sıfatlar",
+    "Ünlü birinin bu konudaki yorumu",
+    "Ekmek fiyatlarının güncel listesi",
+    "Fırının tam olarak ne yaptığı bilgisi"
+   ],
+   "answer": 3,
+   "why": "“Rezalet, iğrenç” diyor ama ne olduğunu söylemiyor. Duygu kelimeleri bilginin yerini almış."
+  },
+  {
+   "id": "duy-03",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Bunu görmeden sakın uyuma! Bir gecede hepimiz parasız kalabiliriz, bankadakiler bile titriyor. Sessiz kalan pişman olacak!",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Banka hesabını kontrol etmenin yolunu anlatıyor",
+    "Ayrıntı vermeden paniğe itip acele ettiriyor",
+    "Bir uzmanın yazısını kaynağıyla aktarıyor",
+    "Sağlam: herkesi önceden uyarmak istiyor"
+   ],
+   "answer": 1,
+   "why": "“Hepimiz”, “bir gecede”, “pişman olacak”: somut hiçbir şey söylemeden paniği hedefliyor."
+  },
+  {
+   "id": "duy-04",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Yüreğim parçalandı. Yaşlı bir teyzemiz kapı kapı dolaşmış, kimse açmamış. Hâlâ bu grupta sessiz duranlar vicdanlarını sorgulasın.",
+   "ask": "Bu mesajdaki asıl baskı nedir?",
+   "options": [
+    "Doğrulanmamış hikâyeyle suçluluk hissettiriyor",
+    "Yaşlı teyzenin adresini ve durumunu bildiriyor",
+    "Komşuları yardım için bir ekibe davet ediyor",
+    "Olayın iki farklı anlatımını karşılaştırıyor"
+   ],
+   "answer": 0,
+   "why": "Üzücü bir sahne var, ama nerede, kim, ne zaman yok. Soru soran kişi “vicdansız” konumuna düşürülüyor."
+  },
+  {
+   "id": "duy-05",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Arkadaşlar size yalvarıyorum: bu haber sizin için hayat kurtarabilir. Lütfen bir dakikanızı ayırıp 20 kişiye gönderin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Yalvarma ve hayat vurgusuyla yayılmayı istiyor",
+    "Yirmi kişilik bir spor grubu kurmayı öneriyor",
+    "Haberin hangi kurumdan geldiğini açıkça yazıyor",
+    "Sağlam: kibar yazdığı için güvenilirdir"
+   ],
+   "answer": 0,
+   "why": "Duygu sömürüsü her zaman bağırmaz. Asıl haber yokken “hayat kurtarır, 20 kişiye gönder” deniyor."
+  },
+  {
+   "id": "duy-06",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Nihal",
+   "message": "HERKES DİKKAT!!! Asansörde berbat bir şey oluyor, çocuklarınızı sakın bindirmeyin! Yayın yayın yayın!!!",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Ne gördün Nihal? Yönetime bildirilip kontrol edildi mi?",
+    "Aman çok korktum, ben de hemen herkese atıyorum.",
+    "Sen de hep abartırsın, bir sus artık Nihal Hanım.",
+    "Bana ne asansörden, ben merdivenden çıkıyorum zaten."
+   ],
+   "answer": 0,
+   "why": "Endişeyi küçümsemeden somut bilgi istiyor ve resmî kontrolü işaret ediyor. Kişiye saldırmak ya da yaymak işe yaramaz."
+  },
+  {
+   "id": "duy-07",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Bu ürünü kullanan herkes mahvoldu!!! Hemen çöpe atın, sonra ağlamayın!",
+   "ask": "En iyi ilk adım hangisi?",
+   "options": [
+    "Evdeki bütün ürünleri kontrol etmeden çöpe atıvermek",
+    "Hangi ürün ve kim mahvolmuş diye bilgi kaynağını sormak",
+    "Hiçbir şey demeden aile grubundan sessizce çıkıp gitmek",
+    "Ferit'in eski hatalarını gruba tek tek hatırlatmak"
+   ],
+   "answer": 1,
+   "why": "Önce neyin iddia edildiğini netleştirir. Korkuyla atılan adım da, kavga çıkarmak da bilgiyi artırmaz."
+  },
+  {
+   "id": "duy-08",
+   "set": "duygu",
+   "technique": "duygu",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Bu sokağın çocukları için ağlıyorum. Bir imza atmak bu kadar mı zor? Atmayan, bu çocuklara yazık ettiğini bilsin.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Beni tehdit edemezsin, kendi işine baksan daha iyi olur.",
+    "Kaygını anlıyorum. İmza tam neyi istiyor, metni görebilir miyim?",
+    "Haklısın, okumama hiç gerek yok, hemen imzalıyorum ben.",
+    "Çocuklar için ağlıyorsan önce kendi çocuğuna sahip çık."
+   ],
+   "answer": 1,
+   "why": "Duyguyu tanıyor ama karar vermeden önce içeriği istiyor. Suçluluk baskısına ne teslim oluyor ne de saldırıyor."
+  },
+  {
+   "id": "duy-09",
+   "set": "duygu",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Çok üzgünüz: B blok su borusu patladı, bodrum sular altında. Tamirci 16.00'da gelecek, o saate kadar B blokta su kesik. Fotoğraflar ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: üzgün olduğunu söyleyerek etkiliyor",
+    "Sağlam: yönetim yazdığı için kesin doğrudur",
+    "Sağlam: üzgün ama yer, saat ve kanıt belli",
+    "Şüpheli: yönetimin yazdığı hiçbir şeye inanılmaz"
+   ],
+   "answer": 2,
+   "why": "Duygu içermesi tek başına manipülasyon değildir. Burada ne olduğu, nerede, ne zaman ve kanıtı var."
+  },
+  {
+   "id": "duy-10",
+   "set": "duygu",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Eczacı Melike",
+   "message": "Çok endişeliyim, lütfen dikkat: Dün eczanemize gelen bir ilaç kutusunda son kullanma tarihi silinmişti. Tedarikçiye bildirdim, kutunuzdaki tarihi kontrol edin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: “endişeliyim” dediği için korku yayıyor",
+    "Sağlam: eczacı ne derse doğru kabul edilir",
+    "Şüpheli: uyarı içeren her mesaj aslında yalandır",
+    "Sağlam: endişeli ama somut, ölçülü ve yapılabilir"
+   ],
+   "answer": 3,
+   "why": "Kendi gördüğü somut bir durumu anlatıyor ve abartısız bir adım öneriyor. Uyarı veren herkes manipülatör değildir."
+  },
+  {
+   "id": "iki-01",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Ya bu yıl aidatı iki katına çıkarırız ya da site iki yılda çöplüğe döner. Başka yolu yok, karar verin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Birçok yol varken sadece ikisini gösteriyor",
+    "Aidat hesabının ayrıntılı dökümünü paylaşıyor",
+    "Bütün suçu önceki yöneticinin üstüne atıyor",
+    "Sağlam: kararın aciliyetini dürüstçe anlatıyor"
+   ],
+   "answer": 0,
+   "why": "Kısmi artış, gider kısma, ek gelir gibi seçenekler yok sayılmış. “Başka yolu yok” cümlesi tuzağın kendisi."
+  },
+  {
+   "id": "iki-02",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Ya hafta sonu da gelirsin ya da bu ekipte gözün yoktur. Hangisi olduğunu bugün söyle.",
+   "ask": "Bu cümle neyi görünmez kılıyor?",
+   "options": [
+    "Burak'ın ekipteki görev ve sorumluluklarını",
+    "Hafta sonu mesaisinin ne kadar süreceğini",
+    "Başka bir gün çalışma gibi ara seçenekleri",
+    "Bu ekibin geçen ay aldığı olumlu sonuçları"
+   ],
+   "answer": 2,
+   "why": "Bağlılık tek bir davranışa indirgenmiş. Bir kez hayır demek, ekibi önemsememek anlamına gelmez."
+  },
+  {
+   "id": "iki-03",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Parkı ya otoparka çeviririz ya da arabalarımız sokakta sürünmeye devam eder. Parkı seven otoparka imza atmasın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Parka gelenlerin sayısını kanıt olarak sunuyor",
+    "Otopark şirketinin gizli planını açığa çıkarıyor",
+    "Sağlam: mahallenin gerçek sorununu söylüyor",
+    "Sorunu iki uca sıkıştırıp ara çözümü siliyor"
+   ],
+   "answer": 3,
+   "why": "Parkın küçük bir kısmı, başka arsa, düzenli park etme gibi yollar konuşulmuyor. İki uç dışında her şey silinmiş."
+  },
+  {
+   "id": "iki-04",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Dünyada iki tip insan var: bu programa başlayanlar ve hayatı boyunca bahane üretenler. Sen hangisisin?",
+   "ask": "Bu mesajdaki asıl baskı nedir?",
+   "options": [
+    "Programa girmeyeni bahaneci diye etiketliyor",
+    "Programın sonuçlarını sayılarla ortaya koyuyor",
+    "İnsanlara farklı program seçenekleri öneriyor",
+    "Sporun faydalarını araştırmayla açıklıyor"
+   ],
+   "answer": 0,
+   "why": "Başka program, başka zaman ya da hiç istememek de var. Kimlik üzerinden iki kutu sunarak satış yapıyor."
+  },
+  {
+   "id": "iki-05",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Teyze",
+   "message": "Bayramda ya bize gelirsiniz ya da artık aile falan kalmadı demektir, ona göre.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Bayram için net bir saat ve adres veriliyor",
+    "Teyzeye yapılan bir haksızlık anlatılıyor",
+    "Sağlam: aileyi bir arada tutmak istiyor",
+    "Tek ziyaret, ailenin varlığına eşitleniyor"
+   ],
+   "answer": 3,
+   "why": "Başka gün gitmek, aramak ya da yarım gün uğramak mümkün. Sevgi iki uçlu bir teste çevrilmiş."
+  },
+  {
+   "id": "iki-06",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Ya güvenlik kamerasına evet dersiniz ya da hırsıza kapıyı açmış olursunuz.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Haklısın Murat, başka yol yok, ben de hemen evet diyorum o zaman.",
+    "Başka seçenekler de konuşalım: aydınlatma, kilit, sadece giriş kamerası.",
+    "Sen zaten hep böyle saçma sapan şeyler önerirsin, sus artık.",
+    "Hırsız gelirse gelsin, benim evimde çalınacak bir şey yok ki."
+   ],
+   "answer": 1,
+   "why": "İkilemi kabul etmeden seçenekleri çoğaltıyor. Karşıdakini aşağılamıyor, konuyu da kapatmıyor."
+  },
+  {
+   "id": "iki-07",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Bu projeyi ya bu hafta bitiririz ya da hepimiz işsiz kalırız.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Peki, o zaman hepimiz işsiz kalalım, benim umurumda değil.",
+    "Tamam, kimse uyumasın, başka hiçbir seçeneğimiz yok zaten.",
+    "Burak, bu şirkette senin kadar panik yapan biri daha yok.",
+    "Bir kısmını teslim edip kalanına ek süre istemek mümkün mü?"
+   ],
+   "answer": 3,
+   "why": "Ara çözümü somut olarak masaya koyuyor. Ne paniğe katılıyor ne de kişiselleştiriyor."
+  },
+  {
+   "id": "iki-08",
+   "set": "ikilem",
+   "technique": "ikilem",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Teyze",
+   "message": "Ya kardeşinin tarafındasın ya da benim. Ortası yok.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Madem öyle, tamam, kardeşimin tarafındayım, sen de bil artık.",
+    "İkinizi de seviyorum, taraf seçmeden sorunu konuşmak isterim.",
+    "Peki, senin tarafındayım teyze, kardeşimi de hemen ararım.",
+    "Sizin kavganızdan bana ne, beni artık hiç aramayın olur mu?"
+   ],
+   "answer": 1,
+   "why": "İki kutuyu da reddedip üçüncü konumu açıkça söylüyor. Küsmüyor, taraf da seçmiyor."
+  },
+  {
+   "id": "iki-09",
+   "set": "ikilem",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Asansör bakımı için iki teklif aldık: A firması 18.000 TL, B firması 22.000 TL ve iki yıl garantili. Başka teklif bilen varsa cumaya kadar iletsin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: iki seçenek sunmak yanlış ikilemdir",
+    "Sağlam: pahalı olan her zaman daha iyidir",
+    "Sağlam: iki teklif var ama yeni seçeneğe açık",
+    "Şüpheli: fiyat veren herkes kandırmaya çalışır"
+   ],
+   "answer": 2,
+   "why": "İki seçeneği olması ikilem yapmaz. Sorun, başka seçeneklerin yok sayılmasıdır; burada açıkça yeni teklif isteniyor."
+  },
+  {
+   "id": "iki-10",
+   "set": "ikilem",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Doktor Leyla",
+   "message": "Köprü bu gece kapanıyor, yani yarın sabah ya sahil yolunu ya da tüneli kullanmak zorundasınız. Diğer yollar zaten trafiğe kapalı, belediye duyurusu ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: “ya … ya” dediği için yanlış ikilem",
+    "Sağlam: gerçekten iki yol kalmış, kaynağı da var",
+    "Sağlam: doktorlar trafiği en iyi bilen kişilerdir",
+    "Şüpheli: belediye duyuruları her zaman yanıltıcıdır"
+   ],
+   "answer": 1,
+   "why": "“Ya o ya bu” kalıbı tek başına kanıt değil. Seçenekler gerçekten ikiyse ve dayanağı gösteriliyorsa ikilem yanlış değildir."
+  },
+  {
+   "id": "gun-01",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Sitenin bütün sorunlarının sebebi belli: yeni kapıcı. O geldi geleli ne asansör çalışıyor ne bahçe düzgün. Kapıcı giderse her şey düzelir.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Birçok nedeni olan işi tek kişiye yüklüyor",
+    "Asansörün arıza kayıtlarını tarihleriyle sunuyor",
+    "Yalnızca iki seçenek varmış gibi gösteriyor",
+    "Sağlam: sorunlar kapıcıyla aynı anda başladı"
+   ],
+   "answer": 0,
+   "why": "Asansör arızasıyla bahçenin ortak nedeni kapıcı olamaz. Karmaşık bir tablo tek bir hedefe indirilmiş."
+  },
+  {
+   "id": "gun-02",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Mahallenin esnafı neden batıyor biliyor musunuz? Şu kuryeler yüzünden. Onlar olmasa dükkânlar dolup taşardı.",
+   "ask": "Bu açıklamada asıl eksik olan ne?",
+   "options": [
+    "Mahalledeki kuryelerin motor plakaları ve adları",
+    "Kira, ekonomi, alışveriş alışkanlığı gibi nedenler",
+    "Esnafın kuryelere karşı açtığı davaların listesi",
+    "Dükkânların çalışma saatlerine dair kesin bilgiler"
+   ],
+   "answer": 1,
+   "why": "Kurye etkisi olabilir ama tek açıklama olarak sunuluyor. Asıl soru “payı ne kadar?” sorusudur."
+  },
+  {
+   "id": "gun-03",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Satışlar düştü çünkü stajyer o e-postayı yanlış gönderdi. Bütün çeyreği o çocuk mahvetti.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Stajyerin hatasının maliyetini hesaplayıp gösteriyor",
+    "Şirketi gizlice yönetenlerin planını açığa vuruyor",
+    "Büyük bir düşüşü tek bir küçük hataya bağlıyor",
+    "Sağlam: hatayı yapan kişiyi dürüstçe söylüyor"
+   ],
+   "answer": 2,
+   "why": "Bir e-posta çeyreklik satışı tek başına açıklamaz. En zayıf konumdaki kişi kolay hedef olmuş."
+  },
+  {
+   "id": "gun-04",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Ben kimseyi suçlamıyorum ama üst kattaki öğrenciler taşındığından beri su faturası arttı, gürültü arttı, kediler kayboldu. Siz düşünün artık.",
+   "ask": "Yumuşak üsluplu bu mesajın tuzağı ne?",
+   "options": [
+    "Öğrencilerin kira sözleşmesini açıkça tartışıyor",
+    "Su idaresinin zam kararını kaynak göstererek veriyor",
+    "Suçlamıyorum deyip her şeyi öğrencilere bağlıyor",
+    "Kedilerin nerede olduğu konusunda ipucu paylaşıyor"
+   ],
+   "answer": 2,
+   "why": "“Suçlamıyorum” demek suçlamayı silmez. Birlikte görülen olaylar neden-sonuç gibi sunuluyor."
+  },
+  {
+   "id": "gun-05",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Maçı kaybettik, tek sebebi kaleci. Savunma fena değildi, hücum fena değildi, taktik fena değildi. O gol olmasa kazanmıştık.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Maçtaki şut ve pas sayılarını ayrıntılı veriyor",
+    "Diğer hataları silip kaybı kaleciye yıkıyor",
+    "Takımın geçen haftaki galibiyetini kutluyor",
+    "Sağlam: golü yiyen kişiyi doğru belirliyor"
+   ],
+   "answer": 1,
+   "why": "Gol atamamak da kaybın parçası. Başka her etken “fena değildi” denerek masadan kaldırılmış."
+  },
+  {
+   "id": "gun-06",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Otoparktaki çizikler kesin şu yeni kiracının işi. Zaten geldiğinden beri her şey ters.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Evet ya, ben de hep ondan şüpheleniyordum, kapısını çalalım.",
+    "Murat, sen önce kendi arabanı düzgün park etmeyi öğren.",
+    "Çizik dediğin nedir ki, hiç önemsemeyin, unutun gitsin.",
+    "Kamera kaydına bakalım, kanıt olmadan kimseyi suçlamayalım."
+   ],
+   "answer": 3,
+   "why": "Suçlamayı kanıta bağlıyor, kimseyi hedef göstermiyor. Sorunu önemsizleştirmeden doğru yere taşıyor."
+  },
+  {
+   "id": "gun-07",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Müşteri bizi bıraktıysa bunun tek sorumlusu destek ekibidir.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Doğru söylüyorsun Burak, destek ekibini hemen uyarmamız lazım.",
+    "Burak, satış ekibi olarak sizin ne kadar kötü olduğunuz belli.",
+    "Bir müşteri gittiyse gitsin, yenisini buluruz, sorun değil ki.",
+    "Müşterinin ayrılma nedenlerini birlikte çıkaralım, destek de bir parçası."
+   ],
+   "answer": 3,
+   "why": "Destek ekibinin payını inkâr etmeden diğer nedenleri de açıyor. Karşı suçlamaya geçmiyor."
+  },
+  {
+   "id": "gun-08",
+   "set": "gunah",
+   "technique": "gunah",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Parkın bu hâle gelmesinin sebebi akşamları oturan gençler. Onları yasaklarsak park düzelir.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Çöp ve bakım sorunu da var; kuralları herkes için konuşsak?",
+    "Kesinlikle öyle, gençleri parktan atmak için imza toplayalım.",
+    "Sen genç değil misin, biraz kendi evladını düşünsene Selim.",
+    "Park zaten hep böyleydi, konuşmanın bir faydası yok bence."
+   ],
+   "answer": 0,
+   "why": "Birden fazla nedeni gösterip çözümü tek gruba değil, ortak kurala bağlıyor."
+  },
+  {
+   "id": "gun-09",
+   "set": "gunah",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Dün geceki su baskını, tamirci raporuna göre B bloktaki firmanın yanlış bağladığı vanadan kaynaklandı. Firma masrafı üstleneceğini yazılı bildirdi; rapor ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: bir firmayı işaret etmek günah keçisidir",
+    "Sağlam: bir firma suçlandıysa mutlaka suçludur",
+    "Şüpheli: bir suçlu adı geçen her mesaj yalancıdır",
+    "Sağlam: sorumluyu raporla ve kanıtıyla söylüyor"
+   ],
+   "answer": 3,
+   "why": "Sorumlu olanı kanıtla söylemek günah keçisi yapmak değildir. Fark, gerçek bir dayanağın ve sınırlı bir iddianın olmasıdır."
+  },
+  {
+   "id": "gun-10",
+   "set": "gunah",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Teslimat gecikmesinde benim de payım var: siparişi geç girdim. Tedarikçinin stok sorunu ve bayram tatili de etkiledi. Yeni takvimi ekledim.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: kendi payını ve diğer nedenleri sayıyor",
+    "Manipülasyon: tedarikçiyi suçlayarak sıyrılmaya çalışıyor",
+    "Sağlam: hatasını kabul edeni sorgulamak ayıptır",
+    "Şüpheli: hatasını kabul eden biri bir şey saklıyordur"
+   ],
+   "answer": 0,
+   "why": "Birden çok nedeni ölçülü biçimde sayıyor ve kendi payını kabul ediyor. Günah keçisinin tam tersi."
+  },
+  {
+   "id": "kis-01",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Bütçede hata var diyen Sevgi Hanım'a bakın hele, daha kendi arabasını park edemiyor. Böyle birinin hesaptan ne anlayacağını siz söyleyin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Bütçe tablosundaki hatayı satır satır gösteriyor",
+    "Sitenin bütün sorunlarını tek bir komşuya yüklüyor",
+    "Bütçe iddiasını bırakıp Sevgi Hanım'ı küçültüyor",
+    "Sağlam: hesap bilmeyeni uyarması doğaldır"
+   ],
+   "answer": 2,
+   "why": "Bütçede hata var mı sorusu cevapsız kaldı. Park becerisinin hesapla ilgisi yok; dikkat fikirden kişiye kaydırılmış."
+  },
+  {
+   "id": "kis-02",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Toplantı saatini değiştirelim diyen kim? Daha üç aylık çocuk. Önce işi öğrensin, sonra bize akıl versin.",
+   "ask": "Bu mesajda cevapsız kalan ne?",
+   "options": [
+    "Yeni saatin ekibe uyup uymayacağı",
+    "Üç aylık çalışanın tam adı ve unvanı",
+    "Şirketin toplantı odasının kaç kişi aldığı",
+    "Burak'ın geçen yıl çalıştığı projeler"
+   ],
+   "answer": 0,
+   "why": "Önerinin iyi olup olmadığı hiç konuşulmuyor. Kıdemsiz olmak, önerinin yanlış olduğunu göstermez."
+  },
+  {
+   "id": "kis-03",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Isınmadan ağır kaldırmayın demiş Okan. Şu göbekle bir de bize spor öğretiyor, gülmekten öldüm.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Isınmanın faydasını araştırma sonuçlarıyla çürütüyor",
+    "Uyarıya değil Okan'ın görünüşüne saldırıyor",
+    "Okan'a üç farklı program seçeneği sunuyor",
+    "Sağlam: formda olmayan spor anlatamaz"
+   ],
+   "answer": 1,
+   "why": "Isınma uyarısı doğru ya da yanlış olabilir; bunu Okan'ın kilosu belirlemez. Görünüşle alay, cevabın yerine geçmiş."
+  },
+  {
+   "id": "kis-04",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Nurcan Hanım'ı çok severim, altın gibi kadındır, ama biliyorsunuz geçen yıl eşinden ayrıldı, kafası karışık. Aidat itirazını o yüzden çok ciddiye almayalım.",
+   "ask": "Yumuşak üsluplu bu mesajın tuzağı ne?",
+   "options": [
+    "Aidat itirazını madde madde cevaplayıp kapatıyor",
+    "Özel hayatını öne sürüp itirazı değersizleştiriyor",
+    "Aidat artışının bütün suçunu tek bir komşuya bağlıyor",
+    "Nurcan Hanım için destek çağrısı yapıyor"
+   ],
+   "answer": 1,
+   "why": "Övgüyle başlaması saldırıyı gizler. Boşanma, aidat itirazının doğru olup olmadığı hakkında hiçbir şey söylemez."
+  },
+  {
+   "id": "kis-05",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Kaldırımdaki çukuru bildiren Tarık'a kulak asmayın. On yıl önce bakkala borcunu ödememişti. Böylesinin sözü mü olur?",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Çukurun yerini ve boyutunu ölçerek bildiriyor",
+    "Alakasız bir geçmişle ihbarı gözden düşürüyor",
+    "Olayı güçlü birilerinin gizli planı gibi anlatıyor",
+    "Sağlam: geçmişi kötü olanın sözü geçmez"
+   ],
+   "answer": 1,
+   "why": "Eski borç, çukurun var olup olmadığını etkilemez. Gidip bakmak yeterliyken kişinin geçmişi öne sürülüyor."
+  },
+  {
+   "id": "kis-06",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Sen bu sitede daha yeni kiracısın, çöp konteynerleri hakkında konuşmak sana düşmez.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Yeniyim, doğru; ama konteynerler taşıyor, gelin buna bakalım.",
+    "Haklısın Murat, yeniyim, bir daha bu konuda hiç yazmam artık.",
+    "Sen de yıllardır oturuyorsun, bir kere faydan oldu mu Murat?",
+    "Taşıyorsa taşısın, benim derdim değil, kapatalım bu konuyu."
+   ],
+   "answer": 0,
+   "why": "Kişisel yorumu büyütmeden konuyu asıl soruna geri getiriyor. Susmak da karşı saldırı da konteyner sorununu çözmez."
+  },
+  {
+   "id": "kis-07",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Raporda hata bulmuşsun ama sen geçen ay kendi sunumunda rezil olmuştun, hatırlatayım.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Haklısın Burak, bende bu hatayı arayacak yüz yok, unutalım.",
+    "Senin sunumların da herkesin uykusunu getiriyor, onu da konuşalım.",
+    "Bu grupta bir şey söylemek zaten imkânsız, ben çıkıyorum artık.",
+    "Sunumda hatam oldu, doğru. Raporun üçüncü tablosuna bakalım mı?"
+   ],
+   "answer": 3,
+   "why": "Eski hatayı inkâr etmeden tabloya dönüyor. Geçmişteki hata, bugünkü rapor hatasını ortadan kaldırmaz."
+  },
+  {
+   "id": "kis-08",
+   "set": "kisisel",
+   "technique": "kisisel",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Teyze",
+   "message": "Kendi kirasını zor ödeyen çocuk bana tatil sözleşmesinden cayma hakkı anlatıyor. Bir de utanmadan.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Evet teyze, kimim ki ben, nasıl istersen öyle yap sen.",
+    "Sen de hep kandırılırsın teyze, bu yaşta hâlâ öğrenemedin ki.",
+    "Sözleşmen de senin paran da senin, bana hiç sormayın artık.",
+    "Kira başka konu teyze. Sözleşmenin o maddesine birlikte bakalım mı?"
+   ],
+   "answer": 3,
+   "why": "Kırılmadan kişisel yorumu kenara koyuyor, konuyu belgeye getiriyor. Sözleşmenin ne yazdığı, kimin kira ödediğine bağlı değil."
+  },
+  {
+   "id": "kis-09",
+   "set": "kisisel",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Sevgi",
+   "message": "Boya ihalesini öneren Kenan Bey, teklif veren firmanın ortağı; şirket kaydı ekte. Oylamadan çekilmesini ve iki teklif daha alınmasını öneriyorum.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: birinin adını anmak kişiye saldırıdır",
+    "Sağlam: firma ortakları hiçbir zaman doğruyu söylemez",
+    "Şüpheli: belge gösteren mesajlar hep kurgulanmıştır",
+    "Sağlam: konuyla ilgili çıkarı belgeyle gösteriyor"
+   ],
+   "answer": 3,
+   "why": "Ortaklık, ihale kararıyla doğrudan ilgili ve belgeli. Hakaret yok, ölçülü bir önlem isteniyor; bu yüzden meşru bir sorudur."
+  },
+  {
+   "id": "kis-10",
+   "set": "kisisel",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Zeynep",
+   "message": "Cem'in “bu takviyeyi alın” tavsiyesine temkinli yaklaşın: satışından komisyon alıyor, tanıtım sayfasında da yazıyor. Yine de içerik etiketine hep birlikte bakabiliriz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: Cem'in parasından söz etmek saldırıdır",
+    "Sağlam: komisyon alanın ürünü her zaman kötüdür",
+    "Sağlam: komisyon belgeli, ürün de incelemeye açık",
+    "Şüpheli: salondaki hiç kimsenin sözü dinlenmemeli"
+   ],
+   "answer": 2,
+   "why": "Komisyon, tavsiyeyle doğrudan ilgili ve kaynağı gösterilmiş. Ürünü peşinen kötülemiyor; içeriğe bakmayı öneriyor."
+  },
+  {
+   "id": "tut-01",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Yeni yönetici hiçbir iş yapmıyor, bütün gün oturuyor. Üstelik her gün bir şey değiştirip siteyi alt üst etti.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Yöneticinin yaptığı işleri tarihleriyle sıralıyor",
+    "Hem hiç iş yapmıyor hem her şeyi değiştiriyor diyor",
+    "Sitenin tüm sorunlarını eski yöneticiye yüklüyor",
+    "Sağlam: iki ayrı eksikliği dürüstçe sıralıyor"
+   ],
+   "answer": 1,
+   "why": "Hiç iş yapmayan biri aynı anda her gün bir şeyler değiştiremez. İki şikâyet birbirini eliyor."
+  },
+  {
+   "id": "tut-02",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Bu yeni fırının ekmeğini kimse almıyor, tezgâhta kalıyor. Bir de sıra yüzünden sabah sokaktan geçilmiyor, herkes oraya akın etmiş.",
+   "ask": "Bu iki iddianın sorunu ne?",
+   "options": [
+    "Fırının açılış saati hiçbir yerde yazmıyor",
+    "Sıra sokağın yalnızca bir kısmını kapatıyor",
+    "Ekmeğin fiyatı başka fırınlarla kıyaslanmıyor",
+    "Kimse almıyorsa sokağı dolduran sıra olamaz"
+   ],
+   "answer": 3,
+   "why": "Aynı fırın hem müşterisiz hem de akın ediliyor olamaz. İki şikâyet ayrı ayrı inandırıcı görünse de birbirini yalanlıyor."
+  },
+  {
+   "id": "tut-03",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Yeni yazılım o kadar basit ki çocuk bile kullanır, kimseye lazım değil. Zaten o kadar karmaşık ki hiçbirimiz öğrenemeyiz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Yazılımın fiyatını benzerleriyle kıyaslayıp gösteriyor",
+    "Seçenekleri yalnızca ikiye indirerek dayatıyor",
+    "Sağlam: iki ayrı riski birlikte hesaba katıyor",
+    "Yazılımı hem çok basit hem öğrenilemez sayıyor"
+   ],
+   "answer": 3,
+   "why": "Bir yazılım hem çocuk oyuncağı hem de kimsenin öğrenemeyeceği kadar zor olamaz. Karşı çıkmak için iki ters gerekçe toplanmış."
+  },
+  {
+   "id": "tut-04",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Bahçıvan bir ağaç bile budayamıyor, işten anlamıyor. Bir de kurnazlığa bakın, bütün ağaçları ustaca kesip odununu satmış, kimse fark etmemiş.",
+   "ask": "Bu mesaj bahçıvanı nasıl anlatıyor?",
+   "options": [
+    "İş kayıtlarıyla belgelenmiş dikkatli biri olarak",
+    "Budamayı komşulara öğreten bir uzman olarak",
+    "Hem beceriksiz hem de usta bir hırsız olarak",
+    "Komşuların yardımına muhtaç biri olarak"
+   ],
+   "answer": 2,
+   "why": "Ağaç budayamayan biri, kimseye sezdirmeden bütün ağaçları ustaca kesemez. Hangi suçlama işe yararsa o kullanılmış."
+  },
+  {
+   "id": "tut-05",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Veli Grubu · Sibel",
+   "message": "Okulun yeni servis kuralları hiçbir işe yaramayacak, kimse uymayacak zaten. Ama öyle sert ki herkes uymak zorunda kalıp servisi bırakacak.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Servisi bırakan velilerin sayısını tabloyla veriyor",
+    "Kuralların sorumlusu diye tek bir kişiyi gösteriyor",
+    "Sağlam: kurallara iki açıdan itiraz ediyor",
+    "Kurallara hem kimse uymaz hem herkes uyar diyor"
+   ],
+   "answer": 3,
+   "why": "İki sonuç aynı anda gerçekleşemez. İki açıdan itiraz etmekle birbirini çürüten iki iddia öne sürmek aynı şey değil."
+  },
+  {
+   "id": "tut-06",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Yeni güvenlik görevlisi sürekli uyuyor, hiçbir şeyi görmüyor. Bir de herkesin kaçta girdiğini tek tek not alıp bizi gözetliyor.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Haklısın, ikisi de berbat, görevliyi hemen kovduralım gitsin.",
+    "Murat, sen zaten her gün başka bir şeye söylenip durursun.",
+    "Uyuyorsa not alamaz, alıyorsa uyumuyor; hangisini gördün Murat?",
+    "Görevli ne yaparsa yapsın, bu konuyu açmaya bile değmez."
+   ],
+   "answer": 2,
+   "why": "İki iddiayı yan yana koyup somut gözlem istiyor, kişiyi küçültmüyor. Kabul etmek, saldırmak ya da kapatmak çelişkiyi görünmez bırakır."
+  },
+  {
+   "id": "tut-07",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Bu kampanya kimsenin ilgisini çekmeyecek, sıfır sipariş gelir. Üstelik gelecek sipariş yağmuruna depo dayanamaz. Yapmayalım.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Doğru Burak, iki risk de çok büyük, kampanyayı hemen iptal edelim.",
+    "Burak, senin tahminlerine güvenen bu şirkette kalmadı ki.",
+    "Sipariş sıfır mı, çok mu? Tahmini netleştirip öyle karar verelim.",
+    "Kampanya olsa da olmasa da bana fark etmez, siz bilirsiniz."
+   ],
+   "answer": 2,
+   "why": "Çelişkiyi suçlamadan görünür kılıyor ve kararı tek bir tahmine bağlıyor. Birbirini yalanlayan iki risk, karar için dayanak olamaz."
+  },
+  {
+   "id": "tut-08",
+   "set": "tutarsiz",
+   "technique": "tutarsiz",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Yazlık satılmasın, değeri beş kuruş etmez zaten. Bir de o kadar değerli ki komşular gözünü dikmiş, elimizden almak istiyor.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Haklısın Ferit, yazlığı satmayalım, sen bilirsin bu işleri.",
+    "Değersiz mi, çok mu değerli? Ekspertiz alırsak netleşir Ferit.",
+    "Ferit, senin matematiğin hep kötüydü, rakam konuşma bence.",
+    "Satılsın satılmasın beni ilgilendirmez, kendi aranızda çözün."
+   ],
+   "answer": 1,
+   "why": "Çelişkiyi nazikçe gösterip iki iddiayı da sınayacak somut bir adım öneriyor. Ekspertiz, hangisinin doğru olduğunu ortaya çıkarır."
+  },
+  {
+   "id": "tut-09",
+   "set": "tutarsiz",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Bu ay giderler arttı ama kasada geçen aydan daha çok para var: gecikmiş aidatlardan 40.000 TL tahsil edildi. Döküm ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: ikisi birlikte doğru olabilir, nedeni belli",
+    "Manipülasyon: gider artınca kasa artamaz, bu bir çelişki",
+    "Sağlam: kasada para varsa yönetim iyi çalışıyordur",
+    "Şüpheli: para geçen her yönetim mesajı bir şey saklar"
+   ],
+   "answer": 0,
+   "why": "Görünürdeki çelişkiyi tek bir somut neden çözüyor: gecikmiş tahsilat. Giderin artması ile kasanın büyümesi aynı anda olabilir."
+  },
+  {
+   "id": "tut-10",
+   "set": "tutarsiz",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Geçen hafta teklifi desteklemiştim, bugün karşıyım: tedarikçi fiyatı %20 artırdı, yeni teklif ekte. Eski hesabım o fiyata göreydi.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: görüşü yeni ve gösterilen bir bilgiyle değişmiş",
+    "Manipülasyon: iki farklı görüş savunmak tutarsızlıktır",
+    "Sağlam: fikir değiştiren biri her zaman haklıdır",
+    "Şüpheli: geçen haftaya uymayan her söz yalandır"
+   ],
+   "answer": 0,
+   "why": "Tutarsızlık, iki iddiayı aynı anda savunmaktır. Burada önceki görüş, gösterilen yeni fiyat yüzünden açıkça bırakılıyor."
+  },
+  {
+   "id": "kut-01",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Bu sitede artık iki taraf var: A blok ve B blok. B bloktakiler bizi hiç sevmedi, sevmeyecek. Kimin yanında olduğunuzu unutmayın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Blokların aidat borçlarını tablo hâlinde paylaşıyor",
+    "Tüm sorunları asansör firmasına bağlıyor",
+    "Sağlam: bloklar arası farkı açıkça söylüyor",
+    "Komşuları iki düşman kampa ayırıyor"
+   ],
+   "answer": 3,
+   "why": "B bloktaki herkes tek tip bir düşman gibi anlatılıyor. Ortak sorunlar ve aynı fikirde olanlar görünmez kılınmış."
+  },
+  {
+   "id": "kut-02",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Üst mahalleliler bizim sokağın derdini asla anlamaz, bunlar bizden değil. Parkta da pazarda da onlar kazanırsa biz kaybederiz.",
+   "ask": "Bu mesaj neyi yok sayıyor?",
+   "options": [
+    "Üst mahalledeki marketlerin açık olduğu saatleri",
+    "Pazarın hangi gün kurulduğuna dair duyuruyu",
+    "Ortak çıkarları ve üst mahallelilerin farklılığını",
+    "Selim'in geçen yıl taşındığı evin kira bedelini"
+   ],
+   "answer": 2,
+   "why": "Park ve pazar, iki mahallenin de ortak ihtiyacı olabilir. “Onlar kazanırsa biz kaybederiz” ortak kazancı görünmez kılıyor."
+  },
+  {
+   "id": "kut-03",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Satış ekibi ile üretim ekibi asla aynı tarafta olamaz. Onlar bizi batırmak için çalışıyor, biz de artık onlara bilgi vermeyeceğiz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Aynı şirketteki ekipleri düşman taraflara çeviriyor",
+    "Üretim ekibinin geciken işlerini tarihleriyle yazıyor",
+    "Birbirini yalanlayan iki iddiayı yan yana getiriyor",
+    "Sağlam: ekip çıkarlarını korumak için uyarıyor"
+   ],
+   "answer": 0,
+   "why": "Aynı şirketin iki ekibi savaştaki taraflar gibi gösterilmiş. Kanıt yok, üstelik bilgi paylaşmamak iki ekibi de zarara sokar."
+  },
+  {
+   "id": "kut-04",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Sabahçılar disiplinli, akşamcılar sırf fotoğraf çekmeye gelir. Salonda artık gerçek sporcular ve ötekiler var, ben tarafımı seçtim.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Üyeleri saate göre gerçekler ve ötekiler diye ayırıyor",
+    "Sabah derslerinin kontenjanı hakkında ayrıntılı bilgi veriyor",
+    "Akşam saatlerinde salonun dolu olduğunu anlatıyor",
+    "Sağlam: sabahçıların emeğini takdir ediyor"
+   ],
+   "answer": 0,
+   "why": "Saat tercihi, kişinin ciddiyetini göstermez. “Gerçekler ve ötekiler” etiketi, farkı kimlik savaşına çeviriyor."
+  },
+  {
+   "id": "kut-05",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Ortada bir yol bulalım diyenlere de kırgınım. Ev sahipleri ve kiracılar arasında tarafsızlık olmaz; ortacı dediğin, karşı tarafın gizli adamıdır.",
+   "ask": "Bu mesajdaki asıl baskı nedir?",
+   "options": [
+    "Kira artış oranına uyulmasını şart koşuyor",
+    "Kiracıları sözleşme maddesi için uyarıyor",
+    "Apartman toplantısına katılmayı zorunlu tutuyor",
+    "Uzlaşma arayanları bile karşı tarafa yazıyor"
+   ],
+   "answer": 3,
+   "why": "Kutuplaştırma orta yolu da hedef alır. Arabulucu “gizli adam” sayılınca geriye yalnızca iki düşman taraf kalır."
+  },
+  {
+   "id": "kut-06",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "B bloktakilerle oturup konuşmanın anlamı yok, onlar hep karşımızda olacak. Otopark toplantısına gitmiyoruz.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Haklısın Murat, onlarla konuşulmaz, ben de toplantıya gitmiyorum.",
+    "Otopark iki bloğun da derdi; toplantıda ortak kural arasak?",
+    "Murat, sen insanları bölmekten başka hiçbir şey bilmiyorsun ki.",
+    "Otopark dediğin ne ki, hiç toplanmayalım, herkes bildiğini okusun."
+   ],
+   "answer": 1,
+   "why": "Düşman çerçevesini reddedip ortak derde işaret ediyor, Murat'ı da aşağılamıyor. Boykot, kavga ve vazgeçiş sorunu çözmez."
+  },
+  {
+   "id": "kut-07",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Eski çalışanlar yeni gelenlerden nefret ediyor, yeniler de bizi gömmek istiyor. Savaş başladı, tarafını seç.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Tamam Burak, ben eskilerin tarafındayım, yenilerle konuşmam artık.",
+    "Burak, bu kavgayı en çok sen körüklüyorsun, biraz utan artık.",
+    "Herkes aynı düşünmüyor; önce hangi işte anlaşabiliriz, ona bakalım.",
+    "Savaşsa savaşsın, ben işime bakarım, bu grubu sessize aldım."
+   ],
+   "answer": 2,
+   "why": "Grupları tek tip saymayı reddedip ortak zemin arıyor. Taraf seçmek kamplaşmayı büyütür, hakaret de sessize almak da çözüm üretmez."
+  },
+  {
+   "id": "kut-08",
+   "set": "kutup",
+   "technique": "kutup",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Damat tarafıyla gelin tarafı asla anlaşamaz, düğün artık bizim ailenin onur savaşı. Onlara bir santim geri adım yok.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Haklısın Ferit, onlara bir santim bile geri adım atmayalım artık.",
+    "Ferit, bu düğünü en çok senin bu inatçı kafan mahvedecek, haberin olsun.",
+    "Düğüne gelmiyorum, nasıl isterseniz öyle yapın, bu iş kapansın.",
+    "Onlar da tek tip değil; salon ve bütçede neye razı olunur, soralım."
+   ],
+   "answer": 3,
+   "why": "Karşı tarafı tek tip saymayı bırakıp uzlaşılabilecek somut konuya iniyor. Onur savaşı dili kazananı olmayan bir kavga üretir."
+  },
+  {
+   "id": "kut-09",
+   "set": "kutup",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Toplantıda iki görüş çıktı: 14 daire bahçeye oyun alanı, 11 daire otopark istiyor. Bütçe ikisine yetmiyor; ortak öneri varsa cumaya kadar iletin. Tutanak ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: iki grup saymak siteyi kutuplaştırmaktır",
+    "Sağlam: ayrışmayı sayıyla aktarıyor, ortak öneri arıyor",
+    "Sağlam: çoğunluk ne isterse doğrusu odur",
+    "Şüpheli: fikir ayrılığı bildiren her mesaj kışkırtmadır"
+   ],
+   "answer": 1,
+   "why": "Gerçek bir görüş ayrılığını saymak kutuplaştırma değildir. Düşman dili yok, sayı ve tutanak var, üstelik ortak çözüm aranıyor."
+  },
+  {
+   "id": "kut-10",
+   "set": "kutup",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Komşular · Aylin",
+   "message": "Ev sahipleriyle kiracıların bu konuda çıkarları gerçekten farklı: taslaktaki kira artış maddesi birine yarar, diğerine zarar. İki taraftan birer temsilciyle maddeyi konuşalım; taslak ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: taraflardan söz etmek zaten kutuplaştırmadır",
+    "Sağlam: çıkar farkını sınırlı anlatıp masaya çağırıyor",
+    "Sağlam: kiracılar bu tür işlerde hep haklıdır",
+    "Şüpheli: taslak ekleyen herkes bir oyun peşindedir"
+   ],
+   "answer": 1,
+   "why": "Gerçek çıkar farkı tek bir maddeyle sınırlı tutuluyor, taraflar düşman gibi gösterilmiyor ve birlikte çözüm öneriliyor."
+  },
+  {
+   "id": "kom-01",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Asansör üç kez arızalandı. Bu tesadüf olamaz: yönetimle tamirci anlaşmış, bizi bıktırıp daireleri ucuza kapatacaklar. Kanıt mı? Zaten kanıt bırakmazlar.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Arızayı gizli plana bağlıyor, kanıtsızlığı delil sayıyor",
+    "Asansör arızalarının servis kayıtlarını tarihleriyle paylaşıyor",
+    "Komşuları iki düşman kampa ayırarak kışkırtıyor",
+    "Sağlam: üç arıza bir planı açıkça gösterir"
+   ],
+   "answer": 0,
+   "why": "Eskimiş bir parça da üç arızayı açıklayabilir. “Kanıt bırakmazlar” dendiği anda hiçbir kanıt iddiayı çürütemez hâle gelir."
+  },
+  {
+   "id": "kom-02",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Çukurlar neden hep bizim sokakta? Biri bizi buradan çıkarmak istiyor. Sokağın altında bir şey var, üstünü örtüyorlar. Uyanın artık.",
+   "ask": "Bu açıklamada asıl eksik olan ne?",
+   "options": [
+    "Sokaktaki çukurların tam sayısı ve derinliği",
+    "Planı kimin, nasıl yaptığına dair kanıt",
+    "Selim'in bu sokakta oturduğu yıl sayısı",
+    "Mahalle temsilcisinin telefon numarası ve adresi"
+   ],
+   "answer": 1,
+   "why": "“Biri” ve “bir şey” dışında somut bilgi yok. Yağmur ya da eski altyapı gibi sıradan açıklamalar anılmıyor bile."
+  },
+  {
+   "id": "kom-03",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Salonun kapanış saatini değiştirdiler, çünkü bir grup gizlice akşam üyelerini başka salona aktarıyor. Soran olursa “bakım” derler, işte asıl delil o.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Salonun bakım programını kaynağıyla açıklıyor",
+    "Bütün suçu tek bir antrenörün üstüne atıyor",
+    "Saat değişikliğini plana, inkârı da delile çeviriyor",
+    "Sağlam: bakım bahanesi planın varlığını açıkça kanıtlar"
+   ],
+   "answer": 2,
+   "why": "“Bakım” açıklaması doğru da olabilir. Her cevabın delil sayılması, iddiayı sınanamaz kılar."
+  },
+  {
+   "id": "kom-04",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Burak",
+   "message": "Üst kata yeni kahve makinesi gelmiş. Bütçe kısıtı yalan, küçük bir grup maaşları dondurup parayı paylaşıyor. Kimse konuşamıyor, çünkü konuşanı işten atarlar.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Maaş kararının yazılı gerekçesini ekleyip paylaşıyor",
+    "Bütçeyi iki ihtimale indirerek seçime zorluyor",
+    "Sağlam: çalışanlar konuşamadığı için doğru olmalı",
+    "Küçük bir gözlemden plan kurup sessizliği delil yapıyor"
+   ],
+   "answer": 3,
+   "why": "Kahve makinesi maaş planını göstermez. Kimsenin doğrulamaması bile iddianın lehine sayıldığı için hiçbir kanıt onu çürütemez."
+  },
+  {
+   "id": "kom-05",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Merak ediyorum sadece: su kesintileri neden hep toplantıdan önce oluyor? Belki tesadüftür, ama bazıları bizi susturmak istiyor olabilir. Siz de düşünün.",
+   "ask": "Soru gibi duran bu mesaj ne yapıyor?",
+   "options": [
+    "Su kesintisi kayıtlarını toplantılarla kıyaslıyor",
+    "Apartman yöneticisinin geçmişiyle alay ediyor",
+    "Kanıtsız bir plan şüphesini soru gibi yayıyor",
+    "Komşuları bir sonraki toplantıya davet ediyor"
+   ],
+   "answer": 2,
+   "why": "“Merak ediyorum” kalıbı sorumluluk almadan iddia yayar. Kayıtlara bakarak sınanabilecek bir konu, imayla bırakılmış."
+  },
+  {
+   "id": "kom-06",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Bahçedeki yeni direk kesin bizi dinliyor. Yönetim reddediyor ya, demek ki doğru.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Aman Murat, haklısın, hepimiz dinleniyoruz, evde konuşmayalım.",
+    "Murat, sen komplo filmlerinden kafayı yemişsin, git dinlen biraz.",
+    "Direk neyse ne, önemli değil, bu konuyu burada bırakalım lütfen.",
+    "Direğin ruhsatını isteyelim; sence hangi belge şüpheyi giderir?"
+   ],
+   "answer": 3,
+   "why": "Alay etmeden iddiayı sınanabilir hâle getiriyor. “Seni ne ikna ederdi?” sorusu, test edilmeyen iddiayı görünür kılar."
+  },
+  {
+   "id": "kom-07",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Bu mahalledeki kaldırım işini kim aldıysa arkasında büyük bir el var. Araştırmıyorsunuz, çünkü sizi de kandırdılar.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Hangi firma aldıysa ihale kaydına bakalım; bulduğumuzu paylaşırız.",
+    "Haklısın Selim, arkasında büyük bir el var, herkese hemen haber verelim.",
+    "Selim, sen her kaldırım taşında düşman görecek kadar boşsun.",
+    "Kaldırım için kim uğraşacak, bırakın, nasılsa hiçbir şey değişmez."
+   ],
+   "answer": 0,
+   "why": "“Kandırıldınız” imasına kapılmadan kontrol edilebilir bir kaynağa gidiyor. Kimseyi küçültmeden iddiayı kayda bağlıyor."
+  },
+  {
+   "id": "kom-08",
+   "set": "komplo",
+   "technique": "komplo",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Okul kermesindeki çekilişi hep aynı aile kazanıyor, her şey önceden ayarlanmış. İnanmıyorsan senin de gözünü boyamışlar demektir.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Haklısın Ferit, kesin ayarlıdır, bu kermese bir daha gitmeyelim.",
+    "Kaç çekilişte kim kazandı, sayalım; inanmamam delil olmaz.",
+    "Ferit, çekilişi kazanamadın diye bütün bu hikâyeyi uyduruyorsun.",
+    "Çekilişe takılacak kadar boş değilim, lütfen bu konuyu kapatalım."
+   ],
+   "answer": 1,
+   "why": "“İnanmıyorsan kandırılmışsın” tuzağını reddediyor ve iddiayı saymakla sınanabilir hâle getiriyor. Kimseyi aşağılamıyor."
+  },
+  {
+   "id": "kom-09",
+   "set": "komplo",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Denetim Kurulu",
+   "message": "Denetim sonucu: eski yönetici iki faturayı çift ödemiş, 18.400 TL. Banka dekontları ve yazılı savunma ekte; kurul geri ödeme istiyor, genel kurula sunulacak.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: yöneticiyi suçlamak her zaman komplodur",
+    "Sağlam: denetim kurulu hiçbir zaman yanılmaz",
+    "Şüpheli: para usulsüzlüğü anlatan her mesaj aslında kurgudur",
+    "Sağlam: usulsüzlüğü belgeyle, sınırlı iddiayla anlatıyor"
+   ],
+   "answer": 3,
+   "why": "Gizli dev plan yok; belli bir işlem, tutar, dekont ve savunma var. Usulsüzlükler gerçekten olur ve belgeyle anlatılabilir."
+  },
+  {
+   "id": "kom-10",
+   "set": "komplo",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Üç tedarikçi teklifleri gizlice aralarında paylaştırmış: yazışmalar iç denetimde ortaya çıktı, üçü de yazılı olarak kabul etti. Rapor ekte; ihale yenileniyor.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: gizli anlaşma yazışma ve itirafla belgelenmiş",
+    "Manipülasyon: gizli anlaşma demek komplo kurmaktır",
+    "Sağlam: iş yerinde her tedarikçi hile yapar",
+    "Şüpheli: denetim raporları hep birini korumak içindir"
+   ],
+   "answer": 0,
+   "why": "Gizli anlaşmalar bazen gerçektir; fark, iddianın yazışma ve kabulle kanıtlanmış ve sınanabilir olmasıdır."
+  },
+  {
+   "id": "uzm-01",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Kayınbiraderim sosyoloji profesörü, o dedi: bu binanın kolonları çatlamaz, güçlendirmeye gerek yok. Profesör söylüyorsa bitmiştir, mühendis raporuna para harcamayalım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Kolonların ölçüm sonuçlarını raporla gösteriyor",
+    "Bütün suçu binayı yapan müteahhide yıkıyor",
+    "Sağlam: profesör unvanı derin bilgi birikimi demektir",
+    "Başka alanın unvanını yapı konusunda kanıt sayıyor"
+   ],
+   "answer": 3,
+   "why": "Sosyoloji bilgisi kolon dayanımını ölçmez. Unvan, mühendis raporunun yerine konmuş."
+  },
+  {
+   "id": "uzm-02",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Kombiye yıllık bakım gereksizmiş! Televizyondaki ünlü aşçı anlattı, servisler bizi kandırıyormuş. Adam koca programlar sundu, o bilmiyorsa kim bilecek?",
+   "ask": "Bu mesajda uzmanlığın yerine ne konmuş?",
+   "options": [
+    "Kombi servislerinin yazılı bakım kayıtları",
+    "Konuyla ilgisiz birinin ünü ve kendine güveni",
+    "Üretici kılavuzunda yazan bakım aralıkları ve süreleri",
+    "Mahalledeki ustaların yıllara dayanan ortak tecrübesi"
+   ],
+   "answer": 1,
+   "why": "Yemek programı sunmak kombi bilgisi vermez. Ün, teknik gerekçenin yerine geçirilmiş."
+  },
+  {
+   "id": "uzm-03",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Tarık",
+   "message": "Yazılım mühendisi yeğenim terasa bakmış: su yalıtımı tamamen gereksizmiş. Sonuçta mühendis, hesaptan anlar. Tavanı sızan iki daire abartıyordur, yalıtım parasını boşa harcamayalım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Yazılım unvanını çatı bilgisi gibi gösteriyor",
+    "Terastaki sızıntının yerini ölçümle gösteriyor",
+    "Tavanı sızan daireleri gizli planla suçluyor",
+    "Sağlam: mühendisler teknik işleri iyi bilir"
+   ],
+   "answer": 0,
+   "why": "“Mühendis” sözcüğü ortak olsa da yazılım, yalıtımın alanı değil. Üstelik gerçek sızıntı şikâyeti “abartı” denip geçiştiriliyor."
+  },
+  {
+   "id": "uzm-04",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Altı gaz ustası ve gaz idaresi boru yenilenmeli diyor. Emekli bir usta “gerek yok” demiş. Demek ki ustalar ikiye bölünmüş, konu tartışmalı, dokunmayalım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Emekli ustanın geçmişini hedef alıp küçültüyor",
+    "Borunun ölçümlerini kaynağıyla birlikte veriyor",
+    "Sağlam: iki tarafı dinleyip tarafsız kalıyor",
+    "Tek aykırı sesi çoğunlukla eşitmiş gibi gösteriyor"
+   ],
+   "answer": 3,
+   "why": "Altıya bir, “ikiye bölünmüş” değildir. Aykırı tek ses bulmak kolaydır; alandaki çoğunluk yok sayılıyor."
+  },
+  {
+   "id": "uzm-05",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Komşular · Hatice",
+   "message": "Uzmanlar söylüyor: bahçedeki ağaçlara kışın her gün bol su verilirse köklere çok iyi gelirmiş. Hangi uzman diye sormayın, araştırmalar var işte, herkes biliyor.",
+   "ask": "Bu mesajda asıl eksik olan ne?",
+   "options": [
+    "Uzmanın kim olduğu ve dayandığı kaynak",
+    "Bahçıvanın ücreti ve çalışma saatleri",
+    "Komşuların ağaç sevgisine dair bir söz",
+    "Ağaçların dikildiği yılın tam tarihi"
+   ],
+   "answer": 0,
+   "why": "“Uzmanlar” ve “araştırmalar” denmiş ama ikisinin de adı yok. “Sormayın” cümlesi kontrolü baştan engelliyor."
+  },
+  {
+   "id": "uzm-06",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Kuzenim tarih öğretmeni, asansör halatı on yıl daha gider dedi. Bakım firmasına ödeme yapmayalım.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Öğretmen söylediyse doğrudur, ödemeyi hemen iptal edelim o zaman.",
+    "Murat, kuzenin de senin gibi her şeyi bildiğini sanıyor demek ki.",
+    "Halatı yetkili firma incelesin; raporuna göre karar verelim.",
+    "Halatı ben kullanmıyorum ki, siz ne yaparsanız yapın, karışmam."
+   ],
+   "answer": 2,
+   "why": "Kişiyi küçültmeden kararı işin gerçek uzmanına ve belgeye taşıyor. Teslim olmak, alay etmek ya da çekilmek güvenliği çözmez."
+  },
+  {
+   "id": "uzm-07",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Araba lastiği değiştirmeye gerek yok, on yıl gider. Yirmi yıldır antrenörüm, vücut gibi lastik de alışır, bana güvenin.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Hocam siz diyorsanız vardır bir bildiğiniz, yenisini almıyorum.",
+    "Can Hoca, sen önce salonun kırık aletlerini tamir ettir bence.",
+    "Lastikmiş, araba falan, bu konuları burada konuşmayalım artık.",
+    "Antrenörlüğüne saygım var; lastik için yetkili servise danışacağım."
+   ],
+   "answer": 3,
+   "why": "Spor bilgisini küçümsemeden lastik sorusunu ilgili uzmana götürüyor. Antrenörlük, lastik aşınmasında yetki vermez."
+  },
+  {
+   "id": "uzm-08",
+   "set": "sahte_uzman",
+   "technique": "sahte_uzman",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Teyze",
+   "message": "Üç bahçıvan da fidanlıktaki ziraat mühendisi de bu ağaçlar şubatta budanır diyor. Bizim Hasan Dayı yazın budardı. Uzman dediğin ne bilir, tecrübe başka.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Haklısın teyze, uzmanları boş ver, ağaçları yazın budayalım o zaman artık.",
+    "Teyze, köy usulüyle bahçe mi olur, biraz okusan iyi olurdu bence.",
+    "Dayıya saygım var, ama dört uzman aynısını diyor; şubatta budasak?",
+    "Ağaç kurursa kurusun, budama konusunu hiç açmasak daha iyi olur."
+   ],
+   "answer": 2,
+   "why": "Tecrübeyi aşağılamadan ortak uzman görüşünü hatırlatıyor. Tek bir anı, dört uzmanın aynı görüşünü geçersiz kılmaz."
+  },
+  {
+   "id": "uzm-09",
+   "set": "sahte_uzman",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "İnşaat mühendisi Sevgi Hanım'ın karot raporu ekte: C blok kolonlarında ölçülen dayanım 14 MPa, proje değerinin altında. İkinci görüş isteyen cumaya kadar yazsın, başka mühendise de ölçtürürüz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: alanında uzman, ölçüm ve ikinci görüş açık",
+    "Manipülasyon: mühendis unvanıyla herkesi korkutuyor",
+    "Sağlam: mühendis ne yazdıysa tartışmasız doğrudur",
+    "Şüpheli: rapor paylaşan her yönetim bir şey saklar"
+   ],
+   "answer": 0,
+   "why": "Sorun unvan değil, alan uyuşmazlığıdır. Burada uzman kendi alanında, ölçü ve belgeyle konuşuyor; ikinci görüşe de kapı açık."
+  },
+  {
+   "id": "uzm-10",
+   "set": "sahte_uzman",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Usta Kemal",
+   "message": "Mühendis değilim, otuz yıldır tesisatçıyım. Selim Bey'in galvaniz borusunu kesip fotoğrafladım: içi yarı yarıya kireçle tıkalı, basınç 1,2 bar. Başka bir firmadan da teklif alın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: otuz yıl deyip tecrübeyle etkilemeye çalışıyor",
+    "Sağlam: kendi işinde, gördüğünü ve ölçtüğünü anlatıyor",
+    "Sağlam: otuz yıl çalışan ustanın sözü kanıt gerektirmez",
+    "Şüpheli: diploması olmayan biri boru hakkında konuşamaz"
+   ],
+   "answer": 1,
+   "why": "Uzmanlık yalnızca diplomayla olmaz. Kendi işini anlatıyor, fotoğraf ve ölçü veriyor, işi kendine çekmeye de çalışmıyor."
+  },
+  {
+   "id": "yas-01",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Aidatı neden üç aydır ödemediğimi soruyorsunuz. Peki geçen yıl bahçe için toplanan para nereye gitti? Önce onu açıklayın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Aidatın neden geciktiğini tarihleriyle açıklıyor",
+    "Bahçe parası için yalnızca iki ihtimal sunuyor",
+    "Kendi gecikmesini açıklamayıp başka konuya atlıyor",
+    "Sağlam: yönetim hesap vermeli, bu yüzden Murat haklı"
+   ],
+   "answer": 2,
+   "why": "Bahçe parası ayrıca sorulabilir, ama aidat sorusu cevapsız kaldı. Konu değişince soran taraf savunmaya geçiyor."
+  },
+  {
+   "id": "yas-02",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Raporu bana neden geç verdin diyorsun. Ayşe de geçen ay sunumu geç yetiştirmişti, ona kimse bir şey demedi.",
+   "ask": "Bu cevapta ne yanıtsız kalıyor?",
+   "options": [
+    "Raporun bu kez neden geç teslim edildiği",
+    "Ayşe'nin geçen ay sunumda neleri anlattığı",
+    "Geçen ayki toplantının kaç saat sürdüğü",
+    "Sunumun ofiste hangi bilgisayarda hazırlandığı"
+   ],
+   "answer": 0,
+   "why": "Ayşe'nin gecikmesi, bu raporun gecikmesini açıklamaz. Soru başka birinin hatasıyla örtülmüş."
+  },
+  {
+   "id": "yas-03",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Aletler temiz değil diye yazmışsınız. Karşıdaki salon nasıl, gidip bir görün bakalım; orada duş bile yok. Bizimki yanında saray.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "İki salonun temizliğini ölçülerle karşılaştırıyor",
+    "Üyeleri korkutup hemen kayıt yenilemeye itiyor",
+    "Sağlam: karşılaştırma yapıp durumu netleştiriyor",
+    "Aletleri anlatmak yerine rakibi gösteriyor"
+   ],
+   "answer": 3,
+   "why": "Diğer salonda duş olmaması, bu salondaki aletlerin temizliğini değiştirmez. Karşılaştırma cevabın yerine geçirilmiş."
+  },
+  {
+   "id": "yas-04",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Haklısın, düğün parası konusunda sözümü tutmadım, üzgünüm. Ama sen de dedemin yaş gününe gelmemiştin, unutmadık. Böyle konuşmak sana düşmez.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Hatayı kabul eder gibi yapıp eski kırgınlığa kaçıyor",
+    "Düğün parasını ne zaman ödeyeceğini açıkça söylüyor",
+    "Konuyu aile büyüklerinin gizli planına bağlıyor",
+    "Sağlam: özür dilediği için konu kapanmış sayılır"
+   ],
+   "answer": 0,
+   "why": "“Üzgünüm” diyor ama ödeme sorusuna cevap yok. Eski kırgınlık, eleştirme hakkını elinden almak için kullanılıyor."
+  },
+  {
+   "id": "yas-05",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Köpeğimin pisliğini toplamıyorum diyorsunuz. Peki 5 numaradaki çocuklar sokağa çöp atarken neredeydiniz?",
+   "ask": "Bu mesajdaki asıl hamle nedir?",
+   "options": [
+    "Çöp atan çocukların ailelerini yetkililere bildirmek",
+    "Köpek sahipleri için yeni bir kural önermek",
+    "Sorunun birden çok nedenini birlikte saymak",
+    "Eleştiriyi başkalarının hatasıyla boşa çıkarmak"
+   ],
+   "answer": 3,
+   "why": "Çöp sorunu gerçek olabilir ama köpek konusuna cevap değil. “Neredeydiniz?” sorusu eleştireni sanığa çeviriyor."
+  },
+  {
+   "id": "yas-06",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Arabamı engelli yerine park etmişim, ne olmuş? Yöneticinin arabası da hep iki yere birden park ediyor, ona söyleyin!",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Tamam Murat, yönetici yapıyorsa sen de park edebilirsin demek ki.",
+    "Onu da yönetime yazalım; ama engelli yeri bugün boşalmalı Murat.",
+    "Senden zaten başka bir şey beklenmezdi, görgüsüzlüğün sırası yok.",
+    "Bırakın ya, otopark kavgası bitmez, bu konu burada kapansın artık."
+   ],
+   "answer": 1,
+   "why": "“O da konuşulur” diyerek diğer konuyu kapatmıyor, asıl soruyu masada tutuyor. Aşağılamadan somut bir adım istiyor."
+  },
+  {
+   "id": "yas-07",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Müşteriye yanlış fiyat verdin diyorsun, peki pazarlamanın kampanya hatasına ne demeli? Onlara kimse dokunmuyor.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Haklısın, pazarlama düzelmeden fiyat konusunu konuşmanın anlamı yok.",
+    "Kampanyayı ayrıca konuşalım; şimdi bu müşteriye dönelim.",
+    "Burak, sen de kendi hatalarını hep başkasına yıkmakta çok ustasın.",
+    "Bu hata muhabbetinden sıkıldım, herkes işine baksın, bitti gitti."
+   ],
+   "answer": 1,
+   "why": "Kampanya sorusunu reddetmeden sıraya koyuyor ve müşteri sorununa dönüyor. Karşı suçlama da pes etmek de sorunu çözmez."
+  },
+  {
+   "id": "yas-08",
+   "set": "ya_sen",
+   "technique": "ya_sen",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Gece matkap kullanıyorsun diyorsun, sen de geçen yaz misafirlerinle sabaha kadar oturmuştun, unuttum mu sandın?",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Doğru, ben de yaptım, hiç hakkım yok, kusura bakma, bir daha yazmam.",
+    "O gece için özür dilerim; yine de gece matkap sesini konuşalım mı?",
+    "Hatice Hanım, sizin gibi dedikoducuyla tartışılmaz, ben çekildim.",
+    "Bu apartmanda kimse kimseyi çekemiyor, konuşmanın anlamı kalmadı."
+   ],
+   "answer": 1,
+   "why": "Kendi payını kabul ediyor ama asıl soruyu bırakmıyor. Eski bir hata, bugünkü şikâyeti geçersiz kılmaz."
+  },
+  {
+   "id": "yas-09",
+   "set": "ya_sen",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Ayşe",
+   "message": "Bana kesilen park cezasını ödeyeceğim. Ama aynı gün aynı yere park eden A blok aracına ceza yazılmamış, fotoğraflar ekte. Kural herkese eşit uygulansın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: başka aracı anarak konuyu değiştiriyor",
+    "Sağlam: biri ceza almadıysa kimse ödememelidir",
+    "Sağlam: kuralın eşit uygulanmasını kanıtla soruyor",
+    "Şüpheli: fotoğraf ekleyen herkes tuzak kuruyordur"
+   ],
+   "answer": 2,
+   "why": "Cezayı reddetmiyor; başka araç, sorulan eşitlik konusunun kendisi. Kaçış değil, konuya ait ve belgeli bir karşılaştırma."
+  },
+  {
+   "id": "yas-10",
+   "set": "ya_sen",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Bu haftaki sunucu kesintisinden ben sorumluyum, düzeltiyorum. Martta da aynı yedekleme adımı atlanmıştı, kayıtlar ekte. Bu yüzden adımı kontrol listesine eklemeyi öneriyorum.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: eski kesintiyi anarak suçtan sıyrılıyor",
+    "Sağlam: geçmişte de olduysa bu hata önemsiz sayılmalıdır",
+    "Sağlam: sorumluluğu alıp ilgili geçmişi çözüm için anıyor",
+    "Şüpheli: eski olay anan herkes aslında bir şey gizliyordur"
+   ],
+   "answer": 2,
+   "why": "Kendi payını kabul ediyor; mart olayı aynı nedeni gösterdiği için konuyla ilgili. Geçmiş, suçu dağıtmak için değil, düzeltmek için anılıyor."
+  },
+  {
+   "id": "kal-01",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Asansör güvenli dediniz, rapor istedim. Raporu getirdiniz, peki, ama imzasız. İmzalıymış, o zaman başka firmadan da ikinci rapor gelsin. Gelse de bakarız.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Her kanıttan sonra yeni bir şart ekleyip duruyor",
+    "Asansörün bozulmasını tek kişiye yüklüyor",
+    "Raporların eksiklerini teknik olarak gösteriyor",
+    "Sağlam: dikkatli biri gördüğü her belgeyi sorgulamalıdır"
+   ],
+   "answer": 0,
+   "why": "Rapor, imza, ikinci firma… “Gelse de bakarız” diyor. Hiçbir belgenin ikna etmeyeceği bir tartışma kuruluyor."
+  },
+  {
+   "id": "kal-02",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Beş kilometreyi koşamazsın demiştim, koşmuşsun, tamam. Ama düz yolda kolay. Yokuşlu koştuysan da rüzgâr arkandan esmiştir. Yani koşmuş sayılmazsın.",
+   "ask": "Bu mesajda sürekli değişen ne?",
+   "options": [
+    "Koşunun yapıldığı günün tarihi ve saati",
+    "Emre'nin koşu hakkındaki teknik bilgisi",
+    "Başarının sayılması için gereken ölçüt",
+    "Spor salonunun üyelik kuralları ve fiyatı"
+   ],
+   "answer": 2,
+   "why": "İlk şart beş kilometreydi ve karşılandı. Her yeni şart, sonucu kabul etmemek için ekleniyor."
+  },
+  {
+   "id": "kal-03",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Burak",
+   "message": "Yeni düzen verimli olursa kabul ederim demiştim. Verimi gösterdiniz. Ama asıl soru çalışan memnuniyeti. Anket de mi iyi çıktı? O zaman asıl mesele uzun vade.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Verim sayılarının yanlış olduğunu tek tek kanıtlıyor",
+    "Çalışanları birbirine düşman iki gruba ayırıyor",
+    "Sağlam: yeni ölçütler daha kapsamlı bakış sağlar",
+    "Ölçüt aşıldıkça “asıl mesele” yer değiştiriyor"
+   ],
+   "answer": 3,
+   "why": "Her şart tek başına makul. Ama baştaki ölçüt karşılanınca kabul yerine yeni ölçüt geliyor."
+  },
+  {
+   "id": "kal-04",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Ödemeyi yaptım diyorsun, dekontu da attın, tamam. Ama o ekran görüntüsü, banka kâğıdı göster. Onu da gösterirsen niye bu kadar uğraştığını sorarım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Dekonttaki tutarın yanlış olduğunu kanıtlıyor",
+    "Belge geldikçe şartı ağırlaştırıp kanıtı kusur sayıyor",
+    "Para sorununu bütün aileye yayıp suçluyor",
+    "Sağlam: para işinde belge istemek hep yerindedir"
+   ],
+   "answer": 1,
+   "why": "Belge istemek meşrudur; ama gösterilse bile “niye uğraştın” diyecek. Hiçbir sonucun geçerli sayılmayacağını kendisi söylüyor."
+  },
+  {
+   "id": "kal-05",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Parkın düzeldiğini fotoğrafla gösterin demiştim. Gösterdiniz, güzel. Ama gündüz çekilmiş. Gece hâli de lazım. Zaten bir gün çekilse ne olur, bir yıl takip edin.",
+   "ask": "Bu mesajın tuzağı ne?",
+   "options": [
+    "Parkın bakım masrafını gizleyen eksik bir hesap",
+    "Parkı kullananları birbirine düşman iki gruba bölen dil",
+    "Bahçıvanın işini yapmadığına dair ağır bir suçlama",
+    "Karşılandıkça yükselen, ulaşılamaz bir kanıt çıtası"
+   ],
+   "answer": 3,
+   "why": "Fotoğraf isteniyordu, geldi. Şimdi gece ve bir yıllık takip isteniyor; çıta, ulaşılamayacak yere çekiliyor."
+  },
+  {
+   "id": "kal-06",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Aidat hesabını görmek istemiştim, gelmiş. Ama sadece bu yılın hesabı, beş yıllık gelsin. Zaten gelse de inanmam.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Önce seni neyin ikna edeceğini yaz, ona göre hazırlayalım.",
+    "Haklısın, beş yıllık hesabı da çıkarırım, ne istersen veririm.",
+    "Murat, inanmayacaksan sus, kimse seninle uğraşmak zorunda değil.",
+    "Bu grupta hesap konuşulmaz, aidat tartışmasını burada bitirelim."
+   ],
+   "answer": 0,
+   "why": "“Seni ne ikna ederdi?” sorusu ölçütü sabitliyor. Hesabı saklamıyor, kişiyi aşağılamadan ölçütü görünür kılıyor."
+  },
+  {
+   "id": "kal-07",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Müşteri memnuniyetini sayıyla gösterin demiştim. Gösterdiniz ama örneklem küçük. Büyüttünüz, o zaman da yanlış müşterilere sormuşsunuz.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Tamam, baştan anket yapalım, sen tatmin olana kadar devam ederiz.",
+    "Ölçütü birlikte yazalım, sonra hep birlikte ona bağlı kalalım.",
+    "Burak, sayıdan anlamadığın için sürekli bir şeyler uyduruyorsun.",
+    "Memnuniyet ölçümünü bırakalım, nasılsa kimse bir şeye ikna olmuyor."
+   ],
+   "answer": 1,
+   "why": "Ölçütü yazıya geçirip sabitliyor; itirazı duyuyor ama sonsuz şart döngüsünü kapatıyor."
+  },
+  {
+   "id": "kal-08",
+   "set": "kale",
+   "technique": "kale",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Dayı",
+   "message": "Önce iş bul dedim, buldun. Sonra ev tut dedim, tuttun. Şimdi de düzenli para biriktir diyorum. Onu da yaparsan o zaman bakarız.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Dediklerini yaptım; son listeyi şimdi birlikte netleştirelim mi?",
+    "Peki, bir şart daha olsun, ne istersen yaparım ben, yeter ki kızma.",
+    "Sen zaten kimseyi beğenmezsin, kendi hayatına bakmak iyi gelir.",
+    "Bir daha bu konuyu benimle hiç açmayın, ben çoktan kapattım."
+   ],
+   "answer": 0,
+   "why": "Yapılanları sakince hatırlatıp bitiş çizgisini açıkça soruyor. “Bakarız” belirsizliğine ne teslim oluyor ne de kavga çıkarıyor."
+  },
+  {
+   "id": "kal-09",
+   "set": "kale",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "Geçen ay boya firması A'yı önermiştik. Dün gelen numune testinde boya iki haftada kabardı, rapor ekte. Önerimizi geri çekiyoruz; B firmasının numunesi de aynı teste girecek.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: önerisini değiştirdiği için kale kaydırıyor",
+    "Sağlam: yönetim fikrini istediği gibi değiştirebilir",
+    "Sağlam: yeni test sonucuyla gerekçeli biçimde değişiyor",
+    "Şüpheli: fikir değiştiren yönetime asla güvenilmez"
+   ],
+   "answer": 2,
+   "why": "Fikir değiştirmek kale kaydırmak değildir. Yeni kanıt gösteriliyor ve aynı test diğer firmaya da uygulanacak."
+  },
+  {
+   "id": "kal-10",
+   "set": "kale",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Testi geçerse alırız demiştim, geçti. Ama tutanağa göre üretici 200 yerine 20 adetle denemiş. Anlaştığımız 200 adetle tekrarlansın; geçerse sözüm söz, hemen alıyoruz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: test geçtiği hâlde yeni şart getiriyor",
+    "Sağlam: alıcı testi istediği kadar tekrarlatabilir",
+    "Sağlam: ölçütü değiştirmiyor, baştaki şartı uygulatıyor",
+    "Şüpheli: tutanağa dayanan her itiraz oyalamaktır"
+   ],
+   "answer": 2,
+   "why": "Şart aynı kaldı: 200 adet. Eksik uygulanan testi belgeyle gösteriyor ve sonucu baştan kabul ediyor."
+  },
+  {
+   "id": "kor-01",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Hatice Hanım bahçeye birkaç ağaç daha dikilsin dedi. Yani otoparkı kaldıralım, arabalarımızı sokağa bırakalım diyor! Ormanda yaşamak isteyen başka yere taşınsın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Bahçeye dikilecek ağaçların maliyetini hesaplıyor",
+    "Otoparktaki sorunu tek bir komşunun üstüne yıkıyor",
+    "Küçük öneriyi uç bir hâle getirip ona saldırıyor",
+    "Sağlam: önerinin sonuçlarını açıkça gösteriyor"
+   ],
+   "answer": 2,
+   "why": "Hatice otoparktan hiç söz etmedi. Birkaç ağaç önerisi, savunması imkânsız bir “orman” iddiasına çevrilmiş."
+  },
+  {
+   "id": "kor-02",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Ayşe “toplantılar biraz kısalsın” dedi. Demek ki Ayşe'ye göre konuşmaya gerek yok, herkes kafasına göre çalışsın. Böyle şirket mi olur?",
+   "ask": "Burak, Ayşe'nin sözüne ne yaptı?",
+   "options": [
+    "Toplantı sürelerini ölçüp ortalamasını çıkardı",
+    "Kısaltma isteğini toplanmama isteğine çevirdi",
+    "Ayşe'nin geçmişteki hatalarını masaya yatırdı",
+    "İki seçenekten birini seçmesini Ayşe'ye dayattı"
+   ],
+   "answer": 1,
+   "why": "“Biraz kısalsın” ile “konuşmaya gerek yok” aynı şey değil. Burak, Ayşe'nin söylemediği bir fikre itiraz ediyor."
+  },
+  {
+   "id": "kor-03",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Ablam sadece “pazartesi uygun değilim” dedi. Demek artık annemizle ilgilenmek ona yük geliyor. Bunu söyleyecek kadar değişti, üzülüyorum.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Ablasının hangi gün uygun olduğunu netleştiriyor",
+    "Annenin bakım planını çizelgeyle paylaşıyor",
+    "Sağlam: ablasının sözünün altındakini anlatıyor",
+    "Tek günlük engeli ilgisizlik itirafına çeviriyor"
+   ],
+   "answer": 3,
+   "why": "Abla yalnızca bir günden söz etti. “Yük” sözcüğü ona ait değil; üzgün ton, çarpıtmayı daha inandırıcı yapıyor."
+  },
+  {
+   "id": "kor-04",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Emre “ağırlıktan önce biraz ısınma ekleyelim” demiş. Saygı duyarım ama ağırlığı bırakıp esnemeye geçmek bu salonun ruhuna aykırı. Biz burada pilates yapmıyoruz.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Salonun antrenman programını verilerle savunuyor",
+    "Emre'nin eski sakatlıklarını anıp korkutuyor",
+    "Sağlam: saygı gösterip kibarca itiraz ediyor",
+    "Isınma önerisini ağırlığı bırakma gibi gösteriyor"
+   ],
+   "answer": 3,
+   "why": "Emre ağırlığı bırakalım demedi, öncesine ısınma istedi. Kibar başlangıç, çarpıtmayı ortadan kaldırmıyor."
+  },
+  {
+   "id": "kor-05",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Melike Hanım pazar yerinde çöp kutusu az dedi. Yani esnaf pis diyor! Onca yıldır bu pazarı temiz tuttuk, kimse bize ders veremez.",
+   "ask": "Selim neye cevap veriyor?",
+   "options": [
+    "Melike'nin hiç söylemediği bir suçlamaya",
+    "Çöp kutusu sayısını gösteren resmî veriye",
+    "Pazar esnafının yeni bir kira talebine",
+    "Temizlik için açılan imza kampanyasına"
+   ],
+   "answer": 0,
+   "why": "Melike kutu sayısından söz etti, esnafı suçlamadı. Selim, asıl öneriye değil, kurduğu suçlamaya cevap veriyor."
+  },
+  {
+   "id": "kor-06",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Demek gece on birden sonra matkap kullanılmasın diyorsun. Yani evimde kendi işimi yapamayacağım, apartman hapishane olacak!",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Peki Murat, haklısın, kural falan istemiyorum, matkabını kullan.",
+    "Yalnızca on birden sonrası dedim, gündüz istediğin gibi kullan.",
+    "Anlamak istemeyene anlatılmaz, sen zaten hiçbir şeyi okumuyorsun.",
+    "Tamam, ben bu apartmanın hiçbir işine karışmıyorum artık, bitti."
+   ],
+   "answer": 1,
+   "why": "“Tam olarak bunu söyledim” diyerek öneriyi asıl boyutuna döndürüyor. Alay etmeden ve geri çekilmeden çarpıtmayı düzeltiyor."
+  },
+  {
+   "id": "kor-07",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "karsilik",
+   "difficulty": "orta",
+   "sender": "İş Grubu · Burak",
+   "message": "Ayşe, planı bir hafta uzatalım dedin. Yani ekibin beceriksiz, hiçbir işi zamanında bitiremeyiz diyorsun. Güzel.",
+   "ask": "Ayşe için en yapıcı cevap hangisi?",
+   "options": [
+    "Ekibi eleştirmedim; test için bir hafta daha gerektiğini söyledim.",
+    "Öyle demek istemedim ama madem öyle anladın, hiç süreyi uzatmayalım.",
+    "Burak, okuduğunu anlamıyorsan gel sana harf harf anlatayım.",
+    "Neyse, ben bu konuda bir daha hiçbir şey söylemem, karışmayacağım."
+   ],
+   "answer": 0,
+   "why": "Söylenmeyeni reddedip gerçek gerekçeyi yeniden koyuyor. Çarpıtma düzeliyor, tartışma asıl konuya dönüyor."
+  },
+  {
+   "id": "kor-08",
+   "set": "korkuluk",
+   "technique": "korkuluk",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Çatı kaçağı için ortak para toplayalım demişsin. Yani kendi dairene masraf etmek istemiyor, faturayı bize kesiyorsun!",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Çatı ortak alan, dairem için istemedim; masraf dökümünü atıyorum.",
+    "Madem öyle düşünüyorsunuz, masrafın hepsini tek başıma öderim.",
+    "Hatice Hanım, bu kadar cimri biri olduğunuzu bilmiyordum açıkçası.",
+    "Çatı akarsa aksın, ben bu apartmanda hiçbir şeyi konuşmayacağım."
+   ],
+   "answer": 0,
+   "why": "Çarpıtılan niyeti sakince düzeltiyor ve somut döküm sunuyor. Parayı üstlenmek de hakaret de gerçek soruyu çözmez."
+  },
+  {
+   "id": "kor-09",
+   "set": "korkuluk",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "orta",
+   "sender": "Çınar Sitesi Grubu · Ayşe",
+   "message": "Murat dün aynen “hafta sonu bahçeye araç girmesin, taşınma günleri hariç” yazdı. Katılıyorum, yalnız taşınma için saat sınırı 18.00 olsun. Yanlış aktardıysam Murat düzeltsin.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: Murat'ın sözünü tekrar edip çarpıtıyor",
+    "Sağlam: birine katılan kişi her zaman haklı sayılır",
+    "Şüpheli: söz aktaran herkes bir tuzak kuruyordur",
+    "Sağlam: önce aslına uygun aktarıp sonra öneri ekliyor"
+   ],
+   "answer": 3,
+   "why": "Sözü tırnak içinde aktarıyor, düzeltmeye açık ve sınırlı bir ekleme yapıyor. Korkuluğun tersi: önce aslını koruyor."
+  },
+  {
+   "id": "kor-10",
+   "set": "korkuluk",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Ayşe",
+   "message": "Burak, tam cümlen şuydu: “Cuma günleri herkes ofiste olsun, istisna yok.” Buna karşıyım: ekipte üç kişi başka şehirde, yol masrafı ayda 4.500 TL. Çarpıtıyorsam söyle.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: “istisna yok” sözünü abartıp saldırıyor",
+    "Sağlam: rakam veren kişi tartışmayı kazanmış olur",
+    "Sağlam: sözünü aynen aktarıp rakamla itiraz ediyor",
+    "Şüpheli: sert itiraz eden herkes sözü çarpıtıyordur"
+   ],
+   "answer": 2,
+   "why": "“İstisna yok” Burak'ın kendi sözü. İtiraz sert olabilir, ama söylenene karşı ve somut bir maliyetle yapılıyor."
+  },
+  {
+   "id": "kar-01",
+   "set": "karma",
+   "technique": "ya_sen",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Yönetici Kerem",
+   "message": "Bahçe aydınlatmasına ayrılan paranın nereye gittiğini soruyorsunuz. Peki geçen yıl B blok asansör parasını nasıl harcadı, onu soran oldu mu? Önce onu konuşalım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Soruyu cevaplamadan başka bir harcamaya çeviriyor",
+    "Soruyu soranın kişiliğini küçülterek susturuyor",
+    "Bütün açığı B blok yönetiminin üstüne yıkıyor",
+    "Sağlam: karşılaştırma yapmak hesabı netleştirir"
+   ],
+   "answer": 0,
+   "why": "Aydınlatma parası sorusu cevapsız kaldı, konu B bloka kaydı. Soran kişiyi aşağılamadığı için kişiye saldırı değil."
+  },
+  {
+   "id": "kar-02",
+   "set": "karma",
+   "technique": "kale",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Rapor isteyin demiştim, evet. Üç firmanın raporu da sızıntı görmüş, tamam. Ama yağmur altında ölçüm yoksa saymam. O da gelse bu sefer üniversiteden biri imzalasın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Birbiriyle çelişen iki iddiayı aynı anda savunuyor",
+    "Raporu yazanların kişiliğine laf atıp küçültüyor",
+    "Kanıt geldikçe ikna olma şartını yeniden yazıyor",
+    "Sağlam: titiz olduğu için yeni ölçümler istiyor"
+   ],
+   "answer": 2,
+   "why": "Üç rapor gelince ölçüt yağmura, oradan üniversiteye kaydı. Çelişen iki iddia yok; değişen tek şey ikna şartı."
+  },
+  {
+   "id": "kar-03",
+   "set": "karma",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi · Sayman Nurten",
+   "message": "Su faturamız yüzde 12 arttı ama tüketimimiz yüzde 8 düştü. Çelişki yok: birim fiyat yüzde 22 zamlandı. Sayaç dökümü ve idarenin tarife yazısı ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: çelişkili görünen sayıları kaynakla açıklıyor",
+    "Manipülasyon: hem arttı hem düştü diyerek kafa karıştırıyor",
+    "Sağlam: yüzde veren mesaj her zaman doğrudur",
+    "Şüpheli: fatura artıyorsa tüketim düşmüş olamaz"
+   ],
+   "answer": 0,
+   "why": "İki sayı aynı anda doğru olabilir: fiyat artışı tüketim düşüşünü aşmış. Çelişki yok; hesap da kaynak da verilmiş."
+  },
+  {
+   "id": "kar-04",
+   "set": "karma",
+   "technique": "korkuluk",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Nihal",
+   "message": "Zeynep Hanım'ın önerisi belli: gece 23'ten sonra bahçede top oynanmasın. Yani çocuklar hiç oynamasın, site mezarlığa dönsün diyor. Böyle site mi olur?",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Haklısın, çocuklar hiç oynamasın demek fazla; önerisini geri çeksin.",
+    "Nihal, sen de geçen yaz gece yarısı mangal yapmamış mıydın?",
+    "Site mezarlığa dönmez, çocukların hiç oynamaması da iyi olur.",
+    "Zeynep yalnızca 23'ten sonrasını dedi; bu öneriyi konuşalım."
+   ],
+   "answer": 3,
+   "why": "Önce söyleneni aslına döndürüyor, çarpıtılmış hâli savunmaya girmiyor. Nihal'in mangalını hatırlatmak konuyu kaydırır, çarpıtmayı düzeltmez."
+  },
+  {
+   "id": "kar-05",
+   "set": "karma",
+   "technique": "komplo",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Mahalledeki üç bakkalın aynı ay kapanması tesadüf mü? Arkada dev bir el var. Belge mi? Olmaz tabii, o kadar iyi saklıyorlar ki hiçbir iz kalmıyor.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Kapanmaların suçunu adı belli tek esnafa yüklüyor",
+    "Belge olmamasını gizli bir planın kanıtı sayıyor",
+    "Yalnızca korku uyandırıp hemen yaymanı istiyor",
+    "Sağlam: üç kapanma planı kanıtlamaya yeter"
+   ],
+   "answer": 1,
+   "why": "“Belge yok çünkü iyi saklıyorlar” diyor; iddia yanlışlanamaz hâle geliyor. Adı belli bir suçlu göstermediği için tek kişiye yıkmak değil."
+  },
+  {
+   "id": "kar-06",
+   "set": "karma",
+   "technique": "kisisel",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Burak",
+   "message": "Tolga'nın vardiya önerisini okumadım, gerek de yok. Üç yıl önce kendi projesini batırmış adam, bir de bize düzen anlatacak. Geçelim.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Önerinin söylemediği aşırı bir şeyi söylemiş gibi yapıyor",
+    "Öneriye bakmadan söyleyenin geçmişini hedef alıyor",
+    "Kendine gelen eleştiriden başkasının hatasına kaçıyor",
+    "Sağlam: geçmişte batıranın önerisi değersizdir"
+   ],
+   "answer": 1,
+   "why": "Öneriye tek kelime değinmeden Tolga'nın geçmişi hedef alınmış. Burak'a yöneltilmiş bir eleştiri olmadığı için başka hatayı gösterip kaçmak değil."
+  },
+  {
+   "id": "kar-07",
+   "set": "karma",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Yönetimi",
+   "message": "İnşaat mühendisi Arzu Tan'ın raporu: çatıdaki üç kirişte 4 mm çatlak ölçüldü, taşıma sınırının içinde. Altı ay sonra yeniden ölçülecek. Oda sicil numarası ve ölçüm tutanağı ekte.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: unvan göstererek itirazı susturmaya çalışıyor",
+    "Sağlam: mühendis dediyse başka ölçüme gerek yoktur",
+    "Sağlam: alanın uzmanı, ölçüsü ve tutanağıyla konuşuyor",
+    "Şüpheli: tek raporu olan her uzman yanılıyordur"
+   ],
+   "answer": 2,
+   "why": "Kişi tam bu işin uzmanı; ölçümünü, sınırını ve izleme planını veriyor. Unvan kanıtın yerine geçmiyor, kanıtı taşıyor."
+  },
+  {
+   "id": "kar-08",
+   "set": "karma",
+   "technique": "ikilem",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Spor Salonu Grubu · Antrenör Can",
+   "message": "Soyunma odası tadilatı için üye başı 2.000 TL lazım. Ya hepiniz ödersiniz ya salon kapanır. Ortası yok, taksit falan konuşmayalım.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Taksit gibi yollar varken iki sonuç bırakıyor",
+    "Üyeleri birbirine düşman iki kampa ayırıyor",
+    "Gider artışının suçunu tek çalışana yüklüyor",
+    "Sağlam: tadilat şartsa başka seçenek kalmaz"
+   ],
+   "answer": 0,
+   "why": "Taksit, küçük onarım, erteleme gibi yollar baştan kapatılmış. Üyeleri iki düşman kampa ayırmıyor; daraltılan şey seçenekler."
+  },
+  {
+   "id": "kar-09",
+   "set": "karma",
+   "technique": "kale",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Kamera hırsızlığı azaltmış, kabul. Ama bir yıl az, üç yıllık veri görmem lazım. Üç yıllık gelirse de komşu sitelerle karşılaştırılsın, ancak o zaman konuşuruz.",
+   "ask": "En yapıcı cevap hangisi?",
+   "options": [
+    "Tamam, üç yıllık veriyi de toplarım, sonra komşu siteleri eklerim.",
+    "Murat, baştan netleştirelim: hangi sonucu görsen kameraya evet dersin?",
+    "Hiçbir şeye ikna olmayan birinin bu sitede söz hakkı olmamalı.",
+    "Kamera olmasa hırsızlık azalmaz diyorsun, o hâlde kapıları açalım."
+   ],
+   "answer": 1,
+   "why": "Şartı baştan sabitletiyor; değişirse görünür olur. Veri toplamaya devam etmek iyi niyetli görünse de yeni şartları beslemekten öteye gitmez."
+  },
+  {
+   "id": "kar-10",
+   "set": "karma",
+   "technique": "duygu",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Komşular · Hatice",
+   "message": "Dün gece yine uyuyamadım. Bu binada bir şeyler oluyor, hissediyorum. Çocuğunu seven bu mesajı görmezden gelmez, lütfen bugün içinde herkese ulaştırın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Binada olanları gizli bir grubun planı gibi anlatıyor",
+    "Sorunun bütün suçunu bir komşunun üstüne atıyor",
+    "Sağlam: endişesini açıkça söylemek dürüstlüktür",
+    "Olayı söylemeden korku ve suçlulukla yayılmak istiyor"
+   ],
+   "answer": 3,
+   "why": "Ne olduğu yok; kaygı ve “çocuğunu seven” baskısı var. Gizli bir grup ya da plan anılmadığı için komplo anlatısı değil."
+  },
+  {
+   "id": "kar-11",
+   "set": "karma",
+   "technique": "tutarsiz",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Burak",
+   "message": "Yeni yazılımı kimse kullanmıyor, tamamen boş para. Üstelik o kadar çok kişi kullanıyor ki sunucu yetmiyor, sistem sürekli kilitleniyor. Hemen iptal edelim.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Kanıt geldikçe ikna olacağı ölçütü değiştiriyor",
+    "Yazılımı önerenin geçmişini hedef alıp fikri geçiyor",
+    "Aynı anda doğru olamayacak iki itirazı kullanıyor",
+    "Sağlam: iki ayrı sorunu birden göstermiş oluyor"
+   ],
+   "answer": 2,
+   "why": "Kimse kullanmıyorsa sunucu kullanımdan dolmaz. İstenen bir kanıt ve sonradan değişen bir şart olmadığı için ölçüt kaydırmak değil."
+  },
+  {
+   "id": "kar-12",
+   "set": "karma",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Gül",
+   "message": "Gecikme cezamızı ödeyeceğiz, itirazımız yok. Ama aynı ay üç A blok dairesi de geç ödemiş, ceza kesilmemiş; karar defteri sayfa 14'te yazılı. Kural herkese aynı uygulansın.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: kendi cezasını kabul edip eşit uygulama istiyor",
+    "Manipülasyon: A bloğu göstererek kendi cezasından kaçıyor",
+    "Sağlam: başkası da yaptıysa ceza ödenmesi gerekmez",
+    "Şüpheli: blok adı geçen her şikâyet kavga çıkarır"
+   ],
+   "answer": 0,
+   "why": "Cezayı kabul ediyor, A blok örneği kayıtlı ve aynı konuda. “Ya sen” kaçışında asıl soru cevapsız kalır; burada kalmıyor."
+  },
+  {
+   "id": "kar-13",
+   "set": "karma",
+   "technique": "gunah",
+   "kind": "teshis",
+   "difficulty": "orta",
+   "sender": "Aile Grubu · Kuzen Ferit",
+   "message": "Düğün neden berbat geçti? Tek sebep Nevin Abla. Salon küçük kaldıysa, yemek geç geldiyse, müzik bozulduysa hep onun yüzünden; o olmasa dört dörtlük geçerdi.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Aksaklıkları gizlice anlaşmış bir grubun işi sayıyor",
+    "Birçok aksaklığın bütün suçunu tek kişiye yüklüyor",
+    "Nevin'in söylediği sözü çarpıtıp ona saldırıyor",
+    "Sağlam: kimin hatası olduğunu açıkça söylüyor"
+   ],
+   "answer": 1,
+   "why": "Salon, yemek, müzik ayrı işlerken hepsi Nevin Abla'ya bağlanmış. Gizli bir anlaşma iddiası yok; tek suçluya indirgeme var."
+  },
+  {
+   "id": "kar-14",
+   "set": "karma",
+   "technique": "ya_sen",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi · Selim",
+   "message": "Kasabın terazisi yanlış tartıyor dediniz. Peki manav geçen ay bozuk meyve satınca kim ses çıkardı? Önce onu konuşalım.",
+   "ask": "En sağlıklı cevap hangisi?",
+   "options": [
+    "Doğru, manava da kimse ses çıkarmadı, önce onu halledelim bence.",
+    "Manav da konuşulur, ama terazi ayarlı mı, önce ona bakalım.",
+    "Selim, sen de kasabın akrabası olduğun için konuşuyorsun zaten.",
+    "Madem öyle, bu mahallede herkes birbirini kandırıyor demektir."
+   ],
+   "answer": 1,
+   "why": "Manavı reddetmeden asıl soruya, teraziye dönüyor. Selim'in akrabalığını ortaya atmak da soruyu cevapsız bırakır, yalnızca yeni kavga açar."
+  },
+  {
+   "id": "kar-15",
+   "set": "karma",
+   "technique": "kutup",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Mesele otopark değil arkadaşlar. Bu sitede iki tür insan yaşıyor: eski sakinler ve sonradan gelip her şeyi değiştirmek isteyenler. Onların bizimle hiçbir ortak derdi yok.",
+   "ask": "Bu mesaj tartışmayı nereye götürüyor?",
+   "options": [
+    "Otopark için yalnızca iki çözüm varmış gibi sıkıştırıyor",
+    "Otopark sorununun bütün suçunu tek kişiye yüklüyor",
+    "Eski sakinlerin önerisini çarpıtıp gülünç hâle getiriyor",
+    "Komşuları ortak derdi olmayan iki cepheye ayırıyor"
+   ],
+   "answer": 3,
+   "why": "Otopark, iki düşman kimliğin savaşına dönmüş, ortak dert yok sayılmış. Önüne iki çözüm konmuyor; ayrılan seçenekler değil, insanlar."
+  },
+  {
+   "id": "kar-16",
+   "set": "karma",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Sevgi",
+   "message": "Asansör teklifini veren firmanın ortağı, yönetici Kerem Bey'in kardeşi; ticaret sicil kaydı ekte. İyi iş çıkarabilirler, ama Kerem Bey'in oylamadan çekilmesini ve ikinci teklif alınmasını öneriyorum.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Sağlam: çıkar ilişkisini belgeleyip ölçülü öneri getiriyor",
+    "Manipülasyon: yöneticinin kardeşini konu edip kişiye saldırıyor",
+    "Sağlam: akrabası olan yöneticiler mutlaka yolsuzluk yapar",
+    "Şüpheli: yöneticiyi eleştiren mesajlara hiç bakılmamalı"
+   ],
+   "answer": 0,
+   "why": "Çıkar ilişkisi kararla doğrudan ilgili ve belgeli, öneri de ölçülü. Kişiye saldırıda ise konuyla ilgisiz bir özellik hedef alınır."
+  },
+  {
+   "id": "kar-17",
+   "set": "karma",
+   "technique": "sahte_uzman",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "Çınar Sitesi Grubu · Murat",
+   "message": "Bina çatlağı mı? Diş hekimi Kemal Bey baktı, “bunda bir şey yok, mühendise para vermeyin” dedi. Otuz yıllık doktor, ondan iyi kim bilecek?",
+   "ask": "Bu mesajdaki asıl zayıflık ne?",
+   "options": [
+    "Mühendisleri kötüleyerek söylediklerini değersiz göstermeye çalışıyor",
+    "Çatlağın sebebini tek bir komşunun hatasına bağlıyor",
+    "Başka alanın unvanını bina konusunda kanıt sayıyor",
+    "Çatlağı gizli bir müteahhit planının parçası sayıyor"
+   ],
+   "answer": 2,
+   "why": "Otuz yıl diş hekimliği bina çatlağını bilmeyi sağlamaz. Mühendisleri kötülemiyor; sorun, alanı dışındaki unvana güvenilmesi."
+  },
+  {
+   "id": "kar-18",
+   "set": "karma",
+   "technique": "komplo",
+   "kind": "karsilik",
+   "difficulty": "zor",
+   "sender": "Spor Salonu Grubu · Emre",
+   "message": "Duşların aynı hafta bozulması tesadüf olamaz. Yönetim eski üyeleri kaçırıp salonu satacak. Çürütmek için belge getirmeyin, onları da kendileri hazırlıyor.",
+   "ask": "En iyi cevap hangisi?",
+   "options": [
+    "Bence de tesadüf değil; eski üyelere de soralım, doğrulansın.",
+    "Emre, hangi kanıt seni yanıltırdı? Hiçbiriyse bu iddia sınanamaz.",
+    "Emre, sen üyeliğini yenilemedin diye salona kin tutuyorsun.",
+    "Yönetim satsa da ne olur, başka salona gideriz, uzatmayalım."
+   ],
+   "answer": 1,
+   "why": "Yanlışlanabilirliği soruyor; cevap yoksa iddia sınanamaz. Eski üyelere sormak işe yarar görünse de belgeyi baştan reddeden iddiayı sınamaz."
+  },
+  {
+   "id": "kar-19",
+   "set": "karma",
+   "technique": "korkuluk",
+   "kind": "teshis",
+   "difficulty": "zor",
+   "sender": "İş Grubu · Burak",
+   "message": "Deniz toplantıları 45 dakikayla sınırlayalım demiş. Anladık, artık kimse kimseyle konuşmasın, herkes köşesine çekilsin, şirket dağılsın. Böyle iş yürümez.",
+   "ask": "Bu mesajdaki asıl hamle ne?",
+   "options": [
+    "Deniz'in geçmişini ve kimliğini hedef alıp susturuyor",
+    "Deniz'in eleştirisine başkasının hatasıyla karşılık veriyor",
+    "Toplantı kararını yöneticilerin gizli oyunu sayıyor",
+    "Öneriyi aşırı bir hâle sokup o hâline saldırıyor"
+   ],
+   "answer": 3,
+   "why": "Deniz süreyi kısaltmayı önerdi; Burak bunu “kimse konuşmasın”a çevirip ona saldırıyor. Deniz'in kişiliğine değil, çarpıtılmış önerisine vuruyor."
+  },
+  {
+   "id": "kar-20",
+   "set": "karma",
+   "technique": "saglam",
+   "kind": "saglam",
+   "difficulty": "zor",
+   "sender": "Fırat Mahallesi Derneği · Ali",
+   "message": "Dernek kasa dökümünde 12 Mart'ta açıklamasız 8.400 TL çıkış var, karar defterinde karşılığı yok. Belki basit bir kayıt hatasıdır. Döküm ekte; denetçiden cumaya kadar açıklama istedim.",
+   "ask": "Bu mesajı nasıl değerlendirirsin?",
+   "options": [
+    "Manipülasyon: gizli para çıkışı ima edip plan kuruyor",
+    "Sağlam: kayıt eksikse kesin zimmet yapılmış demektir",
+    "Sağlam: eksik kaydı belgeliyor, sonucu denetime bırakıyor",
+    "Şüpheli: para geçen her mesaj bir kışkırtmadır"
+   ],
+   "answer": 2,
+   "why": "Belgeli bir eksik gösteriyor, masum açıklamaya yer bırakıyor, sınanabilir adım atıyor. Komplo anlatısında kanıt yokluğu bile plana delil sayılır."
+  }
+ ]
+}

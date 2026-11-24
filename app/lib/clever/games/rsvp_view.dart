@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Hızlı Akış board: one fixed window where letters flash back to back, then a keypad / option
@@ -126,10 +127,10 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
     final set = [for (final x in (st['target_set'] as List? ?? const [])) x as String];
     final kind = st['kind'];
     final hint = kind == 'digit'
-        ? 'Hedef: rakamlar'
+        ? t('Hedef: rakamlar')
         : kind == 'color'
-            ? 'Hedef: yakut renkli harfler'
-            : 'Hedef harfler: ${set.join(' ')}';
+            ? t('Hedef: yakut renkli harfler')
+            : tf('Hedef harfler: {0}', [set.join(' ')]);
     final done = st['phase'] == 'done' ? streams : results.clamp(0, streams);
     return Padding(
       padding: const EdgeInsets.fromLTRB(22, 10, 22, 2),
@@ -137,10 +138,10 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
         children: [
           Row(
             children: [
-              Text('Akış ${math.min(stream + 1, streams)} / $streams', style: Lux.ui(15, weight: FontWeight.w700)),
+              Text(tf('Akış {0} / {1}', [math.min(stream + 1, streams), streams]), style: Lux.ui(15, weight: FontWeight.w700)),
               const SizedBox(width: 10),
               Expanded(
-                  child: Text('saniyede ${st['rate']} harf',
+                  child: Text(tf('saniyede {0} harf', [st['rate']]),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.end,
@@ -170,7 +171,7 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
                     overflow: TextOverflow.ellipsis,
                     style: Lux.ui(13, color: kind == 'color' ? _ruby : Lux.muted, weight: FontWeight.w600)),
               ),
-              if (results > 0) Text('T1 %$t1 · T2|T1 %$t2', style: Lux.ui(12, color: Lux.muted)),
+              if (results > 0) Text(tf('T1 %{0} · T2|T1 %{1}', [t1, t2]), style: Lux.ui(12, color: Lux.muted)),
             ],
           ),
         ],
@@ -233,14 +234,14 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
     final hits = [for (final h in last['hits'] as List) h == true];
     final picked = [for (final x in last['picked'] as List) x as String];
     final wrong = picked.where((p) => !syms.contains(p)).toList();
-    final t = ((now - _fbAt) / 0.3).clamp(0.0, 1.0);
+    final fade = ((now - _fbAt) / 0.3).clamp(0.0, 1.0);
     final chip = side * 0.2;
     return Opacity(
-      opacity: t,
+      opacity: fade,
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(Lux.upper('Hedefler'), style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
+          Text(Lux.upper(t('Hedefler')), style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
           const SizedBox(height: 10),
           Row(
             mainAxisSize: MainAxisSize.min,
@@ -253,11 +254,11 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
             ],
           ),
           const SizedBox(height: 10),
-          Text('Gecikme ${last['lag']} (T1 → T2 arası ${last['lag']} harf)', style: Lux.ui(14, color: Lux.ink)),
+          Text(tf('Gecikme {0} (T1 → T2 arası {0} harf)', [last['lag']]), style: Lux.ui(14, color: Lux.ink)),
           if (wrong.isNotEmpty)
             Padding(
               padding: const EdgeInsets.only(top: 4),
-              child: Text('Akışta yoktu: ${wrong.join(' ')}', style: Lux.ui(13, color: Lux.bordeauxLight)),
+              child: Text(tf('Akışta yoktu: {0}', [wrong.join(' ')]), style: Lux.ui(13, color: Lux.bordeauxLight)),
             ),
         ],
       ),
@@ -285,16 +286,16 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
       );
 
   /// T2|T1 per lag — the attentional-blink curve of this run.
-  Widget _lagChart(Map<String, dynamic> st, double side, double t) {
+  Widget _lagChart(Map<String, dynamic> st, double side, double at) {
     final lags = [for (final l in (st['lags'] as List? ?? const [])) Map<String, dynamic>.from(l as Map)];
-    final grow = Curves.easeOutCubic.transform((t / 0.9).clamp(0.0, 1.0));
+    final grow = Curves.easeOutCubic.transform((at / 0.9).clamp(0.0, 1.0));
     final h = side * 0.5;
     return Padding(
       padding: EdgeInsets.all(side * 0.07),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(Lux.upper('Gecikmeye göre T2'),
+          Text(Lux.upper(t('Gecikmeye göre T2')),
               style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
           SizedBox(height: side * 0.04),
           SizedBox(
@@ -308,7 +309,7 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       Text(
-                        (l['n'] as num) == 0 ? '–' : '%${(100 * (l['ok'] as num) / (l['n'] as num)).round()}',
+                        (l['n'] as num) == 0 ? '–' : tf('%{0}', [(100 * (l['ok'] as num) / (l['n'] as num)).round()]),
                         style: Lux.ui(11, color: Lux.muted),
                       ),
                       const SizedBox(height: 3),
@@ -332,7 +333,7 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
               ],
             ),
           ),
-          Text('Gecikme (harf)', style: Lux.ui(11, color: Lux.muted)),
+          Text(t('Gecikme (harf)'), style: Lux.ui(11, color: Lux.muted)),
         ],
       ),
     );
@@ -345,9 +346,9 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
     if (phase != 'answer' && phase != 'feedback') {
       final txt = switch (phase) {
         'stream' => '',
-        'fixation' => 'Gözün artıda. Yumuşak bak, harfleri okumaya çalışma.',
+        'fixation' => t('Gözün artıda. Yumuşak bak, harfleri okumaya çalışma.'),
         'done' => '',
-        _ => 'Gözün merkezde · yumuşak odak',
+        _ => t('Gözün merkezde · yumuşak odak'),
       };
       return Center(
         child: Padding(
@@ -371,7 +372,7 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
       child: Column(
         children: [
           Text(
-            answering ? 'Gördüğün hedefleri seç (en çok $targets) · sıra önemli değil' : ' ',
+            answering ? tf('Gördüğün hedefleri seç (en çok {0}) · sıra önemli değil', [targets]) : ' ',
             style: Lux.ui(13, color: Lux.muted),
           ),
           const SizedBox(height: 8),
@@ -414,7 +415,7 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
           Opacity(
             opacity: answering ? 1 : 0,
             child: GoldButton(
-              picked.isEmpty ? 'Göremedim' : 'Onayla (${picked.length}/$targets)',
+              picked.isEmpty ? t('Göremedim') : tf('Onayla ({0}/{1})', [picked.length, targets]),
               icon: Icons.check_rounded,
               outlined: picked.isEmpty,
               onPressed: answering
@@ -436,13 +437,13 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
     final n = (st['targets'] as num?)?.toInt() ?? 2;
     final set = [for (final x in (st['target_set'] as List? ?? const [])) x as String];
     final what = switch (st['kind']) {
-      'digit' => 'Akan harflerin arasında $n rakam var. Hangilerini gördün?',
-      'color' => 'Akışta $n harf yakut renkte. Onlar hangi harflerdi?',
-      _ => 'Hedef harfler: ${set.join('  ')}\nAkışta bunlardan $n tanesi geçecek. Hangileri?',
+      'digit' => tf('Akan harflerin arasında {0} rakam var. Hangilerini gördün?', [n]),
+      'color' => tf('Akışta {0} harf yakut renkte. Onlar hangi harflerdi?', [n]),
+      _ => tf('Hedef harfler: {0}\nAkışta bunlardan {1} tanesi geçecek. Hangileri?', [set.join('  '), n]),
     };
     return _CardOverlay(
-      heading: st['title'] as String? ?? 'Hızlı Akış',
-      button: 'Başla',
+      heading: ct(st['title'] as String? ?? 'Hızlı Akış'),
+      button: t('Başla'),
       onPressed: () {
         HapticFeedback.selectionClick();
         s.act({'start': true});
@@ -453,19 +454,18 @@ class _RsvpBoardState extends State<_RsvpBoard> with SingleTickerProviderStateMi
           Text(what, textAlign: TextAlign.center, style: Lux.ui(16, weight: FontWeight.w500)),
           const SizedBox(height: 10),
           Text(
-            'Harfler aynı noktada saniyede ${st['rate']} hızla akar. Gözünü artıda tut, '
-            'akış bitince hedefleri seç. İkinci hedef birinciden hemen sonra gelirse kaçırmak normaldir: '
-            'buna dikkat kırpması denir.',
+            tf('Harfler aynı noktada saniyede {0} hızla akar. Gözünü artıda tut, akış bitince hedefleri seç. İkinci hedef birinciden hemen sonra gelirse kaçırmak normaldir: buna dikkat kırpması denir.',
+                [st['rate']]),
             textAlign: TextAlign.center,
             style: Lux.ui(14),
           ),
           if (st['lookalike'] == true) ...[
             const SizedBox(height: 8),
-            Text('Bu bölümde benzer şekiller var: O/0, I/1, S/5, Z/2, B/8, G/6.',
+            Text(t('Bu bölümde benzer şekiller var: O/0, I/1, S/5, Z/2, B/8, G/6.'),
                 textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.bordeauxLight)),
           ],
           const SizedBox(height: 10),
-          Text('${st['streams']} akış · 3★: T1 ve T2|T1 %85 · %60 altı kaybettirir',
+          Text(tf('{0} akış · 3★: T1 ve T2|T1 %85 · %60 altı kaybettirir', [st['streams']]),
               textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.muted)),
         ],
       ),

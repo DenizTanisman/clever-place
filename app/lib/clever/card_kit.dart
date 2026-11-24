@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'lux.dart';
+import 'i18n/lang.dart';
 
 /// Shared French-deck card art for the card games (Batak, 21, Blöf).
 ///
@@ -20,7 +21,8 @@ class CardKit {
   /// Card aspect ratio (width / height), the standard poker 63 × 88 mm.
   static const double aspect = 63 / 88;
 
-  static const suitNames = ['Maça', 'Kupa', 'Karo', 'Sinek'];
+  /// Suit names in the app's language (♠ ♥ ♦ ♣ order).
+  static List<String> get suitNames => Lang.en ? const ['Spades', 'Hearts', 'Diamonds', 'Clubs'] : const ['Maça', 'Kupa', 'Karo', 'Sinek'];
 
   static bool isRed(int suit) => suit == 1 || suit == 2;
 
@@ -34,8 +36,12 @@ class CardKit {
         _ => '$rank',
       };
 
-  /// Turkish name, e.g. "Kupa Papaz", "Maça 7".
+  /// The card's name: "Kupa Papaz", "Maça 7"; in English "King of Hearts", "7 of Spades".
   static String name(int suit, int rank) {
+    if (Lang.en) {
+      final r = switch (rank) { 11 => 'Jack', 12 => 'Queen', 13 => 'King', 14 => 'Ace', _ => '$rank' };
+      return '$r of ${suitNames[suit]}';
+    }
     final r = switch (rank) { 11 => 'Vale', 12 => 'Kız', 13 => 'Papaz', 14 => 'As', _ => '$rank' };
     return '${suitNames[suit]} $r';
   }

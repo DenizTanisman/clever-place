@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Schulte table board: a square grid of velvet tiles with a gold fixation point at the centre,
@@ -136,7 +137,7 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
             Padding(
               padding: const EdgeInsets.fromLTRB(24, 0, 24, 18),
               child: Text(
-                'Gözün ortadaki noktada kalsın · sembolleri çevre görüşünle bul',
+                t('Gözün ortadaki noktada kalsın · sembolleri çevre görüşünle bul'),
                 textAlign: TextAlign.center,
                 style: Lux.ui(13, color: Lux.muted.withValues(alpha: 0.8)),
               ),
@@ -194,12 +195,12 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
                           Transform.scale(
                             scale: 0.8 + 0.2 * Curves.easeOutBack.transform((te / 0.2).clamp(0.0, 1.0)),
                             alignment: Alignment.centerLeft,
-                            child: Text('+${(((st['penalty_ms'] as num?) ?? 2000) / 1000).round()} sn ceza',
+                            child: Text(tf('+{0} sn ceza', [(((st['penalty_ms'] as num?) ?? 2000) / 1000).round()]),
                                 style: Lux.ui(12.5, color: Lux.bordeauxLight, weight: FontWeight.w700)),
                           )
                         else
                           Text(
-                            lowTime ? 'Kalan ${(remaining / 1000).ceil()} sn' : 'Hedef ${_clockText(par)}',
+                            lowTime ? tf('Kalan {0} sn', [(remaining / 1000).ceil()]) : tf('Hedef {0}', [_clockText(par)]),
                             style: Lux.ui(12.5, color: lowTime ? Lux.bordeauxLight : Lux.muted),
                           ),
                       ],
@@ -215,7 +216,7 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
                     Transform.scale(
                       scale: 1 + 0.25 * errKick,
                       alignment: Alignment.centerRight,
-                      child: Text('Hata $errors',
+                      child: Text(tf('Hata {0}', [errors]),
                           style: Lux.ui(17, color: errors > 0 ? Lux.bordeauxLight : Lux.ink, weight: FontWeight.w700)),
                     ),
                     const SizedBox(height: 3),
@@ -249,7 +250,7 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text('Sıradaki', style: Lux.ui(12, color: Lux.gold, spacing: 0.8)),
+          Text(t('Sıradaki'), style: Lux.ui(12, color: Lux.gold, spacing: 0.8)),
           const SizedBox(width: 8),
           SizedBox(
             width: 34,
@@ -455,19 +456,19 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
     final penalty = (((st['penalty_ms'] as num?) ?? 2000) / 1000).round();
     final red = total ~/ 2;
     final how = switch (order) {
-      'desc' => '$total\'den 1\'e, geriye doğru sırayla dokun.',
-      'alpha' => 'Harfleri alfabe sırasıyla bul: A, B, C, Ç, D… (Ğ ve I yok).',
+      'desc' => tf('{0}\'den 1\'e, geriye doğru sırayla dokun.', [total]),
+      'alpha' => t('Harfleri alfabe sırasıyla bul: A, B, C, Ç, D… (Ğ ve I yok).'),
       'gorbov' =>
-        'İki dizi iç içe: beyazlar 1\'den yukarı, kırmızılar $red\'den aşağı. Sıra: beyaz 1, kırmızı $red, beyaz 2, kırmızı ${red - 1}…',
-      _ => '1\'den $total\'e kadar sırayla dokun.',
+        tf('İki dizi iç içe: beyazlar 1\'den yukarı, kırmızılar {0}\'den aşağı. Sıra: beyaz 1, kırmızı {0}, beyaz 2, kırmızı {1}…', [red, red - 1]),
+      _ => tf('1\'den {0}\'e kadar sırayla dokun.', [total]),
     };
     final lines = <String>[
       how,
-      'Gözünü ortadaki altın noktada tut; sembolleri çevre görüşünle yakala.',
-      if (st['styled'] == true) 'Boyutlar ve açılar karışık: sadece sembolün kendisine bak.',
-      if (st['shuffle'] == true) 'Her doğru dokunuşta tablo yeniden karışır.',
-      if (st['dim_found'] == true) 'Bulduğun semboller soluklaşır.',
-      'Yanlış dokunuş +$penalty sn. 3 yıldız için ${_clockText(par)} altında bitir.',
+      t('Gözünü ortadaki altın noktada tut; sembolleri çevre görüşünle yakala.'),
+      if (st['styled'] == true) t('Boyutlar ve açılar karışık: sadece sembolün kendisine bak.'),
+      if (st['shuffle'] == true) t('Her doğru dokunuşta tablo yeniden karışır.'),
+      if (st['dim_found'] == true) t('Bulduğun semboller soluklaşır.'),
+      tf('Yanlış dokunuş +{0} sn. 3 yıldız için {1} altında bitir.', [penalty, _clockText(par)]),
     ];
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: 1),
@@ -486,7 +487,7 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper(st['title'] as String? ?? 'Schulte'),
+                Text(Lux.upper(ct(st['title'] as String? ?? 'Schulte')),
                     textAlign: TextAlign.center, style: Lux.display(21, spacing: 1.2)),
                 const SizedBox(height: 14),
                 for (final l in lines)
@@ -507,7 +508,7 @@ class _SchulteBoardState extends State<_SchulteBoard> with SingleTickerProviderS
                     ),
                   ),
                 const SizedBox(height: 12),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),
@@ -525,7 +526,7 @@ String _clockText(double ms) {
   final tenths = (ms / 100).round().clamp(0, 1 << 30);
   final m = tenths ~/ 600;
   final sec = (tenths ~/ 10) % 60;
-  return '$m:${sec.toString().padLeft(2, '0')},${tenths % 10}';
+  return '$m:${sec.toString().padLeft(2, '0')}${Lang.en ? '.' : ','}${tenths % 10}';
 }
 
 /// Central fixation point: a breathing gold dot on the grid's centre (even grids sit on a line

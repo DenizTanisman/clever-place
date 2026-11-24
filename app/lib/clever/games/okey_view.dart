@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Okey table: you (bottom) against three AI seats (right · across · left).
@@ -1103,25 +1104,25 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
       final on = active == seat;
       final thinking = on && _aiBusy && now >= _thinkFrom;
       final breath = thinking ? 0.5 + 0.5 * math.sin(now * 4.2) : (on ? 0.35 : 0.0);
-      final name = x['name'] as String? ?? '';
+      final name = ct(x['name'] as String? ?? '');
       final score = _int(x['score']);
       final count = _int(x['count']);
       // 101: lower totals are better; show the opening and this hand's penalties.
       final v101 = _is101;
       final pen = _int(x['hand']);
-      final openTag = x['opened'] == true ? (x['open_kind'] == 'pairs' ? 'çift açtı' : '${_int(x['open_value'])} açtı') : '';
+      final openTag = x['opened'] == true ? (x['open_kind'] == 'pairs' ? t('çift açtı') : tf('{0} açtı', [_int(x['open_value'])])) : '';
       final children = <Widget>[
         Text(name, style: Lux.ui(13, color: on ? Lux.goldLight : Lux.ink, weight: FontWeight.w600)),
         Text('$score', style: Lux.numeral(17, color: !v101 && score <= 6 ? Lux.bordeauxLight : Lux.gold)),
         if (!vertical) const SizedBox(width: 6),
-        Text(thinking ? 'düşünüyor' : '$count taş', style: Lux.ui(10.5, color: thinking ? Lux.goldLight : Lux.muted)),
+        Text(thinking ? t('düşünüyor') : tf('{0} taş', [count]), style: Lux.ui(10.5, color: thinking ? Lux.goldLight : Lux.muted)),
         if (v101 && openTag.isNotEmpty) ...[
           if (!vertical) const SizedBox(width: 6),
           Text(openTag, style: Lux.ui(10, color: Lux.goldLight, weight: FontWeight.w600)),
         ],
         if (v101 && pen > 0) ...[
           if (!vertical) const SizedBox(width: 6),
-          Text('+$pen ceza', style: Lux.ui(10, color: Lux.bordeauxLight, weight: FontWeight.w600)),
+          Text(tf('+{0} ceza', [pen]), style: Lux.ui(10, color: Lux.bordeauxLight, weight: FontWeight.w600)),
         ],
       ];
       return Container(
@@ -1155,46 +1156,46 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
     String? why;
     var c1 = Lux.ink;
     if (last is Map) {
-      line1 = last['text'] as String? ?? '';
+      line1 = ct(last['text'] as String? ?? '');
       final seat = _int(last['seat']);
       final r = last['reason'] as String? ?? '';
-      if (_open && seat != 0 && r.isNotEmpty) why = r;
+      if (_open && seat != 0 && r.isNotEmpty) why = ct(r);
     }
     final hint = st['hint'];
     String line2;
     var c2 = Lux.muted;
     final showHint = hint is Map && (_yourTurn || hint['kind'] == 'suggest');
     if (hint is Map && showHint) {
-      line2 = hint['text'] as String? ?? '';
+      line2 = ct(hint['text'] as String? ?? '');
       c2 = Lux.goldLight;
     } else if (why != null) {
-      line2 = 'Neden? $why';
+      line2 = tf('Neden? {0}', [why]);
       c2 = const Color(0xFFD9C48E);
     } else if (_yourTurn && _is101) {
       final me = _seats.isNotEmpty ? _seats[0] : const <String, dynamic>{};
       final must = _mustUse;
       if (_drawStage) {
-        line2 = 'Sıra sende: desteden çek ya da soldakini al (alırsan bu el kullanmalısın)';
+        line2 = t('Sıra sende: desteden çek ya da soldakini al (alırsan bu el kullanmalısın)');
       } else if (must != null) {
-        line2 = 'Yandan aldığın taşı bu el kullan: aç, pere koy ya da işle · olmazsa Geri ver';
+        line2 = t('Yandan aldığın taşı bu el kullan: aç, pere koy ya da işle · olmazsa Geri ver');
       } else if (me['opened'] != true) {
-        line2 = 'Perleri diz, 101 olunca Aç · sonra bir taş at';
+        line2 = t('Perleri diz, 101 olunca Aç · sonra bir taş at');
       } else if (_int(me['count']) <= 1) {
-        line2 = 'Son taşını at: bitiriyorsun!';
+        line2 = t('Son taşını at: bitiriyorsun!');
       } else {
-        line2 = 'İşlemek için taşı masadaki pere sürükle · sonra bir taş at';
+        line2 = t('İşlemek için taşı masadaki pere sürükle · sonra bir taş at');
       }
       c2 = Lux.gold;
     } else if (_yourTurn) {
       line2 = _drawStage
-          ? 'Sıra sende: ortadaki desteden çek ya da soldan gelen taşı al'
-          : 'Bir taş at (sağ alttaki yere sürükle) · bitirmek için ortaya bırak';
+          ? t('Sıra sende: ortadaki desteden çek ya da soldan gelen taşı al')
+          : t('Bir taş at (sağ alttaki yere sürükle) · bitirmek için ortaya bırak');
       c2 = Lux.gold;
       c1 = Lux.ink;
     } else if (_playing) {
       final seat = _int(st['seat']);
       final names = _seats.map((e) => e['name'] as String? ?? '').toList();
-      line2 = seat < names.length ? '${names[seat]} oynuyor…' : '';
+      line2 = seat < names.length ? tf('{0} oynuyor…', [ct(names[seat])]) : '';
     } else {
       line2 = '';
     }
@@ -1233,18 +1234,18 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
               color: const Color(0x6605241C),
             ),
             child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Text('Puanın', style: Lux.ui(10.5, color: Lux.muted)),
+              Text(t('Puanın'), style: Lux.ui(10.5, color: Lux.muted)),
               Text('$me', style: Lux.numeral(19, color: me <= 6 ? Lux.bordeauxLight : Lux.goldLight)),
             ]),
           ),
           const Spacer(),
-          _SmallButton('Seri diz', onTap: canPlay ? () => s.act({'auto_arrange': 'runs'}) : null),
+          _SmallButton(t('Seri diz'), onTap: canPlay ? () => s.act({'auto_arrange': 'runs'}) : null),
           const SizedBox(width: 8),
-          _SmallButton('Çift diz', onTap: canPlay ? () => s.act({'auto_arrange': 'pairs'}) : null),
+          _SmallButton(t('Çift diz'), onTap: canPlay ? () => s.act({'auto_arrange': 'pairs'}) : null),
           const SizedBox(width: 10),
           RimIconButton(
             Icons.lightbulb_outline_rounded,
-            tooltip: 'İpucu: en iyi hamle ve nedeni',
+            tooltip: t('İpucu: en iyi hamle ve nedeni'),
             onPressed: _yourTurn && st['hint'] is! Map
                 ? () {
                     s.actAsync({'hint': true}).then((_) => _kick());
@@ -1313,18 +1314,18 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
     bool ready;
     if (!opened) {
       if (sel.value < need && sel.prs.length >= needP) {
-        title = 'ÇİFTLE AÇ';
-        sub = '${sel.prs.length} / $needP çift';
+        title = t('ÇİFTLE AÇ');
+        sub = tf('{0} / {1} çift', [sel.prs.length, needP]);
         ready = true;
       } else {
-        title = 'AÇ';
+        title = t('AÇ');
         sub = '${sel.value} / $need';
         ready = sel.value >= need;
       }
     } else {
       final n = pairsOpener ? sel.prs.length : sel.runs.length;
-      title = 'İNDİR';
-      sub = n == 0 ? 'per yok' : '$n ${pairsOpener ? 'çift' : 'per'}';
+      title = t('İNDİR');
+      sub = n == 0 ? t('per yok') : (pairsOpener ? tf('{0} çift', [n]) : tf('{0} per', [n]));
       ready = n > 0;
     }
     final hot = ready && active;
@@ -1381,7 +1382,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
               color: const Color(0x6605241C),
             ),
             child: Column(mainAxisSize: MainAxisSize.min, children: [
-              Text('Toplamın', style: Lux.ui(10.5, color: Lux.muted)),
+              Text(t('Toplamın'), style: Lux.ui(10.5, color: Lux.muted)),
               Text('$me', style: Lux.numeral(19, color: Lux.goldLight)),
             ]),
           ),
@@ -1392,15 +1393,15 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
               alignment: Alignment.centerRight,
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 if (firstHand) ...[
-                  _SmallButton('${_int(st['max_hands'], 5)} el', onTap: _cycleHands),
+                  _SmallButton(tf('{0} el', [_int(st['max_hands'], 5)]), onTap: _cycleHands),
                   const SizedBox(width: 6),
                 ],
                 if (st['can_untake'] == true)
-                  _SmallButton('Geri ver', onTap: () => s.act({'untake': true}))
+                  _SmallButton(t('Geri ver'), onTap: () => s.act({'untake': true}))
                 else
-                  _SmallButton('Çift diz', onTap: canPlay ? () => s.act({'auto_arrange': 'pairs'}) : null),
+                  _SmallButton(t('Çift diz'), onTap: canPlay ? () => s.act({'auto_arrange': 'pairs'}) : null),
                 const SizedBox(width: 6),
-                _SmallButton('Açılabilir mi?',
+                _SmallButton(t('Açılabilir mi?'),
                     onTap: canPlay
                         ? () {
                             setState(_excluded.clear);
@@ -1410,7 +1411,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
                 const SizedBox(width: 8),
                 RimIconButton(
                   Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: en iyi hamle ve nedeni',
+                  tooltip: t('İpucu: en iyi hamle ve nedeni'),
                   onPressed: _yourTurn && (st['hint'] is! Map || (st['hint'] as Map)['kind'] == 'suggest')
                       ? () {
                           s.actAsync({'hint': true}).then((_) => _kick());
@@ -1445,7 +1446,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
         );
     final penNote = [
       for (var i = 0; i < pens.length && i < seats.length; i++)
-        if (pens[i] > 0) '${seats[i]['name']} +${pens[i]}'
+        if (pens[i] > 0) '${ct(seats[i]['name'] as String? ?? '')} +${pens[i]}'
     ];
     return LuxCard(
       highlight: winner == 0,
@@ -1453,7 +1454,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(res['text'] as String? ?? '',
+          Text(ct(res['text'] as String? ?? ''),
               textAlign: TextAlign.center,
               style: Lux.display(19, color: winner == 0 ? Lux.gold : (winner == null ? Lux.goldLight : Lux.ink))),
           const SizedBox(height: 10),
@@ -1463,12 +1464,12 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
             children: [
               TableRow(children: [
                 c('', align: TextAlign.left),
-                for (var i = 0; i < hist.length; i++) c('${i + 1}. el', style: Lux.ui(11, color: Lux.muted)),
-                c('Toplam', style: Lux.ui(11, color: Lux.muted)),
+                for (var i = 0; i < hist.length; i++) c(tf('{0}. el', [i + 1]), style: Lux.ui(11, color: Lux.muted)),
+                c(t('Toplam'), style: Lux.ui(11, color: Lux.muted)),
               ]),
               for (var p = 0; p < seats.length; p++)
                 TableRow(children: [
-                  c(seats[p]['name'] as String? ?? '',
+                  c(ct(seats[p]['name'] as String? ?? ''),
                       align: TextAlign.left, style: Lux.ui(13.5, color: p == 0 ? Lux.goldLight : Lux.ink, weight: FontWeight.w600)),
                   for (var i = 0; i < hist.length; i++)
                     c(p < hist[i].length ? '${hist[i][p]}' : '',
@@ -1484,14 +1485,14 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
           const SizedBox(height: 6),
           Text(
             [
-              if (penNote.isNotEmpty) 'Ceza: ${penNote.join(' · ')}',
-              'Düşük puan kazanır · açmayan 202 yazar',
+              if (penNote.isNotEmpty) tf('Ceza: {0}', [penNote.join(' · ')]),
+              t('Düşük puan kazanır · açmayan 202 yazar'),
             ].join('  ·  '),
             textAlign: TextAlign.center,
             style: Lux.ui(11.5, color: Lux.muted),
           ),
           const SizedBox(height: 12),
-          GoldButton(matchOver ? 'Maç sonucu' : 'Sonraki el', icon: Icons.arrow_forward_rounded, onPressed: () {
+          GoldButton(matchOver ? t('Maç sonucu') : t('Sonraki el'), icon: Icons.arrow_forward_rounded, onPressed: () {
             HapticFeedback.selectionClick();
             s.act({'next': true});
           }),
@@ -1517,7 +1518,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(res['text'] as String? ?? '',
+          Text(ct(res['text'] as String? ?? ''),
               textAlign: TextAlign.center,
               style: Lux.display(19, color: winner == 0 ? Lux.gold : (winner == null ? Lux.goldLight : Lux.ink))),
           if (groups.isNotEmpty) ...[
@@ -1539,7 +1540,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
             Padding(
               padding: const EdgeInsets.symmetric(vertical: 1.5),
               child: Row(children: [
-                SizedBox(width: 70, child: Text(seats[i]['name'] as String? ?? '', style: Lux.ui(14, color: i == 0 ? Lux.goldLight : Lux.ink))),
+                SizedBox(width: 70, child: Text(ct(seats[i]['name'] as String? ?? ''), style: Lux.ui(14, color: i == 0 ? Lux.goldLight : Lux.ink))),
                 const Spacer(),
                 SizedBox(
                   width: 44,
@@ -1553,7 +1554,7 @@ class _OkeyTableState extends State<_OkeyTable> with SingleTickerProviderStateMi
               ]),
             ),
           const SizedBox(height: 12),
-          GoldButton(matchOver ? 'Maç sonucu' : 'Sonraki el', icon: Icons.arrow_forward_rounded, onPressed: () {
+          GoldButton(matchOver ? t('Maç sonucu') : t('Sonraki el'), icon: Icons.arrow_forward_rounded, onPressed: () {
             HapticFeedback.selectionClick();
             s.act({'next': true});
           }),
@@ -1621,7 +1622,7 @@ class _EyeToggle extends StatelessWidget {
           child: Row(mainAxisSize: MainAxisSize.min, children: [
             Icon(open ? Icons.visibility_rounded : Icons.visibility_off_rounded, size: 17, color: open ? Lux.goldLight : Lux.muted),
             const SizedBox(width: 4),
-            Text('Açık oyna', style: Lux.ui(11.5, color: open ? Lux.goldLight : Lux.muted, weight: FontWeight.w600)),
+            Text(t('Açık oyna'), style: Lux.ui(11.5, color: open ? Lux.goldLight : Lux.muted, weight: FontWeight.w600)),
           ]),
         ),
       );
@@ -1715,7 +1716,7 @@ class _TablePainter extends CustomPainter {
       );
       if (seat == 0) {
         final d = (v._seats.isNotEmpty ? (v._seats[0]['discards'] as List? ?? const []) : const []);
-        if (d.isEmpty) _label(c, 'AT', g.corner[0], 11, Lux.gold.withValues(alpha: 0.6));
+        if (d.isEmpty) _label(c, t('AT'), g.corner[0], 11, Lux.gold.withValues(alpha: 0.6));
       }
     }
     // Finish zone while dragging a rack tile (classic; in 101 the last discard finishes).
@@ -1731,7 +1732,7 @@ class _TablePainter extends CustomPainter {
         final a0 = i / n * 2 * math.pi + now * 0.4, a1 = (i + 1) / n * 2 * math.pi + now * 0.4;
         c.drawArc(Rect.fromCircle(center: g.center, radius: g.finishR), a0, a1 - a0, false, paint);
       }
-      _label(c, 'BİTİR', g.center + Offset(0, -g.finishR + 12), 11, Lux.goldLight.withValues(alpha: hot ? 1 : 0.7));
+      _label(c, t('BİTİR'), g.center + Offset(0, -g.finishR + 12), 11, Lux.goldLight.withValues(alpha: hot ? 1 : 0.7));
     }
   }
 
@@ -1755,15 +1756,15 @@ class _TablePainter extends CustomPainter {
       }
     }
     final ly = g.pile.dy + g.th * 0.56 + 10;
-    _label(c, 'DESTE $n', Offset(g.pile.dx, ly), 9.5, Lux.muted);
-    _label(c, 'GÖSTERGE', Offset(g.gost.dx, ly), 9.5, Lux.muted);
+    _label(c, tf('DESTE {0}', [n]), Offset(g.pile.dx, ly), 9.5, Lux.muted);
+    _label(c, t('GÖSTERGE'), Offset(g.gost.dx, ly), 9.5, Lux.muted);
     // Okey chip: which tile is wild this hand.
     if (okey >= 0) {
       OkeyArt.face(c, g.tile(g.chip, 0.9), okey, okey);
       _label(c, 'OKEY', Offset(g.chip.dx, ly), 9.5, Lux.gold);
     }
     if (v._showAll && st['phase'] == 'play') {
-      _label(c, 'SIRADAKİ TAŞLAR', g.nextRow + Offset(0, g.th * 0.35 + 10), 9.5, Lux.muted);
+      _label(c, t('SIRADAKİ TAŞLAR'), g.nextRow + Offset(0, g.th * 0.35 + 10), 9.5, Lux.muted);
     }
     if (!v._is101) _log(c);
   }
@@ -1930,7 +1931,7 @@ class _TablePainter extends CustomPainter {
         final mid = Offset((a.dx + b.dx) / 2, y);
         final tp = TextPainter(
           text: TextSpan(
-              text: out ? 'dışarıda' : '$value',
+              text: out ? t('dışarıda') : '$value',
               style: Lux.ui(9, color: out ? Lux.muted : const Color(0xFF2A1A08), weight: FontWeight.w700)),
           textDirection: TextDirection.ltr,
         )..layout();
@@ -1949,14 +1950,14 @@ class _TablePainter extends CustomPainter {
     final seats = v._seats;
     final zone = g.meldZone;
     if (tbl.rects.isEmpty) {
-      _label(c, 'Masa boş: ilk açan 101 puanla açar', zone.center, 10.5, Lux.muted.withValues(alpha: 0.7));
+      _label(c, t('Masa boş: ilk açan 101 puanla açar'), zone.center, 10.5, Lux.muted.withValues(alpha: 0.7));
       return;
     }
     for (final (seat, at) in tbl.labels) {
       if (seat >= seats.length) continue;
       final x = seats[seat];
-      final name = x['name'] as String? ?? '';
-      final sub = x['open_kind'] == 'pairs' ? 'çift' : '${(x['open_value'] as num?)?.toInt() ?? 0}';
+      final name = ct(x['name'] as String? ?? '');
+      final sub = x['open_kind'] == 'pairs' ? t('çift') : '${(x['open_value'] as num?)?.toInt() ?? 0}';
       final tp = TextPainter(
         text: TextSpan(children: [
           TextSpan(text: '$name\n', style: Lux.ui(10, color: seat == 0 ? Lux.goldLight : Lux.ink, weight: FontWeight.w600)),
@@ -2032,7 +2033,7 @@ class _TablePainter extends CustomPainter {
     final maxY = g.inner.bottom - g.th * 1.4;
     for (var i = 0; i < log.length && i < 5 && y < maxY; i++) {
       final e = log[i] as Map;
-      final text = e['text'] as String? ?? '';
+      final text = ct(e['text'] as String? ?? '');
       if (text.isEmpty) continue;
       _label(c, text, Offset(g.center.dx, y), 11, Lux.muted.withValues(alpha: 0.85 - i * 0.15));
       y += 17;

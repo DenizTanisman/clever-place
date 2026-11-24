@@ -9,6 +9,14 @@ const iqTutorials = GameTutorials(
 - Yıldızlar: 20'de **18** doğru 3 yıldız, **15** doğru 2, **12** doğru 1. 12'nin altı bölümü geçmez; aynı sorularla yeniden deneyebilirsin.
 - **Karışık** modda 1000 soru arasından rastgele sorular gelir; doğru cevaplar seriyi uzatır, 3 hakkın var. Rekor: en uzun seri.
 - Bu bir eğlence oyunudur: **IQ puanı ölçmez ve göstermez.**''',
+  rulesEn: '''
+- 1000 questions, 50 levels: **20 questions** per level. Levels 1–25 are medium, 26–50 hard. Questions rotate through the categories; the same type never comes twice in a row.
+- Categories: matrices, shape and number sequences, missing numbers, balance scales, logic, cube rotation and nets, paper folding, block counting, mental rotation, shape analogies, odd one out, letter sequences, codes, matchsticks, piece assembly, clocks and calendars, word problems.
+- No time limit. The clock in the card's corner is only for information; it won't rush you.
+- After each answer you see right away whether it was right; the **Why?** box explains the rule. Go to the next question with **Continue**.
+- Stars: **18** of 20 right is 3 stars, **15** right 2, **12** right 1. Below 12 you don't pass the level; you can retry with the same questions.
+- In **Mixed** mode, random questions come from all 1000; right answers extend your streak, and you have 3 lives. Record: your longest streak.
+- This is a game for fun: **it doesn't measure or show an IQ score.**''',
   mid: [
     TutorialSection(
       'Önce kuralı söyle, sonra seçeneklere bak',

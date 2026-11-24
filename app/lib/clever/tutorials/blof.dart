@@ -11,6 +11,14 @@ const blofTutorials = GameTutorials(
 - Bir elde bir sayının **dördü** toplanınca açılıp atılır; o sayı artık söylenemez — bu yüzden "dört tane" demek her zaman yalandır.
 - Son kartlarını koyan hemen kazanmaz: herkes sırayla itiraz edebilir. Kimse itiraz etmezse ya da kartlar doğru çıkarsa **elini ilk bitiren kazanır**.
 - Göz düğmesi (**Açık oyna**) bütün elleri, yığının gerçeğini ve rakiplerin neden öyle oynadığını gösterir. Lamba bir öneri verir ve olasılık yardımcısını açar; ipucu kullanılan galibiyet 1 yıldız, yardımsız galibiyet 3 yıldız sayılır.''',
+  rulesEn: '''
+- 4 players, 52 cards, 13 each. Play goes clockwise; whoever opens a round names a **rank** ("Three 7s") and puts 1–4 cards face down on the pile.
+- The next player either names **the same rank** and puts down 1–4 cards (truthfully or not), calls **"Bluff!"**, or **passes**. The last cards played stay open to a challenge from anyone whose turn comes, until new cards go on top.
+- On "Bluff!" the last cards played are turned over: if any is a different rank, the **liar** takes the whole pile; if they are all true, the **challenger** takes it. Whoever didn't take the pile opens the next round.
+- If three players pass in a row, the pile is **burned** (out of the game) and the last player to put down cards opens the next round.
+- When someone collects all **four** of a rank, they are shown and discarded; that rank can't be named any more — so "four of them" is always a lie.
+- Playing your last cards doesn't win at once: everyone in turn may challenge. If no one does, or the cards prove true, **the first to empty their hand wins**.
+- The eye button (**Open play**) shows every hand, the truth of the pile and why the opponents played as they did. The lamp gives a suggestion and opens the odds helper; a win with hints counts as 1 star, a win without help as 3 stars.''',
   mid: [
     TutorialSection(
       'Kart takibi: defter tut',

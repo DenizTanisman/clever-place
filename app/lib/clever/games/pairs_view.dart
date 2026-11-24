@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Eşleştirme board: a grid of velvet-backed cards with original glyph faces (jewel cuts, moons,
@@ -192,7 +193,7 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
               const SizedBox(width: 6),
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
-                child: Text(Lux.upper('hamle'), style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
+                child: Text(Lux.upper(t('hamle')), style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
               ),
               const SizedBox(width: 12),
               Padding(padding: const EdgeInsets.only(bottom: 8), child: StarRow(s.finished ? s.stars : starsNow, size: 16)),
@@ -201,10 +202,10 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
-                    _line('$found / $groups ${group == 3 ? 'üçlü' : 'çift'}', Lux.ui(16, weight: FontWeight.w700)),
+                    _line('$found / $groups ${group == 3 ? t('üçlü') : t('çift')}', Lux.ui(16, weight: FontWeight.w700)),
                     _line('3★ ≤ $three · 2★ ≤ $two', Lux.ui(12, color: Lux.muted)),
                     if (limit != null)
-                      _line('Sınır: ${limit - moves} hamle kaldı',
+                      _line(tf('Sınır: {0} hamle kaldı', [limit - moves]),
                           Lux.ui(12, color: nearLimit ? Lux.bordeauxLight : Lux.muted, weight: nearLimit ? FontWeight.w700 : FontWeight.w500)),
                   ],
                 ),
@@ -217,7 +218,7 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
             child: phase == 'preview' && previewTotal > 0
                 ? Row(
                     children: [
-                      Text('Ezberle', style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w600)),
+                      Text(t('Ezberle'), style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w600)),
                       const SizedBox(width: 10),
                       Expanded(
                         child: ClipRRect(
@@ -244,7 +245,7 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
                             Icon(Icons.swap_horiz_rounded, size: 17, color: phase == 'shuffle' ? Lux.goldLight : Lux.muted),
                             const SizedBox(width: 6),
                             Text(
-                              phase == 'shuffle' ? 'Kartlar yer değiştiriyor · takip et' : 'Karışmaya $toShuffle hamle',
+                              phase == 'shuffle' ? t('Kartlar yer değiştiriyor · takip et') : tf('Karışmaya {0} hamle', [toShuffle]),
                               style: Lux.ui(13, color: phase == 'shuffle' ? Lux.goldLight : (toShuffle <= 1 ? Lux.bordeauxLight : Lux.muted)),
                             ),
                           ],
@@ -337,17 +338,17 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
     final limit = (st['limit'] as num?)?.toInt();
     final three = (st['three_star'] as num?)?.toInt() ?? 0;
     final two = (st['two_star'] as num?)?.toInt() ?? 0;
+    final secs = preview.toStringAsFixed(1).replaceAll('.', ',').replaceAll(',0', '');
     final lines = <String>[
       group == 3
-          ? 'Kartları tek tek çevir; aynı üç kartı bul. İkinci kart ilkini tutmazsa tur biter.'
-          : 'Kartları ikişer ikişer çevir; aynı iki kartı bul. Tutmayan kartlar kısa bir bakıştan sonra kapanır.',
-      if (preview > 0)
-        'Başta bütün kartlar ${preview.toStringAsFixed(1).replaceAll('.', ',').replaceAll(',0', '')} sn açık kalacak: ezberle.',
-      if (conf >= 2) 'Dikkat: bazı kartlar birbirine çok benziyor. Şekle de renge de bak.',
-      if (conf >= 3) 'Köşedeki küçük yıldızın olup olmadığına da bak.',
-      if (every > 0) 'Her $every hamlede bazı kapalı kartlar yer değiştirir. Kayan kartları gözünle takip et.',
-      if (limit != null) 'Hamle sınırı: $limit. Sınır dolarsa bölüm biter.',
-      '3 yıldız: en fazla $three hamle · 2 yıldız: en fazla $two hamle.',
+          ? t('Kartları tek tek çevir; aynı üç kartı bul. İkinci kart ilkini tutmazsa tur biter.')
+          : t('Kartları ikişer ikişer çevir; aynı iki kartı bul. Tutmayan kartlar kısa bir bakıştan sonra kapanır.'),
+      if (preview > 0) tf('Başta bütün kartlar {0} sn açık kalacak: ezberle.', [Lang.en ? secs.replaceAll(',', '.') : secs]),
+      if (conf >= 2) t('Dikkat: bazı kartlar birbirine çok benziyor. Şekle de renge de bak.'),
+      if (conf >= 3) t('Köşedeki küçük yıldızın olup olmadığına da bak.'),
+      if (every > 0) tf('Her {0} hamlede bazı kapalı kartlar yer değiştirir. Kayan kartları gözünle takip et.', [every]),
+      if (limit != null) tf('Hamle sınırı: {0}. Sınır dolarsa bölüm biter.', [limit]),
+      tf('3 yıldız: en fazla {0} hamle · 2 yıldız: en fazla {1} hamle.', [three, two]),
     ];
     return TweenAnimationBuilder<double>(
       tween: Tween(begin: 0, end: 1),
@@ -366,7 +367,7 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper('$cols×$rows · $groups ${group == 3 ? 'üçlü' : 'çift'}'),
+                Text(Lux.upper('$cols×$rows · $groups ${group == 3 ? t('üçlü') : t('çift')}'),
                     textAlign: TextAlign.center, style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
                 for (final l in lines)
@@ -375,7 +376,7 @@ class _PairsBoardState extends State<_PairsBoard> with SingleTickerProviderState
                     child: Text(l, textAlign: TextAlign.center, style: Lux.ui(16, weight: FontWeight.w500)),
                   ),
                 const SizedBox(height: 10),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

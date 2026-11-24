@@ -7,9 +7,10 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
-/// İtiş board against the AI.
+/// Abalone board against the AI.
 ///
 /// Layout: opponent strip (rank medallion, "düşünüyor…", pearls it has pushed off) · the hexagonal
 /// tray (smoked-ebony plate with 61 carved dimples, an obsidian gutter all round, a gold bezel) ·
@@ -867,7 +868,7 @@ class _PushBoardState extends State<_PushBoard> with SingleTickerProviderStateMi
     final target = (st['target'] as num?)?.toInt() ?? 6;
     final quiet = (st['quiet'] as num?)?.toInt() ?? 0;
     final quietLimit = (st['quiet_limit'] as num?)?.toInt() ?? 100;
-    final rank = (st['title'] as String?) ?? '';
+    final rank = ct((st['title'] as String?) ?? '');
     final thinking = _aiTimer != null || _aiInFlight;
     final playing = !s.finished;
 
@@ -918,12 +919,12 @@ class _PushBoardState extends State<_PushBoard> with SingleTickerProviderStateMi
                               const SizedBox(height: 2),
                               thinking
                                   ? const _ThinkingText(key: ValueKey('think'))
-                                  : Text('${counts['ai'] ?? 14} bilye',
+                                  : Text(tf('{0} bilye', [counts['ai'] ?? 14]),
                                       style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
                             ],
                           ),
                         ),
-                        _Tally(label: 'DÜŞÜRDÜĞÜ', taken: aiTaken, target: target, pearls: true),
+                        _Tally(label: t('DÜŞÜRDÜĞÜ'), taken: aiTaken, target: target, pearls: true),
                       ],
                     ),
                   ),
@@ -945,22 +946,22 @@ class _PushBoardState extends State<_PushBoard> with SingleTickerProviderStateMi
                             children: [
                               Text(
                                   !playing
-                                      ? 'Oyun bitti'
+                                      ? t('Oyun bitti')
                                       : _yourTurn
-                                          ? 'Sıra sende'
-                                          : 'Rakip oynuyor',
+                                          ? t('Sıra sende')
+                                          : t('Rakip oynuyor'),
                                   style: Lux.ui(14, color: _yourTurn ? Lux.goldLight : Lux.muted, weight: FontWeight.w600)),
-                              Text('${counts['you'] ?? 14} bilyen', style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
+                              Text(tf('{0} bilyen', [counts['you'] ?? 14]), style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
                             ],
                           ),
                         ),
-                        _Tally(label: 'DÜŞÜRDÜĞÜN', taken: youTaken, target: target, pearls: false),
+                        _Tally(label: t('DÜŞÜRDÜĞÜN'), taken: youTaken, target: target, pearls: false),
                         const SizedBox(width: 14),
                         Column(
                           mainAxisAlignment: MainAxisAlignment.center,
                           crossAxisAlignment: CrossAxisAlignment.end,
                           children: [
-                            Text('SESSİZ', style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
+                            Text(t('SESSİZ'), style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
                             Text('$quiet/$quietLimit',
                                 style: Lux.numeral(16, color: quiet >= quietLimit - 20 ? Lux.bordeauxLight : Lux.goldLight)),
                             const SizedBox(height: 3),
@@ -1001,7 +1002,7 @@ class _PushBoardState extends State<_PushBoard> with SingleTickerProviderStateMi
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al (yıldızı 1\'e düşürür)',
+                  tooltip: t('Geri al (yıldızı 1\'e düşürür)'),
                   onPressed: st['can_undo'] == true && _canInput
                       ? () {
                           setState(() => _sel = []);
@@ -1010,7 +1011,7 @@ class _PushBoardState extends State<_PushBoard> with SingleTickerProviderStateMi
                       : null),
               const SizedBox(width: 24),
               RimIconButton(_hintBusy ? Icons.hourglass_top_rounded : Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: en iyi hamle (yıldızı 1\'e düşürür)', onPressed: _canInput ? _askHint : null),
+                  tooltip: t('İpucu: en iyi hamle (yıldızı 1\'e düşürür)'), onPressed: _canInput ? _askHint : null),
             ],
           ),
         ),
@@ -1213,7 +1214,7 @@ class _ThinkingTextState extends State<_ThinkingText> with SingleTickerProviderS
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text('düşünüyor', style: Lux.ui(12, color: _rose, spacing: 0.8)),
+          Text(t('düşünüyor'), style: Lux.ui(12, color: _rose, spacing: 0.8)),
           for (var i = 0; i < 3; i++)
             Transform.translate(
               offset: Offset(0, -3 * math.max(0, math.sin((_c.value - i * 0.18) * 2 * math.pi))),

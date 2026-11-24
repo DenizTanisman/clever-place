@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'iq_figure.dart';
 import 'iq_layout.dart';
@@ -145,7 +146,7 @@ class _IqBoardState extends State<_IqBoard> {
               child: SizedBox(
                 width: double.infinity,
                 child: Center(
-                  child: GoldButton('Devam', icon: Icons.arrow_forward_rounded, onPressed: () {
+                  child: GoldButton(t('Devam'), icon: Icons.arrow_forward_rounded, onPressed: () {
                     HapticFeedback.selectionClick();
                     s.act({'next': true});
                   }),
@@ -168,9 +169,9 @@ class _IqBoardState extends State<_IqBoard> {
         children: [
           Icon(Icons.local_fire_department_rounded, color: streak > 0 ? Lux.gold : Lux.muted, size: 22),
           const SizedBox(width: 4),
-          Text('Seri $streak', style: Lux.ui(16, color: Lux.goldLight, weight: FontWeight.w700)),
+          Text(tf('Seri {0}', [streak]), style: Lux.ui(16, color: Lux.goldLight, weight: FontWeight.w700)),
           const SizedBox(width: 10),
-          Text('En iyi $best', style: Lux.ui(13, color: Lux.muted)),
+          Text(tf('En iyi {0}', [best]), style: Lux.ui(13, color: Lux.muted)),
           const Spacer(),
           for (var i = 0; i < 3; i++)
             Padding(
@@ -183,7 +184,7 @@ class _IqBoardState extends State<_IqBoard> {
             TextButton(
               onPressed: () => s.act({'finish': true}),
               style: TextButton.styleFrom(foregroundColor: Lux.goldLight, padding: const EdgeInsets.symmetric(horizontal: 8)),
-              child: Text('Bitir', style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600)),
+              child: Text(t('Bitir'), style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600)),
             ),
         ],
       );
@@ -247,10 +248,10 @@ class _IqBoardState extends State<_IqBoard> {
                   color: Lux.gold.withValues(alpha: 0.10),
                   border: Border.all(color: Lux.gold.withValues(alpha: 0.55)),
                 ),
-                child: Text('${q['cat_name'] ?? ''}', style: Lux.ui(12.5, color: Lux.goldLight, weight: FontWeight.w600)),
+                child: Text(ct('${q['cat_name'] ?? ''}'), style: Lux.ui(12.5, color: Lux.goldLight, weight: FontWeight.w600)),
               ),
               const SizedBox(width: 8),
-              Text(hard ? 'zor' : 'orta', style: Lux.ui(12, color: Lux.muted.withValues(alpha: 0.75))),
+              Text(hard ? t('zor') : t('orta'), style: Lux.ui(12, color: Lux.muted.withValues(alpha: 0.75))),
               const Spacer(),
               Icon(Icons.schedule_rounded, size: 14, color: Lux.muted.withValues(alpha: 0.6)),
               const SizedBox(width: 3),
@@ -259,7 +260,7 @@ class _IqBoardState extends State<_IqBoard> {
             ],
           ),
           const SizedBox(height: 12),
-          Text('${q['prompt'] ?? ''}', style: Lux.ui(18, color: Lux.ink, weight: FontWeight.w500)),
+          Text(ct('${q['prompt'] ?? ''}'), style: Lux.ui(18, color: Lux.ink, weight: FontWeight.w500)),
           if (fig != null) ...[
             const SizedBox(height: 16),
             Center(child: iqFigure(fig, w - 32)),
@@ -344,7 +345,7 @@ class _IqBoardState extends State<_IqBoard> {
           color: color.withValues(alpha: 0.10),
           border: Border.all(color: color.withValues(alpha: 0.8), width: 1.5),
         ),
-        child: Text(shown.isEmpty ? 'Cevabını yaz' : shown,
+        child: Text(shown.isEmpty ? t('Cevabını yaz') : shown,
             style: shown.isEmpty ? Lux.ui(15, color: Lux.muted) : Lux.numeral(34, color: feedback ? color : Lux.goldLight)),
       ),
     );
@@ -412,14 +413,14 @@ class _IqBoardState extends State<_IqBoard> {
             children: [
               Icon(correct ? Icons.check_circle_rounded : Icons.cancel_rounded, color: correct ? Lux.good : Lux.bordeauxLight, size: 22),
               const SizedBox(width: 8),
-              Text(correct ? 'Doğru!' : (value != null ? 'Olmadı: doğrusu $value' : 'Olmadı'),
+              Text(correct ? t('Doğru!') : (value != null ? tf('Olmadı: doğrusu {0}', [value]) : t('Olmadı')),
                   style: Lux.ui(17, color: correct ? Lux.good : Lux.bordeauxLight, weight: FontWeight.w700)),
             ],
           ),
           const SizedBox(height: 10),
-          Text('Neden?', style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w700, spacing: 0.8)),
+          Text(t('Neden?'), style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w700, spacing: 0.8)),
           const SizedBox(height: 4),
-          Text('${last['why'] ?? ''}', style: Lux.ui(15.5, color: Lux.ink)),
+          Text(ct('${last['why'] ?? ''}'), style: Lux.ui(15.5, color: Lux.ink)),
         ],
       ),
     );

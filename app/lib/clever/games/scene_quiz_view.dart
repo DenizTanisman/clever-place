@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'scene_painter.dart';
 
@@ -156,7 +157,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
             if (i < chain - 1) Container(width: 10, height: 2, color: Lux.gold.withValues(alpha: 0.6)) else const SizedBox(width: 8),
           ],
           const Spacer(),
-          Text('${st['setting'] ?? ''}', style: Lux.ui(13, color: Lux.muted)),
+          Text(ct('${st['setting'] ?? ''}'), style: Lux.ui(13, color: Lux.muted)),
         ],
       ),
     );
@@ -167,9 +168,9 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
   Widget _looking(Map<String, dynamic> st) {
     final scene = st['scene'] is Map ? Map<String, dynamic>.from(st['scene'] as Map) : null;
     final showMs = (st['show_ms'] as num?)?.toDouble() ?? 1;
-    final t = (st['t_ms'] as num?)?.toDouble() ?? 0;
-    final left = ((showMs - t) / 1000).clamp(0.0, 999.0);
-    final frac = (1 - t / showMs).clamp(0.0, 1.0);
+    final tMs = (st['t_ms'] as num?)?.toDouble() ?? 0;
+    final left = ((showMs - tMs) / 1000).clamp(0.0, 999.0);
+    final frac = (1 - tMs / showMs).clamp(0.0, 1.0);
     return LayoutBuilder(builder: (context, box) {
       var w = box.maxWidth - 20;
       var h = w / SceneArt.aspect;
@@ -198,7 +199,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
                   Positioned(
                     right: 8,
                     bottom: 5,
-                    child: Text('Sahne #${st['scene_no']}',
+                    child: Text(tf('Sahne #{0}', [st['scene_no']]),
                         style: Lux.ui(10, color: Colors.white.withValues(alpha: 0.7))
                             .copyWith(shadows: const [Shadow(color: Color(0x99000000), blurRadius: 3)])),
                   ),
@@ -217,7 +218,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
                   child: CustomPaint(
                     painter: _Ring(frac, urgent: left <= 3),
                     child: Center(
-                      child: Text(left >= 10 ? '${left.ceil()}' : left.toStringAsFixed(1).replaceAll('.', ','),
+                      child: Text(left >= 10 ? '${left.ceil()}' : (Lang.en ? left.toStringAsFixed(1) : left.toStringAsFixed(1).replaceAll('.', ',')),
                           style: Lux.numeral(22, color: left <= 3 ? Lux.bordeauxLight : Lux.goldLight)
                               .copyWith(fontFeatures: const [FontFeature.tabularFigures()])),
                     ),
@@ -225,9 +226,9 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
                 ),
                 const SizedBox(width: 14),
                 Expanded(
-                  child: Text('İyi bak: kimde ne var, kim nerede, kaç tane?', style: Lux.ui(14, color: Lux.muted)),
+                  child: Text(t('İyi bak: kimde ne var, kim nerede, kaç tane?'), style: Lux.ui(14, color: Lux.muted)),
                 ),
-                GoldButton('Hazırım', onPressed: () {
+                GoldButton(t('Hazırım'), onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'ready': true});
                 }),
@@ -265,22 +266,22 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
             Row(
               children: [
                 if (idx == 0)
-                  _badge(Icons.key_rounded, 'Kilit soru', Lux.gold)
+                  _badge(Icons.key_rounded, t('Kilit soru'), Lux.gold)
                 else
-                  Text('Soru ${idx + 1}', style: Lux.ui(13, color: Lux.muted, weight: FontWeight.w600)),
+                  Text(tf('Soru {0}', [idx + 1]), style: Lux.ui(13, color: Lux.muted, weight: FontWeight.w600)),
                 const SizedBox(width: 8),
-                if (chainStep > 0) _badge(Icons.link_rounded, 'Zincir $chainStep/$chain', Lux.goldLight),
+                if (chainStep > 0) _badge(Icons.link_rounded, tf('Zincir {0}/{1}', [chainStep, chain]), Lux.goldLight),
               ],
             ),
             const SizedBox(height: 14),
-            Text(q['text'] as String? ?? '', style: Lux.display(26, color: Lux.ink)),
+            Text(ct(q['text'] as String? ?? ''), style: Lux.display(26, color: Lux.ink)),
             if (q['note'] is String) ...[
               const SizedBox(height: 6),
-              Text(q['note'] as String, style: Lux.ui(13, color: Lux.muted)),
+              Text(ct(q['note'] as String), style: Lux.ui(13, color: Lux.muted)),
             ],
             if (idx == 0 && !feedback) ...[
               const SizedBox(height: 8),
-              Text('Bunu bilemezsen bölüm biter.', style: Lux.ui(12, color: Lux.bordeauxLight)),
+              Text(t('Bunu bilemezsen bölüm biter.'), style: Lux.ui(12, color: Lux.bordeauxLight)),
             ],
             const Spacer(),
             if (numeric)
@@ -291,7 +292,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
                       child: Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 5),
                         child: _Option(
-                          label: options[i],
+                          label: ct(options[i]),
                           big: true,
                           state: _optState(i, last, feedback),
                           age: age,
@@ -305,7 +306,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
               for (var i = 0; i < options.length; i++)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10),
-                  child: _Option(label: options[i], state: _optState(i, last, feedback), age: age, onTap: () => _answer(i)),
+                  child: _Option(label: ct(options[i]), state: _optState(i, last, feedback), age: age, onTap: () => _answer(i)),
                 ),
             const SizedBox(height: 14),
             SizedBox(
@@ -313,7 +314,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
               child: st['phase'] != 'feedback'
                   ? null
                   : Column(children: [
-                      Text(last?['correct'] == true ? 'Doğru!' : 'Olmadı — doğrusu altın çerçevede.',
+                      Text(last?['correct'] == true ? t('Doğru!') : t('Olmadı — doğrusu altın çerçevede.'),
                           textAlign: TextAlign.center,
                           style: Lux.ui(16, color: last?['correct'] == true ? Lux.good : Lux.bordeauxLight, weight: FontWeight.w700)),
                       const SizedBox(height: 8),
@@ -327,7 +328,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
                         ),
                       ),
                       const SizedBox(height: 6),
-                      Text('Devam etmek için dokun', textAlign: TextAlign.center, style: Lux.ui(12, color: Lux.muted)),
+                      Text(t('Devam etmek için dokun'), textAlign: TextAlign.center, style: Lux.ui(12, color: Lux.muted)),
                     ]),
             ),
           ],
@@ -385,7 +386,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
           if (lost && q != null)
             Padding(
               padding: const EdgeInsets.fromLTRB(22, 0, 22, 10),
-              child: Text('${q['text']}  →  $correct',
+              child: Text('${ct('${q['text']}')}  →  ${correct != null ? ct(correct) : correct}',
                   textAlign: TextAlign.center, style: Lux.ui(15, color: Lux.bordeauxLight, weight: FontWeight.w600)),
             ),
           if (scene != null)
@@ -399,7 +400,7 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
               child: SceneView(scene: scene, radius: 13),
             ),
           const SizedBox(height: 10),
-          Text('Sahneye bir daha bak', style: Lux.ui(13, color: Lux.muted)),
+          Text(t('Sahneye bir daha bak'), style: Lux.ui(13, color: Lux.muted)),
         ],
       );
     });
@@ -411,7 +412,9 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
     final secs = (((st['show_ms'] as num?) ?? 10000) / 1000);
     final n = (st['q_count'] as num?)?.toInt() ?? 3;
     final chain = (st['chain_len'] as num?)?.toInt() ?? 0;
-    final secsText = secs == secs.roundToDouble() ? '${secs.round()}' : secs.toStringAsFixed(1).replaceAll('.', ',');
+    final secsText = secs == secs.roundToDouble()
+        ? '${secs.round()}'
+        : (Lang.en ? secs.toStringAsFixed(1) : secs.toStringAsFixed(1).replaceAll('.', ','));
     return ColoredBox(
       color: Colors.black.withValues(alpha: 0.55),
       child: Center(
@@ -423,20 +426,20 @@ class _QuizBoardState extends State<_QuizBoard> with SingleTickerProviderStateMi
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper('Sahne Hafızası'), style: Lux.display(22, spacing: 1.5)),
+                Text(Lux.upper(t('Sahne Hafızası')), style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
-                Text('Bir sahne $secsText saniye görünecek. Sonra sahne kapanır ve $n soru gelir.',
+                Text(tf('Bir sahne {0} saniye görünecek. Sonra sahne kapanır ve {1} soru gelir.', [secsText, n]),
                     textAlign: TextAlign.center, style: Lux.ui(16)),
                 if (chain > 0) ...[
                   const SizedBox(height: 8),
-                  Text('İlk $chain soru bir zincir: her biri bir öncekinin cevabını daraltır (kaç şapka → kaçı kırmızı…).',
+                  Text(tf('İlk {0} soru bir zincir: her biri bir öncekinin cevabını daraltır (kaç şapka → kaçı kırmızı…).', [chain]),
                       textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.goldLight)),
                 ],
                 const SizedBox(height: 10),
-                Text('İlk soru kilit: yanlışsa bölüm biter ve sonraki bölüm açılmaz. Diğer sorular yıldızı belirler.',
+                Text(t('İlk soru kilit: yanlışsa bölüm biter ve sonraki bölüm açılmaz. Diğer sorular yıldızı belirler.'),
                     textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.muted)),
                 const SizedBox(height: 18),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

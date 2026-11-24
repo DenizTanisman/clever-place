@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 
 import '../card_kit.dart';
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// 21 — blackjack against the dealer, as a strategy trainer.
@@ -40,14 +41,20 @@ String _fmt(num v) {
   final s = whole.toString();
   final b = StringBuffer();
   for (var i = 0; i < s.length; i++) {
-    if (i > 0 && (s.length - i) % 3 == 0) b.write('.');
+    if (i > 0 && (s.length - i) % 3 == 0) b.write(Lang.en ? ',' : '.');
     b.write(s[i]);
   }
-  if (half) b.write(',5');
+  if (half) b.write(Lang.en ? '.5' : ',5');
   return '${neg ? '−' : ''}$b';
 }
 
 String _signed(num v) => v > 0 ? '+${_fmt(v)}' : (v == 0 ? '±0' : _fmt(v));
+
+/// Core text that may be absent: translated, but null stays null.
+String? _ctn(Object? v) => v == null ? null : ct(v as String);
+
+/// A decimal the core wrote Turkish style ("+1,5"): a point in English.
+String _dec(Object? v) => Lang.en ? '$v'.replaceAll(',', '.') : '$v';
 
 class _Face {
   final int suit, rank;
@@ -402,17 +409,17 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
             builder: (context, v, _) => Text(_fmt((v * 2).round() / 2), style: Lux.numeral(24)),
           ),
           const SizedBox(width: 12),
-          Text('El ${_int(st['hand_no'], 1)}/${_int(st['hands_total'], 40)}', style: Lux.ui(13, color: Lux.muted)),
+          Text(tf('El {0}/{1}', [_int(st['hand_no'], 1), _int(st['hands_total'], 40)]), style: Lux.ui(13, color: Lux.muted)),
           if (acc != null) ...[
             const SizedBox(width: 10),
-            Text('Doğru %$acc', style: Lux.ui(13, color: Lux.goldLight)),
+            Text(tf('Doğru %{0}', [acc]), style: Lux.ui(13, color: Lux.goldLight)),
           ],
           const Spacer(),
           if (_mode == 'count')
-            _toggle(Icons.calculate_outlined, _showCount, 'Sayım', 'Sayımı göster / gizle',
+            _toggle(Icons.calculate_outlined, _showCount, t('Sayım'), t('Sayımı göster / gizle'),
                 () => setState(() => _showCount = !_showCount)),
-          _toggle(_openVisible ? Icons.visibility_rounded : Icons.visibility_off_outlined, _openVisible, 'Açık',
-              _openMode ? 'Açık deste masası' : 'Açık oyna: kapalı kart ve sıradaki kartlar', _openMode ? null : _toggleEye),
+          _toggle(_openVisible ? Icons.visibility_rounded : Icons.visibility_off_outlined, _openVisible, t('Açık'),
+              _openMode ? t('Açık deste masası') : t('Açık oyna: kapalı kart ve sıradaki kartlar'), _openMode ? null : _toggleEye),
         ],
       ),
     );
@@ -497,7 +504,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
             child: AnimatedOpacity(
               opacity: dealerCards.any((c) => now >= (_dealAt[_int((c as Map)['id'])] ?? 0) + _flightDur * 0.8) ? 1 : 0,
               duration: const Duration(milliseconds: 160),
-              child: _pill(_dealerLabel(dealer), prefix: 'Krupiye'),
+              child: _pill(_dealerLabel(dealer), prefix: t('Krupiye')),
             ),
           ),
         ),
@@ -557,7 +564,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       children.add(Positioned(
         left: 6,
         bottom: 6,
-        child: RimIconButton(Icons.lightbulb_outline_rounded, tooltip: 'İpucu', onPressed: () => _act({'hint': true})),
+        child: RimIconButton(Icons.lightbulb_outline_rounded, tooltip: t('İpucu'), onPressed: () => _act({'hint': true})),
       ));
     }
     if (_phase == 'count_quiz' && animDone) children.add(_quizPad());
@@ -571,11 +578,11 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
 
   String _dealerLabel(Map dealer) {
     final cards = (dealer['cards'] as List?) ?? const [];
-    var label = (dealer['label'] as String?) ?? '';
+    var label = ct(dealer['label'] as String?);
     final hidden = _holeHiddenVisually;
     if (hidden && cards.isNotEmpty) {
       final r = _int((cards[0] as Map)['r']);
-      label = r == 14 ? 'Yumuşak 11' : '${r >= 11 ? 10 : r}';
+      label = r == 14 ? t('Yumuşak 11') : '${r >= 11 ? 10 : r}';
     }
     if (hidden && _openVisible) return '$label · (${_int(dealer['full_total'])})';
     return label;
@@ -672,7 +679,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
           child: AnimatedOpacity(
             opacity: landed && label.isNotEmpty ? 1 : 0,
             duration: const Duration(milliseconds: 160),
-            child: _pill(label + (hm['doubled'] == true ? ' · ×2' : ''),
+            child: _pill(ct(label) + (hm['doubled'] == true ? ' · ×2' : ''),
                 gold: isActive, color: hm['state'] == 'bust' ? Lux.bordeauxLight : null, chip: n > 1 ? _dbl(hm['bet']) : null),
           ),
         ),
@@ -683,10 +690,10 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
         final net = _dbl(hm['net']);
         final (txt, col) = switch (res) {
           'blackjack' => ('Blackjack ${_signed(net)}', Lux.goldLight),
-          'win' => ('Kazandın ${_signed(net)}', Lux.goldLight),
-          'push' => ('Berabere ±0', Lux.ink),
-          'bust' => ('Battı ${_signed(net)}', Lux.bordeauxLight),
-          _ => ('Kaybettin ${_signed(net)}', Lux.bordeauxLight),
+          'win' => (tf('Kazandın {0}', [_signed(net)]), Lux.goldLight),
+          'push' => (t('Berabere ±0'), Lux.ink),
+          'bust' => (tf('Battı {0}', [_signed(net)]), Lux.bordeauxLight),
+          _ => (tf('Kaybettin {0}', [_signed(net)]), Lux.bordeauxLight),
         };
         final pc = _playerCw(hands);
         out.add(Positioned(
@@ -815,7 +822,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
-          Text(Lux.upper('Açık deste'), style: Lux.ui(10, color: Lux.gold, spacing: 1.6)),
+          Text(Lux.upper(t('Açık deste')), style: Lux.ui(10, color: Lux.gold, spacing: 1.6)),
           const SizedBox(width: 8),
           for (var i = 0; i < next.length; i++)
             Padding(
@@ -842,9 +849,9 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       return _note(
         key: ValueKey('hint${hint['best']}${st['active']}'),
         tone: _Tone.gold,
-        title: 'İpucu · ${hint['best_label']}',
-        body: hint['reason'] as String? ?? '',
-        extra: hint['deviation'] as String?,
+        title: tf('İpucu · {0}', [ct(hint['best_label'] as String?)]),
+        body: ct(hint['reason'] as String?),
+        extra: _ctn(hint['deviation']),
       );
     }
     final oh = st['open_hint'];
@@ -853,8 +860,10 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       return _note(
         key: ValueKey('open${oh['best']}${oh['bs']}${oh['reason']}'),
         tone: same ? _Tone.gold : _Tone.violet,
-        title: same ? 'Açık bilgi · ${oh['best_label']}' : 'Temel: ${oh['bs_label']}  ·  Açık bilgi: ${oh['best_label']}',
-        body: oh['reason'] as String? ?? '',
+        title: same
+            ? tf('Açık bilgi · {0}', [ct(oh['best_label'] as String?)])
+            : tf('Temel: {0}  ·  Açık bilgi: {1}', [ct(oh['bs_label'] as String?), ct(oh['best_label'] as String?)]),
+        body: ct(oh['reason'] as String?),
       );
     }
     final fb = st['feedback'];
@@ -864,9 +873,11 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       return _note(
         key: ValueKey('fb${fb['serial']}'),
         tone: ok ? _Tone.gold : _Tone.bordeaux,
-        title: ok ? 'Doğru · ${fb['action_label']}' : 'Yanlış · Doğrusu: ${fb['best_label']}',
-        body: fb['reason'] as String? ?? '',
-        extra: fb['deviation'] as String?,
+        title: ok
+            ? tf('Doğru · {0}', [ct(fb['action_label'] as String?)])
+            : tf('Yanlış · Doğrusu: {0}', [ct(fb['best_label'] as String?)]),
+        body: ct(fb['reason'] as String?),
+        extra: _ctn(fb['deviation']),
         icon: ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
       );
     }
@@ -874,12 +885,14 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
     if (q is Map && phase == 'bet' && _now - _quizAt < 4.5) {
       final ok = q['correct'] == true;
       final actual = _int(q['actual']);
+      final shownActual = '${actual > 0 ? '+' : ''}$actual';
+      final answer = '${_int(q['answer']) > 0 ? '+' : ''}${q['answer']}';
       return _note(
         key: ValueKey('quiz${q['serial']}'),
         tone: ok ? _Tone.gold : _Tone.bordeaux,
-        title: ok ? 'Doğru sayım: ${actual > 0 ? '+' : ''}$actual' : 'Sayım ${actual > 0 ? '+' : ''}$actual olmalıydı',
-        body: 'Gerçek sayım ${q['true_count_text']} (${_fmtDeck(_dbl(q['decks_left']))} deste kaldı).'
-            '${ok ? '' : ' Senin cevabın: ${_int(q['answer']) > 0 ? '+' : ''}${q['answer']}.'}',
+        title: ok ? tf('Doğru sayım: {0}', [shownActual]) : tf('Sayım {0} olmalıydı', [shownActual]),
+        body: tf('Gerçek sayım {0} ({1} deste kaldı).', [_dec(q['true_count_text']), _fmtDeck(_dbl(q['decks_left']))]) +
+            (ok ? '' : tf(' Senin cevabın: {0}.', [answer])),
         icon: ok ? Icons.check_circle_rounded : Icons.cancel_rounded,
       );
     }
@@ -887,8 +900,8 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       return _note(
         key: const ValueKey('shuffle'),
         tone: _Tone.gold,
-        title: 'Deste karıştırıldı',
-        body: _mode == 'count' ? 'Kesme kartı çıktı: yeni sabot, sayım sıfırdan başlar.' : 'Kesme kartı çıktı: yeni sabot.',
+        title: t('Deste karıştırıldı'),
+        body: _mode == 'count' ? t('Kesme kartı çıktı: yeni sabot, sayım sıfırdan başlar.') : t('Kesme kartı çıktı: yeni sabot.'),
         icon: Icons.shuffle_rounded,
       );
     }
@@ -896,15 +909,15 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       return _note(
         key: const ValueKey('ins'),
         tone: _Tone.gold,
-        title: 'Krupiye As gösteriyor',
-        body: 'Sigorta ister misin? Bahsinin yarısı; krupiyede blackjack varsa 2:1 öder.',
+        title: t('Krupiye As gösteriyor'),
+        body: t('Sigorta ister misin? Bahsinin yarısı; krupiyede blackjack varsa 2:1 öder.'),
         icon: Icons.shield_outlined,
       );
     }
     return null;
   }
 
-  String _fmtDeck(double d) => d.toStringAsFixed(1).replaceAll('.', ',');
+  String _fmtDeck(double d) => Lang.en ? d.toStringAsFixed(1) : d.toStringAsFixed(1).replaceAll('.', ',');
 
   Widget _note({required Key key, required _Tone tone, required String title, required String body, String? extra, IconData? icon}) {
     final (bg, rim, ink) = switch (tone) {
@@ -960,9 +973,9 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              Text('Sayım ${rc > 0 ? '+' : ''}$rc', style: Lux.numeral(19)),
-              Text('Gerçek ${st['true_count_text'] ?? '0,0'}', style: Lux.ui(12, color: Lux.goldLight)),
-              Text('${_fmtDeck(_dbl(st['decks_left']))} deste', style: Lux.ui(11, color: Lux.muted)),
+              Text(tf('Sayım {0}', ['${rc > 0 ? '+' : ''}$rc']), style: Lux.numeral(19)),
+              Text(tf('Gerçek {0}', [_dec(st['true_count_text'] ?? '0,0')]), style: Lux.ui(12, color: Lux.goldLight)),
+              Text(tf('{0} deste', [_fmtDeck(_dbl(st['decks_left']))]), style: Lux.ui(11, color: Lux.muted)),
             ],
           ),
         ),
@@ -1018,9 +1031,9 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(Lux.upper('Sayım kaç?'), style: Lux.display(22)),
+                  Text(Lux.upper(t('Sayım kaç?')), style: Lux.display(22)),
                   const SizedBox(height: 2),
-                  Text('Hi-Lo: 2–6 = +1, 7–9 = 0, 10/As = −1', style: Lux.ui(12, color: Lux.muted)),
+                  Text(t('Hi-Lo: 2–6 = +1, 7–9 = 0, 10/As = −1'), style: Lux.ui(12, color: Lux.muted)),
                   const SizedBox(height: 10),
                   Text(shown, style: Lux.numeral(44)),
                   const SizedBox(height: 8),
@@ -1050,7 +1063,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
                     ),
                   ]),
                   const SizedBox(height: 8),
-                  GoldButton('Onayla', icon: Icons.check_rounded, onPressed: () {
+                  GoldButton(t('Onayla'), icon: Icons.check_rounded, onPressed: () {
                     final v = int.tryParse(_entry == '-' ? '' : _entry);
                     if (v == null) {
                       HapticFeedback.mediumImpact();
@@ -1079,25 +1092,25 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
       case 'insurance':
         final cost = _dbl((st['insurance'] as Map?)?['cost']);
         body = Row(children: [
-          Expanded(child: _bigButton('Sigorta al', Icons.shield_rounded, () => _act({'insurance': true}), sub: _fmt(cost))),
+          Expanded(child: _bigButton(t('Sigorta al'), Icons.shield_rounded, () => _act({'insurance': true}), sub: _fmt(cost))),
           const SizedBox(width: 10),
-          Expanded(child: _bigButton('Sigorta yok', Icons.block_rounded, () => _act({'insurance': false}), primary: true)),
+          Expanded(child: _bigButton(t('Sigorta yok'), Icons.block_rounded, () => _act({'insurance': false}), primary: true)),
         ]);
       case 'play':
         final can = (st['can'] as Map?) ?? const {};
         body = Row(children: [
-          Expanded(child: _bigButton('Kart', Icons.add_rounded, () => _act({'hit': true}), primary: true)),
+          Expanded(child: _bigButton(t('Kart'), Icons.add_rounded, () => _act({'hit': true}), primary: true)),
           const SizedBox(width: 8),
-          Expanded(child: _bigButton('Dur', Icons.pan_tool_alt_rounded, () => _act({'stand': true}), primary: true)),
+          Expanded(child: _bigButton(t('Dur'), Icons.pan_tool_alt_rounded, () => _act({'stand': true}), primary: true)),
           const SizedBox(width: 8),
-          Expanded(child: _bigButton('İkiye katla', Icons.exposure_plus_2_rounded, can['double'] == true ? () => _act({'double': true}) : null)),
+          Expanded(child: _bigButton(t('İkiye katla'), Icons.exposure_plus_2_rounded, can['double'] == true ? () => _act({'double': true}) : null)),
           const SizedBox(width: 8),
-          Expanded(child: _bigButton('Böl', Icons.call_split_rounded, can['split'] == true ? () => _act({'split': true}) : null)),
+          Expanded(child: _bigButton(t('Böl'), Icons.call_split_rounded, can['split'] == true ? () => _act({'split': true}) : null)),
         ]);
       case 'dealer':
-        body = const SizedBox(
+        body = SizedBox(
           height: 64,
-          child: Center(child: _DealerThinking(color: Lux.goldLight, text: 'Krupiye oynuyor')),
+          child: Center(child: _DealerThinking(color: Lux.goldLight, text: t('Krupiye oynuyor'))),
         );
       case 'settle':
         final animDone = _now >= _animEnd() - 0.01;
@@ -1111,16 +1124,16 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text((st['message'] as String?) ?? '', style: Lux.ui(16, color: _dbl(st['round_net']) >= 0 ? Lux.goldLight : Lux.bordeauxLight, weight: FontWeight.w700)),
-                  Text('El ${_int(st['hand_no'])}/${_int(st['hands_total'], 40)} bitti', style: Lux.ui(12.5, color: Lux.muted)),
+                  Text(ct(st['message'] as String?), style: Lux.ui(16, color: _dbl(st['round_net']) >= 0 ? Lux.goldLight : Lux.bordeauxLight, weight: FontWeight.w700)),
+                  Text(tf('El {0}/{1} bitti', [_int(st['hand_no']), _int(st['hands_total'], 40)]), style: Lux.ui(12.5, color: Lux.muted)),
                 ],
               ),
             ),
-            GoldButton(last ? 'Sonucu gör' : 'Sonraki el', icon: Icons.arrow_forward_rounded, onPressed: animDone ? () => _act({'next': true}) : null),
+            GoldButton(last ? t('Sonucu gör') : t('Sonraki el'), icon: Icons.arrow_forward_rounded, onPressed: animDone ? () => _act({'next': true}) : null),
           ]),
         );
       case 'count_quiz':
-        body = SizedBox(height: 64, child: Center(child: Text('Sayımı gir', style: Lux.ui(15, color: Lux.muted))));
+        body = SizedBox(height: 64, child: Center(child: Text(t('Sayımı gir'), style: Lux.ui(15, color: Lux.muted))));
       default:
         body = const SizedBox(height: 64);
     }
@@ -1146,7 +1159,7 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
         if (_mode == 'count' && _showCount && advice != null)
           Padding(
             padding: const EdgeInsets.only(bottom: 6),
-            child: Text(advice, textAlign: TextAlign.center, style: Lux.ui(12.5, color: Lux.goldLight)),
+            child: Text(ct(advice), textAlign: TextAlign.center, style: Lux.ui(12.5, color: Lux.goldLight)),
           ),
         Row(
           children: [
@@ -1167,13 +1180,13 @@ class _BlackjackTableState extends State<_BlackjackTable> with SingleTickerProvi
         const SizedBox(height: 10),
         Row(
           children: [
-            GoldButton('Temizle', outlined: true, onPressed: bet > 0 ? () => _act({'bet': 0}) : null),
+            GoldButton(t('Temizle'), outlined: true, onPressed: bet > 0 ? () => _act({'bet': 0}) : null),
             const SizedBox(width: 10),
             Expanded(
-              child: Text(bet > 0 ? 'Bahis: ${_fmt(bet)}' : 'Fişi çembere sürükle',
+              child: Text(bet > 0 ? tf('Bahis: {0}', [_fmt(bet)]) : t('Fişi çembere sürükle'),
                   textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
             ),
-            GoldButton('Dağıt', icon: Icons.style_rounded, onPressed: bet >= _int(st['min_bet'], 10) ? () => _act({'deal': true}) : null),
+            GoldButton(t('Dağıt'), icon: Icons.style_rounded, onPressed: bet >= _int(st['min_bet'], 10) ? () => _act({'deal': true}) : null),
           ],
         ),
       ],
@@ -1314,14 +1327,14 @@ class _FeltPainter extends CustomPainter {
     // Table print: arcs concentric with the rail, centred above the felt.
     final c = Offset(w / 2, h * 0.02);
     final r1 = h * 0.47;
-    _arcText(canvas, c, r1, "KRUPİYE 17'DE DURUR · BLACKJACK 3:2", Lux.ui(math.min(15, w * 0.036), color: Lux.gold.withValues(alpha: 0.78), weight: FontWeight.w700, spacing: 1.6));
+    _arcText(canvas, c, r1, t('KRUPİYE 17\'DE DURUR · BLACKJACK 3:2'), Lux.ui(math.min(15, w * 0.036), color: Lux.gold.withValues(alpha: 0.78), weight: FontWeight.w700, spacing: 1.6));
     final r2 = r1 + h * 0.06;
     final band = Paint()
       ..style = PaintingStyle.stroke
       ..strokeWidth = h * 0.042
       ..color = Lux.gold.withValues(alpha: insurance ? 0.16 : 0.07);
     canvas.drawArc(Rect.fromCircle(center: c, radius: r2), math.pi / 2 - 0.62, 1.24, false, band);
-    _arcText(canvas, c, r2, 'SİGORTA 2:1 ÖDER', Lux.ui(math.min(11, w * 0.027), color: Lux.goldLight.withValues(alpha: insurance ? 0.85 : 0.45), weight: FontWeight.w600, spacing: 2.2));
+    _arcText(canvas, c, r2, t('SİGORTA 2:1 ÖDER'), Lux.ui(math.min(11, w * 0.027), color: Lux.goldLight.withValues(alpha: insurance ? 0.85 : 0.45), weight: FontWeight.w600, spacing: 2.2));
   }
 
   void _arcText(Canvas canvas, Offset c, double r, String text, TextStyle style) {
@@ -1471,7 +1484,7 @@ class _BetCirclePainter extends CustomPainter {
     if (bet <= 0) {
       if (active) {
         final tp = TextPainter(
-          text: TextSpan(text: 'BAHİS', style: Lux.ui(r * 0.32, color: Lux.gold.withValues(alpha: 0.7), weight: FontWeight.w600, spacing: 1.4)),
+          text: TextSpan(text: t('BAHİS'), style: Lux.ui(r * 0.32, color: Lux.gold.withValues(alpha: 0.7), weight: FontWeight.w600, spacing: 1.4)),
           textDirection: TextDirection.ltr,
         )..layout();
         tp.paint(canvas, c - Offset(tp.width / 2, tp.height / 2));

@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Dur ya da Geç: one big stage that is entirely a touch target. A pearl shape appears in the centre,
@@ -247,11 +248,11 @@ class _GoNoGoBoardState extends State<_GoNoGoBoard> with SingleTickerProviderSta
                 const SizedBox(width: 12),
                 for (var i = 0; i < 3; i++) _LifeGem(alive: i < lives, justLost: i == lives && now - _lifeLostAt < 0.5),
               ] else
-                Text(phase == 'intro' ? '$trials uyaran' : '${math.min(trial, trials)} / $trials',
+                Text(phase == 'intro' ? tf('{0} uyaran', [trials]) : '${math.min(trial, trials)} / $trials',
                     style: Lux.ui(17, weight: FontWeight.w700)),
               const Spacer(),
               Flexible(
-                child: Text(st['title'] as String? ?? '',
+                child: Text(ct(st['title'] as String?),
                     overflow: TextOverflow.ellipsis, style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600)),
               ),
             ],
@@ -293,7 +294,7 @@ class _GoNoGoBoardState extends State<_GoNoGoBoard> with SingleTickerProviderSta
           _RuleLegend(arrows: rules['arrows'] == true, burgundy: rules['burgundy'] == true),
           const SizedBox(height: 8),
           Text(
-            'Yanlış ${stats['false_responses'] ?? 0} · Kaçan ${stats['omissions'] ?? 0}'
+            '${tf('Yanlış {0} · Kaçan {1}', [stats['false_responses'] ?? 0, stats['omissions'] ?? 0])}'
             '${rt is num ? ' · ${rt.round()} ms' : ''}',
             style: Lux.ui(13, color: Lux.muted).copyWith(fontFeatures: const [FontFeature.tabularFigures()]),
           ),
@@ -343,22 +344,22 @@ class _GoNoGoBoardState extends State<_GoNoGoBoard> with SingleTickerProviderSta
     final features = [for (final f in (st['features'] as List? ?? const [])) f as String];
     final goal = st['rt_goal'];
     final rows = <Widget>[
-      const _RuleRow(icon: _StimIcon(round: true), text: 'Yuvarlak: ekrana dokun'),
+      _RuleRow(icon: const _StimIcon(round: true), text: t('Yuvarlak: ekrana dokun')),
       _RuleRow(
         icon: _StimIcon(round: false, arrow: lures ? 'up' : null, emerald: true),
-        text: lures ? 'Köşeli: hiçbir şey yapma, üstünde ok olsa bile' : 'Köşeli: hiçbir şey yapma',
+        text: lures ? t('Köşeli: hiçbir şey yapma, üstünde ok olsa bile') : t('Köşeli: hiçbir şey yapma'),
         isNew: fresh.contains('lures'),
       ),
       if (arrows)
         _RuleRow(
           icon: const _StimIcon(round: true, arrow: 'right', emerald: true),
-          text: 'Zümrüt ok: okun gösterdiği yöne kaydır',
+          text: t('Zümrüt ok: okun gösterdiği yöne kaydır'),
           isNew: fresh.contains('arrows'),
         ),
       if (burgundy)
         _RuleRow(
           icon: const _StimIcon(round: true, arrow: 'right', emerald: false),
-          text: 'Bordo ok: tam tersi yöne kaydır',
+          text: t('Bordo ok: tam tersi yöne kaydır'),
           isNew: fresh.contains('burgundy'),
         ),
     ];
@@ -379,22 +380,22 @@ class _GoNoGoBoardState extends State<_GoNoGoBoard> with SingleTickerProviderSta
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper(endless ? 'Sonsuz akış' : st['title'] as String? ?? 'Dur ya da geç'),
+                Text(Lux.upper(endless ? t('Sonsuz akış') : ct(st['title'] as String? ?? t('Dur ya da geç'))),
                     textAlign: TextAlign.center, style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
                 ...rows,
                 const SizedBox(height: 6),
                 Text(
                   endless
-                      ? 'Her hata bir can götürür; 3 can. Doğru gittikçe akış hızlanır, hata yapınca yavaşlar.'
-                      : 'Bir tepki yetişmezse "kaçırdın" sayılır. Emin değilsen köşelide elini çekmek her zaman doğrudur.',
+                      ? t('Her hata bir can götürür; 3 can. Doğru gittikçe akış hızlanır, hata yapınca yavaşlar.')
+                      : t('Bir tepki yetişmezse "kaçırdın" sayılır. Emin değilsen köşelide elini çekmek her zaman doğrudur.'),
                   textAlign: TextAlign.center,
                   style: Lux.ui(14, color: Lux.ink),
                 ),
                 if (!endless) ...[
                   const SizedBox(height: 8),
                   Text(
-                    'Yıldız: doğruluk %90 ve ort. tepki ${goal is num ? '${goal.round()} ms' : ''} altı 3 · %80 2 · %70 1',
+                    tf('Yıldız: doğruluk %90 ve ort. tepki {0} altı 3 · %80 2 · %70 1', [goal is num ? '${goal.round()} ms' : '']),
                     textAlign: TextAlign.center,
                     style: Lux.ui(13, color: Lux.muted),
                   ),
@@ -413,13 +414,13 @@ class _GoNoGoBoardState extends State<_GoNoGoBoard> with SingleTickerProviderSta
                             borderRadius: BorderRadius.circular(12),
                             border: Border.all(color: f.startsWith('Yeni') ? Lux.goldLight : Lux.line),
                           ),
-                          child: Text(f, style: Lux.ui(12, color: Lux.goldLight)),
+                          child: Text(ct(f), style: Lux.ui(12, color: Lux.goldLight)),
                         ),
                     ],
                   ),
                 ],
                 const SizedBox(height: 18),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),
@@ -454,7 +455,7 @@ class _RuleRow extends StatelessWidget {
               margin: const EdgeInsets.only(left: 6),
               padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
               decoration: BoxDecoration(borderRadius: BorderRadius.circular(10), gradient: Lux.goldGradient),
-              child: Text(Lux.upper('Yeni'), style: Lux.ui(11, color: const Color(0xFF2A1D05), weight: FontWeight.w700)),
+              child: Text(Lux.upper(t('Yeni')), style: Lux.ui(11, color: const Color(0xFF2A1D05), weight: FontWeight.w700)),
             ),
         ],
       ),
@@ -480,10 +481,10 @@ class _RuleLegend extends StatelessWidget {
       runSpacing: 4,
       alignment: WrapAlignment.center,
       children: [
-        chip(const _StimIcon(round: true), 'dokun'),
-        chip(const _StimIcon(round: false), 'dur'),
-        if (arrows) chip(const _StimIcon(round: true, arrow: 'up', emerald: true), 'aynı yön'),
-        if (burgundy) chip(const _StimIcon(round: true, arrow: 'up', emerald: false), 'ters yön'),
+        chip(const _StimIcon(round: true), t('dokun')),
+        chip(const _StimIcon(round: false), t('dur')),
+        if (arrows) chip(const _StimIcon(round: true, arrow: 'up', emerald: true), t('aynı yön')),
+        if (burgundy) chip(const _StimIcon(round: true, arrow: 'up', emerald: false), t('ters yön')),
       ],
     );
   }
@@ -751,12 +752,12 @@ class _StagePainter extends CustomPainter {
     // Error label, plus the right direction on arrow trials.
     if (f != null && fbAge < 0.75) {
       final label = switch (f.result) {
-        'omission' => 'Kaçırdın',
-        'early' => 'Erken',
-        'commission' => 'Köşeli: dokunma',
-        'wrong_dir' => 'Ters yön',
-        'need_swipe' => 'Kaydırmalıydın',
-        'need_tap' => 'Dokunmalıydın',
+        'omission' => t('Kaçırdın'),
+        'early' => t('Erken'),
+        'commission' => t('Köşeli: dokunma'),
+        'wrong_dir' => t('Ters yön'),
+        'need_swipe' => t('Kaydırmalıydın'),
+        'need_tap' => t('Dokunmalıydın'),
         _ => null,
       };
       if (label != null) {

@@ -4,6 +4,7 @@ import 'dart:ui' as ui;
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Blok Merkezi skins: every look is drawn in code (no image assets). A skin restyles the placed
@@ -81,7 +82,8 @@ class BlockSkin {
       isDefault || level >= unlockLevel || lines >= unlockLines;
 
   /// "10. bölümü geç ya da 100 satır/sütun/kare temizle".
-  String get unlockText => isDefault ? 'Baştan açık' : '$unlockLevel. bölümü geç ya da $unlockLines satır/sütun/kare temizle';
+  String get unlockText =>
+      isDefault ? t('Baştan açık') : tf('{0}. bölümü geç ya da {1} satır/sütun/kare temizle', [unlockLevel, unlockLines]);
 
   Color hue(int seed) => hues[seed.abs() % hues.length];
 }

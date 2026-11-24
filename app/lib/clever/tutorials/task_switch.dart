@@ -9,6 +9,14 @@ const taskSwitchTutorials = GameTutorials(
 - **Geçiş maliyeti** = kural değiştiğinde ortalama tepki süren eksi kural aynı kaldığında ortalama tepki süren. Sonuçta görürsün.
 - Yıldızlar: %90 doğruluk ve geçiş maliyeti en çok 200 ms (ipuçsuzda 250 ms) → 3; %82 → 2; %75 → 1; %75'in altı kaybettirir.
 - Sprint: 60 saniye, puan = doğru − hata. Her 8 doğruda yeni kural ya da daha kısa hazırlık süresi gelir.''',
+  rulesEn: '''
+- A digit appears on screen (later a digit + a letter). The current **rule** tells you whether to press left or right.
+- Rules: **Odd or even?** · **Smaller or bigger than 5?** · **Vowel or consonant?** · **Lowercase or uppercase?** The buttons show what left and right mean for each rule.
+- A **cue** tells you the rule: the area where the target appears, or the color the frame turns just before the target. In cueless levels the rules come two at a time in a fixed order (AABB): you keep track of the order yourself.
+- Each level is 32 trials. Not pressing in time counts as a mistake too.
+- **Switch cost** = your average reaction time when the rule changes minus your average reaction time when it stays the same. You see it in the results.
+- Stars: 90% accuracy and a switch cost of at most 200 ms (250 ms in cueless levels) → 3; 82% → 2; 75% → 1; below 75% loses the level.
+- Sprint: 60 seconds, score = right − wrong. Every 8 right answers bring a new rule or a shorter preparation time.''',
   mid: [
     TutorialSection(
       'Geçiş maliyeti: beynin vites değiştirmesi',

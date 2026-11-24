@@ -9,6 +9,7 @@ import 'clever/core_bridge.dart';
 import 'clever/hub_screen.dart';
 import 'clever/progress.dart';
 import 'src/theme/app_themes.dart';
+import 'clever/i18n/lang.dart';
 
 const List<Locale> kSupportedLocales = [Locale('tr'), Locale('en'), Locale('ru'), Locale('es')];
 
@@ -107,6 +108,12 @@ class _CleverPlaceAppState extends State<CleverPlaceApp> with WidgetsBindingObse
               GlobalWidgetsLocalizations.delegate,
               GlobalCupertinoLocalizations.delegate,
             ],
+            // Clever Place speaks the app's language (Turkish or English). Changing it rebuilds every
+            // screen from the hub, so nothing keeps text in the old language.
+            builder: (context, child) {
+              Lang.set(Localizations.localeOf(context).languageCode);
+              return KeyedSubtree(key: ValueKey('lang-${Lang.code}'), child: child ?? const SizedBox.shrink());
+            },
             home: widget.home ?? const HubScreen(),
           );
         },

@@ -6,9 +6,14 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
-/// Classic 9×9 Sudoku board. Tap a cell, then a digit. Notes mode turns digits into pencil marks.
+/// Classic 9×9 Sudoku board, digit first: tap a pad digit, or a digit already on the board, to pick it
+/// up; its placed copies light up and every tapped empty cell then gets it (Not on → that pencil mark
+/// toggles, Not off → the digit itself). Tapping the picked pad digit again puts it down. A digit with
+/// all nine placed goes passive: its key is off and it cannot be picked. A long press selects a cell
+/// (for Sil, or to put the next pad digit straight into it); with nothing picked a plain tap selects.
 /// All rules (mistakes, note clean-up, hints, win) live in Rust; this widget only renders `state`.
 ///
 /// Motion model: the whole board is one [CustomPainter] driven by an [_SudokuFx] model. A
@@ -68,6 +73,7 @@ class _SudokuFx extends ChangeNotifier {
   List<int> fixed = const [];
   Set<int> wrong = const {};
   int selValue = 0;
+  double sameK = 0.24; // same-digit tint, stronger while a digit is picked up
   int? hintCell;
 
   final peer = List<double>.filled(81, 0), peerT = List<double>.filled(81, 0);
@@ -160,8 +166,11 @@ final List<List<int>> _units = [
 
 class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderStateMixin {
   int? _sel;
+  int? _armed; // the picked-up pad digit, applied by every cell tap
   bool _notes = false;
   Timer? _clock;
+  String? _warn; // a wrong placement's warning, shown for a moment
+  Timer? _warnTimer;
 
   final _SudokuFx _fx = _SudokuFx();
   final _Glyphs _glyphs = _Glyphs();
@@ -197,6 +206,7 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
     super.didUpdateWidget(old);
     if (old.session != widget.session) {
       _sel = null;
+      _armed = null;
       _notes = false;
       _seen = null;
       _prevValues = null;
@@ -212,6 +222,7 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
   @override
   void dispose() {
     _clock?.cancel();
+    _warnTimer?.cancel();
     _ticker.dispose();
     _fx.dispose();
     super.dispose();
@@ -236,11 +247,95 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
 
   List<int> _ints(String key) => [for (final v in (s.state[key] as List? ?? const [])) (v as num).toInt()];
 
+  /// A pad digit: picks it up (or puts it down when it is already picked). A long-pressed,
+  /// editable cell gets it at once, so "select a cell, then a digit" still works.
   void _digit(int d) {
-    final sel = _sel;
-    if (sel == null || s.finished) return;
+    if (s.finished) return;
     HapticFeedback.selectionClick();
-    s.act(_notes ? {'note': sel, 'digit': d} : {'set': sel, 'digit': d});
+    if (_passive(d)) return;
+    if (_armed == d) {
+      setState(() => _armed = null);
+      return;
+    }
+    setState(() => _armed = d);
+    final sel = _sel;
+    final fixed = _ints('fixed');
+    if (sel != null && fixed.length == 81 && fixed[sel] == 0) _apply(sel, d);
+  }
+
+  /// Puts [d] into cell [i]: a pencil mark in notes mode (toggles), otherwise the digit (the core
+  /// counts a wrong one as a mistake).
+  void _apply(int i, int d) {
+    final values = _ints('values');
+    final notes = _ints('notes');
+    final adding = !_notes || (notes.length == 81 && notes[i] & (1 << d) == 0);
+    if (adding && values.length == 81) {
+      // The core refuses a digit its row, column or box already holds (the play screen shows why);
+      // the cell already holding it shakes so the eye finds it.
+      final r = i ~/ 9, c = i % 9;
+      for (var p = 0; p < 81; p++) {
+        if (p == i || values[p] != d) continue;
+        final pr = p ~/ 9, pc = p % 9;
+        if (pr == r || pc == c || (pr ~/ 3 == r ~/ 3 && pc ~/ 3 == c ~/ 3)) {
+          HapticFeedback.heavyImpact();
+          _fx.now = _now;
+          _fx.shake[p] = _now;
+          _kick();
+          break;
+        }
+      }
+    }
+    s.act(_notes ? {'note': i, 'digit': d} : {'set': i, 'digit': d});
+  }
+
+  /// Long press on a pad key: picks the digit up, never puts it down.
+  void _pickDigit(int d) {
+    if (s.finished || _passive(d)) return;
+    HapticFeedback.selectionClick();
+    setState(() => _armed = d);
+  }
+
+  bool _passive(int d) {
+    final left = _ints('remaining');
+    return left.length == 9 && left[d - 1] <= 0;
+  }
+
+  int? _cellAt(Offset p, double cs) {
+    final c = (p.dx / cs).floor(), r = (p.dy / cs).floor();
+    if (r < 0 || c < 0 || r > 8 || c > 8) return null;
+    return r * 9 + c;
+  }
+
+  void _tapCell(int i) {
+    final values = _ints('values');
+    if (values.length != 81) return;
+    final v = values[i];
+    if (v != 0) {
+      // A placed digit picks that digit up (a passive one only lights its copies through the selection).
+      HapticFeedback.selectionClick();
+      setState(() {
+        if (_passive(v) || s.finished) {
+          _armed = null;
+          _sel = i;
+        } else {
+          _armed = v;
+        }
+      });
+      return;
+    }
+    final d = _armed;
+    if (d == null || s.finished) {
+      HapticFeedback.selectionClick();
+      setState(() => _sel = _sel == i ? null : i);
+      return;
+    }
+    HapticFeedback.selectionClick();
+    _apply(i, d);
+  }
+
+  void _selectCell(int i) {
+    HapticFeedback.mediumImpact();
+    setState(() => _sel = _sel == i ? null : i);
   }
 
   /// Derives one-shot events (pops, mistakes, finished units, win) from the state change.
@@ -274,11 +369,23 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
         }
       } else {
         final f = i < _prevFixed.length ? _prevFixed[i] : 0;
-        _fx.ghosts[i] = _Ghost(pv, _digitColor(f, _prevWrong.contains(i)), f == 1 ? FontWeight.w700 : FontWeight.w600, now);
+        _fx.ghosts[i] =
+            _Ghost(pv, _digitColor(f, _prevWrong.contains(i)), f == 1 ? FontWeight.w700 : FontWeight.w600, now);
         _fx.pop.remove(i);
       }
     }
-    if (mistake) HapticFeedback.mediumImpact();
+    if (mistake) {
+      HapticFeedback.mediumImpact();
+      final c = changed.firstWhere(wrong.contains);
+      _warn = tf('{0} buraya gelmiyor · hata sayıldı', [values[c]]);
+      _warnTimer?.cancel();
+      _warnTimer = Timer(const Duration(milliseconds: 2600), () {
+        if (mounted) setState(() => _warn = null);
+      });
+    } else if (changed.isNotEmpty && _warn != null) {
+      _warn = null;
+      _warnTimer?.cancel();
+    }
     if (changed.isNotEmpty) {
       for (var u = 0; u < 27; u++) {
         if (!done[u] || _prevDone[u]) continue;
@@ -288,12 +395,17 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
         _fx.sweeps.add(_Sweep(
           cells,
           [
-            for (final c in cells)
-              _sweepStep * math.sqrt(math.pow(c ~/ 9 - tr, 2) + math.pow(c % 9 - tc, 2)),
+            for (final c in cells) _sweepStep * math.sqrt(math.pow(c ~/ 9 - tr, 2) + math.pow(c % 9 - tc, 2)),
           ],
           [
             for (final c in cells)
-              _dirOf(u < 9 ? Offset((c % 9 - tc).toDouble(), 0) : u < 18 ? Offset(0, (c ~/ 9 - tr).toDouble()) : Offset((c % 9 - tc).toDouble(), (c ~/ 9 - tr).toDouble()), u),
+              _dirOf(
+                  u < 9
+                      ? Offset((c % 9 - tc).toDouble(), 0)
+                      : u < 18
+                          ? Offset(0, (c ~/ 9 - tr).toDouble())
+                          : Offset((c % 9 - tc).toDouble(), (c ~/ 9 - tr).toDouble()),
+                  u),
           ],
           now,
         ));
@@ -313,7 +425,13 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
   }
 
   static Offset _dirOf(Offset d, int unit) {
-    if (d == Offset.zero) return unit < 9 ? const Offset(1, 0) : unit < 18 ? const Offset(0, 1) : const Offset(0.7071, 0.7071);
+    if (d == Offset.zero) {
+      return unit < 9
+          ? const Offset(1, 0)
+          : unit < 18
+              ? const Offset(0, 1)
+              : const Offset(0.7071, 0.7071);
+    }
     return d / d.distance;
   }
 
@@ -332,16 +450,18 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
     fx.fixed = fixed;
     fx.wrong = wrong;
     fx.selValue = selValue;
+    fx.sameK = _armed != null ? 0.34 : 0.24;
     fx.hintCell = hintCell;
     final sel = _sel;
     for (var i = 0; i < 81; i++) {
       final r = i ~/ 9, c = i % 9;
-      var peer = 0.0, same = 0.0;
+      var peer = 0.0;
       if (sel != null && i != sel) {
         final sr = sel ~/ 9, sc = sel % 9;
         if (sr == r || sc == c || (sr ~/ 3 == r ~/ 3 && sc ~/ 3 == c ~/ 3)) peer = 1;
-        if (selValue != 0 && values[i] == selValue) same = 1;
       }
+      // Every copy of the highlighted digit, the selected cell's own included.
+      final same = selValue != 0 && values[i] == selValue ? 1.0 : 0.0;
       fx.peerT[i] = peer;
       fx.sameT[i] = same;
       fx.focusT[i] = focusCells.contains(i) ? 1 : 0;
@@ -381,8 +501,12 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
     final hint = st['hint'] is Map ? Map<String, dynamic>.from(st['hint'] as Map) : null;
     final hintCell = (hint?['cell'] as num?)?.toInt();
     final focus = <int>{for (final f in (hint?['focus'] as List? ?? const [])) (f as num).toInt()};
+    // A digit that just got its ninth copy is put down.
+    final armed = _armed;
+    if (armed != null && remaining.length == 9 && remaining[armed - 1] <= 0) _armed = null;
     final sel = _sel;
-    final selValue = sel == null ? 0 : values[sel];
+    // The picked digit lights its cells and key; otherwise the selected cell's digit does.
+    final selValue = _armed ?? (sel == null ? 0 : values[sel]);
     final elapsed = (st['elapsed'] as num?)?.toInt() ?? 0;
     final canEdit = sel != null && fixed[sel] == 0 && !s.finished;
     _sync(values, fixed, notes, wrong, conflicts, hintCell, focus, selValue);
@@ -393,11 +517,11 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Hata', '${st['mistakes'] ?? 0}', warn: (st['mistakes'] as num? ?? 0) > 0),
+            _stat(t('Hata'), '${st['mistakes'] ?? 0}', warn: (st['mistakes'] as num? ?? 0) > 0),
             const SizedBox(width: 30),
-            _stat('İpucu', '${st['hints'] ?? 0}'),
+            _stat(t('İpucu'), '${st['hints'] ?? 0}'),
             const SizedBox(width: 30),
-            _stat('Süre', '${elapsed ~/ 60}:${(elapsed % 60).toString().padLeft(2, '0')}'),
+            _stat(t('Süre'), '${elapsed ~/ 60}:${(elapsed % 60).toString().padLeft(2, '0')}'),
           ],
         ),
         Expanded(
@@ -418,27 +542,37 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
         AnimatedSize(
           duration: const Duration(milliseconds: 220),
           curve: Curves.easeOutCubic,
-          child: hint == null ? const SizedBox(width: double.infinity) : _hintCard(hint),
+          child: _warn != null
+              ? _warnCard(_warn!)
+              : hint == null
+                  ? const SizedBox(width: double.infinity)
+                  : _hintCard(hint),
         ),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 8, 16, 6),
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _tool(Icons.undo_rounded, 'Geri al',
+              _tool(Icons.undo_rounded, t('Geri al'),
                   st['can_undo'] == true && !s.finished ? () => s.act({'undo': true}) : null),
-              _tool(Icons.backspace_outlined, 'Sil', canEdit ? () => s.act({'erase': sel}) : null),
-              _tool(Icons.edit_note_rounded, _notes ? 'Not: açık' : 'Not', s.finished ? null : () => setState(() => _notes = !_notes),
+              _tool(Icons.backspace_outlined, t('Sil'), canEdit ? () => s.act({'erase': sel}) : null),
+              _tool(Icons.edit_note_rounded, _notes ? t('Not: açık') : t('Not'),
+                  s.finished ? null : () => setState(() => _notes = !_notes),
                   active: _notes),
-              _tool(Icons.auto_fix_high_rounded, 'Tüm notlar', s.finished ? null : () => s.act({'fill_notes': true})),
-              _tool(Icons.lightbulb_outline_rounded, 'İpucu', s.finished ? null : () {
-                HapticFeedback.selectionClick();
-                if (s.act({'hint': true})) {
-                  final h = s.state['hint'];
-                  final c = h is Map ? (h['cell'] as num?)?.toInt() : null;
-                  if (c != null) setState(() => _sel = c);
-                }
-              }),
+              _tool(Icons.auto_fix_high_rounded, t('Hızlı doldur'), s.finished ? null : () => s.act({'fill_notes': true})),
+              _tool(
+                  Icons.lightbulb_outline_rounded,
+                  t('İpucu'),
+                  s.finished
+                      ? null
+                      : () {
+                          HapticFeedback.selectionClick();
+                          if (s.act({'hint': true})) {
+                            final h = s.state['hint'];
+                            final c = h is Map ? (h['cell'] as num?)?.toInt() : null;
+                            if (c != null) setState(() => _sel = c);
+                          }
+                        }),
             ],
           ),
         ),
@@ -448,8 +582,10 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
             children: [
               for (var d = 1; d <= 9; d++)
                 Expanded(
-                  child: _padKey(d, remaining.length == 9 ? remaining[d - 1] : 0, highlighted: selValue == d,
-                      enabled: canEdit),
+                  child: _padKey(d, remaining.length == 9 ? remaining[d - 1] : 0,
+                      highlighted: selValue == d,
+                      armed: _armed == d,
+                      enabled: !s.finished && (remaining.length != 9 || remaining[d - 1] > 0)),
                 ),
             ],
           ),
@@ -471,14 +607,16 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
       child: ClipRRect(
         borderRadius: BorderRadius.circular(12),
         child: GestureDetector(
+          key: const ValueKey('sudoku-board'),
           behavior: HitTestBehavior.opaque,
-          // Tap-down selects at once: the glide starts while the finger is still on the glass.
-          onTapDown: (d) {
-            final c = (d.localPosition.dx / cs).floor(), r = (d.localPosition.dy / cs).floor();
-            if (r < 0 || c < 0 || r > 8 || c > 8) return;
-            final i = r * 9 + c;
-            HapticFeedback.selectionClick();
-            setState(() => _sel = _sel == i ? null : i);
+          // A tap places the picked digit (or selects when none is picked); a long press selects.
+          onTapUp: (d) {
+            final i = _cellAt(d.localPosition, cs);
+            if (i != null) _tapCell(i);
+          },
+          onLongPressStart: (d) {
+            final i = _cellAt(d.localPosition, cs);
+            if (i != null) _selectCell(i);
           },
           child: RepaintBoundary(
             child: CustomPaint(size: Size.square(size), painter: _BoardPainter(_fx, _glyphs)),
@@ -487,6 +625,27 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
       ),
     );
   }
+
+  Widget _warnCard(String text) => Padding(
+        key: const ValueKey('sudoku-warn'),
+        padding: const EdgeInsets.fromLTRB(14, 4, 14, 0),
+        child: Container(
+          width: double.infinity,
+          padding: const EdgeInsets.fromLTRB(12, 10, 12, 10),
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(14),
+            color: const Color(0xFF2A0F16),
+            border: Border.all(color: Lux.bordeauxLight.withValues(alpha: 0.6)),
+          ),
+          child: Row(
+            children: [
+              const Icon(Icons.error_outline_rounded, color: Lux.bordeauxLight, size: 18),
+              const SizedBox(width: 8),
+              Expanded(child: Text(text, style: Lux.ui(13.5, color: const Color(0xFFFFD6DF), weight: FontWeight.w500))),
+            ],
+          ),
+        ),
+      );
 
   Widget _hintCard(Map<String, dynamic> hint) => Padding(
         padding: const EdgeInsets.fromLTRB(14, 4, 14, 0),
@@ -504,15 +663,16 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
               const Icon(Icons.lightbulb_rounded, color: Lux.gold, size: 18),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(hint['text']?.toString() ?? '',
-                    style: Lux.ui(13.5, color: Lux.ink, weight: FontWeight.w500)),
+                child:
+                    Text(ct(hint['text']?.toString()), style: Lux.ui(13.5, color: Lux.ink, weight: FontWeight.w500)),
               ),
             ],
           ),
         ),
       );
 
-  Widget _tool(IconData icon, String label, VoidCallback? onTap, {bool active = false}) => Column(
+  Widget _tool(IconData icon, String label, VoidCallback? onTap, {bool active = false}) => Expanded(
+          child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
           AnimatedContainer(
@@ -524,22 +684,32 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
             child: RimIconButton(icon, tooltip: label, onPressed: onTap),
           ),
           const SizedBox(height: 4),
-          Text(label, style: Lux.ui(11, color: active ? Lux.goldLight : Lux.muted, spacing: 0.6)),
+          // Long labels shrink instead of pushing the row past a narrow screen.
+          FittedBox(
+            fit: BoxFit.scaleDown,
+            child: Text(label, maxLines: 1, style: Lux.ui(11, color: active ? Lux.goldLight : Lux.muted, spacing: 0.6)),
+          ),
         ],
-      );
+      ));
 
-  Widget _padKey(int d, int left, {required bool highlighted, required bool enabled}) {
+  Widget _padKey(int d, int left, {required bool highlighted, required bool armed, required bool enabled}) {
     final done = left <= 0;
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 2.5),
       child: AnimatedOpacity(
         duration: const Duration(milliseconds: 200),
-        opacity: enabled ? (done ? 0.35 : 1) : 0.55,
+        opacity: done
+            ? 0.3
+            : enabled
+                ? 1
+                : 0.55,
         child: Material(
           color: Colors.transparent,
           child: InkWell(
+            key: ValueKey('sudoku-pad-$d'),
             borderRadius: BorderRadius.circular(12),
             onTap: enabled ? () => _digit(d) : null,
+            onLongPress: enabled ? () => _pickDigit(d) : null,
             child: AnimatedContainer(
               duration: const Duration(milliseconds: 180),
               curve: Curves.easeOutCubic,
@@ -553,15 +723,27 @@ class _SudokuBoardState extends State<_SudokuBoard> with SingleTickerProviderSta
                       ? [const Color(0xFF4A3814), const Color(0xFF241A0C)]
                       : [const Color(0xFF261D12), const Color(0xFF15100A)],
                 ),
-                border: Border.all(color: highlighted ? Lux.gold : Lux.line, width: highlighted ? 1.3 : 1),
+                border: Border.all(
+                    color: armed
+                        ? Lux.goldLight
+                        : highlighted
+                            ? Lux.gold
+                            : Lux.line,
+                    width: armed
+                        ? 2.2
+                        : highlighted
+                            ? 1.3
+                            : 1),
+                boxShadow: armed ? [BoxShadow(color: Lux.gold.withValues(alpha: 0.5), blurRadius: 12)] : null,
               ),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Text('$d',
-                      style: Lux.ui(_notes ? 20 : 26,
-                          color: _notes ? Lux.muted : Lux.goldLight, weight: FontWeight.w700, spacing: 0)),
-                  Text(done ? '✓' : '$left', style: Lux.ui(10.5, color: Lux.muted, spacing: 0)),
+                      style: Lux.ui(_notes ? 22 : 28,
+                          color: armed ? _spot : _notes ? Lux.muted : Lux.goldLight,
+                          weight: FontWeight.w700,
+                          spacing: 0)),
                 ],
               ),
             ),
@@ -590,7 +772,8 @@ class _Glyphs {
     if (hit != null) return hit;
     if (_m.length > 900) _m.clear();
     return _m[key] = TextPainter(
-      text: TextSpan(text: text, style: Lux.ui(size, color: color.withValues(alpha: color.a * a), weight: weight, spacing: 0)),
+      text: TextSpan(
+          text: text, style: Lux.ui(size, color: color.withValues(alpha: color.a * a), weight: weight, spacing: 0)),
       textDirection: TextDirection.ltr,
     )..layout();
   }
@@ -633,7 +816,7 @@ class _BoardPainter extends CustomPainter {
       final r = i ~/ 9, c = i % 9;
       var bg = ((r ~/ 3) + (c ~/ 3)).isEven ? const Color(0xFF18120C) : const Color(0xFF201810);
       if (fx.peer[i] > 0) bg = Color.lerp(bg, Lux.gold, 0.09 * fx.peer[i])!;
-      if (fx.same[i] > 0) bg = Color.lerp(bg, Lux.gold, 0.24 * fx.same[i])!;
+      if (fx.same[i] > 0) bg = Color.lerp(bg, Lux.gold, fx.sameK * fx.same[i])!;
       if (fx.focus[i] > 0) bg = Color.lerp(bg, Lux.goldLight, 0.12 * fx.focus[i])!;
       if (fx.conflict[i] > 0) bg = Color.lerp(bg, Lux.bordeaux, 0.5 * fx.conflict[i])!;
       final sk = fx.shake[i];
@@ -717,9 +900,22 @@ class _BoardPainter extends CustomPainter {
         final a = fx.noteA[base + d];
         if (a < 0.03) continue;
         final hot = fx.selValue == d;
-        final tp = glyphs.get('$d', nfs, hot ? Lux.goldLight : Lux.muted, hot ? FontWeight.w800 : FontWeight.w600, a);
         final k = d - 1;
         final center = Offset((i % 9) * cs + pad + (k % 3 + 0.5) * sub, (i ~/ 9) * cs + pad + (k ~/ 3 + 0.5) * sub);
+        if (hot) {
+          // A highlighted note sits on a small amber disc so it reads at a glance among the green ones.
+          final rad = sub * 0.48;
+          canvas.drawCircle(center, rad, Paint()..color = _spot.withValues(alpha: 0.22 * a));
+          canvas.drawCircle(
+            center,
+            rad,
+            Paint()
+              ..style = PaintingStyle.stroke
+              ..strokeWidth = 1
+              ..color = _spot.withValues(alpha: 0.55 * a),
+          );
+        }
+        final tp = glyphs.get('$d', hot ? nfs * 1.08 : nfs, hot ? _spot : Lux.muted, hot ? FontWeight.w800 : FontWeight.w600, a);
         _drawGlyph(canvas, tp, center, 0.85 + 0.15 * a);
       }
     }
@@ -752,8 +948,26 @@ class _BoardPainter extends CustomPainter {
         if (k >= 0 && k < _wrongDur) center += Offset(math.sin(k * 2 * math.pi * 9) * cs * 0.08 * math.exp(-k * 9), 0);
       }
       if (glow[i] > 0) scale *= 1 + 0.08 * glow[i];
-      final tp = glyphs.get('$v', dfs, _digitColor(f, fx.wrong.contains(i)),
-          f == 1 ? FontWeight.w700 : FontWeight.w600, alpha);
+      final isWrong = fx.wrong.contains(i);
+      var color = _digitColor(f, isWrong);
+      var weight = f == 1 ? FontWeight.w700 : FontWeight.w600;
+      // A highlighted digit turns amber with a soft halo (a wrong one keeps its bordeaux).
+      final hi = isWrong ? 0.0 : (fx.same[i] * 10).round() / 10;
+      if (hi > 0) {
+        final rect = Rect.fromCircle(center: center, radius: cs * 0.46);
+        canvas.drawCircle(
+          center,
+          cs * 0.46,
+          Paint()
+            ..shader = RadialGradient(colors: [
+              _spot.withValues(alpha: 0.30 * hi),
+              _spot.withValues(alpha: 0),
+            ]).createShader(rect),
+        );
+        color = Color.lerp(color, _spot, hi)!;
+        if (hi > 0.5) weight = FontWeight.w800;
+      }
+      final tp = glyphs.get('$v', dfs, color, weight, alpha);
       _drawGlyph(canvas, tp, center, scale);
     }
 
@@ -826,11 +1040,15 @@ class _BoardPainter extends CustomPainter {
   bool shouldRepaint(_BoardPainter old) => true;
 }
 
+/// The highlight colour for the picked or selected digit: a clear amber that stands apart from the
+/// cream givens, gold player digits and green-grey notes.
+const Color _spot = Color(0xFFFFC93C);
+
 /// Given digits ink, hint digits green, wrong digits bordeaux, player digits gold.
 Color _digitColor(int f, bool isWrong) => f == 1
-      ? Lux.ink
-      : isWrong
-          ? Lux.bordeauxLight
-          : f == 2
-              ? Lux.good
-              : Lux.goldLight;
+    ? Lux.ink
+    : isWrong
+        ? Lux.bordeauxLight
+        : f == 2
+            ? Lux.good
+            : Lux.goldLight;

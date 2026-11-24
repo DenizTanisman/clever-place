@@ -10,6 +10,15 @@ const corsiTutorials = GameTutorials(
 - Yanlış bir dokunuş denemeyi bitirir; doğru sıra numaralarla yeniden gösterilir.
 - Yıldızlar: 6 denemede 6 doğru 3, 5 doğru 2, 3–4 doğru 1 yıldız. 3'ten az doğru bölümü kaybettirir.
 - **Uyarlanır** mod klinik Corsi merdivenidir: dizi 3'ten başlar, iki şanstan biri doğruysa bir uzar. Önce ileri, sonra tersten; puan = ileri açıklık + geri açıklık.''',
+  rulesEn: '''
+- Blocks light up **gold** one at a time. Then tap them **in the same order**. There is no time limit.
+- In **backward** levels (burgundy badge, left-pointing arrow), tap them from last to first.
+- In **mixed direction** levels (most levels after level 30), the direction isn't given in advance. When the display ends, **SAME ORDER** or **REVERSE ORDER** appears at the top; tap that way for that trial. The direction can change every trial.
+- Blocks that light up **burgundy** are decoys: they are not part of the sequence, ignore them.
+- In some levels the blocks slowly **drift** after the display: follow the block that lit up, not its old spot.
+- A wrong tap ends the trial; the correct order is shown again with numbers.
+- Stars: 6 correct out of 6 trials is 3, 5 correct 2, 3–4 correct 1 star. Fewer than 3 correct loses the level.
+- **Adaptive** mode is the clinical Corsi ladder: the sequence starts at 3 and grows by one if you get one of two tries right. Forward first, then backward; score = forward span + backward span.''',
   mid: [
     TutorialSection(
       'Yolu bir şekil olarak gör',

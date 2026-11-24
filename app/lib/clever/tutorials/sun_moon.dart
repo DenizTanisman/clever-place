@@ -12,6 +12,15 @@ const sunMoonTutorials = GameTutorials(
 - Yıldızlar: ipucu ve hata yoksa 3, ipucu + hata en fazla 3 ise 2, fazlası 1 yıldız. Yanlış simgeyi bırakıp başka hücreye geçmek hata sayılır; aynı hücrede simgeler arasında dolaşmak serbest.
 
 Bölümler 6×6 ile başlar, 120. bölümden itibaren 8×8, 300. bölümden itibaren 10×10 olur. İlerledikçe sabit hücreler azalır, işaretler artar.''',
+  rulesEn: '''
+- Put a **sun** or a **moon** in every cell. Tap a cell: empty → sun → moon → empty. A long press clears it.
+- Every row and every column has **equal** numbers of suns and moons (three each on 6×6, five each on 10×10).
+- **Three of the same symbol** can't sit side by side in a row or column.
+- An **=** sign between two cells means "these are the same", an **×** sign means "these are opposite".
+- Rule breaks glow burgundy. A break caused by the cell you are working on shows once you move to another cell or stop tapping for a second and a half, so passing through sun on the way to moon gives no warning. Cells with a lighter background are fixed.
+- Stars: no hints and no mistakes 3, hints + mistakes at most 3 for 2, more for 1 star. Leaving a wrong symbol and moving to another cell counts as a mistake; cycling through symbols on the same cell is free.
+
+Levels start at 6×6, become 8×8 from level 120 and 10×10 from level 300. As you go, there are fewer fixed cells and more signs.''',
   mid: [
     TutorialSection(
       'Çift kuralı',

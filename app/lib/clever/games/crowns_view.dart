@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Crowns board. Tap: empty → X → crown → empty. Drag across cells to cross many out at once
@@ -362,11 +363,11 @@ class _CrownsBoardState extends State<_CrownsBoard> with SingleTickerProviderSta
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Taç', '${st['crowns'] ?? 0}/${st['crowns_total'] ?? n}'),
+            _stat(t('Taç'), '${st['crowns'] ?? 0}/${st['crowns_total'] ?? n}'),
             const SizedBox(width: 30),
-            _stat('İpucu', '${st['hints'] ?? 0}'),
+            _stat(t('İpucu'), '${st['hints'] ?? 0}'),
             const SizedBox(width: 30),
-            _stat('Düzeltme', '${st['corrections'] ?? 0}'),
+            _stat(t('Düzeltme'), '${st['corrections'] ?? 0}'),
           ],
         ),
         Expanded(
@@ -450,7 +451,7 @@ class _CrownsBoardState extends State<_CrownsBoard> with SingleTickerProviderSta
             }),
           ),
         ),
-        Text('Dokun: boş → X → taç   ·   Sürükle: X koy / kaldır',
+        Text(t('Dokun: boş → X → taç   ·   Sürükle: X koy / kaldır'),
             style: Lux.ui(12, color: Lux.muted, weight: FontWeight.w500)),
         AnimatedSize(
           duration: const Duration(milliseconds: 220),
@@ -462,11 +463,11 @@ class _CrownsBoardState extends State<_CrownsBoard> with SingleTickerProviderSta
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
-              _tool(Icons.undo_rounded, 'Geri al',
+              _tool(Icons.undo_rounded, t('Geri al'),
                   st['can_undo'] == true && !s.finished ? () => s.act({'undo': true}) : null),
-              _tool(Icons.layers_clear_rounded, 'Temizle',
+              _tool(Icons.layers_clear_rounded, t('Temizle'),
                   !s.finished && marks.any((m) => m != 0) ? () => _confirmClear(context) : null),
-              _tool(Icons.lightbulb_outline_rounded, 'İpucu', s.finished
+              _tool(Icons.lightbulb_outline_rounded, t('İpucu'), s.finished
                   ? null
                   : () {
                       HapticFeedback.selectionClick();
@@ -485,12 +486,12 @@ class _CrownsBoardState extends State<_CrownsBoard> with SingleTickerProviderSta
       builder: (ctx) => AlertDialog(
         backgroundColor: Lux.card,
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(18), side: const BorderSide(color: Lux.line)),
-        title: Text('Tahta temizlensin mi?', style: Lux.ui(19, weight: FontWeight.w700)),
-        content: Text('Bütün taçlar ve X işaretleri silinir. Geri al ile dönebilirsin.',
+        title: Text(t('Tahta temizlensin mi?'), style: Lux.ui(19, weight: FontWeight.w700)),
+        content: Text(t('Bütün taçlar ve X işaretleri silinir. Geri al ile dönebilirsin.'),
             style: Lux.ui(15, color: Lux.muted, weight: FontWeight.w500)),
         actions: [
-          GoldButton('Vazgeç', outlined: true, onPressed: () => Navigator.pop(ctx, false)),
-          GoldButton('Temizle', onPressed: () => Navigator.pop(ctx, true)),
+          GoldButton(t('Vazgeç'), outlined: true, onPressed: () => Navigator.pop(ctx, false)),
+          GoldButton(t('Temizle'), onPressed: () => Navigator.pop(ctx, true)),
         ],
       ),
     );
@@ -513,7 +514,7 @@ class _CrownsBoardState extends State<_CrownsBoard> with SingleTickerProviderSta
               const Icon(Icons.lightbulb_rounded, color: Lux.gold, size: 18),
               const SizedBox(width: 8),
               Expanded(
-                child: Text(hint['text']?.toString() ?? '', style: Lux.ui(13.5, color: Lux.ink, weight: FontWeight.w500)),
+                child: Text(ct(hint['text']?.toString()), style: Lux.ui(13.5, color: Lux.ink, weight: FontWeight.w500)),
               ),
             ],
           ),

@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Kelime Listesi board. Rust runs the script (study → recall / recognition / distractor) and the
@@ -15,6 +16,8 @@ import '../lux.dart';
 /// recognition (Evet / Hayır) · distractor (sum checks) · review (serial-position chart, learning
 /// curve, intrusions) → Bitir.
 ///
+/// This file also hosts widgets shared with Yüz ve İsim: [TrKeyboard], [PhaseCountdown],
+/// [DistractPanel], [MemoryIntroCard] and [ThinBar].
 Widget wordListView(BuildContext context, GameSession s) => _WordListBoard(key: ObjectKey(s), session: s);
 
 const _activePhases = {'countdown', 'study', 'recall', 'distract', 'feedback'};
@@ -129,25 +132,25 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
   // ------------------------------------------------------------------ intro
 
   Widget _intro(Map<String, dynamic> st) {
-    const texts = {
-      'free': 'Kelimeler tek tek gelecek. Liste bitince aklında kalanları istediğin sırayla yaz.',
-      'serial':
-          'Kelimeler tek tek gelecek. Sonra onları aynı sırayla yaz: her kelime kendi sırasında sayılır. Hatırlamadığın sırayı "Boş geç" ile atla.',
-      'learning':
-          'Aynı liste üç kez gelecek; her seferinde hatırladıklarını yaz. Sonunda öğrenme eğrin çizilir, yıldızlar son denemeden.',
+    final texts = {
+      'free': t('Kelimeler tek tek gelecek. Liste bitince aklında kalanları istediğin sırayla yaz.'),
+      'serial': t(
+          'Kelimeler tek tek gelecek. Sonra onları aynı sırayla yaz: her kelime kendi sırasında sayılır. Hatırlamadığın sırayı "Boş geç" ile atla.'),
+      'learning': t(
+          'Aynı liste üç kez gelecek; her seferinde hatırladıklarını yaz. Sonunda öğrenme eğrin çizilir, yıldızlar son denemeden.'),
       'recognition':
-          'Liste bitince kelimeler tek tek sorulacak: listede var mıydı? Yarısı listedekilere çok yakın tuzaklar.',
-      'interference':
-          'Önce A listesini öğren ve yaz. Sonra yeni bir B listesi gelecek. En sonda yeniden A listesini yaz; B\'den kelime karıştırma.',
-      'delayed': 'Listeyi öğren ve hemen yaz. Sonra bir süre basit işlemleri doğrula. En sonda listeyi yeniden yaz.',
+          t('Liste bitince kelimeler tek tek sorulacak: listede var mıydı? Yarısı listedekilere çok yakın tuzaklar.'),
+      'interference': t(
+          'Önce A listesini öğren ve yaz. Sonra yeni bir B listesi gelecek. En sonda yeniden A listesini yaz; B\'den kelime karıştırma.'),
+      'delayed': t('Listeyi öğren ve hemen yaz. Sonra bir süre basit işlemleri doğrula. En sonda listeyi yeniden yaz.'),
     };
     final th = (st['thresholds'] as List?)?.map((e) => ((e as num) * 100).round()).toList() ?? const [];
     return MemoryIntroCard(
-      title: st['title'] as String? ?? '',
+      title: ct(st['title'] as String?),
       lines: [
         texts[st['variant']] ?? '',
-        'Yazarken büyük-küçük harf ve Türkçe karakter (ç, ğ, ı, ö, ş, ü) önemsiz.',
-        if (th.length == 3) 'Yıldızlar: ★ %${th[0]} · ★★ %${th[1]} · ★★★ %${th[2]}',
+        t('Yazarken büyük-küçük harf ve Türkçe karakter (ç, ğ, ı, ö, ş, ü) önemsiz.'),
+        if (th.length == 3) tf('Yıldızlar: ★ %{0} · ★★ %{1} · ★★★ %{2}', [th[0], th[1], th[2]]),
       ],
       onStart: () => s.act({'start': true}),
     );
@@ -160,17 +163,17 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
     final idx = (study['index'] as num?)?.toInt() ?? 0;
     final total = (study['total'] as num?)?.toInt() ?? 1;
     final slot = (study['slot_ms'] as num?)?.toDouble() ?? 1000;
-    final t = (study['t_ms'] as num?)?.toDouble() ?? 0;
+    final tMs = (study['t_ms'] as num?)?.toDouble() ?? 0;
     final trials = (study['trials'] as num?)?.toInt() ?? 1;
     final list = study['list'] as String? ?? 'A';
     // Fade derived from the core clock: 120 ms in, out over the last part of the visible window.
     final visible = slot * 0.85;
-    final fadeIn = (t / 120).clamp(0.0, 1.0);
-    final fadeOut = ((visible - t) / 140).clamp(0.0, 1.0);
+    final fadeIn = (tMs / 120).clamp(0.0, 1.0);
+    final fadeOut = ((visible - tMs) / 140).clamp(0.0, 1.0);
     final a = word == null ? 0.0 : math.min(fadeIn, fadeOut);
     final label = [
-      if (list == 'B') 'B listesi' else 'A listesi',
-      if (trials > 1) '${study['trial']}. deneme',
+      if (list == 'B') t('B listesi') else t('A listesi'),
+      if (trials > 1) tf('{0}. deneme', [study['trial']]),
     ].join(' · ');
     return LayoutBuilder(builder: (context, box) {
       final big = (box.maxWidth * 0.13).clamp(34.0, 64.0);
@@ -215,10 +218,11 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
     final found = (r['found'] as num?)?.toInt() ?? 0;
     final remaining = (r['remaining_ms'] as num?)?.toDouble() ?? 0;
     final limit = (r['limit_ms'] as num?)?.toDouble() ?? 1;
-    final t = _now - _entryAt;
-    final flash = t >= 0 && t < 0.5 ? math.pow(1 - t / 0.5, 2).toDouble() : 0.0;
+    final age = _now - _entryAt;
+    final flash = age >= 0 && age < 0.5 ? math.pow(1 - age / 0.5, 2).toDouble() : 0.0;
     final ok = _entryResult == 'ok';
-    final shake = !ok && _entryResult != 'skip' && t >= 0 && t < 0.35 ? math.sin(t * 52) * 8 * math.exp(-t * 9) : 0.0;
+    final shake =
+        !ok && _entryResult != 'skip' && age >= 0 && age < 0.35 ? math.sin(age * 52) * 8 * math.exp(-age * 9) : 0.0;
     return Column(
       children: [
         Padding(
@@ -226,10 +230,13 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
           child: Row(
             children: [
               Expanded(
-                child: Text(r['label'] as String? ?? '',
+                child: Text(ct(r['label'] as String?),
                     style: Lux.ui(17, color: Lux.ink, weight: FontWeight.w700), overflow: TextOverflow.ellipsis),
               ),
-              Text(serial ? 'Sıra ${math.min(entries.length + 1, total)} / $total' : 'Bulunan $found / $total',
+              Text(
+                  serial
+                      ? tf('Sıra {0} / {1}', [math.min(entries.length + 1, total), total])
+                      : tf('Bulunan {0} / {1}', [found, total]),
                   style: Lux.ui(15, color: Lux.goldLight, weight: FontWeight.w600)),
             ],
           ),
@@ -245,8 +252,8 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
                 padding: const EdgeInsets.symmetric(horizontal: 30),
                 child: Text(
                   serial
-                      ? 'Kelimeleri gördüğün sırayla yaz. Hatırlamadığın sırayı "Boş geç" ile atla.'
-                      : 'Aklına gelen her kelimeyi yaz ve Tamam\'a bas. Sıra önemli değil. Bitince "Bitti".',
+                      ? t('Kelimeleri gördüğün sırayla yaz. Hatırlamadığın sırayı "Boş geç" ile atla.')
+                      : t('Aklına gelen her kelimeyi yaz ve Tamam\'a bas. Sıra önemli değil. Bitince "Bitti".'),
                   textAlign: TextAlign.center,
                   style: Lux.ui(15, color: Lux.muted),
                 ),
@@ -273,7 +280,7 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
           offset: Offset(shake, 0),
           child: _InputBox(
               text: _input,
-              hint: serial ? '${math.min(entries.length + 1, total)}. kelime' : 'kelime yaz',
+              hint: serial ? tf('{0}. kelime', [math.min(entries.length + 1, total)]) : t('kelime yaz'),
               flash: flash,
               ok: ok),
         ),
@@ -284,14 +291,14 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
             children: [
               if (serial)
                 Expanded(
-                  child: _SmallAction('Boş geç', onTap: () {
+                  child: _SmallAction(t('Boş geç'), onTap: () {
                     HapticFeedback.selectionClick();
                     s.act({'skip_slot': true});
                   }),
                 ),
               if (serial) const SizedBox(width: 8),
               Expanded(
-                child: _SmallAction('Bitti', strong: true, onTap: () {
+                child: _SmallAction(t('Bitti'), strong: true, onTap: () {
                   HapticFeedback.selectionClick();
                   s.act({'done': true});
                   setState(() => _input = '');
@@ -344,8 +351,8 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
     final word = r['word'] as String? ?? '';
     final idx = (r['index'] as num?)?.toInt() ?? 0;
     final total = (r['total'] as num?)?.toInt() ?? 1;
-    final t = _now - _recAt;
-    final flash = t >= 0 && t < 0.45 ? math.pow(1 - t / 0.45, 2).toDouble() : 0.0;
+    final age = _now - _recAt;
+    final flash = age >= 0 && age < 0.45 ? math.pow(1 - age / 0.45, 2).toDouble() : 0.0;
     final rim = Color.lerp(Lux.gold.withValues(alpha: 0.5), _recOk ? Lux.good : Lux.bordeauxLight, flash)!;
     return Column(
       children: [
@@ -378,15 +385,15 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
             ),
           ),
         ),
-        Text('Listede var mıydı?', style: Lux.ui(18, color: Lux.ink, weight: FontWeight.w600)),
+        Text(t('Listede var mıydı?'), style: Lux.ui(18, color: Lux.ink, weight: FontWeight.w600)),
         const SizedBox(height: 14),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 22),
           child: Row(
             children: [
-              Expanded(child: _BigAnswer('Hayır', onTap: () => s.act({'answer': false}))),
+              Expanded(child: _BigAnswer(t('Hayır'), onTap: () => s.act({'answer': false}))),
               const SizedBox(width: 12),
-              Expanded(child: _BigAnswer('Evet', primary: true, onTap: () => s.act({'answer': true}))),
+              Expanded(child: _BigAnswer(t('Evet'), primary: true, onTap: () => s.act({'answer': true}))),
             ],
           ),
         ),
@@ -410,24 +417,24 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
     final stars = (st['stars'] as num?)?.toInt() ?? 0;
     final pct = (res['score_pct'] as num?)?.toInt() ?? 0;
     final recognition = res['variant'] == 'recognition';
-    String p(num? x) => '%${(((x ?? 0) * 100)).round()}';
+    String p(num? x) => tf('%{0}', [(((x ?? 0) * 100)).round()]);
     return Column(
       children: [
         Expanded(
           child: ListView(
             padding: const EdgeInsets.fromLTRB(16, 8, 16, 12),
             children: [
-              Center(child: FoilText('%$pct', style: Lux.numeral(54))),
+              Center(child: FoilText(tf('%{0}', [pct]), style: Lux.numeral(54))),
               const SizedBox(height: 4),
               Center(child: StarRow(stars, size: 26)),
               const SizedBox(height: 4),
               Center(
-                child: Text(stars > 0 ? 'Geçtin' : 'Eşiğin altında kaldı',
+                child: Text(stars > 0 ? t('Geçtin') : t('Eşiğin altında kaldı'),
                     style: Lux.ui(14, color: stars > 0 ? Lux.good : Lux.bordeauxLight)),
               ),
               const SizedBox(height: 14),
               _Panel(
-                title: recognition ? 'Liste sırasına göre tanıma' : 'Sıra etkisi (A listesi)',
+                title: recognition ? t('Liste sırasına göre tanıma') : t('Sıra etkisi (A listesi)'),
                 child: Column(
                   children: [
                     SizedBox(height: 120, child: CustomPaint(painter: _SerialChart(curve), size: Size.infinite)),
@@ -435,9 +442,9 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        Text('Baş ${p(res['primacy'] as num?)}', style: Lux.ui(13, color: Lux.goldLight)),
-                        Text('Orta ${p(res['middle'] as num?)}', style: Lux.ui(13, color: Lux.muted)),
-                        Text('Son ${p(res['recency'] as num?)}', style: Lux.ui(13, color: Lux.goldLight)),
+                        Text(tf('Baş {0}', [p(res['primacy'] as num?)]), style: Lux.ui(13, color: Lux.goldLight)),
+                        Text(tf('Orta {0}', [p(res['middle'] as num?)]), style: Lux.ui(13, color: Lux.muted)),
+                        Text(tf('Son {0}', [p(res['recency'] as num?)]), style: Lux.ui(13, color: Lux.goldLight)),
                       ],
                     ),
                   ],
@@ -445,7 +452,7 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
               ),
               if (learning != null && learning.length > 1)
                 _Panel(
-                  title: 'Öğrenme eğrisi',
+                  title: t('Öğrenme eğrisi'),
                   child: SizedBox(
                     height: 110,
                     child: CustomPaint(painter: _LearningChart(learning, listA.length), size: Size.infinite),
@@ -453,7 +460,7 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
                 ),
               if (rounds.isNotEmpty)
                 _Panel(
-                  title: 'Turlar',
+                  title: t('Turlar'),
                   child: Column(
                     children: [
                       for (final r in rounds)
@@ -461,11 +468,11 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
                           padding: const EdgeInsets.symmetric(vertical: 3),
                           child: Row(
                             children: [
-                              Expanded(child: Text(r['label'] as String? ?? '', style: Lux.ui(14, color: Lux.ink))),
+                              Expanded(child: Text(ct(r['label'] as String?), style: Lux.ui(14, color: Lux.ink))),
                               Text('${r['found']} / ${r['total']}',
                                   style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w700)),
                               if ((r['intrusions'] as num? ?? 0) > 0)
-                                Text('  · ${r['intrusions']} araya giren', style: Lux.ui(12, color: Lux.bordeauxLight)),
+                                Text(tf('  · {0} araya giren', [r['intrusions']]), style: Lux.ui(12, color: Lux.bordeauxLight)),
                             ],
                           ),
                         ),
@@ -474,22 +481,22 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
                 ),
               if (intrusions.isNotEmpty || falseAlarms.isNotEmpty)
                 _Panel(
-                  title: recognition ? 'Yanlış alarm (tuzak kelimeler)' : 'Araya girenler',
+                  title: recognition ? t('Yanlış alarm (tuzak kelimeler)') : t('Araya girenler'),
                   child: _Chips(recognition ? falseAlarms : intrusions, Lux.bordeauxLight),
                 ),
-              if (missed.isNotEmpty) _Panel(title: 'Kaçırdıkların', child: _Chips(missed, Lux.muted)),
+              if (missed.isNotEmpty) _Panel(title: t('Kaçırdıkların'), child: _Chips(missed, Lux.muted)),
               _Panel(
-                title: 'Notlar',
+                title: t('Notlar'),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     if (clustering != null)
-                      Text('Kümeleme: ardışık doğruların ${p(clustering)}\'i aynı kategoriden.',
+                      Text(tf('Kümeleme: ardışık doğruların {0}\'i aynı kategoriden.', [p(clustering)]),
                           style: Lux.ui(14, color: Lux.ink)),
                     if (distract != null)
-                      Text('Ara görev: ${distract['right']} doğru, ${distract['wrong']} yanlış.',
+                      Text(tf('Ara görev: {0} doğru, {1} yanlış.', [distract['right'], distract['wrong']]),
                           style: Lux.ui(14, color: Lux.ink)),
-                    Text('Liste: ${listA.join(', ')}', style: Lux.ui(13, color: Lux.muted)),
+                    Text(tf('Liste: {0}', [listA.join(', ')]), style: Lux.ui(13, color: Lux.muted)),
                   ],
                 ),
               ),
@@ -498,7 +505,7 @@ class _WordListBoardState extends State<_WordListBoard> with SingleTickerProvide
         ),
         Padding(
           padding: const EdgeInsets.only(bottom: 18, top: 4),
-          child: GoldButton('Bitir', icon: Icons.flag_rounded, onPressed: () => s.act({'finish': true})),
+          child: GoldButton(t('Bitir'), icon: Icons.flag_rounded, onPressed: () => s.act({'finish': true})),
         ),
       ],
     );
@@ -555,7 +562,7 @@ class MemoryIntroCard extends StatelessWidget {
                     child: Text(l, style: Lux.ui(16, color: Lux.ink)),
                   ),
               const SizedBox(height: 10),
-              Center(child: GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: onStart)),
+              Center(child: GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: onStart)),
             ],
           ),
         ),
@@ -580,7 +587,7 @@ class PhaseCountdown extends StatelessWidget {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(cd['banner'] as String? ?? '',
+          Text(ct(cd['banner'] as String?),
               textAlign: TextAlign.center, style: Lux.display(24, color: Lux.goldLight, spacing: 1)),
           const SizedBox(height: 26),
           SizedBox(
@@ -611,12 +618,12 @@ class DistractPanel extends StatelessWidget {
     return Column(
       children: [
         const SizedBox(height: 10),
-        Text(Lux.upper('Ara görev'), style: Lux.ui(13, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
+        Text(Lux.upper(t('Ara görev')), style: Lux.ui(13, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
         const SizedBox(height: 4),
-        Text('Listeyi düşünme, işlemlere odaklan', style: Lux.ui(14, color: Lux.muted)),
+        Text(t('Listeyi düşünme, işlemlere odaklan'), style: Lux.ui(14, color: Lux.muted)),
         Padding(padding: const EdgeInsets.fromLTRB(30, 12, 30, 0), child: ThinBar(rem / total)),
         const SizedBox(height: 4),
-        Text('${(rem / 1000).ceil()} sn', style: Lux.ui(14, color: Lux.muted)),
+        Text(tf('{0} sn', [(rem / 1000).ceil()]), style: Lux.ui(14, color: Lux.muted)),
         Expanded(
           child: Center(
             child: TweenAnimationBuilder<double>(
@@ -644,15 +651,15 @@ class DistractPanel extends StatelessWidget {
             ),
           ),
         ),
-        Text('Doğru ${d['right'] ?? 0} · Yanlış ${d['wrong'] ?? 0}', style: Lux.ui(14, color: Lux.muted)),
+        Text(tf('Doğru {0} · Yanlış {1}', [d['right'] ?? 0, d['wrong'] ?? 0]), style: Lux.ui(14, color: Lux.muted)),
         const SizedBox(height: 12),
         Padding(
           padding: const EdgeInsets.fromLTRB(16, 0, 16, 22),
           child: Row(
             children: [
-              Expanded(child: _BigAnswer('Yanlış', onTap: () => onJudge(false))),
+              Expanded(child: _BigAnswer(t('Yanlış'), onTap: () => onJudge(false))),
               const SizedBox(width: 12),
-              Expanded(child: _BigAnswer('Doğru', primary: true, onTap: () => onJudge(true))),
+              Expanded(child: _BigAnswer(t('Doğru'), primary: true, onTap: () => onJudge(true))),
             ],
           ),
         ),
@@ -700,14 +707,14 @@ class TrKeyboard extends StatelessWidget {
   final VoidCallback onBackspace;
   final VoidCallback onEnter;
   final VoidCallback? onSpace;
-  final String enterLabel;
+  final String? enterLabel;
   const TrKeyboard({
     super.key,
     required this.onChar,
     required this.onBackspace,
     required this.onEnter,
     this.onSpace,
-    this.enterLabel = 'Tamam',
+    this.enterLabel,
   });
 
   static const _rows = ['qwertyuıopğü', 'asdfghjklşi', 'zxcvbnmöç'];
@@ -745,14 +752,14 @@ class TrKeyboard extends StatelessWidget {
             if (onSpace != null)
               Expanded(
                 flex: 5,
-                child: _Key('boşluk', () {
+                child: _Key(t('boşluk'), () {
                   HapticFeedback.selectionClick();
                   onSpace!();
                 }, accent: true, small: true),
               ),
             Expanded(
               flex: 4,
-              child: _Key(enterLabel, () {
+              child: _Key(enterLabel ?? t('Tamam'), () {
                 HapticFeedback.selectionClick();
                 onEnter();
               }, primary: true, small: true),
@@ -1110,7 +1117,7 @@ class _LearningChart extends CustomPainter {
       )..layout();
       tp.paint(canvas, Offset(p.dx - tp.width / 2, p.dy - 22 < 0 ? p.dy + 8 : p.dy - 22));
       final lab = TextPainter(
-        text: TextSpan(text: '${i + 1}. deneme', style: Lux.ui(10, color: Lux.muted)),
+        text: TextSpan(text: tf('{0}. deneme', [i + 1]), style: Lux.ui(10, color: Lux.muted)),
         textDirection: TextDirection.ltr,
       )..layout();
       lab.paint(canvas, Offset(p.dx - lab.width / 2, h + 4));

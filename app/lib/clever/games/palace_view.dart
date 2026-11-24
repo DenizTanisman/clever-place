@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Hafıza Sarayı board: a lit, winding path of stations across the top (the camera glides so the
@@ -17,6 +18,10 @@ import '../lux.dart';
 /// the path glides to the probed station; a pick flashes its node green or bordeaux and a banner
 /// shows the right item when the answer was wrong.
 Widget palaceView(BuildContext context, GameSession s) => _PalaceBoard(key: ObjectKey(s), session: s);
+
+/// The items are Turkish words in both languages, so they are uppercased the Turkish way (dotted İ)
+/// even when the app is in English. In Turkish this is exactly [Lux.upper].
+String _trUpper(String s) => s.replaceAll('i', 'İ').replaceAll('ı', 'I').toUpperCase();
 
 const _headerH = 50.0;
 
@@ -229,13 +234,13 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
     final probe = st['probe'] is Map ? Map<String, dynamic>.from(st['probe'] as Map) : null;
     String left;
     if (show != null) {
-      left = 'Yerleştir ${show['number']} / ${show['total']}';
+      left = tf('Yerleştir {0} / {1}', [show['number'], show['total']]);
     } else if (probe != null) {
-      left = 'Hatırla ${(probe['pos'] as num).toInt() + 1} / ${probe['total']}';
+      left = tf('Hatırla {0} / {1}', [(probe['pos'] as num).toInt() + 1, probe['total']]);
     } else {
-      left = '${st['palace']} · $len durak';
+      left = tf('{0} · {1} durak', [ct(st['palace'] as String?), len]);
     }
-    final listTag = rounds > 1 ? ' · ${round + 1}. liste' : '';
+    final listTag = rounds > 1 ? ' · ${tf('{0}. liste', [round + 1])}' : '';
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 8, 20, 0),
       child: Row(
@@ -245,12 +250,12 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(left, maxLines: 1, overflow: TextOverflow.ellipsis, style: Lux.ui(17, weight: FontWeight.w700)),
-                Text('${st['palace']}$listTag', maxLines: 1, overflow: TextOverflow.ellipsis, style: Lux.ui(12.5, color: Lux.muted)),
+                Text('${ct(st['palace'] as String?)}$listTag', maxLines: 1, overflow: TextOverflow.ellipsis, style: Lux.ui(12.5, color: Lux.muted)),
               ],
             ),
           ),
           if ((st['answered'] as num? ?? 0) > 0)
-            Text('Doğru ${st['correct']} / ${st['answered']}', style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600)),
+            Text(tf('Doğru {0} / {1}', [st['correct'], st['answered']]), style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600)),
         ],
       ),
     );
@@ -323,7 +328,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
           padding: const EdgeInsets.fromLTRB(20, 0, 20, 18),
           child: SizedBox(
             width: double.infinity,
-            child: Center(child: GoldButton('Yerleştir', icon: Icons.arrow_forward_rounded, onPressed: _next)),
+            child: Center(child: GoldButton(t('Yerleştir'), icon: Icons.arrow_forward_rounded, onPressed: _next)),
           ),
         ),
       ],
@@ -339,16 +344,16 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(Lux.upper('Durak ${show['number']} · ${show['station']}'),
+          Text(Lux.upper(tf('Durak {0} · {1}', [show['number'], ct(show['station'] as String?)])),
               textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.gold, spacing: 2, weight: FontWeight.w700)),
           const SizedBox(height: 16),
           FittedBox(
             fit: BoxFit.scaleDown,
-            child: FoilText(Lux.upper(item), style: Lux.display(54, spacing: 2)),
+            child: FoilText(_trUpper(item), style: Lux.display(54, spacing: 2)),
           ),
           const SizedBox(height: 14),
           Text(
-            tip ? 'Eşyayı durakla etkileştir: canlı, tuhaf, hareketli bir sahne kur.' : 'Sahneyi gör, sesini duy, sonra yerleştir.',
+            tip ? t('Eşyayı durakla etkileştir: canlı, tuhaf, hareketli bir sahne kur.') : t('Sahneyi gör, sesini duy, sonra yerleştir.'),
             textAlign: TextAlign.center,
             style: Lux.ui(13.5, color: Lux.muted),
           ),
@@ -371,7 +376,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
           const SizedBox(height: 4),
           Align(
             alignment: Alignment.centerRight,
-            child: Text('${((show['remaining_ms'] as num) / 1000).ceil()} sn',
+            child: Text(tf('{0} sn', [((show['remaining_ms'] as num) / 1000).ceil()]),
                 style: Lux.ui(12, color: low ? Lux.bordeauxLight : Lux.muted)),
           ),
         ],
@@ -386,7 +391,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
     final p = Offset.lerp(from, to, t)! + Offset(0, -60 * math.sin(math.pi * t));
     final scale = 1.0 - 0.7 * t;
     return CustomPaint(
-      painter: _ChipPainter(center: p, scale: scale, label: Lux.upper(_flyWord), opacity: 1 - 0.3 * t),
+      painter: _ChipPainter(center: p, scale: scale, label: _trUpper(_flyWord), opacity: 1 - 0.3 * t),
     );
   }
 
@@ -401,11 +406,11 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
       builder: (context, t, child) => Opacity(opacity: t, child: Transform.translate(offset: Offset(0, 8 * (1 - t)), child: child)),
       child: Column(
         children: [
-          Text(Lux.upper('Durak ${probe['number']}'), style: Lux.ui(12.5, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
+          Text(Lux.upper(tf('Durak {0}', [probe['number']])), style: Lux.ui(12.5, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
           const SizedBox(height: 4),
-          FittedBox(fit: BoxFit.scaleDown, child: Text(probe['station'] as String, style: Lux.display(30, color: Lux.ink))),
+          FittedBox(fit: BoxFit.scaleDown, child: Text(ct(probe['station'] as String), style: Lux.display(30, color: Lux.ink))),
           const SizedBox(height: 4),
-          Text('Burada ne vardı?', style: Lux.ui(14.5, color: Lux.muted)),
+          Text(t('Burada ne vardı?'), style: Lux.ui(14.5, color: Lux.muted)),
         ],
       ),
     );
@@ -416,12 +421,12 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
     if (last == null) return const SizedBox(height: 40);
     final ok = last['correct'] == true;
     final skipped = last['skipped'] == true;
-    final answer = Lux.upper(last['answer'] as String? ?? '');
+    final answer = _trUpper(last['answer'] as String? ?? '');
     final text = ok
-        ? '${last['number']}. durak · $answer ✓'
+        ? tf('{0}. durak · {1} ✓', [last['number'], answer])
         : skipped
-            ? '${last['number']}. durakta $answer vardı'
-            : '${Lux.upper(last['given'] as String? ?? '')} değil · ${last['number']}. durakta $answer vardı';
+            ? tf('{0}. durakta {1} vardı', [last['number'], answer])
+            : tf('{0} değil · {1}. durakta {2} vardı', [_trUpper(last['given'] as String? ?? ''), last['number'], answer]);
     return SizedBox(
       height: 40,
       child: TweenAnimationBuilder<double>(
@@ -485,7 +490,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
                             child: r * cols + c < cands.length
                                 ? _Choice(
                                     key: ValueKey('c${probe['pos']}-${r * cols + c}'),
-                                    label: Lux.upper(cands[r * cols + c]),
+                                    label: _trUpper(cands[r * cols + c]),
                                     height: cellH,
                                     small: cols == 3,
                                     onTap: () => _pick(r * cols + c),
@@ -497,7 +502,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
                   const SizedBox(height: 4),
                   TextButton(
                     onPressed: _skip,
-                    child: Text('Hatırlamıyorum', style: Lux.ui(14, color: Lux.muted)),
+                    child: Text(t('Hatırlamıyorum'), style: Lux.ui(14, color: Lux.muted)),
                   ),
                 ],
               );
@@ -529,7 +534,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
             ),
             child: Center(
               widthFactor: 1,
-              child: Text(_typed.isEmpty ? '…' : Lux.upper(_typed),
+              child: Text(_typed.isEmpty ? '…' : _trUpper(_typed),
                   style: Lux.ui(28, color: _typed.isEmpty ? Lux.muted : Lux.ink, weight: FontWeight.w700, spacing: 1.5)),
             ),
           ),
@@ -546,12 +551,11 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
     final clear = phase == 'clear';
     final rc = (st['round_correct'] as List?)?.cast<num>() ?? const <num>[];
     final len = (st['list_len'] as num?)?.toInt() ?? 0;
-    final heading = clear ? 'Sarayı temizle' : '${st['palace']} sarayı';
+    final heading = clear ? t('Sarayı temizle') : tf('{0} sarayı', [ct(st['palace'] as String?)]);
     final body = clear
-        ? '1. liste: ${rc.isEmpty ? 0 : rc[0]}/$len doğru.\n\n'
-            'Şimdi eski eşyaları sil: her durağı boş, temiz ve aydınlık gör; eski sahneyi bir rüzgâr süpürsün. '
-            'Yeni liste aynı duraklara gelecek, eskisi tuzak olarak karşına çıkacak.'
-        : st['brief'] as String? ?? '';
+        ? '${tf('1. liste: {0}/{1} doğru.', [rc.isEmpty ? 0 : rc[0], len])}\n\n'
+            '${t('Şimdi eski eşyaları sil: her durağı boş, temiz ve aydınlık gör; eski sahneyi bir rüzgâr süpürsün. Yeni liste aynı duraklara gelecek, eskisi tuzak olarak karşına çıkacak.')}'
+        : ct(st['brief'] as String?);
     return TweenAnimationBuilder<double>(
       key: ValueKey('card$phase'),
       tween: Tween(begin: 0, end: 1),
@@ -575,10 +579,10 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
                 Text(body, textAlign: TextAlign.center, style: Lux.ui(16, weight: FontWeight.w500)),
                 if (!clear) ...[
                   const SizedBox(height: 10),
-                  Text(st['goal'] as String? ?? '', textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
+                  Text(ct(st['goal'] as String?), textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
                 ],
                 const SizedBox(height: 18),
-                GoldButton(clear ? 'Temizledim' : 'Başla',
+                GoldButton(clear ? t('Temizledim') : t('Başla'),
                     icon: clear ? Icons.auto_awesome_rounded : Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
@@ -603,7 +607,7 @@ class _PalaceBoardState extends State<_PalaceBoard> with SingleTickerProviderSta
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            Text('Yürüyüş başlıyor', style: Lux.ui(15, color: Lux.muted, spacing: 1.2)),
+            Text(t('Yürüyüş başlıyor'), style: Lux.ui(15, color: Lux.muted, spacing: 1.2)),
             const SizedBox(height: 8),
             Transform.scale(
               scale: (0.55 + 0.45 * inT) * (1 + 0.5 * outT),
@@ -783,7 +787,7 @@ class _PathPainter extends CustomPainter {
       final maxW = gap(size) * 0.92;
       final tp = TextPainter(
         text: TextSpan(
-          text: stations[i],
+          text: ct(stations[i]),
           style: Lux.ui(isCur ? 14 : 11.5,
               color: isCur ? Lux.goldLight : Lux.ink.withValues(alpha: 0.35 + 0.45 * near), weight: isCur ? FontWeight.w700 : FontWeight.w500),
         ),
@@ -948,9 +952,9 @@ class _TrKeyboard extends StatelessWidget {
           ),
         Row(
           children: [
-            Expanded(flex: 3, child: _TKey(label: 'Bilmiyorum', small: true, onTap: onSkip)),
-            Expanded(flex: 4, child: _TKey(label: 'boşluk', small: true, onTap: () => onKey(' '))),
-            Expanded(flex: 3, child: _TKey(label: 'Tamam', small: true, primary: canSubmit, onTap: onSubmit)),
+            Expanded(flex: 3, child: _TKey(label: t('Bilmiyorum'), small: true, onTap: onSkip)),
+            Expanded(flex: 4, child: _TKey(label: t('boşluk'), small: true, onTap: () => onKey(' '))),
+            Expanded(flex: 3, child: _TKey(label: t('Tamam'), small: true, primary: canSubmit, onTap: onSubmit)),
           ],
         ),
       ],

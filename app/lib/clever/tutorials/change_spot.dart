@@ -8,6 +8,13 @@ const changeSpotTutorials = GameTutorials(
 - **2 tur kaçarsa** bölüm kaybedilir; tek kaçış affedilir.
 - Her 4. bölüm **yan yana**: üstte A, altta B; farka hangi resimde dokunduğun önemli değil.
 - Yıldızlar: hiç tur kaçırmadan, toplam en çok 1 yanlış dokunuşla ve ortalama tur süresinin %40'ı içinde bulursan **3**; hiç tur kaçırmazsan **2** (tek kaçış ama temiz ve hızlı oyun da 2); kalanı **1**.''',
+  rulesEn: '''
+- The picture **flickers**: A, a short blank, B, blank… **One thing** is different between the two pictures (2–3 things in later levels).
+- **Tap** where it changed. If there is more than one difference, find them all; the round ends when they are all found.
+- Each round is timed. If time runs out or you make **3 wrong taps** in a round, you miss the round and the change is shown.
+- **Miss 2 rounds** and you lose the level; a single miss is forgiven.
+- Every 4th level is **side by side**: A on top, B below; it doesn't matter which picture you tap the difference in.
+- Stars: no missed rounds, at most 1 wrong tap in total and, on average, finding within 40% of the round time for **3**; no missed rounds for **2** (a single miss with clean, fast play is also 2); otherwise **1**.''',
   mid: [
     TutorialSection(
       'Değişim körlüğü: neden göremiyorsun?',

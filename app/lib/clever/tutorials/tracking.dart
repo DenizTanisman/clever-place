@@ -8,6 +8,13 @@ const trackingTutorials = GameTutorials(
 - Yıldızlar: 4 kusursuz tur 3, 3 tur 2, 2 tur 1 yıldız; daha azında bölümü tekrar oynarsın.
 - Hedef sayısı 3'ten 6'ya, küre sayısı 8'den 16'ya çıkar; hız ve hareket süresi (5 → 12 sn) artar.
 - İleri bölümlerde **perde** (kürelerin arkasından geçtiği bantlar), **renk tuzağı** (bir an renk değiştiren küreler) ve **rakam** (hareket sırasında bir kürede beliren rakam) gelir. Rakam seçimden sonra sorulur; yanlış cevaplanırsa tur kusursuz sayılmaz.''',
+  rulesEn: '''
+- At the start of a round some balls glow **gold**: those are your targets. Then they all turn the same color and move for a few seconds, bouncing off the walls and each other.
+- When the balls stop, tap the ones you know are targets. Tap a wrong pick again to undo it; the round ends when you pick the last target.
+- A level is 4 rounds. A round where you find every target is **perfect**.
+- Stars: 4 perfect rounds 3, 3 rounds 2, 2 rounds 1 star; with fewer you replay the level.
+- Targets go from 3 to 6 and balls from 8 to 16; the speed and the movement time (5 → 12 s) increase.
+- Later levels bring **curtains** (bands the balls pass behind), **color traps** (balls that change color for a moment) and a **digit** (a number that appears on a ball while they move). The digit is asked after your picks; a wrong answer means the round isn't perfect.''',
   mid: [
     TutorialSection(
       'Merkeze bak, kürelere değil',

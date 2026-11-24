@@ -11,6 +11,13 @@ const sorobanTutorials = GameTutorials(
 - Sonucu abaküste bırakıp **Tamam**'a dokun. Okuma ve anzan sorularında cevabı tuşlarla yazarsın.
 - **İpucu** sıradaki boncuk hareketini okla gösterir. Yeni bir tekniğin ilk soruları rehberlidir: oklar kendiliğinden ve bedava.
 - Yıldızlar: en az **%90 doğru, hedef süre altında ve ipucusuz** 3; %80 ve üstü 2; %70 ve üstü 1 yıldız. %70'in altında bölüm tekrarlanır.''',
+  rulesEn: '''
+- A 50-level course: each level starts with a short **lesson card**, then 8–10 exercises follow. Reopen the card in game with the **Lesson** button.
+- Each rod has 1 **five** bead (5) on top and 4 **one** beads (1) below; only beads touching the beam count. The rightmost rod is the ones.
+- Move the beads by **sliding** them: push the ones up or bring them down, lower or raise the five. Tapping works too. Sliding your finger sideways along the beam clears the rods (**Reset**).
+- Leave the result on the abacus and tap **OK**. In reading and anzan questions you type the answer on the keys.
+- **Hint** shows the next bead move with an arrow. The first questions of a new technique are guided: the arrows appear on their own, for free.
+- Stars: at least **90% right, under the target time and without hints** for 3; 80% or more 2; 70% or more 1 star. Below 70% the level is repeated.''',
   mid: [
     TutorialSection(
       'Okuma ve parmak tekniği',

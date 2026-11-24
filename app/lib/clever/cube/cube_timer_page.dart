@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'cube_analysis_view.dart';
 import 'cube_log.dart';
@@ -248,27 +249,27 @@ class _CubeTimerPageState extends State<CubeTimerPage>
         return (
           text: formatCubeTime(_now - _startAt),
           color: Lux.ink,
-          hint: 'Durdurmak için ekrana dokun',
+          hint: t('Durdurmak için ekrana dokun'),
         );
       case _Phase.inspecting:
-        final t = _now - _inspectAt;
-        if (t >= 8000 && !_cue8) {
+        final el = _now - _inspectAt;
+        if (el >= 8000 && !_cue8) {
           _cue8 = true;
           HapticFeedback.heavyImpact();
         }
-        if (t >= 12000 && !_cue12) {
+        if (el >= 12000 && !_cue12) {
           _cue12 = true;
           HapticFeedback.heavyImpact();
         }
-        final left = 15 - t ~/ 1000;
+        final left = 15 - el ~/ 1000;
         return (
-          text: t > 17000 ? 'DNF' : (t > 15000 ? '+2' : '$left'),
-          color: t >= 12000 ? Lux.bad : Lux.gold,
-          hint: t >= 12000
-              ? '12 saniye! Basılı tut, yeşilde bırak'
-              : t >= 8000
-              ? '8 saniye. Basılı tut, yeşilde bırak'
-              : 'İnceleme · hazır olunca basılı tut, yeşilde bırak',
+          text: el > 17000 ? 'DNF' : (el > 15000 ? '+2' : '$left'),
+          color: el >= 12000 ? Lux.bad : Lux.gold,
+          hint: el >= 12000
+              ? t('12 saniye! Basılı tut, yeşilde bırak')
+              : el >= 8000
+              ? t('8 saniye. Basılı tut, yeşilde bırak')
+              : t('İnceleme · hazır olunca basılı tut, yeşilde bırak'),
         );
       case _Phase.holding:
         return (
@@ -276,29 +277,29 @@ class _CubeTimerPageState extends State<CubeTimerPage>
               ? '${15 - (_now - _inspectAt) ~/ 1000}'
               : formatCubeTime(0),
           color: Lux.bordeauxLight,
-          hint: 'Bekle…',
+          hint: t('Bekle…'),
         );
       case _Phase.ready:
         return (
           text: formatCubeTime(0),
           color: Lux.good,
-          hint: 'Bırak!',
+          hint: t('Bırak!'),
         );
       case _Phase.done when last != null:
         return (
           text: formatSolve(last),
           color: Lux.ink,
           hint: _log.scrambled
-              ? 'Yeni karıştırma hazır · dokun, inceleme başlasın'
-              : 'Basılı tut, yeşilde bırak',
+              ? t('Yeni karıştırma hazır · dokun, inceleme başlasın')
+              : t('Basılı tut, yeşilde bırak'),
         );
       default:
         return (
           text: formatCubeTime(0),
           color: Lux.muted,
           hint: _log.scrambled
-              ? 'Karıştır, sonra dokun: 15 sn inceleme başlar'
-              : 'Basılı tut, yeşil olunca bırak',
+              ? t('Karıştır, sonra dokun: 15 sn inceleme başlar')
+              : t('Basılı tut, yeşil olunca bırak'),
         );
     }
   }
@@ -338,7 +339,7 @@ class _CubeTimerPageState extends State<CubeTimerPage>
           initialChildSize: 0.7,
           maxChildSize: 0.95,
           builder: (context, scroll) => list.isEmpty
-              ? const Center(child: Text('Bu oturumda henüz çözüm yok.'))
+              ? Center(child: Text(t('Bu oturumda henüz çözüm yok.')))
               : ListView.builder(
                   controller: scroll,
                   itemCount: list.length,
@@ -360,24 +361,24 @@ class _CubeTimerPageState extends State<CubeTimerPage>
                       subtitle: Text(
                         '${_two(at.day)}.${_two(at.month)} '
                         '${_two(at.hour)}:${_two(at.minute)}'
-                        '${s.scramble == null ? ' · sadece süre' : ''}',
+                        '${s.scramble == null ? t(' · sadece süre') : ''}',
                       ),
                       trailing: PopupMenuButton<Penalty?>(
                         onSelected: (p) {
                           _setPenalty(s, p);
                           setSheet(() {});
                         },
-                        itemBuilder: (_) => const [
+                        itemBuilder: (_) => [
                           PopupMenuItem(
                             value: Penalty.none,
-                            child: Text('Ceza yok'),
+                            child: Text(t('Ceza yok')),
                           ),
-                          PopupMenuItem(
+                          const PopupMenuItem(
                             value: Penalty.plus2,
                             child: Text('+2'),
                           ),
-                          PopupMenuItem(value: Penalty.dnf, child: Text('DNF')),
-                          PopupMenuItem(value: null, child: Text('Sil')),
+                          const PopupMenuItem(value: Penalty.dnf, child: Text('DNF')),
+                          PopupMenuItem(value: null, child: Text(Lang.en ? 'Delete' : 'Sil')),
                         ],
                       ),
                       onTap: s.scramble == null ? null : () => _openAnalysis(s),
@@ -406,11 +407,11 @@ class _CubeTimerPageState extends State<CubeTimerPage>
                 child: Column(
                   children: [
                     CubeHeader(
-                      'Zamanlayıcı',
+                      t('Zamanlayıcı'),
                       action: _busy
-                          ? TextButton(onPressed: _cancel, child: const Text('İptal'))
+                          ? TextButton(onPressed: _cancel, child: Text(t('İptal')))
                           : IconButton(
-                              tooltip: 'Geçmiş',
+                              tooltip: t('Geçmiş'),
                               onPressed: _openHistory,
                               icon: const Icon(Icons.history, color: Lux.gold),
                             ),
@@ -421,7 +422,7 @@ class _CubeTimerPageState extends State<CubeTimerPage>
                         child: SegmentedButton<CubeSession>(
                           segments: [
                             for (final s in CubeSession.values)
-                              ButtonSegment(value: s, label: Text(s.label)),
+                              ButtonSegment(value: s, label: Text(t(s.label))),
                           ],
                           selected: {_session},
                           showSelectedIcon: false,
@@ -430,11 +431,11 @@ class _CubeTimerPageState extends State<CubeTimerPage>
                       ),
                       SwitchListTile(
                         dense: true,
-                        title: const Text('Karıştırma + 15 sn inceleme'),
+                        title: Text(t('Karıştırma + 15 sn inceleme')),
                         subtitle: Text(
                           _log.scrambled
-                              ? 'Yarışmadaki gibi'
-                              : 'Sadece süre: basılı tut, bırak, dokun',
+                              ? t('Yarışmadaki gibi')
+                              : t('Sadece süre: basılı tut, bırak, dokun'),
                         ),
                         value: _log.scrambled,
                         onChanged: _setScrambled,
@@ -444,7 +445,7 @@ class _CubeTimerPageState extends State<CubeTimerPage>
                           scramble: _scramble!,
                           size: _session.size,
                           number: _index == null
-                              ? 'rastgele'
+                              ? t('rastgele')
                               : '#${_index! + 1} / ${_bank.list.length}',
                           showNet: _showNet,
                           onToggleNet: () =>
@@ -528,14 +529,14 @@ class _ScrambleCard extends StatelessWidget {
               children: [
                 Expanded(
                   child: Text(
-                    'Karıştırma $number · beyaz üst, yeşil ön',
+                    tf('Karıştırma {0} · beyaz üst, yeşil ön', [number]),
                     maxLines: 2,
                     style: Lux.ui(12.5, color: Lux.muted),
                   ),
                 ),
                 IconButton(
                   visualDensity: VisualDensity.compact,
-                  tooltip: showNet ? 'Şemayı gizle' : 'Şemayı göster',
+                  tooltip: showNet ? t('Şemayı gizle') : t('Şemayı göster'),
                   onPressed: onToggleNet,
                   icon: Icon(
                     showNet ? Icons.grid_off_outlined : Icons.grid_on_outlined,
@@ -544,7 +545,7 @@ class _ScrambleCard extends StatelessWidget {
                 ),
                 IconButton(
                   visualDensity: VisualDensity.compact,
-                  tooltip: 'Sıradaki karıştırma',
+                  tooltip: t('Sıradaki karıştırma'),
                   onPressed: onNext,
                   icon: const Icon(Icons.skip_next, color: Lux.gold),
                 ),
@@ -604,13 +605,13 @@ class _AfterSolve extends StatelessWidget {
           ),
           ActionChip(
             avatar: const Icon(Icons.delete_outline, size: 18),
-            label: const Text('Sil'),
+            label: Text(Lang.en ? 'Delete' : 'Sil'),
             onPressed: () => onPenalty(null),
           ),
           if (hasTips)
             ActionChip(
               avatar: const Icon(Icons.lightbulb_outline, size: 18),
-              label: const Text('Bu karıştırma için taktikler'),
+              label: Text(t('Bu karıştırma için taktikler')),
               onPressed: onTips,
             ),
         ],
@@ -640,8 +641,8 @@ class _Stats extends StatelessWidget {
       padding: const EdgeInsets.fromLTRB(8, 10, 8, 12),
       child: Row(
         children: [
-          cell('çözüm', '${solves.length}'),
-          cell('en iyi', best == null ? '–' : formatCubeTime(best)),
+          cell(t('çözüm'), '${solves.length}'),
+          cell(t('en iyi'), best == null ? '–' : formatCubeTime(best)),
           cell('ao5', formatAverage(averageOf(solves, 5))),
           cell('ao12', formatAverage(averageOf(solves, 12))),
           cell('ao100', formatAverage(averageOf(solves, 100))),

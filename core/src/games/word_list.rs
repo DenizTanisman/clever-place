@@ -46,7 +46,7 @@ use crate::rng::{seed_for, Rng};
 use crate::Session;
 use serde_json::{json, Value};
 
-// ------------------------------------------------------------------ shared helpers
+// ------------------------------------------------------------------ shared helpers (face_name too)
 
 /// Case- and diacritic-insensitive key for Turkish text: lower-cased (İ/I → i), ç→c, ğ→g, ı→i,
 /// ö→o, ş→s, ü→u, â→a, î→i, û→u; runs of whitespace collapse to one space, ends trimmed.
@@ -88,6 +88,23 @@ pub(crate) fn tr_lower(s: &str) -> String {
             c => c.to_lowercase().next().unwrap_or(c),
         })
         .collect()
+}
+
+/// Levenshtein distance over chars.
+pub(crate) fn edit_distance(a: &str, b: &str) -> usize {
+    let a: Vec<char> = a.chars().collect();
+    let b: Vec<char> = b.chars().collect();
+    let mut prev: Vec<usize> = (0..=b.len()).collect();
+    let mut cur = vec![0; b.len() + 1];
+    for i in 1..=a.len() {
+        cur[0] = i;
+        for j in 1..=b.len() {
+            let sub = prev[j - 1] + usize::from(a[i - 1] != b[j - 1]);
+            cur[j] = sub.min(prev[j] + 1).min(cur[j - 1] + 1);
+        }
+        std::mem::swap(&mut prev, &mut cur);
+    }
+    prev[b.len()]
 }
 
 /// Distractor task: verify simple sums ("47 + 8 = 55?") with Doğru / Yanlış for a fixed time.
@@ -1089,6 +1106,9 @@ mod tests {
         assert_eq!(fold("çiçek  bahçesi"), "cicek bahcesi");
         assert_eq!(tr_lower("IŞIK"), "ışık");
         assert_eq!(tr_lower("İzmir"), "izmir");
+        assert_eq!(edit_distance("elif", "elf"), 1);
+        assert_eq!(edit_distance("kaya", "kaya"), 0);
+        assert_eq!(edit_distance("ayşe", "ayse"), 1);
     }
 
     #[test]

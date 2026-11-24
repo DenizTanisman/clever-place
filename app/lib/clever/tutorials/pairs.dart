@@ -8,6 +8,13 @@ const pairsTutorials = GameTutorials(
 - **Üçlü** bölümlerde aynı üç kartı bul; ikinci kart ilkini tutmazsa tur hemen biter.
 - Bazı bölümlerde başta kartlar kısa süre **açık** gelir; bazılarında kapalı kartlar **yer değiştirir**; bazılarında **hamle sınırı** vardır.
 - Yıldızlar "kusursuz hafıza" ölçüsüne göredir: hiçbir şeyi unutmayan bir oyuncu bu dağıtımda ortalama X hamle ister. X'in 1,15 katına kadar 3, 1,5 katına kadar 2, fazlası 1 yıldız. Sınır dolarsa bölüm biter.''',
+  rulesEn: '''
+- Turn cards over two at a time. Find two that match and **they stay face up**.
+- If they don't match, you see them for a moment, then they flip back. Don't want to wait? Tap the next card: they flip back at once.
+- Each turn counts as **1 move**, match or not.
+- In **triple** levels, find three matching cards; if the second card doesn't match the first, the turn ends right away.
+- In some levels the cards start **face up** for a moment; in some, face-down cards **swap places**; in some there is a **move limit**.
+- Stars are measured against "perfect memory": a player who forgets nothing needs X moves on average for this deal. Up to 1.15 times X is 3 stars, up to 1.5 times 2, more is 1 star. If you hit the limit, the level ends.''',
   mid: [
     TutorialSection(
       'Sistemli tarama',

@@ -14,6 +14,14 @@ const pushTutorials = GameTutorials(
 - Oynamak için: parmağını bilyelerinin üstünden kaydırarak 1–3 tanesini seç, kaydırmaya devam et ya da grubu gitmek istediğin yöne sürükleyip bırak. Altın oklar geçerli, bordo oklar geçersiz yönlerdir; oka ya da bilyenin gideceği hücreye dokunmak da olur.
 - **Durma kuralı**: 100 hamle boyunca bilye düşmezse ya da aynı konum 3 kez tekrarlanırsa oyun durur: bilyesi çok olan kazanır, eşitse berabere.
 - Yıldızlar: geri alma ve ipucu kullanmadan, en fazla **2 bilye** kaybederek kazanırsan 3; geri alma/ipucu olmadan 2; kullandıysan 1 yıldız.''',
+  rulesEn: '''
+- 14 marbles each on a 61-cell hexagonal board: you play the **pearl** marbles, the opponent the **ruby** ones. You move first in odd levels, the opponent in even levels; the starting layout changes from level to level (Classic, Daisy, Mirror, Spear, Crescent).
+- A move: pick **1, 2 or 3** of your marbles standing side by side in a single line and shift them one step in one of six directions. If the line moves **along its own direction**, the cell ahead must be empty (or hold an opponent line you can push); if it moves **sideways**, every cell it moves into must be empty.
+- **Pushing**: a line moving along its own direction pushes the opponent line right in front of it one step if it **outnumbers** it: 3 > 2, 3 > 1, 2 > 1. Behind the opponent line there must be an empty cell or the board edge; if one of your marbles is behind it, you can't push. Equal lines (1–1, 2–2, 3–3) can't push each other.
+- A marble pushed over the edge falls into the gutter and is out of the game. Knock off **6 of your opponent's marbles** to win. You can't push your own marble off the board.
+- To play: slide your finger over your marbles to select 1–3 of them, then keep sliding, or drag the group the way you want it to go and let go. Gold arrows are legal directions, burgundy ones illegal; you can also tap an arrow or the cell a marble will move to.
+- **Stop rule**: if no marble falls for 100 moves, or the same position repeats 3 times, the game stops: whoever has more marbles wins; if equal, it's a draw.
+- Stars: win without undo or hints, losing at most **2 marbles**, for 3; without undo/hints, 2; with them, 1 star.''',
   mid: [
     TutorialSection(
       'Merkezde ve toplu kal',

@@ -7,6 +7,7 @@ import 'daily_mix.dart';
 import 'game_home_screen.dart';
 import 'lux.dart';
 import 'progress.dart';
+import 'i18n/lang.dart';
 
 /// Küp: speedcubing timer with stored scrambles, the algorithm notebooks and their test.
 final GameInfo kCubeGame = GameInfo(
@@ -24,7 +25,7 @@ final GameInfo kCubeGame = GameInfo(
 List<GameInfo> get allGames => [...kCoreGames, kCubeGame];
 
 /// The hub cards of [cat], in order. Games shown only inside another game's page (Soroban) are left
-/// out; under Strateji the board duels come first, then the speed games.
+/// out; under Strateji the board duels (XOX among them) come first, then the speed games.
 List<GameInfo> hubGames(GameCategory cat) {
   final games = [for (final g in allGames) if (g.category == cat && g.inHub) g];
   return [...games.where((g) => !g.speed), ...games.where((g) => g.speed)];
@@ -82,7 +83,7 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
             listenable: p,
             builder: (context, _) {
               final stars = p.starsFor(kCoreGames.map((g) => g.id));
-              final level = Progress.roman(stars ~/ 6 + 1);
+              final lv = Progress.playerLevel(p.completedFor(kCoreGames.map((g) => g.id)));
               var idx = 0;
               return CustomScrollView(
                 slivers: [
@@ -100,7 +101,7 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
                                   const SizedBox(height: 10),
                                   FoilText('Clever Place', style: Lux.display(38, italic: true), align: TextAlign.center),
                                   const SizedBox(height: 4),
-                                  Text(Lux.upper('Zihin Kulübü'),
+                                  Text(Lux.upper(t('Zihin Kulübü')),
                                       style: Lux.ui(11.5, color: Lux.muted, spacing: 4.2, weight: FontWeight.w500)),
                                 ],
                               ),
@@ -125,11 +126,11 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
                         idx++,
                         Row(
                           children: [
-                            Expanded(child: _stat('$stars', 'Yıldız')),
+                            Expanded(child: _stat('$stars', t('Yıldız'))),
                             const SizedBox(width: 10),
-                            Expanded(child: _stat('${p.daysThisWeek}/7', 'Bu hafta')),
+                            Expanded(child: _stat('${p.daysThisWeek}/7', t('Bu hafta'))),
                             const SizedBox(width: 10),
-                            Expanded(child: _stat(level, 'Seviye')),
+                            Expanded(child: _levelStat(lv.level, lv.into, lv.need)),
                           ],
                         ),
                       ),
@@ -138,7 +139,7 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
                   for (final cat in GameCategory.values) ...[
                     SliverPadding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
-                      sliver: SliverToBoxAdapter(child: _rise(idx++, LuxHeading(cat.label))),
+                      sliver: SliverToBoxAdapter(child: _rise(idx++, LuxHeading(t(cat.label)))),
                     ),
                     SliverPadding(
                       padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -182,13 +183,13 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(Lux.upper('Günün hedefi'), style: Lux.ui(11, color: Lux.muted, spacing: 2.4)),
+                    Text(Lux.upper(t('Günün hedefi')), style: Lux.ui(11, color: Lux.muted, spacing: 2.4)),
                     const SizedBox(height: 2),
-                    Text(picks.isEmpty ? 'Kategori seç' : '$done / ${picks.length} oyun',
+                    Text(picks.isEmpty ? t('Kategori seç') : tf('{0} / {1} oyun', [done, picks.length]),
                         style: Lux.display(23, color: Lux.ink, italic: true)),
                     const SizedBox(height: 2),
                     Text(
-                      all ? 'Bugünlük tamam · ${p.daysThisWeek} / 7 gün' : 'Haftalık ritim: ${p.daysThisWeek} / 7 gün',
+                      all ? tf('Bugünlük tamam · {0} / 7 gün', [p.daysThisWeek]) : tf('Haftalık ritim: {0} / 7 gün', [p.daysThisWeek]),
                       style: Lux.ui(12.5, color: Lux.muted),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
@@ -197,9 +198,9 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
                 ),
               ),
               if (picks.isEmpty)
-                GoldButton('Ayarlar', outlined: true, onPressed: _openSettings)
+                GoldButton(t('Ayarlar'), outlined: true, onPressed: _openSettings)
               else if (!all)
-                GoldButton(done == 0 ? 'Başla' : 'Devam', key: const ValueKey('daily-play'), onPressed: _playDaily),
+                GoldButton(done == 0 ? t('Başla') : t('Devam'), key: const ValueKey('daily-play'), onPressed: _playDaily),
             ],
           ),
           if (picks.isNotEmpty) ...[
@@ -230,11 +231,11 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(g.name,
+                  Text(t(g.name),
                       style: Lux.ui(15, weight: FontWeight.w600, color: done ? Lux.muted : Lux.ink),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis),
-                  Text(pick.category.label, style: Lux.ui(11.5, color: Lux.muted), maxLines: 1),
+                  Text(t(pick.category.label), style: Lux.ui(11.5, color: Lux.muted), maxLines: 1),
                 ],
               ),
             ),
@@ -269,6 +270,57 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
     );
   }
 
+  /// The player level, as tall as its neighbours: "6 SEVİYE" on top, a short bar and "5/64" below.
+  Widget _levelStat(int level, int into, int need) {
+    return Container(
+      key: const ValueKey('hub-level'),
+      padding: const EdgeInsets.symmetric(vertical: 10),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(14),
+        gradient: Lux.velvetCard,
+        border: Border.all(color: Lux.line),
+      ),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.alphabetic,
+            children: [
+              Text('$level', style: Lux.numeral(22)),
+              const SizedBox(width: 6),
+              Text(Lux.upper(t('Seviye')), style: Lux.ui(10, color: Lux.muted, spacing: 1.8)),
+            ],
+          ),
+          const SizedBox(height: 3),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ClipRRect(
+                borderRadius: BorderRadius.circular(2),
+                child: SizedBox(
+                  width: 34,
+                  height: 4,
+                  child: Stack(
+                    children: [
+                      Container(color: Lux.gold.withValues(alpha: 0.18)),
+                      FractionallySizedBox(
+                        widthFactor: (into / need).clamp(0.0, 1.0),
+                        child: Container(decoration: const BoxDecoration(gradient: Lux.goldGradient)),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const SizedBox(width: 6),
+              Text('$into/$need', style: Lux.ui(10, color: Lux.goldLight, spacing: 0.4)),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
   Widget _stat(String value, String label) {
     return Container(
       padding: const EdgeInsets.symmetric(vertical: 10),
@@ -292,7 +344,7 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
     String sub;
     double prog;
     if (g.customHome != null) {
-      sub = g.cardLine ?? '';
+      sub = t(g.cardLine ?? '');
       prog = 0;
     } else if (g.matchModes.isNotEmpty) {
       var w = 0, l = 0;
@@ -301,19 +353,19 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
         w += r[0];
         l += r[2];
       }
-      sub = w + l == 0 ? 'Masaya otur' : '$w galibiyet · $l yenilgi';
+      sub = w + l == 0 ? t('Masaya otur') : tf('{0} galibiyet · {1} yenilgi', [w, l]);
       prog = 0;
     } else if (g.hasLevels) {
       final done = p.completed(g.id);
       final next = p.nextLevel(g.id);
       sub = next == null
-          ? 'Hepsi tamam'
+          ? t('Hepsi tamam')
           : p.tierCount(g.id) > 1
-              ? '${Progress.tierNames[p.tierOf(g.id, next)]} · Bölüm $next'
-              : 'Bölüm $next';
+              ? tf('{0} · Bölüm {1}', [t(Progress.tierNames[p.tierOf(g.id, next)]), next])
+              : tf('Bölüm {0}', [next]);
       prog = done / p.levelsFor(g.id);
     } else {
-      sub = 'Rekor ${p.best(g.id)}';
+      sub = tf('Rekor {0}', [p.best(g.id)]);
       prog = 0;
     }
     return LuxCard(
@@ -343,7 +395,7 @@ class _HubScreenState extends State<HubScreen> with SingleTickerProviderStateMix
           FittedBox(
             fit: BoxFit.scaleDown,
             alignment: Alignment.centerLeft,
-            child: Text(g.name, style: Lux.display(19, color: Lux.ink), maxLines: 1),
+            child: Text(t(g.name), style: Lux.display(19, color: Lux.ink), maxLines: 1),
           ),
           const SizedBox(height: 2),
           Text(sub, style: Lux.ui(12.5, color: Lux.muted), maxLines: 1, overflow: TextOverflow.ellipsis),

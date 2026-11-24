@@ -9,6 +9,14 @@ const wordListTutorials = GameTutorials(
 - Liste 8 kelimeden 30 kelimeye uzar, hız kelime başı 2,5 saniyeden 0,8 saniyeye çıkar.
 - Yıldızlar hatırlanan yüzdeye göre; tam eşikler başlangıç kartında yazar (ilk bölümde %60 / %75 / %90). 1 yıldız eşiğinin altı kaybettirir.
 - Sonunda **sıra etkisi** grafiği, öğrenme eğrin, araya girenler ve kaçırdıkların gösterilir.''',
+  rulesEn: '''
+- Concrete words come on screen one at a time. When the list ends, **type** the ones you remember: **OK** after each word, **Done** when you are finished. The order doesn't matter.
+- Capitals and Turkish characters don't matter (kopek = köpek). No other spelling mistakes are accepted; a word that isn't on the list counts as an **intrusion**.
+- Level types rotate: **free recall**, **learning curve** (the same list 3 times), **recognition** (was it on the list?), **interference** (a list B comes in between), **delayed** (after 60–90 s of checking sums).
+- After level 100 some levels are **in order**: you type the words in the order you saw them, and each word only counts in its own place.
+- The list grows from 8 words to 30, and the pace speeds up from 2.5 seconds to 0.8 seconds per word.
+- Stars go by the percentage you recall; the exact thresholds are on the start card (60% / 75% / 90% in the first level). Below the 1-star threshold loses the level.
+- At the end you see a **serial position** chart, your learning curve, intrusions and the words you missed.''',
   mid: [
     TutorialSection(
       'Kategoriye göre kümele',

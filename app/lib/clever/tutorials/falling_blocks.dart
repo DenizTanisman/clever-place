@@ -9,6 +9,14 @@ const fallingBlocksTutorials = GameTutorials(
 - Puan: tekli 100, ikili 300, üçlü 500, **dörtlü 800** — hepsi hız seviyesiyle çarpılır. T-dönüşler, art arda zor temizlemeler (×1,5) ve kombolar ek puan verir.
 - Bölümler beş türde döner: satır temizle, sınırlı taşla satır, kazı, hayatta kal, puan. Yıldızlar verimliliği ölçer: hedefe ne kadar az taşla ulaşırsan (hayatta kalmada ne kadar çok satır silersen) o kadar çok yıldız.
 - **Maraton**: hız her 10 satırda bir artar; yığın tepeye ulaşınca oyun biter.''',
+  rulesEn: '''
+- Four-cell pieces (I, O, T, S, Z, J, L) fall from the top of the well. Fill a row completely and it clears.
+- **Tap** the well: rotate clockwise. **Tap with two fingers**: rotate counterclockwise. **Drag left/right**: shift cell by cell. **Drag down slowly**: soft drop. **Flick down fast**: hard drop. **Flick up**: hold. The buttons below do the same.
+- The **Hold** box can be used once per piece. The next 3 pieces show on the right; the outline (ghost) in the well shows where the piece will land.
+- After a piece touches down you can still move it for half a second; every move resets that time (up to 15 times).
+- Score: single 100, double 300, triple 500, **quad 800** — all multiplied by the speed level. T-spins, back-to-back hard clears (×1.5) and combos earn bonus points.
+- Levels rotate through five types: clear lines, lines with limited pieces, dig, survive, score. Stars measure efficiency: the fewer pieces you need to reach the goal (in survival, the more lines you clear), the more stars.
+- **Marathon**: the speed goes up every 10 lines; the game is over when the stack reaches the top.''',
   mid: [
     TutorialSection(
       'Düz yığ',

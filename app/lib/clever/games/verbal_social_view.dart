@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Sözel ve Sosyal Zeka board. One item at a time on a calm Lux card: a section chip (Sözel / Sosyal
@@ -110,7 +111,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
                   for (var i = 0; i < options.length; i++)
                     Padding(
                       padding: const EdgeInsets.only(bottom: 9),
-                      child: _Option(
+                      child: QuizOption(
                         label: options[i],
                         state: _optState(i, last, feedback),
                         onTap: () => _answer(i),
@@ -122,7 +123,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
                     const SizedBox(height: 14),
                     if (phase == 'feedback')
                       Center(
-                        child: GoldButton(_isLast(st) ? 'Sonucu gör' : 'Devam',
+                        child: GoldButton(_isLast(st) ? t('Sonucu gör') : t('Devam'),
                             icon: Icons.arrow_forward_rounded, onPressed: _next),
                       ),
                   ],
@@ -152,11 +153,11 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
         padding: const EdgeInsets.fromLTRB(20, 10, 20, 6),
         child: Row(
           children: [
-            Text('Seri', style: Lux.ui(13, color: Lux.muted)),
+            Text(t('Seri'), style: Lux.ui(13, color: Lux.muted)),
             const SizedBox(width: 6),
             Text('${st['streak'] ?? 0}', style: Lux.numeral(22)),
             const SizedBox(width: 14),
-            Text('En iyi ${st['best_streak'] ?? 0}', style: Lux.ui(13, color: Lux.muted)),
+            Text(tf('En iyi {0}', [st['best_streak'] ?? 0]), style: Lux.ui(13, color: Lux.muted)),
             const Spacer(),
             for (var i = 0; i < 3; i++)
               Padding(
@@ -190,7 +191,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
               ),
             ),
           const SizedBox(width: 10),
-          Text('$right doğru', style: Lux.ui(13, color: Lux.muted)),
+          Text(tf('{0} doğru', [right]), style: Lux.ui(13, color: Lux.muted)),
         ],
       ),
     );
@@ -220,15 +221,15 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
                   border: Border.all(color: color.withValues(alpha: 0.75)),
                   color: color.withValues(alpha: 0.1),
                 ),
-                child: Text('${q['section_label'] ?? ''}', style: Lux.ui(12, color: color, weight: FontWeight.w700, spacing: 0.6)),
+                child: Text(ct('${q['section_label'] ?? ''}'), style: Lux.ui(12, color: color, weight: FontWeight.w700, spacing: 0.6)),
               ),
               const SizedBox(width: 8),
               Flexible(
-                child: Text('${q['subtype_label'] ?? ''}',
+                child: Text(ct('${q['subtype_label'] ?? ''}'),
                     overflow: TextOverflow.ellipsis, style: Lux.ui(12, color: Lux.muted, weight: FontWeight.w500)),
               ),
               const Spacer(),
-              if (q['difficulty'] == 'zor') Text('Zor', style: Lux.ui(11, color: Lux.muted.withValues(alpha: 0.8))),
+              if (q['difficulty'] == 'zor') Text(t('Zor'), style: Lux.ui(11, color: Lux.muted.withValues(alpha: 0.8))),
             ],
           ),
           const SizedBox(height: 12),
@@ -265,9 +266,9 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
             children: [
               Icon(right ? Icons.check_circle_rounded : Icons.cancel_rounded, size: 20, color: right ? Lux.good : Lux.bordeauxLight),
               const SizedBox(width: 8),
-              Text(right ? 'Doğru' : 'Olmadı', style: Lux.ui(16, color: right ? Lux.good : Lux.bordeauxLight, weight: FontWeight.w700)),
+              Text(right ? t('Doğru') : t('Olmadı'), style: Lux.ui(16, color: right ? Lux.good : Lux.bordeauxLight, weight: FontWeight.w700)),
               const Spacer(),
-              Text('Neden?', style: Lux.display(20, color: Lux.goldLight, italic: true)),
+              Text(t('Neden?'), style: Lux.display(20, color: Lux.goldLight, italic: true)),
             ],
           ),
           const SizedBox(height: 8),
@@ -282,7 +283,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
                   child: Icon(Icons.info_outline_rounded, size: 15, color: Lux.muted),
                 ),
                 const SizedBox(width: 6),
-                Expanded(child: Text(kConsensusNote, style: Lux.ui(12.5, color: Lux.muted).copyWith(height: 1.35))),
+                Expanded(child: Text(t(kConsensusNote), style: Lux.ui(12.5, color: Lux.muted).copyWith(height: 1.35))),
               ],
             ),
           ],
@@ -301,7 +302,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
         if (st['summary'] is String)
           Padding(
             padding: const EdgeInsets.only(bottom: 10),
-            child: Text(st['summary'] as String, textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
+            child: Text(ct(st['summary'] as String), textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
           ),
         for (final r in rows)
           Padding(
@@ -319,7 +320,7 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('${r['section_label']}', style: Lux.ui(11, color: Lux.muted, weight: FontWeight.w600)),
+                        Text(ct('${r['section_label']}'), style: Lux.ui(11, color: Lux.muted, weight: FontWeight.w600)),
                         const SizedBox(height: 2),
                         Text('${r['prompt']}'.split('\n').last,
                             maxLines: 2, overflow: TextOverflow.ellipsis, style: Lux.ui(13.5, color: Lux.ink)),
@@ -337,21 +338,21 @@ class _VerbalSocialBoardState extends State<VerbalSocialBoard> {
   }
 }
 
-class _Option extends StatefulWidget {
+class QuizOption extends StatefulWidget {
   final String label;
   final int state;
   final VoidCallback onTap;
-  const _Option({required this.label, required this.state, required this.onTap});
+  const QuizOption({super.key, required this.label, required this.state, required this.onTap});
 
   @override
-  State<_Option> createState() => _OptionState();
+  State<QuizOption> createState() => _QuizOptionState();
 }
 
-class _OptionState extends State<_Option> with SingleTickerProviderStateMixin {
+class _QuizOptionState extends State<QuizOption> with SingleTickerProviderStateMixin {
   late final AnimationController _a = AnimationController(vsync: this, duration: const Duration(milliseconds: 380));
 
   @override
-  void didUpdateWidget(_Option old) {
+  void didUpdateWidget(QuizOption old) {
     super.didUpdateWidget(old);
     if (old.state == 0 && widget.state != 0 && widget.state != 4) _a.forward(from: 0);
   }

@@ -12,6 +12,14 @@ const colorGatesTutorials = GameTutorials(
 - İleriki bölümlerde: **hayalet** disk (içi boş) geçmemeli, kapı onun renginde olmasın. **Bukalemun** disk ışıldayınca renk değiştirir. **Takasta** kapılar yer değiştirir.
 - Yıldızlar: bölüm, bütün diskler kapıya varınca biter. 0 hata 3 yıldız, 1 hata 2, 2 hata 1 yıldız. Üçüncü hatada bölüm kaybedilir.
 - **Sonsuz yağmur**: 3 canın var. Yağmur hızlanır, yeni direkler ve renkler katılır. Puanın, geçirdiğin disk sayısıdır.''',
+  rulesEn: '''
+- Each lane has a colored **gate** at the bottom. Discs slide down the lanes, each at its own speed.
+- When a disc reaches its gate, the gate must be **its color**: the disc passes. If the colors don't match, the gate cracks and you lose **a life**.
+- **Tap** anywhere on a lane to switch its gate to the next color. The small stone under the gate shows the next color; colors always cycle in the same order.
+- Don't tap a gate that is already the right color: one needless tap spoils a correct gate.
+- In later levels: a **ghost** disc (hollow) must not pass, so its gate must not be its color. A **chameleon** disc changes color when it glows. In **swap** levels the gates trade places.
+- Stars: a level ends when every disc has reached a gate. 0 mistakes is 3 stars, 1 mistake 2, 2 mistakes 1 star. The third mistake loses the level.
+- **Endless rain**: you have 3 lives. The rain speeds up, and new lanes and colors join in. Your score is the number of discs you let through.''',
   mid: [
     TutorialSection(
       'Aşağıdan yukarı tara',

@@ -9,6 +9,14 @@ const hanoiTutorials = GameTutorials(
 - Yıldızlar: en az hamleyle bitirirsen 3, en fazla 1,5 katıyla 2, daha fazlasıyla 1 yıldız. Geri almak da hamle sayılır.
 
 Bütün bölümler üç direkle oynanır ve üç türde döner: klasik, dağınık başlangıç ve sadece komşu direğe taşıma. Disk sayısı bölümler ilerledikçe artar: klasikte 3'ten 8'e, komşu direkte 2'den 5'e.''',
+  rulesEn: '''
+- On each move, take the **top** disc of one peg and move it to another peg.
+- **Drag the disc** and drop it on the peg you want (or tap the disc, then the peg).
+- A larger disc can never go on top of a smaller one.
+- Stack all the discs on the **GOAL** peg.
+- Stars: finish in the fewest possible moves for 3, within 1.5 times that for 2, more for 1 star. Undo counts as a move too.
+
+Every level uses three pegs and rotates through three types: classic, scattered start, and moves to a neighboring peg only. The number of discs grows as you go: from 3 to 8 in classic, from 2 to 5 in neighboring-peg levels.''',
   mid: [
     TutorialSection(
       'Büyük resim: özyineleme',

@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'cube_book.dart';
 import 'cube_player.dart';
@@ -94,14 +95,14 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
                 return Column(
                   children: [
                     CubeHeader(
-                      widget.title,
+                      t(widget.title),
                       action: Row(
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           if (book != null && _foldable(book).isNotEmpty)
                             IconButton(
                               key: const Key('cube-book-explain-all'),
-                              tooltip: _open.isEmpty ? 'Açıklamaları aç' : 'Açıklamaları kapat',
+                              tooltip: _open.isEmpty ? t('Açıklamaları aç') : t('Açıklamaları kapat'),
                               icon: Icon(_open.isEmpty ? Icons.unfold_more : Icons.unfold_less, color: Lux.goldLight),
                               onPressed: () => setState(() {
                                 if (_open.isEmpty) {
@@ -113,7 +114,7 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
                             ),
                           FilterChip(
                             key: const Key('cube-book-test'),
-                            label: const Text('Test modu'),
+                            label: Text(t('Test modu')),
                             avatar: Icon(_test ? Icons.visibility_off_outlined : Icons.visibility_outlined),
                             showCheckmark: false,
                             selected: _test,
@@ -129,7 +130,7 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
                       Expanded(
                         child: Center(
                           child: snap.hasError
-                              ? Text('Defter açılamadı.', style: Lux.ui(15, color: Lux.muted))
+                              ? Text(t('Defter açılamadı.'), style: Lux.ui(15, color: Lux.muted))
                               : const CircularProgressIndicator(color: Lux.gold),
                         ),
                       )
@@ -138,7 +139,7 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
                       if (_test)
                         Padding(
                           padding: const EdgeInsets.fromLTRB(20, 2, 20, 4),
-                          child: Text('Algoritmalar gizli: karta dokun, görünsün.',
+                          child: Text(t('Algoritmalar gizli: karta dokun, görünsün.'),
                               style: Lux.ui(13, color: Lux.goldLight)),
                         ),
                       Expanded(child: _body(book)),
@@ -216,10 +217,10 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
             runSpacing: 10,
             children: [
               if (_section > 0)
-                GoldButton('Önceki', icon: Icons.arrow_back, outlined: true, onPressed: () => _go(_section - 1))
+                GoldButton(t('Önceki'), icon: Icons.arrow_back, outlined: true, onPressed: () => _go(_section - 1))
               else
                 const SizedBox.shrink(),
-              if (!last) GoldButton('Sonraki bölüm', icon: Icons.arrow_forward, onPressed: () => _go(_section + 1)),
+              if (!last) GoldButton(t('Sonraki bölüm'), icon: Icons.arrow_forward, onPressed: () => _go(_section + 1)),
             ],
           ),
         ],
@@ -484,7 +485,7 @@ class _CubeBookScreenState extends State<CubeBookScreen> {
                 Expanded(child: moves),
                 IconButton(
                   key: ValueKey('cube-play-${c.id}-$i'),
-                  tooltip: '3D oynat',
+                  tooltip: t('3D oynat'),
                   visualDensity: VisualDensity.compact,
                   icon: const Icon(Icons.play_circle_outline, color: Lux.gold, size: 30),
                   onPressed: () => Navigator.push(
@@ -684,7 +685,7 @@ class CubeExplanation extends StatelessWidget {
               child: Row(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(label, style: Lux.ui(12.5, color: Lux.goldLight, weight: FontWeight.w600, spacing: 0.4)),
+                  Text(t(label), style: Lux.ui(12.5, color: Lux.goldLight, weight: FontWeight.w600, spacing: 0.4)),
                   AnimatedRotation(
                     turns: open ? 0.5 : 0,
                     duration: duration,

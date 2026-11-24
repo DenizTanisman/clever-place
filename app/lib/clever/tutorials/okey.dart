@@ -26,6 +26,25 @@ const okeyTutorials = GameTutorials(
 - Puan: herkes 20 ile başlar. Biri bitirince diğerleri **2** kaybeder; çiftle ya da okey atarak bitirirse **4**, ikisi birden **8**. Göstergenin eşi elinde olan onu kendiliğinden gösterir: diğerleri 1 kaybeder. Ortada taş kalmazsa el berabere.
 - Maç **5 el** sürer (biri 0'a düşerse erken biter). En yüksek puan senindeyse kazanırsın, eşitlikte berabere.
 - Taşları sürükleyerek rafa diz (boşluk bırakabilirsin); geçerli perlerin altında altın çizgi belirir. Atmak için sağ alttaki yere, bitirmek için ortaya sürükle. **Seri diz / Çift diz** otomatik dizer, ampul en iyi hamleyi gerekçesiyle söyler, göz (**Açık oyna**) bütün rafları, sıradaki taşları ve rakiplerin gerekçelerini açar.''',
+  rulesEn: '''
+**101 Okey**
+- The tiles are as in classic: 106 tiles, the indicator, the **okey** (one above the indicator; it stands in for any tile) and 2 **false okeys** (they play as the okey's own value).
+- Everyone takes **21** tiles; the starter takes **22** and discards first; 20 tiles are left in the middle. On your turn, draw from the pile or take the tile your left neighbor discarded, then discard one.
+- A tile you take from the side **must be used in the same turn**: in your opening, in a new meld, or by laying it off. You can't take a tile you can't use; if you change your mind, **Give back** (your moves that turn are undone).
+- **Opening**: in one go, lay down melds that total at least **101** (run: same color in sequence, at least 3, 12-13-1 is fine, 13-1-2 is not; set: same number in different colors, 3–4 tiles). The numbers on the tiles are added up; the okey counts as the tile it stands for. Or lay down at least **5 pairs**. The threshold is fixed: 101 is enough, whatever the others opened with.
+- After opening you can lay down new melds and **lay off onto any meld** on the table: at the end of a run, or the missing color of a set. If you opened with pairs you can only lay down pairs, but you can lay off onto melds; nothing is laid off onto pairs. An okey on the table can't be taken back.
+- **Going out**: lay everything down and **discard your last tile** to go out; you must always keep a tile to discard.
+- **Score (low is good)**: the player who goes out scores **−101**; players who opened score the total of the tiles left in hand (okey and false okey count as the okey's number); **players who didn't open score 202**. Going out with the okey, or going out after opening with pairs, **doubles** the hand (both together, 4×). **101 penalty**: discarding a tile that could be laid off onto a meld on the table, or discarding the okey.
+- If the pile runs out, the hand ends and everyone scores what they hold. A match is 3, 5 or 7 hands (choose with the **hands** button in the first hand); the lowest total wins.
+- The **Open** button shows the running total of the melds you have arranged on your rack (**87 / 101**); tap the score tag under the rack to leave a meld out. **Can I open?** arranges and tells you the best opening. To lay off, drag the tile onto a meld on the table; it goes to the end of whichever half of the run you drop it on. On the rack, a **gold dot** means the tile can be laid off; a **burgundy dot** means discarding it costs a 101 penalty (discard it a second time to throw a penalty tile anyway).
+
+**Classic Okey**
+- 106 tiles: four colors (red, black, blue, yellow) × 1–13, **two** of each, plus 2 **false okeys**. The tile one above the **indicator** turned up in the middle (same color; above 13 is 1) is the **okey** and stands in for any tile; it is marked with a small gold star on your rack. The false okey isn't a joker: it plays as the okey's own value.
+- The starter takes 15 tiles, everyone else 14. On your turn, **draw from the middle** or take the tile **your left neighbor discarded**, then discard one — the player on your right can take it.
+- You go out by putting your 15th tile in the middle when the **other 14 all form melds**: **runs** (same color, in sequence, at least 3; 12-13-1 is fine, 13-1-2 is not), **sets** (same number, different colors, 3–4 tiles) or **7 pairs**.
+- Score: everyone starts at 20. When someone goes out, the others lose **2**; going out with pairs or by discarding the okey costs them **4**, both together **8**. A player holding the indicator's twin shows it automatically: the others lose 1. If the middle runs out, the hand is a draw.
+- A match is **5 hands** (it ends early if someone drops to 0). If you have the highest score you win; a tie is a draw.
+- Drag tiles to arrange your rack (you can leave gaps); valid melds get a gold line underneath. Drag to the bottom-right spot to discard, to the middle to go out. **Sort runs / Sort pairs** arranges automatically, the bulb tells you the best move and why, and the eye (**Open play**) reveals every rack, the next tiles and the opponents' reasoning.''',
   mid: [
     TutorialSection(
       '101: elini açmak — puanı saymak',

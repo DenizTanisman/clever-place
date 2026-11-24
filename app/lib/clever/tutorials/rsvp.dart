@@ -9,6 +9,14 @@ const rsvpTutorials = GameTutorials(
 - **T1** = ilk hedefi yakalama oranın. **T2|T1** = ilk hedefi yakaladığın akışlarda sonrakileri de yakalama oranın.
 - Yıldızlar: T1 ve T2|T1 en az %85 → 3; T2|T1 en az %72 → 2; aksi halde 1. T1 ya da T2|T1 %60'ın altındaysa bölüm kaybedilir.
 - Sonuçta gecikmeye göre T2 başarın görünür: kendi dikkat kırpması eğrin.''',
+  rulesEn: '''
+- Letters stream past in the middle of the screen, always on the same spot, at 8–12 letters a second.
+- The stream contains 2 (later 3) **targets**: digits among the letters, ruby-colored letters, or target letters shown at the start.
+- When the stream ends, select the targets you saw (no more than the number of targets, in any order) and confirm. If you saw none, choose "Didn't see any".
+- Each level is 16 streams. The distance between two targets is called the **lag** (1–8 letters).
+- **T1** = how often you catch the first target. **T2|T1** = how often you also catch the later ones in the streams where you caught the first.
+- Stars: T1 and T2|T1 both at least 85% → 3; T2|T1 at least 72% → 2; otherwise 1. If T1 or T2|T1 is below 60%, the level is lost.
+- The results show your T2 success by lag: your own attentional blink curve.''',
   mid: [
     TutorialSection(
       'Dikkat kırpması',

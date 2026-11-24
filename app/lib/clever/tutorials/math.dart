@@ -9,6 +9,14 @@ const mathTutorials = GameTutorials(
 - "Yeni:" bölümleri bir **hile kartıyla** başlar; kartı oyun içinde "Hile" düğmesiyle yeniden açabilirsin.
 - Tahmin ve 72 kuralı sorularında yazılan tolerans içindeki her cevap doğrudur.
 - **Sprint**: 60 saniye. Doğru cevaplar seriyi büyütür; seri büyüdükçe sorular zorlaşır ve her soru daha çok puan getirir.''',
+  rulesEn: '''
+- Read the question, type the answer on the keypad below and press **OK**. Use the decimal key for decimals and the − key for minus.
+- A wrong answer shows the correct one and moves on to the next question. **Skip** counts the question as wrong.
+- Each level is 10–20 questions with a time limit. The ring shows the time left; the mark on it shows the 3-star target time.
+- Stars: at least **95% right and under the target time** for 3, 80% or more 2, 60% or more 1 star. Below that, you replay the level.
+- "New:" levels start with a **trick card**; reopen it in game with the "Trick" button.
+- In estimation and rule-of-72 questions, any answer within the stated tolerance is correct.
+- **Sprint**: 60 seconds. Right answers grow your streak; as it grows, the questions get harder and each one is worth more.''',
   mid: [
     TutorialSection(
       'Yuvarla ve düzelt: ×5, ×9, ×25 ve ikile-yarıla',

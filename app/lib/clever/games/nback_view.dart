@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// N-Back. Two boards, both rendering the Rust core's state (timing and scoring live in Rust):
@@ -234,12 +235,12 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
               crossAxisAlignment: CrossAxisAlignment.start,
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(st['set_label'] as String? ?? '', style: Lux.ui(13, color: Lux.muted)),
+                Text(ct(st['set_label'] as String?), style: Lux.ui(13, color: Lux.muted)),
               ],
             ),
           ),
           IconButton(
-            tooltip: helper ? 'N geride şeridini kapat' : 'N geride şeridi (açıkken en fazla 1 yıldız)',
+            tooltip: helper ? t('N geride şeridini kapat') : t('N geride şeridi (açıkken en fazla 1 yıldız)'),
             onPressed: s.finished ? null : () => _toggleHelper(!helper),
             icon: Icon(helper ? Icons.visibility_rounded : Icons.visibility_off_outlined,
                 color: helper ? Lux.goldLight : Lux.muted.withValues(alpha: 0.7), size: 22),
@@ -291,7 +292,7 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
                     );
                   }),
                   const SizedBox(height: 3),
-                  Text('Soldaki = $n geride · yardım açıkken en fazla 1 yıldız', style: Lux.ui(11, color: Lux.muted)),
+                  Text(tf('Soldaki = {0} geride · yardım açıkken en fazla 1 yıldız', [n]), style: Lux.ui(11, color: Lux.muted)),
                 ],
               ),
             ),
@@ -417,14 +418,14 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
     var color = Lux.muted;
     if (_fbResult == 'false_alarm' && _fbLure != null && fbAge >= 0 && fbAge < 1.8) {
       // After a false alarm on a lure: name the trap, so the player learns what fooled them.
-      text = 'Çeldirici · ${_lureExplain(_fbLure!, n)}';
+      text = tf('Çeldirici · {0}', [_lureExplain(_fbLure!, n)]);
       alpha = fbAge < 1.4 ? 1 : 1 - (fbAge - 1.4) / 0.4;
       color = Lux.bordeauxLight;
     } else if (earlyAge >= 0 && earlyAge < 1.5) {
-      text = 'İlk $n uyaranda eşleşme olmaz';
+      text = tf('İlk {0} uyaranda eşleşme olmaz', [n]);
       alpha = earlyAge < 1.1 ? 1 : 1 - (earlyAge - 1.1) / 0.4;
     } else if (st['phase'] == 'run' && trial < n) {
-      text = 'Diziyi doldur · ${trial + 1} / $n';
+      text = tf('Diziyi doldur · {0} / {1}', [trial + 1, n]);
       alpha = 0.8;
     }
     return AnimatedOpacity(
@@ -435,27 +436,27 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
   }
 
   static String _lureExplain(String kind, int n) => switch (kind) {
-        'n-1' => '${n - 1} önceki ile aynı (n−1)',
-        'n+1' => '${n + 1} önceki ile aynı (n+1)',
-        _ => 'hep bundan sonra gelen, ama $n önce değil (sıra)',
+        'n-1' => tf('{0} önceki ile aynı (n−1)', [n - 1]),
+        'n+1' => tf('{0} önceki ile aynı (n+1)', [n + 1]),
+        _ => tf('hep bundan sonra gelen, ama {0} önce değil (sıra)', [n]),
       };
 
-  Widget _results(Map<String, dynamic> st, double t) {
+  Widget _results(Map<String, dynamic> st, double age) {
     final won = st['status'] == 'won';
-    final u = Curves.easeOutCubic.transform((t / 0.9).clamp(0.0, 1.0));
-    final appear = Curves.easeOutBack.transform((t / 0.4).clamp(0.0, 1.0));
+    final u = Curves.easeOutCubic.transform((age / 0.9).clamp(0.0, 1.0));
+    final appear = Curves.easeOutBack.transform((age / 0.4).clamp(0.0, 1.0));
     final rt = st['avg_rt_ms'];
     final secs = (_num(st['elapsed_ms']) / 1000).round();
     final tiles = <(String, String, Color)>[
-      ('Doğru', '${(_int(st['hits']) * u).round()}', Lux.goldLight),
-      ('Yanlış', '${_int(st['false_alarms'])}', Lux.bordeauxLight),
-      ('Kaçırılan', '${_int(st['misses'])}', Lux.bordeauxLight),
-      ('Verimlilik', '%${(_num(st['efficiency']) * 100 * u).round()}', Lux.goldLight),
-      ('Süre', '${secs ~/ 60}:${(secs % 60).toString().padLeft(2, '0')}', Lux.ink),
-      ('Ort. tepki', rt == null ? '–' : '${_int(rt)} ms', Lux.ink),
+      (t('Doğru'), '${(_int(st['hits']) * u).round()}', Lux.goldLight),
+      (t('Yanlış'), '${_int(st['false_alarms'])}', Lux.bordeauxLight),
+      (t('Kaçırılan'), '${_int(st['misses'])}', Lux.bordeauxLight),
+      (t('Verimlilik'), tf('%{0}', [(_num(st['efficiency']) * 100 * u).round()]), Lux.goldLight),
+      (t('Süre'), '${secs ~/ 60}:${(secs % 60).toString().padLeft(2, '0')}', Lux.ink),
+      (t('Ort. tepki'), rt == null ? '–' : '${_int(rt)} ms', Lux.ink),
     ];
     return Opacity(
-      opacity: (t / 0.25).clamp(0.0, 1.0),
+      opacity: (age / 0.25).clamp(0.0, 1.0),
       child: Transform.scale(
         scale: 0.9 + 0.1 * appear,
         child: Padding(
@@ -463,7 +464,7 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              Text(Lux.upper(won ? '${st['n']}-back tamam' : 'Haklar bitti'),
+              Text(Lux.upper(won ? tf('{0}-back tamam', [st['n']]) : t('Haklar bitti')),
                   style: Lux.display(24, color: won ? Lux.gold : Lux.bordeauxLight, spacing: 1.4)),
               const SizedBox(height: 18),
               for (var r = 0; r < 3; r++)
@@ -477,7 +478,7 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
                 ),
               if (st['lure_summary'] is String) ...[
                 const SizedBox(height: 12),
-                Text(st['lure_summary'] as String,
+                Text(ct(st['lure_summary'] as String),
                     textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.bordeauxLight, weight: FontWeight.w600)),
               ],
             ],
@@ -596,18 +597,17 @@ class _SingleBoardState extends State<_SingleBoard> with SingleTickerProviderSta
     final noun = _setNoun[set] ?? 'rakam';
     final budget = _int(st['error_budget'], 2);
     final goal = _int(st['goal_hits'], 17);
-    final period = (_num(st['period_ms'], 2500) / 1000).toStringAsFixed(1).replaceAll('.', ',');
-    final back = n == 1 ? 'bir önceki' : '$n adım önceki';
+    final secs = (_num(st['period_ms'], 2500) / 1000).toStringAsFixed(1);
+    final period = Lang.en ? secs : secs.replaceAll('.', ',');
+    final back = n == 1 ? t('bir önceki') : tf('{0} adım önceki', [n]);
     return _overlayCard(
       heading: '$n-back',
-      body: 'Kartta tek tek ${_setPlural[set] ?? 'rakamlar'} belirecek. Gördüğün $noun $back $noun ile aynıysa '
-          'kartın herhangi bir yerine dokun.\n'
-          '$goal eşleşme yakala. Yanlış dokunuş ve kaçırılan eşleşme birer hak götürür; $budget hakkın var, '
-          'sonuncusu gidince bölüm biter.\n'
-          'Tempo $period sn · ilk $n uyaranda eşleşme olmaz.'
-          '${st['lures'] == true ? '\nDikkat: çeldiriciler var. Bir adım erken ya da geç gelen tekrarlar ve "hep bundan sonra bu geliyordu" dediğin diziler eşleşme değildir.' : ''}'
-          '\nHatasız 3, tek hatayla 2 yıldız.',
-      button: 'Başla',
+      body: '${tf('Kartta tek tek {0} belirecek. Gördüğün {1} {2} {1} ile aynıysa kartın herhangi bir yerine dokun.', [t(_setPlural[set] ?? 'rakamlar'), t(noun), back])}\n'
+          '${tf('{0} eşleşme yakala. Yanlış dokunuş ve kaçırılan eşleşme birer hak götürür; {1} hakkın var, sonuncusu gidince bölüm biter.', [goal, budget])}\n'
+          '${tf('Tempo {0} sn · ilk {1} uyaranda eşleşme olmaz.', [period, n])}'
+          '${st['lures'] == true ? '\n${t('Dikkat: çeldiriciler var. Bir adım erken ya da geç gelen tekrarlar ve "hep bundan sonra bu geliyordu" dediğin diziler eşleşme değildir.')}' : ''}'
+          '\n${t('Hatasız 3, tek hatayla 2 yıldız.')}',
+      button: t('Başla'),
       cardKey: 'intro',
       onStart: () {
         HapticFeedback.selectionClick();
@@ -992,8 +992,8 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
               Column(
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
-                  Text('Blok ${st['block']} / ${st['blocks']}', style: Lux.ui(16, weight: FontWeight.w700)),
-                  Text(mods.map((m) => _modLabels[m]).join(' · '), style: Lux.ui(13, color: Lux.muted)),
+                  Text(tf('Blok {0} / {1}', [st['block'], st['blocks']]), style: Lux.ui(16, weight: FontWeight.w700)),
+                  Text(mods.map((m) => t(_modLabels[m] ?? m)).join(' · '), style: Lux.ui(13, color: Lux.muted)),
                   if (history.isNotEmpty) Text('N: ${history.join(' → ')}', style: Lux.ui(12, color: Lux.goldLight)),
                 ],
               ),
@@ -1018,10 +1018,10 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
           const SizedBox(height: 4),
           Row(
             children: [
-              Text('Uyaran ${math.min(trial + 1, trials)} / $trials', style: Lux.ui(12, color: Lux.muted)),
+              Text(tf('Uyaran {0} / {1}', [math.min(trial + 1, trials), trials]), style: Lux.ui(12, color: Lux.muted)),
               const Spacer(),
               if (trial >= n && st['phase'] == 'run')
-                Text('Doğruluk %${(_num(st['accuracy']) * 100).round()}', style: Lux.ui(12, color: Lux.muted)),
+                Text(tf('Doğruluk %{0}', [(_num(st['accuracy']) * 100).round()]), style: Lux.ui(12, color: Lux.muted)),
             ],
           ),
         ],
@@ -1053,13 +1053,13 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
   }
 
   /// Final mean N, counting up over the grid.
-  Widget _finalScore(Map<String, dynamic> st, double t) {
-    final u = Curves.easeOutCubic.transform((t / 0.9).clamp(0.0, 1.0));
-    final appear = Curves.easeOutBack.transform((t / 0.35).clamp(0.0, 1.0));
+  Widget _finalScore(Map<String, dynamic> st, double age) {
+    final u = Curves.easeOutCubic.transform((age / 0.9).clamp(0.0, 1.0));
+    final appear = Curves.easeOutBack.transform((age / 0.35).clamp(0.0, 1.0));
     final mean = _num(st['score']) / 100;
     return Center(
       child: Opacity(
-        opacity: (t / 0.2).clamp(0.0, 1.0),
+        opacity: (age / 0.2).clamp(0.0, 1.0),
         child: Transform.scale(
           scale: 0.8 + 0.2 * appear,
           child: Container(
@@ -1073,9 +1073,9 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper('Ortalama N'), style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
+                Text(Lux.upper(t('Ortalama N')), style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
                 const SizedBox(height: 4),
-                FoilText((mean * u).toStringAsFixed(1).replaceAll('.', ','),
+                FoilText(Lang.en ? (mean * u).toStringAsFixed(1) : (mean * u).toStringAsFixed(1).replaceAll('.', ','),
                     style: Lux.numeral(52).copyWith(fontFeatures: const [FontFeature.tabularFigures(), FontFeature.liningFigures()])),
               ],
             ),
@@ -1095,7 +1095,7 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 5),
                 child: _ResponseButton(
-                  label: _modLabels[m] ?? m,
+                  label: t(_modLabels[m] ?? m),
                   icon: _modIcons[m] ?? Icons.circle,
                   enabled: active,
                   pressed: (s.state['pressed'] as Map?)?[m] == true,
@@ -1122,7 +1122,8 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
 
   Widget _card(Map<String, dynamic> st, String phase, int n) {
     final last = st['last_block'] is Map ? Map<String, dynamic>.from(st['last_block'] as Map) : null;
-    final period = (_num(st['period_ms'], 3000) / 1000).toStringAsFixed(1).replaceAll('.', ',');
+    final secs = (_num(st['period_ms'], 3000) / 1000).toStringAsFixed(1);
+    final period = Lang.en ? secs : secs.replaceAll('.', ',');
     void start() {
       HapticFeedback.selectionClick();
       s.act({'start': true});
@@ -1132,7 +1133,7 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
       final acc = (_num(last['accuracy']) * 100).round();
       final change = _int(last['change']);
       return _overlayCard(
-        heading: 'Blok ${_int(st['block']) - 1} bitti',
+        heading: tf('Blok {0} bitti', [_int(st['block']) - 1]),
         cardKey: 'break${st['block']}',
         extra: Padding(
           padding: const EdgeInsets.only(bottom: 4),
@@ -1140,28 +1141,25 @@ class _DualBoardState extends State<_DualBoard> with SingleTickerProviderStateMi
             tween: Tween(begin: 0, end: acc.toDouble()),
             duration: const Duration(milliseconds: 900),
             curve: Curves.easeOutCubic,
-            builder: (context, v, _) => Text('Doğruluk %${v.round()} · ${last['n']}-back',
+            builder: (context, v, _) => Text(tf('Doğruluk %{0} · {1}-back', [v.round(), last['n']]),
                 textAlign: TextAlign.center,
                 style: Lux.ui(16, weight: FontWeight.w500).copyWith(fontFeatures: const [FontFeature.tabularFigures()])),
           ),
         ),
         body: change > 0
-            ? 'Harika! N bir artıyor: $n-back.'
+            ? tf('Harika! N bir artıyor: {0}-back.', [n])
             : change < 0
-                ? 'N bir azalıyor: $n-back. Ritmi yeniden kur.'
-                : 'N aynı kalıyor: $n-back.',
-        button: 'Sonraki blok',
+                ? tf('N bir azalıyor: {0}-back. Ritmi yeniden kur.', [n])
+                : tf('N aynı kalıyor: {0}-back.', [n]),
+        button: t('Sonraki blok'),
         onStart: start,
       );
     }
     return _overlayCard(
-      heading: 'İkili $n-back',
+      heading: tf('İkili {0}-back', [n]),
       cardKey: 'intro',
-      body: 'Her uyaranda ızgarada bir hücre yanar, içinde bir rakam görünür. Konum $n adım öncekiyle aynıysa '
-          'Konum, rakam aynıysa Rakam düğmesine bas (ikisi de olabilir). Uyaran yarım saniye görünür; '
-          'cevap için $period sn içinde basman yeter.\n'
-          '10 blok. %90 ve üstü N\'i artırır, %75 altı azaltır. Puan = ortalama N × 100.',
-      button: 'Başla',
+      body: tf('Her uyaranda ızgarada bir hücre yanar, içinde bir rakam görünür. Konum {0} adım öncekiyle aynıysa Konum, rakam aynıysa Rakam düğmesine bas (ikisi de olabilir). Uyaran yarım saniye görünür; cevap için {1} sn içinde basman yeter.\n10 blok. %90 ve üstü N\'i artırır, %75 altı azaltır. Puan = ortalama N × 100.', [n, period]),
+      button: t('Başla'),
       onStart: start,
     );
   }

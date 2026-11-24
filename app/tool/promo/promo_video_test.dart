@@ -23,6 +23,7 @@ import 'package:clever_place/clever/progress.dart';
 
 import 'scenes.dart';
 import 'stage.dart';
+import 'package:clever_place/clever/i18n/lang.dart';
 
 Future<void> _loadFonts() async {
   Future<void> family(String name, List<String> files) async {
@@ -62,6 +63,8 @@ void main() {
 
   testWidgets('promo video clips', (tester) async {
     debugDisableShadows = false;
+    // The video's language (English unless PROMO_LANG=tr): the app and the captions follow it.
+    Lang.set(Platform.environment['PROMO_LANG'] ?? 'en');
     await tester.runAsync(_loadFonts);
     // Let google_fonts fetch for real instead of failing the test.
     HttpOverrides.global = null;
@@ -109,6 +112,14 @@ Map<String, Object> _savedProgress() {
       m['cp.stars.${g.id}.$l'] = rnd.nextInt(10) < 6 ? 3 : 2;
     }
   }
+  // Schulte opens the video: its page on Zor with level 300 next, and recent Zor times so the level's
+  // end shows the chart and a new record.
+  for (var l = 1; l < 300; l++) {
+    m['cp.stars.schulte.$l'] = rnd.nextInt(10) < 7 ? 3 : 2;
+  }
+  m['cp.tier.schulte'] = 2;
+  m['cp.times.schulte.2'] = [for (final s in schulteRecentTimes) '$s'];
+  m['cp.besttime.schulte.2'] = schulteRecentTimes.reduce(math.min);
   return m;
 }
 
@@ -117,3 +128,6 @@ Map<String, Object> _savedProgress() {
 ui.Image? _unused;
 // ignore: unused_element
 RenderObject? _unused2;
+
+/// Earlier winning times on Schulte's Zor tier (ms), oldest first.
+const schulteRecentTimes = [27800, 26400, 25100, 26900, 23800, 24600, 22400, 23300, 22900];

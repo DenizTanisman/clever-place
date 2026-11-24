@@ -7,6 +7,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Surakarta board against the AI.
@@ -541,13 +542,13 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
-              const LuxHeading('Halka ile alış'),
+              LuxHeading(t('Halka ile alış')),
               const SurakartaLoopDemo(size: 240),
               const SizedBox(height: 14),
               for (final line in _loopHelpLines)
                 Padding(
                   padding: const EdgeInsets.only(bottom: 8),
-                  child: Text(line, style: Lux.ui(14, color: Lux.ink)),
+                  child: Text(t(line), style: Lux.ui(14, color: Lux.ink)),
                 ),
             ],
           ),
@@ -588,7 +589,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
     final counts = st['counts'] as Map? ?? const {};
     final quiet = (st['quiet'] as num?)?.toInt() ?? 0;
     final quietLimit = (st['quiet_limit'] as num?)?.toInt() ?? 40;
-    final rank = (st['title'] as String?) ?? '';
+    final rank = ct(st['title'] as String?);
     final thinking = _aiTimer != null || _aiInFlight;
     final playing = !s.finished;
     final canCapture = _canInput && _moves().values.any((l) => l.any((m) => m.capture));
@@ -645,7 +646,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                               thinking
                                   ? const _ThinkingText(key: ValueKey('think'))
                                   : Text(
-                                      playing ? '${counts['ai'] ?? 12} taş' : '${counts['ai'] ?? 0} taş kaldı',
+                                      playing ? tf('{0} taş', [counts['ai'] ?? 12]) : tf('{0} taş kaldı', [counts['ai'] ?? 0]),
                                       style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
                             ],
                           ),
@@ -656,7 +657,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                             crossAxisAlignment: CrossAxisAlignment.end,
                             children: [
                               const SizedBox(height: 4),
-                              Text('ALDIĞI  $aiTaken', style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
+                              Text(tf('ALDIĞI  {0}', [aiTaken]), style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
                             ],
                           ),
                         ),
@@ -683,19 +684,19 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                             children: [
                               Text(
                                   !playing
-                                      ? 'Oyun bitti'
+                                      ? t('Oyun bitti')
                                       : _yourTurn
-                                          ? 'Sıra sende'
-                                          : 'Rakip oynuyor',
+                                          ? t('Sıra sende')
+                                          : t('Rakip oynuyor'),
                                   style: Lux.ui(14,
                                       color: _yourTurn ? Lux.goldLight : Lux.muted, weight: FontWeight.w600)),
                               canCapture
                                   ? FittedBox(
                                       fit: BoxFit.scaleDown,
                                       alignment: Alignment.centerLeft,
-                                      child: Text('Halkadan alış var',
+                                      child: Text(t('Halkadan alış var'),
                                           maxLines: 1, style: Lux.ui(12, color: Lux.goldLight, weight: FontWeight.w600)))
-                                  : Text('${counts['you'] ?? 12} taşın', style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
+                                  : Text(tf('{0} taşın', [counts['you'] ?? 12]), style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
                             ],
                           ),
                         ),
@@ -703,7 +704,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                           child: Column(
                             children: [
                               const SizedBox(height: 4),
-                              Text('ALDIĞIN  $youTaken', style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
+                              Text(tf('ALDIĞIN  {0}', [youTaken]), style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
                             ],
                           ),
                         ),
@@ -715,7 +716,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                             children: [
                               FittedBox(
                                   fit: BoxFit.scaleDown,
-                                  child: Text('SESSİZ HAMLE', maxLines: 1, style: Lux.ui(10, color: Lux.muted, spacing: 1.4))),
+                                  child: Text(t('SESSİZ HAMLE'), maxLines: 1, style: Lux.ui(10, color: Lux.muted, spacing: 1.4))),
                               Text('$quiet / $quietLimit',
                                   style: Lux.numeral(18,
                                       color: quiet >= quietLimit - 10 ? Lux.bordeauxLight : Lux.goldLight)),
@@ -762,7 +763,7 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al (yıldızı 1\'e düşürür)',
+                  tooltip: t('Geri al (yıldızı 1\'e düşürür)'),
                   onPressed: st['can_undo'] == true && _canInput
                       ? () {
                           setState(() => _sel = null);
@@ -771,10 +772,10 @@ class _SurakartaBoardState extends State<_SurakartaBoard> with SingleTickerProvi
                       : null),
               const SizedBox(width: 24),
               RimIconButton(_hintBusy ? Icons.hourglass_top_rounded : Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: en iyi hamle (yıldızı 1\'e düşürür)', onPressed: _canInput ? _askHint : null),
+                  tooltip: t('İpucu: en iyi hamle (yıldızı 1\'e düşürür)'), onPressed: _canInput ? _askHint : null),
               const SizedBox(width: 24),
               RimIconButton(Icons.all_inclusive_rounded,
-                  tooltip: 'Halka ile alış nasıl yapılır?', onPressed: () => _showLoopHelp(context)),
+                  tooltip: t('Halka ile alış nasıl yapılır?'), onPressed: () => _showLoopHelp(context)),
             ],
           ),
         ),
@@ -925,7 +926,7 @@ class _ThinkingTextState extends State<_ThinkingText> with SingleTickerProviderS
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text('düşünüyor', style: Lux.ui(12, color: _rose, spacing: 0.8)),
+          Text(t('düşünüyor'), style: Lux.ui(12, color: _rose, spacing: 0.8)),
           for (var i = 0; i < 3; i++)
             Transform.translate(
               offset: Offset(0, -3 * math.max(0, math.sin((_c.value - i * 0.18) * 2 * math.pi))),
@@ -1726,20 +1727,20 @@ class _SurakartaLoopDemoState extends State<SurakartaLoopDemo> with SingleTicker
     return AnimatedBuilder(
       animation: _c,
       builder: (context, _) {
-        final t = _c.value * _scene * _demoScenes.length;
-        final i = (t ~/ _scene).clamp(0, _demoScenes.length - 1);
+        final at = _c.value * _scene * _demoScenes.length;
+        final i = (at ~/ _scene).clamp(0, _demoScenes.length - 1);
         return Column(
           mainAxisSize: MainAxisSize.min,
           children: [
             SizedBox(
               width: widget.size,
               height: widget.size,
-              child: CustomPaint(painter: _LoopDemoPainter(_demoScenes[i], _polys[i], t - i * _scene, t)),
+              child: CustomPaint(painter: _LoopDemoPainter(_demoScenes[i], _polys[i], at - i * _scene, at)),
             ),
             const SizedBox(height: 8),
             SizedBox(
               width: widget.size,
-              child: Text(_demoScenes[i].caption, textAlign: TextAlign.center, style: Lux.ui(12.5, color: Lux.muted)),
+              child: Text(t(_demoScenes[i].caption), textAlign: TextAlign.center, style: Lux.ui(12.5, color: Lux.muted)),
             ),
           ],
         );

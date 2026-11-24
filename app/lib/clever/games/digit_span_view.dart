@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Sayı Dizisi board: trial rail, a stage where the digits appear one by one as big glowing gold
@@ -137,11 +138,12 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
     final trials = (st['trials'] as num?)?.toInt();
     final trial = (st['trial'] as num?)?.toInt() ?? 0;
     final span = (st['span'] as num?)?.toInt() ?? 0;
-    final unit = st['variant'] == 'letter_number' ? 'simge' : 'rakam';
-    final title = endless ? '${st['variant_label']} dizi' : 'Deneme ${math.min(trial + 1, trials ?? 1)} / $trials';
+    final title = endless
+        ? tf('{0} dizi', [ct('${st['variant_label']}')])
+        : tf('Deneme {0} / {1}', [math.min(trial + 1, trials ?? 1), trials]);
     final sub = endless
-        ? 'Uzunluk $span${st['forward_span'] != null ? ' · İleri sonucun ${st['forward_span']}' : ''}'
-        : '$span $unit · ${st['instruction']}';
+        ? '${tf('Uzunluk {0}', [span])}${st['forward_span'] != null ? ' · ${tf('İleri sonucun {0}', [st['forward_span']])}' : ''}'
+        : '${st['variant'] == 'letter_number' ? tf('{0} simge', [span]) : tf('{0} rakam', [span])} · ${ct('${st['instruction']}')}';
     final slots = endless ? results.length + 1 : (trials ?? 0);
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
@@ -186,7 +188,7 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
         case 'feedback':
           child = _feedbackStage(st);
         case 'ready':
-          child = Text('Hazır', style: Lux.display(28, color: Lux.muted));
+          child = Text(t('Hazır'), style: Lux.display(28, color: Lux.muted));
         default:
           child = _restingStage(st, big);
       }
@@ -274,10 +276,10 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(Lux.upper('Ara görev ${(d['index'] as num).toInt() + 1}/${d['count']}'),
+        Text(Lux.upper(tf('Ara görev {0}/{1}', [(d['index'] as num).toInt() + 1, d['count']])),
             style: Lux.ui(12, color: Lux.gold, spacing: 2.2, weight: FontWeight.w700)),
         const SizedBox(height: 6),
-        Text('Bu işlem doğru mu? Diziyi aklında tut.', style: Lux.ui(15, color: Lux.muted)),
+        Text(t('Bu işlem doğru mu? Diziyi aklında tut.'), style: Lux.ui(15, color: Lux.muted)),
         const SizedBox(height: 18),
         TweenAnimationBuilder<double>(
           key: ValueKey('eq${d['index']}${d['text']}'),
@@ -311,10 +313,10 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text(Lux.upper(st['variant_label'] as String? ?? ''),
+        Text(Lux.upper(ct(st['variant_label'] as String?)),
             style: Lux.ui(12, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
         const SizedBox(height: 6),
-        Text(st['instruction'] as String? ?? '', textAlign: TextAlign.center, style: Lux.ui(16, color: Lux.ink)),
+        Text(ct(st['instruction'] as String?), textAlign: TextAlign.center, style: Lux.ui(16, color: Lux.ink)),
         const SizedBox(height: 20),
         _slots(need, (i) => i < input.length ? input[i] : null, (i) => null, popIndex: input.length - 1),
         const SizedBox(height: 14),
@@ -375,8 +377,8 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
     final exp = _strings(last['expected']);
     final given = _strings(last['given']);
     final seq = _strings(last['sequence']);
-    final t = _now - _fbAt;
-    final shake = !ok && t < 0.35 ? math.sin(t * 50) * 8 * math.exp(-t * 9) : 0.0;
+    final age = _now - _fbAt;
+    final shake = !ok && age < 0.35 ? math.sin(age * 50) * 8 * math.exp(-age * 9) : 0.0;
     final reordered = st['variant'] != 'forward';
     return GestureDetector(
       behavior: HitTestBehavior.opaque,
@@ -391,11 +393,11 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
             tween: Tween(begin: 0, end: 1),
             duration: const Duration(milliseconds: 360),
             builder: (context, v, child) => Transform.scale(scale: 0.8 + 0.2 * Curves.easeOutBack.transform(v), child: child),
-            child: Text(ok ? 'Doğru' : 'Olmadı', style: Lux.display(34, color: ok ? Lux.gold : Lux.bordeauxLight)),
+            child: Text(ok ? t('Doğru') : t('Olmadı'), style: Lux.display(34, color: ok ? Lux.gold : Lux.bordeauxLight)),
           ),
           if (last['distract_ok'] == false) ...[
             const SizedBox(height: 4),
-            Text('Ara görevde hata var', style: Lux.ui(13, color: Lux.bordeauxLight)),
+            Text(t('Ara görevde hata var'), style: Lux.ui(13, color: Lux.bordeauxLight)),
           ],
           const SizedBox(height: 16),
           Transform.translate(
@@ -404,16 +406,16 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
           ),
           if (!ok) ...[
             const SizedBox(height: 14),
-            Text('Doğrusu', style: Lux.ui(12, color: Lux.muted, spacing: 1.5)),
+            Text(t('Doğrusu'), style: Lux.ui(12, color: Lux.muted, spacing: 1.5)),
             const SizedBox(height: 6),
             _slots(exp.length, (i) => exp[i], (i) => null),
           ],
           if (reordered) ...[
             const SizedBox(height: 12),
-            Text('Gösterilen: ${seq.join(' ')}', style: Lux.ui(14, color: Lux.muted)),
+            Text(tf('Gösterilen: {0}', [seq.join(' ')]), style: Lux.ui(14, color: Lux.muted)),
           ],
           const SizedBox(height: 14),
-          Text(s.finished ? '' : 'Devam için dokun', style: Lux.ui(12, color: Lux.muted.withValues(alpha: 0.7))),
+          Text(s.finished ? '' : t('Devam için dokun'), style: Lux.ui(12, color: Lux.muted.withValues(alpha: 0.7))),
         ],
       ),
     );
@@ -452,7 +454,7 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
                         ? _Key(label: '', height: keyH, onTap: () {}, blank: true)
                         : _Key(label: '0', height: keyH, onTap: () => _key('0')),
                   ),
-                  Expanded(child: _Key(label: 'Tamam', height: keyH, primary: full, small: true, onTap: _submit)),
+                  Expanded(child: _Key(label: t('Tamam'), height: keyH, primary: full, small: true, onTap: _submit)),
                 ],
               ),
             ],
@@ -470,8 +472,8 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
       padding: const EdgeInsets.fromLTRB(16, 4, 16, 18),
       child: Row(
         children: [
-          Expanded(child: _Key(label: 'Yanlış', height: 76, accent: true, onTap: () => _judge(false))),
-          Expanded(child: _Key(label: 'Doğru', height: 76, primary: true, onTap: () => _judge(true))),
+          Expanded(child: _Key(label: t('Yanlış'), height: 76, accent: true, onTap: () => _judge(false))),
+          Expanded(child: _Key(label: t('Doğru'), height: 76, primary: true, onTap: () => _judge(true))),
         ],
       ),
     );
@@ -487,13 +489,11 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
   Widget _introCard(Map<String, dynamic> st) {
     final endless = st['mode'] == 'endless';
     final period = ((st['period_ms'] as num?)?.toDouble() ?? 1000) / 1000;
-    final pace = period.toStringAsFixed(2).replaceAll('.', ',');
+    final pace = Lang.en ? period.toStringAsFixed(2) : period.toStringAsFixed(2).replaceAll('.', ',');
     final body = endless
-        ? 'Önce ileri, sonra geri dizi. Her dizi saniyede bir rakam akar. Üst üste iki doğru diziyi bir uzatır, '
-            'bir yanlış bir kısaltır. Aynı uzunlukta iki kez yanılınca o bölüm biter.\n\n'
-            'Puan = 10 × ileri kapasiten + 15 × geri kapasiten.'
-        : '${st['instruction']}.\n\nSimgeler tek tek gelir (her $pace sn\'de bir). Dizi bitince klavyeden yaz ve Tamam\'a bas.'
-            '${(st['title'] as String? ?? '').contains('ara görev') ? '\n\nDizi ile cevap arasında kısa bir işlem sorusu var: cevapla ama diziyi bırakma.' : ''}';
+        ? t('Önce ileri, sonra geri dizi. Her dizi saniyede bir rakam akar. Üst üste iki doğru diziyi bir uzatır, bir yanlış bir kısaltır. Aynı uzunlukta iki kez yanılınca o bölüm biter.\n\nPuan = 10 × ileri kapasiten + 15 × geri kapasiten.')
+        : '${ct('${st['instruction']}')}.\n\n${tf('Simgeler tek tek gelir (her {0} sn\'de bir). Dizi bitince klavyeden yaz ve Tamam\'a bas.', [pace])}'
+            '${(st['title'] as String? ?? '').contains('ara görev') ? '\n\n${t('Dizi ile cevap arasında kısa bir işlem sorusu var: cevapla ama diziyi bırakma.')}' : ''}';
     return ColoredBox(
       color: Colors.black.withValues(alpha: 0.55),
       child: Center(
@@ -510,16 +510,16 @@ class _DigitSpanBoardState extends State<_DigitSpanBoard> with SingleTickerProvi
               child: Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(Lux.upper(endless ? 'Kapasite testi' : (st['title'] as String? ?? '')),
+                  Text(Lux.upper(endless ? t('Kapasite testi') : ct(st['title'] as String?)),
                       textAlign: TextAlign.center, style: Lux.display(22, spacing: 1.5)),
                   const SizedBox(height: 14),
                   Text(body, textAlign: TextAlign.center, style: Lux.ui(16, weight: FontWeight.w500)),
                   if (!endless) ...[
                     const SizedBox(height: 10),
-                    Text(st['goal'] as String? ?? '', textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
+                    Text(ct(st['goal'] as String?), textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.muted)),
                   ],
                   const SizedBox(height: 18),
-                  GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                  GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                     HapticFeedback.selectionClick();
                     s.act({'start': true});
                   }),

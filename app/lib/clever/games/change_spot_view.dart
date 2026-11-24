@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'scene_painter.dart';
 
@@ -145,10 +146,10 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
     final wrong = (st['round_wrong'] as num?)?.toInt() ?? 0;
     final maxWrong = (st['max_wrong'] as num?)?.toInt() ?? 3;
     final missed = (st['missed_rounds'] as num?)?.toInt() ?? 0;
-    final t = (st['t_ms'] as num?)?.toDouble() ?? 0;
+    final tMs = (st['t_ms'] as num?)?.toDouble() ?? 0;
     final limit = (st['round_ms'] as num?)?.toDouble() ?? 1;
-    final left = ((limit - t) / 1000).clamp(0, 999).ceil();
-    final frac = (1 - t / limit).clamp(0.0, 1.0);
+    final left = ((limit - tMs) / 1000).clamp(0, 999).ceil();
+    final frac = (1 - tMs / limit).clamp(0.0, 1.0);
     final urgent = st['phase'] == 'run' && left <= 5;
     return Padding(
       padding: const EdgeInsets.fromLTRB(20, 10, 20, 6),
@@ -156,7 +157,7 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
         children: [
           Row(
             children: [
-              Text('Tur $round', style: Lux.display(24, color: Lux.goldLight)),
+              Text(tf('Tur {0}', [round]), style: Lux.display(24, color: Lux.goldLight)),
               Text(' / $rounds', style: Lux.ui(15, color: Lux.muted)),
               const SizedBox(width: 12),
               for (var i = 0; i < rounds; i++)
@@ -171,12 +172,12 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
                 ),
               const Spacer(),
               if (n > 1) ...[
-                Text('Fark ', style: Lux.ui(13, color: Lux.muted)),
+                Text(t('Fark '), style: Lux.ui(13, color: Lux.muted)),
                 Text('$found/$n', style: Lux.ui(16, weight: FontWeight.w700, color: Lux.goldLight)),
                 const SizedBox(width: 14),
               ],
               Tooltip(
-                message: 'Yanlış dokunuş hakkı',
+                message: t('Yanlış dokunuş hakkı'),
                 child: Row(
                   children: [
                     for (var i = 0; i < maxWrong; i++)
@@ -220,10 +221,10 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
           const SizedBox(height: 4),
           Row(
             children: [
-              Text(missed > 0 ? 'Kaçan tur: $missed (2. kaçış bölümü bitirir)' : 'Kaçan tur yok',
+              Text(missed > 0 ? tf('Kaçan tur: {0} (2. kaçış bölümü bitirir)', [missed]) : t('Kaçan tur yok'),
                   style: Lux.ui(12, color: missed > 0 ? Lux.bordeauxLight : Lux.muted)),
               const Spacer(),
-              Text('$left sn', style: Lux.ui(12, color: urgent ? Lux.bordeauxLight : Lux.muted, weight: FontWeight.w600)),
+              Text(tf('{0} sn', [left]), style: Lux.ui(12, color: urgent ? Lux.bordeauxLight : Lux.muted, weight: FontWeight.w600)),
             ],
           ),
         ],
@@ -240,19 +241,19 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
       final res = st['result'];
       final labels = [
         for (final c in (st['changes'] as List? ?? const []))
-          if ((c as Map)['label'] is String) c['label'] as String
+          if ((c as Map)['label'] is String) ct(c['label'] as String)
       ];
       final head = res == 'found'
-          ? 'Buldun!'
+          ? t('Buldun!')
           : res == 'timeout'
-              ? 'Süre doldu.'
-              : '3 yanlış dokunuş.';
+              ? t('Süre doldu.')
+              : t('3 yanlış dokunuş.');
       text = '$head ${labels.join(' · ')}';
       color = res == 'found' ? Lux.good : Lux.bordeauxLight;
     } else if (phase == 'run') {
-      text = side ? 'Farkı gördüğün yere dokun (üstte ya da altta)' : 'Değişen yere dokun';
+      text = side ? t('Farkı gördüğün yere dokun (üstte ya da altta)') : t('Değişen yere dokun');
     } else if (phase == 'ready') {
-      text = 'Yeni sahne geliyor…';
+      text = t('Yeni sahne geliyor…');
     } else {
       text = '';
     }
@@ -311,7 +312,7 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
             if (b != null) SceneView(scene: b, radius: 0),
           ],
           if (hidden) const ColoredBox(color: _mask),
-          if (phase == 'ready') Center(child: Text('Tur ${st['round']}', style: Lux.display(40, color: const Color(0xFFF4EFE4)))),
+          if (phase == 'ready') Center(child: Text(tf('Tur {0}', [st['round']]), style: Lux.display(40, color: const Color(0xFFF4EFE4)))),
           if (!hidden) _overlay(st, size),
           if (a != null && !hidden) _sceneNo(st),
           Positioned.fill(
@@ -339,7 +340,7 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
               if (sc != null) SceneView(scene: sc, radius: 0),
               if (hidden) const ColoredBox(color: _mask),
               if (phase == 'ready' && tag == 'A')
-                Center(child: Text('Tur ${st['round']}', style: Lux.display(34, color: const Color(0xFFF4EFE4)))),
+                Center(child: Text(tf('Tur {0}', [st['round']]), style: Lux.display(34, color: const Color(0xFFF4EFE4)))),
               if (!hidden) _overlay(st, size),
               Positioned(
                 left: 8,
@@ -379,7 +380,7 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
         right: 8,
         bottom: 5,
         child: IgnorePointer(
-          child: Text('Sahne #${st['scene_no']}',
+          child: Text(tf('Sahne #{0}', [st['scene_no']]),
               style: Lux.ui(10, color: Colors.white.withValues(alpha: 0.7), weight: FontWeight.w500)
                   .copyWith(shadows: const [Shadow(color: Color(0x99000000), blurRadius: 3)])),
         ),
@@ -433,11 +434,11 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
     final rounds = (st['rounds'] as num?)?.toInt() ?? 1;
     final secs = (((st['round_ms'] as num?) ?? 30000) / 1000).round();
     final show = (st['show_ms'] as num?)?.toInt() ?? 800;
-    final what = n == 1 ? 'bir şey' : '$n şey';
+    final what = n == 1 ? t('bir şey') : tf('{0} şey', [n]);
     final body = side
-        ? 'Üstte A, altta B resmi var; aralarında $n fark var. Farkı gördüğün yere dokun — hangi resimde olduğu fark etmez.'
-        : 'Resim yanıp sönecek: A (${(show / 1000).toStringAsFixed(1).replaceAll('.', ',')} sn), kısa boşluk, B, boşluk… '
-            'İki resim arasında $what değişiyor. Değişen yere dokun.';
+        ? tf('Üstte A, altta B resmi var; aralarında {0} fark var. Farkı gördüğün yere dokun — hangi resimde olduğu fark etmez.', [n])
+        : tf('Resim yanıp sönecek: A ({0} sn), kısa boşluk, B, boşluk… İki resim arasında {1} değişiyor. Değişen yere dokun.',
+            [(show / 1000).toStringAsFixed(1).replaceAll('.', Lang.en ? '.' : ','), what]);
     return ColoredBox(
       color: Colors.black.withValues(alpha: 0.55),
       child: Center(
@@ -449,14 +450,14 @@ class _ChangeBoardState extends State<_ChangeBoard> with SingleTickerProviderSta
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper(side ? 'Yan yana' : 'Yanıp sönme'), style: Lux.display(22, spacing: 1.5)),
+                Text(Lux.upper(side ? t('Yan yana') : t('Yanıp sönme')), style: Lux.display(22, spacing: 1.5)),
                 const SizedBox(height: 14),
                 Text(body, textAlign: TextAlign.center, style: Lux.ui(16)),
                 const SizedBox(height: 10),
-                Text('$rounds tur · tur başına $secs sn · en fazla 3 yanlış dokunuş. 2 tur kaçarsa bölüm biter.',
+                Text(tf('{0} tur · tur başına {1} sn · en fazla 3 yanlış dokunuş. 2 tur kaçarsa bölüm biter.', [rounds, secs]),
                     textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.muted)),
                 const SizedBox(height: 18),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

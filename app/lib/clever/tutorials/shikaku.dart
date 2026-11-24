@@ -10,6 +10,15 @@ const shikakuTutorials = GameTutorials(
 - Yıldızlar: ipucu ve hatalı dikdörtgen yoksa 3, toplamı en fazla 3 ise 2, fazlası 1 yıldız. Çözümde olmayan her dikdörtgen bir hata sayılır.
 
 Izgara 7×7 ile başlar, sonlara doğru 15×15 ve 18×12'ye kadar büyür; sayılar da büyüdükçe seçenekler çoğalır.''',
+  rulesEn: '''
+- Split the grid into **rectangles** (squares count too).
+- Each rectangle must hold **exactly one number**, and that number must equal the rectangle's **area** (its number of cells).
+- Draw by dragging from one corner to the opposite corner. A **gold** preview means the size and the number match; **burgundy** means they don't.
+- A new rectangle erases the old ones it overlaps. Tap a rectangle to remove it; tapping a cell with a "1" boxes it on its own.
+- The level ends when the whole grid is covered with valid rectangles. Every level has a single solution and needs no guessing.
+- Stars: no hints and no wrong rectangles 3, a total of at most 3 for 2, more for 1 star. Every rectangle that isn't in the solution counts as a mistake.
+
+The grid starts at 7×7 and grows up to 15×15 and 18×12 toward the end; as the numbers grow, so do the options.''',
   mid: [
     TutorialSection(
       'Tek seçenek',

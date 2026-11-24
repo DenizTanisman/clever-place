@@ -2,6 +2,7 @@ import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Draws an IQ-question figure from the JSON produced by core/src/games/iq/figural.rs.
@@ -589,7 +590,7 @@ void _fold(Canvas c, Rect r, Map<String, dynamic> j) {
     final last = i == panels.length - 1;
     _sheet(c, pr, n, last ? _l(p['holes']) : const [], _pts(p['poly']), last ? null : p);
     if (i > 0) _text(c, '›', Offset(r.left + pw * i, r.center.dy), side * 0.28, _C.gold);
-    _text(c, last ? 'del' : '${i + 1}', Offset(centre.dx, pr.bottom + (r.height - side) / 4), side * 0.12, Lux.muted);
+    _text(c, last ? t('del') : '${i + 1}', Offset(centre.dx, pr.bottom + (r.height - side) / 4), side * 0.12, Lux.muted);
   }
 }
 

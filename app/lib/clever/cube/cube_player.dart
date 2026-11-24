@@ -10,7 +10,7 @@ import '../lux.dart';
 import 'cube_style.dart';
 
 /// Which Küp Defteri rows the 3D player plays, and what: `assets/cube/player/player_index.json`,
-/// keyed by the case
+/// made by `tool/cube/player_index.py` with the web notebook's own player logic. Keyed by the case
 /// id; one entry per row of the case's algorithms, null for rows it can't play (prose rows).
 class CubePlayerIndex {
   static const asset = 'assets/cube/player/player_index.json';

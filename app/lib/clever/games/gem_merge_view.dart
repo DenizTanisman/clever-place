@@ -7,6 +7,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Mücevher Birleştir: touch the jar to aim (a dotted guide follows your finger), release to drop.
@@ -598,12 +599,12 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
                       child: CustomPaint(painter: _SingleGemPainter(next, dpr)),
                     ),
                   ),
-                  Text('Sıradaki', style: Lux.ui(11, color: Lux.muted, spacing: 1)),
+                  Text(t('Sıradaki'), style: Lux.ui(11, color: Lux.muted, spacing: 1)),
                 ],
               ),
               const SizedBox(width: 10),
               RimIconButton(_paused ? Icons.play_arrow_rounded : Icons.pause_rounded,
-                  tooltip: _paused ? 'Devam' : 'Duraklat', onPressed: s.finished ? null : () => _setPaused(!_paused)),
+                  tooltip: _paused ? t('Devam') : t('Duraklat'), onPressed: s.finished ? null : () => _setPaused(!_paused)),
             ],
           ),
         ),
@@ -673,9 +674,9 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
                               child: Column(
                                 mainAxisAlignment: MainAxisAlignment.center,
                                 children: [
-                                  Text(Lux.upper('Duraklatıldı'), style: Lux.display(18)),
+                                  Text(Lux.upper(t('Duraklatıldı')), style: Lux.display(18)),
                                   const SizedBox(height: 16),
-                                  GoldButton('Devam', icon: Icons.play_arrow_rounded, onPressed: () => _setPaused(false)),
+                                  GoldButton(t('Devam'), icon: Icons.play_arrow_rounded, onPressed: () => _setPaused(false)),
                                 ],
                               ),
                             ),
@@ -694,9 +695,9 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
 
   /// "Yeni mücevher" banner: springs in, holds, then lifts away.
   Widget _banner(double now, Size size) {
-    final t = now - _bannerAt;
-    final inT = Curves.easeOutBack.transform((t / 0.32).clamp(0.0, 1.0));
-    final out = Curves.easeIn.transform(((t - 1.3) / 0.42).clamp(0.0, 1.0));
+    final age = now - _bannerAt;
+    final inT = Curves.easeOutBack.transform((age / 0.32).clamp(0.0, 1.0));
+    final out = Curves.easeIn.transform(((age - 1.3) / 0.42).clamp(0.0, 1.0));
     final tier = _bannerTier;
     return Positioned(
       left: 0,
@@ -704,7 +705,7 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
       top: size.height * 0.30 - 14 * out,
       child: IgnorePointer(
         child: Opacity(
-          opacity: ((t / 0.16).clamp(0.0, 1.0) * (1 - out)),
+          opacity: ((age / 0.16).clamp(0.0, 1.0) * (1 - out)),
           child: Transform.scale(
             scale: 0.84 + 0.16 * inT,
             child: Center(
@@ -736,10 +737,10 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
                       mainAxisSize: MainAxisSize.min,
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(Lux.upper('Yeni mücevher · $tier. seviye'),
+                        Text(Lux.upper(tf('Yeni mücevher · {0}. seviye', [tier])),
                             style: Lux.ui(10, color: Lux.gold, weight: FontWeight.w600, spacing: 1.8)),
                         const SizedBox(height: 2),
-                        FoilText(_tierNames[tier - 1], style: Lux.display(24, spacing: 1)),
+                        FoilText(t(_tierNames[tier - 1]), style: Lux.display(24, spacing: 1)),
                       ],
                     ),
                   ],
@@ -755,7 +756,7 @@ class _GemMergeState extends State<_GemMerge> with SingleTickerProviderStateMixi
   Widget _stat(String label, String value) => Column(
         children: [
           Text(value, style: Lux.ui(20, color: Lux.goldLight, weight: FontWeight.w700)),
-          Text(label, style: Lux.ui(11, color: Lux.muted, spacing: 1)),
+          Text(ct(label), style: Lux.ui(11, color: Lux.muted, spacing: 1)),
         ],
       );
 }

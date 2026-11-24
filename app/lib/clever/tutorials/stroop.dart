@@ -9,6 +9,14 @@ const stroopTutorials = GameTutorials(
 - Yıldızlar: %95 doğruluk ve hedef ortalama tepkinin altı 3, %85 ve hedefin 1,25 katı 2, bitirirsen 1 yıldız. Doğruluk %70'in altına düşerse ya da kelimelerin beşte birinden fazlasında süre dolarsa bölüm biter.
 - **Sprint**: 60 saniye; doğru +1, hata −1. Puan arttıkça renkler, tuzaklar ve hız artar.
 - Sonuçta **Stroop etkisi** görünür: uyumsuz kelimelerdeki ortalama tepkinden uyumlu kelimelerdekini çıkar. Ne kadar küçükse, okumayı o kadar iyi bastırıyorsun.''',
+  rulesEn: '''
+- A word appears on screen; usually it is a color name, but it is written **in a different color**. Pick the **ink color**, not the word: tap the color button below.
+- The buttons have no text, only colors. In later levels the buttons change order, the word moves around the screen, and trap words that aren't color names show up too.
+- In **rule switch** levels, watch the cue: **COLOR** → the ink color, **WORD** → the color the word names.
+- Each word has a time limit (the thin line at the bottom). Being late counts as a mistake.
+- Stars: 95% accuracy and under the target average reaction time for 3, 85% and within 1.25 times the target for 2, finish for 1 star. If accuracy drops below 70%, or time runs out on more than a fifth of the words, the level ends.
+- **Sprint**: 60 seconds; right +1, wrong −1. As your score climbs, the colors, traps and speed increase.
+- The results show your **Stroop effect**: your average reaction on mismatched words minus your average on matched words. The smaller it is, the better you are at holding back the reading.''',
   mid: [
     TutorialSection(
       'Rengi gör, kelimeyi bulanıklaştır',

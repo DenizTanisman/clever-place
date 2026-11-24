@@ -21,6 +21,14 @@ const morrisTutorials = GameTutorials(
 - Rakibini **2 taşa indirirsen** ya da **hamle yapamaz** hâle getirirsen kazanırsın.
 - **Berabere:** aynı konum üçüncü kez gelirse ya da kaydırma evresinde 50'şer hamle boyunca hiç taş alınmazsa.
 - Yıldızlar: geri al ve ipucu kullanmadan, en az **5 taşın** kalarak kazanırsan 3; yardımsız ama daha az taşla 2; geri al ya da ipucu kullandıysan 1.''',
+  rulesEn: '''
+- The board has 24 points; you each start with **9 pieces**. You move first in odd levels, the opponent in even levels.
+- **Placing:** take turns putting a piece on an empty point — drag it from your tray or tap the point.
+- **Moving:** once all 18 pieces are placed, slide one of yours along a line to a neighboring empty point. A side **down to 3 pieces** can **fly**: move a piece to any empty point.
+- Getting 3 of your pieces in a row on a line makes a **mill**: you take one of your opponent's pieces that isn't in a mill (any piece, if all of them are). Opening a mill and closing it again counts again.
+- You win if you bring your opponent **down to 2 pieces** or leave them **unable to move**.
+- **Draw:** if the same position comes up a third time, or if no piece is taken for 50 moves each in the moving phase.
+- Stars: win without undo or hints with at least **5 pieces** left for 3; without help but with fewer pieces 2; with undo or a hint 1.''',
   mid: [
     TutorialSection(
       'Açılış: köşe değil kavşak',

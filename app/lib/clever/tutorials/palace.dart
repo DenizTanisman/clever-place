@@ -8,6 +8,13 @@ const palaceTutorials = GameTutorials(
 - Bölüm türleri: ileri yürüyüş, geri yürüyüş, rastgele durak, yazarak ve **çift liste** (aynı saraya iki liste; arada sarayı temizlersin).
 - Liste 5 eşyadan 40 eşyaya uzar; eşya başına süre 12 saniyeden 3 saniyeye iner, seçenekler birbirine benzer.
 - Yıldızlar: %95 doğru → 3 (ya da %90 doğru ve eşyaları ortalama sürenin yarısında yerleştirdiysen 3). %80 → 2, %60 → 1. Daha azı başarısız.''',
+  rulesEn: '''
+- In each level you walk through a palace (Home, Dorm, School, Neighborhood walk, Office). Each stop gets an item: **Stop 5 · Full-length mirror → ELEPHANT**.
+- Turn the item and the stop into a vivid scene, then tap the card or swipe left: the item settles at the stop. Each item has a time limit; when it runs out, the item settles on its own.
+- Then you walk the route again: at each stop, **choose from the options** what was there, or in later levels **type** it. If you can't recall it, say "I don't remember".
+- Level types: forward walk, backward walk, random stop, typing, and **double list** (two lists in the same palace; you clear the palace in between).
+- The list grows from 5 items to 40; the time per item drops from 12 seconds to 3, and the options look more and more alike.
+- Stars: 95% right → 3 (or 3 with 90% right if you placed the items in half the average time). 80% → 2, 60% → 1. Less is a fail.''',
   mid: [
     TutorialSection(
       'Canlı, tuhaf, çok duyulu imge',

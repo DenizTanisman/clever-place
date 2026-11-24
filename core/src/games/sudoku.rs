@@ -32,6 +32,9 @@
 //!          text, focus[cells]} | null}`
 //! Actions: `{"set":cell,"digit":d}` · `{"erase":cell}` · `{"note":cell,"digit":d}` ·
 //!          `{"fill_notes":true}` · `{"hint":true}` · `{"undo":true}`
+//! A digit (or a new pencil mark) whose row, column or box already holds that digit is refused
+//! with the reason and costs nothing (owner, 2026-11-22). A digit that only breaks the solution is
+//! still accepted and counted as a mistake.
 //! Stars: 3 = no mistakes and no hints · 2 = ≤ 2 mistakes and ≤ 1 hint · otherwise 1.
 
 use crate::rng::{seed_for, Rng};
@@ -1325,6 +1328,27 @@ impl Sudoku {
         }
     }
 
+    /// Why [d] cannot go into [c]: a peer already holds it. Row first, then column, then box.
+    fn clash(&self, c: usize, d: u8) -> Option<String> {
+        let p = geo().peers[c].iter().copied().filter(|&p| self.values[p] == d).min_by_key(|&p| {
+            if p / 9 == c / 9 {
+                0
+            } else if p % 9 == c % 9 {
+                1
+            } else {
+                2
+            }
+        })?;
+        let unit = if p / 9 == c / 9 {
+            "satırda"
+        } else if p % 9 == c % 9 {
+            "sütunda"
+        } else {
+            "kutuda"
+        };
+        Some(format!("Bu {unit} zaten {d} var"))
+    }
+
     fn conflicts(&self) -> Vec<usize> {
         (0..81)
             .filter(|&c| self.values[c] != 0 && geo().peers[c].iter().any(|&p| self.values[p] == self.values[c]))
@@ -1494,6 +1518,9 @@ impl Session for Sudoku {
             if self.values[c] == d {
                 return Ok(());
             }
+            if let Some(why) = self.clash(c, d) {
+                return Err(why);
+            }
             self.snapshot();
             self.put(c, d);
             if d != self.solution[c] {
@@ -1524,6 +1551,11 @@ impl Session for Sudoku {
             }
             if self.values[c] != 0 {
                 return Err("Not almak için önce rakamı sil".into());
+            }
+            if self.notes[c] & (1 << d) == 0 {
+                if let Some(why) = self.clash(c, d) {
+                    return Err(why);
+                }
             }
             self.snapshot();
             self.notes[c] ^= 1 << d;
@@ -1614,6 +1646,42 @@ mod tests {
     }
 
     #[test]
+    fn sudoku_refuses_a_digit_its_row_column_or_box_already_holds() {
+        let mut g = Sudoku::new(3);
+        let empty = (0..81).find(|&c| g.givens[c] == 0).unwrap();
+        let before = g.state();
+        for (want, peer) in [
+            ("satırda", (0..81).find(|&p| p != empty && p / 9 == empty / 9 && g.values[p] != 0)),
+            ("sütunda", (0..81).find(|&p| p != empty && p % 9 == empty % 9 && g.values[p] != 0 && !(0..81).any(|q| q / 9 == empty / 9 && g.values[q] == g.values[p]))),
+        ] {
+            let Some(p) = peer else { continue };
+            let d = g.values[p];
+            let err = g.act(&json!({"set": empty, "digit": d})).unwrap_err();
+            assert_eq!(err, format!("Bu {want} zaten {d} var"));
+            assert!(g.act(&json!({"note": empty, "digit": d})).is_err());
+            assert_eq!(g.state(), before, "refused moves cost nothing");
+        }
+        // Every refusal names a unit, and no digit the solution allows is ever refused.
+        for c in (0..81).filter(|&c| g.givens[c] == 0) {
+            assert!(g.clash(c, g.solution[c]).is_none());
+            for d in 1..=9u8 {
+                if let Some(why) = g.clash(c, d) {
+                    assert!(why.starts_with("Bu ") && why.ends_with(&format!("zaten {d} var")), "{why}");
+                }
+            }
+        }
+        // A pencil mark already there can still be taken away.
+        let c = (0..81).find(|&c| g.givens[c] == 0).unwrap();
+        let d = g.solution[c];
+        g.act(&json!({"note": c, "digit": d})).unwrap();
+        // Put the same digit into a peer behind the rules' back: the old mark now clashes.
+        let p = (0..81).find(|&p| p != c && sees(p, c) && g.values[p] == 0).unwrap();
+        g.values[p] = d;
+        assert!(g.act(&json!({"note": c, "digit": d})).is_ok());
+        assert_eq!(g.notes[c] & (1 << d), 0);
+    }
+
+    #[test]
     fn sudoku_mistakes_notes_undo_and_hints() {
         let mut g = Sudoku::new(3);
         let empties: Vec<usize> = (0..81).filter(|&c| g.givens[c] == 0).collect();
@@ -1625,8 +1693,8 @@ mod tests {
         g.act(&json!({"set": a, "digit": d})).unwrap();
         assert_eq!(g.notes[b], 0);
         assert_eq!(g.mistakes, 0);
-        // Wrong digit is accepted but counted.
-        let wrong = (1..=9u8).find(|&x| x != g.solution[b] && x != d).unwrap();
+        // A wrong digit that clashes with nothing is accepted but counted.
+        let wrong = (1..=9u8).find(|&x| x != g.solution[b] && g.clash(b, x).is_none()).unwrap();
         g.act(&json!({"set": b, "digit": wrong})).unwrap();
         assert_eq!(g.mistakes, 1);
         assert_eq!(g.state()["wrong"], json!([b]));

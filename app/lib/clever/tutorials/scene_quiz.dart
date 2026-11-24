@@ -8,6 +8,13 @@ const sceneQuizTutorials = GameTutorials(
 - İleri bölümlerde ilk 2–3 soru bir **zincirdir**: "Kaç şapka vardı?" → "Bunlardan kaçı kırmızıydı?" → "Kırmızı olanlardan kaçı yündü?"
 - "Şapka" sorularında **bere, kasket ve hasır şapka** da şapka sayılır.
 - Yıldızlar: kilit sorudan sonra hepsi doğruysa **3**, bir yanlışla **2**, daha fazlasıyla **1**.''',
+  rulesEn: '''
+- A scene shows for a few seconds (15 s in the first levels, 3–4 s later). If you are ready, close it early with **Ready**.
+- When the scene closes, the questions come: number questions are answered with a **four-number picker**, the rest with options.
+- The first question is the **key question**: get it wrong and the level ends at once, and the next level stays locked.
+- In later levels the first 2–3 questions form a **chain**: "How many hats were there?" → "How many of them were red?" → "How many of the red ones were wool?"
+- In "hat" questions, **beanies, caps and straw hats** count as hats too.
+- Stars: all correct after the key question **3**, one wrong **2**, more **1**.''',
   mid: [
     TutorialSection(
       'Bakarken say',

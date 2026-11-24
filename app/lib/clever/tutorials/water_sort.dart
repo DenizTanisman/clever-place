@@ -10,6 +10,13 @@ const waterSortTutorials = GameTutorials(
 - Yıldızlar: hamlen **Hedef** sayısına eşit ya da azsa 3, en fazla 1,3 katıysa 2, fazlası 1 yıldız (gizli katmanlı bölümlerde 1,25 ve 1,6 kat). Geri almak bir hamle sayılır. İpucu ya da ek boş tüp kullanırsan en fazla 2 yıldız.
 
 Bölümler dört türde döner: klasik, gizli katmanlar (alttaki katmanlar açılınca görünür), uzun tüpler (5 katman) ve tek boş tüp.''',
+  rulesEn: '''
+- Tap a tube (it lifts), then tap the target tube: **all the same-colored layers** on top pour over, as many as fit.
+- The target tube must be **empty** or have **the same color** on top.
+- You win when every tube is either empty or **completely full** of one color; a finished tube gets a gold cap.
+- Stars: moves **equal to or under the Target** for 3, at most 1.3 times it for 2, more for 1 star (1.25 and 1.6 times in hidden-layer levels). Undo counts as a move. Using a hint or an extra empty tube caps you at 2 stars.
+
+Levels rotate through four types: classic, hidden layers (lower layers show once uncovered), tall tubes (5 layers) and a single empty tube.''',
   mid: [
     TutorialSection(
       'Boş tüp altın değerinde',

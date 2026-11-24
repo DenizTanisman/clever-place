@@ -8,6 +8,13 @@ const gemMergeTutorials = GameTutorials(
 - Yerine oturmuş bir mücevher kırmızı kesikli çizginin üstünde **2 saniyeden** fazla kalırsa oyun biter (çizgi yanıp söner).
 - Bölümler: belirli seviyede bir mücevher yap, sınırlı düşüşle puan topla, sınırlı düşüşle seviye yap, dolu kasayla başla. Her bölümün taş sırası sabittir.
 - Yıldızlar: hedefe ne kadar az düşüşle ulaşırsan o kadar çok yıldız.''',
+  rulesEn: '''
+- Slide your finger across the top of the jar to aim (dashed guide line); let go and the gem drops. Only tier 1–5 gems drop; the next gem shows at the top right.
+- Two gems of the same tier **merge when they touch** and become the next tier up where they met. Points = the new gem's tier value (tier 1 to 11: 1, 3, 6, 10, 15, 21, 28, 36, 45, 55, 66).
+- 11 tiers: Quartz, Amethyst, Citrine, Aquamarine, Garnet, Peridot, Topaz, Sapphire, Emerald, Ruby, **Diamond**. When two Diamonds merge, both vanish for +266 points.
+- If a settled gem stays above the red dashed line for more than **2 seconds**, the game is over (the line flashes).
+- Levels: make a gem of a given tier, score points with limited drops, reach a tier with limited drops, start with a full jar. Each level's gem order is fixed.
+- Stars: the fewer drops you need to reach the goal, the more stars.''',
   mid: [
     TutorialSection(
       'Köşe stratejisi',

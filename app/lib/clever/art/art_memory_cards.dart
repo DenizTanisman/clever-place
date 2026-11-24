@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import '../card_kit.dart';
 import 'game_art.dart';
 
-/// Medallion illustrations for: nback palace digit_span corsi pairs scene_quiz word_list batak okey blof blackjack.
+/// Medallion illustrations for: nback palace digit_span corsi pairs scene_quiz face_name word_list batak okey blof blackjack.
 final Map<String, GameArtPainter> memoryCardsArt = {
   'nback': _box(_nback),
   'palace': _box(_palace),
@@ -13,6 +13,7 @@ final Map<String, GameArtPainter> memoryCardsArt = {
   'corsi': _box(_corsi),
   'pairs': _box(_pairs),
   'scene_quiz': _box(_sceneQuiz),
+  'face_name': _box(_faceName),
   'word_list': _box(_wordList),
   'batak': _box(_batak),
   'okey': _box(_okey),
@@ -476,6 +477,58 @@ void _sceneQuiz(Canvas canvas, Color tint) {
   ArtKit.ball(canvas, bc, 12, ArtKit.ruby);
   canvas.drawCircle(bc, 12, _outline(1.8)..shader = ArtKit.goldShader(Rect.fromCircle(center: bc, radius: 12)));
   _glyph(canvas, '?', bc, 21, color: ArtKit.ivory, dy: 0.04);
+}
+
+// ---------------------------------------------------------------------------------------------
+// face_name: a pearl portrait bust wearing a gold name tag.
+
+void _faceName(Canvas canvas, Color tint) {
+  const pearl = [Color(0xFFFFF9EC), Color(0xFFEDE1C8), Color(0xFFBFAE8E)];
+  final shoulders = Path()
+    ..moveTo(18, 90)
+    ..cubicTo(18, 66, 32, 59, 50, 59)
+    ..cubicTo(68, 59, 82, 66, 82, 90)
+    ..close();
+  final head = Path()..addOval(Rect.fromCenter(center: const Offset(50, 38), width: 27, height: 31));
+  final neck = Path()..addRect(const Rect.fromLTRB(44, 48, 56, 62));
+  final bust = Path.combine(PathOperation.union, Path.combine(PathOperation.union, shoulders, head), neck);
+  ArtKit.shadow(canvas, bust, blur: 3, offset: const Offset(0, 3), alpha: 0.45);
+  canvas.drawPath(
+      bust,
+      Paint()
+        ..shader = const RadialGradient(
+          center: Alignment(-0.35, -0.6),
+          radius: 1.1,
+          colors: pearl,
+          stops: [0, 0.5, 1],
+        ).createShader(const Rect.fromLTRB(18, 22, 82, 90)));
+  // Hair: a dark wave over the crown.
+  final hair = Path()
+    ..moveTo(35.5, 47)
+    ..cubicTo(32, 30, 40, 20.5, 50, 20.5)
+    ..cubicTo(60, 20.5, 68, 30, 64.5, 47)
+    ..cubicTo(62.5, 40, 61, 34, 56, 30.5)
+    ..cubicTo(50, 34, 42, 34.5, 39, 33)
+    ..cubicTo(37.5, 37, 37, 42, 35.5, 47)
+    ..close();
+  canvas.drawPath(
+      hair,
+      Paint()
+        ..shader = const LinearGradient(
+          begin: Alignment.topLeft,
+          end: Alignment.bottomRight,
+          colors: [Color(0xFF6A4325), Color(0xFF2E1A0C)],
+        ).createShader(const Rect.fromLTRB(34, 20, 66, 40)));
+  // Name tag.
+  final tagRect = Rect.fromCenter(center: const Offset(50, 72), width: 52, height: 21);
+  _rotated(canvas, tagRect.center, _deg(-5), () {
+    final tag = RRect.fromRectAndRadius(tagRect, const Radius.circular(3.5));
+    ArtKit.shadow(canvas, Path()..addRRect(tag), blur: 2, offset: const Offset(0, 2), alpha: 0.5);
+    canvas.drawRRect(tag, _goldFill(tagRect));
+    canvas.drawRRect(tag.deflate(2.2), Paint()..color = const Color(0xFFFFF8E6));
+    canvas.drawRRect(tag, _outline(1.0, const Color(0xFF6A4A14)));
+    _glyph(canvas, 'ADA', tagRect.center, 16.5, color: const Color(0xFF7A1A35), family: 'Jost', dy: 0.04);
+  });
 }
 
 // ---------------------------------------------------------------------------------------------

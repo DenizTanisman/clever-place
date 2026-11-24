@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Renk Tüpleri board. Tap a tube to lift it, tap another to pour. Colours only (no symbols);
@@ -284,11 +285,11 @@ class _WaterBoardState extends State<_WaterBoard> with SingleTickerProviderState
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Hamle', '${st['moves']}'),
+            _stat(t('Hamle'), '${st['moves']}'),
             const SizedBox(width: 28),
-            _stat('Hedef', '${st['par']}'),
+            _stat(t('Hedef'), '${st['par']}'),
             const SizedBox(width: 28),
-            _stat('Tamam', '${complete.where((c) => c).length}/${tubes.fold<int>(0, (a, t) => a + t.length) ~/ cap}'),
+            _stat(Lang.en ? 'Sorted' : 'Tamam', '${complete.where((c) => c).length}/${tubes.fold<int>(0, (a, t) => a + t.length) ~/ cap}'),
           ],
         ),
         AnimatedSize(
@@ -297,7 +298,7 @@ class _WaterBoardState extends State<_WaterBoard> with SingleTickerProviderState
               ? const SizedBox(width: double.infinity, height: 8)
               : Padding(
                   padding: const EdgeInsets.fromLTRB(16, 10, 16, 0),
-                  child: _banner(stuck ? 'Yasal dökme kalmadı — geri al ya da yeniden başla.' : hintText!),
+                  child: _banner(stuck ? t('Yasal dökme kalmadı — geri al ya da yeniden başla.') : ct(hintText)),
                 ),
         ),
         Expanded(
@@ -500,14 +501,14 @@ class _WaterBoardState extends State<_WaterBoard> with SingleTickerProviderState
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al (hamle sayılır)',
+                  tooltip: t('Geri al (hamle sayılır)'),
                   onPressed: (st['can_undo'] == true || _queue.isNotEmpty) && !s.finished ? _undo : null),
               const SizedBox(width: 24),
               RimIconButton(Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu (en fazla 2★)', onPressed: s.finished ? null : () => s.act({'hint': true})),
+                  tooltip: t('İpucu (en fazla 2★)'), onPressed: s.finished ? null : () => s.act({'hint': true})),
               const SizedBox(width: 24),
               RimIconButton(Icons.add_rounded,
-                  tooltip: 'Ek boş tüp (en fazla 2★)',
+                  tooltip: t('Ek boş tüp (en fazla 2★)'),
                   badge: st['extra_used'] == true ? null : '1',
                   onPressed: s.finished || st['extra_used'] == true ? null : () => s.act({'extra_tube': true})),
             ],

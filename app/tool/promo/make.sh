@@ -1,5 +1,6 @@
 #!/bin/zsh
 # Renders the promo video from the real screens: build/promo/clever_place_tanitim.mp4
+# Needs macOS, ffmpeg, the Rust toolchain and, for the 3D cube clip, Playwright (see below).
 #   ./tool/promo/make.sh            everything
 #   ./tool/promo/make.sh sudoku iq  only these clips again, then re-join
 set -e
@@ -14,6 +15,12 @@ PROMO_MONO=${MONO:h} PROMO_SYMBOLS="/System/Library/Fonts/Apple Symbols.ttf" PRO
   flutter test tool/promo/promo_video_test.dart > $OUT/render.log 2>&1 || true
 grep -E "^scene " $OUT/render.log | tail -50
 rm -f libcp_core.dylib
+
+# The 3D cube player is a web page: record it in a browser and lay it into its clip (cube3d.py).
+# Needs Playwright: pip install playwright && playwright install chromium (PROMO_PY = that python).
+if [[ ( $# -eq 0 || " $* " == *" cube_player "* ) && -n $(print $OUT/[0-9][0-9]_cube_player.mp4(N)) ]]; then
+  ${PROMO_PY:-python3} tool/promo/cube3d.py $OUT
+fi
 
 # Join the clips. The video has no sound: the app ships without music.
 : > $OUT/list.txt

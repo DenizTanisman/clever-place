@@ -76,7 +76,7 @@ void main() {
     await tester.pump();
     await settle(tester);
     expect(find.byType(GameHomeScreen), findsOneWidget);
-    await tester.tap(find.byIcon(Icons.arrow_back));
+    await tester.tap(find.byTooltip('Geri'));
     await tester.pump();
     await settle(tester);
     expect(find.byType(GameHomeScreen), findsNothing);

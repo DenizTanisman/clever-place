@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Görev Değiştirme board. The cue (a lit zone, a coloured frame, or nothing on cue-free levels)
@@ -169,8 +170,8 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
-                      Text('Puan ${(st['score'] as num?)?.toInt() ?? 0}', style: Lux.ui(18, weight: FontWeight.w700)),
-                      Text('Seviye ${st['sprint_stage'] ?? 1} · Doğru $correct · Hata $errors',
+                      Text(tf('Puan {0}', [(st['score'] as num?)?.toInt() ?? 0]), style: Lux.ui(18, weight: FontWeight.w700)),
+                      Text(tf('Seviye {0} · Doğru {1} · Hata {2}', [st['sprint_stage'] ?? 1, correct, errors]),
                           maxLines: 1, overflow: TextOverflow.ellipsis, style: small),
                     ],
                   ),
@@ -192,10 +193,10 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
         children: [
           Row(
             children: [
-              Text('Deneme ${math.min(trial + 1, trials)} / $trials', style: Lux.ui(15, weight: FontWeight.w700)),
+              Text(tf('Deneme {0} / {1}', [math.min(trial + 1, trials), trials]), style: Lux.ui(15, weight: FontWeight.w700)),
               const SizedBox(width: 10),
               Expanded(
-                  child: Text('Doğru $correct · Hata $errors',
+                  child: Text(tf('Doğru {0} · Hata {1}', [correct, errors]),
                       maxLines: 1,
                       overflow: TextOverflow.ellipsis,
                       textAlign: TextAlign.end,
@@ -207,10 +208,10 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
           const SizedBox(height: 4),
           Row(
             children: [
-              if (st['cue'] == 'none') Text('Sıra: ${st['pattern']}', style: small),
+              if (st['cue'] == 'none') Text(Lang.en ? 'Order: ${st['pattern']}' : tf('Sıra: {0}', [st['pattern']]), style: small),
               const SizedBox(width: 10),
               Expanded(
-                child: Text(cost == null ? 'Geçiş maliyeti –' : 'Geçiş maliyeti $cost ms',
+                child: Text(cost == null ? t('Geçiş maliyeti –') : tf('Geçiş maliyeti {0} ms', [cost]),
                     maxLines: 1, overflow: TextOverflow.ellipsis, textAlign: TextAlign.end, style: small),
               ),
             ],
@@ -282,7 +283,7 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                 rule: rules[i],
                 glow: lit && active == i,
                 tintRest: labels,
-                label: labels ? rules[i]['question'] as String : null,
+                label: labels ? ct(rules[i]['question'] as String) : null,
                 target: (target != null && _shownRule == i) ? target : null,
                 feedback: stage == 'feedback' && _shownRule == i ? fb : (0.0, 0.0),
                 last: stage == 'feedback' && _shownRule == i ? last : null,
@@ -313,7 +314,7 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                       height: 10,
                       decoration: BoxDecoration(color: _ruleColor(r['key'] as String?), shape: BoxShape.circle)),
                   const SizedBox(width: 6),
-                  Text(r['question'] as String, style: Lux.ui(13, color: Lux.ink)),
+                  Text(ct(r['question'] as String), style: Lux.ui(13, color: Lux.ink)),
                 ]),
             ],
           )
@@ -324,8 +325,8 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
               child: Text(
                 cue == 'none'
                     ? (stage == 'feedback' && last != null && last['correct'] != true
-                        ? 'Bu deneme: ${rules[(last['rule'] as num).toInt()]['question']}'
-                        : 'İpucu yok · sıra ${st['pattern']}')
+                        ? tf('Bu deneme: {0}', [ct(rules[(last['rule'] as num).toInt()]['question'] as String?)])
+                        : tf('İpucu yok · sıra {0}', [st['pattern']]))
                     : '',
                 style:
                     Lux.ui(13, color: stage == 'feedback' && last?['correct'] != true ? Lux.bordeauxLight : Lux.muted),
@@ -413,7 +414,7 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                   right: 8,
                   bottom: 10,
                   child: Text(
-                    last['timeout'] == true ? 'Geç kaldın' : 'Doğrusu: ${_expectedLabel(last, rules)}',
+                    last['timeout'] == true ? t('Geç kaldın') : tf('Doğrusu: {0}', [ct(_expectedLabel(last, rules))]),
                     textAlign: TextAlign.center,
                     style: Lux.ui(15, color: Lux.bordeauxLight, weight: FontWeight.w600),
                   ),
@@ -451,7 +452,7 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                 child: _AnswerButton(
                   lines: [
                     for (var i = 0; i < rules.length; i++)
-                      (rules[i][side] as String, _ruleColor(rules[i]['key'] as String?), hi == null ? null : hi == i),
+                      (ct(rules[i][side] as String), _ruleColor(rules[i]['key'] as String?), hi == null ? null : hi == i),
                   ],
                   arrow: side == 'left' ? Icons.west_rounded : Icons.east_rounded,
                   enabled: enabled,
@@ -471,19 +472,23 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
     final endless = st['mode'] == 'endless';
     final cueText = switch (cue) {
       'zone' => rules.length == 4
-          ? 'Hedef hangi köşede çıkarsa o köşenin kuralı geçerli.'
-          : 'Hedef hangi bölgede çıkarsa o bölgenin kuralı geçerli${rules.length == 2 ? ' (üst / alt)' : ' (üst / orta / alt)'}.',
-      'color' => 'Hedeften hemen önce çerçeve kuralın rengini alır.',
-      _ => 'İpucu yok. Kurallar ikişer deneme sırayla gelir (${st['pattern']}); sırayı kendin takip et.',
+          ? t('Hedef hangi köşede çıkarsa o köşenin kuralı geçerli.')
+          : tf('Hedef hangi bölgede çıkarsa o bölgenin kuralı geçerli{0}.',
+              [rules.length == 2 ? t(' (üst / alt)') : t(' (üst / orta / alt)')]),
+      'color' => t('Hedeften hemen önce çerçeve kuralın rengini alır.'),
+      _ => tf('İpucu yok. Kurallar ikişer deneme sırayla gelir ({0}); sırayı kendin takip et.', [st['pattern']]),
     };
+    // Zone names by language here, not through the dictionary: 'Orta' there is the "Medium" tier.
     final zoneNames = rules.length == 4
-        ? const ['Sol üst', 'Sağ üst', 'Sol alt', 'Sağ alt']
+        ? (Lang.en
+            ? const ['Top left', 'Top right', 'Bottom left', 'Bottom right']
+            : const ['Sol üst', 'Sağ üst', 'Sol alt', 'Sağ alt'])
         : rules.length == 3
-            ? const ['Üst', 'Orta', 'Alt']
-            : const ['Üst', 'Alt'];
+            ? (Lang.en ? const ['Top', 'Middle', 'Bottom'] : const ['Üst', 'Orta', 'Alt'])
+            : (Lang.en ? const ['Top', 'Bottom'] : const ['Üst', 'Alt']);
     return _CardOverlay(
-      heading: endless ? 'Sprint · 60 saniye' : (st['title'] as String? ?? 'Görev Değiştirme'),
-      button: 'Başla',
+      heading: endless ? t('Sprint · 60 saniye') : ct(st['title'] as String? ?? t('Görev Değiştirme')),
+      button: t('Başla'),
       onPressed: () {
         HapticFeedback.selectionClick();
         s.act({'start': true});
@@ -504,9 +509,9 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
                   Expanded(
                     child: Text.rich(TextSpan(children: [
                       if (cue == 'zone') TextSpan(text: '${zoneNames[i]}: ', style: Lux.ui(14, color: Lux.muted)),
-                      TextSpan(text: '${rules[i]['question']}  ', style: Lux.ui(15, weight: FontWeight.w600)),
+                      TextSpan(text: '${ct(rules[i]['question'] as String?)}  ', style: Lux.ui(15, weight: FontWeight.w600)),
                       TextSpan(
-                          text: '← ${rules[i]['left']} · ${rules[i]['right']} →',
+                          text: '← ${ct(rules[i]['left'] as String?)} · ${ct(rules[i]['right'] as String?)} →',
                           style: Lux.ui(14, color: Lux.goldLight)),
                     ])),
                   ),
@@ -517,14 +522,14 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
           Text(cueText, textAlign: TextAlign.center, style: Lux.ui(15)),
           if (cue == 'zone' && st['labels'] != true) ...[
             const SizedBox(height: 6),
-            Text('Bölge adları oyunda yazmayacak: şimdi ezberle.',
+            Text(t('Bölge adları oyunda yazmayacak: şimdi ezberle.'),
                 textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.bordeauxLight)),
           ],
           const SizedBox(height: 8),
           Text(
             endless
-                ? 'Puan = doğru − hata. Her 8 doğruda yeni kural ya da daha kısa hazırlık.'
-                : '${st['trials']} deneme · 3★: %90 doğruluk ve düşük geçiş maliyeti · %75 altı kaybettirir.',
+                ? t('Puan = doğru − hata. Her 8 doğruda yeni kural ya da daha kısa hazırlık.')
+                : tf('{0} deneme · 3★: %90 doğruluk ve düşük geçiş maliyeti · %75 altı kaybettirir.', [st['trials']]),
             textAlign: TextAlign.center,
             style: Lux.ui(13, color: Lux.muted),
           ),
@@ -533,16 +538,16 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
     );
   }
 
-  Widget _final(Map<String, dynamic> st, double t) {
+  Widget _final(Map<String, dynamic> st, double age) {
     final acc = (((st['accuracy'] as num?) ?? 0) * 100).round();
     final cost = (st['switch_cost_ms'] as num?)?.toInt();
     final rep = (st['rt_repeat_ms'] as num?)?.toInt();
     final sw = (st['rt_switch_ms'] as num?)?.toInt();
-    final appear = Curves.easeOutBack.transform((t / 0.35).clamp(0.0, 1.0));
+    final appear = Curves.easeOutBack.transform((age / 0.35).clamp(0.0, 1.0));
     final won = st['status'] == 'won' || st['mode'] == 'endless';
     return Center(
       child: Opacity(
-        opacity: (t / 0.2).clamp(0.0, 1.0),
+        opacity: (age / 0.2).clamp(0.0, 1.0),
         child: Transform.scale(
           scale: 0.85 + 0.15 * appear,
           child: Container(
@@ -555,13 +560,13 @@ class _TaskSwitchBoardState extends State<_TaskSwitchBoard> with SingleTickerPro
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                Text(Lux.upper('Geçiş maliyeti'),
+                Text(Lux.upper(t('Geçiş maliyeti')),
                     style: Lux.ui(12, color: Lux.gold, weight: FontWeight.w600, spacing: 2.2)),
                 const SizedBox(height: 4),
                 FoilText(cost == null ? '–' : '$cost ms', style: Lux.numeral(46)),
                 const SizedBox(height: 6),
-                Text('Tekrar ${rep ?? '–'} ms · Geçiş ${sw ?? '–'} ms', style: Lux.ui(14)),
-                Text('Doğruluk %$acc', style: Lux.ui(14, color: Lux.muted)),
+                Text(tf('Tekrar {0} ms · Geçiş {1} ms', [rep ?? '–', sw ?? '–']), style: Lux.ui(14)),
+                Text(tf('Doğruluk %{0}', [acc]), style: Lux.ui(14, color: Lux.muted)),
               ],
             ),
           ),

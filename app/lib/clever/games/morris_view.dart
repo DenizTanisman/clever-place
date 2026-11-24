@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Cırtcak (Nine Men's Morris) against the core's AI.
@@ -739,7 +740,7 @@ class _MorrisBoardState extends State<_MorrisBoard> with SingleTickerProviderSta
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al (en fazla 1★)',
+                  tooltip: t('Geri al (en fazla 1★)'),
                   onPressed: st['can_undo'] == true && !_aiBusy && !s.finished && _dragId == null
                       ? () {
                           setState(() => _selected = null);
@@ -748,7 +749,7 @@ class _MorrisBoardState extends State<_MorrisBoard> with SingleTickerProviderSta
                       : null),
               const SizedBox(width: 28),
               RimIconButton(Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: en iyi hamle (en fazla 1★)',
+                  tooltip: t('İpucu: en iyi hamle (en fazla 1★)'),
                   onPressed: _yourTurn && st['hint'] is! Map
                       ? () {
                           s.act({'hint': true});
@@ -799,11 +800,11 @@ class _MorrisBoardState extends State<_MorrisBoard> with SingleTickerProviderSta
                 crossAxisAlignment: CrossAxisAlignment.start,
                 mainAxisSize: MainAxisSize.min,
                 children: [
-                  Text(rank, maxLines: 1, overflow: TextOverflow.ellipsis, style: Lux.display(23, color: Lux.goldLight)),
+                  Text(ct(rank), maxLines: 1, overflow: TextOverflow.ellipsis, style: Lux.display(23, color: Lux.goldLight)),
                   Row(
                     children: [
                       Flexible(
-                        child: Text(sub,
+                        child: Text(t(sub),
                             maxLines: 1,
                             overflow: TextOverflow.clip,
                             style: Lux.ui(13,
@@ -824,9 +825,9 @@ class _MorrisBoardState extends State<_MorrisBoard> with SingleTickerProviderSta
                 ],
               ),
             ),
-            _counter(0, _int(capt[0]), 'Aldığın'),
+            _counter(0, _int(capt[0]), t('Aldığın')),
             const SizedBox(width: 14),
-            _counter(1, _int(capt[1]), 'Aldığı'),
+            _counter(1, _int(capt[1]), t('Aldığı')),
           ],
         ),
       ),
@@ -853,27 +854,27 @@ class _MorrisBoardState extends State<_MorrisBoard> with SingleTickerProviderSta
     String text;
     var color = Lux.muted;
     if (s.finished) {
-      text = st['end_reason'] as String? ?? '';
+      text = ct(st['end_reason'] as String?);
       color = s.status == 'won' ? Lux.gold : (s.status == 'lost' ? Lux.bordeauxLight : Lux.goldLight);
     } else if (st['turn'] != 'you' || _aiBusy) {
-      text = 'Rakibin sırası';
+      text = t('Rakibin sırası');
     } else if (_pending) {
-      text = 'Değirmen! Rakibin parlayan taşlarından birini al';
+      text = t('Değirmen! Rakibin parlayan taşlarından birini al');
       color = Lux.gold;
     } else if (_placing) {
-      text = 'Taş yerleştir: tepsiden sürükle ya da noktaya dokun';
+      text = t('Taş yerleştir: tepsiden sürükle ya da noktaya dokun');
       color = Lux.ink;
     } else if ((st['flying'] as List?)?.first == true) {
-      text = 'Uçuş! Taşın istediği boş noktaya gidebilir';
+      text = t('Uçuş! Taşın istediği boş noktaya gidebilir');
       color = Lux.goldLight;
     } else {
-      text = 'Bir taşını çizgi boyunca komşu boş noktaya kaydır';
+      text = t('Bir taşını çizgi boyunca komşu boş noktaya kaydır');
       color = Lux.ink;
     }
     final extra = <String>[];
     final drawIn = _int(st['draw_in'], -1);
-    if (!s.finished && drawIn >= 0 && drawIn <= 30) extra.add('Taş alınmazsa ${(drawIn / 2).ceil()} tur sonra berabere');
-    if (!s.finished && _int(st['repeats']) >= 2) extra.add('Bu konum ${st['repeats']}. kez');
+    if (!s.finished && drawIn >= 0 && drawIn <= 30) extra.add(tf('Taş alınmazsa {0} tur sonra berabere', [(drawIn / 2).ceil()]));
+    if (!s.finished && _int(st['repeats']) >= 2) extra.add(tf('Bu konum {0}. kez', [st['repeats']]));
     // Fixed height: a status text that wraps must never resize (and so snap) the board.
     return SizedBox(
       height: 54,

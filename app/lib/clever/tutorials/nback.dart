@@ -9,6 +9,14 @@ const nbackTutorials = GameTutorials(
 - Her bölümde **çeldiriciler** var: eşleşme olmayan öğelerin beşte biri (ileride üçte birine yakını) bilerek tanıdık gelecek şekilde seçilir: bir adım erken ya da geç tekrarlar ve "bundan sonra hep bu geliyordu" dizileri. Bir çeldiriciye dokunursan kartın altında hangisi olduğu yazar; sonuç ekranı kaç çeldiriciye takıldığını gösterir.
 - Bölümler ilerledikçe N 1'den 9'a çıkar; harfler ve iki basamaklı sayılar gelir, tempo 2,5 sn'den 1,8 sn'ye iner, N büyüdükçe kullanılan öğe sayısı azalır (9'dan 6'ya), yani tekrarlar ve çeldiriciler sıklaşır. Her yeni N'in ilk iki bölümü rakamla ve 5 hakla başlar.
 - **İkili N-Back (uyarlanır)**: 3×3 ızgarada bir hücre yanar, içinde bir rakam görünür; konum eşleşirse **Konum**, rakam eşleşirse **Rakam** düğmesine bas. 10 blok; %90 ve üstü N'i artırır, %75 altı azaltır. Puan = ortalama N × 100.''',
+  rulesEn: '''
+- One item at a time appears on the card (a digit; later a letter or a two-digit number); it shows for half a second, then the card goes blank.
+- If the item matches the one **N steps back**, tap anywhere on the card. "3-Back" = three back. The first N items can't be matches; taps there don't count.
+- Catch **17 matches** to win the level (a clean round takes 2–2.5 minutes). A wrong tap and a missed match each cost one **life** (the ⊘ at the bottom left); you have 3 (5 in the first levels and in the first two levels of each new N), and the level ends when they run out.
+- Stars: no mistakes **3**, one mistake **2**, a win with more mistakes **1**. Opening the "N back" helper strip under the eye icon caps you at 1 star.
+- Every level has **lures**: a fifth of the non-matching items (close to a third later on) are picked on purpose to feel familiar: repeats one step too early or too late, and "this always came next" sequences. If you tap a lure, the card says which one it was; the results screen shows how many lures caught you.
+- As you progress, N rises from 1 to 9; letters and two-digit numbers come in, the pace drops from 2.5 s to 1.8 s, and the bigger N gets, the fewer different items are used (from 9 down to 6), so repeats and lures come more often. The first two levels of each new N start with digits and 5 lives.
+- **Dual N-Back (adaptive)**: a cell lights up in a 3×3 grid with a digit inside; if the position matches press **Position**, if the digit matches press **Digit**. 10 blocks; 90% or more raises N, under 75% lowers it. Score = average N × 100.''',
   mid: [
     TutorialSection(
       'Kayan pencere: son N\'i içinden söyle',

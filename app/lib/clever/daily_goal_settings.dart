@@ -4,6 +4,7 @@ import 'catalog.dart';
 import 'daily_mix.dart';
 import 'lux.dart';
 import 'progress.dart';
+import 'i18n/lang.dart';
 
 /// Settings › "Günün hedefi": a collapsible card that picks which categories feed the daily mix and,
 /// per category, optionally which of its games. Every change re-draws today's picks (they are derived
@@ -35,8 +36,8 @@ class _DailyGoalSettingsState extends State<DailyGoalSettings> {
     final s = DailySettings.of(p);
     final picks = dailyPicks(Progress.clock(), s);
     final summary = picks.isEmpty
-        ? 'Kapalı: hiç kategori seçili değil'
-        : '${picks.length} oyun · ${[for (final k in picks) k.category.label].join(', ')}';
+        ? t('Kapalı: hiç kategori seçili değil')
+        : tf('{0} oyun · {1}', [picks.length, [for (final k in picks) t(k.category.label)].join(', ')]);
     return LuxCard(
       highlight: _open,
       padding: EdgeInsets.zero,
@@ -57,7 +58,7 @@ class _DailyGoalSettingsState extends State<DailyGoalSettings> {
                     child: Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text('Günlük karışık', style: Lux.ui(16.5, weight: FontWeight.w600)),
+                        Text(t('Günlük karışık'), style: Lux.ui(16.5, weight: FontWeight.w600)),
                         const SizedBox(height: 2),
                         Text(summary, style: Lux.ui(13, color: Lux.muted)),
                       ],
@@ -89,14 +90,14 @@ class _DailyGoalSettingsState extends State<DailyGoalSettings> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Text('Her gün açık kategorilerin her birinden rastgele bir oyun gelir; liste gün boyu aynı kalır, '
-              'ertesi gün yenilenir. Bir değişiklik bugünün seçimini de yeniler.',
+          Text(t('Her gün açık kategorilerin her birinden rastgele bir oyun gelir; liste gün boyu aynı kalır, '
+              'ertesi gün yenilenir. Bir değişiklik bugünün seçimini de yeniler.'),
               style: Lux.ui(13, color: Lux.muted)),
           for (final c in dailyCategories) _category(p, s, c),
           const SizedBox(height: 12),
           Align(
             alignment: Alignment.centerRight,
-            child: GoldButton('Varsayılana dön',
+            child: GoldButton(t('Varsayılana dön'),
                 key: const ValueKey('daily-settings-reset'),
                 icon: Icons.restart_alt_rounded,
                 outlined: true,
@@ -119,7 +120,7 @@ class _DailyGoalSettingsState extends State<DailyGoalSettings> {
         Container(height: 1, color: Lux.lineFaint),
         Row(
           children: [
-            Expanded(child: Text(c.label, style: Lux.ui(15.5, weight: FontWeight.w600, color: on ? Lux.ink : Lux.muted))),
+            Expanded(child: Text(t(c.label), style: Lux.ui(15.5, weight: FontWeight.w600, color: on ? Lux.ink : Lux.muted))),
             Switch(
               key: ValueKey('daily-cat-${c.name}'),
               value: on,
@@ -132,15 +133,15 @@ class _DailyGoalSettingsState extends State<DailyGoalSettings> {
           ],
         ),
         if (on && games.length > 1) ...[
-          Text('Sadece şu oyunlar:', style: Lux.ui(12.5, color: Lux.muted)),
+          Text(t('Sadece şu oyunlar:'), style: Lux.ui(12.5, color: Lux.muted)),
           const SizedBox(height: 6),
           Wrap(
             spacing: 6,
             runSpacing: 6,
             children: [
-              _pill('Hepsi', only.isEmpty, ValueKey('daily-all-${c.name}'), () => p.setDailyOnly(c.name, const [])),
+              _pill(t('Hepsi'), only.isEmpty, ValueKey('daily-all-${c.name}'), () => p.setDailyOnly(c.name, const [])),
               for (final g in games)
-                _pill(g.name, only.contains(g.id), ValueKey('daily-only-${c.name}-${g.id}'), () {
+                _pill(t(g.name), only.contains(g.id), ValueKey('daily-only-${c.name}-${g.id}'), () {
                   final next = {...only};
                   if (!next.remove(g.id)) next.add(g.id);
                   // Every game ticked is the same as no limit.

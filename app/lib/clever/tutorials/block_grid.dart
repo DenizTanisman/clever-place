@@ -9,6 +9,14 @@ const blockGridTutorials = GameTutorials(
 - Sürüklerken parlayan gölge taşın sığdığını, kırmızı gölge sığmadığını gösterir; silinecek satır, sütun ve kareler parlar.
 - Bölüm geçtikçe ya da satır/sütun/kare temizledikçe yeni **görünümler** açılır (Ahşap, Şeker, Mermer, Neon, Buz, Mücevher). Puanların yanındaki palet düğmesinden seçebilirsin.
 - Bölümler: puan topla, belirli sayıda birim temizle, koyu taş blokları kır, sıkışmadan dayan. Yıldızlar: hedefe taş hakkının %70'iyle ulaşırsan 3, %85'iyle 2 yıldız; dayanma bölümünde taş başına puana göre.''',
+  rulesEn: '''
+- Drag one of the three pieces below onto the 9×9 board. Pieces **can't be rotated**.
+- Every full **row**, **column** and **3×3 square** is cleared. Clearing more than one in the same move is a combo: 18·c² points for c units.
+- Each placement scores 1 point per cell. Moves that clear grow your **streak** and earn bonus points; 3 moves in a row that clear nothing reset it. Clearing the whole board gives +300.
+- Once all three pieces are placed, a new set of three arrives. If **none** of the remaining pieces fits, the game is over; a piece that doesn't fit is dimmed.
+- While you drag, a glowing shadow means the piece fits and a red one means it doesn't; the rows, columns and squares about to clear light up.
+- New **skins** unlock as you pass levels and clear rows, columns and squares (Wood, Candy, Marble, Neon, Ice, Gem). Pick one with the palette button next to the score.
+- Levels: reach a score, clear a set number of units, break dark stone blocks, survive without getting stuck. Stars: reach the goal within 70% of your piece allowance for 3, within 85% for 2; in survival levels, by points per piece.''',
   mid: [
     TutorialSection(
       'Büyük taşa yer ayır',

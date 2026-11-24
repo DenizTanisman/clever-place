@@ -7,9 +7,10 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
-/// Duvar Yarışı board against the AI.
+/// Koridor board against the AI.
 ///
 /// Layout: opponent strip (rank medallion, "düşünüyor…", its shortest path and its obsidian walls) ·
 /// the lacquered 9×9 board with recessed gold-rimmed squares and dark grooves · your strip (turn,
@@ -642,7 +643,7 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
     final st = s.state;
     if (st['pawns'] is! Map) return const SizedBox();
     final path = st['path'] as Map? ?? const {};
-    final rank = (st['title'] as String?) ?? '';
+    final rank = ct(st['title'] as String?);
     final thinking = _aiTimer != null || _aiInFlight;
     final playing = !s.finished;
     final aiPath = (path['ai'] as num?)?.toInt() ?? 0;
@@ -705,7 +706,7 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
                                 const SizedBox(height: 2),
                                 thinking
                                     ? const _ThinkingText(key: ValueKey('think'))
-                                    : Text('Yolu $aiPath adım', style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
+                                    : Text(tf('Yolu {0} adım', [aiPath]), style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
                               ],
                             ),
                           ),
@@ -715,7 +716,7 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
                               mainAxisAlignment: MainAxisAlignment.end,
                               crossAxisAlignment: CrossAxisAlignment.end,
                               children: [
-                                Text('DUVAR  ${_left(false)}', style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
+                                Text(tf('DUVAR  {0}', [_left(false)]), style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
                               ],
                             ),
                           ),
@@ -744,16 +745,16 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
                                   fit: BoxFit.scaleDown,
                                   child: Text(
                                       !playing
-                                          ? 'Oyun bitti'
+                                          ? t('Oyun bitti')
                                           : _yourTurn
-                                              ? 'Sıra sende'
-                                              : 'Rakip oynuyor',
+                                              ? t('Sıra sende')
+                                              : t('Rakip oynuyor'),
                                       style: Lux.ui(14,
                                           color: _yourTurn ? Lux.goldLight : Lux.muted, weight: FontWeight.w600)),
                                 ),
                                 const SizedBox(height: 2),
-                                Text('Yolun $myPath adım', style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
-                                Text('DUVAR  ${_left(true)}', style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
+                                Text(tf('Yolun {0} adım', [myPath]), style: Lux.ui(12, color: Lux.muted, spacing: 0.8)),
+                                Text(tf('DUVAR  {0}', [_left(true)]), style: Lux.ui(10, color: Lux.muted, spacing: 1.4)),
                               ],
                             ),
                           ),
@@ -787,7 +788,7 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               RimIconButton(Icons.undo_rounded,
-                  tooltip: 'Geri al (yıldızı 1\'e düşürür)',
+                  tooltip: t('Geri al (yıldızı 1\'e düşürür)'),
                   onPressed: st['can_undo'] == true && _canInput
                       ? () {
                           setState(() => _sel = false);
@@ -798,7 +799,7 @@ class _CorridorBoardState extends State<_CorridorBoard> with SingleTickerProvide
               _PathToggle(on: _showPath, onTap: () => setState(() => _showPath = !_showPath)),
               const SizedBox(width: 18),
               RimIconButton(_hintBusy ? Icons.hourglass_top_rounded : Icons.lightbulb_outline_rounded,
-                  tooltip: 'İpucu: en iyi hamle (yıldızı 1\'e düşürür)', onPressed: _canInput ? _askHint : null),
+                  tooltip: t('İpucu: en iyi hamle (yıldızı 1\'e düşürür)'), onPressed: _canInput ? _askHint : null),
             ],
           ),
         ),
@@ -913,7 +914,7 @@ class _PathToggle extends StatelessWidget {
             children: [
               Icon(Icons.more_vert_rounded, size: 18, color: on ? Lux.goldLight : Lux.muted),
               const SizedBox(width: 4),
-              Text('yolum', style: Lux.ui(14, color: on ? Lux.goldLight : Lux.muted, weight: FontWeight.w600, spacing: 0.8)),
+              Text(t('yolum'), style: Lux.ui(14, color: on ? Lux.goldLight : Lux.muted, weight: FontWeight.w600, spacing: 0.8)),
             ],
           ),
         ),
@@ -1004,7 +1005,7 @@ class _ThinkingTextState extends State<_ThinkingText> with SingleTickerProviderS
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.end,
         children: [
-          Text('düşünüyor', style: Lux.ui(12, color: _rose, spacing: 0.8)),
+          Text(t('düşünüyor'), style: Lux.ui(12, color: _rose, spacing: 0.8)),
           for (var i = 0; i < 3; i++)
             Transform.translate(
               offset: Offset(0, -3 * math.max(0, math.sin((_c.value - i * 0.18) * 2 * math.pi))),

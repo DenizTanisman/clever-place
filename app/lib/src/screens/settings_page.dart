@@ -5,6 +5,7 @@ import '../../clever/lux.dart';
 import '../../l10n/app_localizations.dart';
 import '../app/app_controllers.dart';
 import '../audio/sfx_controller.dart';
+import '../../clever/i18n/lang.dart';
 
 AppLocalizations _l(BuildContext c) => AppLocalizations.of(c)!;
 
@@ -93,13 +94,8 @@ class SettingsPage extends StatelessWidget {
                                 scope.locale.locale?.languageCode ?? Localizations.localeOf(context).languageCode;
                             Widget opt(String code, String label) =>
                                 _choice(label, current == code, () => scope.locale.setLocale(Locale(code)));
-                            return Column(
-                              children: [
-                                _pair(opt('tr', 'Türkçe'), opt('en', 'English')),
-                                const SizedBox(height: 10),
-                                _pair(opt('ru', 'Русский'), opt('es', 'Español')),
-                              ],
-                            );
+                            // Clever Place is Turkish or English.
+                            return _pair(opt('tr', 'Türkçe'), opt('en', 'English'));
                           },
                         ),
                         _heading(context, l.settingsTheme),
@@ -115,7 +111,7 @@ class SettingsPage extends StatelessWidget {
                           ),
                         ),
                         // Clever Place's daily mix; Turkish only, like the rest of the hub.
-                        _heading(context, 'Günün hedefi'),
+                        _heading(context, t('Günün hedefi')),
                         const DailyGoalSettings(),
                       ],
                     ),

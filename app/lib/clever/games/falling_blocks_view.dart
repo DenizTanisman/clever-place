@@ -8,6 +8,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'falling_blocks_gesture.dart';
 
@@ -425,7 +426,7 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
     if (status != 'playing' && _pStatus == 'playing' && clr.isNotEmpty) _pendingEnd = 2;
 
     if (newEvent) {
-      _label = Lux.upper(et);
+      _label = Lux.upper(ct(et));
       _labelAt = now;
       _labelStrong = strongText || clr.length >= 4;
       if (_clearing) {
@@ -681,7 +682,7 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
               for (var i = 0; i < hud.length; i++)
                 Expanded(child: _stat(i, '${(hud[i] as List)[0]}', '${hud[i][1]}')),
               RimIconButton(_paused ? Icons.play_arrow_rounded : Icons.pause_rounded,
-                  tooltip: _paused ? 'Devam' : 'Duraklat', onPressed: s.finished ? null : () => _setPaused(!_paused)),
+                  tooltip: _paused ? t('Devam') : t('Duraklat'), onPressed: s.finished ? null : () => _setPaused(!_paused)),
             ],
           ),
         ),
@@ -703,7 +704,7 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
                     width: side,
                     child: GestureDetector(
                       onTap: canHold ? () => _act('hold') : null,
-                      child: _panel('SAKLA', [hold], dpr, dim: !canHold),
+                      child: _panel(t('SAKLA'), [hold], dpr, dim: !canHold),
                     ),
                   ),
                   const SizedBox(width: 4),
@@ -760,9 +761,9 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
                                       child: Column(
                                         mainAxisAlignment: MainAxisAlignment.center,
                                         children: [
-                                          Text(Lux.upper('Duraklatıldı'), style: Lux.display(18)),
+                                          Text(Lux.upper(t('Duraklatıldı')), style: Lux.display(18)),
                                           const SizedBox(height: 16),
-                                          GoldButton('Devam',
+                                          GoldButton(t('Devam'),
                                               icon: Icons.play_arrow_rounded, onPressed: () => _setPaused(false)),
                                         ],
                                       ),
@@ -776,7 +777,7 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
                     ),
                   ),
                   const SizedBox(width: 4),
-                  SizedBox(width: side, child: _panel('SIRADAKİ', next, dpr)),
+                  SizedBox(width: side, child: _panel(t('SIRADAKİ'), next, dpr)),
                 ],
               ),
             );
@@ -835,7 +836,7 @@ class _FallingBlocksState extends State<_FallingBlocks> with SingleTickerProvide
   Widget _stat(int i, String label, String value) => Column(
         children: [
           _Roll(value, key: ValueKey('hud$i$label'), style: Lux.ui(20, color: Lux.goldLight, weight: FontWeight.w700)),
-          Text(label, style: Lux.ui(11, color: Lux.muted, spacing: 1)),
+          Text(ct(label), style: Lux.ui(11, color: Lux.muted, spacing: 1)),
         ],
       );
 

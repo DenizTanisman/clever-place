@@ -7,6 +7,12 @@ const digitSpanTutorials = GameTutorials(
 - İleri bölümlerde dizi ile cevap arasına bir **işlem sorusu** girer (doğru mu, yanlış mı?). Cevapla ama diziyi bırakma.
 - Bir bölüm 5 denemedir. Yıldızlar: 5/5 → 3, 4/5 → 2, 3/5 → 1; daha azı başarısız. Ara görevde hata yaparsan en fazla 2 yıldız.
 - Uyarlanır mod kapasiteni ölçer: üst üste iki doğru diziyi bir uzatır, bir yanlış bir kısaltır; aynı uzunlukta iki kez yanılınca o bölüm biter. Önce ileri, sonra geri dizi. Puan = 10 × ileri + 15 × geri.''',
+  rulesEn: '''
+- Digits appear on screen one at a time: one per second in the first levels, faster later. When the sequence ends, type it on the keypad and press **OK**.
+- **Forward:** in the order you saw them. **Backward:** from last to first. **Sorted:** smallest to largest. **Letter-number:** first the digits smallest to largest, then the letters in alphabetical order.
+- In later levels a **math question** comes between the sequence and your answer (true or false?). Answer it, but hold on to the sequence.
+- A level is 5 trials. Stars: 5/5 → 3, 4/5 → 2, 3/5 → 1; fewer is a fail. A mistake on the in-between task caps you at 2 stars.
+- Adaptive mode measures your capacity: two correct sequences in a row add one digit, one mistake takes one away; two misses at the same length end that part. Forward first, then backward. Score = 10 × forward + 15 × backward.''',
   mid: [
     TutorialSection(
       'Gruplama: 3-3-4',

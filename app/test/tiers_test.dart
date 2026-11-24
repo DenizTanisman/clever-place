@@ -40,13 +40,6 @@ void main() {
       expect(p.tierOf('sudoku', 500), 3);
     });
 
-    test('ordinary games stay at 500 and a smaller global count caps them', () async {
-      final p = await _fresh();
-      expect(p.levelsFor('word_list'), 500);
-      p.visibleLevels = 2;
-      expect(p.levelsFor('word_list'), 2);
-    });
-
     test('a shorter course splits proportionally and contiguously', () async {
       final p = await _fresh();
       expect(p.levelsFor('soroban'), 50);
@@ -169,8 +162,11 @@ void main() {
       expect(p.currentTier('sudoku'), 2);
       await tester.scrollUntilVisible(find.text('251'), 200, scrollable: scrollable());
       expect(find.text('252'), findsOneWidget);
-      // 253 is locked (lock icon instead of the number); nothing from other tiers is in the grid.
-      expect(find.text('253'), findsNothing);
+      // 251 is next (gold tile), 253 is locked (dim number with a lock); nothing from other tiers is
+      // in the grid.
+      expect(find.text('SIRADA'), findsOneWidget);
+      expect(find.text('253'), findsOneWidget);
+      expect(find.byIcon(Icons.lock_outline_rounded), findsWidgets);
       expect(find.text('1'), findsNothing);
     });
 

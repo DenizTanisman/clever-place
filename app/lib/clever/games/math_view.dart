@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Mental Aritmetik board: timer ring, big gold question, answer field, feedback flash and a
@@ -260,14 +261,14 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  endless ? '${st['score'] ?? 0} puan' : 'Soru ${math.min(index + 1, total?.toInt() ?? 0)} / $total',
+                  endless ? tf('{0} puan', [st['score'] ?? 0]) : tf('Soru {0} / {1}', [math.min(index + 1, total?.toInt() ?? 0), total]),
                   style: Lux.ui(18, color: Lux.ink, weight: FontWeight.w700),
                 ),
                 const SizedBox(height: 2),
                 Text(
                   endless
-                      ? 'Zorluk ${st['tier']} · Doğru ${st['correct']}'
-                      : 'Doğru ${st['correct']} · Yanlış ${(st['wrong'] as num) + (st['skipped'] as num)}',
+                      ? tf('Zorluk {0} · Doğru {1}', [st['tier'], st['correct']])
+                      : tf('Doğru {0} · Yanlış {1}', [st['correct'], (st['wrong'] as num) + (st['skipped'] as num)]),
                   style: Lux.ui(13, color: Lux.muted),
                 ),
                 if (!endless && total != null) ...[
@@ -291,7 +292,7 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
                       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
                       decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(20), border: Border.all(color: Lux.gold.withValues(alpha: 0.6))),
-                      child: Text('Hile', style: Lux.ui(12, color: Lux.gold)),
+                      child: Text(t('Hile'), style: Lux.ui(12, color: Lux.gold)),
                     ),
                   ),
                 ),
@@ -337,9 +338,9 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 if (q != null) ...[
-                  Text(Lux.upper(q['label'] as String), style: Lux.ui(12, color: Lux.gold, spacing: 2.2, weight: FontWeight.w700)),
+                  Text(Lux.upper(ct(q['label'] as String)), style: Lux.ui(12, color: Lux.gold, spacing: 2.2, weight: FontWeight.w700)),
                   const SizedBox(height: 4),
-                  Text(q['prompt'] as String, textAlign: TextAlign.center, style: Lux.ui(16, color: Lux.muted)),
+                  Text(ct(q['prompt'] as String), textAlign: TextAlign.center, style: Lux.ui(16, color: Lux.muted)),
                   const SizedBox(height: 10),
                   // Outgoing question lifts and fades; the next one rises in from below.
                   AnimatedSwitcher(
@@ -361,7 +362,7 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
                       fit: BoxFit.scaleDown,
                       child: ShaderMask(
                         shaderCallback: (r) => Lux.goldGradient.createShader(r),
-                        child: Text(q['text'] as String,
+                        child: Text(ct(q['text'] as String),
                             maxLines: 1, style: Lux.display(big, color: Colors.white, spacing: 1.5)),
                       ),
                     ),
@@ -488,8 +489,8 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
     final skipped = last['skipped'] == true;
     final pts = (last['points'] as num?)?.toInt() ?? 0;
     final text = ok
-        ? (pts > 0 ? 'Doğru · +$pts' : 'Doğru')
-        : '${skipped ? 'Geçildi' : 'Yanlış'} · ${last['text']} = ${last['answer']}';
+        ? (pts > 0 ? tf('Doğru · +{0}', [pts]) : t('Doğru'))
+        : '${skipped ? t('Geçildi') : t('Yanlış')} · ${ct(last['text'] as String?)} = ${last['answer']}';
     return TweenAnimationBuilder<double>(
       key: ValueKey(serial),
       tween: Tween(begin: 0, end: 1),
@@ -561,9 +562,9 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
               Row(children: [for (final k in r) Expanded(child: _KeyButton(label: k, onTap: () => _key(k), accent: !_isDigit(k)))]),
             Row(
               children: [
-                Expanded(child: _KeyButton(label: 'Geç', onTap: _skip, accent: true, small: true)),
+                Expanded(child: _KeyButton(label: t('Geç'), onTap: _skip, accent: true, small: true)),
                 Expanded(child: _KeyButton(label: '0', onTap: () => _key('0'))),
-                Expanded(flex: 2, child: _KeyButton(label: 'Tamam', onTap: _submit, primary: true, small: true)),
+                Expanded(flex: 2, child: _KeyButton(label: t('Tamam'), onTap: _submit, primary: true, small: true)),
               ],
             ),
           ],
@@ -603,33 +604,33 @@ class _MathBoardState extends State<_MathBoard> with SingleTickerProviderStateMi
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   if (trick != null) ...[
-                    Text(Lux.upper('Hile kartı'), style: Lux.ui(12, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
+                    Text(Lux.upper(t('Hile kartı')), style: Lux.ui(12, color: Lux.gold, spacing: 2.4, weight: FontWeight.w700)),
                     const SizedBox(height: 6),
-                    Text(trick['title'] as String, style: Lux.display(19, spacing: 1)),
+                    Text(ct(trick['title'] as String), style: Lux.display(19, spacing: 1)),
                     const SizedBox(height: 14),
                     for (final l in lines)
                       Padding(
                         padding: const EdgeInsets.only(bottom: 8),
-                        child: Text(l, style: Lux.ui(16, color: Lux.ink, weight: FontWeight.w500)),
+                        child: Text(ct(l), style: Lux.ui(16, color: Lux.ink, weight: FontWeight.w500)),
                       ),
                   ] else ...[
-                    Text(endless ? 'Sprint' : (st['title'] as String? ?? ''), style: Lux.display(20, spacing: 1)),
+                    Text(endless ? 'Sprint' : ct(st['title'] as String?), style: Lux.display(20, spacing: 1)),
                     const SizedBox(height: 12),
                     Text(
                       endless
-                          ? '60 saniye. Doğru cevaplar seriyi büyütür, seri zorluğu ve puanı artırır. Yanlışta zorluk düşer.'
-                          : '${st['total']} soru. Yanlış cevapta doğrusu gösterilir ve sıradaki soruya geçilir.',
+                          ? t('60 saniye. Doğru cevaplar seriyi büyütür, seri zorluğu ve puanı artırır. Yanlışta zorluk düşer.')
+                          : tf('{0} soru. Yanlış cevapta doğrusu gösterilir ve sıradaki soruya geçilir.', [st['total']]),
                       style: Lux.ui(16, color: Lux.ink, weight: FontWeight.w500),
                     ),
                   ],
                   if (start && !endless) ...[
                     const SizedBox(height: 6),
-                    Text(st['goal'] as String? ?? '', style: Lux.ui(14, color: Lux.muted)),
+                    Text(ct(st['goal'] as String?), style: Lux.ui(14, color: Lux.muted)),
                   ],
                   const SizedBox(height: 18),
                   Center(
                     child: GoldButton(
-                      start ? 'Başla' : 'Devam',
+                      start ? t('Başla') : t('Devam'),
                       icon: start ? Icons.play_arrow_rounded : Icons.close_rounded,
                       onPressed: () {
                         if (start) {

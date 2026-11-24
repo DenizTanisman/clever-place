@@ -12,6 +12,17 @@ const gonogoTutorials = GameTutorials(
 - Bir bölüm 20 uyaranla başlar, ileri bölümlerde 40'a çıkar. Puan **dengeli doğruluktur**: dokunma, kaydırma ve durma ayrı ayrı puanlanır, sonra ortalaması alınır.
 - Yıldızlar: doğruluk %90 ve üstü, ortalama tepki de hedef sürenin altındaysa 3; %80 ve üstü 2; %70 ve üstü 1. %70 altında bölümü tekrar oynarsın.
 - **Sonsuz akış**: bütün kurallar açık, 3 can, her hata bir can götürür. Doğru gittikçe akış hızlanır, hata yapınca biraz yavaşlar. Puan = doğru tepki sayısı.''',
+  rulesEn: '''
+- A **shape** appears in the middle of the screen: either a **circle** or a **square**.
+- If it's a **square**, **do nothing**: no tap, no swipe. Even if it has an arrow on it. Holding back is the right answer here.
+- A **circle** with no arrow: **tap** anywhere on the screen.
+- A **circle** with an **emerald (green) arrow**: **swipe in the arrow's direction**.
+- A **circle** with a **burgundy arrow**: **swipe the opposite way** (down if the arrow points up, right if it points left).
+- Tapping a circle that has an arrow, swiping on a circle without one, or swiping the wrong way is a **mistake**. If time runs out it counts as a **miss**; tapping when no shape is showing counts as **early**.
+- The rules arrive one by one: at first just circles and squares, then emerald arrows (left-right first, then four directions), then burgundy arrows. In later levels **trap arrows** appear on squares too, and the pace picks up.
+- A level starts at 20 stimuli and rises to 40 in later levels. The score is **balanced accuracy**: taps, swipes and holds are scored separately, then averaged.
+- Stars: 90% accuracy or more with an average reaction under the target time is 3; 80% or more 2; 70% or more 1. Below 70% you replay the level.
+- **Endless stream**: every rule is on, 3 lives, each mistake costs a life. The stream speeds up while you are right and slows a little when you slip. Score = number of correct responses.''',
   mid: [
     TutorialSection(
       'Adım adım: önce şekil, sonra ok',

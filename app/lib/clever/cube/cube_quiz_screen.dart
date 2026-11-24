@@ -4,6 +4,7 @@ import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'cube_book.dart';
 import 'cube_book_screen.dart';
@@ -182,7 +183,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
           child: SafeArea(
             child: Column(
               children: [
-                CubeHeader('Küp testi',
+                CubeHeader(t('Küp testi'),
                     action: _asked == 0
                         ? null
                         : Padding(
@@ -223,12 +224,12 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
     return Column(
       children: [
         row([
-          chip('Hepsi', _book == null, () => _filter()),
-          for (final b in books) chip(b.title, _book == b.asset, () => _filter(book: b.asset)),
+          chip(t('Hepsi'), _book == null, () => _filter()),
+          for (final b in books) chip(t(b.title), _book == b.asset, () => _filter(book: b.asset)),
         ]),
         if (book != null)
           row([
-            chip('Tüm bölümler', _section == null, () => _filter(book: book.asset)),
+            chip(t('Tüm bölümler'), _section == null, () => _filter(book: book.asset)),
             for (final s in book.sections)
               if (book.questions.any((q) => q.section == s.id))
                 chip(s.title, _section == s.id, () => _filter(book: book.asset, section: s.id)),
@@ -237,9 +238,9 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
           padding: const EdgeInsets.fromLTRB(20, 2, 20, 0),
           child: Row(
             children: [
-              Text('Öğrenildi $learned / ${pool.length}', style: Lux.ui(13, color: Lux.muted)),
+              Text(tf('Öğrenildi {0} / {1}', [learned, pool.length]), style: Lux.ui(13, color: Lux.muted)),
               const Spacer(),
-              Text('Sırada $due', style: Lux.ui(13, color: Lux.goldLight)),
+              Text(tf('Sırada {0}', [due]), style: Lux.ui(13, color: Lux.goldLight)),
             ],
           ),
         ),
@@ -250,7 +251,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
   Widget _question() {
     final q = _q;
     if (q == null) {
-      return Center(child: Text('Bu seçimde soru yok.', style: Lux.ui(15, color: Lux.muted)));
+      return Center(child: Text(t('Bu seçimde soru yok.'), style: Lux.ui(15, color: Lux.muted)));
     }
     final book = _bookOf(q);
     final picked = _picked;
@@ -264,7 +265,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                '${book.title} · ${book.sectionTitle(q.section)}${box > 0 ? ' · kutu $box' : ' · yeni'}',
+                '${t(book.title)} · ${book.sectionTitle(q.section)}${box > 0 ? tf(' · kutu {0}', [box]) : t(' · yeni')}',
                 style: Lux.ui(12, color: Lux.gold, spacing: 0.6),
               ),
               const SizedBox(height: 8),
@@ -282,7 +283,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(picked == q.answer ? 'Doğru' : 'Yanlış',
+                Text(picked == q.answer ? t('Doğru') : t('Yanlış'),
                     style: Lux.ui(17, weight: FontWeight.w700, color: picked == q.answer ? Lux.good : Lux.bad)),
                 if (q.why.isNotEmpty) ...[
                   const SizedBox(height: 4),
@@ -299,7 +300,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
             children: [
               if (q.anchor != null)
                 GoldButton(
-                  'Defterde gör',
+                  t('Defterde gör'),
                   icon: Icons.menu_book_outlined,
                   outlined: true,
                   onPressed: () => Navigator.push(
@@ -311,7 +312,7 @@ class _CubeQuizScreenState extends State<CubeQuizScreen> {
                 )
               else
                 const SizedBox.shrink(),
-              GoldButton('Sonraki', icon: Icons.arrow_forward, onPressed: _next),
+              GoldButton(t('Sonraki'), icon: Icons.arrow_forward, onPressed: _next),
             ],
           ),
         ],

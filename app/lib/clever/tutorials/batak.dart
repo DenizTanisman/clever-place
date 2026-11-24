@@ -14,6 +14,14 @@ const batakTutorials = GameTutorials(
 - **Puan:** ihaleci tutturursa **aldığı el kadar** alır, tutturamazsa ihalesi kadar **eksi** yazar (batar). Diğerleri aldıkları el kadar alır.
 - **Maç:** biri **51 puana** ulaşınca ya da **10 el** bitince en yüksek puan kazanır. Kazanırsan 2 yıldız; ipucusuz ve 10+ farkla 3; ipucu aldıysan 1.
 - Kartı masaya **sürükle** ya da iki kez dokun. Göz düğmesi (**Açık oyna**) bütün elleri ve rakiplerin **Neden?** satırlarını gösterir; puan hapına dokununca cetvel açılır.''',
+  rulesEn: '''
+- 52 cards, 4 players, everyone plays **for themselves**. You are South; play goes clockwise. Everyone gets 13 cards.
+- **Bidding:** starting left of the dealer, each player bids how many tricks they will take (at least **4**, at most 13) or says **pass**; a player who passes doesn't bid again. If the first three pass, the dealer must take it at 4.
+- The bid winner **chooses trumps** and leads the first trick. Trumps can't be led until someone has played one (until **trumps are broken**), unless you hold nothing but trumps.
+- **Follow suit.** If you can beat the highest card on the table, you **must** (overtake). If you can't follow suit, you **must trump**; if a trump is already on the table, beat it if you can. With neither the suit nor a trump, play anything.
+- **Scoring:** if the bidder makes the bid, they score **the tricks they took**; if not, they score **minus** their bid (they go down). Everyone else scores the tricks they took.
+- **Match:** when someone reaches **51 points** or after **10 hands**, the highest score wins. A win is 2 stars; a win without hints and by 10+ points, 3; with a hint, 1.
+- **Drag** a card to the table or double-tap it. The eye button (**Open play**) shows every hand and the opponents' **Why?** lines; tap the score pill to open the scoresheet.''',
   mid: [
     TutorialSection(
       'El değerlendirme ve ihale sayısı',

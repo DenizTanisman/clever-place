@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// İz Sürme board: labelled circles on a velvet board, tapped one by one in order.
@@ -220,7 +221,7 @@ class _TrailBoardState extends State<_TrailBoard> with SingleTickerProviderState
     final par = ((st['par_ms'] as num?) ?? 1) / 1000;
     final limit = ((st['limit_ms'] as num?) ?? 1) / 1000;
     final over = el > par;
-    String f(double x) => x.toStringAsFixed(1).replaceAll('.', ',');
+    String f(double x) => Lang.en ? x.toStringAsFixed(1) : x.toStringAsFixed(1).replaceAll('.', ',');
     final timeColor = el > par * 1.5 ? Lux.bordeauxLight : (over ? const Color(0xFFE8B86A) : Lux.goldLight);
     return Padding(
       padding: const EdgeInsets.fromLTRB(22, 10, 22, 4),
@@ -235,7 +236,7 @@ class _TrailBoardState extends State<_TrailBoard> with SingleTickerProviderState
               const SizedBox(width: 4),
               Padding(
                 padding: const EdgeInsets.only(bottom: 6),
-                child: Text('sn · hedef ${f(par)}', style: Lux.ui(13, color: Lux.muted)),
+                child: Text(tf('sn · hedef {0}', [f(par)]), style: Lux.ui(13, color: Lux.muted)),
               ),
               const SizedBox(width: 8),
               Expanded(
@@ -243,7 +244,7 @@ class _TrailBoardState extends State<_TrailBoard> with SingleTickerProviderState
                   crossAxisAlignment: CrossAxisAlignment.end,
                   children: [
                     Text('$done / $total', style: Lux.ui(18, weight: FontWeight.w700)),
-                    Text('Hata $errors', style: Lux.ui(13, color: errors == 0 ? Lux.muted : Lux.bordeauxLight)),
+                    Text(tf('Hata {0}', [errors]), style: Lux.ui(13, color: errors == 0 ? Lux.muted : Lux.bordeauxLight)),
                   ],
                 ),
               ),
@@ -293,16 +294,18 @@ class _TrailBoardState extends State<_TrailBoard> with SingleTickerProviderState
     final variant = st['variant'] as String? ?? 'a';
     final start = st['start_label'] ?? '1';
     final how = switch (variant) {
-      'a' => 'Sayılara küçükten büyüğe sırayla dokun: 1, 2, 3…',
-      'a_rev' => 'Geriye say: en büyük sayıdan ($start) başlayıp 1\'e kadar sırayla dokun.',
-      'b' => 'Sayı ve harfe dönüşümlü dokun: 1-A-2-B-3-C… Türk alfabesiyle: C\'den sonra Ç, G\'den sonra Ğ, I\'dan sonra İ…',
-      'b_rev' => 'B dizisine sondan başa dokun: $start ile başla, 1\'de bitir.',
-      _ => 'Her sayı iki renkte var. 1\'den başla, her adımda renk değiştir: '
-          '${st['start_color'] == 1 ? 'yakut 1, altın 2, yakut 3' : 'altın 1, yakut 2, altın 3'}…',
+      'a' => t('Sayılara küçükten büyüğe sırayla dokun: 1, 2, 3…'),
+      'a_rev' => tf('Geriye say: en büyük sayıdan ({0}) başlayıp 1\'e kadar sırayla dokun.', [start]),
+      'b' => t(
+          'Sayı ve harfe dönüşümlü dokun: 1-A-2-B-3-C… Türk alfabesiyle: C\'den sonra Ç, G\'den sonra Ğ, I\'dan sonra İ…'),
+      'b_rev' => tf('B dizisine sondan başa dokun: {0} ile başla, 1\'de bitir.', [start]),
+      _ => tf('Her sayı iki renkte var. 1\'den başla, her adımda renk değiştir: {0}…', [
+          st['start_color'] == 1 ? t('yakut 1, altın 2, yakut 3') : t('altın 1, yakut 2, altın 3'),
+        ]),
     };
     return _CardOverlay(
-      heading: st['title'] as String? ?? 'İz Sürme',
-      button: 'Başla',
+      heading: st['title'] is String ? ct(st['title'] as String) : t('İz Sürme'),
+      button: t('Başla'),
       onPressed: () {
         HapticFeedback.selectionClick();
         s.act({'start': true});
@@ -313,18 +316,17 @@ class _TrailBoardState extends State<_TrailBoard> with SingleTickerProviderState
           Text(how, textAlign: TextAlign.center, style: Lux.ui(16, weight: FontWeight.w500)),
           const SizedBox(height: 10),
           Text(
-            'Sıradaki daireye dokun: doğruysa çizgi bir önceki daireden ona uzanır. '
-            'Yanlış daireye dokunmak hata sayılır; her yanlış dokunuş ayrı sayılır.',
+            t('Sıradaki daireye dokun: doğruysa çizgi bir önceki daireden ona uzanır. Yanlış daireye dokunmak hata sayılır; her yanlış dokunuş ayrı sayılır.'),
             textAlign: TextAlign.center,
             style: Lux.ui(14, color: Lux.ink),
           ),
           if ((st['circles'] as List? ?? const []).length > ((st['seq_len'] as num?)?.toInt() ?? 0)) ...[
             const SizedBox(height: 8),
-            Text('Dizide olmayan tuzak daireler var: onlara dokunma.',
+            Text(t('Dizide olmayan tuzak daireler var: onlara dokunma.'),
                 textAlign: TextAlign.center, style: Lux.ui(14, color: Lux.bordeauxLight)),
           ],
           const SizedBox(height: 10),
-          Text('3 yıldız: hedef sürede, hatasız · 2 yıldız: 1,5 katı süre, en çok 2 hata',
+          Text(t('3 yıldız: hedef sürede, hatasız · 2 yıldız: 1,5 katı süre, en çok 2 hata'),
               textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.muted)),
         ],
       ),

@@ -10,6 +10,7 @@ pub mod blof;
 pub mod change_spot;
 pub mod color_gates;
 pub mod corridor;
+pub mod donen_sayilar;
 pub mod corsi;
 pub mod crowns;
 pub mod digit_span;
@@ -42,6 +43,7 @@ pub mod trail;
 pub mod verbal_social;
 pub mod water_sort;
 pub mod word_list;
+pub mod zihin_asisi;
 
 /// Every game id the core knows.
 pub const GAME_IDS: &[&str] = &[
@@ -50,7 +52,7 @@ pub const GAME_IDS: &[&str] = &[
     "schulte", "stroop", "tracking", "gonogo", "color_gates", "palace", "digit_span", "corsi", "pairs",
     "corridor", "push", "soroban", "task_switch", "trail", "rsvp", "change_spot", "scene_quiz", "word_list",
     "batak", "okey", "blof", "blackjack", "iq",
-    "verbal_social",
+    "verbal_social", "zihin_asisi", "donen_sayilar",
 ];
 
 pub fn create(game: &str, level: u32, mode: &str) -> Result<Box<dyn Session>, String> {
@@ -92,6 +94,8 @@ pub fn create(game: &str, level: u32, mode: &str) -> Result<Box<dyn Session>, St
         "blackjack" => blackjack::create(level, mode),
         "iq" => iq::create(level, mode),
         "verbal_social" => verbal_social::create(level, mode),
+        "zihin_asisi" => zihin_asisi::create(level, mode),
+        "donen_sayilar" => donen_sayilar::create(level, mode),
         _ => Err(format!("unknown game: {game}")),
     }
 }

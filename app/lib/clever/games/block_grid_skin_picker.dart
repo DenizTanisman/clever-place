@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'block_grid_skins.dart';
 
@@ -41,9 +42,9 @@ class BlockSkinPicker extends StatelessWidget {
               const SizedBox(height: 10),
               Container(width: 40, height: 4, decoration: BoxDecoration(color: Lux.line, borderRadius: BorderRadius.circular(2))),
               const SizedBox(height: 12),
-              Text('Görünümler', style: Lux.display(24, color: Lux.goldLight)),
+              Text(t('Görünümler'), style: Lux.display(24, color: Lux.goldLight)),
               const SizedBox(height: 4),
-              Text('En yüksek bölüm: ${store.level} · Temizlenen: ${store.lines}',
+              Text(tf('En yüksek bölüm: {0} · Temizlenen: {1}', [store.level, store.lines]),
                   style: Lux.ui(13, color: Lux.muted)),
               const SizedBox(height: 12),
               Flexible(
@@ -119,10 +120,10 @@ class BlockSkinPicker extends StatelessWidget {
               ),
             ),
             const SizedBox(height: 8),
-            Text(skin.name, style: Lux.ui(16, color: open ? Lux.ink : Lux.muted, weight: FontWeight.w700)),
+            Text(t(skin.name), style: Lux.ui(16, color: open ? Lux.ink : Lux.muted, weight: FontWeight.w700)),
             const SizedBox(height: 2),
             if (open)
-              Text(skin.blurb, maxLines: 2, overflow: TextOverflow.ellipsis, style: Lux.ui(12, color: Lux.muted))
+              Text(t(skin.blurb), maxLines: 2, overflow: TextOverflow.ellipsis, style: Lux.ui(12, color: Lux.muted))
             else ...[
               Text(skin.unlockText, maxLines: 3, style: Lux.ui(11.5, color: Lux.goldLight)),
               const SizedBox(height: 5),

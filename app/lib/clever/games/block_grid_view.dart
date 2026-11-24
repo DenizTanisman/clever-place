@@ -6,6 +6,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'block_grid_skin_picker.dart';
 import 'block_grid_skins.dart';
@@ -589,11 +590,11 @@ class _BlockGridState extends State<_BlockGrid> with SingleTickerProviderStateMi
       final et = (st['et'] as String?) ?? '';
       final call = blockCallout(units, streak, allClear);
       _labelSerial++;
-      _labelWord = Lux.upper(call.word);
+      _labelWord = Lux.upper(t(call.word));
       _labelTier = call.tier;
       _labelScore = '+$gained';
       final detail = et.replaceAll('Tertemiz!', '').split(' · ').where((p) => p.trim().isNotEmpty && !p.startsWith('+'));
-      _labelText = Lux.upper(detail.join(' · '));
+      _labelText = Lux.upper(detail.map(ct).join(' · '));
       _labelPos = origin;
       _labelDelay = landAt - now;
       _store?.addLines(units).then(_announce);
@@ -751,7 +752,7 @@ class _BlockGridState extends State<_BlockGrid> with SingleTickerProviderStateMi
         alignment: Alignment.center,
         children: [
           IconButton(
-            tooltip: 'Görünüm',
+            tooltip: t('Görünüm'),
             padding: EdgeInsets.zero,
             onPressed: _openPicker,
             icon: Icon(Icons.palette_outlined, color: skin.accent, size: 24),
@@ -796,7 +797,7 @@ class _BlockGridState extends State<_BlockGrid> with SingleTickerProviderStateMi
                 border: Border.all(color: skin.accentLight.withValues(alpha: 0.8)),
                 boxShadow: [BoxShadow(color: skin.accent.withValues(alpha: 0.3 + 0.4 * hot), blurRadius: 8 + 10 * hot)],
               ),
-              child: Text('SERİ ×$streak', style: Lux.ui(12.5, color: Colors.white, weight: FontWeight.w700, spacing: 1)),
+              child: Text(tf('SERİ ×{0}', [streak]), style: Lux.ui(12.5, color: Colors.white, weight: FontWeight.w700, spacing: 1)),
             ),
     );
   }
@@ -905,7 +906,7 @@ class _BlockGridState extends State<_BlockGrid> with SingleTickerProviderStateMi
   Widget _stat(int i, String label, String value) => Column(
         children: [
           _Roll(value, key: ValueKey('hud$i$label'), style: Lux.ui(21, color: Lux.goldLight, weight: FontWeight.w700)),
-          Text(label, style: Lux.ui(11, color: Lux.muted, spacing: 1)),
+          Text(ct(label), style: Lux.ui(11, color: Lux.muted, spacing: 1)),
         ],
       );
 }
@@ -960,8 +961,8 @@ class _UnlockToastState extends State<_UnlockToast> with SingleTickerProviderSta
   @override
   Widget build(BuildContext context) {
     final skin = widget.skins.last;
-    final names = widget.skins.map((s) => s.name).join(', ');
-    final title = widget.skins.length == 1 ? 'Yeni görünüm açıldı: $names' : 'Yeni görünümler açıldı: $names';
+    final names = widget.skins.map((s) => t(s.name)).join(', ');
+    final title = widget.skins.length == 1 ? tf('Yeni görünüm açıldı: {0}', [names]) : tf('Yeni görünümler açıldı: {0}', [names]);
     final dpr = MediaQuery.devicePixelRatioOf(context);
     final top = MediaQuery.paddingOf(context).top + 12;
     return Positioned(
@@ -1013,7 +1014,7 @@ class _UnlockToastState extends State<_UnlockToast> with SingleTickerProviderSta
                       children: [
                         Text(title, style: Lux.ui(15, color: Lux.ink, weight: FontWeight.w700)),
                         const SizedBox(height: 2),
-                        Text('Dokun ve dene', style: Lux.ui(12.5, color: skin.accentLight)),
+                        Text(t('Dokun ve dene'), style: Lux.ui(12.5, color: skin.accentLight)),
                       ],
                     ),
                   ),

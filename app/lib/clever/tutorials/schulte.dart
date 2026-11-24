@@ -8,6 +8,13 @@ const schulteTutorials = GameTutorials(
 - Tablo 4×4'ten 7×7'ye büyür. İleri bölümlerde boyutlar ve açılar karışır, sonra tablo her doğru dokunuşta **yeniden karışır**.
 - Yanlış dokunuş saatine **2 saniye** ekler. Süre sınırı geniştir; dolarsa bölüm biter.
 - Yıldızlar (cezalar dahil süreyle): hedef sürenin altında 3, hedefin 1,5 katına kadar 2, bitirirsen 1 yıldız.''',
+  rulesEn: '''
+- Tap the scrambled symbols **in order**, as fast as you can. The **Next** pill at the top shows the symbol you are looking for.
+- Keep your eyes on the **gold dot** in the middle; catch the symbols with your peripheral vision.
+- Types: numbers (1 → N), backward (N → 1), letters (A → Z in the Turkish alphabet, without Ğ and I) and **two colors**: white ones ascending, red ones descending, alternating.
+- The table grows from 4×4 to 7×7. In later levels sizes and angles get mixed, then the table **reshuffles** after every correct tap.
+- A wrong tap adds **2 seconds** to your clock. The time limit is generous; if it runs out, the level ends.
+- Stars (by time, penalties included): under the target time 3, up to 1.5 times the target 2, finish for 1 star.''',
   mid: [
     TutorialSection(
       'Yumuşak odak: gözünü gezdirme',

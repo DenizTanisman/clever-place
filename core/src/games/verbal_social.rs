@@ -4,7 +4,7 @@
 //! The bank is `app/assets/verbal_social/items.json`, embedded with `include_str!`. It is written
 //! in `app/tool/verbal_social/src/*.json`, where the correct option is always first, and merged by
 //! `assign_positions.py`. That script places each answer at a seeded position, with exact quotas
-//! per (section, difficulty).
+//! per (section, difficulty). QC steps and changes are in `app/tool/verbal_social/qc_log.md`.
 //! Item fields: `id, section, subtype, difficulty (orta|zor), prompt, options[4], answer, why`.
 //!
 //! **Levels (45 × 10, every item exactly once).**

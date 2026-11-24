@@ -43,7 +43,7 @@ void main() {
   });
 
   group('assets', () {
-    // Counts of the sources: the notebook has 155 cards and 184 <svg>
+    // Counts of the sources (tool/cube/lessons.py): kup-defteri.html has 155 cards and 184 <svg>
     // (one is the arrow-marker <defs>); 84 of the old recall pack's 87 questions still hold,
     // 99 more are made from the cards and the glossary. Tek El Planı: 5 sections, 28 questions.
     test('Küp Defteri', () {
@@ -81,7 +81,7 @@ void main() {
       }
     });
 
-    // The index comes from the web player's own logic on the notebook; in a browser
+    // tool/cube/player_index.py runs the web player's own logic on kup-defteri.html; in a browser
     // the notebook shows 220 ▶ (125 Megaminx, 78 3x3, 15 2x2, 2 4x4).
     test('3D player: index fits the notebook, the offline page is bundled', () async {
       final index = CubePlayerIndex.parse(await rootBundle.loadString(CubePlayerIndex.asset));

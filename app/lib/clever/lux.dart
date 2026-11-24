@@ -3,6 +3,7 @@ import 'dart:math' as math;
 import 'package:flutter/material.dart';
 
 import 'art/game_art.dart';
+import 'i18n/lang.dart';
 
 /// Clever Place design kit — "Zümrüt Kadife" (emerald velvet + antique gold leaf).
 ///
@@ -84,8 +85,8 @@ class Lux {
         fontFeatures: const [FontFeature.liningFigures()],
       );
 
-  /// Turkish-aware uppercase (dotted İ).
-  static String upper(String s) => s.replaceAll('i', 'İ').replaceAll('ı', 'I').toUpperCase();
+  /// Uppercase in the app's language: Turkish keeps the dotted İ, English plain ASCII ("MUSIC").
+  static String upper(String s) => Lang.en ? s.toUpperCase() : s.replaceAll('i', 'İ').replaceAll('ı', 'I').toUpperCase();
 }
 
 /// Emerald velvet background: lit from the top-left, vignetted, with a faint woven texture.

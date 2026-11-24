@@ -11,6 +11,15 @@ const surakartaTutorials = GameTutorials(
 - Kazanmak için rakibin bütün taşlarını al ya da onu **hamlesiz** bırak.
 - **Durma kuralı**: 40 hamle boyunca hiç taş alınmazsa ya da aynı konum 3 kez tekrarlanırsa oyun durur: taşı çok olan kazanır, eşitse berabere. Yani gerideyken beklemek seni kurtarmaz; önde kalmak zorundasın.
 - Yıldızlar: geri alma ve ipucu kullanmadan, en az **6 taşla** kazanırsan 3; geri alma/ipucu olmadan 2; kullandıysan 1 yıldız.''',
+  rulesEn: '''
+- 12 pieces each on a 6×6 board: you play the **pearl** pieces at the bottom, the opponent the **ruby** pieces at the top. You move first in odd levels, the opponent in even levels.
+- Normal move: step your piece to one of the 8 neighboring points that is **empty** (diagonals too). **Drag and drop** the piece, or tap the piece, then the target.
+- **Capture**: your piece travels as far as it likes along a circuit line (inner circuit emerald, outer circuit gold) and goes around **at least one** of the corner loops. The path must be clear (its starting point counts as empty); if the first piece it meets is an opponent's, it captures it and takes its place. Capturing is optional.
+- Captures work **in both directions**: you can also strike by heading **backward**, away from the opponent, and coming around through a loop. The path can pass through several loops and over the piece's own starting point.
+- In game: a piece with a capture shows a **gold loop mark** at its corner; tap it and the opponents it can take get a gold ring, with their paths shown as dashed lines ("×2" = passes through two loops). A piece with a **burgundy dashed ring** around it is in danger. The button with the infinity sign below plays a short animation.
+- To win, capture all of your opponent's pieces or leave them with **no move**.
+- **Stop rule**: if no piece is captured for 40 moves, or the same position repeats 3 times, the game stops: whoever has more pieces wins; if equal, it's a draw. So waiting while behind won't save you; you have to stay ahead.
+- Stars: win without undo or hints with at least **6 pieces** for 3; without undo/hints, 2; with them, 1 star.''',
   mid: [
     TutorialSection(
       'Halka ile alış: geriye doğru da',

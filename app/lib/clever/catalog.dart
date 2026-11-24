@@ -25,6 +25,7 @@ import 'games/palace_view.dart';
 import 'games/push_view.dart';
 import 'games/rsvp_view.dart';
 import 'games/scene_quiz_view.dart';
+import 'games/donen_sayilar_view.dart';
 import 'games/schulte_view.dart';
 import 'games/shikaku_view.dart';
 import 'games/soroban_view.dart';
@@ -36,6 +37,7 @@ import 'games/task_switch_view.dart';
 import 'games/tracking_view.dart';
 import 'games/trail_view.dart';
 import 'games/verbal_social_view.dart';
+import 'games/zihin_asisi_view.dart';
 import 'games/water_sort_view.dart';
 import 'games/word_list_view.dart';
 import 'tutorial.dart';
@@ -63,6 +65,7 @@ import 'tutorials/palace.dart';
 import 'tutorials/push.dart';
 import 'tutorials/rsvp.dart';
 import 'tutorials/scene_quiz.dart';
+import 'tutorials/donen_sayilar.dart';
 import 'tutorials/schulte.dart';
 import 'tutorials/shikaku.dart';
 import 'tutorials/soroban.dart';
@@ -74,11 +77,17 @@ import 'tutorials/task_switch.dart';
 import 'tutorials/tracking.dart';
 import 'tutorials/trail.dart';
 import 'tutorials/verbal_social.dart';
+import 'tutorials/zihin_asisi.dart';
 import 'tutorials/water_sort.dart';
 import 'tutorials/word_list.dart';
 
 typedef GameViewBuilder = Widget Function(
     BuildContext context, GameSession session);
+
+/// A game's always-available info page (Doğru Söz: "Bilgilendirme"). [state] is the running
+/// session's state in game, empty on the game page.
+typedef GameInfoPage = Widget Function(
+    BuildContext context, Map<String, dynamic> state);
 
 /// Declaration order is the hub's section order.
 enum GameCategory {
@@ -130,8 +139,27 @@ class GameInfo {
   /// Games that run outside the Rust core (Küp) open their own screen.
   final WidgetBuilder? customHome;
 
+  /// A level game that also plays free matches (XOX): any mode other than `level` is a match,
+  /// recorded as win / draw / loss under that mode, and titled by this.
+  final String Function(String mode)? matchTitle;
+
+  /// An extra section on the game page, above the levels (XOX: player card and free-match setup).
+  final Widget Function(BuildContext context, GameInfo game)? homeExtra;
+
+  /// Replaces the result card's headline (XOX: the match card with the player's style).
+  final Widget Function(BuildContext context, Map<String, dynamic> state)? resultCard;
+
   /// The hub card's second line for a [customHome] game.
   final String? cardLine;
+
+  /// Optional info page, opened from the in-game top bar and the game page.
+  final GameInfoPage? infoPage;
+
+  /// The info page's name (top bar tooltip, game page card).
+  final String infoLabel;
+
+  /// One line under [infoLabel] on the game page.
+  final String infoLine;
 
   /// False for a game that is reached only as a [sections] entry of another game's page (Soroban
   /// inside Mental Aritmetik): no hub card, never in the daily mix.
@@ -158,14 +186,20 @@ class GameInfo {
     this.tutorials = GameTutorials.empty,
     this.matchModes = const [],
     this.customHome,
+    this.matchTitle,
+    this.homeExtra,
+    this.resultCard,
     this.cardLine,
+    this.infoPage,
+    this.infoLabel = 'Bilgilendirme',
+    this.infoLine = '',
     this.inHub = true,
     this.sections = const [],
     this.speed = false,
   });
 }
 
-/// Every game the Rust core runs. The hub adds Küp, which has its own screens.
+/// Every game the Rust core runs (Küp is added by the hub: it has its own screens).
 const List<GameInfo> kCoreGames = [
   GameInfo(
       id: 'sudoku',
@@ -290,6 +324,17 @@ const List<GameInfo> kCoreGames = [
       view: mathView,
       tutorials: mathTutorials),
   GameInfo(
+      id: 'zihin_asisi',
+      name: 'Zihin Aşısı',
+      tagline: 'Manipülasyona karşı bağışıklık: 11 teknik',
+      glyph: 'Aşı',
+      tint: Color(0xFF1F6F5C),
+      category: GameCategory.mind,
+      hasEndless: true,
+      endlessLabel: 'Hatırlatma dozu',
+      view: zihinAsisiView,
+      tutorials: zihinAsisiTutorials),
+  GameInfo(
       id: 'nback',
       name: 'N-Back',
       tagline: 'Çalışma belleği antrenmanı',
@@ -309,6 +354,17 @@ const List<GameInfo> kCoreGames = [
       category: GameCategory.attention,
       view: schulteView,
       tutorials: schulteTutorials),
+  GameInfo(
+      id: 'donen_sayilar',
+      name: 'Dönen Sayılar',
+      tagline: 'Dönen halkalarda sırayla bul',
+      glyph: '12',
+      tint: Color(0xFF2E7F7A),
+      category: GameCategory.attention,
+      hasEndless: true,
+      endlessLabel: 'Sonsuz tur',
+      view: donenSayilarView,
+      tutorials: donenSayilarTutorials),
   GameInfo(
       id: 'stroop',
       name: 'Renk–Kelime',

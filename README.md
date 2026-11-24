@@ -2,34 +2,36 @@
 
 Clever Place, Android için hazırlanmış bir zekâ ve zihin oyunları koleksiyonu. Mantık bulmacaları, hafıza ve dikkat çalışmaları, tahta oyunları, kıraathane masaları ve zekâ küpü aynı uygulamada toplanıyor. Oyunların kuralları, bölüm üreticileri ve çözücüleri Rust ile yazıldı; arayüz Flutter ile çiziliyor.
 
-Uygulama tamamen çevrimdışı çalışır. Hesap, reklam ya da internet izni yoktur; ilerlemen yalnızca telefonunda saklanır. Arayüz ve oyun içerikleri Türkçedir.
+Uygulama tamamen çevrimdışı çalışır. Hesap, reklam ya da internet izni yoktur; ilerlemen yalnızca telefonunda saklanır. Arayüz Türkçe ya da İngilizce olabilir (Ayarlar › Dil); dile bağlı içerikler (dersler, kelime listeleri, sözel sorular, Zihin Aşısı mesajları) her iki dilde de Türkçedir.
 
 <p align="center">
-  <a href="media/clever_place_tanitim.mp4"><img src="media/clever_place_tanitim.webp" width="320" alt="Tanıtım videosu: ana ekran, ardından 33 oyun zor bölümlerinde oynanıyor"></a>
+  <a href="media/clever_place_tanitim.mp4"><img src="media/clever_place_tanitim.webp" width="320" alt="Promo video: the home screen, a game page, a level played to its end screen, then 35 games on hard levels and the cube's 3D player"></a>
 </p>
 
-Tanıtım videosu yukarıda kendiliğinden oynar (3 dakika 15 saniye, sessiz). Durdurup ileri geri sarmak için [videoyu oynatıcıda aç](media/clever_place_tanitim.mp4). Video 33 oyunu zor bölümlerinde ve küp sayfalarını gösterir; kıraathane oyunları videoda yoktur.
+Tanıtım videosu yukarıda kendiliğinden oynar (3 dakika 57 saniye, sessiz, İngilizce arayüzle). Durdurup ileri geri sarmak için [videoyu oynatıcıda aç](media/clever_place_tanitim.mp4). Video önce bir oyunun sayfasını, ardından o oyunun bir bölümünü sonuna kadar ve bölüm sonu ekranını gösterir; sonra 35 oyunu zor bölümlerinde, en sonda küp sayfalarını ve 3B oynatıcıda bir çözümü gösterir. Kıraathane oyunları videoda yoktur.
 
 <p align="center">
-  <img src="media/01_ana_ekran.jpg" width="19%" alt="Ana ekran: günün hedefi ve oyun kartları">
-  <img src="media/02_sudoku.jpg" width="19%" alt="Sudoku, 300. bölüm">
-  <img src="media/03_taclar.jpg" width="19%" alt="Taçlar, 300. bölüm">
-  <img src="media/04_itis.jpg" width="19%" alt="İtiş, 301. bölüm">
-  <img src="media/05_mucevher.jpg" width="19%" alt="Mücevher Birleştir, 300. bölüm">
+  <img src="media/01_home.jpg" width="19%" alt="Home screen: today's goal and game cards">
+  <img src="media/02_game_page.jpg" width="19%" alt="A game page: numbers, difficulty tiers, level grid and the next level's button">
+  <img src="media/03_level_end.jpg" width="19%" alt="End of a level: stars, time, mistakes and the tier's last ten times with a new record">
+  <img src="media/04_shikaku.jpg" width="19%" alt="Shikaku, level 300">
+  <img src="media/05_cube_3d.jpg" width="19%" alt="The 3D cube player solving a Y-perm">
 </p>
 
-Video ve görseller ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS ve ffmpeg gerekir).
+Video ve görseller ekran kaydı değildir: uygulamanın ekranları test ortamında kare kare çizilir, oyunları çekirdeğin ipuçları oynar; küpün 3B oynatıcısı (bir web sayfası) tarayıcıda kare kare kaydedilip aynı çerçeveye yerleştirilir. Ana ekrandaki yıldız ve ilerleme sayıları örnek değerlerdir. Yeniden üretmek için: `app/tool/promo/make.sh` (macOS, ffmpeg ve Playwright gerekir; Türkçe çekim için `PROMO_LANG=tr`).
 
 ## Neler var
 
 - Her gün seçtiğin kategorilerden birer oyun öneren **Günün hedefi**
-- Bölümlü oyunlarda Kolay, Orta, Zor ve Uzman kademeleri, yıldızlar ve haftalık ritim takibi
+- Her oyunun kendi sayfası: bölüm, yıldız ve kademe rekoru; Kolay, Orta, Zor ve Uzman kademeleri; sıradaki bölümü açan düğme. Kurallar ve dersler **Nasıl oynanır** düğmesinin arkasında
+- Bölüm sonu ekranı: yıldızlar, süre, hata ve ipucu; aynı kademedeki son on sürenin grafiği ve yeni rekor
 - Her oyunda kurallar; çoğunda orta ve ileri seviye dersler
 - Birçok oyunda sonsuz, sprint ya da uyarlanır mod
+- Türkçe ya da İngilizce arayüz
 
 ## Oyunlar
 
-Bu sürümde 7 kategoride **38 oyun** var.
+Bu sürümde 7 kategoride **40 oyun** var.
 
 ### Strateji (7)
 
@@ -39,17 +41,17 @@ Duvar Yarışı, İtiş, Cırtcak, Surakarta, Düşen Bloklar, Blok Merkezi, Mü
 
 N-Back, Hafıza Sarayı, Sayı Dizisi, Corsi Blokları, Eşleştirme, Sahne Hafızası, Kelime Listesi
 
-### Dikkat (9)
+### Dikkat (10)
 
-Schulte Tablosu, Renk–Kelime, Çoklu Takip, Dur ya da Geç, Renk Kapıları, Görev Değiştirme, İz Sürme, Hızlı Akış, Değişimi Yakala
+Schulte Tablosu, Renk–Kelime, Çoklu Takip, Dur ya da Geç, Renk Kapıları, Görev Değiştirme, İz Sürme, Hızlı Akış, Değişimi Yakala, Dönen Sayılar
 
 ### Mantık bulmacaları (8)
 
 Sudoku, Taçlar, Güneş & Ay, Shikaku, Renk Tüpleri, Hanoi Kuleleri, IQ Soruları, Sözel ve Sosyal Zeka
 
-### Zihin antrenmanı (2)
+### Zihin antrenmanı (3)
 
-Mental Aritmetik, Soroban (Mental Aritmetik sayfasının içinde)
+Mental Aritmetik, Soroban (Mental Aritmetik sayfasının içinde), Zihin Aşısı (manipülasyon tekniklerini tanıma)
 
 ### Kıraathane oyunları (4)
 

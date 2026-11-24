@@ -13,6 +13,14 @@ const blackjackTutorials = GameTutorials(
 - Masa **40 el**, **1.000 fişle** başlar: 1.000'in üstünde bitirirsen kazandın, tam 1.000 berabere, altında kaybettin. Fişin 10'un altına düşerse masa biter.
 - Her karar **temel stratejiye** göre puanlanır ("Doğru %"). Koç masası her karardan sonra doğrusunu ve nedenini söyler; Kart sayma masası 4 elde bir "Sayım kaç?" diye sorar.
 - Göz düğmesi (**Açık oyna**) krupiyenin kapalı kartını ve sıradaki 5 kartı gösterir; o masanın sonucuna "açık" yazılır.''',
+  rulesEn: '''
+- Goal: beat the dealer's total without going over 21. Face cards count 10, an Ace 1 or 11.
+- **Drag a chip onto the betting circle** (or tap a chip), then **Deal**. Bets are 10–500.
+- **Hit**, **Stand**, **Double** (on your first two cards; the bet doubles, you get one card) or **Split** (two cards of equal value, up to 4 hands; split aces get one card each).
+- The dealer **stands on 17** (soft 17 included); blackjack pays **3:2**. If the dealer shows an Ace, you are offered insurance. No surrender.
+- A table is **40 hands** and starts with **1,000 chips**: finish above 1,000 and you win, exactly 1,000 is a draw, below is a loss. If your chips drop below 10, the table ends.
+- Every decision is graded against **basic strategy** ("Correct %"). The Coach table tells you the right play and why after every decision; the Card counting table asks "What's the count?" every 4 hands.
+- The eye button (**Open play**) shows the dealer's hole card and the next 5 cards; that table's result is marked "open".''',
   mid: [
     TutorialSection(
       'Sert toplamlar: krupiyenin kartına bak',

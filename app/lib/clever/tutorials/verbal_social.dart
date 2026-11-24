@@ -9,6 +9,14 @@ const verbalSocialTutorials = GameTutorials(
 - Yıldızlar: 9–10 doğru **3**, 8 doğru **2**, 7 doğru **1** yıldız. 7'nin altında bölüm geçilmez; tekrar oynarsan **aynı sorular** gelir.
 - **Karışık** modu bütün sorulardan rastgele seçer: doğru cevaplar seriyi uzatır, üçüncü yanlışta oyun biter.
 - Bu oyun bir IQ ya da EQ testi değildir ve puan vermez. Amaç, düşünme ve insan okuma alışkanlığı kazanmak.''',
+  rulesEn: '''
+- **450 original questions** in three parts: **Verbal** (words and reasoning), **Social** (reading people) and **Emotional** (understanding and managing emotions).
+- Each level has **10 questions**. Levels come in turn (Verbal, Social, Emotional…) and the same type of question never comes twice in a row.
+- The first 22 levels are **medium** questions, levels 23–45 **hard** ones.
+- After each answer, the **Why?** box explains the reasoning behind the right answer and why the most tempting wrong one is wrong. No time limit: read, think, then tap **Continue**.
+- Stars: 9–10 right **3**, 8 right **2**, 7 right **1** star. Below 7 you don't pass the level; replay it and you get **the same questions**.
+- **Mixed** mode picks at random from all the questions: right answers extend your streak, and the game ends on the third wrong answer.
+- This game isn't an IQ or EQ test and gives no score. The aim is to build a habit of thinking things through and reading people.''',
   mid: [
     TutorialSection(
       'Sözel: önce ilişkiyi adlandır',

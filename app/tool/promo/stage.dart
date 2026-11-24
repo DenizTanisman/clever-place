@@ -17,6 +17,7 @@ import 'package:clever_place/clever/play_screen.dart';
 import 'package:clever_place/l10n/app_localizations.dart';
 import 'package:clever_place/src/app/app_controllers.dart';
 import 'package:clever_place/src/theme/app_themes.dart';
+import 'package:clever_place/clever/i18n/lang.dart';
 
 /// One clip. [run] shows something on the [Stage] and records frames.
 class Scene {
@@ -54,7 +55,7 @@ class Stage {
   final _caption = ValueNotifier<(String, String)>(('', ''));
   final _full = ValueNotifier<bool>(false);
   final _home = ValueNotifier<Widget>(const SizedBox());
-  final _locale = LocaleController(const Locale('tr'));
+  final _locale = LocaleController(Locale(Lang.code));
   final _theme = ThemeController(ThemeMode.dark);
 
   RandomAccessFile? _raw;
@@ -170,7 +171,7 @@ class Stage {
               textTheme: AppThemes.dark.textTheme.apply(fontFamilyFallback: const ['Symbols']),
             ),
             themeMode: ThemeMode.dark,
-            locale: const Locale('tr'),
+            locale: Locale(Lang.code),
             supportedLocales: const [Locale('tr'), Locale('en'), Locale('ru'), Locale('es')],
             localizationsDelegates: const [
               AppLocalizations.delegate,
@@ -203,7 +204,7 @@ class Stage {
     session = null;
     _fade.value = 0;
     _touches.value = const [];
-    _caption.value = (sc.kicker, sc.title);
+    _caption.value = (promoText(sc.kicker), promoText(sc.title));
     _full.value = sc.full;
     final rawFile = File('${dir.path}/$_id.rgba');
     if (!still) _raw = rawFile.openSync(mode: FileMode.write);
@@ -415,3 +416,27 @@ class _TouchPainter extends CustomPainter {
   @override
   bool shouldRepaint(_TouchPainter old) => true;
 }
+
+/// A caption or title card text in the video's language: the app's dictionary, or the video's own
+/// lines below.
+String promoText(String tr) => Lang.en ? (_promoEn[tr] ?? Lang.english(tr) ?? tr) : tr;
+
+const Map<String, String> _promoEn = {
+  'Mantık': 'Logic',
+  'Zihin': 'Mind',
+  'Zihin antrenmanı': 'Mind training',
+  'Zeka küpü': 'Puzzle cube',
+  'Her gün beş oyun': 'Five games a day',
+  'Her oyunun sayfası': 'Every game\'s page',
+  '500 bölüm, dört zorluk': '500 levels, four tiers',
+  'Schulte Tablosu · Bölüm 300': 'Schulte Table · Level 300',
+  'Zamanlayıcı': 'Timer',
+  'Küp Defteri': 'Cube Notebook',
+  '3B oynatıcı': '3D player',
+  'ZİHİN KULÜBÜ': 'MIND CLUB',
+  'Mantık · Strateji · Hafıza · Dikkat · Zihin · Küp': 'Logic · Strategy · Memory · Attention · Mind · Cube',
+  '{0} oyun · her birinde zorlaşan bölümler': '{0} games · levels that get harder',
+};
+
+/// [promoText] with `{0}` filled.
+String promoTextF(String tr, Object a) => promoText(tr).replaceAll('{0}', '$a');

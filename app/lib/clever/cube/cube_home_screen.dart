@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../i18n/lang.dart';
 import '../lux.dart';
 import 'cube_book_screen.dart';
 import 'cube_log.dart';
@@ -64,16 +65,16 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          FoilText('Küp', style: Lux.display(30, italic: true)),
+                          FoilText(t('Küp'), style: Lux.display(30, italic: true)),
                           const SizedBox(height: 4),
-                          Text('Zamanlayıcı, algoritma defteri, test', style: Lux.ui(15, color: Lux.muted)),
+                          Text(t('Zamanlayıcı, algoritma defteri, test'), style: Lux.ui(15, color: Lux.muted)),
                         ],
                       ),
                     ),
                   ],
                 ),
               ),
-              const LuxHeading('Zamanlayıcı'),
+              LuxHeading(t('Zamanlayıcı')),
               LuxCard(
                 highlight: true,
                 onTap: () => _open(const CubeTimerPage()),
@@ -88,8 +89,8 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
                           child: Column(
                             crossAxisAlignment: CrossAxisAlignment.start,
                             children: [
-                              Text('Çözüm süresi', style: Lux.ui(18, weight: FontWeight.w700)),
-                              Text('Karıştırma, 15 sn inceleme, taktikler', style: Lux.ui(13.5, color: Lux.muted)),
+                              Text(t('Çözüm süresi'), style: Lux.ui(18, weight: FontWeight.w700)),
+                              Text(t('Karıştırma, 15 sn inceleme, taktikler'), style: Lux.ui(13.5, color: Lux.muted)),
                             ],
                           ),
                         ),
@@ -101,12 +102,12 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
                   ],
                 ),
               ),
-              const LuxHeading('Eğitim'),
+              LuxHeading(t('Eğitim')),
               Row(
                 children: [
                   Expanded(
                     child: _bookCard(
-                      'Küp Defteri',
+                      t('Küp Defteri'),
                       'F2L, OLL, PLL, 4x4, 2x2, Megaminx',
                       Icons.menu_book_outlined,
                       const CubeBookScreen(asset: 'assets/cube/defter.json', title: 'Küp Defteri'),
@@ -115,8 +116,8 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
                   const SizedBox(width: 12),
                   Expanded(
                     child: _bookCard(
-                      'Tek El Planı',
-                      'Hedef, aşamalar, günlük çalışma',
+                      t('Tek El Planı'),
+                      t('Hedef, aşamalar, günlük çalışma'),
                       Icons.back_hand_outlined,
                       const CubeBookScreen(asset: 'assets/cube/tek_el.json', title: 'Tek El Planı'),
                     ),
@@ -134,11 +135,11 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text('Algoritma testi', style: Lux.ui(18, weight: FontWeight.w700)),
+                          Text(t('Algoritma testi'), style: Lux.ui(18, weight: FontWeight.w700)),
                           Text(
                             quiz == null
-                                ? 'Bildiklerin seyrek, yanlışların sık gelir'
-                                : '${quiz.learned} / ${quiz.total} öğrenildi · sırada ${quiz.due}',
+                                ? t('Bildiklerin seyrek, yanlışların sık gelir')
+                                : tf('{0} / {1} öğrenildi · sırada {2}', [quiz.learned, quiz.total, quiz.due]),
                             style: Lux.ui(13.5, color: Lux.muted),
                           ),
                         ],
@@ -162,14 +163,17 @@ class _CubeHomeScreenState extends State<CubeHomeScreen> {
       padding: const EdgeInsets.only(top: 6),
       child: Row(
         children: [
-          SizedBox(width: 86, child: Text(s.label, style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600))),
+          SizedBox(width: 86, child: Text(t(s.label), style: Lux.ui(14, color: Lux.goldLight, weight: FontWeight.w600))),
           Expanded(
             child: Text(
               solves.isEmpty
-                  ? 'henüz çözüm yok'
-                  : 'en iyi ${best == null ? '–' : formatCubeTime(best)} · '
-                      'ao5 ${formatAverage(averageOf(solves, 5))} · '
-                      'ao12 ${formatAverage(averageOf(solves, 12))} · ${solves.length} çözüm',
+                  ? t('henüz çözüm yok')
+                  : tf('en iyi {0} · ao5 {1} · ao12 {2} · {3}', [
+                      best == null ? '–' : formatCubeTime(best),
+                      formatAverage(averageOf(solves, 5)),
+                      formatAverage(averageOf(solves, 12)),
+                      Lang.en ? (solves.length == 1 ? '1 solve' : '${solves.length} solves') : '${solves.length} çözüm',
+                    ]),
               style: Lux.ui(13, color: Lux.muted),
               maxLines: 1,
               overflow: TextOverflow.ellipsis,

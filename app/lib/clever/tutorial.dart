@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+import 'i18n/lang.dart';
 import 'lux.dart';
 
 /// One tutorial page: a heading, a short text (paragraphs separated by a blank line; lines starting
@@ -13,14 +14,21 @@ class TutorialSection {
 }
 
 /// Per-game teaching content: the rules (shown on the game page) plus a mid-level and an
-/// advanced-level strategy course.
+/// advanced-level strategy course. The rules have an English version ([rulesEn]); the courses stay
+/// Turkish in both languages.
 class GameTutorials {
   final String rules;
+
+  /// [rules] in English (same [RichBody] markup), shown when the app is English.
+  final String? rulesEn;
   final List<TutorialSection> mid;
   final List<TutorialSection> advanced;
-  const GameTutorials({required this.rules, required this.mid, required this.advanced});
+  const GameTutorials({required this.rules, this.rulesEn, required this.mid, required this.advanced});
 
-  static const empty = GameTutorials(rules: 'Kurallar yakında.', mid: [], advanced: []);
+  /// The rules in the app's language.
+  String get rulesText => Lang.en && rulesEn != null ? rulesEn! : rules;
+
+  static const empty = GameTutorials(rules: 'Kurallar yakında.', rulesEn: 'Rules coming soon.', mid: [], advanced: []);
 }
 
 /// Small illustrative grid for tutorials. Each row is a string of space-separated tokens:
@@ -209,8 +217,8 @@ class _TutorialScreenState extends State<TutorialScreen> {
                       child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Text(widget.title, style: Lux.ui(20, weight: FontWeight.w700)),
-                          Text(widget.level, style: Lux.ui(13, color: Lux.gold, spacing: 1.5)),
+                          Text(t(widget.title), style: Lux.ui(20, weight: FontWeight.w700)),
+                          Text(t(widget.level), style: Lux.ui(13, color: Lux.gold, spacing: 1.5)),
                         ],
                       ),
                     ),
@@ -239,7 +247,7 @@ class _TutorialScreenState extends State<TutorialScreen> {
               ),
               Expanded(
                 child: n == 0
-                    ? Center(child: Text('Bu eğitim yakında.', style: Lux.ui(16, color: Lux.muted)))
+                    ? Center(child: Text(t('Bu eğitim yakında.'), style: Lux.ui(16, color: Lux.muted)))
                     : PageView.builder(
                         controller: _pc,
                         itemCount: n,
@@ -271,9 +279,11 @@ class _TutorialScreenState extends State<TutorialScreen> {
                 padding: const EdgeInsets.fromLTRB(20, 0, 20, 16),
                 child: Row(
                   children: [
-                    GoldButton('Geri', outlined: true, onPressed: _page > 0 ? () => _go(-1) : null),
+                    // Not t('Geri') / t('İleri'): the core writes those words too, meaning Backward / Forward
+                    // (Corsi, Digit Span), and one dictionary key can hold only one English.
+                    GoldButton(Lang.en ? 'Back' : 'Geri', outlined: true, onPressed: _page > 0 ? () => _go(-1) : null),
                     const Spacer(),
-                    GoldButton(_page < n - 1 ? 'İleri' : 'Bitir',
+                    GoldButton(_page < n - 1 ? (Lang.en ? 'Next' : 'İleri') : t('Bitir'),
                         onPressed: () => _page < n - 1 ? _go(1) : Navigator.pop(context)),
                   ],
                 ),

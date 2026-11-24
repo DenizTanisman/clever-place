@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Towers of Hanoi board. Tap a peg to lift its top disk, tap another peg to drop it.
@@ -209,17 +210,17 @@ class _HanoiBoardState extends State<_HanoiBoard> with SingleTickerProviderState
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            _stat('Hamle', '${st['moves']}'),
+            _stat(t('Hamle'), '${st['moves']}'),
             const SizedBox(width: 28),
-            _stat('En az', '${st['optimal']}'),
+            _stat(t('En az'), '${st['optimal']}'),
             const SizedBox(width: 28),
-            _stat('Kalan (en iyi)', '${st['remaining_optimal']}'),
+            _stat(t('Kalan (en iyi)'), '${st['remaining_optimal']}'),
           ],
         ),
         if (adjacent)
           Padding(
             padding: const EdgeInsets.only(top: 8),
-            child: Text('Bu bölümde disk sadece yanındaki direğe gidebilir',
+            child: Text(t('Bu bölümde disk sadece yanındaki direğe gidebilir'),
                 style: Lux.ui(13, color: Lux.bordeauxLight)),
           ),
         Expanded(
@@ -365,7 +366,7 @@ class _HanoiBoardState extends State<_HanoiBoard> with SingleTickerProviderState
                   top: baseY + 6,
                   width: pegW * 0.9,
                   child: IgnorePointer(
-                    child: Text(i == target ? 'HEDEF' : '${i + 1}',
+                    child: Text(i == target ? t('HEDEF') : '${i + 1}',
                         textAlign: TextAlign.center,
                         style: Lux.ui(12, color: i == target ? Lux.gold : Lux.muted, spacing: 2)),
                   ),
@@ -481,7 +482,7 @@ class _HanoiBoardState extends State<_HanoiBoard> with SingleTickerProviderState
           child: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              RimIconButton(Icons.undo_rounded, tooltip: 'Geri al (hamle sayılır)',
+              RimIconButton(Icons.undo_rounded, tooltip: t('Geri al (hamle sayılır)'),
                   onPressed: st['can_undo'] == true && !s.finished
                       ? () {
                           setState(() => _selected = null);
@@ -489,7 +490,7 @@ class _HanoiBoardState extends State<_HanoiBoard> with SingleTickerProviderState
                         }
                       : null),
               const SizedBox(width: 24),
-              RimIconButton(Icons.lightbulb_outline_rounded, tooltip: 'İpucu: en iyi hamle',
+              RimIconButton(Icons.lightbulb_outline_rounded, tooltip: t('İpucu: en iyi hamle'),
                   onPressed: s.finished
                       ? null
                       : () {

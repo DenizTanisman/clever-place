@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Soroban course board: a dark-wood abacus with a gold beam, played by swiping beads toward or
@@ -570,11 +571,11 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  'Soru ${math.min(index + 1, total)} / $total',
+                  tf('Soru {0} / {1}', [math.min(index + 1, total), total]),
                   style: Lux.ui(16, color: Lux.ink, weight: FontWeight.w700),
                 ),
                 const SizedBox(height: 2),
-                Text('Doğru $correct · Yanlış $wrong', style: Lux.ui(12, color: Lux.muted)),
+                Text(tf('Doğru {0} · Yanlış {1}', [correct, wrong]), style: Lux.ui(12, color: Lux.muted)),
                 const SizedBox(height: 5),
                 ClipRRect(
                   borderRadius: BorderRadius.circular(3),
@@ -604,7 +605,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                 _fmtTime(elapsed),
                 style: Lux.ui(18, color: over ? Lux.bordeauxLight : Lux.goldLight, weight: FontWeight.w700),
               ),
-              Text('hedef ${_fmtTime(par)}', style: Lux.ui(11, color: Lux.muted)),
+              Text(tf('hedef {0}', [_fmtTime(par)]), style: Lux.ui(11, color: Lux.muted)),
             ],
           ),
           const SizedBox(width: 10),
@@ -621,7 +622,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                 children: [
                   const Icon(Icons.menu_book_rounded, size: 15, color: Lux.gold),
                   const SizedBox(width: 5),
-                  Text('Ders', style: Lux.ui(13, color: Lux.gold)),
+                  Text(t('Ders'), style: Lux.ui(13, color: Lux.gold)),
                 ],
               ),
             ),
@@ -647,7 +648,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
       final kind = p['kind'] as String;
       final flash = p['flash'] is Map ? Map<String, dynamic>.from(p['flash'] as Map) : null;
       final stepLabel = p['step_label'] as String?;
-      final children = <Widget>[_label(p['prompt'] as String? ?? '')];
+      final children = <Widget>[_label(ct(p['prompt'] as String?))];
       if (flash != null && flash['done'] != true) {
         children.add(_flashBox(flash));
       } else if (kind == 'set') {
@@ -662,7 +663,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
             Padding(
               padding: const EdgeInsets.only(top: 8),
               child: Text(
-                kind == 'flash' ? 'Sonucu abaküste bırak, Tamam\'a dokun' : 'Sonucu yaz',
+                kind == 'flash' ? t('Sonucu abaküste bırak, Tamam\'a dokun') : t('Sonucu yaz'),
                 style: Lux.ui(16, color: Lux.goldLight, weight: FontWeight.w600),
               ),
             ),
@@ -676,7 +677,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
           Padding(
             padding: const EdgeInsets.only(top: 4),
             child: Text(
-              stepLabel,
+              ct(stepLabel),
               textAlign: TextAlign.center,
               style: Lux.ui(13, color: Lux.goldLight),
             ),
@@ -763,7 +764,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
     final index = (f['index'] as num).toInt();
     final value = f['value'] as num?;
     final lead = f['lead'] == true;
-    final text = lead ? 'Hazır…' : (value == null ? '' : (value < 0 ? '− ${-value}' : '$value'));
+    final text = lead ? t('Hazır…') : (value == null ? '' : (value < 0 ? '− ${-value}' : '$value'));
     return Padding(
       padding: const EdgeInsets.only(top: 6),
       child: Column(
@@ -840,7 +841,11 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
     final note = last['note'] as String?;
     final what = last['text'] as String? ?? '';
     final plain = what == 'Kur' || what == 'Okuma';
-    final text = ok ? 'Doğru' : 'Yanlış · ${plain ? 'doğrusu ' : '$what = '}${last['answer']} · senin ${last['given']}';
+    final text = ok
+        ? t('Doğru')
+        : plain
+            ? tf('Yanlış · doğrusu {0} · senin {1}', [last['answer'], last['given']])
+            : tf('Yanlış · {0} = {1} · senin {2}', [what, last['answer'], last['given']]);
     return TweenAnimationBuilder<double>(
       key: ValueKey(last['serial']),
       tween: Tween(begin: 0, end: 1),
@@ -875,7 +880,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                     ),
                     if (note != null)
                       Text(
-                        note,
+                        ct(note),
                         textAlign: TextAlign.center,
                         style: Lux.ui(12, color: const Color(0xFFFFD6DF)),
                       ),
@@ -913,7 +918,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                 children: [
                   Icon(Icons.visibility_off_outlined, color: Lux.muted.withValues(alpha: 0.45), size: 30),
                   const SizedBox(height: 8),
-                  Text('Soroban artık zihninde', style: Lux.ui(14, color: Lux.muted.withValues(alpha: 0.7))),
+                  Text(t('Soroban artık zihninde'), style: Lux.ui(14, color: Lux.muted.withValues(alpha: 0.7))),
                 ],
               ),
             );
@@ -958,8 +963,8 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
               refLen: (p?['ref_len'] as num?)?.toInt() ?? 0,
               checkFrom: (p?['check_from'] as num?)?.toInt() ?? 0,
               unitsRod: unitsRod?.toInt(),
-              refLabel: p?['ref_label'] as String?,
-              areaLabel: p?['area_label'] as String?,
+              refLabel: p?['ref_label'] == null ? null : ct(p!['ref_label'] as String),
+              areaLabel: p?['area_label'] == null ? null : ct(p!['area_label'] as String),
               hint: hint,
               glow: math.max(winGlow, _fbOk ? flash : 0),
               badGlow: _fbOk ? 0 : flash,
@@ -1001,7 +1006,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                             fit: BoxFit.scaleDown,
                             alignment: Alignment.centerLeft,
                             child: Text(
-                              hint['text'] as String? ?? '',
+                              ct(hint['text'] as String?),
                               maxLines: 1,
                               style: Lux.ui(14, color: Lux.ink, weight: FontWeight.w600),
                             ),
@@ -1011,7 +1016,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                               fit: BoxFit.scaleDown,
                               alignment: Alignment.centerLeft,
                               child: Text(
-                                hint['formula'] as String,
+                                ct(hint['formula'] as String),
                                 maxLines: 1,
                                 style: Lux.ui(12, color: Lux.goldLight),
                               ),
@@ -1039,10 +1044,10 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
       padding: const EdgeInsets.fromLTRB(12, 2, 12, 14),
       child: Row(
         children: [
-          _ToolButton(icon: Icons.cleaning_services_outlined, label: 'Sıfırla', onTap: playing ? _sweepButton : null),
+          _ToolButton(icon: Icons.cleaning_services_outlined, label: t('Sıfırla'), onTap: playing ? _sweepButton : null),
           _ToolButton(
             icon: Icons.restart_alt_rounded,
-            label: 'Baştan',
+            label: t('Baştan'),
             onTap: playing && hasStart
                 ? () {
                     HapticFeedback.selectionClick();
@@ -1052,7 +1057,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
           ),
           _ToolButton(
             icon: Icons.lightbulb_outline_rounded,
-            label: 'İpucu',
+            label: t('İpucu'),
             onTap: canHint
                 ? () {
                     HapticFeedback.selectionClick();
@@ -1064,7 +1069,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
           Expanded(
             child: Center(
               child: GoldButton(
-                'Tamam',
+                t('Tamam'),
                 icon: Icons.check_rounded,
                 onPressed: playing && !flashing
                     ? () {
@@ -1115,7 +1120,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                     child: _Key(label: '0', onTap: () => _key('0')),
                   ),
                   Expanded(
-                    child: _Key(label: 'Tamam', onTap: _submitTyped, primary: true),
+                    child: _Key(label: t('Tamam'), onTap: _submitTyped, primary: true),
                   ),
                 ],
               ),
@@ -1152,11 +1157,11 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    Lux.upper('Ders · ${st['section'] ?? ''}'),
+                    Lux.upper(tf('Ders · {0}', [ct(st['section'] as String?)])),
                     style: Lux.ui(12, color: Lux.gold, spacing: 2.2, weight: FontWeight.w700),
                   ),
                   const SizedBox(height: 6),
-                  Text(lesson['title'] as String? ?? '', style: Lux.display(21, spacing: 0.6)),
+                  Text(ct(lesson['title'] as String?), style: Lux.display(21, spacing: 0.6)),
                   const SizedBox(height: 14),
                   for (final l in lines)
                     Padding(
@@ -1174,7 +1179,7 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                           ),
                           Expanded(
                             child: Text(
-                              l,
+                              ct(l),
                               style: Lux.ui(15.5, color: Lux.ink, weight: FontWeight.w500),
                             ),
                           ),
@@ -1183,12 +1188,12 @@ class _SorobanBoardState extends State<_SorobanBoard> with SingleTickerProviderS
                     ),
                   if (start) ...[
                     const SizedBox(height: 4),
-                    Text(st['goal'] as String? ?? '', style: Lux.ui(13, color: Lux.muted)),
+                    Text(ct(st['goal'] as String?), style: Lux.ui(13, color: Lux.muted)),
                   ],
                   const SizedBox(height: 16),
                   Center(
                     child: GoldButton(
-                      start ? 'Başla' : 'Devam',
+                      start ? t('Başla') : t('Devam'),
                       icon: start ? Icons.play_arrow_rounded : Icons.close_rounded,
                       onPressed: () {
                         if (start) {
@@ -1544,7 +1549,7 @@ class _AbacusPainter extends CustomPainter {
         ..lineTo(x + 5, below + 7)
         ..close();
       canvas.drawPath(tri, Paint()..color = Lux.gold);
-      _text(canvas, 'birler', Offset(x, below + 8), 10, Lux.goldLight);
+      _text(canvas, t('birler'), Offset(x, below + 8), 10, Lux.goldLight);
     }
     if (locked && !ghost) {
       // A faint veil when the beads can't be moved (reading problems, lesson, finished).

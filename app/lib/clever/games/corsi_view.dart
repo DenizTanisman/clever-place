@@ -5,6 +5,7 @@ import 'package:flutter/scheduler.dart';
 import 'package:flutter/services.dart';
 
 import '../core_bridge.dart';
+import '../i18n/lang.dart';
 import '../lux.dart';
 
 /// Corsi Blocks board: irregularly placed lacquered blocks on a velvet field. Timing, sequences,
@@ -226,7 +227,7 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
                   const SizedBox(width: 6),
                   Padding(
                     padding: const EdgeInsets.only(bottom: 6),
-                    child: Text(Lux.upper('blok'), style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
+                    child: Text(Lux.upper(t('blok')), style: Lux.ui(13, color: Lux.gold, weight: FontWeight.w600, spacing: 2)),
                   ),
                 ],
               ),
@@ -245,7 +246,7 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 const Icon(Icons.shuffle_rounded, size: 16, color: Lux.muted),
                 const SizedBox(width: 4),
-                Text('Yön gizli', style: Lux.ui(14, color: Lux.muted, weight: FontWeight.w700)),
+                Text(t('Yön gizli'), style: Lux.ui(14, color: Lux.muted, weight: FontWeight.w700)),
               ]),
             )
           else
@@ -262,7 +263,7 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
                 children: [
                   if (reverse) const Icon(Icons.west_rounded, size: 16, color: Lux.bordeauxLight),
                   if (reverse) const SizedBox(width: 4),
-                  Text(reverse ? 'Tersten' : 'Aynı sıra',
+                  Text(reverse ? t('Tersten') : t('Aynı sıra'),
                       style:
                           Lux.ui(14, color: reverse ? const Color(0xFFFFD6DF) : Lux.goldLight, weight: FontWeight.w700)),
                   if (!reverse) const SizedBox(width: 4),
@@ -275,8 +276,8 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
             Column(
               crossAxisAlignment: CrossAxisAlignment.end,
               children: [
-                Text('İleri  ${_spanText(st['forward_span'], st['stage'] == 'forward')}', style: Lux.ui(14, color: Lux.goldLight)),
-                Text('Geri  ${_spanText(st['backward_span'], st['stage'] == 'backward')}', style: Lux.ui(14, color: Lux.muted)),
+                Text(tf('İleri  {0}', [_spanText(st['forward_span'], st['stage'] == 'forward')]), style: Lux.ui(14, color: Lux.goldLight)),
+                Text(tf('Geri  {0}', [_spanText(st['backward_span'], st['stage'] == 'backward')]), style: Lux.ui(14, color: Lux.muted)),
               ],
             )
           else
@@ -316,21 +317,21 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
       child = Center(
         key: const ValueKey('hidden'),
         child: Text(
-          phase == 'ready' || phase == 'show' || phase == 'drift' ? 'Sırayı izle · yön sonra açıklanacak' : '',
+          phase == 'ready' || phase == 'show' || phase == 'drift' ? t('Sırayı izle · yön sonra açıklanacak') : '',
           style: Lux.ui(14, color: Lux.muted, weight: FontWeight.w600),
         ),
       );
     } else {
-      final t = phase == 'recall' ? now - _phaseAt : 1.0;
-      final inT = Curves.easeOutBack.transform((t / 0.35).clamp(0.0, 1.0));
-      final glow = (1 - t / 0.7).clamp(0.0, 1.0);
+      final rt = phase == 'recall' ? now - _phaseAt : 1.0;
+      final inT = Curves.easeOutBack.transform((rt / 0.35).clamp(0.0, 1.0));
+      final glow = (1 - rt / 0.7).clamp(0.0, 1.0);
       final ink = reverse ? Lux.bordeauxLight : Lux.goldLight;
       child = Center(
         key: ValueKey('shown$reverse'),
         child: Transform.scale(
           scale: 1.25 - 0.25 * inT,
           child: Opacity(
-            opacity: (t / 0.12).clamp(0.0, 1.0),
+            opacity: (rt / 0.12).clamp(0.0, 1.0),
             child: Container(
               padding: const EdgeInsets.symmetric(horizontal: 18, vertical: 7),
               decoration: BoxDecoration(
@@ -342,7 +343,7 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
               child: Row(mainAxisSize: MainAxisSize.min, children: [
                 Icon(reverse ? Icons.west_rounded : Icons.east_rounded, size: 22, color: ink),
                 const SizedBox(width: 8),
-                Text(Lux.upper(reverse ? 'Ters sırada' : 'Aynı sırada'),
+                Text(Lux.upper(reverse ? t('Ters sırada') : t('Aynı sırada')),
                     style: Lux.display(20, color: reverse ? const Color(0xFFFFD6DF) : Lux.goldLight, spacing: 1.4)),
               ]),
             ),
@@ -435,21 +436,21 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
     Color color = Lux.ink;
     switch (phase) {
       case 'ready':
-        text = 'Hazır ol…';
+        text = t('Hazır ol…');
         color = Lux.muted;
       case 'show':
-        text = distractors > 0 ? 'İzle · bordoyu yok say' : 'İzle';
+        text = distractors > 0 ? t('İzle · bordoyu yok say') : t('İzle');
         color = Lux.goldLight;
       case 'drift':
-        text = 'Bloklar kayıyor · gözünü ayırma';
+        text = t('Bloklar kayıyor · gözünü ayırma');
         color = Lux.goldLight;
       case 'recall':
-        text = '${reverse ? 'Tersten dokun' : 'Sıra sende'} · $taps / $span';
+        text = '${reverse ? t('Tersten dokun') : t('Sıra sende')} · $taps / $span';
       case 'feedback':
-        text = 'Doğru!';
+        text = t('Doğru!');
         color = Lux.good;
       case 'replay':
-        text = reverse ? 'Doğru ters sıra buydu' : 'Doğru sıra buydu';
+        text = reverse ? t('Doğru ters sıra buydu') : t('Doğru sıra buydu');
         color = Lux.bordeauxLight;
       default:
         text = '';
@@ -498,31 +499,29 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
     final lines = <String>[];
     if (endless) {
       if (st['stage'] == 'backward') {
-        heading = 'Şimdi tersten';
-        lines.add('İleri açıklığın: ${(st['forward_span'] as num?)?.toInt() ?? 0}.');
-        lines.add('Aynı merdiven, ama bu kez yanan sırayı sondan başa dokun. Dizi yine 3 bloktan başlar.');
+        heading = t('Şimdi tersten');
+        lines.add(tf('İleri açıklığın: {0}.', [(st['forward_span'] as num?)?.toInt() ?? 0]));
+        lines.add(t('Aynı merdiven, ama bu kez yanan sırayı sondan başa dokun. Dizi yine 3 bloktan başlar.'));
       } else {
-        heading = 'Kapasite testi';
-        lines.add('Klasik Corsi merdiveni: dizi 3 bloktan başlar. Her uzunlukta iki şansın var; biri doğruysa dizi bir uzar.');
-        lines.add('İkisi de yanlışsa ileri aşama biter, aynı test tersten başlar.');
-        lines.add('Puan = ileri açıklık + geri açıklık.');
+        heading = t('Kapasite testi');
+        lines.add(t('Klasik Corsi merdiveni: dizi 3 bloktan başlar. Her uzunlukta iki şansın var; biri doğruysa dizi bir uzar.'));
+        lines.add(t('İkisi de yanlışsa ileri aşama biter, aynı test tersten başlar.'));
+        lines.add(t('Puan = ileri açıklık + geri açıklık.'));
       }
     } else {
       if (st['mixed'] == true) {
-        heading = 'Karışık yön';
-        lines.add('Bloklar tek tek altın rengi yanacak. Hangi yönde dokunacağın gösterim bitince '
-            'üstte açıklanır: AYNI SIRADA ya da TERS SIRADA.');
-        lines.add('Yön her denemede değişebilir; önceden bilemezsin. Sırayı iki ucundan da '
-            'okunabilecek bir şekil olarak aklında tut.');
+        heading = t('Karışık yön');
+        lines.add(t('Bloklar tek tek altın rengi yanacak. Hangi yönde dokunacağın gösterim bitince üstte açıklanır: AYNI SIRADA ya da TERS SIRADA.'));
+        lines.add(t('Yön her denemede değişebilir; önceden bilemezsin. Sırayı iki ucundan da okunabilecek bir şekil olarak aklında tut.'));
       } else {
-        heading = reverse ? 'Tersten' : 'Aynı sıra';
+        heading = reverse ? t('Tersten') : t('Aynı sıra');
         lines.add(reverse
-            ? 'Bloklar tek tek altın rengi yanacak. Sonra onlara sondan başa doğru dokun.'
-            : 'Bloklar tek tek altın rengi yanacak. Sonra onlara aynı sırayla dokun.');
+            ? t('Bloklar tek tek altın rengi yanacak. Sonra onlara sondan başa doğru dokun.')
+            : t('Bloklar tek tek altın rengi yanacak. Sonra onlara aynı sırayla dokun.'));
       }
-      if (distractors > 0) lines.add('Bordo yanan blokları yok say: onlar sıraya dahil değil.');
-      if (drifting) lines.add('Gösterimden sonra bloklar yavaşça kayar: yeri değil, bloğun kendisini takip et.');
-      lines.add('6 deneme · 6/6 doğru 3 yıldız, 5/6 iki yıldız; en az 3 doğru gerekir.');
+      if (distractors > 0) lines.add(t('Bordo yanan blokları yok say: onlar sıraya dahil değil.'));
+      if (drifting) lines.add(t('Gösterimden sonra bloklar yavaşça kayar: yeri değil, bloğun kendisini takip et.'));
+      lines.add(t('6 deneme · 6/6 doğru 3 yıldız, 5/6 iki yıldız; en az 3 doğru gerekir.'));
     }
     return TweenAnimationBuilder<double>(
       key: ValueKey('card${st['stage']}'),
@@ -550,7 +549,7 @@ class _CorsiBoardState extends State<_CorsiBoard> with SingleTickerProviderState
                     child: Text(l, textAlign: TextAlign.center, style: bodyStyle),
                   ),
                 const SizedBox(height: 10),
-                GoldButton('Başla', icon: Icons.play_arrow_rounded, onPressed: () {
+                GoldButton(t('Başla'), icon: Icons.play_arrow_rounded, onPressed: () {
                   HapticFeedback.selectionClick();
                   s.act({'start': true});
                 }),

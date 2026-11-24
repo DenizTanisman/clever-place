@@ -11,6 +11,7 @@ import 'package:clever_place/clever/catalog.dart';
 import 'package:clever_place/clever/core_bridge.dart';
 import 'package:clever_place/clever/cube/cube_book_screen.dart';
 import 'package:clever_place/clever/cube/cube_home_screen.dart';
+import 'package:clever_place/clever/cube/cube_style.dart';
 import 'package:clever_place/clever/cube/cube_timer_page.dart';
 import 'package:clever_place/clever/game_home_screen.dart';
 import 'package:clever_place/clever/hub_screen.dart';
@@ -103,12 +104,45 @@ List<Scene> buildScenes() => [
         }
         await s.secs(0.5);
       }),
-      Scene('levels', 'Her oyunda', '500 bölüm, dört zorluk', (s) async {
-        await s.show(GameHomeScreen(game: kCoreGames.firstWhere((g) => g.id == 'crowns')));
+      Scene('levels', 'Her oyunun sayfası', '500 bölüm, dört zorluk', (s) async {
+        // The game page as it opens: rules behind "Nasıl oynanır", the tier's next level pinned below.
+        await s.show(GameHomeScreen(game: kCoreGames.firstWhere((g) => g.id == 'schulte')));
+        await s.secs(2.4);
+        final c = Offset(Stage.w / 2, 420);
+        await s.drag(c, c.translate(0, -200), n: 16);
         await s.secs(1.2);
-        final c = Offset(Stage.w / 2, 430);
-        await s.drag(c, c.translate(0, -260), n: 16);
-        await s.secs(1.2);
+        await s.tap(find.byKey(const ValueKey('play-next')));
+        await s.secs(0.6);
+      }),
+      Scene('schulte', _attention, 'Schulte Tablosu · Bölüm 300', (s) async {
+        await s.play('schulte', 300);
+        await _start(s, () => s.st['phase'] == 'run');
+        await s.secs(0.7);
+        Future<bool> tapNext() async {
+          final cells = _l(s.st['cells']);
+          final nx = s.st['next'];
+          if (nx is! Map) return false;
+          final i = cells.indexWhere((c) => c is Map && c['label'] == nx['label'] && c['color'] == nx['color'] && c['found'] != true);
+          if (i < 0) return false;
+          s.act({'tap': i});
+          return true;
+        }
+
+        for (var k = 0; k < 12 && s.st['status'] == 'playing'; k++) {
+          if (!await tapNext()) break;
+          await s.frames(8);
+        }
+        // The rest of the table off camera, at a human pace, then the level's end.
+        for (var k = 0; k < 200 && s.st['status'] == 'playing'; k++) {
+          if (!await tapNext()) break;
+          for (var f = 0; f < 20; f++) {
+            await s.step(false);
+          }
+        }
+        // ignore: avoid_print
+        print('schulte time: ${s.st['elapsed_ms']} errors: ${s.st['errors']} stars: ${s.st['stars']}');
+        await s.skip(1.1);
+        await s.secs(4.6);
       }),
 
       // ---------------------------------------------------------------- Mantık
@@ -480,20 +514,6 @@ List<Scene> buildScenes() => [
       }),
 
       // ---------------------------------------------------------------- Dikkat
-      Scene('schulte', _attention, 'Schulte Tablosu', (s) async {
-        await s.play('schulte', 300);
-        await _start(s, () => s.st['phase'] == 'run');
-        await s.secs(0.7);
-        for (var k = 0; k < 12; k++) {
-          final cells = _l(s.st['cells']);
-          final nx = s.st['next'] as Map;
-          final i = cells.indexWhere((c) => c is Map && c['label'] == nx['label'] && c['color'] == nx['color'] && c['found'] != true);
-          if (i < 0) break;
-          s.act({'tap': i});
-          await s.frames(8);
-        }
-        await s.secs(0.3);
-      }),
       Scene('stroop', _attention, 'Renk–Kelime', (s) async {
         await s.play('stroop', 300);
         await _start(s, () => s.st['phase'] == 'run');
@@ -647,6 +667,23 @@ List<Scene> buildScenes() => [
       }),
 
       // ---------------------------------------------------------------- Zihin antrenmanı
+      Scene('donen_sayilar', _attention, 'Dönen Sayılar', (s) async {
+        await s.play('donen_sayilar', 130);
+        await _start(s, () => s.st['phase'] == 'run', max: 8);
+        await s.secs(0.6);
+        for (var k = 0; k < 9 && s.st['status'] == 'playing'; k++) {
+          final want = _i(s.st['found']) + 1;
+          final rings = _l(s.st['rings']);
+          final n = _l(s.st['numbers']).cast<Map>().where((x) => _i(x['n']) == want && x['found'] != true).firstOrNull;
+          if (n == null) break;
+          final ring = rings[_i(n['ring'])] as Map;
+          final a = (n['a'] as num).toDouble() + (ring['a'] as num).toDouble();
+          final r = (ring['r'] as num).toDouble();
+          s.act({'tap': [r * math.cos(a), r * math.sin(a)]});
+          await s.frames(20);
+        }
+        await s.secs(0.3);
+      }),
       Scene('math', _mind, 'Mental Aritmetik', (s) async {
         await s.play('math', 300);
         await _start(s, () => s.st['phase'] == 'play');
@@ -675,6 +712,24 @@ List<Scene> buildScenes() => [
           await s.frames(7);
         }
         await s.secs(0.4);
+      }),
+      Scene('zihin_asisi', _mind, 'Zihin Aşısı', (s) async {
+        await s.play('zihin_asisi', 7);
+        await s.secs(2.4); // the technique card: what it is, why it works, how to defend
+        final done = <Map<String, dynamic>>[{'start': true}];
+        s.act({'start': true});
+        await s.secs(0.4);
+        for (var q = 0; q < 2 && s.st['status'] == 'playing'; q++) {
+          await s.secs(2.6);
+          final right = _rightAnswer('zihin_asisi', 7, done);
+          s.act({'answer': right});
+          done
+            ..add({'answer': right})
+            ..add({'next': true});
+          await s.secs(2.8);
+          s.act({'next': true});
+        }
+        await s.secs(0.6);
       }),
       // ---------------------------------------------------------------- Küp
       Scene('cube', 'Zeka küpü', 'Küp', (s) async {
@@ -713,6 +768,18 @@ List<Scene> buildScenes() => [
           await s.drag(c, c.translate(0, -320), n: 14);
           await s.secs(0.5);
         }
+      }),
+
+      Scene('cube_player', 'Zeka küpü', '3B oynatıcı', (s) async {
+        // The player is a web page (three.js) in a WebView, which the test engine cannot draw: the
+        // page frame is drawn here around an empty box, and make.sh lays the player, recorded in a
+        // browser (cube3d.py), into that box.
+        await s.show(const _PlayerFrame());
+        await s.settle(() => false, maxMs: 300);
+        final r = s.t.getRect(find.byKey(const ValueKey('promo-player-box')));
+        File('${s.dir.path}/cube_player_box.json').writeAsStringSync(
+            '{"x":${r.left},"y":${r.top},"w":${r.width},"h":${r.height},"scale":${Stage.appScale}}');
+        await s.secs(cubePlayerSeconds);
       }),
 
       // ---------------------------------------------------------------- closing
@@ -825,7 +892,7 @@ class _Intro extends StatelessWidget {
               const SizedBox(height: 6),
               Opacity(
                 opacity: v,
-                child: Text('ZİHİN KULÜBÜ', style: Lux.ui(13, color: Lux.muted, weight: FontWeight.w600, spacing: 5)),
+                child: Text(promoText('ZİHİN KULÜBÜ'), style: Lux.ui(13, color: Lux.muted, weight: FontWeight.w600, spacing: 5)),
               ),
             ],
           )),
@@ -854,7 +921,7 @@ class _Outro extends StatelessWidget {
           children: [
             FoilText('Clever Place', style: Lux.display(40, italic: true)),
             const SizedBox(height: 4),
-            Text('ZİHİN KULÜBÜ', style: Lux.ui(12, color: Lux.muted, weight: FontWeight.w600, spacing: 5)),
+            Text(promoText('ZİHİN KULÜBÜ'), style: Lux.ui(12, color: Lux.muted, weight: FontWeight.w600, spacing: 5)),
             const SizedBox(height: 24),
             Wrap(
               alignment: WrapAlignment.center,
@@ -869,14 +936,40 @@ class _Outro extends StatelessWidget {
               ],
             ),
             const SizedBox(height: 26),
-            Text('Mantık · Strateji · Hafıza · Dikkat · Zihin · Küp',
+            Text(promoText('Mantık · Strateji · Hafıza · Dikkat · Zihin · Küp'),
                 textAlign: TextAlign.center, style: Lux.ui(13, color: Lux.goldLight, weight: FontWeight.w500, spacing: 0.6)),
             const SizedBox(height: 8),
-            Text('${games.length} oyun · her birinde zorlaşan bölümler',
+            Text(promoTextF('{0} oyun · her birinde zorlaşan bölümler', games.length),
                 textAlign: TextAlign.center, style: Lux.display(21, color: Lux.ink, italic: true)),
           ],
         ),
       )),
     );
   }
+}
+
+/// How long the 3D player clip runs (cube3d.py records the same length).
+const double cubePlayerSeconds = 14;
+
+/// The 3D player page (CubePlayerPage) with an empty box where its WebView goes.
+class _PlayerFrame extends StatelessWidget {
+  const _PlayerFrame();
+
+  @override
+  Widget build(BuildContext context) => CubeTheme(
+        child: Scaffold(
+          backgroundColor: Lux.bg0,
+          body: LuxBackground(
+            child: SafeArea(
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  CubeHeader('Y-perm'),
+                  const Expanded(child: SizedBox.expand(key: ValueKey('promo-player-box'))),
+                ],
+              ),
+            ),
+          ),
+        ),
+      );
 }
